@@ -2,7 +2,7 @@
   "division_id": 8,
   "season_id": 66,
   "division_name": "Div F - Summer 2025",
-  "last_updated": "2026-02-01T14:13:43.682159",
+  "last_updated": "2026-02-01T14:19:27.457393",
   "teams": [
     "C-Hawks",
     "Red Warriors",
@@ -458,5 +458,198 @@
       "economy": "13.38"
     }
   ],
-  "standings": []
+  "standings": [
+    {
+      "team": "Kirkland Knights",
+      "rank": "1",
+      "matches": "10",
+      "wins": "7",
+      "losses": "2",
+      "points": "210"
+    },
+    {
+      "team": "Spartan Boys",
+      "rank": "2",
+      "matches": "10",
+      "wins": "7",
+      "losses": "3",
+      "points": "189"
+    },
+    {
+      "team": "BRCL Greens",
+      "rank": "3",
+      "matches": "9",
+      "wins": "6",
+      "losses": "2",
+      "points": "181"
+    },
+    {
+      "team": "Snoqualmie Wolves Timber",
+      "rank": "4",
+      "matches": "9",
+      "wins": "6",
+      "losses": "2",
+      "points": "171"
+    },
+    {
+      "team": "Pulikkoottam - Royals",
+      "rank": "5",
+      "matches": "8",
+      "wins": "6",
+      "losses": "2",
+      "points": "152"
+    },
+    {
+      "team": "Knightriders",
+      "rank": "6",
+      "matches": "8",
+      "wins": "5",
+      "losses": "3",
+      "points": "144"
+    },
+    {
+      "team": "Machani Strikers",
+      "rank": "7",
+      "matches": "8",
+      "wins": "5",
+      "losses": "2",
+      "points": "142"
+    },
+    {
+      "team": "Cricket Fanatics",
+      "rank": "8",
+      "matches": "8",
+      "wins": "5",
+      "losses": "3",
+      "points": "141"
+    },
+    {
+      "team": "Snoqualmie Wolves Arctic",
+      "rank": "9",
+      "matches": "7",
+      "wins": "4",
+      "losses": "2",
+      "points": "126"
+    },
+    {
+      "team": "Gilly",
+      "rank": "10",
+      "matches": "7",
+      "wins": "4",
+      "losses": "2",
+      "points": "124"
+    },
+    {
+      "team": "Everest Warriors",
+      "rank": "11",
+      "matches": "7",
+      "wins": "4",
+      "losses": "2",
+      "points": "117"
+    },
+    {
+      "team": "ICCS Royal Warriors",
+      "rank": "12",
+      "matches": "7",
+      "wins": "4",
+      "losses": "3",
+      "points": "111"
+    },
+    {
+      "team": "ICCS Angry Bulls",
+      "rank": "13",
+      "matches": "7",
+      "wins": "4",
+      "losses": "3",
+      "points": "110"
+    },
+    {
+      "team": "C-Hawks",
+      "rank": "14",
+      "matches": "7",
+      "wins": "3",
+      "losses": "3",
+      "points": "103"
+    },
+    {
+      "team": "SuperKings",
+      "rank": "15",
+      "matches": "7",
+      "wins": "3",
+      "losses": "3",
+      "points": "102"
+    },
+    {
+      "team": "Raftaar",
+      "rank": "16",
+      "matches": "7",
+      "wins": "3",
+      "losses": "4",
+      "points": "99"
+    },
+    {
+      "team": "The Avengers",
+      "rank": "17",
+      "matches": "7",
+      "wins": "2",
+      "losses": "4",
+      "points": "95"
+    },
+    {
+      "team": "SUY Northern Yorkas",
+      "rank": "18",
+      "matches": "7",
+      "wins": "3",
+      "losses": "4",
+      "points": "89"
+    },
+    {
+      "team": "ATB Seattle Shockers",
+      "rank": "19",
+      "matches": "7",
+      "wins": "2",
+      "losses": "5",
+      "points": "88"
+    },
+    {
+      "team": "ATB Chargers",
+      "rank": "20",
+      "matches": "7",
+      "wins": "2",
+      "losses": "5",
+      "points": "78"
+    },
+    {
+      "team": "ICCS White Wolves",
+      "rank": "21",
+      "matches": "7",
+      "wins": "1",
+      "losses": "6",
+      "points": "56"
+    },
+    {
+      "team": "Red Warriors",
+      "rank": "22",
+      "matches": "7",
+      "wins": "0",
+      "losses": "7",
+      "points": "40"
+    },
+    {
+      "team": "ERC Blizzard",
+      "rank": "23",
+      "matches": "7",
+      "wins": "0",
+      "losses": "7",
+      "points": "36"
+    },
+    {
+      "team": "Kachra Boyz - OG",
+      "rank": "24",
+      "matches": "7",
+      "wins": "0",
+      "losses": "7",
+      "points": "26"
+    }
+  ]
 }

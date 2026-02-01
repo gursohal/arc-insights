@@ -121,8 +121,33 @@ class DataManager: ObservableObject {
         let (data, _) = try await URLSession.shared.data(from: url)
         let response = try JSONDecoder().decode(ARCLDataResponse.self, from: data)
         
-        return response.teams.enumerated().map { index, name in
-            Team(name: name, division: "Div F", wins: 0, losses: 0, rank: index + 1)
+        // Create a dictionary from standings for quick lookup
+        var standingsDict: [String: StandingJSON] = [:]
+        for standing in response.standings {
+            standingsDict[standing.team] = standing
+        }
+        
+        // Map teams with standings data
+        let teams = response.teams.compactMap { teamName -> Team? in
+            if let standing = standingsDict[teamName] {
+                return Team(
+                    name: teamName,
+                    division: "Div F",
+                    wins: Int(standing.wins) ?? 0,
+                    losses: Int(standing.losses) ?? 0,
+                    rank: Int(standing.rank) ?? 0
+                )
+            } else {
+                return Team(name: teamName, division: "Div F", wins: 0, losses: 0, rank: 99)
+            }
+        }
+        
+        // Sort by wins (descending), then by losses (ascending)
+        return teams.sorted { team1, team2 in
+            if team1.wins != team2.wins {
+                return team1.wins > team2.wins
+            }
+            return team1.losses < team2.losses
         }
     }
     
@@ -262,6 +287,16 @@ struct ARCLDataResponse: Codable {
     let teams: [String]
     let batsmen: [BatsmanJSON]
     let bowlers: [BowlerJSON]
+    let standings: [StandingJSON]
+}
+
+struct StandingJSON: Codable {
+    let team: String
+    let rank: String
+    let matches: String
+    let wins: String
+    let losses: String
+    let points: String
 }
 
 struct BatsmanJSON: Codable {

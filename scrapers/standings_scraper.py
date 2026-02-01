@@ -10,29 +10,28 @@ class StandingsScraper(BaseScraper):
     """Scraper for league standings"""
     
     def scrape(self, division_id, season_id):
-        """Scrape league standings"""
-        url = f"{self.base_url}/Pages/UI/Standings.aspx?league_id={division_id}&season_id={season_id}"
+        """Scrape league standings from DivHome page"""
+        url = f"{self.base_url}/Pages/UI/DivHome.aspx?teams_stats_type_id=1&season_id={season_id}&league_id={division_id}"
         print(f"  🏆 Scraping standings...")
         
         soup = self.fetch_page(url)
         if not soup:
             return []
         
-        table_data = self.extract_table_data(soup, 'GridView')
+        # Find the Overall Standings table
+        table_data = self.extract_table_data(soup, 'GridViewOverall')
         standings = []
         
         for row in table_data:
-            if len(row) >= 8:
+            if len(row) >= 5:
                 try:
                     standings.append({
-                        "rank": row[0],
-                        "team": row[1],
+                        "team": row[0],
+                        "rank": row[1],
                         "matches": row[2],
                         "wins": row[3],
                         "losses": row[4],
-                        "ties": row[5],
-                        "points": row[6],
-                        "nrr": row[7] if len(row) > 7 else "0"
+                        "points": row[8] if len(row) > 8 else "0"
                     })
                 except Exception as e:
                     continue
