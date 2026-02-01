@@ -85,6 +85,7 @@ struct OpponentAnalysisView: View {
                 .padding(.horizontal)
             }
             .padding(.vertical)
+        }
         .navigationTitle("Analysis")
         .navigationBarTitleDisplayMode(.inline)
     }
