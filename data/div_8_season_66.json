@@ -2,7 +2,7 @@
   "division_id": 8,
   "season_id": 66,
   "division_name": "Div F - Summer 2025",
-  "last_updated": "2026-02-01T15:26:12.349323",
+  "last_updated": "2026-02-01T15:42:38.204161",
   "teams": [
     "C-Hawks",
     "Red Warriors",
@@ -36,7 +36,8 @@
       "team": "Snoqualmie Wolves Arctic",
       "innings": "7",
       "runs": "210",
-      "strike_rate": "112.3"
+      "strike_rate": "112.3",
+      "average": "30.0"
     },
     {
       "rank": "2",
@@ -44,7 +45,8 @@
       "team": "BRCL Greens",
       "innings": "7",
       "runs": "200",
-      "strike_rate": "93.46"
+      "strike_rate": "93.46",
+      "average": "28.57"
     },
     {
       "rank": "3",
@@ -52,7 +54,8 @@
       "team": "Snoqualmie Wolves Timber",
       "innings": "7",
       "runs": "177",
-      "strike_rate": "91.24"
+      "strike_rate": "91.24",
+      "average": "25.29"
     },
     {
       "rank": "4",
@@ -60,7 +63,8 @@
       "team": "Pulikkoottam - Royals",
       "innings": "7",
       "runs": "162",
-      "strike_rate": "94.19"
+      "strike_rate": "94.19",
+      "average": "23.14"
     },
     {
       "rank": "5",
@@ -68,7 +72,8 @@
       "team": "Machani Strikers",
       "innings": "6",
       "runs": "154",
-      "strike_rate": "138.74"
+      "strike_rate": "138.74",
+      "average": "25.67"
     },
     {
       "rank": "6",
@@ -76,7 +81,8 @@
       "team": "Kirkland Knights",
       "innings": "6",
       "runs": "153",
-      "strike_rate": "104.79"
+      "strike_rate": "104.79",
+      "average": "25.5"
     },
     {
       "rank": "7",
@@ -84,7 +90,8 @@
       "team": "C-Hawks",
       "innings": "7",
       "runs": "147",
-      "strike_rate": "85.47"
+      "strike_rate": "85.47",
+      "average": "21.0"
     },
     {
       "rank": "8",
@@ -92,7 +99,8 @@
       "team": "Knightriders",
       "innings": "7",
       "runs": "145",
-      "strike_rate": "88.41"
+      "strike_rate": "88.41",
+      "average": "20.71"
     },
     {
       "rank": "9",
@@ -100,7 +108,8 @@
       "team": "Everest Warriors",
       "innings": "7",
       "runs": "137",
-      "strike_rate": "112.3"
+      "strike_rate": "112.3",
+      "average": "19.57"
     },
     {
       "rank": "10",
@@ -108,7 +117,8 @@
       "team": "Pulikkoottam - Royals",
       "innings": "7",
       "runs": "134",
-      "strike_rate": "75.28"
+      "strike_rate": "75.28",
+      "average": "19.14"
     },
     {
       "rank": "11",
@@ -116,7 +126,8 @@
       "team": "ICCS Angry Bulls",
       "innings": "6",
       "runs": "132",
-      "strike_rate": "101.54"
+      "strike_rate": "101.54",
+      "average": "22.0"
     },
     {
       "rank": "12",
@@ -124,7 +135,8 @@
       "team": "Gilly",
       "innings": "7",
       "runs": "120",
-      "strike_rate": "86.33"
+      "strike_rate": "86.33",
+      "average": "17.14"
     },
     {
       "rank": "13",
@@ -132,7 +144,8 @@
       "team": "The Avengers",
       "innings": "6",
       "runs": "118",
-      "strike_rate": "76.13"
+      "strike_rate": "76.13",
+      "average": "19.67"
     },
     {
       "rank": "14",
@@ -140,7 +153,8 @@
       "team": "Spartan Boys",
       "innings": "7",
       "runs": "118",
-      "strike_rate": "72.39"
+      "strike_rate": "72.39",
+      "average": "16.86"
     },
     {
       "rank": "15",
@@ -148,7 +162,8 @@
       "team": "Machani Strikers",
       "innings": "7",
       "runs": "117",
-      "strike_rate": "104.46"
+      "strike_rate": "104.46",
+      "average": "16.71"
     },
     {
       "rank": "16",
@@ -156,7 +171,8 @@
       "team": "ICCS Angry Bulls",
       "innings": "7",
       "runs": "116",
-      "strike_rate": "92.8"
+      "strike_rate": "92.8",
+      "average": "16.57"
     },
     {
       "rank": "17",
@@ -164,7 +180,8 @@
       "team": "ICCS Royal Warriors",
       "innings": "7",
       "runs": "116",
-      "strike_rate": "88.55"
+      "strike_rate": "88.55",
+      "average": "16.57"
     },
     {
       "rank": "18",
@@ -172,7 +189,8 @@
       "team": "Kirkland Knights",
       "innings": "7",
       "runs": "115",
-      "strike_rate": "91.27"
+      "strike_rate": "91.27",
+      "average": "16.43"
     },
     {
       "rank": "19",
@@ -180,7 +198,8 @@
       "team": "Red Warriors",
       "innings": "6",
       "runs": "114",
-      "strike_rate": "73.08"
+      "strike_rate": "73.08",
+      "average": "19.0"
     },
     {
       "rank": "20",
@@ -188,7 +207,8 @@
       "team": "ATB Seattle Shockers",
       "innings": "7",
       "runs": "110",
-      "strike_rate": "81.48"
+      "strike_rate": "81.48",
+      "average": "15.71"
     },
     {
       "rank": "21",
@@ -196,7 +216,8 @@
       "team": "ICCS Royal Warriors",
       "innings": "7",
       "runs": "110",
-      "strike_rate": "89.43"
+      "strike_rate": "89.43",
+      "average": "15.71"
     },
     {
       "rank": "22",
@@ -204,7 +225,8 @@
       "team": "C-Hawks",
       "innings": "6",
       "runs": "108",
-      "strike_rate": "81.2"
+      "strike_rate": "81.2",
+      "average": "18.0"
     },
     {
       "rank": "23",
@@ -212,7 +234,8 @@
       "team": "Everest Warriors",
       "innings": "4",
       "runs": "106",
-      "strike_rate": "120.45"
+      "strike_rate": "120.45",
+      "average": "26.5"
     },
     {
       "rank": "24",
@@ -220,7 +243,8 @@
       "team": "Cricket Fanatics",
       "innings": "6",
       "runs": "105",
-      "strike_rate": "75"
+      "strike_rate": "75",
+      "average": "17.5"
     },
     {
       "rank": "25",
@@ -228,7 +252,8 @@
       "team": "Snoqualmie Wolves Timber",
       "innings": "7",
       "runs": "104",
-      "strike_rate": "66.24"
+      "strike_rate": "66.24",
+      "average": "14.86"
     }
   ],
   "bowlers": [
@@ -236,226 +261,301 @@
       "rank": "1",
       "name": "Gill Redhawks",
       "team": "Spartan Boys",
-      "matches": "7",
+      "innings": "7",
       "overs": "25.10",
-      "wickets": "0",
-      "economy": "109"
+      "maidens": "0",
+      "runs_given": "109",
+      "wickets": "14",
+      "average": "7.79",
+      "economy": "4.34"
     },
     {
       "rank": "2",
       "name": "Srinivasan Turuvekere",
       "team": "Gilly",
-      "matches": "6",
+      "innings": "6",
       "overs": "22.20",
-      "wickets": "0",
-      "economy": "120"
+      "maidens": "0",
+      "runs_given": "120",
+      "wickets": "14",
+      "average": "8.57",
+      "economy": "5.41"
     },
     {
       "rank": "3",
       "name": "Sagar Ghabade",
       "team": "Raftaar",
-      "matches": "7",
+      "innings": "7",
       "overs": "25.50",
-      "wickets": "0",
-      "economy": "161"
+      "maidens": "0",
+      "runs_given": "161",
+      "wickets": "13",
+      "average": "12.38",
+      "economy": "6.31"
     },
     {
       "rank": "4",
       "name": "Rahul Mitra",
       "team": "ICCS Angry Bulls",
-      "matches": "7",
+      "innings": "7",
       "overs": "27.40",
-      "wickets": "0",
-      "economy": "134"
+      "maidens": "0",
+      "runs_given": "134",
+      "wickets": "13",
+      "average": "10.31",
+      "economy": "4.89"
     },
     {
       "rank": "5",
       "name": "Raj Kumar R",
       "team": "Knightriders",
-      "matches": "6",
+      "innings": "6",
       "overs": "17.90",
-      "wickets": "0",
-      "economy": "94"
+      "maidens": "0",
+      "runs_given": "94",
+      "wickets": "12",
+      "average": "7.83",
+      "economy": "5.25"
     },
     {
       "rank": "6",
       "name": "Vinay G",
       "team": "Cricket Fanatics",
-      "matches": "6",
+      "innings": "6",
       "overs": "19.90",
-      "wickets": "0",
-      "economy": "94"
+      "maidens": "0",
+      "runs_given": "94",
+      "wickets": "12",
+      "average": "7.83",
+      "economy": "4.72"
     },
     {
       "rank": "7",
       "name": "Arun Chandra",
       "team": "Kirkland Knights",
-      "matches": "7",
+      "innings": "7",
       "overs": "21.10",
-      "wickets": "0",
-      "economy": "92"
+      "maidens": "0",
+      "runs_given": "92",
+      "wickets": "11",
+      "average": "8.36",
+      "economy": "4.36"
     },
     {
       "rank": "8",
       "name": "Vibhav SWCC",
       "team": "Snoqualmie Wolves Timber",
-      "matches": "5",
+      "innings": "5",
       "overs": "19.50",
-      "wickets": "0",
-      "economy": "77"
+      "maidens": "0",
+      "runs_given": "77",
+      "wickets": "10",
+      "average": "7.7",
+      "economy": "3.95"
     },
     {
       "rank": "9",
       "name": "Praveen Malla",
       "team": "Knightriders",
-      "matches": "7",
+      "innings": "7",
       "overs": "24.30",
-      "wickets": "0",
-      "economy": "113"
+      "maidens": "0",
+      "runs_given": "113",
+      "wickets": "10",
+      "average": "11.3",
+      "economy": "4.65"
     },
     {
       "rank": "10",
       "name": "Kanish Manuja",
       "team": "Gilly",
-      "matches": "6",
+      "innings": "6",
       "overs": "22.50",
-      "wickets": "0",
-      "economy": "104"
+      "maidens": "0",
+      "runs_given": "104",
+      "wickets": "10",
+      "average": "10.4",
+      "economy": "4.62"
     },
     {
       "rank": "11",
       "name": "Ashish Virani",
       "team": "Kirkland Knights",
-      "matches": "6",
+      "innings": "6",
       "overs": "15.00",
-      "wickets": "0",
-      "economy": "68"
+      "maidens": "0",
+      "runs_given": "68",
+      "wickets": "10",
+      "average": "6.8",
+      "economy": "4.53"
     },
     {
       "rank": "12",
       "name": "Arif Mandra",
       "team": "BRCL Greens",
-      "matches": "6",
+      "innings": "6",
       "overs": "22.30",
-      "wickets": "1",
-      "economy": "77"
+      "maidens": "1",
+      "runs_given": "77",
+      "wickets": "9",
+      "average": "8.56",
+      "economy": "3.45"
     },
     {
       "rank": "13",
       "name": "Rijil Koyyodan",
       "team": "Pulikkoottam - Royals",
-      "matches": "6",
+      "innings": "6",
       "overs": "12.00",
-      "wickets": "0",
-      "economy": "71"
+      "maidens": "0",
+      "runs_given": "71",
+      "wickets": "9",
+      "average": "7.89",
+      "economy": "5.92"
     },
     {
       "rank": "14",
       "name": "Rajendra K",
       "team": "Snoqualmie Wolves Timber",
-      "matches": "6",
+      "innings": "6",
       "overs": "22.00",
-      "wickets": "1",
-      "economy": "104"
+      "maidens": "1",
+      "runs_given": "104",
+      "wickets": "9",
+      "average": "11.56",
+      "economy": "4.73"
     },
     {
       "rank": "15",
       "name": "Ragav Venkatesan",
       "team": "C-Hawks",
-      "matches": "6",
+      "innings": "6",
       "overs": "19.00",
-      "wickets": "0",
-      "economy": "109"
+      "maidens": "0",
+      "runs_given": "109",
+      "wickets": "9",
+      "average": "12.11",
+      "economy": "5.74"
     },
     {
       "rank": "16",
       "name": "Phani Madala",
       "team": "SuperKings",
-      "matches": "6",
+      "innings": "6",
       "overs": "24.00",
-      "wickets": "1",
-      "economy": "89"
+      "maidens": "1",
+      "runs_given": "89",
+      "wickets": "9",
+      "average": "9.89",
+      "economy": "3.71"
     },
     {
       "rank": "17",
       "name": "AkashAnjanappa A",
       "team": "Cricket Fanatics",
-      "matches": "7",
+      "innings": "7",
       "overs": "28.00",
-      "wickets": "0",
-      "economy": "133"
+      "maidens": "0",
+      "runs_given": "133",
+      "wickets": "9",
+      "average": "14.78",
+      "economy": "4.75"
     },
     {
       "rank": "18",
       "name": "Jeet M",
       "team": "The Avengers",
-      "matches": "6",
+      "innings": "6",
       "overs": "17.30",
-      "wickets": "0",
-      "economy": "102"
+      "maidens": "0",
+      "runs_given": "102",
+      "wickets": "8",
+      "average": "12.75",
+      "economy": "5.9"
     },
     {
       "rank": "19",
       "name": "Manish S Nair",
       "team": "Machani Strikers",
-      "matches": "6",
+      "innings": "6",
       "overs": "21.00",
-      "wickets": "0",
-      "economy": "97"
+      "maidens": "0",
+      "runs_given": "97",
+      "wickets": "8",
+      "average": "12.13",
+      "economy": "4.62"
     },
     {
       "rank": "20",
       "name": "Divakar Ravi",
       "team": "Cricket Fanatics",
-      "matches": "7",
+      "innings": "7",
       "overs": "27.00",
-      "wickets": "0",
-      "economy": "148"
+      "maidens": "0",
+      "runs_given": "148",
+      "wickets": "8",
+      "average": "18.5",
+      "economy": "5.48"
     },
     {
       "rank": "21",
       "name": "Ashwin Giridharan",
       "team": "ICCS Royal Warriors",
-      "matches": "7",
+      "innings": "7",
       "overs": "25.80",
-      "wickets": "0",
-      "economy": "155"
+      "maidens": "0",
+      "runs_given": "155",
+      "wickets": "8",
+      "average": "19.38",
+      "economy": "6.01"
     },
     {
       "rank": "22",
       "name": "Sudeep Aryal",
       "team": "Everest Warriors",
-      "matches": "7",
+      "innings": "7",
       "overs": "25.20",
-      "wickets": "0",
-      "economy": "149"
+      "maidens": "0",
+      "runs_given": "149",
+      "wickets": "8",
+      "average": "18.63",
+      "economy": "5.91"
     },
     {
       "rank": "23",
       "name": "Pranu Johri",
       "team": "Snoqualmie Wolves Timber",
-      "matches": "7",
+      "innings": "7",
       "overs": "20.50",
-      "wickets": "1",
-      "economy": "102"
+      "maidens": "1",
+      "runs_given": "102",
+      "wickets": "8",
+      "average": "12.75",
+      "economy": "4.98"
     },
     {
       "rank": "24",
       "name": "Gagan Jagadeesha",
       "team": "Knightriders",
-      "matches": "7",
+      "innings": "7",
       "overs": "22.00",
-      "wickets": "1",
-      "economy": "93"
+      "maidens": "1",
+      "runs_given": "93",
+      "wickets": "8",
+      "average": "11.63",
+      "economy": "4.23"
     },
     {
       "rank": "25",
       "name": "Dewashish Chandramauli",
       "team": "Kachra Boyz - OG",
-      "matches": "6",
+      "innings": "6",
       "overs": "21.00",
-      "wickets": "0",
-      "economy": "107"
+      "maidens": "0",
+      "runs_given": "107",
+      "wickets": "8",
+      "average": "13.38",
+      "economy": "5.1"
     }
   ],
   "standings": [

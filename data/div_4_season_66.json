@@ -2,7 +2,7 @@
   "division_id": 4,
   "season_id": 66,
   "division_name": "Div B - Summer 2025",
-  "last_updated": "2026-02-01T15:26:09.666569",
+  "last_updated": "2026-02-01T15:42:35.432379",
   "teams": [
     "Titans",
     "Bouncers",
@@ -36,7 +36,8 @@
       "team": "Bouncers",
       "innings": "7",
       "runs": "194",
-      "strike_rate": "127.63"
+      "strike_rate": "127.63",
+      "average": "27.71"
     },
     {
       "rank": "2",
@@ -44,7 +45,8 @@
       "team": "Titans",
       "innings": "6",
       "runs": "183",
-      "strike_rate": "107.65"
+      "strike_rate": "107.65",
+      "average": "30.5"
     },
     {
       "rank": "3",
@@ -52,7 +54,8 @@
       "team": "Master Minds",
       "innings": "6",
       "runs": "164",
-      "strike_rate": "121.48"
+      "strike_rate": "121.48",
+      "average": "27.33"
     },
     {
       "rank": "4",
@@ -60,7 +63,8 @@
       "team": "Washington Cricketers",
       "innings": "7",
       "runs": "163",
-      "strike_rate": "86.7"
+      "strike_rate": "86.7",
+      "average": "23.29"
     },
     {
       "rank": "5",
@@ -68,7 +72,8 @@
       "team": "LWCC",
       "innings": "6",
       "runs": "162",
-      "strike_rate": "105.88"
+      "strike_rate": "105.88",
+      "average": "27.0"
     },
     {
       "rank": "6",
@@ -76,7 +81,8 @@
       "team": "Lake Stevens Cricket Club - LSCC",
       "innings": "7",
       "runs": "161",
-      "strike_rate": "106.62"
+      "strike_rate": "106.62",
+      "average": "23.0"
     },
     {
       "rank": "7",
@@ -84,7 +90,8 @@
       "team": "Super Fit Challengers",
       "innings": "5",
       "runs": "158",
-      "strike_rate": "99.37"
+      "strike_rate": "99.37",
+      "average": "31.6"
     },
     {
       "rank": "8",
@@ -92,7 +99,8 @@
       "team": "The Dons",
       "innings": "6",
       "runs": "155",
-      "strike_rate": "129.17"
+      "strike_rate": "129.17",
+      "average": "25.83"
     },
     {
       "rank": "9",
@@ -100,7 +108,8 @@
       "team": "FatehCC-Legends",
       "innings": "5",
       "runs": "152",
-      "strike_rate": "116.03"
+      "strike_rate": "116.03",
+      "average": "30.4"
     },
     {
       "rank": "10",
@@ -108,7 +117,8 @@
       "team": "Lastsamurais",
       "innings": "7",
       "runs": "148",
-      "strike_rate": "106.47"
+      "strike_rate": "106.47",
+      "average": "21.14"
     },
     {
       "rank": "11",
@@ -116,7 +126,8 @@
       "team": "Peaky Blinders",
       "innings": "6",
       "runs": "137",
-      "strike_rate": "101.48"
+      "strike_rate": "101.48",
+      "average": "22.83"
     },
     {
       "rank": "12",
@@ -124,7 +135,8 @@
       "team": "CrickChamps",
       "innings": "6",
       "runs": "136",
-      "strike_rate": "92.52"
+      "strike_rate": "92.52",
+      "average": "22.67"
     },
     {
       "rank": "13",
@@ -132,7 +144,8 @@
       "team": "Nanbaeenda",
       "innings": "6",
       "runs": "136",
-      "strike_rate": "102.26"
+      "strike_rate": "102.26",
+      "average": "22.67"
     },
     {
       "rank": "14",
@@ -140,7 +153,8 @@
       "team": "FatehCC-Legends",
       "innings": "4",
       "runs": "119",
-      "strike_rate": "119"
+      "strike_rate": "119",
+      "average": "29.75"
     },
     {
       "rank": "15",
@@ -148,7 +162,8 @@
       "team": "Lake Stevens Cricket Club - LSCC",
       "innings": "7",
       "runs": "114",
-      "strike_rate": "91.2"
+      "strike_rate": "91.2",
+      "average": "16.29"
     },
     {
       "rank": "16",
@@ -156,7 +171,8 @@
       "team": "Indian Hawks",
       "innings": "7",
       "runs": "112",
-      "strike_rate": "124.44"
+      "strike_rate": "124.44",
+      "average": "16.0"
     },
     {
       "rank": "17",
@@ -164,7 +180,8 @@
       "team": "Turbos",
       "innings": "5",
       "runs": "111",
-      "strike_rate": "102.78"
+      "strike_rate": "102.78",
+      "average": "22.2"
     },
     {
       "rank": "18",
@@ -172,7 +189,8 @@
       "team": "BATMEN RISES",
       "innings": "6",
       "runs": "109",
-      "strike_rate": "83.21"
+      "strike_rate": "83.21",
+      "average": "18.17"
     },
     {
       "rank": "19",
@@ -180,7 +198,8 @@
       "team": "Master Blasters",
       "innings": "7",
       "runs": "107",
-      "strike_rate": "91.45"
+      "strike_rate": "91.45",
+      "average": "15.29"
     },
     {
       "rank": "20",
@@ -188,7 +207,8 @@
       "team": "Indian Hawks",
       "innings": "6",
       "runs": "107",
-      "strike_rate": "82.31"
+      "strike_rate": "82.31",
+      "average": "17.83"
     },
     {
       "rank": "21",
@@ -196,7 +216,8 @@
       "team": "DabangDashers",
       "innings": "7",
       "runs": "105",
-      "strike_rate": "100"
+      "strike_rate": "100",
+      "average": "15.0"
     },
     {
       "rank": "22",
@@ -204,7 +225,8 @@
       "team": "Bouncers",
       "innings": "7",
       "runs": "103",
-      "strike_rate": "114.44"
+      "strike_rate": "114.44",
+      "average": "14.71"
     },
     {
       "rank": "23",
@@ -212,7 +234,8 @@
       "team": "Lagaan",
       "innings": "6",
       "runs": "102",
-      "strike_rate": "82.93"
+      "strike_rate": "82.93",
+      "average": "17.0"
     },
     {
       "rank": "24",
@@ -220,7 +243,8 @@
       "team": "Super Fit Challengers",
       "innings": "6",
       "runs": "101",
-      "strike_rate": "80.16"
+      "strike_rate": "80.16",
+      "average": "16.83"
     },
     {
       "rank": "25",
@@ -228,7 +252,8 @@
       "team": "Lastsamurais",
       "innings": "7",
       "runs": "100",
-      "strike_rate": "90.91"
+      "strike_rate": "90.91",
+      "average": "14.29"
     }
   ],
   "bowlers": [
@@ -236,226 +261,301 @@
       "rank": "1",
       "name": "Prashanth Reddy Ramidi",
       "team": "Indian Hawks",
-      "matches": "7",
+      "innings": "7",
       "overs": "26.50",
-      "wickets": "0",
-      "economy": "107"
+      "maidens": "0",
+      "runs_given": "107",
+      "wickets": "15",
+      "average": "7.13",
+      "economy": "4.04"
     },
     {
       "rank": "2",
       "name": "Gnanavel Samykannu",
       "team": "Nanbaeenda",
-      "matches": "7",
+      "innings": "7",
       "overs": "26.30",
-      "wickets": "0",
-      "economy": "103"
+      "maidens": "0",
+      "runs_given": "103",
+      "wickets": "14",
+      "average": "7.36",
+      "economy": "3.92"
     },
     {
       "rank": "3",
       "name": "Sreekumar Hariharan",
       "team": "Thunder",
-      "matches": "7",
+      "innings": "7",
       "overs": "25.50",
-      "wickets": "0",
-      "economy": "121"
+      "maidens": "0",
+      "runs_given": "121",
+      "wickets": "12",
+      "average": "10.08",
+      "economy": "4.75"
     },
     {
       "rank": "4",
       "name": "Shantanu Papal",
       "team": "Peaky Blinders",
-      "matches": "7",
+      "innings": "7",
       "overs": "21.60",
-      "wickets": "0",
-      "economy": "104"
+      "maidens": "0",
+      "runs_given": "104",
+      "wickets": "11",
+      "average": "9.45",
+      "economy": "4.81"
     },
     {
       "rank": "5",
       "name": "Ramesh Sakanadagi",
       "team": "Lake Stevens Cricket Club - LSCC",
-      "matches": "7",
+      "innings": "7",
       "overs": "24.00",
-      "wickets": "0",
-      "economy": "128"
+      "maidens": "0",
+      "runs_given": "128",
+      "wickets": "11",
+      "average": "11.64",
+      "economy": "5.33"
     },
     {
       "rank": "6",
       "name": "Elumalai Damotharan",
       "team": "Lastsamurais",
-      "matches": "7",
+      "innings": "7",
       "overs": "21.00",
-      "wickets": "0",
-      "economy": "108"
+      "maidens": "0",
+      "runs_given": "108",
+      "wickets": "10",
+      "average": "10.8",
+      "economy": "5.14"
     },
     {
       "rank": "7",
       "name": "Nikhil Mengani",
       "team": "Turbos",
-      "matches": "4",
+      "innings": "4",
       "overs": "15.00",
-      "wickets": "0",
-      "economy": "105"
+      "maidens": "0",
+      "runs_given": "105",
+      "wickets": "10",
+      "average": "10.5",
+      "economy": "7.0"
     },
     {
       "rank": "8",
       "name": "Amit N",
       "team": "Master Blasters",
-      "matches": "7",
+      "innings": "7",
       "overs": "25.10",
-      "wickets": "0",
-      "economy": "135"
+      "maidens": "0",
+      "runs_given": "135",
+      "wickets": "10",
+      "average": "13.5",
+      "economy": "5.38"
     },
     {
       "rank": "9",
       "name": "Nilesh Patil",
       "team": "Super Fit Challengers",
-      "matches": "7",
+      "innings": "7",
       "overs": "25.10",
-      "wickets": "0",
-      "economy": "120"
+      "maidens": "0",
+      "runs_given": "120",
+      "wickets": "10",
+      "average": "12",
+      "economy": "4.78"
     },
     {
       "rank": "10",
       "name": "Prateek Gaur Challengers",
       "team": "Super Fit Challengers",
-      "matches": "3",
+      "innings": "3",
       "overs": "11.00",
-      "wickets": "0",
-      "economy": "42"
+      "maidens": "0",
+      "runs_given": "42",
+      "wickets": "9",
+      "average": "4.67",
+      "economy": "3.82"
     },
     {
       "rank": "11",
       "name": "Vayu Nandan Rao Pampari",
       "team": "Lagaan",
-      "matches": "6",
+      "innings": "6",
       "overs": "21.10",
-      "wickets": "0",
-      "economy": "98"
+      "maidens": "0",
+      "runs_given": "98",
+      "wickets": "9",
+      "average": "10.89",
+      "economy": "4.64"
     },
     {
       "rank": "12",
       "name": "Rahul Dev Prabhu",
       "team": "FatehCC-Legends",
-      "matches": "4",
+      "innings": "4",
       "overs": "16.00",
-      "wickets": "0",
-      "economy": "91"
+      "maidens": "0",
+      "runs_given": "91",
+      "wickets": "8",
+      "average": "11.38",
+      "economy": "5.69"
     },
     {
       "rank": "13",
       "name": "Aikansh Garg",
       "team": "Nanbaeenda",
-      "matches": "7",
+      "innings": "7",
       "overs": "23.00",
-      "wickets": "0",
-      "economy": "109"
+      "maidens": "0",
+      "runs_given": "109",
+      "wickets": "8",
+      "average": "13.63",
+      "economy": "4.74"
     },
     {
       "rank": "14",
       "name": "Rajesh Tanji",
       "team": "Washington Cricketers",
-      "matches": "7",
+      "innings": "7",
       "overs": "24.20",
-      "wickets": "0",
-      "economy": "104"
+      "maidens": "0",
+      "runs_given": "104",
+      "wickets": "8",
+      "average": "13",
+      "economy": "4.3"
     },
     {
       "rank": "15",
       "name": "Vinod R",
       "team": "Indian Hawks",
-      "matches": "5",
+      "innings": "5",
       "overs": "17.00",
-      "wickets": "0",
-      "economy": "97"
+      "maidens": "0",
+      "runs_given": "97",
+      "wickets": "8",
+      "average": "12.13",
+      "economy": "5.71"
     },
     {
       "rank": "16",
       "name": "Vishwanadha Reddy",
       "team": "Lagaan",
-      "matches": "7",
+      "innings": "7",
       "overs": "22.30",
-      "wickets": "1",
-      "economy": "120"
+      "maidens": "1",
+      "runs_given": "120",
+      "wickets": "8",
+      "average": "15",
+      "economy": "5.38"
     },
     {
       "rank": "17",
       "name": "Vinay Ravvarapu",
       "team": "CrickChamps",
-      "matches": "5",
+      "innings": "5",
       "overs": "18.00",
-      "wickets": "2",
-      "economy": "78"
+      "maidens": "2",
+      "runs_given": "78",
+      "wickets": "8",
+      "average": "9.75",
+      "economy": "4.33"
     },
     {
       "rank": "18",
       "name": "Parth Gajera",
       "team": "Titans",
-      "matches": "5",
+      "innings": "5",
       "overs": "19.00",
-      "wickets": "0",
-      "economy": "81"
+      "maidens": "0",
+      "runs_given": "81",
+      "wickets": "8",
+      "average": "10.13",
+      "economy": "4.26"
     },
     {
       "rank": "19",
       "name": "Sumit Singh",
       "team": "Bouncers",
-      "matches": "4",
+      "innings": "4",
       "overs": "15.20",
-      "wickets": "0",
-      "economy": "89"
+      "maidens": "0",
+      "runs_given": "89",
+      "wickets": "8",
+      "average": "11.13",
+      "economy": "5.86"
     },
     {
       "rank": "20",
       "name": "Akshaya Arora",
       "team": "Master Blasters",
-      "matches": "6",
+      "innings": "6",
       "overs": "19.20",
-      "wickets": "0",
-      "economy": "102"
+      "maidens": "0",
+      "runs_given": "102",
+      "wickets": "8",
+      "average": "12.75",
+      "economy": "5.31"
     },
     {
       "rank": "21",
       "name": "Rajkumar Ramasamy",
       "team": "LWCC",
-      "matches": "4",
+      "innings": "4",
       "overs": "13.30",
-      "wickets": "0",
-      "economy": "63"
+      "maidens": "0",
+      "runs_given": "63",
+      "wickets": "8",
+      "average": "7.88",
+      "economy": "4.74"
     },
     {
       "rank": "22",
       "name": "Jagbir Singh",
       "team": "Bouncers",
-      "matches": "7",
+      "innings": "7",
       "overs": "27.00",
-      "wickets": "0",
-      "economy": "162"
+      "maidens": "0",
+      "runs_given": "162",
+      "wickets": "7",
+      "average": "23.14",
+      "economy": "6.0"
     },
     {
       "rank": "23",
       "name": "Hardik J Joshi",
       "team": "The Dons",
-      "matches": "5",
+      "innings": "5",
       "overs": "10.20",
-      "wickets": "0",
-      "economy": "63"
+      "maidens": "0",
+      "runs_given": "63",
+      "wickets": "7",
+      "average": "9",
+      "economy": "6.18"
     },
     {
       "rank": "24",
       "name": "Hem r R",
       "team": "Joot",
-      "matches": "3",
+      "innings": "3",
       "overs": "8.70",
-      "wickets": "0",
-      "economy": "28"
+      "maidens": "0",
+      "runs_given": "28",
+      "wickets": "7",
+      "average": "4",
+      "economy": "3.22"
     },
     {
       "rank": "25",
       "name": "Nattu Sathiyanarayanan",
       "team": "Washington Cricketers",
-      "matches": "4",
+      "innings": "4",
       "overs": "12.00",
-      "wickets": "0",
-      "economy": "59"
+      "maidens": "0",
+      "runs_given": "59",
+      "wickets": "7",
+      "average": "8.43",
+      "economy": "4.92"
     }
   ],
   "standings": [

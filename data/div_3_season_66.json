@@ -2,7 +2,7 @@
   "division_id": 3,
   "season_id": 66,
   "division_name": "Div A - Summer 2025",
-  "last_updated": "2026-02-01T15:26:07.769159",
+  "last_updated": "2026-02-01T15:42:33.879614",
   "teams": [
     "Hyderabad Blues",
     "PSCC Elites",
@@ -36,7 +36,8 @@
       "team": "Pulikkoottam - Titans",
       "innings": "7",
       "runs": "328",
-      "strike_rate": "141.38"
+      "strike_rate": "141.38",
+      "average": "46.86"
     },
     {
       "rank": "2",
@@ -44,7 +45,8 @@
       "team": "Pulikkoottam - Blasterz",
       "innings": "7",
       "runs": "279",
-      "strike_rate": "120.26"
+      "strike_rate": "120.26",
+      "average": "39.86"
     },
     {
       "rank": "3",
@@ -52,7 +54,8 @@
       "team": "PSCC Elites",
       "innings": "6",
       "runs": "219",
-      "strike_rate": "105.8"
+      "strike_rate": "105.8",
+      "average": "36.5"
     },
     {
       "rank": "4",
@@ -60,7 +63,8 @@
       "team": "PitchHikers",
       "innings": "7",
       "runs": "212",
-      "strike_rate": "160.61"
+      "strike_rate": "160.61",
+      "average": "30.29"
     },
     {
       "rank": "5",
@@ -68,7 +72,8 @@
       "team": "Ruthless Strikers",
       "innings": "6",
       "runs": "186",
-      "strike_rate": "166.07"
+      "strike_rate": "166.07",
+      "average": "31.0"
     },
     {
       "rank": "6",
@@ -76,7 +81,8 @@
       "team": "PitchHikers",
       "innings": "7",
       "runs": "174",
-      "strike_rate": "362.5"
+      "strike_rate": "362.5",
+      "average": "24.86"
     },
     {
       "rank": "7",
@@ -84,7 +90,8 @@
       "team": "WILLOW WIELDERS",
       "innings": "6",
       "runs": "164",
-      "strike_rate": "96.47"
+      "strike_rate": "96.47",
+      "average": "27.33"
     },
     {
       "rank": "8",
@@ -92,7 +99,8 @@
       "team": "We8",
       "innings": "6",
       "runs": "155",
-      "strike_rate": "126.02"
+      "strike_rate": "126.02",
+      "average": "25.83"
     },
     {
       "rank": "9",
@@ -100,7 +108,8 @@
       "team": "Northern Thunder",
       "innings": "6",
       "runs": "147",
-      "strike_rate": "109.7"
+      "strike_rate": "109.7",
+      "average": "24.5"
     },
     {
       "rank": "10",
@@ -108,7 +117,8 @@
       "team": "Northern Thunder",
       "innings": "7",
       "runs": "143",
-      "strike_rate": "118.18"
+      "strike_rate": "118.18",
+      "average": "20.43"
     },
     {
       "rank": "11",
@@ -116,7 +126,8 @@
       "team": "Pirates of Seattle",
       "innings": "7",
       "runs": "142",
-      "strike_rate": "84.52"
+      "strike_rate": "84.52",
+      "average": "20.29"
     },
     {
       "rank": "12",
@@ -124,7 +135,8 @@
       "team": "PSCC Sarfarosh",
       "innings": "7",
       "runs": "141",
-      "strike_rate": "99.3"
+      "strike_rate": "99.3",
+      "average": "20.14"
     },
     {
       "rank": "13",
@@ -132,7 +144,8 @@
       "team": "BATMEN",
       "innings": "6",
       "runs": "139",
-      "strike_rate": "106.92"
+      "strike_rate": "106.92",
+      "average": "23.17"
     },
     {
       "rank": "14",
@@ -140,7 +153,8 @@
       "team": "Northern Thunder",
       "innings": "7",
       "runs": "129",
-      "strike_rate": "81.13"
+      "strike_rate": "81.13",
+      "average": "18.43"
     },
     {
       "rank": "15",
@@ -148,7 +162,8 @@
       "team": "PSCC Elites",
       "innings": "5",
       "runs": "127",
-      "strike_rate": "136.56"
+      "strike_rate": "136.56",
+      "average": "25.4"
     },
     {
       "rank": "16",
@@ -156,7 +171,8 @@
       "team": "Pulikkoottam - Titans",
       "innings": "7",
       "runs": "126",
-      "strike_rate": "88.11"
+      "strike_rate": "88.11",
+      "average": "18.0"
     },
     {
       "rank": "17",
@@ -164,7 +180,8 @@
       "team": "Fatehcc-Mavericks",
       "innings": "7",
       "runs": "122",
-      "strike_rate": "102.52"
+      "strike_rate": "102.52",
+      "average": "17.43"
     },
     {
       "rank": "18",
@@ -172,7 +189,8 @@
       "team": "FatehCC-Patriots",
       "innings": "6",
       "runs": "121",
-      "strike_rate": "123.47"
+      "strike_rate": "123.47",
+      "average": "20.17"
     },
     {
       "rank": "19",
@@ -180,7 +198,8 @@
       "team": "Fatehcc-Mavericks",
       "innings": "3",
       "runs": "120",
-      "strike_rate": "118.81"
+      "strike_rate": "118.81",
+      "average": "40.0"
     },
     {
       "rank": "20",
@@ -188,7 +207,8 @@
       "team": "PSCC Sarfarosh",
       "innings": "4",
       "runs": "119",
-      "strike_rate": "138.37"
+      "strike_rate": "138.37",
+      "average": "29.75"
     },
     {
       "rank": "21",
@@ -196,7 +216,8 @@
       "team": "FatehCC-Patriots",
       "innings": "5",
       "runs": "118",
-      "strike_rate": "112.38"
+      "strike_rate": "112.38",
+      "average": "23.6"
     },
     {
       "rank": "22",
@@ -204,7 +225,8 @@
       "team": "Swing n Drive",
       "innings": "5",
       "runs": "117",
-      "strike_rate": "118.18"
+      "strike_rate": "118.18",
+      "average": "23.4"
     },
     {
       "rank": "23",
@@ -212,7 +234,8 @@
       "team": "WILLOW WIELDERS",
       "innings": "7",
       "runs": "117",
-      "strike_rate": "70.48"
+      "strike_rate": "70.48",
+      "average": "16.71"
     },
     {
       "rank": "24",
@@ -220,7 +243,8 @@
       "team": "Fatehcc-Mavericks",
       "innings": "6",
       "runs": "109",
-      "strike_rate": "123.86"
+      "strike_rate": "123.86",
+      "average": "18.17"
     },
     {
       "rank": "25",
@@ -228,7 +252,8 @@
       "team": "PSCC Sarfarosh",
       "innings": "4",
       "runs": "108",
-      "strike_rate": "128.57"
+      "strike_rate": "128.57",
+      "average": "27.0"
     }
   ],
   "bowlers": [
@@ -236,226 +261,301 @@
       "rank": "1",
       "name": "Xavier Antony",
       "team": "Pirates of Seattle",
-      "matches": "7",
+      "innings": "7",
       "overs": "27.00",
-      "wickets": "0",
-      "economy": "123"
+      "maidens": "0",
+      "runs_given": "123",
+      "wickets": "15",
+      "average": "8.2",
+      "economy": "4.56"
     },
     {
       "rank": "2",
       "name": "Prasanna Kokku",
       "team": "ATB Icons",
-      "matches": "7",
+      "innings": "7",
       "overs": "26.30",
-      "wickets": "1",
-      "economy": "113"
+      "maidens": "1",
+      "runs_given": "113",
+      "wickets": "14",
+      "average": "8.07",
+      "economy": "4.3"
     },
     {
       "rank": "3",
       "name": "Abdul Waheed",
       "team": "PSCC Sarfarosh",
-      "matches": "6",
+      "innings": "6",
       "overs": "22.00",
-      "wickets": "0",
-      "economy": "112"
+      "maidens": "0",
+      "runs_given": "112",
+      "wickets": "13",
+      "average": "8.62",
+      "economy": "5.09"
     },
     {
       "rank": "4",
       "name": "Ishan Sinha",
       "team": "PitchHikers",
-      "matches": "7",
+      "innings": "7",
       "overs": "27.00",
-      "wickets": "0",
-      "economy": "159"
+      "maidens": "0",
+      "runs_given": "159",
+      "wickets": "11",
+      "average": "14.45",
+      "economy": "5.89"
     },
     {
       "rank": "5",
       "name": "Akhil P",
       "team": "Ruthless Strikers",
-      "matches": "7",
+      "innings": "7",
       "overs": "25.00",
-      "wickets": "0",
-      "economy": "101"
+      "maidens": "0",
+      "runs_given": "101",
+      "wickets": "11",
+      "average": "9.18",
+      "economy": "4.04"
     },
     {
       "rank": "6",
       "name": "Mahesh Alwani",
       "team": "Hyderabad Blues",
-      "matches": "6",
+      "innings": "6",
       "overs": "23.30",
-      "wickets": "1",
-      "economy": "97"
+      "maidens": "1",
+      "runs_given": "97",
+      "wickets": "11",
+      "average": "8.82",
+      "economy": "4.16"
     },
     {
       "rank": "7",
       "name": "Abdul Khader",
       "team": "PSCC Elites",
-      "matches": "6",
+      "innings": "6",
       "overs": "16.00",
-      "wickets": "1",
-      "economy": "63"
+      "maidens": "1",
+      "runs_given": "63",
+      "wickets": "11",
+      "average": "5.73",
+      "economy": "3.94"
     },
     {
       "rank": "8",
       "name": "Ashraf Ali Mohammed",
       "team": "PSCC Elites",
-      "matches": "6",
+      "innings": "6",
       "overs": "17.00",
-      "wickets": "1",
-      "economy": "83"
+      "maidens": "1",
+      "runs_given": "83",
+      "wickets": "10",
+      "average": "8.3",
+      "economy": "4.88"
     },
     {
       "rank": "9",
       "name": "Madhav Balaji",
       "team": "Pulikkoottam - Blasterz",
-      "matches": "7",
+      "innings": "7",
       "overs": "23.50",
-      "wickets": "0",
-      "economy": "153"
+      "maidens": "0",
+      "runs_given": "153",
+      "wickets": "10",
+      "average": "15.3",
+      "economy": "6.51"
     },
     {
       "rank": "10",
       "name": "Yash Rolyan",
       "team": "Ruthless Strikers",
-      "matches": "6",
+      "innings": "6",
       "overs": "22.00",
-      "wickets": "0",
-      "economy": "121"
+      "maidens": "0",
+      "runs_given": "121",
+      "wickets": "10",
+      "average": "12.1",
+      "economy": "5.5"
     },
     {
       "rank": "11",
       "name": "Sabarish Suresh.",
       "team": "Pulikkoottam - Titans",
-      "matches": "5",
+      "innings": "5",
       "overs": "19.00",
-      "wickets": "0",
-      "economy": "104"
+      "maidens": "0",
+      "runs_given": "104",
+      "wickets": "9",
+      "average": "11.56",
+      "economy": "5.47"
     },
     {
       "rank": "12",
       "name": "Chirag Jain",
       "team": "FatehCC-Wizards",
-      "matches": "5",
+      "innings": "5",
       "overs": "17.40",
-      "wickets": "0",
-      "economy": "99"
+      "maidens": "0",
+      "runs_given": "99",
+      "wickets": "9",
+      "average": "11",
+      "economy": "5.69"
     },
     {
       "rank": "13",
       "name": "Manjunatha Shetty Kondalli",
       "team": "ICCS CerealKillers",
-      "matches": "5",
+      "innings": "5",
       "overs": "18.00",
-      "wickets": "1",
-      "economy": "95"
+      "maidens": "1",
+      "runs_given": "95",
+      "wickets": "9",
+      "average": "10.56",
+      "economy": "5.28"
     },
     {
       "rank": "14",
       "name": "Mohammed Arif",
       "team": "PSCC Elites",
-      "matches": "6",
+      "innings": "6",
       "overs": "22.30",
-      "wickets": "0",
-      "economy": "80"
+      "maidens": "0",
+      "runs_given": "80",
+      "wickets": "9",
+      "average": "8.89",
+      "economy": "3.59"
     },
     {
       "rank": "15",
       "name": "Mayank Solanki",
       "team": "FatehCC-Wizards",
-      "matches": "7",
+      "innings": "7",
       "overs": "23.20",
-      "wickets": "0",
-      "economy": "126"
+      "maidens": "0",
+      "runs_given": "126",
+      "wickets": "9",
+      "average": "14",
+      "economy": "5.43"
     },
     {
       "rank": "16",
       "name": "Ranjith Rajaram",
       "team": "Hyderabad Blues",
-      "matches": "6",
+      "innings": "6",
       "overs": "20.00",
-      "wickets": "0",
-      "economy": "114"
+      "maidens": "0",
+      "runs_given": "114",
+      "wickets": "9",
+      "average": "12.67",
+      "economy": "5.7"
     },
     {
       "rank": "17",
       "name": "Krishna Chaitanya Adusumilli",
       "team": "Sidewinders",
-      "matches": "6",
+      "innings": "6",
       "overs": "23.00",
-      "wickets": "1",
-      "economy": "82"
+      "maidens": "1",
+      "runs_given": "82",
+      "wickets": "8",
+      "average": "10.25",
+      "economy": "3.57"
     },
     {
       "rank": "18",
       "name": "Piyush Trivedi",
       "team": "The Opposition",
-      "matches": "7",
+      "innings": "7",
       "overs": "23.00",
-      "wickets": "0",
-      "economy": "122"
+      "maidens": "0",
+      "runs_given": "122",
+      "wickets": "8",
+      "average": "15.25",
+      "economy": "5.3"
     },
     {
       "rank": "19",
       "name": "Parag Rajopadhye",
       "team": "Fatehcc-Mavericks",
-      "matches": "6",
+      "innings": "6",
       "overs": "18.90",
-      "wickets": "0",
-      "economy": "102"
+      "maidens": "0",
+      "runs_given": "102",
+      "wickets": "8",
+      "average": "12.75",
+      "economy": "5.4"
     },
     {
       "rank": "20",
       "name": "Ankit Singh",
       "team": "Kachra Boyz",
-      "matches": "4",
+      "innings": "4",
       "overs": "14.40",
-      "wickets": "0",
-      "economy": "53"
+      "maidens": "0",
+      "runs_given": "53",
+      "wickets": "8",
+      "average": "6.63",
+      "economy": "3.68"
     },
     {
       "rank": "21",
       "name": "Dhruva K",
       "team": "ICCS CerealKillers",
-      "matches": "7",
+      "innings": "7",
       "overs": "27.00",
-      "wickets": "2",
-      "economy": "183"
+      "maidens": "2",
+      "runs_given": "183",
+      "wickets": "8",
+      "average": "22.88",
+      "economy": "6.78"
     },
     {
       "rank": "22",
       "name": "Shiva Teja Kolasani",
       "team": "FatehCC-Patriots",
-      "matches": "7",
+      "innings": "7",
       "overs": "26.00",
-      "wickets": "0",
-      "economy": "145"
+      "maidens": "0",
+      "runs_given": "145",
+      "wickets": "8",
+      "average": "18.13",
+      "economy": "5.58"
     },
     {
       "rank": "23",
       "name": "Vysakh Nachiketus",
       "team": "Cross Street Hooligans",
-      "matches": "6",
+      "innings": "6",
       "overs": "18.00",
-      "wickets": "0",
-      "economy": "78"
+      "maidens": "0",
+      "runs_given": "78",
+      "wickets": "8",
+      "average": "9.75",
+      "economy": "4.33"
     },
     {
       "rank": "24",
       "name": "Deeraj Rao",
       "team": "Hyderabad Blues",
-      "matches": "5",
+      "innings": "5",
       "overs": "18.10",
-      "wickets": "0",
-      "economy": "86"
+      "maidens": "0",
+      "runs_given": "86",
+      "wickets": "8",
+      "average": "10.75",
+      "economy": "4.75"
     },
     {
       "rank": "25",
       "name": "Arun Mohan",
       "team": "Pulikkoottam - Blasterz",
-      "matches": "7",
+      "innings": "7",
       "overs": "23.20",
-      "wickets": "0",
-      "economy": "134"
+      "maidens": "0",
+      "runs_given": "134",
+      "wickets": "7",
+      "average": "19.14",
+      "economy": "5.78"
     }
   ],
   "standings": [

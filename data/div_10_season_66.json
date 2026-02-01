@@ -2,7 +2,7 @@
   "division_id": 10,
   "season_id": 66,
   "division_name": "Div H - Summer 2025",
-  "last_updated": "2026-02-01T15:26:13.643891",
+  "last_updated": "2026-02-01T15:42:39.740497",
   "teams": [
     "Phoenix",
     "Royal Priesthood",
@@ -36,7 +36,8 @@
       "team": "Downtown dhurandars",
       "innings": "7",
       "runs": "174",
-      "strike_rate": "100"
+      "strike_rate": "100",
+      "average": "24.86"
     },
     {
       "rank": "2",
@@ -44,7 +45,8 @@
       "team": "Tailenders",
       "innings": "7",
       "runs": "149",
-      "strike_rate": "93.71"
+      "strike_rate": "93.71",
+      "average": "21.29"
     },
     {
       "rank": "3",
@@ -52,7 +54,8 @@
       "team": "Whiskey Warriors",
       "innings": "6",
       "runs": "139",
-      "strike_rate": "101.46"
+      "strike_rate": "101.46",
+      "average": "23.17"
     },
     {
       "rank": "4",
@@ -60,7 +63,8 @@
       "team": "Everest Warriors B",
       "innings": "7",
       "runs": "131",
-      "strike_rate": "80.86"
+      "strike_rate": "80.86",
+      "average": "18.71"
     },
     {
       "rank": "5",
@@ -68,7 +72,8 @@
       "team": "SEA-Chargers",
       "innings": "7",
       "runs": "126",
-      "strike_rate": "85.71"
+      "strike_rate": "85.71",
+      "average": "18.0"
     },
     {
       "rank": "6",
@@ -76,7 +81,8 @@
       "team": "SEA-Chargers",
       "innings": "6",
       "runs": "124",
-      "strike_rate": "97.64"
+      "strike_rate": "97.64",
+      "average": "20.67"
     },
     {
       "rank": "7",
@@ -84,7 +90,8 @@
       "team": "Everest Warriors B",
       "innings": "6",
       "runs": "123",
-      "strike_rate": "96.09"
+      "strike_rate": "96.09",
+      "average": "20.5"
     },
     {
       "rank": "8",
@@ -92,7 +99,8 @@
       "team": "Redmond Chargers",
       "innings": "5",
       "runs": "121",
-      "strike_rate": "96.03"
+      "strike_rate": "96.03",
+      "average": "24.2"
     },
     {
       "rank": "9",
@@ -100,7 +108,8 @@
       "team": "Seattle Strikers",
       "innings": "6",
       "runs": "120",
-      "strike_rate": "91.6"
+      "strike_rate": "91.6",
+      "average": "20.0"
     },
     {
       "rank": "10",
@@ -108,7 +117,8 @@
       "team": "Sidewinders-Extended",
       "innings": "7",
       "runs": "119",
-      "strike_rate": "75.8"
+      "strike_rate": "75.8",
+      "average": "17.0"
     },
     {
       "rank": "11",
@@ -116,7 +126,8 @@
       "team": "Phoenix",
       "innings": "7",
       "runs": "118",
-      "strike_rate": "143.9"
+      "strike_rate": "143.9",
+      "average": "16.86"
     },
     {
       "rank": "12",
@@ -124,7 +135,8 @@
       "team": "Whiskey Warriors",
       "innings": "6",
       "runs": "116",
-      "strike_rate": "82.86"
+      "strike_rate": "82.86",
+      "average": "19.33"
     },
     {
       "rank": "13",
@@ -132,7 +144,8 @@
       "team": "Cornered Tigers",
       "innings": "7",
       "runs": "115",
-      "strike_rate": "99.14"
+      "strike_rate": "99.14",
+      "average": "16.43"
     },
     {
       "rank": "14",
@@ -140,7 +153,8 @@
       "team": "Seattle Thunders",
       "innings": "6",
       "runs": "113",
-      "strike_rate": "98.26"
+      "strike_rate": "98.26",
+      "average": "18.83"
     },
     {
       "rank": "15",
@@ -148,7 +162,8 @@
       "team": "Redmond Chargers",
       "innings": "7",
       "runs": "110",
-      "strike_rate": "93.22"
+      "strike_rate": "93.22",
+      "average": "15.71"
     },
     {
       "rank": "16",
@@ -156,7 +171,8 @@
       "team": "Cornered Tigers",
       "innings": "5",
       "runs": "109",
-      "strike_rate": "75.17"
+      "strike_rate": "75.17",
+      "average": "21.8"
     },
     {
       "rank": "17",
@@ -164,7 +180,8 @@
       "team": "DREAM VISION SPARTANS",
       "innings": "6",
       "runs": "107",
-      "strike_rate": "74.31"
+      "strike_rate": "74.31",
+      "average": "17.83"
     },
     {
       "rank": "18",
@@ -172,7 +189,8 @@
       "team": "Stones",
       "innings": "7",
       "runs": "107",
-      "strike_rate": "93.04"
+      "strike_rate": "93.04",
+      "average": "15.29"
     },
     {
       "rank": "19",
@@ -180,7 +198,8 @@
       "team": "Royal Priesthood",
       "innings": "7",
       "runs": "106",
-      "strike_rate": "65.84"
+      "strike_rate": "65.84",
+      "average": "15.14"
     },
     {
       "rank": "20",
@@ -188,7 +207,8 @@
       "team": "Agomoni Tigers",
       "innings": "5",
       "runs": "106",
-      "strike_rate": "80.92"
+      "strike_rate": "80.92",
+      "average": "21.2"
     },
     {
       "rank": "21",
@@ -196,7 +216,8 @@
       "team": "Sidewinders Overloaded",
       "innings": "7",
       "runs": "105",
-      "strike_rate": "92.11"
+      "strike_rate": "92.11",
+      "average": "15.0"
     },
     {
       "rank": "22",
@@ -204,7 +225,8 @@
       "team": "DREAM VISION SPARTANS",
       "innings": "7",
       "runs": "104",
-      "strike_rate": "85.95"
+      "strike_rate": "85.95",
+      "average": "14.86"
     },
     {
       "rank": "23",
@@ -212,7 +234,8 @@
       "team": "Seattle shouryangas",
       "innings": "7",
       "runs": "103",
-      "strike_rate": "67.32"
+      "strike_rate": "67.32",
+      "average": "14.71"
     },
     {
       "rank": "24",
@@ -220,7 +243,8 @@
       "team": "Royal Priesthood",
       "innings": "6",
       "runs": "103",
-      "strike_rate": "104.04"
+      "strike_rate": "104.04",
+      "average": "17.17"
     },
     {
       "rank": "25",
@@ -228,7 +252,8 @@
       "team": "Cornered Tigers",
       "innings": "4",
       "runs": "102",
-      "strike_rate": "100.99"
+      "strike_rate": "100.99",
+      "average": "25.5"
     }
   ],
   "bowlers": [
@@ -236,226 +261,301 @@
       "rank": "1",
       "name": "Nihal Reddy Tadisina",
       "team": "Sidewinders Overloaded",
-      "matches": "7",
+      "innings": "7",
       "overs": "26.20",
-      "wickets": "4",
-      "economy": "91"
+      "maidens": "4",
+      "runs_given": "91",
+      "wickets": "17",
+      "average": "5.35",
+      "economy": "3.47"
     },
     {
       "rank": "2",
       "name": "Harsh DVS",
       "team": "DREAM VISION SPARTANS",
-      "matches": "7",
+      "innings": "7",
       "overs": "26.70",
-      "wickets": "0",
-      "economy": "131"
+      "maidens": "0",
+      "runs_given": "131",
+      "wickets": "15",
+      "average": "8.73",
+      "economy": "4.91"
     },
     {
       "rank": "3",
       "name": "Souvik Das",
       "team": "Whiskey Warriors",
-      "matches": "7",
+      "innings": "7",
       "overs": "22.00",
-      "wickets": "1",
-      "economy": "94"
+      "maidens": "1",
+      "runs_given": "94",
+      "wickets": "14",
+      "average": "6.71",
+      "economy": "4.27"
     },
     {
       "rank": "4",
       "name": "Shariful Shaikot",
       "team": "Agomoni Tigers",
-      "matches": "5",
+      "innings": "5",
       "overs": "19.10",
-      "wickets": "0",
-      "economy": "92"
+      "maidens": "0",
+      "runs_given": "92",
+      "wickets": "11",
+      "average": "8.36",
+      "economy": "4.82"
     },
     {
       "rank": "5",
       "name": "Joseph Bonthu B",
       "team": "Royal Priesthood",
-      "matches": "3",
+      "innings": "3",
       "overs": "12.00",
-      "wickets": "0",
-      "economy": "55"
+      "maidens": "0",
+      "runs_given": "55",
+      "wickets": "11",
+      "average": "5",
+      "economy": "4.58"
     },
     {
       "rank": "6",
       "name": "Ravindra Kavuri",
       "team": "Phoenix",
-      "matches": "6",
+      "innings": "6",
       "overs": "22.00",
-      "wickets": "1",
-      "economy": "89"
+      "maidens": "1",
+      "runs_given": "89",
+      "wickets": "10",
+      "average": "8.9",
+      "economy": "4.05"
     },
     {
       "rank": "7",
       "name": "Bibek Bajracharya",
       "team": "Everest Warriors B",
-      "matches": "5",
+      "innings": "5",
       "overs": "15.40",
-      "wickets": "0",
-      "economy": "79"
+      "maidens": "0",
+      "runs_given": "79",
+      "wickets": "10",
+      "average": "7.9",
+      "economy": "5.13"
     },
     {
       "rank": "8",
       "name": "AjayArcl Rachamalla",
       "team": "Power Kn8S",
-      "matches": "7",
+      "innings": "7",
       "overs": "26.40",
-      "wickets": "1",
-      "economy": "130"
+      "maidens": "1",
+      "runs_given": "130",
+      "wickets": "10",
+      "average": "13",
+      "economy": "4.92"
     },
     {
       "rank": "9",
       "name": "Rithesh Rao",
       "team": "Desi Thunder",
-      "matches": "7",
+      "innings": "7",
       "overs": "26.00",
-      "wickets": "0",
-      "economy": "132"
+      "maidens": "0",
+      "runs_given": "132",
+      "wickets": "10",
+      "average": "13.2",
+      "economy": "5.08"
     },
     {
       "rank": "10",
       "name": "Jaswanth Lagadapati",
       "team": "Seattle shouryangas",
-      "matches": "6",
+      "innings": "6",
       "overs": "19.20",
-      "wickets": "0",
-      "economy": "100"
+      "maidens": "0",
+      "runs_given": "100",
+      "wickets": "9",
+      "average": "11.11",
+      "economy": "5.21"
     },
     {
       "rank": "11",
       "name": "Punit Sindhwani",
       "team": "SEA-Chargers",
-      "matches": "7",
+      "innings": "7",
       "overs": "24.00",
-      "wickets": "0",
-      "economy": "124"
+      "maidens": "0",
+      "runs_given": "124",
+      "wickets": "9",
+      "average": "13.78",
+      "economy": "5.17"
     },
     {
       "rank": "12",
       "name": "Tanay Saxena",
       "team": "Downtown dhurandars",
-      "matches": "7",
+      "innings": "7",
       "overs": "24.00",
-      "wickets": "1",
-      "economy": "113"
+      "maidens": "1",
+      "runs_given": "113",
+      "wickets": "9",
+      "average": "12.56",
+      "economy": "4.71"
     },
     {
       "rank": "13",
       "name": "Naveed S Mithani",
       "team": "Cornered Tigers",
-      "matches": "7",
+      "innings": "7",
       "overs": "26.00",
-      "wickets": "0",
-      "economy": "147"
+      "maidens": "0",
+      "runs_given": "147",
+      "wickets": "9",
+      "average": "16.33",
+      "economy": "5.65"
     },
     {
       "rank": "14",
       "name": "Sudheer Vemuri",
       "team": "Rainier Risers",
-      "matches": "7",
+      "innings": "7",
       "overs": "22.20",
-      "wickets": "0",
-      "economy": "142"
+      "maidens": "0",
+      "runs_given": "142",
+      "wickets": "8",
+      "average": "17.75",
+      "economy": "6.4"
     },
     {
       "rank": "15",
       "name": "Sibendu Paul",
       "team": "Downtown dhurandars",
-      "matches": "7",
+      "innings": "7",
       "overs": "21.50",
-      "wickets": "0",
-      "economy": "125"
+      "maidens": "0",
+      "runs_given": "125",
+      "wickets": "8",
+      "average": "15.63",
+      "economy": "5.81"
     },
     {
       "rank": "16",
       "name": "Anijit Roy",
       "team": "Agomoni Tigers",
-      "matches": "3",
+      "innings": "3",
       "overs": "11.00",
-      "wickets": "1",
-      "economy": "34"
+      "maidens": "1",
+      "runs_given": "34",
+      "wickets": "8",
+      "average": "4.25",
+      "economy": "3.09"
     },
     {
       "rank": "17",
       "name": "Rupesh L",
       "team": "Dark KN8s",
-      "matches": "7",
+      "innings": "7",
       "overs": "26.20",
-      "wickets": "0",
-      "economy": "142"
+      "maidens": "0",
+      "runs_given": "142",
+      "wickets": "8",
+      "average": "17.75",
+      "economy": "5.42"
     },
     {
       "rank": "18",
       "name": "Siva Dimmiti",
       "team": "Rainier Risers",
-      "matches": "4",
+      "innings": "4",
       "overs": "16.00",
-      "wickets": "0",
-      "economy": "62"
+      "maidens": "0",
+      "runs_given": "62",
+      "wickets": "8",
+      "average": "7.75",
+      "economy": "3.88"
     },
     {
       "rank": "19",
       "name": "Sunder Rengaraj",
       "team": "Royal Challengers Bellevue",
-      "matches": "6",
+      "innings": "6",
       "overs": "18.20",
-      "wickets": "0",
-      "economy": "106"
+      "maidens": "0",
+      "runs_given": "106",
+      "wickets": "8",
+      "average": "13.25",
+      "economy": "5.82"
     },
     {
       "rank": "20",
       "name": "Tejesh Tirumalla",
       "team": "Rainier Risers",
-      "matches": "5",
+      "innings": "5",
       "overs": "19.20",
-      "wickets": "1",
-      "economy": "117"
+      "maidens": "1",
+      "runs_given": "117",
+      "wickets": "8",
+      "average": "14.63",
+      "economy": "6.09"
     },
     {
       "rank": "21",
       "name": "Rahul Nishant",
       "team": "Sidewinders Overloaded",
-      "matches": "5",
+      "innings": "5",
       "overs": "19.00",
-      "wickets": "0",
-      "economy": "95"
+      "maidens": "0",
+      "runs_given": "95",
+      "wickets": "7",
+      "average": "13.57",
+      "economy": "5.0"
     },
     {
       "rank": "22",
       "name": "Divya Patel",
       "team": "Seattle Thunders",
-      "matches": "6",
+      "innings": "6",
       "overs": "22.00",
-      "wickets": "0",
-      "economy": "122"
+      "maidens": "0",
+      "runs_given": "122",
+      "wickets": "7",
+      "average": "17.43",
+      "economy": "5.55"
     },
     {
       "rank": "23",
       "name": "John Rohit",
       "team": "Royal Priesthood",
-      "matches": "5",
+      "innings": "5",
       "overs": "15.90",
-      "wickets": "0",
-      "economy": "107"
+      "maidens": "0",
+      "runs_given": "107",
+      "wickets": "7",
+      "average": "15.29",
+      "economy": "6.73"
     },
     {
       "rank": "24",
       "name": "Mit Parikh",
       "team": "Seattle Thunders",
-      "matches": "5",
+      "innings": "5",
       "overs": "19.40",
-      "wickets": "0",
-      "economy": "109"
+      "maidens": "0",
+      "runs_given": "109",
+      "wickets": "7",
+      "average": "15.57",
+      "economy": "5.62"
     },
     {
       "rank": "25",
       "name": "Swapnil Merchant",
       "team": "Whiskey Warriors",
-      "matches": "6",
+      "innings": "6",
       "overs": "18.00",
-      "wickets": "0",
-      "economy": "79"
+      "maidens": "0",
+      "runs_given": "79",
+      "wickets": "7",
+      "average": "11.29",
+      "economy": "4.39"
     }
   ],
   "standings": [

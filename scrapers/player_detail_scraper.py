@@ -10,6 +10,10 @@ import statistics
 class PlayerDetailScraper(BaseScraper):
     """Scraper for detailed player statistics"""
     
+    def scrape(self, division_id, season_id, limit=25):
+        """Required by BaseScraper but not used for player details"""
+        return []
+    
     def scrape_player_stats(self, player_id, team_id, division_id, season_id):
         """Scrape detailed player stats with match-by-match data"""
         url = f"{self.base_url}/Pages/UI/PlayerStats.aspx?team_id={team_id}&player_id={player_id}&league_id={division_id}&season_id={season_id}"

@@ -2,7 +2,7 @@
   "division_id": 9,
   "season_id": 66,
   "division_name": "Div G - Summer 2025",
-  "last_updated": "2026-02-01T15:26:12.934704",
+  "last_updated": "2026-02-01T15:42:38.958998",
   "teams": [
     "Seattle Devils",
     "Half Pints",
@@ -36,7 +36,8 @@
       "team": "PNW Panthers",
       "innings": "7",
       "runs": "174",
-      "strike_rate": "172.28"
+      "strike_rate": "172.28",
+      "average": "24.86"
     },
     {
       "rank": "2",
@@ -44,7 +45,8 @@
       "team": "Bellevue Strikers",
       "innings": "7",
       "runs": "158",
-      "strike_rate": "115.33"
+      "strike_rate": "115.33",
+      "average": "22.57"
     },
     {
       "rank": "3",
@@ -52,7 +54,8 @@
       "team": "Appatuckers",
       "innings": "5",
       "runs": "158",
-      "strike_rate": "292.59"
+      "strike_rate": "292.59",
+      "average": "31.6"
     },
     {
       "rank": "4",
@@ -60,7 +63,8 @@
       "team": "Deccan Chargers",
       "innings": "7",
       "runs": "155",
-      "strike_rate": "96.88"
+      "strike_rate": "96.88",
+      "average": "22.14"
     },
     {
       "rank": "5",
@@ -68,7 +72,8 @@
       "team": "Rain City Strikers",
       "innings": "6",
       "runs": "152",
-      "strike_rate": "87.86"
+      "strike_rate": "87.86",
+      "average": "25.33"
     },
     {
       "rank": "6",
@@ -76,7 +81,8 @@
       "team": "Orcas",
       "innings": "7",
       "runs": "144",
-      "strike_rate": "79.56"
+      "strike_rate": "79.56",
+      "average": "20.57"
     },
     {
       "rank": "7",
@@ -84,7 +90,8 @@
       "team": "Stallions CC",
       "innings": "6",
       "runs": "141",
-      "strike_rate": "84.43"
+      "strike_rate": "84.43",
+      "average": "23.5"
     },
     {
       "rank": "8",
@@ -92,7 +99,8 @@
       "team": "Tvk Warriors",
       "innings": "7",
       "runs": "140",
-      "strike_rate": "109.38"
+      "strike_rate": "109.38",
+      "average": "20.0"
     },
     {
       "rank": "9",
@@ -100,7 +108,8 @@
       "team": "Ben Chokes",
       "innings": "6",
       "runs": "137",
-      "strike_rate": "101.48"
+      "strike_rate": "101.48",
+      "average": "22.83"
     },
     {
       "rank": "10",
@@ -108,7 +117,8 @@
       "team": "Redhawks Blasters",
       "innings": "4",
       "runs": "134",
-      "strike_rate": "131.37"
+      "strike_rate": "131.37",
+      "average": "33.5"
     },
     {
       "rank": "11",
@@ -116,7 +126,8 @@
       "team": "Rain City Strikers",
       "innings": "5",
       "runs": "133",
-      "strike_rate": "103.1"
+      "strike_rate": "103.1",
+      "average": "26.6"
     },
     {
       "rank": "12",
@@ -124,7 +135,8 @@
       "team": "Shershah",
       "innings": "7",
       "runs": "131",
-      "strike_rate": "111.02"
+      "strike_rate": "111.02",
+      "average": "18.71"
     },
     {
       "rank": "13",
@@ -132,7 +144,8 @@
       "team": "Seattle Swatkats",
       "innings": "7",
       "runs": "129",
-      "strike_rate": "77.25"
+      "strike_rate": "77.25",
+      "average": "18.43"
     },
     {
       "rank": "14",
@@ -140,7 +153,8 @@
       "team": "Gullyboyz",
       "innings": "5",
       "runs": "127",
-      "strike_rate": "124.51"
+      "strike_rate": "124.51",
+      "average": "25.4"
     },
     {
       "rank": "15",
@@ -148,7 +162,8 @@
       "team": "Half Pints",
       "innings": "6",
       "runs": "124",
-      "strike_rate": "196.83"
+      "strike_rate": "196.83",
+      "average": "20.67"
     },
     {
       "rank": "16",
@@ -156,7 +171,8 @@
       "team": "Cheetahs",
       "innings": "6",
       "runs": "120",
-      "strike_rate": "91.6"
+      "strike_rate": "91.6",
+      "average": "20.0"
     },
     {
       "rank": "17",
@@ -164,7 +180,8 @@
       "team": "Thunderbirds",
       "innings": "7",
       "runs": "117",
-      "strike_rate": "95.12"
+      "strike_rate": "95.12",
+      "average": "16.71"
     },
     {
       "rank": "18",
@@ -172,7 +189,8 @@
       "team": "Gullyboyz",
       "innings": "6",
       "runs": "116",
-      "strike_rate": "100"
+      "strike_rate": "100",
+      "average": "19.33"
     },
     {
       "rank": "19",
@@ -180,7 +198,8 @@
       "team": "Redhawks Blasters",
       "innings": "5",
       "runs": "104",
-      "strike_rate": "105.05"
+      "strike_rate": "105.05",
+      "average": "20.8"
     },
     {
       "rank": "20",
@@ -188,7 +207,8 @@
       "team": "12th Man Army",
       "innings": "6",
       "runs": "103",
-      "strike_rate": "117.05"
+      "strike_rate": "117.05",
+      "average": "17.17"
     },
     {
       "rank": "21",
@@ -196,7 +216,8 @@
       "team": "Royal Titans",
       "innings": "7",
       "runs": "102",
-      "strike_rate": "79.69"
+      "strike_rate": "79.69",
+      "average": "14.57"
     },
     {
       "rank": "22",
@@ -204,7 +225,8 @@
       "team": "Orcas",
       "innings": "6",
       "runs": "99",
-      "strike_rate": "132"
+      "strike_rate": "132",
+      "average": "16.5"
     },
     {
       "rank": "23",
@@ -212,7 +234,8 @@
       "team": "All-Rounders",
       "innings": "6",
       "runs": "99",
-      "strike_rate": "72.26"
+      "strike_rate": "72.26",
+      "average": "16.5"
     },
     {
       "rank": "24",
@@ -220,7 +243,8 @@
       "team": "12th Man Army",
       "innings": "4",
       "runs": "95",
-      "strike_rate": "85.59"
+      "strike_rate": "85.59",
+      "average": "23.75"
     },
     {
       "rank": "25",
@@ -228,7 +252,8 @@
       "team": "Deccan Chargers",
       "innings": "7",
       "runs": "95",
-      "strike_rate": "85.59"
+      "strike_rate": "85.59",
+      "average": "13.57"
     }
   ],
   "bowlers": [
@@ -236,226 +261,301 @@
       "rank": "1",
       "name": "Prasad Sakpal",
       "team": "Redhawks Blasters",
-      "matches": "7",
+      "innings": "7",
       "overs": "26.80",
-      "wickets": "0",
-      "economy": "164"
+      "maidens": "0",
+      "runs_given": "164",
+      "wickets": "13",
+      "average": "12.62",
+      "economy": "6.12"
     },
     {
       "rank": "2",
       "name": "Vernon Dsouza",
       "team": "12th Man Army",
-      "matches": "6",
+      "innings": "6",
       "overs": "19.30",
-      "wickets": "0",
-      "economy": "97"
+      "maidens": "0",
+      "runs_given": "97",
+      "wickets": "13",
+      "average": "7.46",
+      "economy": "5.03"
     },
     {
       "rank": "3",
       "name": "Nikhil Patne Gullyboyz",
       "team": "Gullyboyz",
-      "matches": "6",
+      "innings": "6",
       "overs": "18.10",
-      "wickets": "2",
-      "economy": "63"
+      "maidens": "2",
+      "runs_given": "63",
+      "wickets": "12",
+      "average": "5.25",
+      "economy": "3.48"
     },
     {
       "rank": "4",
       "name": "Varun Garg Gullyboyz",
       "team": "Gullyboyz",
-      "matches": "7",
+      "innings": "7",
       "overs": "21.30",
-      "wickets": "0",
-      "economy": "85"
+      "maidens": "0",
+      "runs_given": "85",
+      "wickets": "11",
+      "average": "7.73",
+      "economy": "3.99"
     },
     {
       "rank": "5",
       "name": "Muhammad Hassan Khan",
       "team": "PNW Panthers",
-      "matches": "5",
+      "innings": "5",
       "overs": "15.30",
-      "wickets": "0",
-      "economy": "79"
+      "maidens": "0",
+      "runs_given": "79",
+      "wickets": "10",
+      "average": "7.9",
+      "economy": "5.16"
     },
     {
       "rank": "6",
       "name": "Sumith Kumar",
       "team": "Bellevue Strikers",
-      "matches": "6",
+      "innings": "6",
       "overs": "21.00",
-      "wickets": "2",
-      "economy": "76"
+      "maidens": "2",
+      "runs_given": "76",
+      "wickets": "10",
+      "average": "7.6",
+      "economy": "3.62"
     },
     {
       "rank": "7",
       "name": "Dipanshu Maheshwari",
       "team": "Stallions CC",
-      "matches": "7",
+      "innings": "7",
       "overs": "19.50",
-      "wickets": "1",
-      "economy": "98"
+      "maidens": "1",
+      "runs_given": "98",
+      "wickets": "10",
+      "average": "9.8",
+      "economy": "5.03"
     },
     {
       "rank": "8",
       "name": "Sundaram Cheetahs",
       "team": "Cheetahs",
-      "matches": "5",
+      "innings": "5",
       "overs": "17.10",
-      "wickets": "0",
-      "economy": "91"
+      "maidens": "0",
+      "runs_given": "91",
+      "wickets": "10",
+      "average": "9.1",
+      "economy": "5.32"
     },
     {
       "rank": "9",
       "name": "Abhisar Saini",
       "team": "Redhawks Blasters",
-      "matches": "5",
+      "innings": "5",
       "overs": "20.00",
-      "wickets": "0",
-      "economy": "77"
+      "maidens": "0",
+      "runs_given": "77",
+      "wickets": "9",
+      "average": "8.56",
+      "economy": "3.85"
     },
     {
       "rank": "10",
       "name": "Adesh DVS",
       "team": "DREAM VISION GLADIATORS",
-      "matches": "7",
+      "innings": "7",
       "overs": "21.70",
-      "wickets": "0",
-      "economy": "101"
+      "maidens": "0",
+      "runs_given": "101",
+      "wickets": "9",
+      "average": "11.22",
+      "economy": "4.65"
     },
     {
       "rank": "11",
       "name": "Akash Kumar",
       "team": "Ben Chokes",
-      "matches": "6",
+      "innings": "6",
       "overs": "22.00",
-      "wickets": "0",
-      "economy": "106"
+      "maidens": "0",
+      "runs_given": "106",
+      "wickets": "9",
+      "average": "11.78",
+      "economy": "4.82"
     },
     {
       "rank": "12",
       "name": "Rakesh Nani Reddy Kalvakuntla",
       "team": "Bellevue Strikers",
-      "matches": "7",
+      "innings": "7",
       "overs": "16.80",
-      "wickets": "0",
-      "economy": "64"
+      "maidens": "0",
+      "runs_given": "64",
+      "wickets": "9",
+      "average": "7.11",
+      "economy": "3.81"
     },
     {
       "rank": "13",
       "name": "Krishna Achanta",
       "team": "All-Rounders",
-      "matches": "5",
+      "innings": "5",
       "overs": "15.40",
-      "wickets": "0",
-      "economy": "53"
+      "maidens": "0",
+      "runs_given": "53",
+      "wickets": "9",
+      "average": "5.89",
+      "economy": "3.44"
     },
     {
       "rank": "14",
       "name": "Priya Ranjan Mohapatra",
       "team": "Deccan Chargers",
-      "matches": "7",
+      "innings": "7",
       "overs": "25.40",
-      "wickets": "3",
-      "economy": "110"
+      "maidens": "3",
+      "runs_given": "110",
+      "wickets": "9",
+      "average": "12.22",
+      "economy": "4.33"
     },
     {
       "rank": "15",
       "name": "Shiva Kumar Ganji",
       "team": "Thunderbirds",
-      "matches": "6",
+      "innings": "6",
       "overs": "21.10",
-      "wickets": "1",
-      "economy": "76"
+      "maidens": "1",
+      "runs_given": "76",
+      "wickets": "8",
+      "average": "9.5",
+      "economy": "3.6"
     },
     {
       "rank": "16",
       "name": "Srikanth Donthineni",
       "team": "Gamechangers",
-      "matches": "6",
+      "innings": "6",
       "overs": "19.10",
-      "wickets": "1",
-      "economy": "96"
+      "maidens": "1",
+      "runs_given": "96",
+      "wickets": "8",
+      "average": "12",
+      "economy": "5.03"
     },
     {
       "rank": "17",
       "name": "Prayag Shah",
       "team": "DREAM VISION GLADIATORS",
-      "matches": "7",
+      "innings": "7",
       "overs": "24.30",
-      "wickets": "0",
-      "economy": "105"
+      "maidens": "0",
+      "runs_given": "105",
+      "wickets": "8",
+      "average": "13.13",
+      "economy": "4.32"
     },
     {
       "rank": "18",
       "name": "Prashant Pandey Redhawk",
       "team": "Redhawks Blasters",
-      "matches": "6",
+      "innings": "6",
       "overs": "18.00",
-      "wickets": "0",
-      "economy": "102"
+      "maidens": "0",
+      "runs_given": "102",
+      "wickets": "8",
+      "average": "12.75",
+      "economy": "5.67"
     },
     {
       "rank": "19",
       "name": "Puneeth Reddy Gattikoppula",
       "team": "Deccan Chargers",
-      "matches": "4",
+      "innings": "4",
       "overs": "15.00",
-      "wickets": "0",
-      "economy": "84"
+      "maidens": "0",
+      "runs_given": "84",
+      "wickets": "8",
+      "average": "10.5",
+      "economy": "5.6"
     },
     {
       "rank": "20",
       "name": "Zain Mohammed",
       "team": "Seattle Devils",
-      "matches": "7",
+      "innings": "7",
       "overs": "26.00",
-      "wickets": "1",
-      "economy": "105"
+      "maidens": "1",
+      "runs_given": "105",
+      "wickets": "8",
+      "average": "13.13",
+      "economy": "4.04"
     },
     {
       "rank": "21",
       "name": "Pavan Gamechangers",
       "team": "Gamechangers",
-      "matches": "6",
+      "innings": "6",
       "overs": "23.00",
-      "wickets": "0",
-      "economy": "152"
+      "maidens": "0",
+      "runs_given": "152",
+      "wickets": "8",
+      "average": "19",
+      "economy": "6.61"
     },
     {
       "rank": "22",
       "name": "Preetam Reddy",
       "team": "Stallions CC",
-      "matches": "3",
+      "innings": "3",
       "overs": "7.80",
-      "wickets": "1",
-      "economy": "44"
+      "maidens": "1",
+      "runs_given": "44",
+      "wickets": "8",
+      "average": "5.5",
+      "economy": "5.64"
     },
     {
       "rank": "23",
       "name": "Sarthak Nema",
       "team": "Stallions CC",
-      "matches": "7",
+      "innings": "7",
       "overs": "20.00",
-      "wickets": "2",
-      "economy": "89"
+      "maidens": "2",
+      "runs_given": "89",
+      "wickets": "8",
+      "average": "11.13",
+      "economy": "4.45"
     },
     {
       "rank": "24",
       "name": "Sateesh Chowdary",
       "team": "Deccan Chargers",
-      "matches": "7",
+      "innings": "7",
       "overs": "20.50",
-      "wickets": "0",
-      "economy": "100"
+      "maidens": "0",
+      "runs_given": "100",
+      "wickets": "8",
+      "average": "12.5",
+      "economy": "4.88"
     },
     {
       "rank": "25",
       "name": "Paundrik Redhawk",
       "team": "Redhawks Blasters",
-      "matches": "7",
+      "innings": "7",
       "overs": "24.50",
-      "wickets": "0",
-      "economy": "137"
+      "maidens": "0",
+      "runs_given": "137",
+      "wickets": "8",
+      "average": "17.13",
+      "economy": "5.59"
     }
   ],
   "standings": [

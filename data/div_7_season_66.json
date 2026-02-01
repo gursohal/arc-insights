@@ -2,7 +2,7 @@
   "division_id": 7,
   "season_id": 66,
   "division_name": "Div E - Summer 2025",
-  "last_updated": "2026-02-01T15:26:11.670383",
+  "last_updated": "2026-02-01T15:42:37.537882",
   "teams": [
     "Raging Bulls OG",
     "Fiery Devils",
@@ -36,7 +36,8 @@
       "team": "Fiery Devils",
       "innings": "7",
       "runs": "200",
-      "strike_rate": "125"
+      "strike_rate": "125",
+      "average": "28.57"
     },
     {
       "rank": "2",
@@ -44,7 +45,8 @@
       "team": "Turf Titans",
       "innings": "7",
       "runs": "161",
-      "strike_rate": "124.81"
+      "strike_rate": "124.81",
+      "average": "23.0"
     },
     {
       "rank": "3",
@@ -52,7 +54,8 @@
       "team": "The Royals",
       "innings": "5",
       "runs": "159",
-      "strike_rate": "114.39"
+      "strike_rate": "114.39",
+      "average": "31.8"
     },
     {
       "rank": "4",
@@ -60,7 +63,8 @@
       "team": "Pulikkoottam - Tuskers",
       "innings": "6",
       "runs": "133",
-      "strike_rate": "82.1"
+      "strike_rate": "82.1",
+      "average": "22.17"
     },
     {
       "rank": "5",
@@ -68,7 +72,8 @@
       "team": "Super Kings Returns",
       "innings": "7",
       "runs": "131",
-      "strike_rate": "103.15"
+      "strike_rate": "103.15",
+      "average": "18.71"
     },
     {
       "rank": "6",
@@ -76,7 +81,8 @@
       "team": "Power Play",
       "innings": "7",
       "runs": "130",
-      "strike_rate": "90.28"
+      "strike_rate": "90.28",
+      "average": "18.57"
     },
     {
       "rank": "7",
@@ -84,7 +90,8 @@
       "team": "Hunters",
       "innings": "5",
       "runs": "129",
-      "strike_rate": "98.47"
+      "strike_rate": "98.47",
+      "average": "25.8"
     },
     {
       "rank": "8",
@@ -92,7 +99,8 @@
       "team": "Pulikkoottam - Tuskers",
       "innings": "4",
       "runs": "128",
-      "strike_rate": "120.75"
+      "strike_rate": "120.75",
+      "average": "32.0"
     },
     {
       "rank": "9",
@@ -100,7 +108,8 @@
       "team": "FatehCC-Army",
       "innings": "7",
       "runs": "127",
-      "strike_rate": "103.25"
+      "strike_rate": "103.25",
+      "average": "18.14"
     },
     {
       "rank": "10",
@@ -108,7 +117,8 @@
       "team": "The Royals",
       "innings": "6",
       "runs": "118",
-      "strike_rate": "84.89"
+      "strike_rate": "84.89",
+      "average": "19.67"
     },
     {
       "rank": "11",
@@ -116,7 +126,8 @@
       "team": "Super Kings Returns",
       "innings": "7",
       "runs": "118",
-      "strike_rate": "92.91"
+      "strike_rate": "92.91",
+      "average": "16.86"
     },
     {
       "rank": "12",
@@ -124,7 +135,8 @@
       "team": "Seattle United",
       "innings": "5",
       "runs": "115",
-      "strike_rate": "85.19"
+      "strike_rate": "85.19",
+      "average": "23.0"
     },
     {
       "rank": "13",
@@ -132,7 +144,8 @@
       "team": "Fiery Devils",
       "innings": "6",
       "runs": "114",
-      "strike_rate": "123.91"
+      "strike_rate": "123.91",
+      "average": "19.0"
     },
     {
       "rank": "14",
@@ -140,7 +153,8 @@
       "team": "Seattle United",
       "innings": "7",
       "runs": "114",
-      "strike_rate": "89.76"
+      "strike_rate": "89.76",
+      "average": "16.29"
     },
     {
       "rank": "15",
@@ -148,7 +162,8 @@
       "team": "Epothum Varutha Padatha Valibar Sangam",
       "innings": "7",
       "runs": "114",
-      "strike_rate": "112.87"
+      "strike_rate": "112.87",
+      "average": "16.29"
     },
     {
       "rank": "16",
@@ -156,7 +171,8 @@
       "team": "The Royals",
       "innings": "5",
       "runs": "111",
-      "strike_rate": "152.05"
+      "strike_rate": "152.05",
+      "average": "22.2"
     },
     {
       "rank": "17",
@@ -164,7 +180,8 @@
       "team": "Power Play",
       "innings": "6",
       "runs": "111",
-      "strike_rate": "80.43"
+      "strike_rate": "80.43",
+      "average": "18.5"
     },
     {
       "rank": "18",
@@ -172,7 +189,8 @@
       "team": "Weekend Warriors",
       "innings": "3",
       "runs": "111",
-      "strike_rate": "138.75"
+      "strike_rate": "138.75",
+      "average": "37.0"
     },
     {
       "rank": "19",
@@ -180,7 +198,8 @@
       "team": "Blue Caps",
       "innings": "7",
       "runs": "109",
-      "strike_rate": "75.17"
+      "strike_rate": "75.17",
+      "average": "15.57"
     },
     {
       "rank": "20",
@@ -188,7 +207,8 @@
       "team": "Hunters",
       "innings": "7",
       "runs": "109",
-      "strike_rate": "85.83"
+      "strike_rate": "85.83",
+      "average": "15.57"
     },
     {
       "rank": "21",
@@ -196,7 +216,8 @@
       "team": "SUY Southern Yorkas",
       "innings": "7",
       "runs": "103",
-      "strike_rate": "68.21"
+      "strike_rate": "68.21",
+      "average": "14.71"
     },
     {
       "rank": "22",
@@ -204,7 +225,8 @@
       "team": "Power Play",
       "innings": "7",
       "runs": "102",
-      "strike_rate": "102"
+      "strike_rate": "102",
+      "average": "14.57"
     },
     {
       "rank": "23",
@@ -212,7 +234,8 @@
       "team": "Turf Titans",
       "innings": "7",
       "runs": "102",
-      "strike_rate": "99.03"
+      "strike_rate": "99.03",
+      "average": "14.57"
     },
     {
       "rank": "24",
@@ -220,7 +243,8 @@
       "team": "Epothum Varutha Padatha Valibar Sangam",
       "innings": "7",
       "runs": "101",
-      "strike_rate": "106.32"
+      "strike_rate": "106.32",
+      "average": "14.43"
     },
     {
       "rank": "25",
@@ -228,7 +252,8 @@
       "team": "UnExceptional",
       "innings": "6",
       "runs": "100",
-      "strike_rate": "81.3"
+      "strike_rate": "81.3",
+      "average": "16.67"
     }
   ],
   "bowlers": [
@@ -236,226 +261,301 @@
       "rank": "1",
       "name": "Sriram Evvs",
       "team": "Epothum Varutha Padatha Valibar Sangam",
-      "matches": "7",
+      "innings": "7",
       "overs": "23.30",
-      "wickets": "0",
-      "economy": "88"
+      "maidens": "0",
+      "runs_given": "88",
+      "wickets": "14",
+      "average": "6.29",
+      "economy": "3.78"
     },
     {
       "rank": "2",
       "name": "John Jose",
       "team": "Pulikkoottam - Tuskers",
-      "matches": "7",
+      "innings": "7",
       "overs": "26.80",
-      "wickets": "1",
-      "economy": "108"
+      "maidens": "1",
+      "runs_given": "108",
+      "wickets": "13",
+      "average": "8.31",
+      "economy": "4.03"
     },
     {
       "rank": "3",
       "name": "Anubhav Sharma",
       "team": "Turf Titans",
-      "matches": "7",
+      "innings": "7",
       "overs": "25.20",
-      "wickets": "0",
-      "economy": "121"
+      "maidens": "0",
+      "runs_given": "121",
+      "wickets": "13",
+      "average": "9.31",
+      "economy": "4.8"
     },
     {
       "rank": "4",
       "name": "Smit Shah",
       "team": "Seattle Regulars",
-      "matches": "6",
+      "innings": "6",
       "overs": "20.20",
-      "wickets": "1",
-      "economy": "100"
+      "maidens": "1",
+      "runs_given": "100",
+      "wickets": "12",
+      "average": "8.33",
+      "economy": "4.95"
     },
     {
       "rank": "5",
       "name": "Kalyan Arcl",
       "team": "Super 8",
-      "matches": "6",
+      "innings": "6",
       "overs": "23.00",
-      "wickets": "0",
-      "economy": "89"
+      "maidens": "0",
+      "runs_given": "89",
+      "wickets": "11",
+      "average": "8.09",
+      "economy": "3.87"
     },
     {
       "rank": "6",
       "name": "Dinesh Batra",
       "team": "SUY Southern Yorkas",
-      "matches": "7",
+      "innings": "7",
       "overs": "22.90",
-      "wickets": "1",
-      "economy": "109"
+      "maidens": "1",
+      "runs_given": "109",
+      "wickets": "10",
+      "average": "10.9",
+      "economy": "4.76"
     },
     {
       "rank": "7",
       "name": "Navdeep Singh Lehal",
       "team": "The Royals",
-      "matches": "5",
+      "innings": "5",
       "overs": "19.00",
-      "wickets": "0",
-      "economy": "85"
+      "maidens": "0",
+      "runs_given": "85",
+      "wickets": "10",
+      "average": "8.5",
+      "economy": "4.47"
     },
     {
       "rank": "8",
       "name": "Gopinathan Duraiswamy",
       "team": "Super Kings Returns",
-      "matches": "6",
+      "innings": "6",
       "overs": "19.70",
-      "wickets": "0",
-      "economy": "113"
+      "maidens": "0",
+      "runs_given": "113",
+      "wickets": "10",
+      "average": "11.3",
+      "economy": "5.74"
     },
     {
       "rank": "9",
       "name": "Ambarish Chandrasekaran",
       "team": "Raging Bulls OG",
-      "matches": "6",
+      "innings": "6",
       "overs": "22.30",
-      "wickets": "0",
-      "economy": "98"
+      "maidens": "0",
+      "runs_given": "98",
+      "wickets": "9",
+      "average": "10.89",
+      "economy": "4.39"
     },
     {
       "rank": "10",
       "name": "Sridhar Ganta",
       "team": "Seattle Sunrisers",
-      "matches": "4",
+      "innings": "4",
       "overs": "16.00",
-      "wickets": "0",
-      "economy": "78"
+      "maidens": "0",
+      "runs_given": "78",
+      "wickets": "9",
+      "average": "8.67",
+      "economy": "4.88"
     },
     {
       "rank": "11",
       "name": "Rahul Shrivastava",
       "team": "Blue Caps",
-      "matches": "7",
+      "innings": "7",
       "overs": "23.50",
-      "wickets": "0",
-      "economy": "109"
+      "maidens": "0",
+      "runs_given": "109",
+      "wickets": "9",
+      "average": "12.11",
+      "economy": "4.64"
     },
     {
       "rank": "12",
       "name": "Vikram Chauhan",
       "team": "Turf Titans",
-      "matches": "6",
+      "innings": "6",
       "overs": "22.00",
-      "wickets": "1",
-      "economy": "101"
+      "maidens": "1",
+      "runs_given": "101",
+      "wickets": "9",
+      "average": "11.22",
+      "economy": "4.59"
     },
     {
       "rank": "13",
       "name": "Gangadhar K",
       "team": "Power Play",
-      "matches": "6",
+      "innings": "6",
       "overs": "24.00",
-      "wickets": "1",
-      "economy": "102"
+      "maidens": "1",
+      "runs_given": "102",
+      "wickets": "9",
+      "average": "11.33",
+      "economy": "4.25"
     },
     {
       "rank": "14",
       "name": "Ilaiyaraja Rajamohan",
       "team": "Power Play",
-      "matches": "7",
+      "innings": "7",
       "overs": "25.10",
-      "wickets": "0",
-      "economy": "119"
+      "maidens": "0",
+      "runs_given": "119",
+      "wickets": "9",
+      "average": "13.22",
+      "economy": "4.74"
     },
     {
       "rank": "15",
       "name": "Vishnu Radhakrishnan",
       "team": "Pulikkoottam - Tuskers",
-      "matches": "4",
+      "innings": "4",
       "overs": "16.00",
-      "wickets": "1",
-      "economy": "67"
+      "maidens": "1",
+      "runs_given": "67",
+      "wickets": "9",
+      "average": "7.44",
+      "economy": "4.19"
     },
     {
       "rank": "16",
       "name": "Ram K",
       "team": "Epothum Varutha Padatha Valibar Sangam",
-      "matches": "7",
+      "innings": "7",
       "overs": "25.00",
-      "wickets": "1",
-      "economy": "123"
+      "maidens": "1",
+      "runs_given": "123",
+      "wickets": "9",
+      "average": "13.67",
+      "economy": "4.92"
     },
     {
       "rank": "17",
       "name": "Himanshu Nagpal",
       "team": "Power Play",
-      "matches": "7",
+      "innings": "7",
       "overs": "22.20",
-      "wickets": "0",
-      "economy": "140"
+      "maidens": "0",
+      "runs_given": "140",
+      "wickets": "9",
+      "average": "15.56",
+      "economy": "6.31"
     },
     {
       "rank": "18",
       "name": "Mrinal Pareek",
       "team": "UnExceptional",
-      "matches": "7",
+      "innings": "7",
       "overs": "25.50",
-      "wickets": "0",
-      "economy": "108"
+      "maidens": "0",
+      "runs_given": "108",
+      "wickets": "9",
+      "average": "12",
+      "economy": "4.24"
     },
     {
       "rank": "19",
       "name": "Karthik R",
       "team": "Washington Warriors",
-      "matches": "5",
+      "innings": "5",
       "overs": "17.00",
-      "wickets": "0",
-      "economy": "78"
+      "maidens": "0",
+      "runs_given": "78",
+      "wickets": "9",
+      "average": "8.67",
+      "economy": "4.59"
     },
     {
       "rank": "20",
       "name": "Akshay Destroyers",
       "team": "Destroyers",
-      "matches": "6",
+      "innings": "6",
       "overs": "20.00",
-      "wickets": "0",
-      "economy": "98"
+      "maidens": "0",
+      "runs_given": "98",
+      "wickets": "8",
+      "average": "12.25",
+      "economy": "4.9"
     },
     {
       "rank": "21",
       "name": "Vardhan arcl",
       "team": "Super 8",
-      "matches": "5",
+      "innings": "5",
       "overs": "17.20",
-      "wickets": "1",
-      "economy": "72"
+      "maidens": "1",
+      "runs_given": "72",
+      "wickets": "8",
+      "average": "9",
+      "economy": "4.19"
     },
     {
       "rank": "22",
       "name": "Anith Babu",
       "team": "Pulikkoottam - Tuskers",
-      "matches": "6",
+      "innings": "6",
       "overs": "22.00",
-      "wickets": "0",
-      "economy": "109"
+      "maidens": "0",
+      "runs_given": "109",
+      "wickets": "8",
+      "average": "13.63",
+      "economy": "4.95"
     },
     {
       "rank": "23",
       "name": "Shohit B",
       "team": "FatehCC-Army",
-      "matches": "7",
+      "innings": "7",
       "overs": "26.00",
-      "wickets": "0",
-      "economy": "117"
+      "maidens": "0",
+      "runs_given": "117",
+      "wickets": "8",
+      "average": "14.63",
+      "economy": "4.5"
     },
     {
       "rank": "24",
       "name": "Suraj Nakka",
       "team": "Fiery Devils",
-      "matches": "5",
+      "innings": "5",
       "overs": "15.00",
-      "wickets": "0",
-      "economy": "65"
+      "maidens": "0",
+      "runs_given": "65",
+      "wickets": "7",
+      "average": "9.29",
+      "economy": "4.33"
     },
     {
       "rank": "25",
       "name": "Surya Teja David",
       "team": "Fiery Devils",
-      "matches": "4",
+      "innings": "4",
       "overs": "16.00",
-      "wickets": "0",
-      "economy": "105"
+      "maidens": "0",
+      "runs_given": "105",
+      "wickets": "7",
+      "average": "15",
+      "economy": "6.56"
     }
   ],
   "standings": [
