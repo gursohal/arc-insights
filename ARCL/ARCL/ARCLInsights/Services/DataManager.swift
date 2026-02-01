@@ -90,10 +90,24 @@ class DataManager: ObservableObject {
         }
         
         do {
-            let (data, _) = try await URLSession.shared.data(from: url)
-            let response = try JSONDecoder().decode(ARCLDataResponse.self, from: data)
-            print("✅ Found \(response.teams.count) teams")
-            return response.teams
+            var request = URLRequest(url: url)
+            request.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
+            
+            let (data, response) = try await URLSession.shared.data(for: request)
+            
+            // Debug: print raw data
+            if let dataString = String(data: data, encoding: .utf8) {
+                print("📄 Received \(data.count) bytes")
+                print("🔍 First 200 chars: \(dataString.prefix(200))")
+            }
+            
+            let arclResponse = try JSONDecoder().decode(ARCLDataResponse.self, from: data)
+            print("✅ Found \(arclResponse.teams.count) teams, \(arclResponse.batsmen.count) batsmen")
+            return arclResponse.teams
+        } catch let DecodingError.dataCorrupted(context) {
+            print("❌ JSON Decoding error: \(context.debugDescription)")
+            print("   Coding path: \(context.codingPath)")
+            return []
         } catch {
             print("❌ Error fetching teams: \(error)")
             return []
