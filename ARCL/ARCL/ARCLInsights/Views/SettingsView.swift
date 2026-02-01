@@ -117,6 +117,23 @@ struct SettingsView: View {
             .navigationTitle("Settings")
         }
     }
+    
+    private func resetApp() {
+        // Clear all UserDefaults
+        hasCompletedOnboarding = false
+        UserDefaults.standard.removeObject(forKey: "myTeamName")
+        UserDefaults.standard.removeObject(forKey: "selectedDivisionID")
+        UserDefaults.standard.removeObject(forKey: "selectedSeasonID")
+        UserDefaults.standard.removeObject(forKey: "lastDataRefresh")
+        UserDefaults.standard.removeObject(forKey: "cachedTeams")
+        UserDefaults.standard.removeObject(forKey: "cachedBatsmen")
+        UserDefaults.standard.removeObject(forKey: "cachedBowlers")
+        
+        // Clear DataManager
+        dataManager.teams = []
+        dataManager.topBatsmen = []
+        dataManager.topBowlers = []
+    }
 }
 
 #Preview {
