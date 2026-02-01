@@ -52,11 +52,15 @@ class ARCLScraper:
             soup = BeautifulSoup(response.content, 'html.parser')
             
             teams = []
-            for link in soup.find_all('a', href=lambda h: h and 'TeamHome.aspx' in h):
-                team_name = link.get_text(strip=True)
-                if team_name and team_name not in teams:
-                    teams.append(team_name)
+            # Find all links that contain TeamHome.aspx or team_id
+            for link in soup.find_all('a', href=True):
+                href = link.get('href', '')
+                if 'TeamHome.aspx' in href or 'team_id' in href:
+                    team_name = link.get_text(strip=True)
+                    if team_name and len(team_name) > 2 and team_name not in teams:
+                        teams.append(team_name)
             
+            print(f"  Found {len(teams)} teams")
             return teams
         except Exception as e:
             print(f"❌ Error fetching teams: {e}")
