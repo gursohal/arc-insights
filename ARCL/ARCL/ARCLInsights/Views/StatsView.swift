@@ -1,4 +1,4 @@
-//
+yn//
 //  StatsView.swift
 //  ARCL Insights
 //
@@ -43,6 +43,7 @@ struct BattingStatsView: View {
     
     var body: some View {
         List(players) { player in
+            NavigationLink(destination: PlayerDetailView(player: player)) {
             HStack {
                 Text("#\(player.battingStats?.rank ?? 0)")
                     .font(.caption)
@@ -71,6 +72,7 @@ struct BattingStatsView: View {
                 }
             }
             .padding(.vertical, 4)
+            }
         }
         .listStyle(.plain)
     }
@@ -81,6 +83,7 @@ struct BowlingStatsView: View {
     
     var body: some View {
         List(players) { player in
+            NavigationLink(destination: PlayerDetailView(player: player)) {
             HStack {
                 Text("#\(player.bowlingStats?.rank ?? 0)")
                     .font(.caption)
@@ -109,6 +112,7 @@ struct BowlingStatsView: View {
                 }
             }
             .padding(.vertical, 4)
+            }
         }
         .listStyle(.plain)
     }
