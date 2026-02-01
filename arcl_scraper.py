@@ -64,29 +64,40 @@ class ARCLDataScraper:
 
 
 def main():
+    import sys
     scraper = ARCLDataScraper()
     
-    # Scrape all divisions for Summer 2025
-    divisions = [
-        (3, 66, "Div A - Summer 2025"),
-        (4, 66, "Div B - Summer 2025"),
-        (5, 66, "Div C - Summer 2025"),
-        (6, 66, "Div D - Summer 2025"),
-        (7, 66, "Div E - Summer 2025"),
-        (8, 66, "Div F - Summer 2025"),
-        (9, 66, "Div G - Summer 2025"),
-        (10, 66, "Div H - Summer 2025"),
-        (11, 66, "Div I - Summer 2025"),
-        (12, 66, "Div J - Summer 2025"),
-        (13, 66, "Div K - Summer 2025"),
-        (14, 66, "Div L - Summer 2025"),
-        (15, 66, "Div M - Summer 2025"),
-        (16, 66, "Div N - Summer 2025"),
+    # Define all seasons and divisions
+    seasons = [
+        (68, "Winter 2025"),
+        (67, "Fall 2025"),
+        (66, "Summer 2025"),
+        (65, "Spring 2025"),
+        (64, "Fall 2024"),
+        (63, "Summer 2024"),
     ]
     
-    scraper.scrape_multiple_divisions(divisions)
+    division_ids = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+    division_names = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N"]
     
-    print("\n🎉 All divisions scraped successfully!")
+    # Check if --all-seasons flag is provided
+    if "--all-seasons" in sys.argv:
+        print("\n🌍 Scraping ALL seasons and divisions...")
+        all_combinations = []
+        for season_id, season_name in seasons:
+            for div_id, div_name in zip(division_ids, division_names):
+                all_combinations.append((div_id, season_id, f"Div {div_name} - {season_name}"))
+        
+        scraper.scrape_multiple_divisions(all_combinations)
+    else:
+        # Default: Just scrape current season (Summer 2025)
+        divisions = []
+        for div_id, div_name in zip(division_ids, division_names):
+            divisions.append((div_id, 66, f"Div {div_name} - Summer 2025"))
+        
+        scraper.scrape_multiple_divisions(divisions)
+    
+    print("\n🎉 All scraping complete!")
 
 
 if __name__ == "__main__":
