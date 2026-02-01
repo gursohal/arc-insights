@@ -22,15 +22,16 @@ class BowlersScraper(BaseScraper):
         bowlers = []
         
         for row in table_data[:limit]:
-            if len(row) >= 5:
+            if len(row) >= 8:
                 try:
                     bowlers.append({
                         "rank": row[0],
                         "name": row[1],
                         "team": row[2],
-                        "overs": row[3],
-                        "wickets": row[4],
-                        "economy": row[5] if len(row) > 5 else "0"
+                        "matches": row[3],
+                        "overs": row[4],
+                        "wickets": row[7],
+                        "economy": row[8] if len(row) > 8 else "0"
                     })
                 except Exception as e:
                     continue
