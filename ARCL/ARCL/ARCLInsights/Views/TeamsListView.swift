@@ -10,11 +10,10 @@ struct TeamsListView: View {
     @State private var searchText = ""
     
     var filteredTeams: [Team] {
-        let teams = dataManager.teams.isEmpty ? SampleData.sampleTeams : dataManager.teams
         if searchText.isEmpty {
-            return teams
+            return dataManager.teams
         }
-        return teams.filter { $0.name.localizedCaseInsensitiveContains(searchText) }
+        return dataManager.teams.filter { $0.name.localizedCaseInsensitiveContains(searchText) }
     }
     
     var body: some View {

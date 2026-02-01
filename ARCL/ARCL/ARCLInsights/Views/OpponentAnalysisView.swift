@@ -10,7 +10,7 @@ struct OpponentAnalysisView: View {
     let teamName: String
     
     var analysis: OpponentAnalysis {
-        dataManager.teams.isEmpty ? SampleData.sampleAnalysis : dataManager.getOpponentAnalysis(teamName: teamName)
+        dataManager.getOpponentAnalysis(teamName: teamName)
     }
     
     var body: some View {

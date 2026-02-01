@@ -135,37 +135,23 @@ struct HomeView: View {
                             .padding(.horizontal)
                         
                         VStack(spacing: 8) {
-                            if let topBatsman = dataManager.topBatsmen.first {
-                                PerformerCard(
-                                    icon: "🏏",
-                                    name: topBatsman.name,
-                                    stat: "\(topBatsman.battingStats?.runs ?? 0) runs • \(topBatsman.team)",
-                                    color: .orange
-                                )
-                            } else {
-                                PerformerCard(
-                                    icon: "🏏",
-                                    name: "Loading...",
-                                    stat: "Fetching batsmen data",
-                                    color: .orange
-                                )
-                            }
-                            
-                            if let topBowler = dataManager.topBowlers.first {
-                                PerformerCard(
-                                    icon: "⚡",
-                                    name: topBowler.name,
-                                    stat: "\(topBowler.bowlingStats?.wickets ?? 0) wickets • \(topBowler.team)",
-                                    color: .blue
-                                )
-                            } else {
-                                PerformerCard(
-                                    icon: "⚡",
-                                    name: "Loading...",
-                                    stat: "Fetching bowlers data",
-                                    color: .blue
-                                )
-                            }
+                    if let topBatsman = dataManager.topBatsmen.first {
+                        PerformerCard(
+                            icon: "🏏",
+                            name: topBatsman.name,
+                            stat: "\(topBatsman.battingStats?.runs ?? 0) runs • \(topBatsman.team)",
+                            color: .orange
+                        )
+                    }
+                    
+                    if let topBowler = dataManager.topBowlers.first {
+                        PerformerCard(
+                            icon: "⚡",
+                            name: topBowler.name,
+                            stat: "\(topBowler.bowlingStats?.wickets ?? 0) wickets • \(topBowler.team)",
+                            color: .blue
+                        )
+                    }
                         }
                         .padding(.horizontal)
                     }
