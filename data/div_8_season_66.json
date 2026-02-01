@@ -1,0 +1,311 @@
+{
+  "division_id": 8,
+  "season_id": 66,
+  "division_name": "Div F - Summer 2025",
+  "last_updated": "2026-02-01T13:43:17.690143",
+  "teams": [],
+  "batsmen": [
+    {
+      "rank": "1",
+      "name": "Pavan Shetty",
+      "team": "Snoqualmie Wolves Arctic",
+      "runs": "7"
+    },
+    {
+      "rank": "2",
+      "name": "Anuj Nadig",
+      "team": "BRCL Greens",
+      "runs": "7"
+    },
+    {
+      "rank": "3",
+      "name": "Pranu Johri",
+      "team": "Snoqualmie Wolves Timber",
+      "runs": "7"
+    },
+    {
+      "rank": "4",
+      "name": "Jomi Mathew",
+      "team": "Pulikkoottam - Royals",
+      "runs": "7"
+    },
+    {
+      "rank": "5",
+      "name": "Manish S Nair",
+      "team": "Machani Strikers",
+      "runs": "6"
+    },
+    {
+      "rank": "6",
+      "name": "Deepanshu Gupta",
+      "team": "Kirkland Knights",
+      "runs": "6"
+    },
+    {
+      "rank": "7",
+      "name": "Deva Nandhagopal",
+      "team": "C-Hawks",
+      "runs": "7"
+    },
+    {
+      "rank": "8",
+      "name": "Sreekar Reddy Sykam",
+      "team": "Knightriders",
+      "runs": "7"
+    },
+    {
+      "rank": "9",
+      "name": "Sudhakar G",
+      "team": "Everest Warriors",
+      "runs": "7"
+    },
+    {
+      "rank": "10",
+      "name": "Anand Harshan",
+      "team": "Pulikkoottam - Royals",
+      "runs": "7"
+    },
+    {
+      "rank": "11",
+      "name": "Ajay Kakarala",
+      "team": "ICCS Angry Bulls",
+      "runs": "6"
+    },
+    {
+      "rank": "12",
+      "name": "Gowri Shankar",
+      "team": "Gilly",
+      "runs": "7"
+    },
+    {
+      "rank": "13",
+      "name": "Dileep Singh",
+      "team": "The Avengers",
+      "runs": "6"
+    },
+    {
+      "rank": "14",
+      "name": "Ajit Maurya",
+      "team": "Spartan Boys",
+      "runs": "7"
+    },
+    {
+      "rank": "15",
+      "name": "Manu Mani",
+      "team": "Machani Strikers",
+      "runs": "7"
+    },
+    {
+      "rank": "16",
+      "name": "Rahul Mitra",
+      "team": "ICCS Angry Bulls",
+      "runs": "7"
+    },
+    {
+      "rank": "17",
+      "name": "Kalim Azam",
+      "team": "ICCS Royal Warriors",
+      "runs": "7"
+    },
+    {
+      "rank": "18",
+      "name": "Arun Chandra",
+      "team": "Kirkland Knights",
+      "runs": "7"
+    },
+    {
+      "rank": "19",
+      "name": "Manoj Bisht",
+      "team": "Red Warriors",
+      "runs": "6"
+    },
+    {
+      "rank": "20",
+      "name": "Apoorv Agrawal",
+      "team": "ATB Seattle Shockers",
+      "runs": "7"
+    },
+    {
+      "rank": "21",
+      "name": "Praveen Yaadav",
+      "team": "ICCS Royal Warriors",
+      "runs": "7"
+    },
+    {
+      "rank": "22",
+      "name": "AtulyaA Ravishankar",
+      "team": "C-Hawks",
+      "runs": "6"
+    },
+    {
+      "rank": "23",
+      "name": "Phurtemba Sherpa",
+      "team": "Everest Warriors",
+      "runs": "4"
+    },
+    {
+      "rank": "24",
+      "name": "AkashAnjanappa A",
+      "team": "Cricket Fanatics",
+      "runs": "6"
+    },
+    {
+      "rank": "25",
+      "name": "Shubh Johri",
+      "team": "Snoqualmie Wolves Timber",
+      "runs": "7"
+    }
+  ],
+  "bowlers": [
+    {
+      "rank": "1",
+      "name": "Gill Redhawks",
+      "team": "Spartan Boys",
+      "wickets": "7"
+    },
+    {
+      "rank": "2",
+      "name": "Srinivasan Turuvekere",
+      "team": "Gilly",
+      "wickets": "6"
+    },
+    {
+      "rank": "3",
+      "name": "Sagar Ghabade",
+      "team": "Raftaar",
+      "wickets": "7"
+    },
+    {
+      "rank": "4",
+      "name": "Rahul Mitra",
+      "team": "ICCS Angry Bulls",
+      "wickets": "7"
+    },
+    {
+      "rank": "5",
+      "name": "Raj Kumar R",
+      "team": "Knightriders",
+      "wickets": "6"
+    },
+    {
+      "rank": "6",
+      "name": "Vinay G",
+      "team": "Cricket Fanatics",
+      "wickets": "6"
+    },
+    {
+      "rank": "7",
+      "name": "Arun Chandra",
+      "team": "Kirkland Knights",
+      "wickets": "7"
+    },
+    {
+      "rank": "8",
+      "name": "Vibhav SWCC",
+      "team": "Snoqualmie Wolves Timber",
+      "wickets": "5"
+    },
+    {
+      "rank": "9",
+      "name": "Praveen Malla",
+      "team": "Knightriders",
+      "wickets": "7"
+    },
+    {
+      "rank": "10",
+      "name": "Kanish Manuja",
+      "team": "Gilly",
+      "wickets": "6"
+    },
+    {
+      "rank": "11",
+      "name": "Ashish Virani",
+      "team": "Kirkland Knights",
+      "wickets": "6"
+    },
+    {
+      "rank": "12",
+      "name": "Arif Mandra",
+      "team": "BRCL Greens",
+      "wickets": "6"
+    },
+    {
+      "rank": "13",
+      "name": "Rijil Koyyodan",
+      "team": "Pulikkoottam - Royals",
+      "wickets": "6"
+    },
+    {
+      "rank": "14",
+      "name": "Rajendra K",
+      "team": "Snoqualmie Wolves Timber",
+      "wickets": "6"
+    },
+    {
+      "rank": "15",
+      "name": "Ragav Venkatesan",
+      "team": "C-Hawks",
+      "wickets": "6"
+    },
+    {
+      "rank": "16",
+      "name": "Phani Madala",
+      "team": "SuperKings",
+      "wickets": "6"
+    },
+    {
+      "rank": "17",
+      "name": "AkashAnjanappa A",
+      "team": "Cricket Fanatics",
+      "wickets": "7"
+    },
+    {
+      "rank": "18",
+      "name": "Jeet M",
+      "team": "The Avengers",
+      "wickets": "6"
+    },
+    {
+      "rank": "19",
+      "name": "Manish S Nair",
+      "team": "Machani Strikers",
+      "wickets": "6"
+    },
+    {
+      "rank": "20",
+      "name": "Divakar Ravi",
+      "team": "Cricket Fanatics",
+      "wickets": "7"
+    },
+    {
+      "rank": "21",
+      "name": "Ashwin Giridharan",
+      "team": "ICCS Royal Warriors",
+      "wickets": "7"
+    },
+    {
+      "rank": "22",
+      "name": "Sudeep Aryal",
+      "team": "Everest Warriors",
+      "wickets": "7"
+    },
+    {
+      "rank": "23",
+      "name": "Pranu Johri",
+      "team": "Snoqualmie Wolves Timber",
+      "wickets": "7"
+    },
+    {
+      "rank": "24",
+      "name": "Gagan Jagadeesha",
+      "team": "Knightriders",
+      "wickets": "7"
+    },
+    {
+      "rank": "25",
+      "name": "Dewashish Chandramauli",
+      "team": "Kachra Boyz - OG",
+      "wickets": "6"
+    }
+  ]
+}

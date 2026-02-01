@@ -1,0 +1,71 @@
+{
+  "team": "Snoqualmie Wolves Timber",
+  "dangerous_batsmen": [
+    {
+      "rank": "3",
+      "name": "Pranu Johri",
+      "team": "Snoqualmie Wolves Timber",
+      "runs": "7"
+    },
+    {
+      "rank": "25",
+      "name": "Shubh Johri",
+      "team": "Snoqualmie Wolves Timber",
+      "runs": "7"
+    }
+  ],
+  "dangerous_bowlers": [
+    {
+      "rank": "8",
+      "name": "Vibhav SWCC",
+      "team": "Snoqualmie Wolves Timber",
+      "wickets": "5"
+    },
+    {
+      "rank": "14",
+      "name": "Rajendra K",
+      "team": "Snoqualmie Wolves Timber",
+      "wickets": "6"
+    },
+    {
+      "rank": "23",
+      "name": "Pranu Johri",
+      "team": "Snoqualmie Wolves Timber",
+      "wickets": "7"
+    }
+  ],
+  "all_batsmen": [
+    {
+      "rank": "3",
+      "name": "Pranu Johri",
+      "team": "Snoqualmie Wolves Timber",
+      "runs": "7"
+    },
+    {
+      "rank": "25",
+      "name": "Shubh Johri",
+      "team": "Snoqualmie Wolves Timber",
+      "runs": "7"
+    }
+  ],
+  "all_bowlers": [
+    {
+      "rank": "8",
+      "name": "Vibhav SWCC",
+      "team": "Snoqualmie Wolves Timber",
+      "wickets": "5"
+    },
+    {
+      "rank": "14",
+      "name": "Rajendra K",
+      "team": "Snoqualmie Wolves Timber",
+      "wickets": "6"
+    },
+    {
+      "rank": "23",
+      "name": "Pranu Johri",
+      "team": "Snoqualmie Wolves Timber",
+      "wickets": "7"
+    }
+  ]
+}
