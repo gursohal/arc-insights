@@ -58,9 +58,10 @@ struct Team: Identifiable, Codable {
     let wins: Int
     let losses: Int
     let rank: Int
+    let points: Int
     
     enum CodingKeys: String, CodingKey {
-        case name, division, wins, losses, rank
+        case name, division, wins, losses, rank, points
     }
 }
 

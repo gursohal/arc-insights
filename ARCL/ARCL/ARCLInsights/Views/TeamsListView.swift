@@ -49,9 +49,17 @@ struct TeamRow: View {
                 Text("#\(team.rank)")
                     .font(.headline)
                     .foregroundColor(.green)
-                Text("\(team.wins)-\(team.losses)")
-                    .font(.caption)
-                    .foregroundColor(.secondary)
+                HStack(spacing: 2) {
+                    Text("\(team.wins)-\(team.losses)")
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                    Text("•")
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                    Text("\(team.points)pts")
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                }
             }
         }
         .padding(.vertical, 4)

@@ -135,10 +135,11 @@ class DataManager: ObservableObject {
                     division: "Div F",
                     wins: Int(standing.wins) ?? 0,
                     losses: Int(standing.losses) ?? 0,
-                    rank: Int(standing.rank) ?? 0
+                    rank: Int(standing.rank) ?? 0,
+                    points: Int(standing.points) ?? 0
                 )
             } else {
-                return Team(name: teamName, division: "Div F", wins: 0, losses: 0, rank: 99)
+                return Team(name: teamName, division: "Div F", wins: 0, losses: 0, rank: 99, points: 0)
             }
         }
         
