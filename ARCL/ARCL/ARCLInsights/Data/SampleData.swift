@@ -14,19 +14,25 @@ struct SampleData {
                 name: "Raj Kumar",
                 team: "SWT",
                 battingStats: BattingStats(runs: 453, innings: 10, average: 45.3, strikeRate: 142.5, highestScore: "125*", rank: 1),
-                bowlingStats: nil
+                bowlingStats: nil,
+                playerId: nil,
+                teamId: nil
             ),
             Player(
                 name: "Mike Thompson",
                 team: "SWT",
                 battingStats: BattingStats(runs: 398, innings: 10, average: 39.8, strikeRate: 135.2, highestScore: "98", rank: 3),
-                bowlingStats: nil
+                bowlingStats: nil,
+                playerId: nil,
+                teamId: nil
             ),
             Player(
                 name: "David Chen",
                 team: "SWT",
                 battingStats: BattingStats(runs: 352, innings: 9, average: 39.1, strikeRate: 128.7, highestScore: "87*", rank: 5),
-                bowlingStats: nil
+                bowlingStats: nil,
+                playerId: nil,
+                teamId: nil
             )
         ],
         weakBatsmen: [
@@ -34,13 +40,17 @@ struct SampleData {
                 name: "Tom Wilson",
                 team: "SWT",
                 battingStats: BattingStats(runs: 145, innings: 8, average: 18.1, strikeRate: 95.4, highestScore: "34", rank: 18),
-                bowlingStats: nil
+                bowlingStats: nil,
+                playerId: nil,
+                teamId: nil
             ),
             Player(
                 name: "Chris Park",
                 team: "SWT",
                 battingStats: BattingStats(runs: 89, innings: 7, average: 12.7, strikeRate: 82.3, highestScore: "25", rank: 24),
-                bowlingStats: nil
+                bowlingStats: nil,
+                playerId: nil,
+                teamId: nil
             )
         ],
         dangerousBowlers: [
@@ -48,19 +58,25 @@ struct SampleData {
                 name: "Sam Martinez",
                 team: "SWT",
                 battingStats: nil,
-                bowlingStats: BowlingStats(wickets: 18, overs: 32.4, runs: 245, average: 13.6, economy: 7.5, rank: 1)
+                bowlingStats: BowlingStats(wickets: 18, overs: 32.4, runs: 245, average: 13.6, economy: 7.5, rank: 1),
+                playerId: nil,
+                teamId: nil
             ),
             Player(
                 name: "Jake Williams",
                 team: "SWT",
                 battingStats: nil,
-                bowlingStats: BowlingStats(wickets: 15, overs: 28.2, runs: 198, average: 13.2, economy: 7.0, rank: 3)
+                bowlingStats: BowlingStats(wickets: 15, overs: 28.2, runs: 198, average: 13.2, economy: 7.0, rank: 3),
+                playerId: nil,
+                teamId: nil
             ),
             Player(
                 name: "Ryan Lee",
                 team: "SWT",
                 battingStats: nil,
-                bowlingStats: BowlingStats(wickets: 12, overs: 24.0, runs: 176, average: 14.7, economy: 7.3, rank: 6)
+                bowlingStats: BowlingStats(wickets: 12, overs: 24.0, runs: 176, average: 14.7, economy: 7.3, rank: 6),
+                playerId: nil,
+                teamId: nil
             )
         ],
         recommendations: [
@@ -90,31 +106,41 @@ struct SampleData {
             name: "Raj Kumar",
             team: "SWT",
             battingStats: BattingStats(runs: 453, innings: 10, average: 45.3, strikeRate: 142.5, highestScore: "125*", rank: 1),
-            bowlingStats: nil
+            bowlingStats: nil,
+            playerId: nil,
+            teamId: nil
         ),
         Player(
             name: "John Smith",
             team: "WAR",
             battingStats: BattingStats(runs: 428, innings: 9, average: 47.6, strikeRate: 138.9, highestScore: "112", rank: 2),
-            bowlingStats: nil
+            bowlingStats: nil,
+            playerId: nil,
+            teamId: nil
         ),
         Player(
             name: "Mike Thompson",
             team: "SWT",
             battingStats: BattingStats(runs: 398, innings: 10, average: 39.8, strikeRate: 135.2, highestScore: "98", rank: 3),
-            bowlingStats: nil
+            bowlingStats: nil,
+            playerId: nil,
+            teamId: nil
         ),
         Player(
             name: "Alex Johnson",
             team: "EAG",
             battingStats: BattingStats(runs: 375, innings: 9, average: 41.7, strikeRate: 130.4, highestScore: "89*", rank: 4),
-            bowlingStats: nil
+            bowlingStats: nil,
+            playerId: nil,
+            teamId: nil
         ),
         Player(
             name: "David Chen",
             team: "SWT",
             battingStats: BattingStats(runs: 352, innings: 9, average: 39.1, strikeRate: 128.7, highestScore: "87*", rank: 5),
-            bowlingStats: nil
+            bowlingStats: nil,
+            playerId: nil,
+            teamId: nil
         )
     ]
     
@@ -124,31 +150,41 @@ struct SampleData {
             name: "Sam Martinez",
             team: "SWT",
             battingStats: nil,
-            bowlingStats: BowlingStats(wickets: 18, overs: 32.4, runs: 245, average: 13.6, economy: 7.5, rank: 1)
+            bowlingStats: BowlingStats(wickets: 18, overs: 32.4, runs: 245, average: 13.6, economy: 7.5, rank: 1),
+            playerId: nil,
+            teamId: nil
         ),
         Player(
             name: "Peter Brown",
             team: "WAR",
             battingStats: nil,
-            bowlingStats: BowlingStats(wickets: 16, overs: 30.2, runs: 218, average: 13.6, economy: 7.2, rank: 2)
+            bowlingStats: BowlingStats(wickets: 16, overs: 30.2, runs: 218, average: 13.6, economy: 7.2, rank: 2),
+            playerId: nil,
+            teamId: nil
         ),
         Player(
             name: "Jake Williams",
             team: "SWT",
             battingStats: nil,
-            bowlingStats: BowlingStats(wickets: 15, overs: 28.2, runs: 198, average: 13.2, economy: 7.0, rank: 3)
+            bowlingStats: BowlingStats(wickets: 15, overs: 28.2, runs: 198, average: 13.2, economy: 7.0, rank: 3),
+            playerId: nil,
+            teamId: nil
         ),
         Player(
             name: "Tom Anderson",
             team: "HAW",
             battingStats: nil,
-            bowlingStats: BowlingStats(wickets: 14, overs: 26.5, runs: 205, average: 14.6, economy: 7.6, rank: 4)
+            bowlingStats: BowlingStats(wickets: 14, overs: 26.5, runs: 205, average: 14.6, economy: 7.6, rank: 4),
+            playerId: nil,
+            teamId: nil
         ),
         Player(
             name: "Ryan Lee",
             team: "SWT",
             battingStats: nil,
-            bowlingStats: BowlingStats(wickets: 12, overs: 24.0, runs: 176, average: 14.7, economy: 7.3, rank: 6)
+            bowlingStats: BowlingStats(wickets: 12, overs: 24.0, runs: 176, average: 14.7, economy: 7.3, rank: 6),
+            playerId: nil,
+            teamId: nil
         )
     ]
 }

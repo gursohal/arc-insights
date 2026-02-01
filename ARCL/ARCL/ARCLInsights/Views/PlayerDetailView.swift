@@ -109,7 +109,7 @@ struct InsightsSection: View {
             VStack(spacing: 12) {
                 if playerType == "batsman" {
                     if let form = insights.form {
-                        InsightCard(
+                        PlayerInsightCard(
                             icon: form == "hot" ? "🔥" : form == "cold" ? "❄️" : "📊",
                             title: "Current Form",
                             value: form.capitalized,
@@ -118,7 +118,7 @@ struct InsightsSection: View {
                     }
                     
                     if let recentAvg = insights.recentFormAvg {
-                        InsightCard(
+                        PlayerInsightCard(
                             icon: "📈",
                             title: "Recent Form (Last 5)",
                             value: String(format: "%.1f runs", recentAvg),
@@ -127,7 +127,7 @@ struct InsightsSection: View {
                     }
                     
                     if let bigScores = insights.bigScores {
-                        InsightCard(
+                        PlayerInsightCard(
                             icon: "⭐",
                             title: "Big Scores (30+)",
                             value: "\(bigScores) matches",
@@ -136,7 +136,7 @@ struct InsightsSection: View {
                     }
                     
                     if let failures = insights.failures {
-                        InsightCard(
+                        PlayerInsightCard(
                             icon: "⚠️",
                             title: "Low Scores (<10)",
                             value: "\(failures) matches",
@@ -147,7 +147,7 @@ struct InsightsSection: View {
                 
                 if playerType == "bowler" {
                     if let recentWickets = insights.recentWicketsAvg {
-                        InsightCard(
+                        PlayerInsightCard(
                             icon: "⚡",
                             title: "Recent Wickets (Last 5)",
                             value: String(format: "%.1f per match", recentWickets),
@@ -156,7 +156,7 @@ struct InsightsSection: View {
                     }
                     
                     if let matchWinning = insights.matchWinningSpells {
-                        InsightCard(
+                        PlayerInsightCard(
                             icon: "🏆",
                             title: "Match-Winning Spells (3+)",
                             value: "\(matchWinning) times",
@@ -170,7 +170,7 @@ struct InsightsSection: View {
     }
 }
 
-struct InsightCard: View {
+struct PlayerInsightCard: View {
     let icon: String
     let title: String
     let value: String
