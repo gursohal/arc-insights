@@ -93,7 +93,7 @@ class DataManager: ObservableObject {
             var request = URLRequest(url: url)
             request.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
             
-            let (data, response) = try await URLSession.shared.data(for: request)
+            let (data, _) = try await URLSession.shared.data(for: request)
             
             // Debug: print raw data
             if let dataString = String(data: data, encoding: .utf8) {

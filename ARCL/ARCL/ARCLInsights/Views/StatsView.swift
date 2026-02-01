@@ -1,4 +1,4 @@
-yn//
+//
 //  StatsView.swift
 //  ARCL Insights
 //
@@ -44,34 +44,34 @@ struct BattingStatsView: View {
     var body: some View {
         List(players) { player in
             NavigationLink(destination: PlayerDetailView(player: player)) {
-            HStack {
-                Text("#\(player.battingStats?.rank ?? 0)")
-                    .font(.caption)
-                    .foregroundColor(.secondary)
-                    .frame(width: 30)
-                
-                VStack(alignment: .leading, spacing: 4) {
-                    Text(player.name)
-                        .font(.headline)
-                    Text(player.team)
+                HStack {
+                    Text("#\(player.battingStats?.rank ?? 0)")
                         .font(.caption)
                         .foregroundColor(.secondary)
-                }
-                
-                Spacer()
-                
-                VStack(alignment: .trailing, spacing: 4) {
-                    if let stats = player.battingStats {
-                        Text("\(stats.runs)")
+                        .frame(width: 30)
+                    
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text(player.name)
                             .font(.headline)
-                            .bold()
-                        Text("runs")
+                        Text(player.team)
                             .font(.caption)
                             .foregroundColor(.secondary)
                     }
+                    
+                    Spacer()
+                    
+                    VStack(alignment: .trailing, spacing: 4) {
+                        if let stats = player.battingStats {
+                            Text("\(stats.runs)")
+                                .font(.headline)
+                                .bold()
+                            Text("runs")
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                        }
+                    }
                 }
-            }
-            .padding(.vertical, 4)
+                .padding(.vertical, 4)
             }
         }
         .listStyle(.plain)
@@ -84,34 +84,34 @@ struct BowlingStatsView: View {
     var body: some View {
         List(players) { player in
             NavigationLink(destination: PlayerDetailView(player: player)) {
-            HStack {
-                Text("#\(player.bowlingStats?.rank ?? 0)")
-                    .font(.caption)
-                    .foregroundColor(.secondary)
-                    .frame(width: 30)
-                
-                VStack(alignment: .leading, spacing: 4) {
-                    Text(player.name)
-                        .font(.headline)
-                    Text(player.team)
+                HStack {
+                    Text("#\(player.bowlingStats?.rank ?? 0)")
                         .font(.caption)
                         .foregroundColor(.secondary)
-                }
-                
-                Spacer()
-                
-                VStack(alignment: .trailing, spacing: 4) {
-                    if let stats = player.bowlingStats {
-                        Text("\(stats.wickets)")
+                        .frame(width: 30)
+                    
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text(player.name)
                             .font(.headline)
-                            .bold()
-                        Text("wickets")
+                        Text(player.team)
                             .font(.caption)
                             .foregroundColor(.secondary)
                     }
+                    
+                    Spacer()
+                    
+                    VStack(alignment: .trailing, spacing: 4) {
+                        if let stats = player.bowlingStats {
+                            Text("\(stats.wickets)")
+                                .font(.headline)
+                                .bold()
+                            Text("wickets")
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                        }
+                    }
                 }
-            }
-            .padding(.vertical, 4)
+                .padding(.vertical, 4)
             }
         }
         .listStyle(.plain)
