@@ -25,7 +25,7 @@ class DataManager: ObservableObject {
     @AppStorage("myTeamName") private var myTeamName: String = "Snoqualmie Wolves"
     @AppStorage("lastDataRefresh") private var lastDataRefreshTimestamp: Double = 0
     
-    private let baseURL = "https://arcl.org"
+    private let baseURL = "https://raw.githubusercontent.com/gursohal/arc-insights/main/data"
     
     var lastDataRefresh: Date? {
         guard lastDataRefreshTimestamp > 0 else { return nil }
@@ -78,11 +78,11 @@ class DataManager: ObservableObject {
         )
     }
     
-    // MARK: - Scraping Methods
+    // MARK: - Data Fetching from GitHub
     
     func fetchTeamNames(divisionID: Int, seasonID: Int) async -> [String] {
-        let urlString = "\(baseURL)/Pages/UI/LeagueTeams.aspx?league_id=\(divisionID)&season_id=\(seasonID)"
-        print("📡 Fetching teams from: \(urlString)")
+        let urlString = "\(baseURL)/div_\(divisionID)_season_\(seasonID).json"
+        print("📡 Fetching data from: \(urlString)")
         
         guard let url = URL(string: urlString) else {
             print("❌ Invalid URL")
@@ -91,210 +91,67 @@ class DataManager: ObservableObject {
         
         do {
             let (data, _) = try await URLSession.shared.data(from: url)
-            guard let html = String(data: data, encoding: .utf8) else {
-                print("❌ Failed to decode HTML")
-                return []
-            }
-            
-            print("✅ Downloaded HTML (\(html.count) characters)")
-            let teams = parseTeamNames(from: html)
-            print("✅ Found \(teams.count) teams: \(teams.prefix(5).joined(separator: ", "))")
-            return teams
+            let response = try JSONDecoder().decode(ARCLDataResponse.self, from: data)
+            print("✅ Found \(response.teams.count) teams")
+            return response.teams
         } catch {
-            print("❌ Error fetching team names: \(error)")
+            print("❌ Error fetching teams: \(error)")
             return []
         }
     }
     
     private func fetchTeams() async throws -> [Team] {
-        let urlString = "\(baseURL)/Pages/UI/LeagueTeams.aspx?league_id=\(selectedDivisionID)&season_id=\(selectedSeasonID)"
+        let urlString = "\(baseURL)/div_\(selectedDivisionID)_season_\(selectedSeasonID).json"
         guard let url = URL(string: urlString) else { return [] }
         
         let (data, _) = try await URLSession.shared.data(from: url)
-        guard let html = String(data: data, encoding: .utf8) else { return [] }
+        let response = try JSONDecoder().decode(ARCLDataResponse.self, from: data)
         
-        return parseTeams(from: html)
-    }
-    
-    private func fetchTopBatsmen() async throws -> [Player] {
-        let urlString = "\(baseURL)/Pages/UI/MaxRuns.aspx?league_id=\(selectedDivisionID)&season_id=\(selectedSeasonID)"
-        guard let url = URL(string: urlString) else { return [] }
-        
-        let (data, _) = try await URLSession.shared.data(from: url)
-        guard let html = String(data: data, encoding: .utf8) else { return [] }
-        
-        return parseBatsmen(from: html)
-    }
-    
-    private func fetchTopBowlers() async throws -> [Player] {
-        let urlString = "\(baseURL)/Pages/UI/MaxWickets.aspx?league_id=\(selectedDivisionID)&season_id=\(selectedSeasonID)"
-        guard let url = URL(string: urlString) else { return [] }
-        
-        let (data, _) = try await URLSession.shared.data(from: url)
-        guard let html = String(data: data, encoding: .utf8) else { return [] }
-        
-        return parseBowlers(from: html)
-    }
-    
-    // MARK: - HTML Parsing
-    
-    private func parseTeamNames(from html: String) -> [String] {
-        var teams: [String] = []
-        
-        // Print a sample of the HTML to debug
-        if let range = html.range(of: "TeamHome") {
-            let start = html.index(range.lowerBound, offsetBy: -100, limitedBy: html.startIndex) ?? html.startIndex
-            let end = html.index(range.upperBound, offsetBy: 200, limitedBy: html.endIndex) ?? html.endIndex
-            print("📝 HTML sample around TeamHome:\n\(html[start..<end])")
-        }
-        
-        // Try multiple patterns
-        let patterns = [
-            "href=\"TeamHome\\.aspx[^\"]*\"[^>]*>([^<]+)</a>",  // Pattern 1
-            "TeamHome\\.aspx[^>]*>([^<]+)</a>",                  // Pattern 2
-            ">([^<]+)</a>[^<]*TeamHome",                         // Pattern 3 (reverse)
-        ]
-        
-        for (index, pattern) in patterns.enumerated() {
-            print("🔍 Trying pattern \(index + 1): \(pattern)")
-            guard let regex = try? NSRegularExpression(pattern: pattern, options: []) else {
-                continue
-            }
-            
-            let nsString = html as NSString
-            let matches = regex.matches(in: html, options: [], range: NSRange(location: 0, length: nsString.length))
-            
-            print("  Found \(matches.count) matches")
-            
-            if matches.count > 0 {
-                for match in matches {
-                    if match.numberOfRanges > 1 {
-                        let teamNameRange = match.range(at: 1)
-                        let teamName = nsString.substring(with: teamNameRange)
-                            .trimmingCharacters(in: .whitespacesAndNewlines)
-                        
-                        if !teamName.isEmpty && !teams.contains(teamName) {
-                            teams.append(teamName)
-                            print("    ✓ \(teamName)")
-                        }
-                    }
-                }
-                break // If we found teams with this pattern, stop trying others
-            }
-        }
-        
-        return teams
-    }
-    
-    private func parseTeams(from html: String) -> [Team] {
-        let teamNames = parseTeamNames(from: html)
-        return teamNames.enumerated().map { index, name in
+        return response.teams.enumerated().map { index, name in
             Team(name: name, division: "Div F", wins: 0, losses: 0, rank: index + 1)
         }
     }
     
-    private func parseBatsmen(from html: String) -> [Player] {
-        var players: [Player] = []
-        var rank = 1
+    private func fetchTopBatsmen() async throws -> [Player] {
+        let urlString = "\(baseURL)/div_\(selectedDivisionID)_season_\(selectedSeasonID).json"
+        guard let url = URL(string: urlString) else { return [] }
         
-        // Parse batting table rows
-        let lines = html.components(separatedBy: .newlines)
-        for line in lines {
-            if line.contains("<tr") && line.contains("<td") {
-                // Extract player data from table row
-                if let player = parseBatsmanRow(line, rank: rank) {
-                    players.append(player)
-                    rank += 1
-                }
-            }
+        let (data, _) = try await URLSession.shared.data(from: url)
+        let response = try JSONDecoder().decode(ARCLDataResponse.self, from: data)
+        
+        return response.batsmen.map { batsman in
+            let stats = BattingStats(
+                runs: Int(batsman.runs) ?? 0,
+                innings: 1,
+                average: 0,
+                strikeRate: 0,
+                highestScore: "0",
+                rank: Int(batsman.rank) ?? 0
+            )
+            return Player(name: batsman.name, team: batsman.team, battingStats: stats, bowlingStats: nil)
         }
-        
-        return players
     }
     
-    private func parseBatsmanRow(_ html: String, rank: Int) -> Player? {
-        let cells = extractTableCells(from: html)
-        guard cells.count >= 6 else { return nil }
+    private func fetchTopBowlers() async throws -> [Player] {
+        let urlString = "\(baseURL)/div_\(selectedDivisionID)_season_\(selectedSeasonID).json"
+        guard let url = URL(string: urlString) else { return [] }
         
-        let name = cells[0]
-        let team = cells[1]
-        let runs = Int(cells[2]) ?? 0
-        let innings = Int(cells[3]) ?? 1
-        let average = Double(cells[4]) ?? 0.0
-        let strikeRate = Double(cells[5]) ?? 0.0
-        let highestScore = cells.count > 6 ? cells[6] : "0"
+        let (data, _) = try await URLSession.shared.data(from: url)
+        let response = try JSONDecoder().decode(ARCLDataResponse.self, from: data)
         
-        let stats = BattingStats(
-            runs: runs,
-            innings: innings,
-            average: average,
-            strikeRate: strikeRate,
-            highestScore: highestScore,
-            rank: rank
-        )
-        
-        return Player(name: name, team: team, battingStats: stats, bowlingStats: nil)
-    }
-    
-    private func parseBowlers(from html: String) -> [Player] {
-        var players: [Player] = []
-        var rank = 1
-        
-        let lines = html.components(separatedBy: .newlines)
-        for line in lines {
-            if line.contains("<tr") && line.contains("<td") {
-                if let player = parseBowlerRow(line, rank: rank) {
-                    players.append(player)
-                    rank += 1
-                }
-            }
+        return response.bowlers.map { bowler in
+            let stats = BowlingStats(
+                wickets: Int(bowler.wickets) ?? 0,
+                overs: 0,
+                runs: 0,
+                average: 0,
+                economy: 0,
+                rank: Int(bowler.rank) ?? 0
+            )
+            return Player(name: bowler.name, team: bowler.team, battingStats: nil, bowlingStats: stats)
         }
-        
-        return players
     }
     
-    private func parseBowlerRow(_ html: String, rank: Int) -> Player? {
-        let cells = extractTableCells(from: html)
-        guard cells.count >= 6 else { return nil }
-        
-        let name = cells[0]
-        let team = cells[1]
-        let wickets = Int(cells[2]) ?? 0
-        let overs = Double(cells[3]) ?? 0.0
-        let runs = Int(cells[4]) ?? 0
-        let average = Double(cells[5]) ?? 0.0
-        let economy = Double(cells.count > 6 ? cells[6] : "0") ?? 0.0
-        
-        let stats = BowlingStats(
-            wickets: wickets,
-            overs: overs,
-            runs: runs,
-            average: average,
-            economy: economy,
-            rank: rank
-        )
-        
-        return Player(name: name, team: team, battingStats: nil, bowlingStats: stats)
-    }
-    
-    private func extractTableCells(from html: String) -> [String] {
-        var cells: [String] = []
-        var remaining = html
-        
-        while let tdStart = remaining.range(of: "<td"),
-              let tdContentStart = remaining.range(of: ">", range: tdStart.upperBound..<remaining.endIndex),
-              let tdEnd = remaining.range(of: "</td>", range: tdContentStart.upperBound..<remaining.endIndex) {
-            
-            let cellContent = String(remaining[tdContentStart.upperBound..<tdEnd.lowerBound])
-                .trimmingCharacters(in: .whitespacesAndNewlines)
-                .replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression)
-            
-            cells.append(cellContent)
-            remaining = String(remaining[tdEnd.upperBound...])
-        }
-        
-        return cells
-    }
     
     // MARK: - Helper Methods
     
@@ -373,6 +230,32 @@ class DataManager: ObservableObject {
     func updateMyTeam(_ teamName: String) {
         myTeamName = teamName
     }
+}
+
+// MARK: - JSON Response Models
+
+struct ARCLDataResponse: Codable {
+    let division_id: Int
+    let season_id: Int
+    let division_name: String
+    let last_updated: String
+    let teams: [String]
+    let batsmen: [BatsmanJSON]
+    let bowlers: [BowlerJSON]
+}
+
+struct BatsmanJSON: Codable {
+    let rank: String
+    let name: String
+    let team: String
+    let runs: String
+}
+
+struct BowlerJSON: Codable {
+    let rank: String
+    let name: String
+    let team: String
+    let wickets: String
 }
 
 // MARK: - Division & Season Models
