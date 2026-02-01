@@ -119,16 +119,16 @@ class DataManager: ObservableObject {
         guard let url = URL(string: urlString) else { return [] }
         
         let (data, _) = try await URLSession.shared.data(from: url)
-        let response = try JSONDecoder().decode(ARCLDataResponse.self, from: data)
+        let jsonResponse = try JSONDecoder().decode(ARCLDataResponse.self, from: data)
         
         // Create a dictionary from standings for quick lookup
         var standingsDict: [String: StandingJSON] = [:]
-        for standing in response.standings {
+        for standing in jsonResponse.standings {
             standingsDict[standing.team] = standing
         }
         
         // Map teams with standings data
-        let teams = response.teams.compactMap { teamName -> Team? in
+        let teams = jsonResponse.teams.compactMap { teamName -> Team? in
             if let standing = standingsDict[teamName] {
                 return Team(
                     name: teamName,
@@ -171,7 +171,7 @@ class DataManager: ObservableObject {
                 highestScore: batsman.runs,
                 rank: Int(batsman.rank) ?? 0
             )
-            return Player(name: batsman.name, team: batsman.team, battingStats: stats, bowlingStats: nil)
+            return Player(name: batsman.name, team: batsman.team, battingStats: stats, bowlingStats: nil, playerId: nil, teamId: nil)
         }
     }
     
@@ -194,7 +194,7 @@ class DataManager: ObservableObject {
                 economy: economy,
                 rank: Int(bowler.rank) ?? 0
             )
-            return Player(name: bowler.name, team: bowler.team, battingStats: nil, bowlingStats: stats)
+            return Player(name: bowler.name, team: bowler.team, battingStats: nil, bowlingStats: stats, playerId: nil, teamId: nil)
         }
     }
     
