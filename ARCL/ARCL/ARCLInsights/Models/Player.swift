@@ -11,9 +11,13 @@ struct Player: Identifiable, Codable {
     let team: String
     let battingStats: BattingStats?
     let bowlingStats: BowlingStats?
+    let playerId: String?
+    let teamId: String?
     
     enum CodingKeys: String, CodingKey {
         case name, team, battingStats, bowlingStats
+        case playerId = "player_id"
+        case teamId = "team_id"
     }
 }
 
