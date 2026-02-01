@@ -74,14 +74,14 @@ struct SampleData {
     
     // Sample Teams
     static let sampleTeams = [
-        Team(name: "Snoqualmie Wolves", division: "Div F", wins: 8, losses: 2, rank: 2),
-        Team(name: "Snoqualmie Wolves Timber", division: "Div F", wins: 7, losses: 3, rank: 3),
-        Team(name: "Warriors", division: "Div F", wins: 10, losses: 0, rank: 1),
-        Team(name: "Eagles", division: "Div F", wins: 6, losses: 4, rank: 4),
-        Team(name: "Hawks", division: "Div F", wins: 5, losses: 5, rank: 5),
-        Team(name: "Lions", division: "Div F", wins: 4, losses: 6, rank: 6),
-        Team(name: "Tigers", division: "Div F", wins: 3, losses: 7, rank: 7),
-        Team(name: "Panthers", division: "Div F", wins: 2, losses: 8, rank: 8)
+        Team(name: "Snoqualmie Wolves", division: "Div F", wins: 8, losses: 2, rank: 2, points: 210),
+        Team(name: "Snoqualmie Wolves Timber", division: "Div F", wins: 7, losses: 3, rank: 3, points: 189),
+        Team(name: "Warriors", division: "Div F", wins: 10, losses: 0, rank: 1, points: 250),
+        Team(name: "Eagles", division: "Div F", wins: 6, losses: 4, rank: 4, points: 170),
+        Team(name: "Hawks", division: "Div F", wins: 5, losses: 5, rank: 5, points: 150),
+        Team(name: "Lions", division: "Div F", wins: 4, losses: 6, rank: 6, points: 130),
+        Team(name: "Tigers", division: "Div F", wins: 3, losses: 7, rank: 7, points: 110),
+        Team(name: "Panthers", division: "Div F", wins: 2, losses: 8, rank: 8, points: 90)
     ]
     
     // Top Batsmen
