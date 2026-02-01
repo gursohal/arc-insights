@@ -85,16 +85,8 @@ struct OpponentAnalysisView: View {
                 .padding(.horizontal)
             }
             .padding(.vertical)
-        }
         .navigationTitle("Analysis")
         .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Button(action: {}) {
-                    Image(systemName: "square.and.arrow.up")
-                }
-            }
-        }
     }
 }
 
@@ -197,12 +189,13 @@ struct BowlerCard: View {
                         .font(.caption)
                         .foregroundColor(.secondary)
                     HStack(spacing: 4) {
-                        Image(systemName: "exclamationmark.triangle.fill")
-                            .font(.caption)
-                            .foregroundColor(.purple)
+                        Text("Avg")
+                            .font(.caption2)
+                            .foregroundColor(.secondary)
                         Text(stats.averageString)
                             .font(.subheadline)
                             .bold()
+                            .foregroundColor(.purple)
                     }
                 }
             }
