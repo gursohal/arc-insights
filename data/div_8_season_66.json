@@ -2,7 +2,7 @@
   "division_id": 8,
   "season_id": 66,
   "division_name": "Div F - Summer 2025",
-  "last_updated": "2026-02-01T14:19:27.457393",
+  "last_updated": "2026-02-01T15:26:12.349323",
   "teams": [
     "C-Hawks",
     "Red Warriors",
@@ -238,8 +238,8 @@
       "team": "Spartan Boys",
       "matches": "7",
       "overs": "25.10",
-      "wickets": "14",
-      "economy": "7.79"
+      "wickets": "0",
+      "economy": "109"
     },
     {
       "rank": "2",
@@ -247,8 +247,8 @@
       "team": "Gilly",
       "matches": "6",
       "overs": "22.20",
-      "wickets": "14",
-      "economy": "8.57"
+      "wickets": "0",
+      "economy": "120"
     },
     {
       "rank": "3",
@@ -256,8 +256,8 @@
       "team": "Raftaar",
       "matches": "7",
       "overs": "25.50",
-      "wickets": "13",
-      "economy": "12.38"
+      "wickets": "0",
+      "economy": "161"
     },
     {
       "rank": "4",
@@ -265,8 +265,8 @@
       "team": "ICCS Angry Bulls",
       "matches": "7",
       "overs": "27.40",
-      "wickets": "13",
-      "economy": "10.31"
+      "wickets": "0",
+      "economy": "134"
     },
     {
       "rank": "5",
@@ -274,8 +274,8 @@
       "team": "Knightriders",
       "matches": "6",
       "overs": "17.90",
-      "wickets": "12",
-      "economy": "7.83"
+      "wickets": "0",
+      "economy": "94"
     },
     {
       "rank": "6",
@@ -283,8 +283,8 @@
       "team": "Cricket Fanatics",
       "matches": "6",
       "overs": "19.90",
-      "wickets": "12",
-      "economy": "7.83"
+      "wickets": "0",
+      "economy": "94"
     },
     {
       "rank": "7",
@@ -292,8 +292,8 @@
       "team": "Kirkland Knights",
       "matches": "7",
       "overs": "21.10",
-      "wickets": "11",
-      "economy": "8.36"
+      "wickets": "0",
+      "economy": "92"
     },
     {
       "rank": "8",
@@ -301,8 +301,8 @@
       "team": "Snoqualmie Wolves Timber",
       "matches": "5",
       "overs": "19.50",
-      "wickets": "10",
-      "economy": "7.7"
+      "wickets": "0",
+      "economy": "77"
     },
     {
       "rank": "9",
@@ -310,8 +310,8 @@
       "team": "Knightriders",
       "matches": "7",
       "overs": "24.30",
-      "wickets": "10",
-      "economy": "11.3"
+      "wickets": "0",
+      "economy": "113"
     },
     {
       "rank": "10",
@@ -319,8 +319,8 @@
       "team": "Gilly",
       "matches": "6",
       "overs": "22.50",
-      "wickets": "10",
-      "economy": "10.4"
+      "wickets": "0",
+      "economy": "104"
     },
     {
       "rank": "11",
@@ -328,8 +328,8 @@
       "team": "Kirkland Knights",
       "matches": "6",
       "overs": "15.00",
-      "wickets": "10",
-      "economy": "6.8"
+      "wickets": "0",
+      "economy": "68"
     },
     {
       "rank": "12",
@@ -337,8 +337,8 @@
       "team": "BRCL Greens",
       "matches": "6",
       "overs": "22.30",
-      "wickets": "9",
-      "economy": "8.56"
+      "wickets": "1",
+      "economy": "77"
     },
     {
       "rank": "13",
@@ -346,8 +346,8 @@
       "team": "Pulikkoottam - Royals",
       "matches": "6",
       "overs": "12.00",
-      "wickets": "9",
-      "economy": "7.89"
+      "wickets": "0",
+      "economy": "71"
     },
     {
       "rank": "14",
@@ -355,8 +355,8 @@
       "team": "Snoqualmie Wolves Timber",
       "matches": "6",
       "overs": "22.00",
-      "wickets": "9",
-      "economy": "11.56"
+      "wickets": "1",
+      "economy": "104"
     },
     {
       "rank": "15",
@@ -364,8 +364,8 @@
       "team": "C-Hawks",
       "matches": "6",
       "overs": "19.00",
-      "wickets": "9",
-      "economy": "12.11"
+      "wickets": "0",
+      "economy": "109"
     },
     {
       "rank": "16",
@@ -373,8 +373,8 @@
       "team": "SuperKings",
       "matches": "6",
       "overs": "24.00",
-      "wickets": "9",
-      "economy": "9.89"
+      "wickets": "1",
+      "economy": "89"
     },
     {
       "rank": "17",
@@ -382,8 +382,8 @@
       "team": "Cricket Fanatics",
       "matches": "7",
       "overs": "28.00",
-      "wickets": "9",
-      "economy": "14.78"
+      "wickets": "0",
+      "economy": "133"
     },
     {
       "rank": "18",
@@ -391,8 +391,8 @@
       "team": "The Avengers",
       "matches": "6",
       "overs": "17.30",
-      "wickets": "8",
-      "economy": "12.75"
+      "wickets": "0",
+      "economy": "102"
     },
     {
       "rank": "19",
@@ -400,8 +400,8 @@
       "team": "Machani Strikers",
       "matches": "6",
       "overs": "21.00",
-      "wickets": "8",
-      "economy": "12.13"
+      "wickets": "0",
+      "economy": "97"
     },
     {
       "rank": "20",
@@ -409,8 +409,8 @@
       "team": "Cricket Fanatics",
       "matches": "7",
       "overs": "27.00",
-      "wickets": "8",
-      "economy": "18.5"
+      "wickets": "0",
+      "economy": "148"
     },
     {
       "rank": "21",
@@ -418,8 +418,8 @@
       "team": "ICCS Royal Warriors",
       "matches": "7",
       "overs": "25.80",
-      "wickets": "8",
-      "economy": "19.38"
+      "wickets": "0",
+      "economy": "155"
     },
     {
       "rank": "22",
@@ -427,8 +427,8 @@
       "team": "Everest Warriors",
       "matches": "7",
       "overs": "25.20",
-      "wickets": "8",
-      "economy": "18.63"
+      "wickets": "0",
+      "economy": "149"
     },
     {
       "rank": "23",
@@ -436,8 +436,8 @@
       "team": "Snoqualmie Wolves Timber",
       "matches": "7",
       "overs": "20.50",
-      "wickets": "8",
-      "economy": "12.75"
+      "wickets": "1",
+      "economy": "102"
     },
     {
       "rank": "24",
@@ -445,8 +445,8 @@
       "team": "Knightriders",
       "matches": "7",
       "overs": "22.00",
-      "wickets": "8",
-      "economy": "11.63"
+      "wickets": "1",
+      "economy": "93"
     },
     {
       "rank": "25",
@@ -454,8 +454,8 @@
       "team": "Kachra Boyz - OG",
       "matches": "6",
       "overs": "21.00",
-      "wickets": "8",
-      "economy": "13.38"
+      "wickets": "0",
+      "economy": "107"
     }
   ],
   "standings": [

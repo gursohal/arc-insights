@@ -1,0 +1,655 @@
+{
+  "division_id": 6,
+  "season_id": 66,
+  "division_name": "Div D - Summer 2025",
+  "last_updated": "2026-02-01T15:26:10.954860",
+  "teams": [
+    "Sharabi Cricketers",
+    "Bat Boys",
+    "Unicorns",
+    "Scrambled Legs",
+    "Seattle Gems",
+    "Torpedoes",
+    "Eight Musketers",
+    "Invincible Vikings",
+    "Red Hawks Challengers",
+    "Team Sharks",
+    "Rising Fenix",
+    "Sidewinders Exploded",
+    "Redmond Titans",
+    "SwingKings",
+    "Takbeer",
+    "Indiawaale",
+    "Pulikkoottam - Kings",
+    "Downtown Rowdies",
+    "Slammers",
+    "Bellevue Indians",
+    "Hitmen",
+    "Pulikkoottam - Raptors",
+    "Seattle Shoorveers",
+    "Seattle Gladiators"
+  ],
+  "batsmen": [
+    {
+      "rank": "1",
+      "name": "Ahmed Qadir",
+      "team": "Bat Boys",
+      "innings": "7",
+      "runs": "248",
+      "strike_rate": "134.05"
+    },
+    {
+      "rank": "2",
+      "name": "Sathish Kuppuswamy",
+      "team": "Team Sharks",
+      "innings": "7",
+      "runs": "239",
+      "strike_rate": "108.64"
+    },
+    {
+      "rank": "3",
+      "name": "Mahendra Reddy Bogathi",
+      "team": "Redmond Titans",
+      "innings": "7",
+      "runs": "219",
+      "strike_rate": "136.88"
+    },
+    {
+      "rank": "4",
+      "name": "Saai Sanjay Swaminathan",
+      "team": "Sidewinders Exploded",
+      "innings": "6",
+      "runs": "211",
+      "strike_rate": "128.66"
+    },
+    {
+      "rank": "5",
+      "name": "Sanjeev Singh",
+      "team": "Eight Musketers",
+      "innings": "5",
+      "runs": "205",
+      "strike_rate": "133.12"
+    },
+    {
+      "rank": "6",
+      "name": "Roshan R",
+      "team": "Pulikkoottam - Raptors",
+      "innings": "7",
+      "runs": "199",
+      "strike_rate": "91.28"
+    },
+    {
+      "rank": "7",
+      "name": "Sarmad Siddiqui",
+      "team": "Takbeer",
+      "innings": "7",
+      "runs": "180",
+      "strike_rate": "97.83"
+    },
+    {
+      "rank": "8",
+      "name": "Rahul Kumar Unicorns",
+      "team": "Unicorns",
+      "innings": "7",
+      "runs": "172",
+      "strike_rate": "79.63"
+    },
+    {
+      "rank": "9",
+      "name": "Jay Patil",
+      "team": "Seattle Gladiators",
+      "innings": "5",
+      "runs": "158",
+      "strike_rate": "133.9"
+    },
+    {
+      "rank": "10",
+      "name": "Saptadeep Chanda",
+      "team": "Red Hawks Challengers",
+      "innings": "6",
+      "runs": "151",
+      "strike_rate": "90.96"
+    },
+    {
+      "rank": "11",
+      "name": "Rathinamoorthy K",
+      "team": "Sidewinders Exploded",
+      "innings": "7",
+      "runs": "144",
+      "strike_rate": "109.09"
+    },
+    {
+      "rank": "12",
+      "name": "Rushab Nikhil Doshi",
+      "team": "Slammers",
+      "innings": "7",
+      "runs": "138",
+      "strike_rate": "96.5"
+    },
+    {
+      "rank": "13",
+      "name": "Vicky Dewani",
+      "team": "Seattle Gladiators",
+      "innings": "7",
+      "runs": "134",
+      "strike_rate": "92.41"
+    },
+    {
+      "rank": "14",
+      "name": "Parth Dagli",
+      "team": "Seattle Shoorveers",
+      "innings": "6",
+      "runs": "133",
+      "strike_rate": "81.1"
+    },
+    {
+      "rank": "15",
+      "name": "Pravin Titans",
+      "team": "Redmond Titans",
+      "innings": "7",
+      "runs": "131",
+      "strike_rate": "86.18"
+    },
+    {
+      "rank": "16",
+      "name": "Saurabh Sharma Unicorns",
+      "team": "Unicorns",
+      "innings": "7",
+      "runs": "130",
+      "strike_rate": "90.28"
+    },
+    {
+      "rank": "17",
+      "name": "Sumanth Reddy Kambham",
+      "team": "Redmond Titans",
+      "innings": "4",
+      "runs": "124",
+      "strike_rate": "101.64"
+    },
+    {
+      "rank": "18",
+      "name": "Anoop N",
+      "team": "Pulikkoottam - Raptors",
+      "innings": "6",
+      "runs": "121",
+      "strike_rate": "100.83"
+    },
+    {
+      "rank": "19",
+      "name": "Ashwin M.",
+      "team": "Hitmen",
+      "innings": "7",
+      "runs": "120",
+      "strike_rate": "76.92"
+    },
+    {
+      "rank": "20",
+      "name": "Amit Doshi",
+      "team": "Slammers",
+      "innings": "6",
+      "runs": "120",
+      "strike_rate": "97.56"
+    },
+    {
+      "rank": "21",
+      "name": "Girish K Nair",
+      "team": "Pulikkoottam - Raptors",
+      "innings": "6",
+      "runs": "116",
+      "strike_rate": "109.43"
+    },
+    {
+      "rank": "22",
+      "name": "Abhijeet Hatekar",
+      "team": "Hitmen",
+      "innings": "6",
+      "runs": "115",
+      "strike_rate": "97.46"
+    },
+    {
+      "rank": "23",
+      "name": "Ayush Gupta",
+      "team": "Bellevue Indians",
+      "innings": "5",
+      "runs": "107",
+      "strike_rate": "88.43"
+    },
+    {
+      "rank": "24",
+      "name": "Rishabh Animesh",
+      "team": "Sharabi Cricketers",
+      "innings": "7",
+      "runs": "102",
+      "strike_rate": "88.7"
+    },
+    {
+      "rank": "25",
+      "name": "Rahul Kapoor Invincible Vikings",
+      "team": "Invincible Vikings",
+      "innings": "5",
+      "runs": "101",
+      "strike_rate": "114.77"
+    }
+  ],
+  "bowlers": [
+    {
+      "rank": "1",
+      "name": "Parth Dagli",
+      "team": "Seattle Shoorveers",
+      "matches": "6",
+      "overs": "19.50",
+      "wickets": "0",
+      "economy": "101"
+    },
+    {
+      "rank": "2",
+      "name": "Mahendra Reddy Bogathi",
+      "team": "Redmond Titans",
+      "matches": "7",
+      "overs": "24.00",
+      "wickets": "1",
+      "economy": "97"
+    },
+    {
+      "rank": "3",
+      "name": "Ashok V",
+      "team": "Sidewinders Exploded",
+      "matches": "7",
+      "overs": "25.40",
+      "wickets": "0",
+      "economy": "136"
+    },
+    {
+      "rank": "4",
+      "name": "Murali Krish",
+      "team": "Scrambled Legs",
+      "matches": "6",
+      "overs": "21.00",
+      "wickets": "1",
+      "economy": "79"
+    },
+    {
+      "rank": "5",
+      "name": "Ashwin Joshi",
+      "team": "Bellevue Indians",
+      "matches": "7",
+      "overs": "23.30",
+      "wickets": "0",
+      "economy": "123"
+    },
+    {
+      "rank": "6",
+      "name": "Ahmed Qadir",
+      "team": "Bat Boys",
+      "matches": "4",
+      "overs": "13.40",
+      "wickets": "0",
+      "economy": "50"
+    },
+    {
+      "rank": "7",
+      "name": "Anand Y Sane",
+      "team": "Downtown Rowdies",
+      "matches": "5",
+      "overs": "17.50",
+      "wickets": "0",
+      "economy": "85"
+    },
+    {
+      "rank": "8",
+      "name": "Neeraj Kumar",
+      "team": "Unicorns",
+      "matches": "6",
+      "overs": "22.30",
+      "wickets": "1",
+      "economy": "91"
+    },
+    {
+      "rank": "9",
+      "name": "Mayank Tripathi Invincible Vikings",
+      "team": "Invincible Vikings",
+      "matches": "7",
+      "overs": "24.00",
+      "wickets": "1",
+      "economy": "110"
+    },
+    {
+      "rank": "10",
+      "name": "Pothera Brijesh",
+      "team": "Seattle Gems",
+      "matches": "6",
+      "overs": "20.00",
+      "wickets": "0",
+      "economy": "93"
+    },
+    {
+      "rank": "11",
+      "name": "Rahul Kumar Unicorns",
+      "team": "Unicorns",
+      "matches": "6",
+      "overs": "15.10",
+      "wickets": "0",
+      "economy": "61"
+    },
+    {
+      "rank": "12",
+      "name": "Subbu Peddireddy",
+      "team": "Redmond Titans",
+      "matches": "5",
+      "overs": "16.00",
+      "wickets": "1",
+      "economy": "99"
+    },
+    {
+      "rank": "13",
+      "name": "Vipin K Garg",
+      "team": "Bellevue Indians",
+      "matches": "6",
+      "overs": "20.80",
+      "wickets": "0",
+      "economy": "100"
+    },
+    {
+      "rank": "14",
+      "name": "Dhananjay DJ",
+      "team": "Torpedoes",
+      "matches": "5",
+      "overs": "14.20",
+      "wickets": "0",
+      "economy": "92"
+    },
+    {
+      "rank": "15",
+      "name": "Kaiz Merchant",
+      "team": "Seattle Shoorveers",
+      "matches": "7",
+      "overs": "24.10",
+      "wickets": "0",
+      "economy": "141"
+    },
+    {
+      "rank": "16",
+      "name": "Prasad Anala",
+      "team": "SwingKings",
+      "matches": "5",
+      "overs": "15.40",
+      "wickets": "0",
+      "economy": "75"
+    },
+    {
+      "rank": "17",
+      "name": "Gireesh Shaji Babu",
+      "team": "Pulikkoottam - Raptors",
+      "matches": "7",
+      "overs": "26.00",
+      "wickets": "0",
+      "economy": "111"
+    },
+    {
+      "rank": "18",
+      "name": "Piyush Sethi",
+      "team": "Scrambled Legs",
+      "matches": "7",
+      "overs": "21.90",
+      "wickets": "0",
+      "economy": "131"
+    },
+    {
+      "rank": "19",
+      "name": "Udayachandran Jaychandran",
+      "team": "Team Sharks",
+      "matches": "5",
+      "overs": "16.00",
+      "wickets": "0",
+      "economy": "69"
+    },
+    {
+      "rank": "20",
+      "name": "Amit Chudasma",
+      "team": "Bat Boys",
+      "matches": "5",
+      "overs": "18.00",
+      "wickets": "0",
+      "economy": "75"
+    },
+    {
+      "rank": "21",
+      "name": "Vamshi Reddy",
+      "team": "Invincible Vikings",
+      "matches": "6",
+      "overs": "19.40",
+      "wickets": "2",
+      "economy": "70"
+    },
+    {
+      "rank": "22",
+      "name": "Anoop N",
+      "team": "Pulikkoottam - Raptors",
+      "matches": "6",
+      "overs": "20.70",
+      "wickets": "1",
+      "economy": "105"
+    },
+    {
+      "rank": "23",
+      "name": "Sanjay Shankaranarayanan",
+      "team": "Seattle Gladiators",
+      "matches": "5",
+      "overs": "14.50",
+      "wickets": "0",
+      "economy": "95"
+    },
+    {
+      "rank": "24",
+      "name": "Sidda Reddy Gummakonda",
+      "team": "Redmond Titans",
+      "matches": "6",
+      "overs": "21.30",
+      "wickets": "0",
+      "economy": "124"
+    },
+    {
+      "rank": "25",
+      "name": "Shivam Dixit",
+      "team": "Sharabi Cricketers",
+      "matches": "6",
+      "overs": "21.00",
+      "wickets": "0",
+      "economy": "105"
+    }
+  ],
+  "standings": [
+    {
+      "team": "Redmond Titans",
+      "rank": "1",
+      "matches": "10",
+      "wins": "10",
+      "losses": "0",
+      "points": "254"
+    },
+    {
+      "team": "Seattle Gladiators",
+      "rank": "2",
+      "matches": "10",
+      "wins": "7",
+      "losses": "2",
+      "points": "199"
+    },
+    {
+      "team": "Sidewinders Exploded",
+      "rank": "3",
+      "matches": "9",
+      "wins": "6",
+      "losses": "3",
+      "points": "164"
+    },
+    {
+      "team": "Pulikkoottam - Raptors",
+      "rank": "4",
+      "matches": "9",
+      "wins": "6",
+      "losses": "3",
+      "points": "162"
+    },
+    {
+      "team": "Invincible Vikings",
+      "rank": "5",
+      "matches": "8",
+      "wins": "5",
+      "losses": "3",
+      "points": "152"
+    },
+    {
+      "team": "Unicorns",
+      "rank": "6",
+      "matches": "8",
+      "wins": "5",
+      "losses": "3",
+      "points": "148"
+    },
+    {
+      "team": "Hitmen",
+      "rank": "7",
+      "matches": "8",
+      "wins": "5",
+      "losses": "2",
+      "points": "140"
+    },
+    {
+      "team": "Scrambled Legs",
+      "rank": "8",
+      "matches": "8",
+      "wins": "5",
+      "losses": "3",
+      "points": "132"
+    },
+    {
+      "team": "Bat Boys",
+      "rank": "9",
+      "matches": "7",
+      "wins": "4",
+      "losses": "3",
+      "points": "120"
+    },
+    {
+      "team": "Indiawaale",
+      "rank": "10",
+      "matches": "7",
+      "wins": "3",
+      "losses": "3",
+      "points": "90"
+    },
+    {
+      "team": "Sharabi Cricketers",
+      "rank": "11",
+      "matches": "7",
+      "wins": "4",
+      "losses": "3",
+      "points": "101"
+    },
+    {
+      "team": "Seattle Gems",
+      "rank": "12",
+      "matches": "7",
+      "wins": "3",
+      "losses": "4",
+      "points": "99"
+    },
+    {
+      "team": "Team Sharks",
+      "rank": "13",
+      "matches": "7",
+      "wins": "3",
+      "losses": "4",
+      "points": "93"
+    },
+    {
+      "team": "Bellevue Indians",
+      "rank": "14",
+      "matches": "7",
+      "wins": "3",
+      "losses": "4",
+      "points": "92"
+    },
+    {
+      "team": "Downtown Rowdies",
+      "rank": "15",
+      "matches": "7",
+      "wins": "3",
+      "losses": "4",
+      "points": "91"
+    },
+    {
+      "team": "Rising Fenix",
+      "rank": "16",
+      "matches": "7",
+      "wins": "3",
+      "losses": "4",
+      "points": "91"
+    },
+    {
+      "team": "Seattle Shoorveers",
+      "rank": "17",
+      "matches": "7",
+      "wins": "2",
+      "losses": "5",
+      "points": "87"
+    },
+    {
+      "team": "Red Hawks Challengers",
+      "rank": "18",
+      "matches": "7",
+      "wins": "2",
+      "losses": "4",
+      "points": "72"
+    },
+    {
+      "team": "Slammers",
+      "rank": "19",
+      "matches": "7",
+      "wins": "2",
+      "losses": "5",
+      "points": "80"
+    },
+    {
+      "team": "Takbeer",
+      "rank": "20",
+      "matches": "7",
+      "wins": "2",
+      "losses": "5",
+      "points": "78"
+    },
+    {
+      "team": "SwingKings",
+      "rank": "21",
+      "matches": "7",
+      "wins": "2",
+      "losses": "5",
+      "points": "74"
+    },
+    {
+      "team": "Pulikkoottam - Kings",
+      "rank": "22",
+      "matches": "7",
+      "wins": "2",
+      "losses": "5",
+      "points": "73"
+    },
+    {
+      "team": "Eight Musketers",
+      "rank": "23",
+      "matches": "7",
+      "wins": "2",
+      "losses": "5",
+      "points": "70"
+    },
+    {
+      "team": "Torpedoes",
+      "rank": "24",
+      "matches": "7",
+      "wins": "0",
+      "losses": "7",
+      "points": "38"
+    }
+  ]
+}

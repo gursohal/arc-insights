@@ -1,0 +1,655 @@
+{
+  "division_id": 10,
+  "season_id": 66,
+  "division_name": "Div H - Summer 2025",
+  "last_updated": "2026-02-01T15:26:13.643891",
+  "teams": [
+    "Phoenix",
+    "Royal Priesthood",
+    "Sidewinders Overloaded",
+    "Agomoni Tigers",
+    "Rainier Risers",
+    "Everest Warriors B",
+    "Kattapa Sena",
+    "Downtown dhurandars",
+    "DREAM VISION SPARTANS",
+    "Dark KN8s",
+    "Redmond Chargers",
+    "Seattle shouryangas",
+    "Pulikkoottam - Challengers",
+    "Sidewinders-Extended",
+    "Whiskey Warriors",
+    "SEA-Chargers",
+    "Royal Challengers Bellevue",
+    "Seattle Strikers",
+    "Seattle Thunders",
+    "Desi Thunder",
+    "Power Kn8S",
+    "Stones",
+    "Cornered Tigers",
+    "Tailenders"
+  ],
+  "batsmen": [
+    {
+      "rank": "1",
+      "name": "Tanay Saxena",
+      "team": "Downtown dhurandars",
+      "innings": "7",
+      "runs": "174",
+      "strike_rate": "100"
+    },
+    {
+      "rank": "2",
+      "name": "Amar Sadashiv",
+      "team": "Tailenders",
+      "innings": "7",
+      "runs": "149",
+      "strike_rate": "93.71"
+    },
+    {
+      "rank": "3",
+      "name": "Swapnil Merchant",
+      "team": "Whiskey Warriors",
+      "innings": "6",
+      "runs": "139",
+      "strike_rate": "101.46"
+    },
+    {
+      "rank": "4",
+      "name": "Shubhank Gyawali",
+      "team": "Everest Warriors B",
+      "innings": "7",
+      "runs": "131",
+      "strike_rate": "80.86"
+    },
+    {
+      "rank": "5",
+      "name": "Ram Valluri",
+      "team": "SEA-Chargers",
+      "innings": "7",
+      "runs": "126",
+      "strike_rate": "85.71"
+    },
+    {
+      "rank": "6",
+      "name": "Gurdas Singh",
+      "team": "SEA-Chargers",
+      "innings": "6",
+      "runs": "124",
+      "strike_rate": "97.64"
+    },
+    {
+      "rank": "7",
+      "name": "Aman Gyawali",
+      "team": "Everest Warriors B",
+      "innings": "6",
+      "runs": "123",
+      "strike_rate": "96.09"
+    },
+    {
+      "rank": "8",
+      "name": "Deepankar Singh",
+      "team": "Redmond Chargers",
+      "innings": "5",
+      "runs": "121",
+      "strike_rate": "96.03"
+    },
+    {
+      "rank": "9",
+      "name": "Anton Amartunga",
+      "team": "Seattle Strikers",
+      "innings": "6",
+      "runs": "120",
+      "strike_rate": "91.6"
+    },
+    {
+      "rank": "10",
+      "name": "Dhilip Gopalan",
+      "team": "Sidewinders-Extended",
+      "innings": "7",
+      "runs": "119",
+      "strike_rate": "75.8"
+    },
+    {
+      "rank": "11",
+      "name": "Vinyl Narayandas",
+      "team": "Phoenix",
+      "innings": "7",
+      "runs": "118",
+      "strike_rate": "143.9"
+    },
+    {
+      "rank": "12",
+      "name": "Ajay Y",
+      "team": "Whiskey Warriors",
+      "innings": "6",
+      "runs": "116",
+      "strike_rate": "82.86"
+    },
+    {
+      "rank": "13",
+      "name": "Rahul Kundra II",
+      "team": "Cornered Tigers",
+      "innings": "7",
+      "runs": "115",
+      "strike_rate": "99.14"
+    },
+    {
+      "rank": "14",
+      "name": "Divya Patel",
+      "team": "Seattle Thunders",
+      "innings": "6",
+      "runs": "113",
+      "strike_rate": "98.26"
+    },
+    {
+      "rank": "15",
+      "name": "Mahendra Ponnapalli",
+      "team": "Redmond Chargers",
+      "innings": "7",
+      "runs": "110",
+      "strike_rate": "93.22"
+    },
+    {
+      "rank": "16",
+      "name": "Karim Dilawar Ali",
+      "team": "Cornered Tigers",
+      "innings": "5",
+      "runs": "109",
+      "strike_rate": "75.17"
+    },
+    {
+      "rank": "17",
+      "name": "Harsh DVS",
+      "team": "DREAM VISION SPARTANS",
+      "innings": "6",
+      "runs": "107",
+      "strike_rate": "74.31"
+    },
+    {
+      "rank": "18",
+      "name": "Arunkumar Chandrasekaran",
+      "team": "Stones",
+      "innings": "7",
+      "runs": "107",
+      "strike_rate": "93.04"
+    },
+    {
+      "rank": "19",
+      "name": "Joseph Bonthu B",
+      "team": "Royal Priesthood",
+      "innings": "7",
+      "runs": "106",
+      "strike_rate": "65.84"
+    },
+    {
+      "rank": "20",
+      "name": "Jiban Adhikary",
+      "team": "Agomoni Tigers",
+      "innings": "5",
+      "runs": "106",
+      "strike_rate": "80.92"
+    },
+    {
+      "rank": "21",
+      "name": "Harsha Hassan Somashekara",
+      "team": "Sidewinders Overloaded",
+      "innings": "7",
+      "runs": "105",
+      "strike_rate": "92.11"
+    },
+    {
+      "rank": "22",
+      "name": "Rohit Vashishta",
+      "team": "DREAM VISION SPARTANS",
+      "innings": "7",
+      "runs": "104",
+      "strike_rate": "85.95"
+    },
+    {
+      "rank": "23",
+      "name": "Vivek L Reddy",
+      "team": "Seattle shouryangas",
+      "innings": "7",
+      "runs": "103",
+      "strike_rate": "67.32"
+    },
+    {
+      "rank": "24",
+      "name": "VJ Sai",
+      "team": "Royal Priesthood",
+      "innings": "6",
+      "runs": "103",
+      "strike_rate": "104.04"
+    },
+    {
+      "rank": "25",
+      "name": "Rahim R Hooda",
+      "team": "Cornered Tigers",
+      "innings": "4",
+      "runs": "102",
+      "strike_rate": "100.99"
+    }
+  ],
+  "bowlers": [
+    {
+      "rank": "1",
+      "name": "Nihal Reddy Tadisina",
+      "team": "Sidewinders Overloaded",
+      "matches": "7",
+      "overs": "26.20",
+      "wickets": "4",
+      "economy": "91"
+    },
+    {
+      "rank": "2",
+      "name": "Harsh DVS",
+      "team": "DREAM VISION SPARTANS",
+      "matches": "7",
+      "overs": "26.70",
+      "wickets": "0",
+      "economy": "131"
+    },
+    {
+      "rank": "3",
+      "name": "Souvik Das",
+      "team": "Whiskey Warriors",
+      "matches": "7",
+      "overs": "22.00",
+      "wickets": "1",
+      "economy": "94"
+    },
+    {
+      "rank": "4",
+      "name": "Shariful Shaikot",
+      "team": "Agomoni Tigers",
+      "matches": "5",
+      "overs": "19.10",
+      "wickets": "0",
+      "economy": "92"
+    },
+    {
+      "rank": "5",
+      "name": "Joseph Bonthu B",
+      "team": "Royal Priesthood",
+      "matches": "3",
+      "overs": "12.00",
+      "wickets": "0",
+      "economy": "55"
+    },
+    {
+      "rank": "6",
+      "name": "Ravindra Kavuri",
+      "team": "Phoenix",
+      "matches": "6",
+      "overs": "22.00",
+      "wickets": "1",
+      "economy": "89"
+    },
+    {
+      "rank": "7",
+      "name": "Bibek Bajracharya",
+      "team": "Everest Warriors B",
+      "matches": "5",
+      "overs": "15.40",
+      "wickets": "0",
+      "economy": "79"
+    },
+    {
+      "rank": "8",
+      "name": "AjayArcl Rachamalla",
+      "team": "Power Kn8S",
+      "matches": "7",
+      "overs": "26.40",
+      "wickets": "1",
+      "economy": "130"
+    },
+    {
+      "rank": "9",
+      "name": "Rithesh Rao",
+      "team": "Desi Thunder",
+      "matches": "7",
+      "overs": "26.00",
+      "wickets": "0",
+      "economy": "132"
+    },
+    {
+      "rank": "10",
+      "name": "Jaswanth Lagadapati",
+      "team": "Seattle shouryangas",
+      "matches": "6",
+      "overs": "19.20",
+      "wickets": "0",
+      "economy": "100"
+    },
+    {
+      "rank": "11",
+      "name": "Punit Sindhwani",
+      "team": "SEA-Chargers",
+      "matches": "7",
+      "overs": "24.00",
+      "wickets": "0",
+      "economy": "124"
+    },
+    {
+      "rank": "12",
+      "name": "Tanay Saxena",
+      "team": "Downtown dhurandars",
+      "matches": "7",
+      "overs": "24.00",
+      "wickets": "1",
+      "economy": "113"
+    },
+    {
+      "rank": "13",
+      "name": "Naveed S Mithani",
+      "team": "Cornered Tigers",
+      "matches": "7",
+      "overs": "26.00",
+      "wickets": "0",
+      "economy": "147"
+    },
+    {
+      "rank": "14",
+      "name": "Sudheer Vemuri",
+      "team": "Rainier Risers",
+      "matches": "7",
+      "overs": "22.20",
+      "wickets": "0",
+      "economy": "142"
+    },
+    {
+      "rank": "15",
+      "name": "Sibendu Paul",
+      "team": "Downtown dhurandars",
+      "matches": "7",
+      "overs": "21.50",
+      "wickets": "0",
+      "economy": "125"
+    },
+    {
+      "rank": "16",
+      "name": "Anijit Roy",
+      "team": "Agomoni Tigers",
+      "matches": "3",
+      "overs": "11.00",
+      "wickets": "1",
+      "economy": "34"
+    },
+    {
+      "rank": "17",
+      "name": "Rupesh L",
+      "team": "Dark KN8s",
+      "matches": "7",
+      "overs": "26.20",
+      "wickets": "0",
+      "economy": "142"
+    },
+    {
+      "rank": "18",
+      "name": "Siva Dimmiti",
+      "team": "Rainier Risers",
+      "matches": "4",
+      "overs": "16.00",
+      "wickets": "0",
+      "economy": "62"
+    },
+    {
+      "rank": "19",
+      "name": "Sunder Rengaraj",
+      "team": "Royal Challengers Bellevue",
+      "matches": "6",
+      "overs": "18.20",
+      "wickets": "0",
+      "economy": "106"
+    },
+    {
+      "rank": "20",
+      "name": "Tejesh Tirumalla",
+      "team": "Rainier Risers",
+      "matches": "5",
+      "overs": "19.20",
+      "wickets": "1",
+      "economy": "117"
+    },
+    {
+      "rank": "21",
+      "name": "Rahul Nishant",
+      "team": "Sidewinders Overloaded",
+      "matches": "5",
+      "overs": "19.00",
+      "wickets": "0",
+      "economy": "95"
+    },
+    {
+      "rank": "22",
+      "name": "Divya Patel",
+      "team": "Seattle Thunders",
+      "matches": "6",
+      "overs": "22.00",
+      "wickets": "0",
+      "economy": "122"
+    },
+    {
+      "rank": "23",
+      "name": "John Rohit",
+      "team": "Royal Priesthood",
+      "matches": "5",
+      "overs": "15.90",
+      "wickets": "0",
+      "economy": "107"
+    },
+    {
+      "rank": "24",
+      "name": "Mit Parikh",
+      "team": "Seattle Thunders",
+      "matches": "5",
+      "overs": "19.40",
+      "wickets": "0",
+      "economy": "109"
+    },
+    {
+      "rank": "25",
+      "name": "Swapnil Merchant",
+      "team": "Whiskey Warriors",
+      "matches": "6",
+      "overs": "18.00",
+      "wickets": "0",
+      "economy": "79"
+    }
+  ],
+  "standings": [
+    {
+      "team": "Downtown dhurandars",
+      "rank": "1",
+      "matches": "10",
+      "wins": "10",
+      "losses": "0",
+      "points": "242"
+    },
+    {
+      "team": "Sidewinders Overloaded",
+      "rank": "2",
+      "matches": "10",
+      "wins": "8",
+      "losses": "2",
+      "points": "205"
+    },
+    {
+      "team": "Tailenders",
+      "rank": "3",
+      "matches": "9",
+      "wins": "8",
+      "losses": "1",
+      "points": "210"
+    },
+    {
+      "team": "Whiskey Warriors",
+      "rank": "4",
+      "matches": "9",
+      "wins": "8",
+      "losses": "1",
+      "points": "204"
+    },
+    {
+      "team": "Seattle Strikers",
+      "rank": "5",
+      "matches": "8",
+      "wins": "5",
+      "losses": "3",
+      "points": "135"
+    },
+    {
+      "team": "DREAM VISION SPARTANS",
+      "rank": "6",
+      "matches": "8",
+      "wins": "4",
+      "losses": "4",
+      "points": "125"
+    },
+    {
+      "team": "Everest Warriors B",
+      "rank": "7",
+      "matches": "8",
+      "wins": "4",
+      "losses": "4",
+      "points": "121"
+    },
+    {
+      "team": "SEA-Chargers",
+      "rank": "8",
+      "matches": "8",
+      "wins": "4",
+      "losses": "4",
+      "points": "118"
+    },
+    {
+      "team": "Phoenix",
+      "rank": "9",
+      "matches": "7",
+      "wins": "4",
+      "losses": "3",
+      "points": "103"
+    },
+    {
+      "team": "Cornered Tigers",
+      "rank": "10",
+      "matches": "7",
+      "wins": "4",
+      "losses": "3",
+      "points": "101"
+    },
+    {
+      "team": "Royal Challengers Bellevue",
+      "rank": "11",
+      "matches": "7",
+      "wins": "3",
+      "losses": "4",
+      "points": "100"
+    },
+    {
+      "team": "Desi Thunder",
+      "rank": "12",
+      "matches": "7",
+      "wins": "3",
+      "losses": "4",
+      "points": "99"
+    },
+    {
+      "team": "Seattle shouryangas",
+      "rank": "13",
+      "matches": "7",
+      "wins": "3",
+      "losses": "4",
+      "points": "96"
+    },
+    {
+      "team": "Royal Priesthood",
+      "rank": "14",
+      "matches": "7",
+      "wins": "3",
+      "losses": "4",
+      "points": "96"
+    },
+    {
+      "team": "Power Kn8S",
+      "rank": "15",
+      "matches": "7",
+      "wins": "3",
+      "losses": "4",
+      "points": "94"
+    },
+    {
+      "team": "Dark KN8s",
+      "rank": "16",
+      "matches": "7",
+      "wins": "3",
+      "losses": "4",
+      "points": "93"
+    },
+    {
+      "team": "Pulikkoottam - Challengers",
+      "rank": "17",
+      "matches": "7",
+      "wins": "3",
+      "losses": "4",
+      "points": "86"
+    },
+    {
+      "team": "Seattle Thunders",
+      "rank": "18",
+      "matches": "7",
+      "wins": "2",
+      "losses": "5",
+      "points": "83"
+    },
+    {
+      "team": "Redmond Chargers",
+      "rank": "19",
+      "matches": "7",
+      "wins": "2",
+      "losses": "5",
+      "points": "82"
+    },
+    {
+      "team": "Agomoni Tigers",
+      "rank": "20",
+      "matches": "7",
+      "wins": "2",
+      "losses": "5",
+      "points": "80"
+    },
+    {
+      "team": "Sidewinders-Extended",
+      "rank": "21",
+      "matches": "7",
+      "wins": "2",
+      "losses": "5",
+      "points": "73"
+    },
+    {
+      "team": "Rainier Risers",
+      "rank": "22",
+      "matches": "7",
+      "wins": "1",
+      "losses": "6",
+      "points": "71"
+    },
+    {
+      "team": "Stones",
+      "rank": "23",
+      "matches": "7",
+      "wins": "1",
+      "losses": "6",
+      "points": "58"
+    },
+    {
+      "team": "Kattapa Sena",
+      "rank": "24",
+      "matches": "7",
+      "wins": "1",
+      "losses": "6",
+      "points": "55"
+    }
+  ]
+}

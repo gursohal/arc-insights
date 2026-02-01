@@ -1,0 +1,655 @@
+{
+  "division_id": 5,
+  "season_id": 66,
+  "division_name": "Div C - Summer 2025",
+  "last_updated": "2026-02-01T15:26:10.223413",
+  "teams": [
+    "Chennai Warriors",
+    "Indian Imperials",
+    "Rangers",
+    "Sunrisers",
+    "Thunderhawks",
+    "Sound8",
+    "Believerz",
+    "Seattle Super Kings",
+    "Dabangg Regiment",
+    "Team-MIB",
+    "Daredevils CC",
+    "Lucky Strikers",
+    "BRCL Blues",
+    "Xtremers",
+    "Crypto Challengers",
+    "Incrediblz",
+    "Hell Boyz",
+    "Redmond Indians",
+    "Vikings",
+    "DeadPool",
+    "Royal Strikers",
+    "Stunners",
+    "Seattleindianroyals",
+    "Sidewinders Reloaded"
+  ],
+  "batsmen": [
+    {
+      "rank": "1",
+      "name": "Bhavani S Raju",
+      "team": "Seattleindianroyals",
+      "innings": "7",
+      "runs": "229",
+      "strike_rate": "111.71"
+    },
+    {
+      "rank": "2",
+      "name": "Pranay Reddy Kodumuru",
+      "team": "DeadPool",
+      "innings": "6",
+      "runs": "227",
+      "strike_rate": "126.11"
+    },
+    {
+      "rank": "3",
+      "name": "Raj D",
+      "team": "Team-MIB",
+      "innings": "7",
+      "runs": "168",
+      "strike_rate": "99.41"
+    },
+    {
+      "rank": "4",
+      "name": "Shoaib Shahampuri",
+      "team": "Sound8",
+      "innings": "7",
+      "runs": "168",
+      "strike_rate": "96"
+    },
+    {
+      "rank": "5",
+      "name": "Pramod Kalady",
+      "team": "Sidewinders Reloaded",
+      "innings": "7",
+      "runs": "158",
+      "strike_rate": "85.87"
+    },
+    {
+      "rank": "6",
+      "name": "Arunkumar Palanivel",
+      "team": "Xtremers",
+      "innings": "7",
+      "runs": "157",
+      "strike_rate": "120.77"
+    },
+    {
+      "rank": "7",
+      "name": "Eshwar Nagaraj Kadajji",
+      "team": "Indian Imperials",
+      "innings": "7",
+      "runs": "137",
+      "strike_rate": "88.96"
+    },
+    {
+      "rank": "8",
+      "name": "Vivek B",
+      "team": "Chennai Warriors",
+      "innings": "7",
+      "runs": "132",
+      "strike_rate": "61.97"
+    },
+    {
+      "rank": "9",
+      "name": "Ramesh Pamidimukkala",
+      "team": "Vikings",
+      "innings": "7",
+      "runs": "121",
+      "strike_rate": "88.32"
+    },
+    {
+      "rank": "10",
+      "name": "Abhinav Singh Rangers",
+      "team": "Rangers",
+      "innings": "7",
+      "runs": "111",
+      "strike_rate": "89.52"
+    },
+    {
+      "rank": "11",
+      "name": "Sorabh Gandhi",
+      "team": "Sunrisers",
+      "innings": "5",
+      "runs": "109",
+      "strike_rate": "105.83"
+    },
+    {
+      "rank": "12",
+      "name": "Abdulhaq Kadiri",
+      "team": "Sound8",
+      "innings": "6",
+      "runs": "108",
+      "strike_rate": "92.31"
+    },
+    {
+      "rank": "13",
+      "name": "Kaviarasan C",
+      "team": "Xtremers",
+      "innings": "7",
+      "runs": "104",
+      "strike_rate": "100.97"
+    },
+    {
+      "rank": "14",
+      "name": "Ashok Magam",
+      "team": "Vikings",
+      "innings": "6",
+      "runs": "103",
+      "strike_rate": "83.74"
+    },
+    {
+      "rank": "15",
+      "name": "Sudhir Kumar",
+      "team": "Crypto Challengers",
+      "innings": "5",
+      "runs": "103",
+      "strike_rate": "91.15"
+    },
+    {
+      "rank": "16",
+      "name": "Rajkumar Jegadeesan",
+      "team": "Stunners",
+      "innings": "7",
+      "runs": "103",
+      "strike_rate": "95.37"
+    },
+    {
+      "rank": "17",
+      "name": "Ramesh Pokala",
+      "team": "Team-MIB",
+      "innings": "7",
+      "runs": "102",
+      "strike_rate": "78.46"
+    },
+    {
+      "rank": "18",
+      "name": "Naga Venkata",
+      "team": "Believerz",
+      "innings": "3",
+      "runs": "100",
+      "strike_rate": "103.09"
+    },
+    {
+      "rank": "19",
+      "name": "Dikshith Adabala",
+      "team": "Seattle Super Kings",
+      "innings": "7",
+      "runs": "98",
+      "strike_rate": "69.5"
+    },
+    {
+      "rank": "20",
+      "name": "Aravindan Veeramani",
+      "team": "Lucky Strikers",
+      "innings": "7",
+      "runs": "98",
+      "strike_rate": "79.67"
+    },
+    {
+      "rank": "21",
+      "name": "Senbaga Kumar Sigamani",
+      "team": "Stunners",
+      "innings": "7",
+      "runs": "98",
+      "strike_rate": "80.99"
+    },
+    {
+      "rank": "22",
+      "name": "Shashi Kiran Yellappa",
+      "team": "Seattle Super Kings",
+      "innings": "5",
+      "runs": "98",
+      "strike_rate": "75.97"
+    },
+    {
+      "rank": "23",
+      "name": "Siddhartha Srivastava",
+      "team": "Thunderhawks",
+      "innings": "7",
+      "runs": "96",
+      "strike_rate": "80.67"
+    },
+    {
+      "rank": "24",
+      "name": "Mohan Sammeta",
+      "team": "Rangers",
+      "innings": "5",
+      "runs": "93",
+      "strike_rate": "93"
+    },
+    {
+      "rank": "25",
+      "name": "VarunReddy Gaddam",
+      "team": "Believerz",
+      "innings": "7",
+      "runs": "87",
+      "strike_rate": "79.82"
+    }
+  ],
+  "bowlers": [
+    {
+      "rank": "1",
+      "name": "Kaviarasan C",
+      "team": "Xtremers",
+      "matches": "7",
+      "overs": "25.70",
+      "wickets": "2",
+      "economy": "86"
+    },
+    {
+      "rank": "2",
+      "name": "Chetan Banthiya Dabangg",
+      "team": "Dabangg Regiment",
+      "matches": "7",
+      "overs": "28.00",
+      "wickets": "0",
+      "economy": "117"
+    },
+    {
+      "rank": "3",
+      "name": "Arunkumar Palanivel",
+      "team": "Xtremers",
+      "matches": "7",
+      "overs": "25.00",
+      "wickets": "1",
+      "economy": "69"
+    },
+    {
+      "rank": "4",
+      "name": "Sasi Sankar",
+      "team": "Vikings",
+      "matches": "7",
+      "overs": "23.40",
+      "wickets": "2",
+      "economy": "80"
+    },
+    {
+      "rank": "5",
+      "name": "Abhinav Singh Rangers",
+      "team": "Rangers",
+      "matches": "7",
+      "overs": "24.40",
+      "wickets": "0",
+      "economy": "112"
+    },
+    {
+      "rank": "6",
+      "name": "Gautam Chawla",
+      "team": "Rangers",
+      "matches": "7",
+      "overs": "26.10",
+      "wickets": "0",
+      "economy": "144"
+    },
+    {
+      "rank": "7",
+      "name": "RadhaKrishna Karri",
+      "team": "Team-MIB",
+      "matches": "7",
+      "overs": "25.00",
+      "wickets": "0",
+      "economy": "116"
+    },
+    {
+      "rank": "8",
+      "name": "Abhishek Singh Baghel",
+      "team": "BRCL Blues",
+      "matches": "6",
+      "overs": "20.20",
+      "wickets": "2",
+      "economy": "62"
+    },
+    {
+      "rank": "9",
+      "name": "Karthik Kakarla",
+      "team": "Sidewinders Reloaded",
+      "matches": "5",
+      "overs": "16.00",
+      "wickets": "0",
+      "economy": "71"
+    },
+    {
+      "rank": "10",
+      "name": "Safiul Haque",
+      "team": "Seattleindianroyals",
+      "matches": "7",
+      "overs": "19.00",
+      "wickets": "0",
+      "economy": "88"
+    },
+    {
+      "rank": "11",
+      "name": "Anwar Sadik",
+      "team": "Sidewinders Reloaded",
+      "matches": "5",
+      "overs": "17.50",
+      "wickets": "1",
+      "economy": "77"
+    },
+    {
+      "rank": "12",
+      "name": "Vikas M",
+      "team": "Hell Boyz",
+      "matches": "6",
+      "overs": "21.00",
+      "wickets": "0",
+      "economy": "100"
+    },
+    {
+      "rank": "13",
+      "name": "Naveen Navuluri",
+      "team": "DeadPool",
+      "matches": "7",
+      "overs": "23.00",
+      "wickets": "0",
+      "economy": "114"
+    },
+    {
+      "rank": "14",
+      "name": "Ravi Thanneeru",
+      "team": "Sunrisers",
+      "matches": "7",
+      "overs": "24.40",
+      "wickets": "0",
+      "economy": "105"
+    },
+    {
+      "rank": "15",
+      "name": "Arjun Subramaniam",
+      "team": "Dabangg Regiment",
+      "matches": "6",
+      "overs": "23.30",
+      "wickets": "0",
+      "economy": "114"
+    },
+    {
+      "rank": "16",
+      "name": "Saikishore Chary",
+      "team": "Vikings",
+      "matches": "7",
+      "overs": "22.20",
+      "wickets": "3",
+      "economy": "85"
+    },
+    {
+      "rank": "17",
+      "name": "Parul Puri",
+      "team": "Sound8",
+      "matches": "6",
+      "overs": "20.40",
+      "wickets": "1",
+      "economy": "108"
+    },
+    {
+      "rank": "18",
+      "name": "Tanmay Ingle",
+      "team": "Lucky Strikers",
+      "matches": "7",
+      "overs": "25.00",
+      "wickets": "0",
+      "economy": "131"
+    },
+    {
+      "rank": "19",
+      "name": "Bhavani S Raju",
+      "team": "Seattleindianroyals",
+      "matches": "7",
+      "overs": "23.20",
+      "wickets": "2",
+      "economy": "98"
+    },
+    {
+      "rank": "20",
+      "name": "Satheesh Simhadri",
+      "team": "Crypto Challengers",
+      "matches": "4",
+      "overs": "16.00",
+      "wickets": "0",
+      "economy": "76"
+    },
+    {
+      "rank": "21",
+      "name": "Mahideep T",
+      "team": "DeadPool",
+      "matches": "7",
+      "overs": "26.00",
+      "wickets": "1",
+      "economy": "104"
+    },
+    {
+      "rank": "22",
+      "name": "Gobind Singh",
+      "team": "Believerz",
+      "matches": "4",
+      "overs": "16.00",
+      "wickets": "0",
+      "economy": "73"
+    },
+    {
+      "rank": "23",
+      "name": "Arun K",
+      "team": "Xtremers",
+      "matches": "7",
+      "overs": "22.70",
+      "wickets": "0",
+      "economy": "112"
+    },
+    {
+      "rank": "24",
+      "name": "Shiva Krishna K",
+      "team": "Indian Imperials",
+      "matches": "4",
+      "overs": "14.30",
+      "wickets": "2",
+      "economy": "57"
+    },
+    {
+      "rank": "25",
+      "name": "Gaurav Kapila",
+      "team": "Daredevils CC",
+      "matches": "6",
+      "overs": "21.30",
+      "wickets": "0",
+      "economy": "118"
+    }
+  ],
+  "standings": [
+    {
+      "team": "BRCL Blues",
+      "rank": "1",
+      "matches": "10",
+      "wins": "9",
+      "losses": "1",
+      "points": "244"
+    },
+    {
+      "team": "Seattleindianroyals",
+      "rank": "2",
+      "matches": "10",
+      "wins": "7",
+      "losses": "3",
+      "points": "195"
+    },
+    {
+      "team": "Vikings",
+      "rank": "3",
+      "matches": "9",
+      "wins": "6",
+      "losses": "3",
+      "points": "181"
+    },
+    {
+      "team": "Rangers",
+      "rank": "4",
+      "matches": "9",
+      "wins": "7",
+      "losses": "2",
+      "points": "171"
+    },
+    {
+      "team": "Xtremers",
+      "rank": "5",
+      "matches": "8",
+      "wins": "6",
+      "losses": "2",
+      "points": "157"
+    },
+    {
+      "team": "Believerz",
+      "rank": "6",
+      "matches": "8",
+      "wins": "6",
+      "losses": "2",
+      "points": "150"
+    },
+    {
+      "team": "Sidewinders Reloaded",
+      "rank": "7",
+      "matches": "8",
+      "wins": "5",
+      "losses": "3",
+      "points": "142"
+    },
+    {
+      "team": "DeadPool",
+      "rank": "8",
+      "matches": "8",
+      "wins": "5",
+      "losses": "3",
+      "points": "136"
+    },
+    {
+      "team": "Team-MIB",
+      "rank": "9",
+      "matches": "7",
+      "wins": "5",
+      "losses": "2",
+      "points": "132"
+    },
+    {
+      "team": "Sunrisers",
+      "rank": "10",
+      "matches": "7",
+      "wins": "4",
+      "losses": "3",
+      "points": "116"
+    },
+    {
+      "team": "Indian Imperials",
+      "rank": "11",
+      "matches": "7",
+      "wins": "4",
+      "losses": "3",
+      "points": "112"
+    },
+    {
+      "team": "Dabangg Regiment",
+      "rank": "12",
+      "matches": "7",
+      "wins": "3",
+      "losses": "4",
+      "points": "89"
+    },
+    {
+      "team": "Crypto Challengers",
+      "rank": "13",
+      "matches": "7",
+      "wins": "3",
+      "losses": "4",
+      "points": "89"
+    },
+    {
+      "team": "Sound8",
+      "rank": "14",
+      "matches": "7",
+      "wins": "2",
+      "losses": "4",
+      "points": "89"
+    },
+    {
+      "team": "Lucky Strikers",
+      "rank": "15",
+      "matches": "7",
+      "wins": "2",
+      "losses": "5",
+      "points": "84"
+    },
+    {
+      "team": "Chennai Warriors",
+      "rank": "16",
+      "matches": "7",
+      "wins": "2",
+      "losses": "5",
+      "points": "83"
+    },
+    {
+      "team": "Hell Boyz",
+      "rank": "17",
+      "matches": "7",
+      "wins": "2",
+      "losses": "4",
+      "points": "70"
+    },
+    {
+      "team": "Stunners",
+      "rank": "18",
+      "matches": "7",
+      "wins": "2",
+      "losses": "5",
+      "points": "79"
+    },
+    {
+      "team": "Seattle Super Kings",
+      "rank": "19",
+      "matches": "7",
+      "wins": "1",
+      "losses": "5",
+      "points": "77"
+    },
+    {
+      "team": "Thunderhawks",
+      "rank": "20",
+      "matches": "7",
+      "wins": "2",
+      "losses": "5",
+      "points": "76"
+    },
+    {
+      "team": "Royal Strikers",
+      "rank": "21",
+      "matches": "7",
+      "wins": "2",
+      "losses": "5",
+      "points": "72"
+    },
+    {
+      "team": "Daredevils CC",
+      "rank": "22",
+      "matches": "7",
+      "wins": "2",
+      "losses": "5",
+      "points": "68"
+    },
+    {
+      "team": "Incrediblz",
+      "rank": "23",
+      "matches": "7",
+      "wins": "1",
+      "losses": "6",
+      "points": "56"
+    },
+    {
+      "team": "Redmond Indians",
+      "rank": "24",
+      "matches": "7",
+      "wins": "1",
+      "losses": "5",
+      "points": "32"
+    }
+  ]
+}

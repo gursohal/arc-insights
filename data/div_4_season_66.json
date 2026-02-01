@@ -1,0 +1,655 @@
+{
+  "division_id": 4,
+  "season_id": 66,
+  "division_name": "Div B - Summer 2025",
+  "last_updated": "2026-02-01T15:26:09.666569",
+  "teams": [
+    "Titans",
+    "Bouncers",
+    "Lake Stevens Cricket Club - LSCC",
+    "Master Blasters",
+    "DabangDashers",
+    "Thunder",
+    "Washington Cricketers",
+    "Nanbaeenda",
+    "BellevueBoyz",
+    "BATMEN RISES",
+    "Lagaan",
+    "Peaky Blinders",
+    "CrickChamps",
+    "Lastsamurais",
+    "Super Fit Challengers",
+    "India Rebels",
+    "Master Minds",
+    "Avengers",
+    "FatehCC-Legends",
+    "The Dons",
+    "Indian Hawks",
+    "LWCC",
+    "Turbos",
+    "Joot"
+  ],
+  "batsmen": [
+    {
+      "rank": "1",
+      "name": "Dhruvv Arora",
+      "team": "Bouncers",
+      "innings": "7",
+      "runs": "194",
+      "strike_rate": "127.63"
+    },
+    {
+      "rank": "2",
+      "name": "Jatin Chanchlani",
+      "team": "Titans",
+      "innings": "6",
+      "runs": "183",
+      "strike_rate": "107.65"
+    },
+    {
+      "rank": "3",
+      "name": "Aditya Chandras",
+      "team": "Master Minds",
+      "innings": "6",
+      "runs": "164",
+      "strike_rate": "121.48"
+    },
+    {
+      "rank": "4",
+      "name": "Karthik Thirumurugan",
+      "team": "Washington Cricketers",
+      "innings": "7",
+      "runs": "163",
+      "strike_rate": "86.7"
+    },
+    {
+      "rank": "5",
+      "name": "Varun Wadhwani",
+      "team": "LWCC",
+      "innings": "6",
+      "runs": "162",
+      "strike_rate": "105.88"
+    },
+    {
+      "rank": "6",
+      "name": "Ramesh Sakanadagi",
+      "team": "Lake Stevens Cricket Club - LSCC",
+      "innings": "7",
+      "runs": "161",
+      "strike_rate": "106.62"
+    },
+    {
+      "rank": "7",
+      "name": "Pulkit Gaur",
+      "team": "Super Fit Challengers",
+      "innings": "5",
+      "runs": "158",
+      "strike_rate": "99.37"
+    },
+    {
+      "rank": "8",
+      "name": "Navdeep Singh Somal",
+      "team": "The Dons",
+      "innings": "6",
+      "runs": "155",
+      "strike_rate": "129.17"
+    },
+    {
+      "rank": "9",
+      "name": "Hrishikesh Rao",
+      "team": "FatehCC-Legends",
+      "innings": "5",
+      "runs": "152",
+      "strike_rate": "116.03"
+    },
+    {
+      "rank": "10",
+      "name": "Jeyabalaji Jawahar",
+      "team": "Lastsamurais",
+      "innings": "7",
+      "runs": "148",
+      "strike_rate": "106.47"
+    },
+    {
+      "rank": "11",
+      "name": "Nikhil Raj Peaky Blinders",
+      "team": "Peaky Blinders",
+      "innings": "6",
+      "runs": "137",
+      "strike_rate": "101.48"
+    },
+    {
+      "rank": "12",
+      "name": "Deepak Kumar Bala",
+      "team": "CrickChamps",
+      "innings": "6",
+      "runs": "136",
+      "strike_rate": "92.52"
+    },
+    {
+      "rank": "13",
+      "name": "Samrat Dnyanraj",
+      "team": "Nanbaeenda",
+      "innings": "6",
+      "runs": "136",
+      "strike_rate": "102.26"
+    },
+    {
+      "rank": "14",
+      "name": "Raghvendra Singh",
+      "team": "FatehCC-Legends",
+      "innings": "4",
+      "runs": "119",
+      "strike_rate": "119"
+    },
+    {
+      "rank": "15",
+      "name": "Pavan Pemmaraju",
+      "team": "Lake Stevens Cricket Club - LSCC",
+      "innings": "7",
+      "runs": "114",
+      "strike_rate": "91.2"
+    },
+    {
+      "rank": "16",
+      "name": "Prashanth Reddy Ramidi",
+      "team": "Indian Hawks",
+      "innings": "7",
+      "runs": "112",
+      "strike_rate": "124.44"
+    },
+    {
+      "rank": "17",
+      "name": "Nikhil Mengani",
+      "team": "Turbos",
+      "innings": "5",
+      "runs": "111",
+      "strike_rate": "102.78"
+    },
+    {
+      "rank": "18",
+      "name": "Mohit Thakur",
+      "team": "BATMEN RISES",
+      "innings": "6",
+      "runs": "109",
+      "strike_rate": "83.21"
+    },
+    {
+      "rank": "19",
+      "name": "Amit N",
+      "team": "Master Blasters",
+      "innings": "7",
+      "runs": "107",
+      "strike_rate": "91.45"
+    },
+    {
+      "rank": "20",
+      "name": "Vinay Kumar Reddy Gujjula",
+      "team": "Indian Hawks",
+      "innings": "6",
+      "runs": "107",
+      "strike_rate": "82.31"
+    },
+    {
+      "rank": "21",
+      "name": "Aditya Ayyala",
+      "team": "DabangDashers",
+      "innings": "7",
+      "runs": "105",
+      "strike_rate": "100"
+    },
+    {
+      "rank": "22",
+      "name": "Jignesh Jadhav",
+      "team": "Bouncers",
+      "innings": "7",
+      "runs": "103",
+      "strike_rate": "114.44"
+    },
+    {
+      "rank": "23",
+      "name": "Srikanth Reddy P",
+      "team": "Lagaan",
+      "innings": "6",
+      "runs": "102",
+      "strike_rate": "82.93"
+    },
+    {
+      "rank": "24",
+      "name": "Pramod Hegde Challengers",
+      "team": "Super Fit Challengers",
+      "innings": "6",
+      "runs": "101",
+      "strike_rate": "80.16"
+    },
+    {
+      "rank": "25",
+      "name": "Saravanan Murugesan",
+      "team": "Lastsamurais",
+      "innings": "7",
+      "runs": "100",
+      "strike_rate": "90.91"
+    }
+  ],
+  "bowlers": [
+    {
+      "rank": "1",
+      "name": "Prashanth Reddy Ramidi",
+      "team": "Indian Hawks",
+      "matches": "7",
+      "overs": "26.50",
+      "wickets": "0",
+      "economy": "107"
+    },
+    {
+      "rank": "2",
+      "name": "Gnanavel Samykannu",
+      "team": "Nanbaeenda",
+      "matches": "7",
+      "overs": "26.30",
+      "wickets": "0",
+      "economy": "103"
+    },
+    {
+      "rank": "3",
+      "name": "Sreekumar Hariharan",
+      "team": "Thunder",
+      "matches": "7",
+      "overs": "25.50",
+      "wickets": "0",
+      "economy": "121"
+    },
+    {
+      "rank": "4",
+      "name": "Shantanu Papal",
+      "team": "Peaky Blinders",
+      "matches": "7",
+      "overs": "21.60",
+      "wickets": "0",
+      "economy": "104"
+    },
+    {
+      "rank": "5",
+      "name": "Ramesh Sakanadagi",
+      "team": "Lake Stevens Cricket Club - LSCC",
+      "matches": "7",
+      "overs": "24.00",
+      "wickets": "0",
+      "economy": "128"
+    },
+    {
+      "rank": "6",
+      "name": "Elumalai Damotharan",
+      "team": "Lastsamurais",
+      "matches": "7",
+      "overs": "21.00",
+      "wickets": "0",
+      "economy": "108"
+    },
+    {
+      "rank": "7",
+      "name": "Nikhil Mengani",
+      "team": "Turbos",
+      "matches": "4",
+      "overs": "15.00",
+      "wickets": "0",
+      "economy": "105"
+    },
+    {
+      "rank": "8",
+      "name": "Amit N",
+      "team": "Master Blasters",
+      "matches": "7",
+      "overs": "25.10",
+      "wickets": "0",
+      "economy": "135"
+    },
+    {
+      "rank": "9",
+      "name": "Nilesh Patil",
+      "team": "Super Fit Challengers",
+      "matches": "7",
+      "overs": "25.10",
+      "wickets": "0",
+      "economy": "120"
+    },
+    {
+      "rank": "10",
+      "name": "Prateek Gaur Challengers",
+      "team": "Super Fit Challengers",
+      "matches": "3",
+      "overs": "11.00",
+      "wickets": "0",
+      "economy": "42"
+    },
+    {
+      "rank": "11",
+      "name": "Vayu Nandan Rao Pampari",
+      "team": "Lagaan",
+      "matches": "6",
+      "overs": "21.10",
+      "wickets": "0",
+      "economy": "98"
+    },
+    {
+      "rank": "12",
+      "name": "Rahul Dev Prabhu",
+      "team": "FatehCC-Legends",
+      "matches": "4",
+      "overs": "16.00",
+      "wickets": "0",
+      "economy": "91"
+    },
+    {
+      "rank": "13",
+      "name": "Aikansh Garg",
+      "team": "Nanbaeenda",
+      "matches": "7",
+      "overs": "23.00",
+      "wickets": "0",
+      "economy": "109"
+    },
+    {
+      "rank": "14",
+      "name": "Rajesh Tanji",
+      "team": "Washington Cricketers",
+      "matches": "7",
+      "overs": "24.20",
+      "wickets": "0",
+      "economy": "104"
+    },
+    {
+      "rank": "15",
+      "name": "Vinod R",
+      "team": "Indian Hawks",
+      "matches": "5",
+      "overs": "17.00",
+      "wickets": "0",
+      "economy": "97"
+    },
+    {
+      "rank": "16",
+      "name": "Vishwanadha Reddy",
+      "team": "Lagaan",
+      "matches": "7",
+      "overs": "22.30",
+      "wickets": "1",
+      "economy": "120"
+    },
+    {
+      "rank": "17",
+      "name": "Vinay Ravvarapu",
+      "team": "CrickChamps",
+      "matches": "5",
+      "overs": "18.00",
+      "wickets": "2",
+      "economy": "78"
+    },
+    {
+      "rank": "18",
+      "name": "Parth Gajera",
+      "team": "Titans",
+      "matches": "5",
+      "overs": "19.00",
+      "wickets": "0",
+      "economy": "81"
+    },
+    {
+      "rank": "19",
+      "name": "Sumit Singh",
+      "team": "Bouncers",
+      "matches": "4",
+      "overs": "15.20",
+      "wickets": "0",
+      "economy": "89"
+    },
+    {
+      "rank": "20",
+      "name": "Akshaya Arora",
+      "team": "Master Blasters",
+      "matches": "6",
+      "overs": "19.20",
+      "wickets": "0",
+      "economy": "102"
+    },
+    {
+      "rank": "21",
+      "name": "Rajkumar Ramasamy",
+      "team": "LWCC",
+      "matches": "4",
+      "overs": "13.30",
+      "wickets": "0",
+      "economy": "63"
+    },
+    {
+      "rank": "22",
+      "name": "Jagbir Singh",
+      "team": "Bouncers",
+      "matches": "7",
+      "overs": "27.00",
+      "wickets": "0",
+      "economy": "162"
+    },
+    {
+      "rank": "23",
+      "name": "Hardik J Joshi",
+      "team": "The Dons",
+      "matches": "5",
+      "overs": "10.20",
+      "wickets": "0",
+      "economy": "63"
+    },
+    {
+      "rank": "24",
+      "name": "Hem r R",
+      "team": "Joot",
+      "matches": "3",
+      "overs": "8.70",
+      "wickets": "0",
+      "economy": "28"
+    },
+    {
+      "rank": "25",
+      "name": "Nattu Sathiyanarayanan",
+      "team": "Washington Cricketers",
+      "matches": "4",
+      "overs": "12.00",
+      "wickets": "0",
+      "economy": "59"
+    }
+  ],
+  "standings": [
+    {
+      "team": "Super Fit Challengers",
+      "rank": "1",
+      "matches": "10",
+      "wins": "7",
+      "losses": "3",
+      "points": "198"
+    },
+    {
+      "team": "Joot",
+      "rank": "2",
+      "matches": "10",
+      "wins": "7",
+      "losses": "2",
+      "points": "186"
+    },
+    {
+      "team": "Peaky Blinders",
+      "rank": "3",
+      "matches": "9",
+      "wins": "7",
+      "losses": "2",
+      "points": "178"
+    },
+    {
+      "team": "BellevueBoyz",
+      "rank": "4",
+      "matches": "9",
+      "wins": "5",
+      "losses": "3",
+      "points": "141"
+    },
+    {
+      "team": "Lake Stevens Cricket Club - LSCC",
+      "rank": "5",
+      "matches": "8",
+      "wins": "5",
+      "losses": "3",
+      "points": "133"
+    },
+    {
+      "team": "Indian Hawks",
+      "rank": "6",
+      "matches": "8",
+      "wins": "4",
+      "losses": "4",
+      "points": "130"
+    },
+    {
+      "team": "DabangDashers",
+      "rank": "7",
+      "matches": "8",
+      "wins": "4",
+      "losses": "4",
+      "points": "127"
+    },
+    {
+      "team": "Master Minds",
+      "rank": "8",
+      "matches": "8",
+      "wins": "4",
+      "losses": "3",
+      "points": "111"
+    },
+    {
+      "team": "Master Blasters",
+      "rank": "9",
+      "matches": "7",
+      "wins": "4",
+      "losses": "3",
+      "points": "118"
+    },
+    {
+      "team": "Lagaan",
+      "rank": "10",
+      "matches": "7",
+      "wins": "4",
+      "losses": "3",
+      "points": "118"
+    },
+    {
+      "team": "Bouncers",
+      "rank": "11",
+      "matches": "7",
+      "wins": "4",
+      "losses": "3",
+      "points": "115"
+    },
+    {
+      "team": "Nanbaeenda",
+      "rank": "12",
+      "matches": "7",
+      "wins": "4",
+      "losses": "3",
+      "points": "113"
+    },
+    {
+      "team": "Titans",
+      "rank": "13",
+      "matches": "7",
+      "wins": "4",
+      "losses": "3",
+      "points": "113"
+    },
+    {
+      "team": "The Dons",
+      "rank": "14",
+      "matches": "7",
+      "wins": "4",
+      "losses": "3",
+      "points": "111"
+    },
+    {
+      "team": "CrickChamps",
+      "rank": "15",
+      "matches": "7",
+      "wins": "3",
+      "losses": "3",
+      "points": "89"
+    },
+    {
+      "team": "LWCC",
+      "rank": "16",
+      "matches": "7",
+      "wins": "3",
+      "losses": "4",
+      "points": "100"
+    },
+    {
+      "team": "Lastsamurais",
+      "rank": "17",
+      "matches": "7",
+      "wins": "3",
+      "losses": "4",
+      "points": "97"
+    },
+    {
+      "team": "FatehCC-Legends",
+      "rank": "18",
+      "matches": "7",
+      "wins": "3",
+      "losses": "4",
+      "points": "96"
+    },
+    {
+      "team": "India Rebels",
+      "rank": "19",
+      "matches": "7",
+      "wins": "3",
+      "losses": "4",
+      "points": "91"
+    },
+    {
+      "team": "Thunder",
+      "rank": "20",
+      "matches": "7",
+      "wins": "2",
+      "losses": "5",
+      "points": "74"
+    },
+    {
+      "team": "Avengers",
+      "rank": "21",
+      "matches": "7",
+      "wins": "2",
+      "losses": "4",
+      "points": "63"
+    },
+    {
+      "team": "Washington Cricketers",
+      "rank": "22",
+      "matches": "7",
+      "wins": "1",
+      "losses": "6",
+      "points": "58"
+    },
+    {
+      "team": "Turbos",
+      "rank": "23",
+      "matches": "7",
+      "wins": "1",
+      "losses": "5",
+      "points": "46"
+    },
+    {
+      "team": "BATMEN RISES",
+      "rank": "24",
+      "matches": "7",
+      "wins": "0",
+      "losses": "7",
+      "points": "34"
+    }
+  ]
+}

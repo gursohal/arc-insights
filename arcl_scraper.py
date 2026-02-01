@@ -66,21 +66,27 @@ class ARCLDataScraper:
 def main():
     scraper = ARCLDataScraper()
     
-    # Default: Scrape Div F, Summer 2025
-    scraper.scrape_division(
-        division_id=8,
-        season_id=66,
-        division_name="Div F - Summer 2025"
-    )
+    # Scrape all divisions for Summer 2025
+    divisions = [
+        (3, 66, "Div A - Summer 2025"),
+        (4, 66, "Div B - Summer 2025"),
+        (5, 66, "Div C - Summer 2025"),
+        (6, 66, "Div D - Summer 2025"),
+        (7, 66, "Div E - Summer 2025"),
+        (8, 66, "Div F - Summer 2025"),
+        (9, 66, "Div G - Summer 2025"),
+        (10, 66, "Div H - Summer 2025"),
+        (11, 66, "Div I - Summer 2025"),
+        (12, 66, "Div J - Summer 2025"),
+        (13, 66, "Div K - Summer 2025"),
+        (14, 66, "Div L - Summer 2025"),
+        (15, 66, "Div M - Summer 2025"),
+        (16, 66, "Div N - Summer 2025"),
+    ]
     
-    # Uncomment to scrape multiple divisions:
-    # scraper.scrape_multiple_divisions([
-    #     (8, 66, "Div F - Summer 2025"),
-    #     (7, 66, "Div E - Summer 2025"),
-    #     (6, 66, "Div D - Summer 2025"),
-    # ])
+    scraper.scrape_multiple_divisions(divisions)
     
-    print("\n🎉 All data scraped successfully!")
+    print("\n🎉 All divisions scraped successfully!")
 
 
 if __name__ == "__main__":

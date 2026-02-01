@@ -1,0 +1,655 @@
+{
+  "division_id": 9,
+  "season_id": 66,
+  "division_name": "Div G - Summer 2025",
+  "last_updated": "2026-02-01T15:26:12.934704",
+  "teams": [
+    "Seattle Devils",
+    "Half Pints",
+    "Rain City Strikers",
+    "Gullyboyz",
+    "12th Man Army",
+    "Lovelies",
+    "Bellevue Strikers",
+    "Tvk Warriors",
+    "Ben Chokes",
+    "Orcas",
+    "All-Rounders",
+    "Redhawks Blasters",
+    "Gamechangers",
+    "Seattle Swatkats",
+    "DREAM VISION GLADIATORS",
+    "Appatuckers",
+    "Rising Stars",
+    "Cheetahs",
+    "Deccan Chargers",
+    "Thunderbirds",
+    "Stallions CC",
+    "Shershah",
+    "PNW Panthers",
+    "Royal Titans"
+  ],
+  "batsmen": [
+    {
+      "rank": "1",
+      "name": "Faraz Siddiqi",
+      "team": "PNW Panthers",
+      "innings": "7",
+      "runs": "174",
+      "strike_rate": "172.28"
+    },
+    {
+      "rank": "2",
+      "name": "Roshan P shetty",
+      "team": "Bellevue Strikers",
+      "innings": "7",
+      "runs": "158",
+      "strike_rate": "115.33"
+    },
+    {
+      "rank": "3",
+      "name": "Prasanna G",
+      "team": "Appatuckers",
+      "innings": "5",
+      "runs": "158",
+      "strike_rate": "292.59"
+    },
+    {
+      "rank": "4",
+      "name": "Sateesh Chowdary",
+      "team": "Deccan Chargers",
+      "innings": "7",
+      "runs": "155",
+      "strike_rate": "96.88"
+    },
+    {
+      "rank": "5",
+      "name": "Priyam Rao",
+      "team": "Rain City Strikers",
+      "innings": "6",
+      "runs": "152",
+      "strike_rate": "87.86"
+    },
+    {
+      "rank": "6",
+      "name": "Waseem Uddin",
+      "team": "Orcas",
+      "innings": "7",
+      "runs": "144",
+      "strike_rate": "79.56"
+    },
+    {
+      "rank": "7",
+      "name": "Pradyumna Y",
+      "team": "Stallions CC",
+      "innings": "6",
+      "runs": "141",
+      "strike_rate": "84.43"
+    },
+    {
+      "rank": "8",
+      "name": "Vaneet Goyal",
+      "team": "Tvk Warriors",
+      "innings": "7",
+      "runs": "140",
+      "strike_rate": "109.38"
+    },
+    {
+      "rank": "9",
+      "name": "Yash Sonthalia",
+      "team": "Ben Chokes",
+      "innings": "6",
+      "runs": "137",
+      "strike_rate": "101.48"
+    },
+    {
+      "rank": "10",
+      "name": "Vaibhav RedHawks",
+      "team": "Redhawks Blasters",
+      "innings": "4",
+      "runs": "134",
+      "strike_rate": "131.37"
+    },
+    {
+      "rank": "11",
+      "name": "Harpal Singh Sohal",
+      "team": "Rain City Strikers",
+      "innings": "5",
+      "runs": "133",
+      "strike_rate": "103.1"
+    },
+    {
+      "rank": "12",
+      "name": "Viraj Nimbalkar",
+      "team": "Shershah",
+      "innings": "7",
+      "runs": "131",
+      "strike_rate": "111.02"
+    },
+    {
+      "rank": "13",
+      "name": "Nitin Kumar Mangalam",
+      "team": "Seattle Swatkats",
+      "innings": "7",
+      "runs": "129",
+      "strike_rate": "77.25"
+    },
+    {
+      "rank": "14",
+      "name": "Pratik Virkud Gullyboyz",
+      "team": "Gullyboyz",
+      "innings": "5",
+      "runs": "127",
+      "strike_rate": "124.51"
+    },
+    {
+      "rank": "15",
+      "name": "Teja Peddi",
+      "team": "Half Pints",
+      "innings": "6",
+      "runs": "124",
+      "strike_rate": "196.83"
+    },
+    {
+      "rank": "16",
+      "name": "Mahesh Chellan",
+      "team": "Cheetahs",
+      "innings": "6",
+      "runs": "120",
+      "strike_rate": "91.6"
+    },
+    {
+      "rank": "17",
+      "name": "Rishab Khandelwal",
+      "team": "Thunderbirds",
+      "innings": "7",
+      "runs": "117",
+      "strike_rate": "95.12"
+    },
+    {
+      "rank": "18",
+      "name": "Yash Bisht Gullyboyz",
+      "team": "Gullyboyz",
+      "innings": "6",
+      "runs": "116",
+      "strike_rate": "100"
+    },
+    {
+      "rank": "19",
+      "name": "Vishwarajsinh Sodha",
+      "team": "Redhawks Blasters",
+      "innings": "5",
+      "runs": "104",
+      "strike_rate": "105.05"
+    },
+    {
+      "rank": "20",
+      "name": "Litesh Gawande",
+      "team": "12th Man Army",
+      "innings": "6",
+      "runs": "103",
+      "strike_rate": "117.05"
+    },
+    {
+      "rank": "21",
+      "name": "Vinoth Kumar Ravi",
+      "team": "Royal Titans",
+      "innings": "7",
+      "runs": "102",
+      "strike_rate": "79.69"
+    },
+    {
+      "rank": "22",
+      "name": "Asam Malik",
+      "team": "Orcas",
+      "innings": "6",
+      "runs": "99",
+      "strike_rate": "132"
+    },
+    {
+      "rank": "23",
+      "name": "Chenchuram Mannam",
+      "team": "All-Rounders",
+      "innings": "6",
+      "runs": "99",
+      "strike_rate": "72.26"
+    },
+    {
+      "rank": "24",
+      "name": "Mayank Mathur",
+      "team": "12th Man Army",
+      "innings": "4",
+      "runs": "95",
+      "strike_rate": "85.59"
+    },
+    {
+      "rank": "25",
+      "name": "Sai Manideep Ch",
+      "team": "Deccan Chargers",
+      "innings": "7",
+      "runs": "95",
+      "strike_rate": "85.59"
+    }
+  ],
+  "bowlers": [
+    {
+      "rank": "1",
+      "name": "Prasad Sakpal",
+      "team": "Redhawks Blasters",
+      "matches": "7",
+      "overs": "26.80",
+      "wickets": "0",
+      "economy": "164"
+    },
+    {
+      "rank": "2",
+      "name": "Vernon Dsouza",
+      "team": "12th Man Army",
+      "matches": "6",
+      "overs": "19.30",
+      "wickets": "0",
+      "economy": "97"
+    },
+    {
+      "rank": "3",
+      "name": "Nikhil Patne Gullyboyz",
+      "team": "Gullyboyz",
+      "matches": "6",
+      "overs": "18.10",
+      "wickets": "2",
+      "economy": "63"
+    },
+    {
+      "rank": "4",
+      "name": "Varun Garg Gullyboyz",
+      "team": "Gullyboyz",
+      "matches": "7",
+      "overs": "21.30",
+      "wickets": "0",
+      "economy": "85"
+    },
+    {
+      "rank": "5",
+      "name": "Muhammad Hassan Khan",
+      "team": "PNW Panthers",
+      "matches": "5",
+      "overs": "15.30",
+      "wickets": "0",
+      "economy": "79"
+    },
+    {
+      "rank": "6",
+      "name": "Sumith Kumar",
+      "team": "Bellevue Strikers",
+      "matches": "6",
+      "overs": "21.00",
+      "wickets": "2",
+      "economy": "76"
+    },
+    {
+      "rank": "7",
+      "name": "Dipanshu Maheshwari",
+      "team": "Stallions CC",
+      "matches": "7",
+      "overs": "19.50",
+      "wickets": "1",
+      "economy": "98"
+    },
+    {
+      "rank": "8",
+      "name": "Sundaram Cheetahs",
+      "team": "Cheetahs",
+      "matches": "5",
+      "overs": "17.10",
+      "wickets": "0",
+      "economy": "91"
+    },
+    {
+      "rank": "9",
+      "name": "Abhisar Saini",
+      "team": "Redhawks Blasters",
+      "matches": "5",
+      "overs": "20.00",
+      "wickets": "0",
+      "economy": "77"
+    },
+    {
+      "rank": "10",
+      "name": "Adesh DVS",
+      "team": "DREAM VISION GLADIATORS",
+      "matches": "7",
+      "overs": "21.70",
+      "wickets": "0",
+      "economy": "101"
+    },
+    {
+      "rank": "11",
+      "name": "Akash Kumar",
+      "team": "Ben Chokes",
+      "matches": "6",
+      "overs": "22.00",
+      "wickets": "0",
+      "economy": "106"
+    },
+    {
+      "rank": "12",
+      "name": "Rakesh Nani Reddy Kalvakuntla",
+      "team": "Bellevue Strikers",
+      "matches": "7",
+      "overs": "16.80",
+      "wickets": "0",
+      "economy": "64"
+    },
+    {
+      "rank": "13",
+      "name": "Krishna Achanta",
+      "team": "All-Rounders",
+      "matches": "5",
+      "overs": "15.40",
+      "wickets": "0",
+      "economy": "53"
+    },
+    {
+      "rank": "14",
+      "name": "Priya Ranjan Mohapatra",
+      "team": "Deccan Chargers",
+      "matches": "7",
+      "overs": "25.40",
+      "wickets": "3",
+      "economy": "110"
+    },
+    {
+      "rank": "15",
+      "name": "Shiva Kumar Ganji",
+      "team": "Thunderbirds",
+      "matches": "6",
+      "overs": "21.10",
+      "wickets": "1",
+      "economy": "76"
+    },
+    {
+      "rank": "16",
+      "name": "Srikanth Donthineni",
+      "team": "Gamechangers",
+      "matches": "6",
+      "overs": "19.10",
+      "wickets": "1",
+      "economy": "96"
+    },
+    {
+      "rank": "17",
+      "name": "Prayag Shah",
+      "team": "DREAM VISION GLADIATORS",
+      "matches": "7",
+      "overs": "24.30",
+      "wickets": "0",
+      "economy": "105"
+    },
+    {
+      "rank": "18",
+      "name": "Prashant Pandey Redhawk",
+      "team": "Redhawks Blasters",
+      "matches": "6",
+      "overs": "18.00",
+      "wickets": "0",
+      "economy": "102"
+    },
+    {
+      "rank": "19",
+      "name": "Puneeth Reddy Gattikoppula",
+      "team": "Deccan Chargers",
+      "matches": "4",
+      "overs": "15.00",
+      "wickets": "0",
+      "economy": "84"
+    },
+    {
+      "rank": "20",
+      "name": "Zain Mohammed",
+      "team": "Seattle Devils",
+      "matches": "7",
+      "overs": "26.00",
+      "wickets": "1",
+      "economy": "105"
+    },
+    {
+      "rank": "21",
+      "name": "Pavan Gamechangers",
+      "team": "Gamechangers",
+      "matches": "6",
+      "overs": "23.00",
+      "wickets": "0",
+      "economy": "152"
+    },
+    {
+      "rank": "22",
+      "name": "Preetam Reddy",
+      "team": "Stallions CC",
+      "matches": "3",
+      "overs": "7.80",
+      "wickets": "1",
+      "economy": "44"
+    },
+    {
+      "rank": "23",
+      "name": "Sarthak Nema",
+      "team": "Stallions CC",
+      "matches": "7",
+      "overs": "20.00",
+      "wickets": "2",
+      "economy": "89"
+    },
+    {
+      "rank": "24",
+      "name": "Sateesh Chowdary",
+      "team": "Deccan Chargers",
+      "matches": "7",
+      "overs": "20.50",
+      "wickets": "0",
+      "economy": "100"
+    },
+    {
+      "rank": "25",
+      "name": "Paundrik Redhawk",
+      "team": "Redhawks Blasters",
+      "matches": "7",
+      "overs": "24.50",
+      "wickets": "0",
+      "economy": "137"
+    }
+  ],
+  "standings": [
+    {
+      "team": "PNW Panthers",
+      "rank": "1",
+      "matches": "10",
+      "wins": "9",
+      "losses": "1",
+      "points": "238"
+    },
+    {
+      "team": "Seattle Swatkats",
+      "rank": "2",
+      "matches": "10",
+      "wins": "6",
+      "losses": "4",
+      "points": "183"
+    },
+    {
+      "team": "Stallions CC",
+      "rank": "3",
+      "matches": "9",
+      "wins": "6",
+      "losses": "3",
+      "points": "187"
+    },
+    {
+      "team": "Rain City Strikers",
+      "rank": "4",
+      "matches": "9",
+      "wins": "6",
+      "losses": "3",
+      "points": "171"
+    },
+    {
+      "team": "Gullyboyz",
+      "rank": "5",
+      "matches": "8",
+      "wins": "7",
+      "losses": "1",
+      "points": "189"
+    },
+    {
+      "team": "DREAM VISION GLADIATORS",
+      "rank": "6",
+      "matches": "8",
+      "wins": "6",
+      "losses": "2",
+      "points": "160"
+    },
+    {
+      "team": "Redhawks Blasters",
+      "rank": "7",
+      "matches": "8",
+      "wins": "5",
+      "losses": "2",
+      "points": "146"
+    },
+    {
+      "team": "Deccan Chargers",
+      "rank": "8",
+      "matches": "8",
+      "wins": "5",
+      "losses": "3",
+      "points": "142"
+    },
+    {
+      "team": "Ben Chokes",
+      "rank": "9",
+      "matches": "7",
+      "wins": "3",
+      "losses": "2",
+      "points": "95"
+    },
+    {
+      "team": "Bellevue Strikers",
+      "rank": "10",
+      "matches": "7",
+      "wins": "4",
+      "losses": "3",
+      "points": "108"
+    },
+    {
+      "team": "All-Rounders",
+      "rank": "11",
+      "matches": "7",
+      "wins": "4",
+      "losses": "3",
+      "points": "106"
+    },
+    {
+      "team": "Royal Titans",
+      "rank": "12",
+      "matches": "7",
+      "wins": "4",
+      "losses": "3",
+      "points": "104"
+    },
+    {
+      "team": "Seattle Devils",
+      "rank": "13",
+      "matches": "7",
+      "wins": "3",
+      "losses": "4",
+      "points": "97"
+    },
+    {
+      "team": "12th Man Army",
+      "rank": "14",
+      "matches": "7",
+      "wins": "3",
+      "losses": "4",
+      "points": "96"
+    },
+    {
+      "team": "Thunderbirds",
+      "rank": "15",
+      "matches": "7",
+      "wins": "3",
+      "losses": "4",
+      "points": "95"
+    },
+    {
+      "team": "Half Pints",
+      "rank": "16",
+      "matches": "7",
+      "wins": "2",
+      "losses": "4",
+      "points": "93"
+    },
+    {
+      "team": "Appatuckers",
+      "rank": "17",
+      "matches": "7",
+      "wins": "2",
+      "losses": "4",
+      "points": "78"
+    },
+    {
+      "team": "Gamechangers",
+      "rank": "18",
+      "matches": "7",
+      "wins": "2",
+      "losses": "5",
+      "points": "79"
+    },
+    {
+      "team": "Lovelies",
+      "rank": "19",
+      "matches": "7",
+      "wins": "2",
+      "losses": "4",
+      "points": "69"
+    },
+    {
+      "team": "Cheetahs",
+      "rank": "20",
+      "matches": "7",
+      "wins": "2",
+      "losses": "5",
+      "points": "69"
+    },
+    {
+      "team": "Shershah",
+      "rank": "21",
+      "matches": "7",
+      "wins": "2",
+      "losses": "5",
+      "points": "68"
+    },
+    {
+      "team": "Rising Stars",
+      "rank": "22",
+      "matches": "7",
+      "wins": "1",
+      "losses": "6",
+      "points": "48"
+    },
+    {
+      "team": "Tvk Warriors",
+      "rank": "23",
+      "matches": "7",
+      "wins": "1",
+      "losses": "6",
+      "points": "47"
+    },
+    {
+      "team": "Orcas",
+      "rank": "24",
+      "matches": "7",
+      "wins": "0",
+      "losses": "7",
+      "points": "32"
+    }
+  ]
+}
