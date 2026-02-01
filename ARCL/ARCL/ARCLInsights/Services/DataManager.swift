@@ -134,12 +134,15 @@ class DataManager: ObservableObject {
         let response = try JSONDecoder().decode(ARCLDataResponse.self, from: data)
         
         return response.batsmen.map { batsman in
+            let runs = Int(batsman.runs) ?? 0
+            let innings = Int(batsman.innings) ?? 1
+            let average = innings > 0 ? Double(runs) / Double(innings) : 0
             let stats = BattingStats(
-                runs: Int(batsman.runs) ?? 0,
-                innings: 1,
-                average: 0,
-                strikeRate: 0,
-                highestScore: "0",
+                runs: runs,
+                innings: innings,
+                average: average,
+                strikeRate: Double(batsman.strike_rate) ?? 0,
+                highestScore: batsman.runs,
                 rank: Int(batsman.rank) ?? 0
             )
             return Player(name: batsman.name, team: batsman.team, battingStats: stats, bowlingStats: nil)
@@ -154,12 +157,15 @@ class DataManager: ObservableObject {
         let response = try JSONDecoder().decode(ARCLDataResponse.self, from: data)
         
         return response.bowlers.map { bowler in
+            let wickets = Int(bowler.wickets) ?? 0
+            let overs = Double(bowler.overs) ?? 0
+            let economy = Double(bowler.economy) ?? 0
             let stats = BowlingStats(
-                wickets: Int(bowler.wickets) ?? 0,
-                overs: 0,
-                runs: 0,
-                average: 0,
-                economy: 0,
+                wickets: wickets,
+                overs: overs,
+                runs: Int(overs * economy),
+                average: wickets > 0 ? (overs * economy) / Double(wickets) : 0,
+                economy: economy,
                 rank: Int(bowler.rank) ?? 0
             )
             return Player(name: bowler.name, team: bowler.team, battingStats: nil, bowlingStats: stats)
@@ -262,14 +268,18 @@ struct BatsmanJSON: Codable {
     let rank: String
     let name: String
     let team: String
+    let innings: String
     let runs: String
+    let strike_rate: String
 }
 
 struct BowlerJSON: Codable {
     let rank: String
     let name: String
     let team: String
+    let overs: String
     let wickets: String
+    let economy: String
 }
 
 // MARK: - Division & Season Models
