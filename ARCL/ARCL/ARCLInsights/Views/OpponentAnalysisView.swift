@@ -32,11 +32,11 @@ struct OpponentAnalysisView: View {
                 
                 Divider()
                 
-                // Dangerous Batsmen
+                // Top Batsmen
                 SectionView(
-                    title: "⚠️ DANGEROUS BATSMEN",
-                    subtitle: "Watch Out!",
-                    color: .red
+                    title: "🏏 TOP BATSMEN",
+                    subtitle: "Key Players",
+                    color: .orange
                 ) {
                     ForEach(analysis.dangerousBatsmen) { player in
                         BatsmanCard(player: player, isDangerous: true)
@@ -45,30 +45,13 @@ struct OpponentAnalysisView: View {
                     InsightCard(
                         text: "These are their top scorers. Set attacking fields, use your best bowlers, and target them early.",
                         icon: "lightbulb.fill",
-                        color: .red
+                        color: .orange
                     )
                 }
                 
-                // Weak Batsmen
+                // Top Bowlers
                 SectionView(
-                    title: "🎯 WEAK BATSMEN",
-                    subtitle: "Target These!",
-                    color: .green
-                ) {
-                    ForEach(analysis.weakBatsmen) { player in
-                        BatsmanCard(player: player, isDangerous: false)
-                    }
-                    
-                    InsightCard(
-                        text: "These batsmen have lower scores. Use spin or variation to exploit weaknesses in middle/lower order.",
-                        icon: "lightbulb.fill",
-                        color: .green
-                    )
-                }
-                
-                // Dangerous Bowlers
-                SectionView(
-                    title: "💀 DANGEROUS BOWLERS",
+                    title: "⚡ TOP BOWLERS",
                     subtitle: "Be Careful!",
                     color: .purple
                 ) {
@@ -173,12 +156,13 @@ struct BatsmanCard: View {
                         .font(.caption)
                         .foregroundColor(.secondary)
                     HStack(spacing: 4) {
-                        Image(systemName: isDangerous ? "flame.fill" : "target")
-                            .font(.caption)
-                            .foregroundColor(isDangerous ? .red : .green)
+                        Text("Avg")
+                            .font(.caption2)
+                            .foregroundColor(.secondary)
                         Text(stats.averageString)
                             .font(.subheadline)
                             .bold()
+                            .foregroundColor(.orange)
                     }
                 }
             }
