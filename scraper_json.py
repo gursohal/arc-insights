@@ -84,13 +84,14 @@ class ARCLScraper:
                 rows = table.find_all('tr')[1:]  # Skip header
                 for row in rows[:25]:  # Top 25
                     cols = row.find_all(['td', 'th'])
-                    if len(cols) >= 4:
+                    if len(cols) >= 5:
                         try:
                             batsmen.append({
                                 "rank": cols[0].get_text(strip=True),
                                 "name": cols[1].get_text(strip=True),
                                 "team": cols[2].get_text(strip=True),
-                                "runs": cols[3].get_text(strip=True)
+                                "innings": cols[3].get_text(strip=True),
+                                "runs": cols[4].get_text(strip=True)
                             })
                         except Exception as e:
                             continue
@@ -118,13 +119,14 @@ class ARCLScraper:
                 rows = table.find_all('tr')[1:]  # Skip header
                 for row in rows[:25]:  # Top 25
                     cols = row.find_all(['td', 'th'])
-                    if len(cols) >= 4:
+                    if len(cols) >= 5:
                         try:
                             bowlers.append({
                                 "rank": cols[0].get_text(strip=True),
                                 "name": cols[1].get_text(strip=True),
                                 "team": cols[2].get_text(strip=True),
-                                "wickets": cols[3].get_text(strip=True)
+                                "overs": cols[3].get_text(strip=True),
+                                "wickets": cols[4].get_text(strip=True)
                             })
                         except Exception as e:
                             continue
