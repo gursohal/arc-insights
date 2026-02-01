@@ -12,6 +12,7 @@ struct ContentView: View {
     var body: some View {
         TabView(selection: $selectedTab) {
             HomeView()
+                .environmentObject(dataManager)
                 .tabItem {
                     Label("Home", systemImage: "house.fill")
                 }
@@ -40,6 +41,9 @@ struct ContentView: View {
 }
 
 struct HomeView: View {
+    @EnvironmentObject var dataManager: DataManager
+    @AppStorage("myTeamName") private var myTeamName = "Snoqualmie Wolves"
+    
     var body: some View {
         NavigationView {
             ScrollView {
@@ -69,13 +73,13 @@ struct HomeView: View {
                         
                         HStack {
                             VStack(alignment: .leading, spacing: 4) {
-                                Text("Snoqualmie Wolves")
+                                Text(myTeamName)
                                     .font(.title2)
                                     .bold()
                                 HStack {
-                                    Text("Rank: #2")
+                                    Text("Div F")
                                     Text("•")
-                                    Text("W:8 L:2")
+                                    Text("Summer 2025")
                                 }
                                 .font(.subheadline)
                                 .foregroundColor(.secondary)
@@ -98,17 +102,17 @@ struct HomeView: View {
                             .foregroundColor(.secondary)
                             .padding(.horizontal)
                         
-                        NavigationLink(destination: OpponentAnalysisView(teamName: "Snoqualmie Wolves Timber")) {
+                        NavigationLink(destination: TeamsListView().environmentObject(dataManager)) {
                             HStack {
                                 VStack(alignment: .leading, spacing: 4) {
-                                    Text("🎯 Next Match")
+                                    Text("👥 Browse Teams")
                                         .font(.headline)
-                                    Text("vs Snoqualmie Wolves Timber")
+                                    Text("\(dataManager.teams.count) teams in division")
                                         .font(.subheadline)
                                         .foregroundColor(.secondary)
                                 }
                                 Spacer()
-                                Text("View Analysis")
+                                Text("View All")
                                     .font(.subheadline)
                                     .foregroundColor(.green)
                                 Image(systemName: "chevron.right")
@@ -124,26 +128,44 @@ struct HomeView: View {
                     
                     // Top Performers
                     VStack(alignment: .leading, spacing: 12) {
-                        Text("🔥 TOP PERFORMERS THIS WEEK")
+                        Text("🔥 TOP PERFORMERS IN DIVISION")
                             .font(.caption)
                             .fontWeight(.semibold)
                             .foregroundColor(.secondary)
                             .padding(.horizontal)
                         
                         VStack(spacing: 8) {
-                            PerformerCard(
-                                icon: "🏏",
-                                name: "Raj Patel",
-                                stat: "125 runs vs Eagles",
-                                color: .orange
-                            )
+                            if let topBatsman = dataManager.topBatsmen.first {
+                                PerformerCard(
+                                    icon: "🏏",
+                                    name: topBatsman.name,
+                                    stat: "\(topBatsman.battingStats?.runs ?? 0) runs • \(topBatsman.team)",
+                                    color: .orange
+                                )
+                            } else {
+                                PerformerCard(
+                                    icon: "🏏",
+                                    name: "Loading...",
+                                    stat: "Fetching batsmen data",
+                                    color: .orange
+                                )
+                            }
                             
-                            PerformerCard(
-                                icon: "⚡",
-                                name: "Mike Johnson",
-                                stat: "5 wickets vs Hawks",
-                                color: .blue
-                            )
+                            if let topBowler = dataManager.topBowlers.first {
+                                PerformerCard(
+                                    icon: "⚡",
+                                    name: topBowler.name,
+                                    stat: "\(topBowler.bowlingStats?.wickets ?? 0) wickets • \(topBowler.team)",
+                                    color: .blue
+                                )
+                            } else {
+                                PerformerCard(
+                                    icon: "⚡",
+                                    name: "Loading...",
+                                    stat: "Fetching bowlers data",
+                                    color: .blue
+                                )
+                            }
                         }
                         .padding(.horizontal)
                     }
@@ -183,4 +205,5 @@ struct PerformerCard: View {
 
 #Preview {
     ContentView()
+        .environmentObject(DataManager.shared)
 }
