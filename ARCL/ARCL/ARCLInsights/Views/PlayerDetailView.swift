@@ -89,7 +89,7 @@ struct PlayerDetailView: View {
                     
                     VStack(spacing: 12) {
                         if let battingStats = player.battingStats {
-                            InsightCard(
+                            PlayerInsightCard(
                                 icon: battingStats.strikeRate > 120 ? "🚀" : battingStats.strikeRate > 100 ? "⚡" : "📊",
                                 text: battingStats.strikeRate > 120 ? "Aggressive batsman - targets boundaries" : 
                                       battingStats.strikeRate > 100 ? "Balanced approach - rotates strike well" :
@@ -98,7 +98,7 @@ struct PlayerDetailView: View {
                             )
                             
                             if battingStats.average > 25 {
-                                InsightCard(
+                                PlayerInsightCard(
                                     icon: "⭐",
                                     text: "Key batsman - consistently scores runs",
                                     color: .green
@@ -107,7 +107,7 @@ struct PlayerDetailView: View {
                         }
                         
                         if let bowlingStats = player.bowlingStats {
-                            InsightCard(
+                            PlayerInsightCard(
                                 icon: bowlingStats.economy < 6 ? "🎯" : bowlingStats.economy < 8 ? "✅" : "⚠️",
                                 text: bowlingStats.economy < 6 ? "Economical bowler - hard to score against" :
                                       bowlingStats.economy < 8 ? "Reliable bowler - maintains pressure" :
@@ -116,7 +116,7 @@ struct PlayerDetailView: View {
                             )
                             
                             if bowlingStats.wickets > 10 {
-                                InsightCard(
+                                PlayerInsightCard(
                                     icon: "🏆",
                                     text: "Leading wicket-taker - breakthrough bowler",
                                     color: .purple
@@ -208,7 +208,7 @@ struct PerformanceIndicator: View {
     }
 }
 
-struct InsightCard: View {
+struct PlayerInsightCard: View {
     let icon: String
     let text: String
     let color: Color
