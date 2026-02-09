@@ -8,7 +8,9 @@ import SwiftUI
 struct ScheduleView: View {
     @EnvironmentObject var dataManager: DataManager
     @AppStorage("myTeamName") private var myTeamName = "Snoqualmie Wolves"
-    @State private var selectedSegment = 0
+    @State private var showUpcoming = true
+    @State private var showCompleted = true
+    @State private var showUmpiring = true
     
     var teamMatches: [Match] {
         dataManager.matches.filter { $0.involves(teamName: myTeamName) }
@@ -22,10 +24,23 @@ struct ScheduleView: View {
         teamMatches.filter { $0.status == .completed }
     }
     
-    var teamRecord: (wins: Int, losses: Int) {
+    var umpiringMatches: [Match] {
+        // Find matches where team name appears in umpire fields
+        dataManager.matches.filter { match in
+            match.umpire1.localizedCaseInsensitiveContains(myTeamName) ||
+            match.umpire2.localizedCaseInsensitiveContains(myTeamName)
+        }
+    }
+    
+    var teamRecord: (wins: Int, losses: Int, points: Int) {
         let wins = completedMatches.filter { $0.isWinner(teamName: myTeamName) }.count
         let losses = completedMatches.filter { !$0.isWinner(teamName: myTeamName) && !$0.winner.isEmpty }.count
-        return (wins, losses)
+        
+        // Get total points from standings data (accurate from arcl.org)
+        let myTeam = dataManager.teams.first { $0.name.localizedCaseInsensitiveContains(myTeamName) }
+        let totalPoints = myTeam?.points ?? 0
+        
+        return (wins, losses, totalPoints)
     }
     
     var body: some View {
@@ -52,7 +67,7 @@ struct ScheduleView: View {
                                 .font(.title2)
                                 .bold()
                                 .foregroundColor(.green)
-                            Text("Wins")
+                            Text("W")
                                 .font(.caption2)
                                 .foregroundColor(.secondary)
                         }
@@ -62,7 +77,17 @@ struct ScheduleView: View {
                                 .font(.title2)
                                 .bold()
                                 .foregroundColor(.red)
-                            Text("Losses")
+                            Text("L")
+                                .font(.caption2)
+                                .foregroundColor(.secondary)
+                        }
+                        
+                        VStack {
+                            Text("\(teamRecord.points)")
+                                .font(.title2)
+                                .bold()
+                                .foregroundColor(.blue)
+                            Text("Pts")
                                 .font(.caption2)
                                 .foregroundColor(.secondary)
                         }
@@ -75,44 +100,116 @@ struct ScheduleView: View {
             }
             .padding(.horizontal)
             
-            // Segment picker
-            Picker("", selection: $selectedSegment) {
-                Text("Upcoming").tag(0)
-                Text("Completed").tag(1)
-            }
-            .pickerStyle(SegmentedPickerStyle())
-            .padding(.horizontal)
-            
-            // Match list
+            // Match sections
             ScrollView {
-                VStack(spacing: 12) {
-                    if selectedSegment == 0 {
-                        // Upcoming matches
-                        if upcomingMatches.isEmpty {
-                            EmptyStateView(
-                                icon: "calendar.badge.clock",
-                                message: "No upcoming matches scheduled"
-                            )
-                        } else {
-                            ForEach(upcomingMatches) { match in
-                                UpcomingMatchCard(match: match, teamName: myTeamName)
+                VStack(spacing: 16) {
+                    // Upcoming Section
+                    if !upcomingMatches.isEmpty {
+                        VStack(alignment: .leading, spacing: 12) {
+                            Button(action: { withAnimation { showUpcoming.toggle() } }) {
+                                HStack {
+                                    Image(systemName: showUpcoming ? "chevron.down" : "chevron.right")
+                                        .font(.caption)
+                                        .foregroundColor(.secondary)
+                                    Text("UPCOMING MATCHES")
+                                        .font(.caption)
+                                        .fontWeight(.semibold)
+                                        .foregroundColor(.secondary)
+                                    Spacer()
+                                    Text("\(upcomingMatches.count)")
+                                        .font(.caption)
+                                        .foregroundColor(.secondary)
+                                        .padding(.horizontal, 8)
+                                        .padding(.vertical, 2)
+                                        .background(Color(.systemGray5))
+                                        .cornerRadius(10)
+                                }
+                            }
+                            .buttonStyle(PlainButtonStyle())
+                            
+                            if showUpcoming {
+                                ForEach(upcomingMatches) { match in
+                                    UpcomingMatchCard(match: match, teamName: myTeamName)
+                                }
                             }
                         }
-                    } else {
-                        // Completed matches
-                        if completedMatches.isEmpty {
-                            EmptyStateView(
-                                icon: "clock.badge.checkmark",
-                                message: "No completed matches yet"
-                            )
-                        } else {
-                            ForEach(completedMatches) { match in
-                                CompletedMatchCard(match: match, teamName: myTeamName)
+                        .padding(.horizontal)
+                    }
+                    
+                    // Completed Section
+                    if !completedMatches.isEmpty {
+                        VStack(alignment: .leading, spacing: 12) {
+                            Button(action: { withAnimation { showCompleted.toggle() } }) {
+                                HStack {
+                                    Image(systemName: showCompleted ? "chevron.down" : "chevron.right")
+                                        .font(.caption)
+                                        .foregroundColor(.secondary)
+                                    Text("COMPLETED MATCHES")
+                                        .font(.caption)
+                                        .fontWeight(.semibold)
+                                        .foregroundColor(.secondary)
+                                    Spacer()
+                                    Text("\(completedMatches.count)")
+                                        .font(.caption)
+                                        .foregroundColor(.secondary)
+                                        .padding(.horizontal, 8)
+                                        .padding(.vertical, 2)
+                                        .background(Color(.systemGray5))
+                                        .cornerRadius(10)
+                                }
+                            }
+                            .buttonStyle(PlainButtonStyle())
+                            
+                            if showCompleted {
+                                ForEach(completedMatches) { match in
+                                    CompletedMatchCard(match: match, teamName: myTeamName)
+                                }
                             }
                         }
+                        .padding(.horizontal)
+                    }
+                    
+                    // Umpiring Section
+                    if !umpiringMatches.isEmpty {
+                        VStack(alignment: .leading, spacing: 12) {
+                            Button(action: { withAnimation { showUmpiring.toggle() } }) {
+                                HStack {
+                                    Image(systemName: showUmpiring ? "chevron.down" : "chevron.right")
+                                        .font(.caption)
+                                        .foregroundColor(.secondary)
+                                    Text("UMPIRING ASSIGNMENTS")
+                                        .font(.caption)
+                                        .fontWeight(.semibold)
+                                        .foregroundColor(.secondary)
+                                    Spacer()
+                                    Text("\(umpiringMatches.count)")
+                                        .font(.caption)
+                                        .foregroundColor(.secondary)
+                                        .padding(.horizontal, 8)
+                                        .padding(.vertical, 2)
+                                        .background(Color(.systemGray5))
+                                        .cornerRadius(10)
+                                }
+                            }
+                            .buttonStyle(PlainButtonStyle())
+                            
+                            if showUmpiring {
+                                ForEach(umpiringMatches) { match in
+                                    UmpiringMatchCard(match: match, teamName: myTeamName)
+                                }
+                            }
+                        }
+                        .padding(.horizontal)
+                    }
+                    
+                    // Empty state
+                    if upcomingMatches.isEmpty && completedMatches.isEmpty && umpiringMatches.isEmpty {
+                        EmptyStateView(
+                            icon: "calendar",
+                            message: "No matches found for \(myTeamName)"
+                        )
                     }
                 }
-                .padding(.horizontal)
             }
         }
     }
@@ -200,10 +297,12 @@ struct CompletedMatchCard: View {
                     .font(.subheadline)
                     .fontWeight(.semibold)
                 Spacer()
+                
+                // Result
                 HStack(spacing: 4) {
                     Image(systemName: isWin ? "checkmark.circle.fill" : "xmark.circle.fill")
                         .foregroundColor(isWin ? .green : .red)
-                    Text(isWin ? "WON" : "LOST")
+                    Text(isWin ? "WIN" : "LOSS")
                         .font(.caption)
                         .fontWeight(.bold)
                         .foregroundColor(isWin ? .green : .red)
@@ -216,16 +315,25 @@ struct CompletedMatchCard: View {
             
             Divider()
             
-            // Teams with opponent highlighted
+            // Teams with scores
             HStack(spacing: 16) {
                 VStack(alignment: .leading, spacing: 2) {
                     Text(match.team1)
                         .font(.subheadline)
                         .fontWeight(match.team1.localizedCaseInsensitiveContains(teamName) ? .bold : .regular)
                     if match.winner.localizedCaseInsensitiveContains(match.team1) {
-                        Text("Winner")
+                        HStack(spacing: 4) {
+                            Text("Winner")
+                                .font(.caption2)
+                                .foregroundColor(.green)
+                            Text("• \(match.winnerPoints) pts")
+                                .font(.caption2)
+                                .foregroundColor(.blue)
+                        }
+                    } else {
+                        Text("\(match.loserPoints) pts")
                             .font(.caption2)
-                            .foregroundColor(.green)
+                            .foregroundColor(.secondary)
                     }
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -239,9 +347,18 @@ struct CompletedMatchCard: View {
                         .font(.subheadline)
                         .fontWeight(match.team2.localizedCaseInsensitiveContains(teamName) ? .bold : .regular)
                     if match.winner.localizedCaseInsensitiveContains(match.team2) {
-                        Text("Winner")
+                        HStack(spacing: 4) {
+                            Text("\(match.winnerPoints) pts •")
+                                .font(.caption2)
+                                .foregroundColor(.blue)
+                            Text("Winner")
+                                .font(.caption2)
+                                .foregroundColor(.green)
+                        }
+                    } else {
+                        Text("\(match.loserPoints) pts")
                             .font(.caption2)
-                            .foregroundColor(.green)
+                            .foregroundColor(.secondary)
                     }
                 }
                 .frame(maxWidth: .infinity, alignment: .trailing)
@@ -261,6 +378,111 @@ struct CompletedMatchCard: View {
         .background(Color(.systemBackground))
         .cornerRadius(12)
         .shadow(color: Color.black.opacity(0.05), radius: 5, x: 0, y: 2)
+    }
+}
+
+struct UmpiringMatchCard: View {
+    let match: Match
+    let teamName: String
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            // Date and time header with umpire badge
+            HStack {
+                Label(match.shortDate, systemImage: "calendar")
+                    .font(.subheadline)
+                    .fontWeight(.semibold)
+                Spacer()
+                
+                // Umpire badge
+                HStack(spacing: 4) {
+                    Image(systemName: "person.fill.checkmark")
+                        .font(.caption2)
+                    Text("UMPIRE")
+                        .font(.caption)
+                        .fontWeight(.bold)
+                }
+                .foregroundColor(.orange)
+                .padding(.horizontal, 8)
+                .padding(.vertical, 4)
+                .background(Color.orange.opacity(0.1))
+                .cornerRadius(6)
+                
+                Label(match.time, systemImage: "clock")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+            }
+            
+            Divider()
+            
+            // Teams matchup
+            HStack(spacing: 16) {
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(match.team1)
+                        .font(.subheadline)
+                        .fontWeight(.medium)
+                    if match.status == .completed {
+                        if match.winner.localizedCaseInsensitiveContains(match.team1) {
+                            Text("Winner")
+                                .font(.caption2)
+                                .foregroundColor(.green)
+                        }
+                    }
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                
+                Text("VS")
+                    .font(.caption2)
+                    .fontWeight(.bold)
+                    .foregroundColor(.secondary)
+                
+                VStack(alignment: .trailing, spacing: 4) {
+                    Text(match.team2)
+                        .font(.subheadline)
+                        .fontWeight(.medium)
+                    if match.status == .completed {
+                        if match.winner.localizedCaseInsensitiveContains(match.team2) {
+                            Text("Winner")
+                                .font(.caption2)
+                                .foregroundColor(.green)
+                        }
+                    }
+                }
+                .frame(maxWidth: .infinity, alignment: .trailing)
+            }
+            
+            // Ground
+            HStack {
+                Image(systemName: "mappin.circle.fill")
+                    .foregroundColor(.orange)
+                    .font(.caption)
+                Text(match.ground)
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+            }
+            
+            // Co-umpire info (if available)
+            if !match.umpire1.isEmpty && !match.umpire2.isEmpty {
+                let coUmpire = match.umpire1.localizedCaseInsensitiveContains(teamName) ? match.umpire2 : match.umpire1
+                if !coUmpire.isEmpty && coUmpire.lowercased() != "batting side" {
+                    HStack {
+                        Image(systemName: "person.2.fill")
+                            .foregroundColor(.secondary)
+                            .font(.caption)
+                        Text("Co-umpire: \(coUmpire)")
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                    }
+                }
+            }
+        }
+        .padding()
+        .background(Color.orange.opacity(0.05))
+        .cornerRadius(12)
+        .overlay(
+            RoundedRectangle(cornerRadius: 12)
+                .stroke(Color.orange.opacity(0.3), lineWidth: 1)
+        )
     }
 }
 
