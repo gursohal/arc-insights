@@ -1,0 +1,110 @@
+{
+  "team_name": "C-Hawks",
+  "division_id": 8,
+  "season_id": 66,
+  "upcoming_matches": [],
+  "completed_matches": [
+    {
+      "date": "Saturday 10/25/2025",
+      "time": "10:30 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "team1": "C-Hawks",
+      "team2": "Red Warriors",
+      "umpire1": "Snoqualmie Wolves Arctic",
+      "umpire2": "batting side",
+      "match_type": "League",
+      "winner": "C-Hawks",
+      "runner_up": "Red Warriors(5)",
+      "status": "completed",
+      "date_parsed": "2025-10-25T00:00:00"
+    },
+    {
+      "date": "Saturday 10/04/2025",
+      "time": "3:30 PM",
+      "ground": "Perigo Park-Softball Field 1",
+      "team1": "C-Hawks",
+      "team2": "Knightriders",
+      "umpire1": "Red Warriors",
+      "umpire2": "batting side",
+      "match_type": "League",
+      "winner": "C-Hawks",
+      "runner_up": "Knightriders(8)",
+      "status": "completed",
+      "date_parsed": "2025-10-04T00:00:00"
+    },
+    {
+      "date": "Sunday 09/07/2025",
+      "time": "4:30 PM",
+      "ground": "North SeaTac Park",
+      "team1": "C-Hawks",
+      "team2": "Pulikkoottam - Royals",
+      "umpire1": "ICCS White Wolves",
+      "umpire2": "batting side",
+      "match_type": "League",
+      "winner": "Pulikkoottam - Royals",
+      "runner_up": "C-Hawks(5)",
+      "status": "completed",
+      "date_parsed": "2025-09-07T00:00:00"
+    },
+    {
+      "date": "Saturday 08/23/2025",
+      "time": "1:00 PM",
+      "ground": "Hidden Valley Park Field 1",
+      "team1": "C-Hawks",
+      "team2": "ICCS White Wolves",
+      "umpire1": "Knightriders",
+      "umpire2": "batting side",
+      "match_type": "League",
+      "winner": "C-Hawks",
+      "runner_up": "ICCS White Wolves(4)",
+      "status": "completed",
+      "date_parsed": "2025-08-23T00:00:00"
+    },
+    {
+      "date": "Sunday 08/10/2025",
+      "time": "11:30 AM",
+      "ground": "Central Park Field #2",
+      "team1": "C-Hawks",
+      "team2": "SuperKings",
+      "umpire1": "ICCS White Wolves",
+      "umpire2": "batting side",
+      "match_type": "League",
+      "winner": "Tie/Abandon",
+      "runner_up": "SuperKings(15)",
+      "status": "completed",
+      "date_parsed": "2025-08-10T00:00:00"
+    },
+    {
+      "date": "Sunday 07/20/2025",
+      "time": "2:00 PM",
+      "ground": "Ron Regis",
+      "team1": "C-Hawks",
+      "team2": "Gilly",
+      "umpire1": "Unicorns",
+      "umpire2": "batting side",
+      "match_type": "League",
+      "winner": "Gilly",
+      "runner_up": "C-Hawks(4)",
+      "status": "completed",
+      "date_parsed": "2025-07-20T00:00:00"
+    },
+    {
+      "date": "Sunday 07/13/2025",
+      "time": "4:30 PM",
+      "ground": "Redmond Ridge Park -- Soccer Field",
+      "team1": "Snoqualmie Wolves Arctic",
+      "team2": "C-Hawks",
+      "umpire1": "Thunderhawks",
+      "umpire2": "batting side",
+      "match_type": "League",
+      "winner": "Snoqualmie Wolves Arctic",
+      "runner_up": "C-Hawks(6)",
+      "status": "completed",
+      "date_parsed": "2025-07-13T00:00:00"
+    }
+  ],
+  "record": {
+    "wins": 3,
+    "losses": 4
+  }
+}
