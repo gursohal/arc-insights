@@ -460,21 +460,6 @@ struct UmpiringMatchCard: View {
                     .font(.subheadline)
                     .foregroundColor(.secondary)
             }
-            
-            // Co-umpire info (if available)
-            if !match.umpire1.isEmpty && !match.umpire2.isEmpty {
-                let coUmpire = match.umpire1.localizedCaseInsensitiveContains(teamName) ? match.umpire2 : match.umpire1
-                if !coUmpire.isEmpty && coUmpire.lowercased() != "batting side" {
-                    HStack {
-                        Image(systemName: "person.2.fill")
-                            .foregroundColor(.secondary)
-                            .font(.caption)
-                        Text("Co-umpire: \(coUmpire)")
-                            .font(.caption)
-                            .foregroundColor(.secondary)
-                    }
-                }
-            }
         }
         .padding()
         .background(Color.orange.opacity(0.05))

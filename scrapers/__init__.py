@@ -9,6 +9,7 @@ from .bowlers_scraper import BowlersScraper
 from .standings_scraper import StandingsScraper
 from .player_detail_scraper import PlayerDetailScraper
 from .divisions_seasons_scraper import DivisionsSeasonsScraper
+from .schedule_scraper import ScheduleScraper
 
 __all__ = [
     'TeamsScraper',
@@ -16,5 +17,6 @@ __all__ = [
     'BowlersScraper',
     'StandingsScraper',
     'PlayerDetailScraper',
-    'DivisionsSeasonsScraper'
+    'DivisionsSeasonsScraper',
+    'ScheduleScraper'
 ]

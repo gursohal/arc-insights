@@ -27,6 +27,19 @@ class ScheduleScraper(BaseScraper):
             if len(row) >= 5:
                 try:
                     # Parse the match data
+                    runner_up_text = row[9] if len(row) > 9 else ""
+                    
+                    # Extract loser team name and points from "TeamName(points)" format
+                    loser_team = runner_up_text
+                    loser_points = 0
+                    if '(' in runner_up_text and ')' in runner_up_text:
+                        loser_team = runner_up_text[:runner_up_text.rfind('(')].strip()
+                        points_str = runner_up_text[runner_up_text.rfind('(')+1:runner_up_text.rfind(')')].strip()
+                        try:
+                            loser_points = int(points_str)
+                        except:
+                            loser_points = 0
+                    
                     match = {
                         "date": row[0] if len(row) > 0 else "",
                         "time": row[1] if len(row) > 1 else "",
@@ -37,7 +50,9 @@ class ScheduleScraper(BaseScraper):
                         "umpire2": row[6] if len(row) > 6 else "",
                         "match_type": row[7] if len(row) > 7 else "",
                         "winner": row[8] if len(row) > 8 else "",
-                        "runner_up": row[9] if len(row) > 9 else "",
+                        "runner_up": loser_team,
+                        "loser_points": loser_points,
+                        "winner_points": 30  # Standard win points, will be calculated more accurately later
                     }
                     
                     # Determine match status

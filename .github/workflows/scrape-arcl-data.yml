@@ -1,10 +1,11 @@
-name: Scrape ARCL Data
+name: Scrape ARCL Data Weekly
 
 on:
   schedule:
     # Run every Sunday at 11 PM PST (7 AM UTC Monday)
+    # Scrapes ALL divisions so each user can choose their own
     - cron: '0 7 * * 1'
-  workflow_dispatch: # Allow manual trigger
+  workflow_dispatch: # Allow manual trigger for immediate updates
 
 jobs:
   scrape:

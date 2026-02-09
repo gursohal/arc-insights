@@ -64,35 +64,9 @@ struct HomeView: View {
                     }
                     .padding()
                     
-                    // My Team Card
-                    VStack(alignment: .leading, spacing: 12) {
-                        Text("MY TEAM")
-                            .font(.caption)
-                            .fontWeight(.semibold)
-                            .foregroundColor(.secondary)
-                        
-                        HStack {
-                            VStack(alignment: .leading, spacing: 4) {
-                                Text(myTeamName)
-                                    .font(.title2)
-                                    .bold()
-                                HStack {
-                                    Text("Div F")
-                                    Text("•")
-                                    Text("Summer 2025")
-                                }
-                                .font(.subheadline)
-                                .foregroundColor(.secondary)
-                            }
-                            Spacer()
-                            Image(systemName: "chevron.right")
-                                .foregroundColor(.secondary)
-                        }
-                        .padding()
-                        .background(Color(.systemGray6))
-                        .cornerRadius(12)
-                    }
-                    .padding(.horizontal)
+                    // SCHEDULE SECTION - Primary Feature
+                    ScheduleView()
+                        .environmentObject(dataManager)
                     
                     // Quick Actions
                     VStack(alignment: .leading, spacing: 12) {
@@ -126,66 +100,11 @@ struct HomeView: View {
                         .padding(.horizontal)
                     }
                     
-                    // Top Performers
-                    VStack(alignment: .leading, spacing: 12) {
-                        Text("🔥 TOP PERFORMERS IN DIVISION")
-                            .font(.caption)
-                            .fontWeight(.semibold)
-                            .foregroundColor(.secondary)
-                            .padding(.horizontal)
-                        
-                        VStack(spacing: 8) {
-                    if let topBatsman = dataManager.topBatsmen.first {
-                        PerformerCard(
-                            icon: "🏏",
-                            name: topBatsman.name,
-                            stat: "\(topBatsman.battingStats?.runs ?? 0) runs • \(topBatsman.team)",
-                            color: .orange
-                        )
-                    }
-                    
-                    if let topBowler = dataManager.topBowlers.first {
-                        PerformerCard(
-                            icon: "⚡",
-                            name: topBowler.name,
-                            stat: "\(topBowler.bowlingStats?.wickets ?? 0) wickets • \(topBowler.team)",
-                            color: .blue
-                        )
-                    }
-                        }
-                        .padding(.horizontal)
-                    }
-                    
                     Spacer()
                 }
             }
             .navigationBarHidden(true)
         }
-    }
-}
-
-struct PerformerCard: View {
-    let icon: String
-    let name: String
-    let stat: String
-    let color: Color
-    
-    var body: some View {
-        HStack {
-            Text(icon)
-                .font(.title2)
-            VStack(alignment: .leading, spacing: 2) {
-                Text(name)
-                    .font(.headline)
-                Text(stat)
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
-            }
-            Spacer()
-        }
-        .padding()
-        .background(color.opacity(0.1))
-        .cornerRadius(12)
     }
 }
 

@@ -18,6 +18,7 @@ class DataManager: ObservableObject {
     @Published var teams: [Team] = []
     @Published var topBatsmen: [Player] = []
     @Published var topBowlers: [Player] = []
+    @Published var matches: [Match] = []
     
     // User preferences
     @AppStorage("selectedDivisionID") private var selectedDivisionID: Int = 8 // Default Div F
@@ -45,6 +46,9 @@ class DataManager: ObservableObject {
             // Fetch stats
             topBatsmen = try await fetchTopBatsmen()
             topBowlers = try await fetchTopBowlers()
+            
+            // Fetch schedule
+            matches = try await fetchSchedule()
             
             // Update timestamp
             lastDataRefreshTimestamp = Date().timeIntervalSince1970
@@ -198,6 +202,16 @@ class DataManager: ObservableObject {
         }
     }
     
+    private func fetchSchedule() async throws -> [Match] {
+        let urlString = "\(baseURL)/div_\(selectedDivisionID)_season_\(selectedSeasonID).json"
+        guard let url = URL(string: urlString) else { return [] }
+        
+        let (data, _) = try await URLSession.shared.data(from: url)
+        let response = try JSONDecoder().decode(ARCLDataResponse.self, from: data)
+        
+        return response.schedule ?? []
+    }
+    
     
     // MARK: - Helper Methods
     
@@ -289,6 +303,7 @@ struct ARCLDataResponse: Codable {
     let batsmen: [BatsmanJSON]
     let bowlers: [BowlerJSON]
     let standings: [StandingJSON]
+    let schedule: [Match]?
 }
 
 struct StandingJSON: Codable {

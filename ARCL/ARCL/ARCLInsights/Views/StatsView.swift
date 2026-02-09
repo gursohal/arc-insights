@@ -9,14 +9,6 @@ struct StatsView: View {
     @EnvironmentObject var dataManager: DataManager
     @State private var selectedCategory = 0
     
-    var topBatsmen: [Player] {
-        dataManager.topBatsmen.isEmpty ? SampleData.topBatsmen : dataManager.topBatsmen
-    }
-    
-    var topBowlers: [Player] {
-        dataManager.topBowlers.isEmpty ? SampleData.topBowlers : dataManager.topBowlers
-    }
-    
     var body: some View {
         NavigationView {
             VStack {
@@ -28,9 +20,9 @@ struct StatsView: View {
                 .padding()
                 
                 if selectedCategory == 0 {
-                    BattingStatsView(players: topBatsmen)
+                    BattingStatsView(players: dataManager.topBatsmen)
                 } else {
-                    BowlingStatsView(players: topBowlers)
+                    BowlingStatsView(players: dataManager.topBowlers)
                 }
             }
             .navigationTitle("Division Stats")

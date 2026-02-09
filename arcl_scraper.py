@@ -7,7 +7,7 @@ Modular architecture with separate scrapers for each data type
 import json
 import os
 from datetime import datetime
-from scrapers import TeamsScraper, BatsmenScraper, BowlersScraper, StandingsScraper
+from scrapers import TeamsScraper, BatsmenScraper, BowlersScraper, StandingsScraper, ScheduleScraper
 
 
 class ARCLDataScraper:
@@ -18,6 +18,7 @@ class ARCLDataScraper:
         self.batsmen_scraper = BatsmenScraper()
         self.bowlers_scraper = BowlersScraper()
         self.standings_scraper = StandingsScraper()
+        self.schedule_scraper = ScheduleScraper()
     
     def scrape_division(self, division_id, season_id, division_name):
         """Scrape all data for a division"""
@@ -32,7 +33,8 @@ class ARCLDataScraper:
             "teams": self.teams_scraper.scrape(division_id, season_id),
             "batsmen": self.batsmen_scraper.scrape(division_id, season_id, limit=25),
             "bowlers": self.bowlers_scraper.scrape(division_id, season_id, limit=25),
-            "standings": self.standings_scraper.scrape(division_id, season_id)
+            "standings": self.standings_scraper.scrape(division_id, season_id),
+            "schedule": self.schedule_scraper.scrape(division_id, season_id)
         }
         
         # Save to JSON
@@ -48,6 +50,7 @@ class ARCLDataScraper:
         print(f"   🏏 {len(data['batsmen'])} batsmen")
         print(f"   ⚡ {len(data['bowlers'])} bowlers")
         print(f"   🏆 {len(data['standings'])} standings entries")
+        print(f"   📅 {len(data['schedule'])} matches in schedule")
         print("=" * 60)
         
         return data

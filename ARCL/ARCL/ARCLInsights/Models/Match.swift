@@ -19,6 +19,8 @@ struct Match: Codable, Identifiable {
     let runnerUp: String
     let status: MatchStatus
     let dateParsed: String?
+    let winnerPoints: Int
+    let loserPoints: Int
     
     enum CodingKeys: String, CodingKey {
         case date, time, ground, team1, team2
@@ -28,6 +30,8 @@ struct Match: Codable, Identifiable {
         case runnerUp = "runner_up"
         case status
         case dateParsed = "date_parsed"
+        case winnerPoints = "winner_points"
+        case loserPoints = "loser_points"
     }
     
     init(from decoder: Decoder) throws {
@@ -46,9 +50,11 @@ struct Match: Codable, Identifiable {
         let statusString = try container.decode(String.self, forKey: .status)
         self.status = MatchStatus(rawValue: statusString) ?? .upcoming
         self.dateParsed = try container.decodeIfPresent(String.self, forKey: .dateParsed)
+        self.winnerPoints = try container.decodeIfPresent(Int.self, forKey: .winnerPoints) ?? 30
+        self.loserPoints = try container.decodeIfPresent(Int.self, forKey: .loserPoints) ?? 0
     }
     
-    init(id: UUID = UUID(), date: String, time: String, ground: String, team1: String, team2: String, umpire1: String, umpire2: String, matchType: String, winner: String, runnerUp: String, status: MatchStatus, dateParsed: String? = nil) {
+    init(id: UUID = UUID(), date: String, time: String, ground: String, team1: String, team2: String, umpire1: String, umpire2: String, matchType: String, winner: String, runnerUp: String, status: MatchStatus, dateParsed: String? = nil, winnerPoints: Int = 30, loserPoints: Int = 0) {
         self.id = id
         self.date = date
         self.time = time
@@ -62,6 +68,19 @@ struct Match: Codable, Identifiable {
         self.runnerUp = runnerUp
         self.status = status
         self.dateParsed = dateParsed
+        self.winnerPoints = winnerPoints
+        self.loserPoints = loserPoints
+    }
+    
+    func getPoints(for teamName: String) -> Int {
+        if isWinner(teamName: teamName) {
+            return winnerPoints
+        } else if runnerUp.localizedCaseInsensitiveContains(teamName) || 
+                  team1.localizedCaseInsensitiveContains(teamName) || 
+                  team2.localizedCaseInsensitiveContains(teamName) {
+            return loserPoints
+        }
+        return 0
     }
     
     func getOpponent(for teamName: String) -> String {
