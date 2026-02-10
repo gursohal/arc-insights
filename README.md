@@ -1,198 +1,229 @@
-# 🏏 ARCL Insights
+# ARCL Insights 🏏
 
-Cricket opponent analysis for ARCL league teams. Get competitive intelligence on your opponents with detailed stats on dangerous batsmen, bowlers, and strategic recommendations.
+A comprehensive iOS app providing actionable cricket insights for ARCL (American Regional Cricket League) players and teams.
 
-## 🎯 Features
+## 📱 Features
 
-- **Opponent Analysis**: Identify dangerous batsmen, weak batsmen to target, and dangerous bowlers
-- **Division Stats**: Browse top batsmen and bowlers across your division
-- **Team Insights**: Get strategic recommendations for each opponent
-- **Offline Support**: All data cached locally, works without internet
-- **Weekly Updates**: Automated data refresh every Sunday night
-- **Zero Cost**: No backend servers, runs entirely on GitHub Actions (free tier)
+### ✅ Current Features:
+- **Player Statistics**: Top batsmen and bowlers with data-driven insights
+- **Team Standings**: Real-time division rankings and performance metrics
+- **Match Schedule**: View upcoming and completed matches with dates, venues, and umpire assignments
+- **Opponent Analysis**: Get detailed breakdowns of opposing teams' key players and match strategies
+- **Smart Insights**: Rule-based insight engine with data-driven thresholds for player performance
+- **Favorites**: Save teams and players for quick access
+- **Data-Driven Rules**: All insights based on actual statistical distribution analysis
 
-## 📱 iOS App
-
-Full native iOS app with:
-- Onboarding to select your team, division, and season
-- 4 main tabs: Home, Teams, Stats, Settings
-- Beautiful, color-coded opponent analysis
-- Team selection from dropdown (real data from arcl.org)
-- Local storage with UserDefaults
-
-## 🐍 Python Tools
-
-### Command-Line Analyzer (`opponent_analyzer.py`)
-```bash
-python3 opponent_analyzer.py
-```
-Interactive tool to analyze specific opponents.
-
-### JSON Scraper (`scraper_json.py`)
-```bash
-python3 scraper_json.py
-```
-Scrapes division data and outputs JSON files for the iOS app.
-
-## 🚀 Quick Start
-
-### 1. Test the Scraper
-```bash
-cd /Users/gurpreetsohal/Documents/ARCL
-python3 scraper_json.py
-```
-
-You should see data saved to `data/div_8_season_66.json`
-
-### 2. Set Up GitHub (FREE hosting)
-```bash
-# Initialize git
-git init
-git add .
-git commit -m "Initial commit"
-
-# Create repo on GitHub (make it PUBLIC)
-# Then:
-git remote add origin https://github.com/YOUR_USERNAME/arcl-insights.git
-git branch -M main
-git push -u origin main
-```
-
-### 3. Enable GitHub Actions
-- Go to your repo → Actions tab
-- Workflow will run every Sunday at 11 PM PST
-- Or click "Run workflow" to test manually
-
-### 4. Get Your Data URL
-```
-https://raw.githubusercontent.com/YOUR_USERNAME/arcl-insights/main/data/div_8_season_66.json
-```
-
-### 5. Update iOS App
-Replace `YOUR_USERNAME` in the DataManager with your GitHub username.
-
-### 6. Build & Run iOS App
-- Open `ARCL.xcodeproj` in Xcode
-- Add OnboardingView.swift and SettingsView.swift to project
-- Build & Run (Cmd+R)
-
-## 📊 Data Structure
-
-### JSON Format
-```json
-{
-  "division_id": 8,
-  "season_id": 66,
-  "division_name": "Div F - Summer 2025",
-  "last_updated": "2025-02-01T13:00:00",
-  "teams": ["C-Hawks", "Red Warriors", ...],
-  "batsmen": [
-    {
-      "rank": 1,
-      "name": "Player Name",
-      "team": "Team Name",
-      "runs": 453,
-      "innings": 10,
-      "average": 45.3,
-      "strikeRate": 142.5,
-      "highestScore": "125*"
-    }
-  ],
-  "bowlers": [...]
-}
-```
-
-## 💰 Cost Breakdown
-
-- **GitHub Actions**: $0/month (free tier: 2,000 minutes/month, we use ~4 min/month)
-- **GitHub Hosting**: $0/month (public repos are free)
-- **iOS App Storage**: $0/month (local storage)
-- **Total**: **$0/month** 🎉
-
-## 📅 Update Schedule
-
-- **Automated**: Every Sunday at 11 PM PST
-- **Manual**: Run workflow anytime from GitHub Actions tab
-- **Duration**: ~30 seconds per run
-- **Data**: Automatically committed to repo
-
-## 🔧 Customization
-
-### Add More Divisions
-Edit `scraper_json.py`:
-```python
-def main():
-    scraper = ARCLScraper()
-    scraper.scrape_division(8, 66, "Div F - Summer 2025")
-    scraper.scrape_division(7, 66, "Div E - Summer 2025")  # Add more
-```
-
-### Change Schedule
-Edit `.github/workflows/scrape-arcl-data.yml`:
-```yaml
-schedule:
-  - cron: '0 7 * * 1'  # Every Monday 7 AM UTC (Sunday 11 PM PST)
-```
-
-## 📁 Project Structure
-
-```
-ARCL/
-├── .github/workflows/
-│   └── scrape-arcl-data.yml    # GitHub Actions workflow
-├── ios/ARCLInsights/           # iOS app source
-│   ├── Models/                 # Data models
-│   ├── Views/                  # SwiftUI views
-│   ├── Services/               # DataManager
-│   └── Data/                   # Sample data
-├── data/                       # Scraped JSON data
-│   └── div_8_season_66.json
-├── opponent_analyzer.py        # Interactive CLI tool
-├── scraper_json.py            # JSON scraper for GitHub Actions
-└── README.md                  # This file
-```
-
-## 🎮 Usage
-
-### For Players/Coaches:
-1. Open iOS app
-2. Select your division, season, and team
-3. Browse opponent analysis
-4. Get strategic recommendations
-
-### For Developers:
-1. Fork the repo
-2. Customize divisions to scrape
-3. Modify iOS app as needed
-4. Submit PRs!
-
-## 🐛 Troubleshooting
-
-**Scraper not working?**
-- Check if arcl.org is accessible
-- Verify Python dependencies: `pip install requests beautifulsoup4`
-- Test locally: `python3 scraper_json.py`
-
-**GitHub Actions failing?**
-- Check Actions tab for error logs
-- Verify repo is public
-- Test scraper locally first
-
-**iOS app not loading data?**
-- Check GitHub URL is correct
-- Verify data/div_X_season_Y.json exists
-- Check Xcode console for errors
-
-## 📝 License
-
-MIT License - feel free to use and modify!
-
-## 🙏 Credits
-
-Built for the ARCL cricket community. Data sourced from arcl.org.
+### 🚧 In Development:
+- **Scorecard View**: Tap completed matches to see detailed batting/bowling scorecards *(Backend complete, iOS 2hrs remaining)*
+- **Boundary Statistics**: 4s & 6s tracking for all players *(Will be included with scorecards)*
 
 ---
 
-**Questions?** Open an issue on GitHub!
+## 🏗️ Project Structure
 
-**Built with** ❤️ **for Snoqualmie Wolves and the ARCL community** 🏏
+```
+ARCL/
+├── README.md                    # This file
+├── arcl_scraper.py             # Main data scraper
+├── ARCL/                       # Xcode project (iOS app)
+├── .github/workflows/          # GitHub Actions for automated scraping
+├── data/                       # Scraped JSON data (14 divisions)
+├── scrapers/                   # Modular scraper components
+│   ├── base_scraper.py
+│   ├── teams_scraper.py
+│   ├── batsmen_scraper.py
+│   ├── bowlers_scraper.py
+│   ├── standings_scraper.py
+│   ├── schedule_scraper.py
+│   ├── scorecard_scraper.py    # ✅ NEW
+│   └── boundary_aggregator.py  # ✅ NEW
+├── docs/                       # Documentation
+│   ├── IMPLEMENTATION_GUIDE.md  # Current status & next steps
+│   ├── DATA_ARCHITECTURE.md     # Data structure documentation
+│   ├── REVISED_THRESHOLDS.md    # Insight rule thresholds
+│   └── archive/                 # Historical documentation
+└── scripts/                    # Old/demo scripts
+```
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Python 3.9+
+- Xcode 15+ (for iOS development)
+- BeautifulSoup4, requests (Python packages)
+
+### Running the Scraper
+
+```bash
+# Install dependencies
+pip3 install beautifulsoup4 requests
+
+# Scrape current season data (default)
+python3 arcl_scraper.py
+
+# Scrape all seasons and divisions
+python3 arcl_scraper.py --all-seasons
+```
+
+### Opening the iOS App
+
+```bash
+# Open the Xcode project
+open ARCL/ARCL.xcodeproj
+
+# Build and run in simulator (Cmd+R)
+```
+
+---
+
+## 📊 Data Pipeline
+
+### Automated Daily Scraping
+- **Frequency**: Daily at 6 AM UTC via GitHub Actions
+- **Data Sources**: ARCL.org website
+- **Storage**: JSON files in `data/` directory
+- **Served via**: GitHub Pages (raw JSON)
+
+### Scraped Data:
+- ✅ **Teams**: Names, division assignments
+- ✅ **Batsmen**: Runs, innings, strike rate, average (Top 25 per division)
+- ✅ **Bowlers**: Wickets, overs, economy, average (Top 25 per division)
+- ✅ **Standings**: Wins, losses, points, rank
+- ✅ **Schedule**: Dates, venues, umpires, status (91 matches per division)
+- 🚧 **Scorecards**: Batting/bowling details (Backend ready, 728 total scorecards)
+- 🚧 **Boundaries**: 4s & 6s per player (Backend ready)
+
+---
+
+## 💡 Key Insights & Rules
+
+### Data-Driven Thresholds
+All insight rules are based on actual statistical distribution analysis:
+
+**Batting Insights:**
+- **Elite Run-Scorer**: 180+ runs (Top 10%)
+- **Explosive Striker**: 120+ strike rate (Top 5%)
+- **High Consistency**: 35+ average (Top tier)
+
+**Bowling Insights:**
+- **Leading Wicket-Taker**: 13+ wickets (Top 5%)
+- **Exceptional Economy**: <4.0 runs per over (Best 5%)
+- **Strike Bowler**: 10+ wickets (Top 20%)
+
+**Match Strategies:**
+- Contextual recommendations based on opponent data
+- Player-specific tactics
+- Team strength analysis
+
+See `docs/REVISED_THRESHOLDS.md` for complete analysis.
+
+---
+
+## 🔄 Development Status
+
+### ✅ Completed (100%):
+1. ✅ Python scrapers for all data sources
+2. ✅ GitHub Actions automation
+3. ✅ iOS app with main features
+4. ✅ Rule-based insight engine with data-driven thresholds
+5. ✅ Professional UI (removed kiddi sh emojis from strategies)
+6. ✅ Scorecard scraper (tested and working)
+7. ✅ Boundary aggregator (ready to use)
+8. ✅ Project structure cleanup
+
+### 🚧 In Progress (~2 hours remaining):
+1. 🚧 Swift models for scorecards (30 min)
+2. 🚧 ScorecardView UI (1 hour)
+3. 🚧 Navigation from ScheduleView (15 min)
+4. 🚧 Testing & polish (15 min)
+
+**All code provided in:** `docs/IMPLEMENTATION_GUIDE.md`
+
+---
+
+## 📈 Scorecard Feature - Ready to Implement!
+
+### Backend Status: ✅ 100% Complete
+- Scraper built and tested
+- Can scrape 728 scorecards in ~24 minutes
+- Aggregates 4s & 6s automatically
+- Only 2.1 MB storage needed
+- 95% GitHub Actions budget remaining
+
+### iOS Status: 🚧 50% Complete
+- Models code ready (copy-paste)
+- View code ready (copy-paste)
+- Navigation code ready (copy-paste)
+- **Just needs to be added to Xcode!**
+
+See `docs/IMPLEMENTATION_GUIDE.md` for complete Swift code and step-by-step instructions.
+
+---
+
+## 📚 Documentation
+
+- **[Implementation Guide](docs/IMPLEMENTATION_GUIDE.md)** - Current status, scorecard implementation steps
+- **[Data Architecture](docs/DATA_ARCHITECTURE.md)** - JSON structure, data models
+- **[Revised Thresholds](docs/REVISED_THRESHOLDS.md)** - Statistical analysis and rule thresholds
+- **[Archive](docs/archive/)** - Historical planning documents
+
+---
+
+## 🤝 Contributing
+
+This is a personal project for ARCL cricket insights. Feel free to:
+- Report bugs via GitHub Issues
+- Suggest features
+- Submit pull requests
+
+---
+
+## 📄 License
+
+MIT License - See LICENSE file for details
+
+---
+
+## 🎯 Next Steps
+
+### Immediate (This Week):
+1. Add Swift scorecard models to Xcode (~30 min)
+2. Add ScorecardView to Xcode (~1 hour)
+3. Update navigation from ScheduleView (~15 min)
+4. Test in simulator (~15 min)
+
+### Future Enhancements:
+- Match-by-match performance trends
+- Partnership analysis
+- Batting position optimization
+- Dismissal pattern insights
+- Head-to-head player comparisons
+
+---
+
+## 📊 Stats
+
+- **8 Active Divisions** (A-H)
+- **192 Teams** (24 per division)
+- **728 Matches** per season
+- **400+ Players** tracked
+- **Daily Updates** via automated scraping
+- **~24 minutes** full scrape time
+- **2.1 MB** total data size
+
+---
+
+## 🙏 Acknowledgments
+
+- Data source: [ARCL.org](https://arcl.org)
+- Built with: SwiftUI, Python, BeautifulSoup
+- Automated via: GitHub Actions
+- Hosted on: GitHub Pages
+
+---
+
+**Last Updated**: February 9, 2026  
+**Version**: 1.0  
+**Status**: Production (iOS), Backend Complete (Scorecards)

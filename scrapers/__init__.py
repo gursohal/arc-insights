@@ -10,6 +10,7 @@ from .standings_scraper import StandingsScraper
 from .player_detail_scraper import PlayerDetailScraper
 from .divisions_seasons_scraper import DivisionsSeasonsScraper
 from .schedule_scraper import ScheduleScraper
+from .scorecard_scraper import ScorecardScraper
 
 __all__ = [
     'TeamsScraper',
@@ -18,5 +19,6 @@ __all__ = [
     'StandingsScraper',
     'PlayerDetailScraper',
     'DivisionsSeasonsScraper',
-    'ScheduleScraper'
+    'ScheduleScraper',
+    'ScorecardScraper'
 ]

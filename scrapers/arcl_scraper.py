@@ -7,7 +7,8 @@ Modular architecture with separate scrapers for each data type
 import json
 import os
 from datetime import datetime
-from scrapers import TeamsScraper, BatsmenScraper, BowlersScraper, StandingsScraper, ScheduleScraper
+from scrapers import TeamsScraper, BatsmenScraper, BowlersScraper, StandingsScraper, ScheduleScraper, ScorecardScraper
+from scrapers.boundary_aggregator import aggregate_boundaries, merge_boundaries_with_batsmen
 
 
 class ARCLDataScraper:
@@ -19,6 +20,7 @@ class ARCLDataScraper:
         self.bowlers_scraper = BowlersScraper()
         self.standings_scraper = StandingsScraper()
         self.schedule_scraper = ScheduleScraper()
+        self.scorecard_scraper = ScorecardScraper()
     
     def scrape_division(self, division_id, season_id, division_name):
         """Scrape all data for a division"""
