@@ -13,6 +13,10 @@ struct OpponentAnalysisView: View {
         dataManager.getOpponentAnalysis(teamName: teamName)
     }
     
+    var team: Team? {
+        dataManager.teams.first { $0.name.localizedCaseInsensitiveContains(teamName) }
+    }
+    
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 24) {
@@ -24,9 +28,35 @@ struct OpponentAnalysisView: View {
                     Text(analysis.team)
                         .font(.largeTitle)
                         .bold()
-                    Text("Div F • Summer 2025")
-                        .font(.subheadline)
-                        .foregroundColor(.secondary)
+                    
+                    if let team = team {
+                        HStack(spacing: 16) {
+                            Text("Div F")
+                                .font(.subheadline)
+                                .foregroundColor(.secondary)
+                            Text("•")
+                                .foregroundColor(.secondary)
+                            Text("Rank #\(team.rank)")
+                                .font(.subheadline)
+                                .bold()
+                                .foregroundColor(.green)
+                            Text("•")
+                                .foregroundColor(.secondary)
+                            Text("\(team.wins)W-\(team.losses)L")
+                                .font(.subheadline)
+                                .foregroundColor(.secondary)
+                            Text("•")
+                                .foregroundColor(.secondary)
+                            Text("\(team.points) pts")
+                                .font(.subheadline)
+                                .bold()
+                                .foregroundColor(.blue)
+                        }
+                    } else {
+                        Text("Div F • Summer 2025")
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                    }
                 }
                 .padding()
                 

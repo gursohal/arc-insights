@@ -68,9 +68,14 @@ class DataManager: ObservableObject {
         let weakBatsmen = topBatsmen.filter { $0.team.localizedCaseInsensitiveContains(teamName) }.dropFirst(5).prefix(5)
         let dangerousBowlers = topBowlers.filter { $0.team.localizedCaseInsensitiveContains(teamName) }.prefix(5)
         
-        let recommendations = generateRecommendations(
+        // Get team data for strategy generation
+        let team = teams.first { $0.name.localizedCaseInsensitiveContains(teamName) }
+        
+        // Generate rule-based match strategy using InsightEngine
+        let recommendations = InsightEngine.shared.generateMatchStrategy(
             dangerousBatsmen: Array(dangerousBatsmen),
-            dangerousBowlers: Array(dangerousBowlers)
+            dangerousBowlers: Array(dangerousBowlers),
+            team: team
         )
         
         return OpponentAnalysis(
@@ -214,24 +219,6 @@ class DataManager: ObservableObject {
     
     
     // MARK: - Helper Methods
-    
-    private func generateRecommendations(dangerousBatsmen: [Player], dangerousBowlers: [Player]) -> [String] {
-        var recs: [String] = []
-        
-        if let topBatsman = dangerousBatsmen.first {
-            recs.append("Target \(topBatsman.name) early with your best bowlers - they're the key batsman")
-        }
-        
-        if dangerousBowlers.count >= 2 {
-            recs.append("Be patient against their top \(dangerousBowlers.count) bowlers")
-        }
-        
-        recs.append("Exploit the weak middle order with spin bowling")
-        recs.append("Look to score runs against their 4th/5th bowlers")
-        recs.append("Set aggressive fields for lower-order batsmen")
-        
-        return recs
-    }
     
     private func saveToLocalStorage() {
         // Save to UserDefaults as JSON
