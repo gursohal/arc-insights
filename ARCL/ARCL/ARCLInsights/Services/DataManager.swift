@@ -19,12 +19,14 @@ class DataManager: ObservableObject {
     @Published var topBatsmen: [Player] = []
     @Published var topBowlers: [Player] = []
     @Published var matches: [Match] = []
+    @Published var scorecards: [String: Scorecard] = [:] // matchId -> Scorecard
     
     // User preferences
     @AppStorage("selectedDivisionID") private var selectedDivisionID: Int = 8 // Default Div F
     @AppStorage("selectedSeasonID") private var selectedSeasonID: Int = 66 // Default Summer 2025
-    @AppStorage("myTeamName") private var myTeamName: String = "Snoqualmie Wolves"
+    @AppStorage("myTeamName") private var myTeamName: String = "Snoqualmie Wolves Timber"
     @AppStorage("lastDataRefresh") private var lastDataRefreshTimestamp: Double = 0
+    @AppStorage("lastManualRefresh") private var lastManualRefreshTimestamp: Double = 0
     
     private let baseURL = "https://raw.githubusercontent.com/gursohal/arc-insights/main/data"
     
@@ -217,6 +219,38 @@ class DataManager: ObservableObject {
         return response.schedule ?? []
     }
     
+    func fetchScorecard(matchId: String) async -> Scorecard? {
+        // Check if already cached in memory
+        if let cached = scorecards[matchId] {
+            return cached
+        }
+        
+        // Try to load from GitHub
+        let urlString = "\(baseURL)/scorecards_div_\(selectedDivisionID)_season_\(selectedSeasonID).json"
+        guard let url = URL(string: urlString) else {
+            print("❌ Invalid scorecard URL")
+            return nil
+        }
+        
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            let allScorecards = try JSONDecoder().decode([Scorecard].self, from: data)
+            
+            // Cache all scorecards in memory
+            for scorecard in allScorecards {
+                scorecards[scorecard.matchId] = scorecard
+            }
+            
+            print("✅ Loaded \(allScorecards.count) scorecards from GitHub")
+            
+            // Return the requested scorecard
+            return scorecards[matchId]
+        } catch {
+            print("ℹ️  Scorecards not available yet: \(error.localizedDescription)")
+            return nil
+        }
+    }
+    
     
     // MARK: - Helper Methods
     
@@ -230,6 +264,9 @@ class DataManager: ObservableObject {
         }
         if let bowlersData = try? JSONEncoder().encode(topBowlers) {
             UserDefaults.standard.set(bowlersData, forKey: "cachedBowlers")
+        }
+        if let matchesData = try? JSONEncoder().encode(matches) {
+            UserDefaults.standard.set(matchesData, forKey: "cachedMatches")
         }
     }
     
@@ -246,16 +283,73 @@ class DataManager: ObservableObject {
            let bowlers = try? JSONDecoder().decode([Player].self, from: bowlersData) {
             self.topBowlers = bowlers
         }
+        if let matchesData = UserDefaults.standard.data(forKey: "cachedMatches"),
+           let matches = try? JSONDecoder().decode([Match].self, from: matchesData) {
+            self.matches = matches
+        }
         
         if lastDataRefreshTimestamp > 0 {
             lastUpdate = Date(timeIntervalSince1970: lastDataRefreshTimestamp)
         }
     }
     
+    // Automatic refresh check (weekly - for app launch)
     func shouldRefreshData() -> Bool {
+        // Always refresh if no data exists
+        if teams.isEmpty || topBatsmen.isEmpty || topBowlers.isEmpty {
+            return true
+        }
+        
+        // Otherwise check if 7 days have passed
         guard let lastRefresh = lastDataRefresh else { return true }
         let sevenDaysAgo = Calendar.current.date(byAdding: .day, value: -7, to: Date())!
         return lastRefresh < sevenDaysAgo
+    }
+    
+    // Manual refresh check (6 hour cooldown - for user-triggered refresh)
+    func canManualRefreshNow() -> Bool {
+        guard lastManualRefreshTimestamp > 0 else { return true }
+        let lastManualRefresh = Date(timeIntervalSince1970: lastManualRefreshTimestamp)
+        let sixHoursAgo = Calendar.current.date(byAdding: .hour, value: -6, to: Date())!
+        return lastManualRefresh < sixHoursAgo
+    }
+    
+    func timeUntilNextManualRefresh() -> String {
+        guard lastManualRefreshTimestamp > 0 else { return "Ready to refresh" }
+        
+        let lastManualRefresh = Date(timeIntervalSince1970: lastManualRefreshTimestamp)
+        let nextRefreshTime = Calendar.current.date(byAdding: .hour, value: 6, to: lastManualRefresh)!
+        let now = Date()
+        
+        if now >= nextRefreshTime {
+            return "Ready to refresh"
+        }
+        
+        let components = Calendar.current.dateComponents([.hour, .minute], from: now, to: nextRefreshTime)
+        
+        if let hours = components.hour, let minutes = components.minute {
+            if hours > 0 {
+                return "\(hours)h \(minutes)m remaining"
+            } else {
+                return "\(minutes)m remaining"
+            }
+        }
+        
+        return "Calculating..."
+    }
+    
+    // Manual refresh with cooldown tracking
+    func manualRefreshData() async {
+        guard canManualRefreshNow() else {
+            print("⚠️ Manual refresh cooldown active")
+            return
+        }
+        
+        // Update manual refresh timestamp
+        lastManualRefreshTimestamp = Date().timeIntervalSince1970
+        
+        // Perform the refresh
+        await refreshData()
     }
     
     // MARK: - Settings

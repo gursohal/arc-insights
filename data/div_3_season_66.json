@@ -2,7 +2,7 @@
   "division_id": 3,
   "season_id": 66,
   "division_name": "Div A - Summer 2025",
-  "last_updated": "2026-02-08T22:17:27.050494",
+  "last_updated": "2026-02-09T19:06:53.957224",
   "teams": [
     "Hyderabad Blues",
     "PSCC Elites",
@@ -37,7 +37,9 @@
       "innings": "7",
       "runs": "328",
       "strike_rate": "141.38",
-      "average": "46.86"
+      "average": "46.86",
+      "fours": "22",
+      "sixes": "15"
     },
     {
       "rank": "2",
@@ -46,7 +48,9 @@
       "innings": "7",
       "runs": "279",
       "strike_rate": "120.26",
-      "average": "39.86"
+      "average": "39.86",
+      "fours": "20",
+      "sixes": "3"
     },
     {
       "rank": "3",
@@ -55,7 +59,9 @@
       "innings": "6",
       "runs": "219",
       "strike_rate": "105.8",
-      "average": "36.5"
+      "average": "36.5",
+      "fours": "16",
+      "sixes": "3"
     },
     {
       "rank": "4",
@@ -64,7 +70,9 @@
       "innings": "7",
       "runs": "212",
       "strike_rate": "160.61",
-      "average": "30.29"
+      "average": "30.29",
+      "fours": "11",
+      "sixes": "2"
     },
     {
       "rank": "5",
@@ -73,7 +81,9 @@
       "innings": "6",
       "runs": "186",
       "strike_rate": "166.07",
-      "average": "31.0"
+      "average": "31.0",
+      "fours": "11",
+      "sixes": "13"
     },
     {
       "rank": "6",
@@ -82,7 +92,9 @@
       "innings": "7",
       "runs": "174",
       "strike_rate": "362.5",
-      "average": "24.86"
+      "average": "24.86",
+      "fours": "12",
+      "sixes": "4"
     },
     {
       "rank": "7",
@@ -91,7 +103,9 @@
       "innings": "6",
       "runs": "164",
       "strike_rate": "96.47",
-      "average": "27.33"
+      "average": "27.33",
+      "fours": "9",
+      "sixes": "3"
     },
     {
       "rank": "8",
@@ -100,7 +114,9 @@
       "innings": "6",
       "runs": "155",
       "strike_rate": "126.02",
-      "average": "25.83"
+      "average": "25.83",
+      "fours": "9",
+      "sixes": "8"
     },
     {
       "rank": "9",
@@ -109,7 +125,9 @@
       "innings": "6",
       "runs": "147",
       "strike_rate": "109.7",
-      "average": "24.5"
+      "average": "24.5",
+      "fours": "10",
+      "sixes": "3"
     },
     {
       "rank": "10",
@@ -118,7 +136,9 @@
       "innings": "7",
       "runs": "143",
       "strike_rate": "118.18",
-      "average": "20.43"
+      "average": "20.43",
+      "fours": "7",
+      "sixes": "8"
     },
     {
       "rank": "11",
@@ -127,7 +147,9 @@
       "innings": "7",
       "runs": "142",
       "strike_rate": "84.52",
-      "average": "20.29"
+      "average": "20.29",
+      "fours": "4",
+      "sixes": "1"
     },
     {
       "rank": "12",
@@ -136,7 +158,9 @@
       "innings": "7",
       "runs": "141",
       "strike_rate": "99.3",
-      "average": "20.14"
+      "average": "20.14",
+      "fours": "11",
+      "sixes": "2"
     },
     {
       "rank": "13",
@@ -145,7 +169,9 @@
       "innings": "6",
       "runs": "139",
       "strike_rate": "106.92",
-      "average": "23.17"
+      "average": "23.17",
+      "fours": "6",
+      "sixes": "1"
     },
     {
       "rank": "14",
@@ -154,7 +180,9 @@
       "innings": "7",
       "runs": "129",
       "strike_rate": "81.13",
-      "average": "18.43"
+      "average": "18.43",
+      "fours": "6",
+      "sixes": "0"
     },
     {
       "rank": "15",
@@ -163,7 +191,9 @@
       "innings": "5",
       "runs": "127",
       "strike_rate": "136.56",
-      "average": "25.4"
+      "average": "25.4",
+      "fours": "14",
+      "sixes": "6"
     },
     {
       "rank": "16",
@@ -172,7 +202,9 @@
       "innings": "7",
       "runs": "126",
       "strike_rate": "88.11",
-      "average": "18.0"
+      "average": "18.0",
+      "fours": "9",
+      "sixes": "1"
     },
     {
       "rank": "17",
@@ -181,7 +213,9 @@
       "innings": "7",
       "runs": "122",
       "strike_rate": "102.52",
-      "average": "17.43"
+      "average": "17.43",
+      "fours": "10",
+      "sixes": "0"
     },
     {
       "rank": "18",
@@ -190,7 +224,9 @@
       "innings": "6",
       "runs": "121",
       "strike_rate": "123.47",
-      "average": "20.17"
+      "average": "20.17",
+      "fours": "11",
+      "sixes": "3"
     },
     {
       "rank": "19",
@@ -199,7 +235,9 @@
       "innings": "3",
       "runs": "120",
       "strike_rate": "118.81",
-      "average": "40.0"
+      "average": "40.0",
+      "fours": "10",
+      "sixes": "5"
     },
     {
       "rank": "20",
@@ -208,7 +246,9 @@
       "innings": "4",
       "runs": "119",
       "strike_rate": "138.37",
-      "average": "29.75"
+      "average": "29.75",
+      "fours": "9",
+      "sixes": "0"
     },
     {
       "rank": "21",
@@ -217,7 +257,9 @@
       "innings": "5",
       "runs": "118",
       "strike_rate": "112.38",
-      "average": "23.6"
+      "average": "23.6",
+      "fours": "9",
+      "sixes": "2"
     },
     {
       "rank": "22",
@@ -226,7 +268,9 @@
       "innings": "5",
       "runs": "117",
       "strike_rate": "118.18",
-      "average": "23.4"
+      "average": "23.4",
+      "fours": "5",
+      "sixes": "0"
     },
     {
       "rank": "23",
@@ -235,7 +279,9 @@
       "innings": "7",
       "runs": "117",
       "strike_rate": "70.48",
-      "average": "16.71"
+      "average": "16.71",
+      "fours": "2",
+      "sixes": "1"
     },
     {
       "rank": "24",
@@ -244,7 +290,9 @@
       "innings": "6",
       "runs": "109",
       "strike_rate": "123.86",
-      "average": "18.17"
+      "average": "18.17",
+      "fours": "10",
+      "sixes": "1"
     },
     {
       "rank": "25",
@@ -253,7 +301,9 @@
       "innings": "4",
       "runs": "108",
       "strike_rate": "128.57",
-      "average": "27.0"
+      "average": "27.0",
+      "fours": "11",
+      "sixes": "2"
     }
   ],
   "bowlers": [
@@ -754,6 +804,7 @@
   ],
   "schedule": [
     {
+      "match_id": "27142",
       "date": "Saturday 07/19/2025",
       "time": "9:00 AM",
       "ground": "Big Finn Hill Park (Pitch 1)",
@@ -763,11 +814,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "PSCC Elites",
-      "runner_up": "Kachra Boyz(3)",
+      "runner_up": "Kachra Boyz",
+      "loser_points": 3,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-07-19T00:00:00"
     },
     {
+      "match_id": "27143",
       "date": "Saturday 07/19/2025",
       "time": "11:30 AM",
       "ground": "Big Finn Hill Park (Pitch 2)",
@@ -777,11 +831,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "WILLOW WIELDERS",
-      "runner_up": "The Opposition(7)",
+      "runner_up": "The Opposition",
+      "loser_points": 7,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-07-19T00:00:00"
     },
     {
+      "match_id": "27144",
       "date": "Saturday 07/19/2025",
       "time": "2:00 PM",
       "ground": "Big Finn Hill Park (Pitch 3)",
@@ -791,11 +848,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "Ruthless Strikers",
-      "runner_up": "Sidewinders(8)",
+      "runner_up": "Sidewinders",
+      "loser_points": 8,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-07-19T00:00:00"
     },
     {
+      "match_id": "27145",
       "date": "Saturday 07/19/2025",
       "time": "4:30 PM",
       "ground": "Big Finn Hill Park",
@@ -805,11 +865,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "Cross Street Hooligans",
-      "runner_up": "Swing n Drive(1)",
+      "runner_up": "Swing n Drive",
+      "loser_points": 1,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-07-19T00:00:00"
     },
     {
+      "match_id": "27184",
       "date": "Sunday 07/20/2025",
       "time": "8:00 AM",
       "ground": "Petrovitsky Park Field #2",
@@ -819,11 +882,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "We8",
-      "runner_up": "Seattle Blues(4)",
+      "runner_up": "Seattle Blues",
+      "loser_points": 4,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-07-20T00:00:00"
     },
     {
+      "match_id": "27185",
       "date": "Sunday 07/20/2025",
       "time": "10:30 AM",
       "ground": "Petrovitsky Park Field #2",
@@ -833,11 +899,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "PitchHikers",
-      "runner_up": "BATMEN(7)",
+      "runner_up": "BATMEN",
+      "loser_points": 7,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-07-20T00:00:00"
     },
     {
+      "match_id": "27197",
       "date": "Saturday 07/26/2025",
       "time": "9:00 AM",
       "ground": "Big Finn Hill Park (Pitch 1)",
@@ -847,11 +916,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "WILLOW WIELDERS",
-      "runner_up": "Northern Thunder(6)",
+      "runner_up": "Northern Thunder",
+      "loser_points": 6,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-07-26T00:00:00"
     },
     {
+      "match_id": "27198",
       "date": "Saturday 07/26/2025",
       "time": "11:30 AM",
       "ground": "Big Finn Hill Park (Pitch 2)",
@@ -861,11 +933,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "PSCC Elites",
-      "runner_up": "Sidewinders(4)",
+      "runner_up": "Sidewinders",
+      "loser_points": 4,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-07-26T00:00:00"
     },
     {
+      "match_id": "27199",
       "date": "Saturday 07/26/2025",
       "time": "2:00 PM",
       "ground": "Big Finn Hill Park (Pitch 3)",
@@ -875,11 +950,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "Ruthless Strikers",
-      "runner_up": "The Opposition(3)",
+      "runner_up": "The Opposition",
+      "loser_points": 3,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-07-26T00:00:00"
     },
     {
+      "match_id": "27200",
       "date": "Saturday 07/26/2025",
       "time": "4:30 PM",
       "ground": "Big Finn Hill Park",
@@ -889,11 +967,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "Kachra Boyz",
-      "runner_up": "Hyderabad Blues(6)",
+      "runner_up": "Hyderabad Blues",
+      "loser_points": 6,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-07-26T00:00:00"
     },
     {
+      "match_id": "27201",
       "date": "Saturday 07/26/2025",
       "time": "9:00 AM",
       "ground": "Central Park Field #1",
@@ -903,11 +984,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "Cross Street Hooligans",
-      "runner_up": "ICCS CerealKillers(4)",
+      "runner_up": "ICCS CerealKillers",
+      "loser_points": 4,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-07-26T00:00:00"
     },
     {
+      "match_id": "27202",
       "date": "Saturday 07/26/2025",
       "time": "11:30 AM",
       "ground": "Central Park Field #1",
@@ -917,11 +1001,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "ATB Icons",
-      "runner_up": "PSCC Sarfarosh(5)",
+      "runner_up": "PSCC Sarfarosh",
+      "loser_points": 5,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-07-26T00:00:00"
     },
     {
+      "match_id": "27203",
       "date": "Saturday 07/26/2025",
       "time": "2:00 PM",
       "ground": "Central Park Field #1",
@@ -931,11 +1018,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "FatehCC-Wizards",
-      "runner_up": "Swing n Drive(0)",
+      "runner_up": "Swing n Drive",
+      "loser_points": 0,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-07-26T00:00:00"
     },
     {
+      "match_id": "27204",
       "date": "Saturday 07/26/2025",
       "time": "4:30 PM",
       "ground": "Central Park Field #1",
@@ -945,11 +1035,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "FatehCC-Patriots",
-      "runner_up": "Fatehcc-Mavericks(9)",
+      "runner_up": "Fatehcc-Mavericks",
+      "loser_points": 9,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-07-26T00:00:00"
     },
     {
+      "match_id": "27205",
       "date": "Saturday 07/26/2025",
       "time": "9:00 AM",
       "ground": "Central Park Field #2",
@@ -959,11 +1052,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "Seattle Blues",
-      "runner_up": "Pirates of Seattle(7)",
+      "runner_up": "Pirates of Seattle",
+      "loser_points": 7,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-07-26T00:00:00"
     },
     {
+      "match_id": "27206",
       "date": "Saturday 07/26/2025",
       "time": "11:30 AM",
       "ground": "Central Park Field #2",
@@ -973,11 +1069,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "PitchHikers",
-      "runner_up": "DREAM VISION WARRIORS(5)",
+      "runner_up": "DREAM VISION WARRIORS",
+      "loser_points": 5,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-07-26T00:00:00"
     },
     {
+      "match_id": "27207",
       "date": "Saturday 07/26/2025",
       "time": "2:00 PM",
       "ground": "Central Park Field #2",
@@ -987,11 +1086,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "BATMEN",
-      "runner_up": "We8(6)",
+      "runner_up": "We8",
+      "loser_points": 6,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-07-26T00:00:00"
     },
     {
+      "match_id": "27208",
       "date": "Saturday 07/26/2025",
       "time": "4:30 PM",
       "ground": "Central Park Field #2",
@@ -1001,11 +1103,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "Pulikkoottam - Titans",
-      "runner_up": "Pulikkoottam - Blasterz(4)",
+      "runner_up": "Pulikkoottam - Blasterz",
+      "loser_points": 4,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-07-26T00:00:00"
     },
     {
+      "match_id": "27280",
       "date": "Saturday 08/02/2025",
       "time": "11:30 AM",
       "ground": "Marymoor Park Soccer #06",
@@ -1015,11 +1120,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "Sidewinders",
-      "runner_up": "Kachra Boyz(4)",
+      "runner_up": "Kachra Boyz",
+      "loser_points": 4,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-08-02T00:00:00"
     },
     {
+      "match_id": "27306",
       "date": "Sunday 08/03/2025",
       "time": "9:00 AM",
       "ground": "Marymoor Park Soccer #05",
@@ -1029,11 +1137,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "Seattle Blues",
-      "runner_up": "Pulikkoottam - Titans(9)",
+      "runner_up": "Pulikkoottam - Titans",
+      "loser_points": 9,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-08-03T00:00:00"
     },
     {
+      "match_id": "27307",
       "date": "Sunday 08/03/2025",
       "time": "11:30 AM",
       "ground": "Marymoor Park Soccer #05",
@@ -1043,11 +1154,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "BATMEN",
-      "runner_up": "Pirates of Seattle(7)",
+      "runner_up": "Pirates of Seattle",
+      "loser_points": 7,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-08-03T00:00:00"
     },
     {
+      "match_id": "27308",
       "date": "Sunday 08/03/2025",
       "time": "2:00 PM",
       "ground": "Marymoor Park Soccer #05",
@@ -1057,11 +1171,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "We8",
-      "runner_up": "DREAM VISION WARRIORS(5)",
+      "runner_up": "DREAM VISION WARRIORS",
+      "loser_points": 5,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-08-03T00:00:00"
     },
     {
+      "match_id": "27310",
       "date": "Sunday 08/03/2025",
       "time": "9:00 AM",
       "ground": "North SeaTac Park",
@@ -1071,11 +1188,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "Hyderabad Blues",
-      "runner_up": "WILLOW WIELDERS(6)",
+      "runner_up": "WILLOW WIELDERS",
+      "loser_points": 6,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-08-03T00:00:00"
     },
     {
+      "match_id": "27311",
       "date": "Sunday 08/03/2025",
       "time": "11:30 AM",
       "ground": "North SeaTac Park",
@@ -1085,11 +1205,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "Ruthless Strikers",
-      "runner_up": "Northern Thunder(1)",
+      "runner_up": "Northern Thunder",
+      "loser_points": 1,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-08-03T00:00:00"
     },
     {
+      "match_id": "27312",
       "date": "Sunday 08/03/2025",
       "time": "2:00 PM",
       "ground": "North SeaTac Park",
@@ -1099,11 +1222,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "PSCC Elites",
-      "runner_up": "The Opposition(5)",
+      "runner_up": "The Opposition",
+      "loser_points": 5,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-08-03T00:00:00"
     },
     {
+      "match_id": "27313",
       "date": "Sunday 08/03/2025",
       "time": "4:30 PM",
       "ground": "North SeaTac Park",
@@ -1113,11 +1239,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "FatehCC-Patriots",
-      "runner_up": "PSCC Sarfarosh(3)",
+      "runner_up": "PSCC Sarfarosh",
+      "loser_points": 3,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-08-03T00:00:00"
     },
     {
+      "match_id": "27324",
       "date": "Sunday 08/03/2025",
       "time": "9:00 AM",
       "ground": "Ron Regis",
@@ -1127,11 +1256,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "Fatehcc-Mavericks",
-      "runner_up": "Cross Street Hooligans(3)",
+      "runner_up": "Cross Street Hooligans",
+      "loser_points": 3,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-08-03T00:00:00"
     },
     {
+      "match_id": "27325",
       "date": "Sunday 08/03/2025",
       "time": "11:30 AM",
       "ground": "Ron Regis",
@@ -1141,11 +1273,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "FatehCC-Wizards",
-      "runner_up": "ICCS CerealKillers(7)",
+      "runner_up": "ICCS CerealKillers",
+      "loser_points": 7,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-08-03T00:00:00"
     },
     {
+      "match_id": "27326",
       "date": "Sunday 08/03/2025",
       "time": "2:00 PM",
       "ground": "Ron Regis",
@@ -1155,11 +1290,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "ATB Icons",
-      "runner_up": "Swing n Drive(4)",
+      "runner_up": "Swing n Drive",
+      "loser_points": 4,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-08-03T00:00:00"
     },
     {
+      "match_id": "27327",
       "date": "Sunday 08/03/2025",
       "time": "4:30 PM",
       "ground": "Ron Regis",
@@ -1169,11 +1307,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "Pulikkoottam - Blasterz",
-      "runner_up": "PitchHikers(5)",
+      "runner_up": "PitchHikers",
+      "loser_points": 5,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-08-03T00:00:00"
     },
     {
+      "match_id": "27399",
       "date": "Saturday 08/16/2025",
       "time": "2:00 PM",
       "ground": "Central Park Field #4",
@@ -1183,11 +1324,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "Ruthless Strikers",
-      "runner_up": "WILLOW WIELDERS(2)",
+      "runner_up": "WILLOW WIELDERS",
+      "loser_points": 2,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-08-16T00:00:00"
     },
     {
+      "match_id": "27400",
       "date": "Saturday 08/16/2025",
       "time": "4:30 PM",
       "ground": "Central Park Field #4",
@@ -1197,11 +1341,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "Hyderabad Blues",
-      "runner_up": "Sidewinders(8)",
+      "runner_up": "Sidewinders",
+      "loser_points": 8,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-08-16T00:00:00"
     },
     {
+      "match_id": "27401",
       "date": "Saturday 08/16/2025",
       "time": "10:00 AM",
       "ground": "GrassLawn Park-Softball Field 1",
@@ -1211,11 +1358,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "The Opposition",
-      "runner_up": "Kachra Boyz(6)",
+      "runner_up": "Kachra Boyz",
+      "loser_points": 6,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-08-16T00:00:00"
     },
     {
+      "match_id": "27402",
       "date": "Saturday 08/16/2025",
       "time": "12:30 PM",
       "ground": "GrassLawn Park-Softball Field 1",
@@ -1225,11 +1375,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "PSCC Elites",
-      "runner_up": "Northern Thunder(6)",
+      "runner_up": "Northern Thunder",
+      "loser_points": 6,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-08-16T00:00:00"
     },
     {
+      "match_id": "27403",
       "date": "Saturday 08/16/2025",
       "time": "3:00 PM",
       "ground": "GrassLawn Park-Softball Field 1",
@@ -1239,11 +1392,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "FatehCC-Wizards",
-      "runner_up": "Cross Street Hooligans(6)",
+      "runner_up": "Cross Street Hooligans",
+      "loser_points": 6,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-08-16T00:00:00"
     },
     {
+      "match_id": "27404",
       "date": "Saturday 08/16/2025",
       "time": "1:00 PM",
       "ground": "GrassLawn Park-Softball Field 2",
@@ -1253,11 +1409,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "Fatehcc-Mavericks",
-      "runner_up": "PSCC Sarfarosh(5)",
+      "runner_up": "PSCC Sarfarosh",
+      "loser_points": 5,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-08-16T00:00:00"
     },
     {
+      "match_id": "27405",
       "date": "Saturday 08/16/2025",
       "time": "3:30 PM",
       "ground": "GrassLawn Park-Softball Field 2",
@@ -1267,11 +1426,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "FatehCC-Patriots",
-      "runner_up": "Swing n Drive(3)",
+      "runner_up": "Swing n Drive",
+      "loser_points": 3,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-08-16T00:00:00"
     },
     {
+      "match_id": "27406",
       "date": "Saturday 08/16/2025",
       "time": "12:00 PM",
       "ground": "Hartman Park-Soccer Field",
@@ -1281,11 +1443,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "ICCS CerealKillers",
-      "runner_up": "ATB Icons(7)",
+      "runner_up": "ATB Icons",
+      "loser_points": 7,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-08-16T00:00:00"
     },
     {
+      "match_id": "27407",
       "date": "Saturday 08/16/2025",
       "time": "2:30 PM",
       "ground": "Hartman Park-Soccer Field",
@@ -1295,11 +1460,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "BATMEN",
-      "runner_up": "Seattle Blues(5)",
+      "runner_up": "Seattle Blues",
+      "loser_points": 5,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-08-16T00:00:00"
     },
     {
+      "match_id": "27408",
       "date": "Saturday 08/16/2025",
       "time": "8:00 AM",
       "ground": "Hidden Valley Park Field 1",
@@ -1309,11 +1477,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "Pulikkoottam - Titans",
-      "runner_up": "PitchHikers(3)",
+      "runner_up": "PitchHikers",
+      "loser_points": 3,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-08-16T00:00:00"
     },
     {
+      "match_id": "27409",
       "date": "Saturday 08/16/2025",
       "time": "10:30 AM",
       "ground": "Hidden Valley Park Field 1",
@@ -1323,11 +1494,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "Pulikkoottam - Blasterz",
-      "runner_up": "We8(4)",
+      "runner_up": "We8",
+      "loser_points": 4,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-08-16T00:00:00"
     },
     {
+      "match_id": "27410",
       "date": "Saturday 08/16/2025",
       "time": "1:00 PM",
       "ground": "Hidden Valley Park Field 1",
@@ -1337,11 +1511,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "Pirates of Seattle",
-      "runner_up": "DREAM VISION WARRIORS(2)",
+      "runner_up": "DREAM VISION WARRIORS",
+      "loser_points": 2,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-08-16T00:00:00"
     },
     {
+      "match_id": "27495",
       "date": "Sunday 08/24/2025",
       "time": "1:00 PM",
       "ground": "Hidden Valley Park Field 1",
@@ -1351,11 +1528,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "Sidewinders",
-      "runner_up": "The Opposition(6)",
+      "runner_up": "The Opposition",
+      "loser_points": 6,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-08-24T00:00:00"
     },
     {
+      "match_id": "27496",
       "date": "Sunday 08/24/2025",
       "time": "9:00 AM",
       "ground": "Marymoor Park Soccer #05",
@@ -1365,11 +1545,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "Ruthless Strikers",
-      "runner_up": "Hyderabad Blues(7)",
+      "runner_up": "Hyderabad Blues",
+      "loser_points": 7,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-08-24T00:00:00"
     },
     {
+      "match_id": "27497",
       "date": "Sunday 08/24/2025",
       "time": "11:30 AM",
       "ground": "Marymoor Park Soccer #05",
@@ -1379,11 +1562,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "PSCC Elites",
-      "runner_up": "WILLOW WIELDERS(1)",
+      "runner_up": "WILLOW WIELDERS",
+      "loser_points": 1,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-08-24T00:00:00"
     },
     {
+      "match_id": "27498",
       "date": "Sunday 08/24/2025",
       "time": "1:00 PM",
       "ground": "Marymoor Park Soccer #06",
@@ -1393,11 +1579,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "Northern Thunder",
-      "runner_up": "Kachra Boyz(4)",
+      "runner_up": "Kachra Boyz",
+      "loser_points": 4,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-08-24T00:00:00"
     },
     {
+      "match_id": "27499",
       "date": "Sunday 08/24/2025",
       "time": "3:30 PM",
       "ground": "Marymoor Park Soccer #06",
@@ -1407,11 +1596,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "PSCC Sarfarosh",
-      "runner_up": "Swing n Drive(4)",
+      "runner_up": "Swing n Drive",
+      "loser_points": 4,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-08-24T00:00:00"
     },
     {
+      "match_id": "27500",
       "date": "Sunday 08/24/2025",
       "time": "9:00 AM",
       "ground": "North SeaTac Park",
@@ -1421,11 +1613,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "Fatehcc-Mavericks",
-      "runner_up": "FatehCC-Wizards(4)",
+      "runner_up": "FatehCC-Wizards",
+      "loser_points": 4,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-08-24T00:00:00"
     },
     {
+      "match_id": "27501",
       "date": "Sunday 08/24/2025",
       "time": "11:30 AM",
       "ground": "North SeaTac Park",
@@ -1435,11 +1630,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "ATB Icons",
-      "runner_up": "Cross Street Hooligans(2)",
+      "runner_up": "Cross Street Hooligans",
+      "loser_points": 2,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-08-24T00:00:00"
     },
     {
+      "match_id": "27502",
       "date": "Sunday 08/24/2025",
       "time": "2:00 PM",
       "ground": "North SeaTac Park",
@@ -1449,11 +1647,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "ICCS CerealKillers",
-      "runner_up": "FatehCC-Patriots(7)",
+      "runner_up": "FatehCC-Patriots",
+      "loser_points": 7,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-08-24T00:00:00"
     },
     {
+      "match_id": "27503",
       "date": "Sunday 08/24/2025",
       "time": "4:30 PM",
       "ground": "North SeaTac Park",
@@ -1463,11 +1664,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "We8",
-      "runner_up": "PitchHikers(9)",
+      "runner_up": "PitchHikers",
+      "loser_points": 9,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-08-24T00:00:00"
     },
     {
+      "match_id": "27504",
       "date": "Sunday 08/24/2025",
       "time": "8:00 AM",
       "ground": "Petrovitsky Park Field #1",
@@ -1477,11 +1681,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "Pulikkoottam - Titans",
-      "runner_up": "BATMEN(7)",
+      "runner_up": "BATMEN",
+      "loser_points": 7,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-08-24T00:00:00"
     },
     {
+      "match_id": "27505",
       "date": "Sunday 08/24/2025",
       "time": "10:30 AM",
       "ground": "Petrovitsky Park Field #1",
@@ -1491,11 +1698,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "Seattle Blues",
-      "runner_up": "DREAM VISION WARRIORS(4)",
+      "runner_up": "DREAM VISION WARRIORS",
+      "loser_points": 4,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-08-24T00:00:00"
     },
     {
+      "match_id": "27506",
       "date": "Sunday 08/24/2025",
       "time": "1:00 PM",
       "ground": "Petrovitsky Park Field #1",
@@ -1505,11 +1715,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "Pirates of Seattle",
-      "runner_up": "Pulikkoottam - Blasterz(6)",
+      "runner_up": "Pulikkoottam - Blasterz",
+      "loser_points": 6,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-08-24T00:00:00"
     },
     {
+      "match_id": "27526",
       "date": "Sunday 09/14/2025",
       "time": "11:30 AM",
       "ground": "North SeaTac Park",
@@ -1519,11 +1732,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "Hyderabad Blues",
-      "runner_up": "Northern Thunder(6)",
+      "runner_up": "Northern Thunder",
+      "loser_points": 6,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-09-14T00:00:00"
     },
     {
+      "match_id": "27527",
       "date": "Sunday 09/14/2025",
       "time": "2:00 PM",
       "ground": "North SeaTac Park",
@@ -1533,11 +1749,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "Fatehcc-Mavericks",
-      "runner_up": "ICCS CerealKillers(7)",
+      "runner_up": "ICCS CerealKillers",
+      "loser_points": 7,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-09-14T00:00:00"
     },
     {
+      "match_id": "27528",
       "date": "Sunday 09/14/2025",
       "time": "4:30 PM",
       "ground": "North SeaTac Park",
@@ -1547,11 +1766,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "ATB Icons",
-      "runner_up": "FatehCC-Patriots(7)",
+      "runner_up": "FatehCC-Patriots",
+      "loser_points": 7,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-09-14T00:00:00"
     },
     {
+      "match_id": "27529",
       "date": "Sunday 09/14/2025",
       "time": "9:00 AM",
       "ground": "Ron Regis",
@@ -1561,11 +1783,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "PSCC Sarfarosh",
-      "runner_up": "FatehCC-Wizards(8)",
+      "runner_up": "FatehCC-Wizards",
+      "loser_points": 8,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-09-14T00:00:00"
     },
     {
+      "match_id": "27530",
       "date": "Sunday 09/14/2025",
       "time": "11:30 AM",
       "ground": "Ron Regis",
@@ -1575,11 +1800,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "Pulikkoottam - Titans",
-      "runner_up": "Pirates of Seattle(3)",
+      "runner_up": "Pirates of Seattle",
+      "loser_points": 3,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-09-14T00:00:00"
     },
     {
+      "match_id": "27531",
       "date": "Sunday 09/14/2025",
       "time": "2:00 PM",
       "ground": "Ron Regis",
@@ -1589,11 +1817,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "Pulikkoottam - Blasterz",
-      "runner_up": "DREAM VISION WARRIORS(4)",
+      "runner_up": "DREAM VISION WARRIORS",
+      "loser_points": 4,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-09-14T00:00:00"
     },
     {
+      "match_id": "27596",
       "date": "Saturday 09/20/2025",
       "time": "2:30 PM",
       "ground": "Big Finn Hill Park (Pitch 4)",
@@ -1603,11 +1834,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "PSCC Elites",
-      "runner_up": "Ruthless Strikers(2)",
+      "runner_up": "Ruthless Strikers",
+      "loser_points": 2,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-09-20T00:00:00"
     },
     {
+      "match_id": "27597",
       "date": "Saturday 09/20/2025",
       "time": "5:00 PM",
       "ground": "Big Finn Hill Park",
@@ -1617,11 +1851,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "The Opposition",
-      "runner_up": "Hyderabad Blues(9)",
+      "runner_up": "Hyderabad Blues",
+      "loser_points": 9,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-09-20T00:00:00"
     },
     {
+      "match_id": "27784",
       "date": "Saturday 09/20/2025",
       "time": "4:30 PM",
       "ground": "Evergreen Playfields 1",
@@ -1631,11 +1868,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "Sidewinders",
-      "runner_up": "Northern Thunder(5)",
+      "runner_up": "Northern Thunder",
+      "loser_points": 5,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-09-20T00:00:00"
     },
     {
+      "match_id": "27785",
       "date": "Saturday 09/20/2025",
       "time": "7:00 PM",
       "ground": "Evergreen Playfields 1",
@@ -1645,11 +1885,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "WILLOW WIELDERS",
-      "runner_up": "Kachra Boyz(8)",
+      "runner_up": "Kachra Boyz",
+      "loser_points": 8,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-09-20T00:00:00"
     },
     {
+      "match_id": "27598",
       "date": "Saturday 09/20/2025",
       "time": "9:00 AM",
       "ground": "North SeaTac Park",
@@ -1659,11 +1902,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "FatehCC-Wizards",
-      "runner_up": "ATB Icons(6)",
+      "runner_up": "ATB Icons",
+      "loser_points": 6,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-09-20T00:00:00"
     },
     {
+      "match_id": "27599",
       "date": "Saturday 09/20/2025",
       "time": "11:30 AM",
       "ground": "North SeaTac Park",
@@ -1673,11 +1919,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "Fatehcc-Mavericks",
-      "runner_up": "Swing n Drive(0)",
+      "runner_up": "Swing n Drive",
+      "loser_points": 0,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-09-20T00:00:00"
     },
     {
+      "match_id": "27600",
       "date": "Saturday 09/20/2025",
       "time": "2:00 PM",
       "ground": "North SeaTac Park",
@@ -1687,11 +1936,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "PSCC Sarfarosh",
-      "runner_up": "ICCS CerealKillers(6)",
+      "runner_up": "ICCS CerealKillers",
+      "loser_points": 6,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-09-20T00:00:00"
     },
     {
+      "match_id": "27601",
       "date": "Saturday 09/20/2025",
       "time": "4:30 PM",
       "ground": "North SeaTac Park",
@@ -1701,11 +1953,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "FatehCC-Patriots",
-      "runner_up": "Cross Street Hooligans(9)",
+      "runner_up": "Cross Street Hooligans",
+      "loser_points": 9,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-09-20T00:00:00"
     },
     {
+      "match_id": "27602",
       "date": "Saturday 09/20/2025",
       "time": "1:00 PM",
       "ground": "Perigo Park-Softball Field 1",
@@ -1715,11 +1970,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "BATMEN",
-      "runner_up": "DREAM VISION WARRIORS(6)",
+      "runner_up": "DREAM VISION WARRIORS",
+      "loser_points": 6,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-09-20T00:00:00"
     },
     {
+      "match_id": "27603",
       "date": "Saturday 09/20/2025",
       "time": "3:30 PM",
       "ground": "Perigo Park-Softball Field 1",
@@ -1729,11 +1987,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "Pulikkoottam - Titans",
-      "runner_up": "We8(5)",
+      "runner_up": "We8",
+      "loser_points": 5,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-09-20T00:00:00"
     },
     {
+      "match_id": "27604",
       "date": "Saturday 09/20/2025",
       "time": "9:00 AM",
       "ground": "Ron Regis",
@@ -1743,11 +2004,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "Pirates of Seattle",
-      "runner_up": "PitchHikers(8)",
+      "runner_up": "PitchHikers",
+      "loser_points": 8,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-09-20T00:00:00"
     },
     {
+      "match_id": "27605",
       "date": "Saturday 09/20/2025",
       "time": "11:30 AM",
       "ground": "Ron Regis",
@@ -1757,11 +2021,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "Seattle Blues",
-      "runner_up": "Pulikkoottam - Blasterz(6)",
+      "runner_up": "Pulikkoottam - Blasterz",
+      "loser_points": 6,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-09-20T00:00:00"
     },
     {
+      "match_id": "27692",
       "date": "Saturday 10/11/2025",
       "time": "4:00 PM",
       "ground": "Redmond Ridge Park -- Soccer Field",
@@ -1771,11 +2038,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "Pulikkoottam - Titans",
-      "runner_up": "DREAM VISION WARRIORS(2)",
+      "runner_up": "DREAM VISION WARRIORS",
+      "loser_points": 2,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-10-11T00:00:00"
     },
     {
+      "match_id": "27684",
       "date": "Saturday 10/11/2025",
       "time": "2:00 PM",
       "ground": "Ron Regis",
@@ -1785,11 +2055,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "PSCC Elites",
-      "runner_up": "Hyderabad Blues(9)",
+      "runner_up": "Hyderabad Blues",
+      "loser_points": 9,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-10-11T00:00:00"
     },
     {
+      "match_id": "27685",
       "date": "Sunday 10/12/2025",
       "time": "8:00 AM",
       "ground": "North Robinswood Park",
@@ -1799,11 +2072,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "The Opposition",
-      "runner_up": "Northern Thunder(3)",
+      "runner_up": "Northern Thunder",
+      "loser_points": 3,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-10-12T00:00:00"
     },
     {
+      "match_id": "27686",
       "date": "Sunday 10/12/2025",
       "time": "10:30 AM",
       "ground": "North Robinswood Park",
@@ -1813,11 +2089,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "Kachra Boyz",
-      "runner_up": "Ruthless Strikers(8)",
+      "runner_up": "Ruthless Strikers",
+      "loser_points": 8,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-10-12T00:00:00"
     },
     {
+      "match_id": "27687",
       "date": "Sunday 10/12/2025",
       "time": "1:00 PM",
       "ground": "North Robinswood Park",
@@ -1827,11 +2106,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "Sidewinders",
-      "runner_up": "WILLOW WIELDERS(3)",
+      "runner_up": "WILLOW WIELDERS",
+      "loser_points": 3,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-10-12T00:00:00"
     },
     {
+      "match_id": "27688",
       "date": "Sunday 10/12/2025",
       "time": "3:30 PM",
       "ground": "North Robinswood Park",
@@ -1841,11 +2123,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "ATB Icons",
-      "runner_up": "Fatehcc-Mavericks(5)",
+      "runner_up": "Fatehcc-Mavericks",
+      "loser_points": 5,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-10-12T00:00:00"
     },
     {
+      "match_id": "27690",
       "date": "Sunday 10/12/2025",
       "time": "11:30 AM",
       "ground": "North SeaTac Park",
@@ -1855,11 +2140,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "FatehCC-Patriots",
-      "runner_up": "FatehCC-Wizards(9)",
+      "runner_up": "FatehCC-Wizards",
+      "loser_points": 9,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-10-12T00:00:00"
     },
     {
+      "match_id": "27693",
       "date": "Sunday 10/12/2025",
       "time": "6:30 PM",
       "ground": "Redmond Ridge Park -- Soccer Field",
@@ -1869,11 +2157,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "We8",
-      "runner_up": "Pirates of Seattle(8)",
+      "runner_up": "Pirates of Seattle",
+      "loser_points": 8,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-10-12T00:00:00"
     },
     {
+      "match_id": "27694",
       "date": "Sunday 10/12/2025",
       "time": "9:00 AM",
       "ground": "Ron Regis",
@@ -1883,11 +2174,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "BATMEN",
-      "runner_up": "Pulikkoottam - Blasterz(6)",
+      "runner_up": "Pulikkoottam - Blasterz",
+      "loser_points": 6,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-10-12T00:00:00"
     },
     {
+      "match_id": "27695",
       "date": "Sunday 10/12/2025",
       "time": "11:30 AM",
       "ground": "Ron Regis",
@@ -1897,11 +2191,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "PitchHikers",
-      "runner_up": "Seattle Blues(6)",
+      "runner_up": "Seattle Blues",
+      "loser_points": 6,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-10-12T00:00:00"
     },
     {
+      "match_id": "27689",
       "date": "Friday 10/17/2025",
       "time": "3:30 PM",
       "ground": "Canyon Park Middle School Stadium",
@@ -1911,11 +2208,14 @@
       "umpire2": "batting side",
       "match_type": "League",
       "winner": "ICCS CerealKillers",
-      "runner_up": "Swing n Drive(2)",
+      "runner_up": "Swing n Drive",
+      "loser_points": 2,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-10-17T00:00:00"
     },
     {
+      "match_id": "27691",
       "date": "Sunday 10/19/2025",
       "time": "2:00 AM",
       "ground": "North SeaTac Park",
@@ -1925,11 +2225,14 @@
       "umpire2": "Original 10/12 2 PM",
       "match_type": "League",
       "winner": "Cross Street Hooligans",
-      "runner_up": "PSCC Sarfarosh(10)",
+      "runner_up": "PSCC Sarfarosh",
+      "loser_points": 10,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-10-19T00:00:00"
     },
     {
+      "match_id": "27892",
       "date": "Sunday 11/02/2025",
       "time": "8:00 AM",
       "ground": "Hidden Valley Park Field 1",
@@ -1939,11 +2242,14 @@
       "umpire2": "FatehCC-Patriots",
       "match_type": "Quarter 1",
       "winner": "PSCC Elites",
-      "runner_up": "Sidewinders(6)",
+      "runner_up": "Sidewinders",
+      "loser_points": 6,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-11-02T00:00:00"
     },
     {
+      "match_id": "27893",
       "date": "Sunday 11/02/2025",
       "time": "10:30 AM",
       "ground": "Hidden Valley Park Field 1",
@@ -1953,11 +2259,14 @@
       "umpire2": "Sidewinders",
       "match_type": "Quarter 2",
       "winner": "Pulikkoottam - Titans",
-      "runner_up": "FatehCC-Patriots(5)",
+      "runner_up": "FatehCC-Patriots",
+      "loser_points": 5,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-11-02T00:00:00"
     },
     {
+      "match_id": "27894",
       "date": "Sunday 11/02/2025",
       "time": "1:00 PM",
       "ground": "Hidden Valley Park Field 1",
@@ -1967,11 +2276,14 @@
       "umpire2": "Ruthless Strikers",
       "match_type": "Quarter 3",
       "winner": "Fatehcc-Mavericks",
-      "runner_up": "BATMEN(2)",
+      "runner_up": "BATMEN",
+      "loser_points": 2,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-11-02T00:00:00"
     },
     {
+      "match_id": "27895",
       "date": "Sunday 11/02/2025",
       "time": "3:30 PM",
       "ground": "Hidden Valley Park Field 1",
@@ -1981,11 +2293,14 @@
       "umpire2": "BATMEN",
       "match_type": "Quarter 4",
       "winner": "ATB Icons",
-      "runner_up": "Ruthless Strikers(9)",
+      "runner_up": "Ruthless Strikers",
+      "loser_points": 9,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-11-02T00:00:00"
     },
     {
+      "match_id": "27924",
       "date": "Saturday 11/08/2025",
       "time": "8:00 AM",
       "ground": "GrassLawn Park-Softball Field 1",
@@ -1995,11 +2310,14 @@
       "umpire2": "Fatehcc-Mavericks",
       "match_type": "Semi 1",
       "winner": "ATB Icons",
-      "runner_up": "PSCC Elites(7)",
+      "runner_up": "PSCC Elites",
+      "loser_points": 7,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-11-08T00:00:00"
     },
     {
+      "match_id": "27925",
       "date": "Saturday 11/08/2025",
       "time": "10:30 AM",
       "ground": "GrassLawn Park-Softball Field 1",
@@ -2009,11 +2327,14 @@
       "umpire2": "ATB Icons",
       "match_type": "Semi 2",
       "winner": "Pulikkoottam - Titans",
-      "runner_up": "Fatehcc-Mavericks(5)",
+      "runner_up": "Fatehcc-Mavericks",
+      "loser_points": 5,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-11-08T00:00:00"
     },
     {
+      "match_id": "27940",
       "date": "Saturday 11/15/2025",
       "time": "8:00 AM",
       "ground": "GrassLawn Park-Softball Field 1",
@@ -2023,7 +2344,9 @@
       "umpire2": "Super Fit Challengers",
       "match_type": "Finals",
       "winner": "Pulikkoottam - Titans",
-      "runner_up": "ATB Icons(5)",
+      "runner_up": "ATB Icons",
+      "loser_points": 5,
+      "winner_points": 30,
       "status": "completed",
       "date_parsed": "2025-11-15T00:00:00"
     }

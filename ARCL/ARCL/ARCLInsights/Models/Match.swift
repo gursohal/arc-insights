@@ -7,6 +7,7 @@ import Foundation
 
 struct Match: Codable, Identifiable {
     let id: UUID
+    let matchId: String?
     let date: String
     let time: String
     let ground: String
@@ -23,6 +24,7 @@ struct Match: Codable, Identifiable {
     let loserPoints: Int
     
     enum CodingKeys: String, CodingKey {
+        case matchId = "match_id"
         case date, time, ground, team1, team2
         case umpire1, umpire2
         case matchType = "match_type"
@@ -37,6 +39,7 @@ struct Match: Codable, Identifiable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.id = UUID()
+        self.matchId = try container.decodeIfPresent(String.self, forKey: .matchId)
         self.date = try container.decode(String.self, forKey: .date)
         self.time = try container.decode(String.self, forKey: .time)
         self.ground = try container.decode(String.self, forKey: .ground)
@@ -54,8 +57,9 @@ struct Match: Codable, Identifiable {
         self.loserPoints = try container.decodeIfPresent(Int.self, forKey: .loserPoints) ?? 0
     }
     
-    init(id: UUID = UUID(), date: String, time: String, ground: String, team1: String, team2: String, umpire1: String, umpire2: String, matchType: String, winner: String, runnerUp: String, status: MatchStatus, dateParsed: String? = nil, winnerPoints: Int = 30, loserPoints: Int = 0) {
+    init(id: UUID = UUID(), matchId: String? = nil, date: String, time: String, ground: String, team1: String, team2: String, umpire1: String, umpire2: String, matchType: String, winner: String, runnerUp: String, status: MatchStatus, dateParsed: String? = nil, winnerPoints: Int = 30, loserPoints: Int = 0) {
         self.id = id
+        self.matchId = matchId
         self.date = date
         self.time = time
         self.ground = ground

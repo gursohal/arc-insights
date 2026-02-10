@@ -162,7 +162,10 @@ struct ScheduleView: View {
                             
                             if showCompleted {
                                 ForEach(completedMatches) { match in
-                                    CompletedMatchCard(match: match, teamName: myTeamName)
+                                    NavigationLink(destination: ScorecardView(matchId: String(match.id.uuidString))) {
+                                        CompletedMatchCard(match: match, teamName: myTeamName)
+                                    }
+                                    .buttonStyle(PlainButtonStyle())
                                 }
                             }
                         }

@@ -19,10 +19,37 @@ class ScheduleScraper(BaseScraper):
         if not soup:
             return []
         
-        table_data = self.extract_table_data(soup, 'GridView')
+        # Get the table
+        table = soup.find('table', {'id': lambda x: x and 'GridView' in x})
+        if not table:
+            return []
+        
+        rows = table.find_all('tr')[1:]  # Skip header
         matches = []
         
-        for row in table_data:
+        for row in rows:
+            cols = row.find_all(['td', 'th'])
+            if not cols or len(cols) < 5:
+                continue
+            
+            # Extract text data
+            row_data = [col.get_text(strip=True) for col in cols]
+            
+            # Extract match_id from link (usually in Winner column - index 8)
+            match_id = None
+            if len(cols) > 8:
+                winner_col = cols[8]
+                link = winner_col.find('a')
+                if link and 'href' in link.attrs:
+                    href = link['href']
+                    # Extract match_id from href like "ScoreCard.aspx?match_id=12345"
+                    if 'match_id=' in href:
+                        try:
+                            match_id = href.split('match_id=')[1].split('&')[0]
+                        except:
+                            pass
+            
+            row = row_data  # Replace row with extracted data for compatibility
             # Columns: Date, Time, Ground, Team1, Team2, Umpire, Umpire2, Match Type, Winner, Runner
             if len(row) >= 5:
                 try:
@@ -41,6 +68,7 @@ class ScheduleScraper(BaseScraper):
                             loser_points = 0
                     
                     match = {
+                        "match_id": match_id,
                         "date": row[0] if len(row) > 0 else "",
                         "time": row[1] if len(row) > 1 else "",
                         "ground": row[2] if len(row) > 2 else "",

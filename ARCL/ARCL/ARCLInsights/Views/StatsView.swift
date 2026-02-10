@@ -32,6 +32,8 @@ struct StatsView: View {
 
 struct BattingStatsView: View {
     let players: [Player]
+    @EnvironmentObject var dataManager: DataManager
+    @State private var showRefreshAlert = false
     
     var body: some View {
         List(players) { player in

@@ -22,7 +22,7 @@ class ARCLDataScraper:
         self.schedule_scraper = ScheduleScraper()
         self.scorecard_scraper = ScorecardScraper()
     
-    def scrape_division(self, division_id, season_id, division_name):
+    def scrape_division(self, division_id, season_id, division_name, include_scorecards=False):
         """Scrape all data for a division"""
         print(f"\n📊 Scraping {division_name} (Div ID: {division_id}, Season: {season_id})")
         print("=" * 60)
@@ -55,14 +55,77 @@ class ARCLDataScraper:
         print(f"   📅 {len(data['schedule'])} matches in schedule")
         print("=" * 60)
         
+        # Scrape scorecards if requested
+        if include_scorecards:
+            self.scrape_scorecards(division_id, season_id, division_name, data['schedule'])
+        
         return data
     
-    def scrape_multiple_divisions(self, divisions):
+    def scrape_scorecards(self, division_id, season_id, division_name, schedule):
+        """Scrape all scorecards for a division"""
+        print(f"\n🎯 Scraping scorecards for {division_name}...")
+        
+        # Extract match IDs from schedule - only completed matches
+        match_ids = []
+        for match in schedule:
+            if match.get('status') == 'completed':
+                # Try to extract match_id from the schedule data
+                # The match_id might be in different formats depending on source
+                if 'match_id' in match:
+                    match_ids.append(match['match_id'])
+        
+        if not match_ids:
+            print(f"  ℹ️  No completed matches found for scorecard scraping")
+            return
+        
+        # Scrape all scorecards
+        scorecards = self.scorecard_scraper.scrape_division_scorecards(
+            division_id, season_id, match_ids
+        )
+        
+        if not scorecards:
+            print(f"  ⚠️  No scorecards scraped")
+            return
+        
+        # Save scorecards to separate file
+        scorecard_filename = f"data/scorecards_div_{division_id}_season_{season_id}.json"
+        
+        with open(scorecard_filename, 'w') as f:
+            json.dump(scorecards, f, indent=2)
+        
+        print(f"✅ Saved {scorecard_filename} ({len(scorecards)} scorecards)")
+        
+        # Aggregate boundaries from scorecards
+        print(f"\n🎯 Aggregating boundary statistics...")
+        boundary_data = aggregate_boundaries(scorecards)
+        
+        # Merge with existing batsmen data
+        batsmen_filename = f"data/div_{division_id}_season_{season_id}.json"
+        if os.path.exists(batsmen_filename):
+            with open(batsmen_filename, 'r') as f:
+                division_data = json.load(f)
+            
+            # Merge boundaries
+            updated_batsmen = merge_boundaries_with_batsmen(
+                division_data.get('batsmen', []), 
+                boundary_data
+            )
+            division_data['batsmen'] = updated_batsmen
+            
+            # Save updated data
+            with open(batsmen_filename, 'w') as f:
+                json.dump(division_data, f, indent=2)
+            
+            print(f"✅ Updated batsmen data with boundary statistics")
+    
+    def scrape_multiple_divisions(self, divisions, include_scorecards=False):
         """Scrape multiple divisions at once"""
         results = {}
         for div_id, season_id, name in divisions:
             try:
-                results[f"div_{div_id}"] = self.scrape_division(div_id, season_id, name)
+                results[f"div_{div_id}"] = self.scrape_division(
+                    div_id, season_id, name, include_scorecards
+                )
             except Exception as e:
                 print(f"❌ Error scraping {name}: {e}")
         return results
@@ -85,6 +148,14 @@ def main():
     division_ids = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
     division_names = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N"]
     
+    # Check for flags
+    include_scorecards = "--scorecards" in sys.argv
+    
+    if include_scorecards:
+        print("\n🎯 Scorecard scraping ENABLED")
+        print("   This will scrape detailed match scorecards and boundary data")
+        print("   Estimated time: ~24 minutes for all divisions\n")
+    
     # Check if --all-seasons flag is provided
     if "--all-seasons" in sys.argv:
         print("\n🌍 Scraping ALL seasons and divisions...")
@@ -93,14 +164,14 @@ def main():
             for div_id, div_name in zip(division_ids, division_names):
                 all_combinations.append((div_id, season_id, f"Div {div_name} - {season_name}"))
         
-        scraper.scrape_multiple_divisions(all_combinations)
+        scraper.scrape_multiple_divisions(all_combinations, include_scorecards)
     else:
         # Default: Just scrape current season (Summer 2025)
         divisions = []
         for div_id, div_name in zip(division_ids, division_names):
             divisions.append((div_id, 66, f"Div {div_name} - Summer 2025"))
         
-        scraper.scrape_multiple_divisions(divisions)
+        scraper.scrape_multiple_divisions(divisions, include_scorecards)
     
     print("\n🎉 All scraping complete!")
 

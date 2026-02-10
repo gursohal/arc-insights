@@ -61,12 +61,19 @@ struct SettingsView: View {
                         }
                     }
                     
-                    Toggle("Auto-refresh Weekly", isOn: $autoRefresh)
+                    // Refresh cooldown status
+                    HStack {
+                        Text("Manual Refresh Cooldown")
+                        Spacer()
+                        Text(dataManager.timeUntilNextManualRefresh())
+                            .foregroundColor(dataManager.canManualRefreshNow() ? .green : .orange)
+                            .font(.caption)
+                    }
                     
                     Button(action: {
                         Task {
                             isRefreshing = true
-                            await dataManager.refreshData()
+                            await dataManager.manualRefreshData()
                             isRefreshing = false
                         }
                     }) {
@@ -75,12 +82,19 @@ struct SettingsView: View {
                                 ProgressView()
                                     .progressViewStyle(.circular)
                             }
-                            Text("Refresh Now")
+                            Text(dataManager.canManualRefreshNow() ? "Refresh Now" : "Cooldown Active")
                             Spacer()
                             Image(systemName: "arrow.clockwise")
                         }
                     }
-                    .disabled(isRefreshing)
+                    .disabled(isRefreshing || !dataManager.canManualRefreshNow())
+                    
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("• Automatic refresh: Weekly when app opens")
+                        Text("• Manual refresh: Limited to once every 6 hours")
+                    }
+                    .font(.caption)
+                    .foregroundColor(.secondary)
                 }
                 
                 Section(header: Text("About")) {
