@@ -2,7 +2,7 @@
   "division_id": 9,
   "season_id": 66,
   "division_name": "Div G - Summer 2025",
-  "last_updated": "2026-02-09T19:03:30.830812",
+  "last_updated": "2026-02-09T19:53:45.553413",
   "teams": [
     "Seattle Devils",
     "Half Pints",
@@ -754,6 +754,7 @@
   ],
   "schedule": [
     {
+      "match_id": "27123",
       "date": "Saturday 07/12/2025",
       "time": "9:00 AM",
       "ground": "Central Park Field #2",
@@ -770,6 +771,7 @@
       "date_parsed": "2025-07-12T00:00:00"
     },
     {
+      "match_id": "27124",
       "date": "Saturday 07/12/2025",
       "time": "11:30 AM",
       "ground": "Central Park Field #2",
@@ -786,6 +788,7 @@
       "date_parsed": "2025-07-12T00:00:00"
     },
     {
+      "match_id": "27125",
       "date": "Saturday 07/12/2025",
       "time": "2:00 PM",
       "ground": "Central Park Field #2",
@@ -802,6 +805,7 @@
       "date_parsed": "2025-07-12T00:00:00"
     },
     {
+      "match_id": "27126",
       "date": "Saturday 07/12/2025",
       "time": "4:30 PM",
       "ground": "Central Park Field #2",
@@ -818,6 +822,7 @@
       "date_parsed": "2025-07-12T00:00:00"
     },
     {
+      "match_id": "27146",
       "date": "Saturday 07/19/2025",
       "time": "9:00 AM",
       "ground": "Central Park Field #1",
@@ -834,6 +839,7 @@
       "date_parsed": "2025-07-19T00:00:00"
     },
     {
+      "match_id": "27165",
       "date": "Saturday 07/19/2025",
       "time": "6:00 PM",
       "ground": "Petrovitsky Park Field #2",
@@ -850,6 +856,7 @@
       "date_parsed": "2025-07-19T00:00:00"
     },
     {
+      "match_id": "27166",
       "date": "Sunday 07/20/2025",
       "time": "9:00 AM",
       "ground": "Big Finn Hill Park (Pitch 1)",
@@ -866,6 +873,7 @@
       "date_parsed": "2025-07-20T00:00:00"
     },
     {
+      "match_id": "27167",
       "date": "Sunday 07/20/2025",
       "time": "11:30 AM",
       "ground": "Big Finn Hill Park (Pitch 2)",
@@ -882,6 +890,7 @@
       "date_parsed": "2025-07-20T00:00:00"
     },
     {
+      "match_id": "27168",
       "date": "Sunday 07/20/2025",
       "time": "9:00 AM",
       "ground": "Central Park Field #1",
@@ -898,6 +907,7 @@
       "date_parsed": "2025-07-20T00:00:00"
     },
     {
+      "match_id": "27178",
       "date": "Sunday 07/20/2025",
       "time": "4:30 PM",
       "ground": "North SeaTac Park",
@@ -914,6 +924,7 @@
       "date_parsed": "2025-07-20T00:00:00"
     },
     {
+      "match_id": "27187",
       "date": "Sunday 07/20/2025",
       "time": "3:30 PM",
       "ground": "Petrovitsky Park Field #2",
@@ -930,6 +941,7 @@
       "date_parsed": "2025-07-20T00:00:00"
     },
     {
+      "match_id": "27244",
       "date": "Sunday 07/27/2025",
       "time": "2:00 PM",
       "ground": "North SeaTac Park",
@@ -946,6 +958,7 @@
       "date_parsed": "2025-07-27T00:00:00"
     },
     {
+      "match_id": "27245",
       "date": "Sunday 07/27/2025",
       "time": "4:30 PM",
       "ground": "North SeaTac Park",
@@ -962,6 +975,7 @@
       "date_parsed": "2025-07-27T00:00:00"
     },
     {
+      "match_id": "27246",
       "date": "Sunday 07/27/2025",
       "time": "8:00 AM",
       "ground": "Petrovitsky Park Field #1",
@@ -978,6 +992,7 @@
       "date_parsed": "2025-07-27T00:00:00"
     },
     {
+      "match_id": "27247",
       "date": "Sunday 07/27/2025",
       "time": "10:30 AM",
       "ground": "Petrovitsky Park Field #1",
@@ -994,6 +1009,7 @@
       "date_parsed": "2025-07-27T00:00:00"
     },
     {
+      "match_id": "27248",
       "date": "Sunday 07/27/2025",
       "time": "1:00 PM",
       "ground": "Petrovitsky Park Field #1",
@@ -1010,6 +1026,7 @@
       "date_parsed": "2025-07-27T00:00:00"
     },
     {
+      "match_id": "27249",
       "date": "Sunday 07/27/2025",
       "time": "3:30 PM",
       "ground": "Petrovitsky Park Field #1",
@@ -1026,6 +1043,7 @@
       "date_parsed": "2025-07-27T00:00:00"
     },
     {
+      "match_id": "27250",
       "date": "Sunday 07/27/2025",
       "time": "6:00 PM",
       "ground": "Petrovitsky Park Field #1",
@@ -1042,6 +1060,7 @@
       "date_parsed": "2025-07-27T00:00:00"
     },
     {
+      "match_id": "27251",
       "date": "Sunday 07/27/2025",
       "time": "8:00 AM",
       "ground": "Petrovitsky Park Field #2",
@@ -1058,6 +1077,7 @@
       "date_parsed": "2025-07-27T00:00:00"
     },
     {
+      "match_id": "27252",
       "date": "Sunday 07/27/2025",
       "time": "10:30 AM",
       "ground": "Petrovitsky Park Field #2",
@@ -1074,6 +1094,7 @@
       "date_parsed": "2025-07-27T00:00:00"
     },
     {
+      "match_id": "27261",
       "date": "Sunday 07/27/2025",
       "time": "11:30 AM",
       "ground": "Ron Regis",
@@ -1090,6 +1111,7 @@
       "date_parsed": "2025-07-27T00:00:00"
     },
     {
+      "match_id": "27266",
       "date": "Saturday 08/02/2025",
       "time": "2:00 PM",
       "ground": "Big Finn Hill Park (Pitch 3)",
@@ -1106,6 +1128,7 @@
       "date_parsed": "2025-08-02T00:00:00"
     },
     {
+      "match_id": "27267",
       "date": "Saturday 08/02/2025",
       "time": "4:30 PM",
       "ground": "Big Finn Hill Park",
@@ -1122,6 +1145,7 @@
       "date_parsed": "2025-08-02T00:00:00"
     },
     {
+      "match_id": "27268",
       "date": "Saturday 08/02/2025",
       "time": "1:00 PM",
       "ground": "GrassLawn Park-Softball Field 1",
@@ -1138,6 +1162,7 @@
       "date_parsed": "2025-08-02T00:00:00"
     },
     {
+      "match_id": "27269",
       "date": "Saturday 08/02/2025",
       "time": "3:30 PM",
       "ground": "GrassLawn Park-Softball Field 1",
@@ -1154,6 +1179,7 @@
       "date_parsed": "2025-08-02T00:00:00"
     },
     {
+      "match_id": "27285",
       "date": "Saturday 08/02/2025",
       "time": "8:00 AM",
       "ground": "Petrovitsky Park Field #1",
@@ -1170,6 +1196,7 @@
       "date_parsed": "2025-08-02T00:00:00"
     },
     {
+      "match_id": "27286",
       "date": "Saturday 08/02/2025",
       "time": "10:30 AM",
       "ground": "Petrovitsky Park Field #1",
@@ -1186,6 +1213,7 @@
       "date_parsed": "2025-08-02T00:00:00"
     },
     {
+      "match_id": "27287",
       "date": "Saturday 08/02/2025",
       "time": "1:00 PM",
       "ground": "Petrovitsky Park Field #1",
@@ -1202,6 +1230,7 @@
       "date_parsed": "2025-08-02T00:00:00"
     },
     {
+      "match_id": "27288",
       "date": "Saturday 08/02/2025",
       "time": "3:30 PM",
       "ground": "Petrovitsky Park Field #1",
@@ -1218,6 +1247,7 @@
       "date_parsed": "2025-08-02T00:00:00"
     },
     {
+      "match_id": "27316",
       "date": "Sunday 08/03/2025",
       "time": "1:00 PM",
       "ground": "Petrovitsky Park Field #1",
@@ -1234,6 +1264,7 @@
       "date_parsed": "2025-08-03T00:00:00"
     },
     {
+      "match_id": "27377",
       "date": "Sunday 08/10/2025",
       "time": "1:30 PM",
       "ground": "Marymoor Park Soccer #05",
@@ -1250,6 +1281,7 @@
       "date_parsed": "2025-08-10T00:00:00"
     },
     {
+      "match_id": "27378",
       "date": "Sunday 08/10/2025",
       "time": "9:00 AM",
       "ground": "North SeaTac Park",
@@ -1266,6 +1298,7 @@
       "date_parsed": "2025-08-10T00:00:00"
     },
     {
+      "match_id": "27379",
       "date": "Sunday 08/10/2025",
       "time": "11:30 AM",
       "ground": "North SeaTac Park",
@@ -1282,6 +1315,7 @@
       "date_parsed": "2025-08-10T00:00:00"
     },
     {
+      "match_id": "27380",
       "date": "Sunday 08/10/2025",
       "time": "2:00 PM",
       "ground": "North SeaTac Park",
@@ -1298,6 +1332,7 @@
       "date_parsed": "2025-08-10T00:00:00"
     },
     {
+      "match_id": "27381",
       "date": "Sunday 08/10/2025",
       "time": "4:30 PM",
       "ground": "North SeaTac Park",
@@ -1314,6 +1349,7 @@
       "date_parsed": "2025-08-10T00:00:00"
     },
     {
+      "match_id": "27382",
       "date": "Sunday 08/10/2025",
       "time": "8:00 AM",
       "ground": "Perigo Park-Softball Field 1",
@@ -1330,6 +1366,7 @@
       "date_parsed": "2025-08-10T00:00:00"
     },
     {
+      "match_id": "27383",
       "date": "Sunday 08/10/2025",
       "time": "10:30 AM",
       "ground": "Perigo Park-Softball Field 1",
@@ -1346,6 +1383,7 @@
       "date_parsed": "2025-08-10T00:00:00"
     },
     {
+      "match_id": "27384",
       "date": "Sunday 08/10/2025",
       "time": "1:00 PM",
       "ground": "Perigo Park-Softball Field 1",
@@ -1362,6 +1400,7 @@
       "date_parsed": "2025-08-10T00:00:00"
     },
     {
+      "match_id": "27385",
       "date": "Sunday 08/10/2025",
       "time": "9:00 AM",
       "ground": "Ron Regis",
@@ -1378,6 +1417,7 @@
       "date_parsed": "2025-08-10T00:00:00"
     },
     {
+      "match_id": "27386",
       "date": "Sunday 08/10/2025",
       "time": "11:30 AM",
       "ground": "Ron Regis",
@@ -1394,6 +1434,7 @@
       "date_parsed": "2025-08-10T00:00:00"
     },
     {
+      "match_id": "27471",
       "date": "Saturday 08/23/2025",
       "time": "6:00 PM",
       "ground": "Petrovitsky Park Field #1",
@@ -1410,6 +1451,7 @@
       "date_parsed": "2025-08-23T00:00:00"
     },
     {
+      "match_id": "27472",
       "date": "Saturday 08/23/2025",
       "time": "8:00 AM",
       "ground": "Petrovitsky Park Field #2",
@@ -1426,6 +1468,7 @@
       "date_parsed": "2025-08-23T00:00:00"
     },
     {
+      "match_id": "27473",
       "date": "Saturday 08/23/2025",
       "time": "10:30 AM",
       "ground": "Petrovitsky Park Field #2",
@@ -1442,6 +1485,7 @@
       "date_parsed": "2025-08-23T00:00:00"
     },
     {
+      "match_id": "27474",
       "date": "Saturday 08/23/2025",
       "time": "1:00 PM",
       "ground": "Petrovitsky Park Field #2",
@@ -1458,6 +1502,7 @@
       "date_parsed": "2025-08-23T00:00:00"
     },
     {
+      "match_id": "27475",
       "date": "Saturday 08/23/2025",
       "time": "3:30 PM",
       "ground": "Petrovitsky Park Field #2",
@@ -1474,6 +1519,7 @@
       "date_parsed": "2025-08-23T00:00:00"
     },
     {
+      "match_id": "27477",
       "date": "Saturday 08/23/2025",
       "time": "9:00 AM",
       "ground": "Ron Regis",
@@ -1490,6 +1536,7 @@
       "date_parsed": "2025-08-23T00:00:00"
     },
     {
+      "match_id": "27478",
       "date": "Saturday 08/23/2025",
       "time": "11:30 AM",
       "ground": "Ron Regis",
@@ -1506,6 +1553,7 @@
       "date_parsed": "2025-08-23T00:00:00"
     },
     {
+      "match_id": "27479",
       "date": "Saturday 08/23/2025",
       "time": "2:00 PM",
       "ground": "Ron Regis",
@@ -1522,6 +1570,7 @@
       "date_parsed": "2025-08-23T00:00:00"
     },
     {
+      "match_id": "27480",
       "date": "Saturday 08/23/2025",
       "time": "4:30 PM",
       "ground": "Ron Regis",
@@ -1538,6 +1587,7 @@
       "date_parsed": "2025-08-23T00:00:00"
     },
     {
+      "match_id": "27481",
       "date": "Sunday 08/24/2025",
       "time": "9:00 AM",
       "ground": "Big Finn Hill Park (Pitch 1)",
@@ -1554,6 +1604,7 @@
       "date_parsed": "2025-08-24T00:00:00"
     },
     {
+      "match_id": "27482",
       "date": "Sunday 08/24/2025",
       "time": "11:30 AM",
       "ground": "Big Finn Hill Park (Pitch 2)",
@@ -1570,6 +1621,7 @@
       "date_parsed": "2025-08-24T00:00:00"
     },
     {
+      "match_id": "27486",
       "date": "Sunday 08/24/2025",
       "time": "10:30 AM",
       "ground": "GrassLawn Park-Softball Field 2",
@@ -1586,6 +1638,7 @@
       "date_parsed": "2025-08-24T00:00:00"
     },
     {
+      "match_id": "27756",
       "date": "Sunday 09/07/2025",
       "time": "3:15 PM",
       "ground": "Redmond Ridge Park -- Soccer Field",
@@ -1602,6 +1655,7 @@
       "date_parsed": "2025-09-07T00:00:00"
     },
     {
+      "match_id": "27757",
       "date": "Sunday 09/07/2025",
       "time": "5:45 PM",
       "ground": "Redmond Ridge Park -- Soccer Field",
@@ -1618,6 +1672,7 @@
       "date_parsed": "2025-09-07T00:00:00"
     },
     {
+      "match_id": "27578",
       "date": "Saturday 09/13/2025",
       "time": "5:00 PM",
       "ground": "Big Finn Hill Park",
@@ -1634,6 +1689,7 @@
       "date_parsed": "2025-09-13T00:00:00"
     },
     {
+      "match_id": "27782",
       "date": "Saturday 09/13/2025",
       "time": "4:30 PM",
       "ground": "Evergreen Playfields 1",
@@ -1650,6 +1706,7 @@
       "date_parsed": "2025-09-13T00:00:00"
     },
     {
+      "match_id": "27783",
       "date": "Saturday 09/13/2025",
       "time": "7:00 PM",
       "ground": "Evergreen Playfields 1",
@@ -1666,6 +1723,7 @@
       "date_parsed": "2025-09-13T00:00:00"
     },
     {
+      "match_id": "27579",
       "date": "Saturday 09/13/2025",
       "time": "9:00 AM",
       "ground": "North SeaTac Park",
@@ -1682,6 +1740,7 @@
       "date_parsed": "2025-09-13T00:00:00"
     },
     {
+      "match_id": "27580",
       "date": "Saturday 09/13/2025",
       "time": "11:30 AM",
       "ground": "North SeaTac Park",
@@ -1698,6 +1757,7 @@
       "date_parsed": "2025-09-13T00:00:00"
     },
     {
+      "match_id": "27581",
       "date": "Saturday 09/13/2025",
       "time": "2:00 PM",
       "ground": "North SeaTac Park",
@@ -1714,6 +1774,7 @@
       "date_parsed": "2025-09-13T00:00:00"
     },
     {
+      "match_id": "27582",
       "date": "Saturday 09/13/2025",
       "time": "4:30 PM",
       "ground": "North SeaTac Park",
@@ -1730,6 +1791,7 @@
       "date_parsed": "2025-09-13T00:00:00"
     },
     {
+      "match_id": "27583",
       "date": "Saturday 09/13/2025",
       "time": "2:00 PM",
       "ground": "Perigo Park-Softball Field 1",
@@ -1746,6 +1808,7 @@
       "date_parsed": "2025-09-13T00:00:00"
     },
     {
+      "match_id": "27758",
       "date": "Sunday 09/21/2025",
       "time": "3:15 PM",
       "ground": "Redmond Ridge Park -- Soccer Field",
@@ -1762,6 +1825,7 @@
       "date_parsed": "2025-09-21T00:00:00"
     },
     {
+      "match_id": "27759",
       "date": "Sunday 09/21/2025",
       "time": "5:45 PM",
       "ground": "Redmond Ridge Park -- Soccer Field",
@@ -1778,6 +1842,7 @@
       "date_parsed": "2025-09-21T00:00:00"
     },
     {
+      "match_id": "27662",
       "date": "Sunday 10/05/2025",
       "time": "4:00 PM",
       "ground": "Redmond Ridge Park -- Soccer Field",
@@ -1794,6 +1859,7 @@
       "date_parsed": "2025-10-05T00:00:00"
     },
     {
+      "match_id": "27663",
       "date": "Sunday 10/05/2025",
       "time": "6:30 PM",
       "ground": "Redmond Ridge Park -- Soccer Field",
@@ -1810,6 +1876,7 @@
       "date_parsed": "2025-10-05T00:00:00"
     },
     {
+      "match_id": "27664",
       "date": "Sunday 10/05/2025",
       "time": "9:00 AM",
       "ground": "Ron Regis",
@@ -1826,6 +1893,7 @@
       "date_parsed": "2025-10-05T00:00:00"
     },
     {
+      "match_id": "27665",
       "date": "Sunday 10/05/2025",
       "time": "11:30 AM",
       "ground": "Ron Regis",
@@ -1842,6 +1910,7 @@
       "date_parsed": "2025-10-05T00:00:00"
     },
     {
+      "match_id": "27666",
       "date": "Sunday 10/05/2025",
       "time": "2:00 PM",
       "ground": "Ron Regis",
@@ -1858,6 +1927,7 @@
       "date_parsed": "2025-10-05T00:00:00"
     },
     {
+      "match_id": "27667",
       "date": "Saturday 10/11/2025",
       "time": "3:00 PM",
       "ground": "Big Finn Hill Park (Pitch 4)",
@@ -1874,6 +1944,7 @@
       "date_parsed": "2025-10-11T00:00:00"
     },
     {
+      "match_id": "27668",
       "date": "Saturday 10/11/2025",
       "time": "5:30 PM",
       "ground": "Big Finn Hill Park (Pitch 5)",
@@ -1890,6 +1961,7 @@
       "date_parsed": "2025-10-11T00:00:00"
     },
     {
+      "match_id": "27790",
       "date": "Saturday 10/11/2025",
       "time": "4:30 PM",
       "ground": "Evergreen Playfields 1",
@@ -1906,6 +1978,7 @@
       "date_parsed": "2025-10-11T00:00:00"
     },
     {
+      "match_id": "27791",
       "date": "Saturday 10/11/2025",
       "time": "7:00 PM",
       "ground": "Evergreen Playfields 1",
@@ -1922,6 +1995,7 @@
       "date_parsed": "2025-10-11T00:00:00"
     },
     {
+      "match_id": "27669",
       "date": "Saturday 10/11/2025",
       "time": "8:00 AM",
       "ground": "North Robinswood Park",
@@ -1938,6 +2012,7 @@
       "date_parsed": "2025-10-11T00:00:00"
     },
     {
+      "match_id": "27670",
       "date": "Saturday 10/11/2025",
       "time": "10:30 AM",
       "ground": "North Robinswood Park",
@@ -1954,6 +2029,7 @@
       "date_parsed": "2025-10-11T00:00:00"
     },
     {
+      "match_id": "27671",
       "date": "Saturday 10/11/2025",
       "time": "1:00 PM",
       "ground": "North Robinswood Park",
@@ -1970,6 +2046,7 @@
       "date_parsed": "2025-10-11T00:00:00"
     },
     {
+      "match_id": "27760",
       "date": "Saturday 10/25/2025",
       "time": "5:30 PM",
       "ground": "Redmond Ridge Park -- Soccer Field",
@@ -1986,6 +2063,7 @@
       "date_parsed": "2025-10-25T00:00:00"
     },
     {
+      "match_id": "27761",
       "date": "Saturday 10/25/2025",
       "time": "9:00 AM",
       "ground": "Ron Regis",
@@ -2002,6 +2080,7 @@
       "date_parsed": "2025-10-25T00:00:00"
     },
     {
+      "match_id": "27762",
       "date": "Saturday 10/25/2025",
       "time": "11:30 AM",
       "ground": "Ron Regis",
@@ -2018,6 +2097,7 @@
       "date_parsed": "2025-10-25T00:00:00"
     },
     {
+      "match_id": "27763",
       "date": "Saturday 10/25/2025",
       "time": "2:00 PM",
       "ground": "Ron Regis",
@@ -2034,6 +2114,7 @@
       "date_parsed": "2025-10-25T00:00:00"
     },
     {
+      "match_id": "27764",
       "date": "Sunday 10/26/2025",
       "time": "8:00 AM",
       "ground": "Hidden Valley Park Field 1",
@@ -2050,6 +2131,7 @@
       "date_parsed": "2025-10-26T00:00:00"
     },
     {
+      "match_id": "27765",
       "date": "Sunday 10/26/2025",
       "time": "10:30 AM",
       "ground": "Hidden Valley Park Field 1",
@@ -2066,6 +2148,7 @@
       "date_parsed": "2025-10-26T00:00:00"
     },
     {
+      "match_id": "27766",
       "date": "Sunday 10/26/2025",
       "time": "1:00 PM",
       "ground": "Hidden Valley Park Field 1",
@@ -2082,6 +2165,7 @@
       "date_parsed": "2025-10-26T00:00:00"
     },
     {
+      "match_id": "27767",
       "date": "Sunday 10/26/2025",
       "time": "3:30 PM",
       "ground": "Hidden Valley Park Field 1",
@@ -2098,6 +2182,7 @@
       "date_parsed": "2025-10-26T00:00:00"
     },
     {
+      "match_id": "27916",
       "date": "Saturday 11/01/2025",
       "time": "8:00 AM",
       "ground": "GrassLawn Park-Softball Field 1",
@@ -2114,6 +2199,7 @@
       "date_parsed": "2025-11-01T00:00:00"
     },
     {
+      "match_id": "27917",
       "date": "Saturday 11/01/2025",
       "time": "10:30 AM",
       "ground": "GrassLawn Park-Softball Field 1",
@@ -2130,6 +2216,7 @@
       "date_parsed": "2025-11-01T00:00:00"
     },
     {
+      "match_id": "27918",
       "date": "Sunday 11/02/2025",
       "time": "9:00 AM",
       "ground": "Redmond Ridge Park -- Soccer Field",
@@ -2146,6 +2233,7 @@
       "date_parsed": "2025-11-02T00:00:00"
     },
     {
+      "match_id": "27919",
       "date": "Sunday 11/02/2025",
       "time": "11:30 AM",
       "ground": "Redmond Ridge Park -- Soccer Field",
@@ -2162,6 +2250,7 @@
       "date_parsed": "2025-11-02T00:00:00"
     },
     {
+      "match_id": "27936",
       "date": "Sunday 11/09/2025",
       "time": "1:00 PM",
       "ground": "Hartman Park-Soccer Field",
@@ -2178,6 +2267,7 @@
       "date_parsed": "2025-11-09T00:00:00"
     },
     {
+      "match_id": "27937",
       "date": "Sunday 11/09/2025",
       "time": "3:30 PM",
       "ground": "Hartman Park-Soccer Field",
@@ -2194,6 +2284,7 @@
       "date_parsed": "2025-11-09T00:00:00"
     },
     {
+      "match_id": "27946",
       "date": "Sunday 11/16/2025",
       "time": "9:00 AM",
       "ground": "Hidden Valley Park Field 1",
