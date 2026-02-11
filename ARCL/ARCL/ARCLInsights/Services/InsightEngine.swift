@@ -605,7 +605,7 @@ extension InsightEngine {
         
         // Factor 3: Current Streak (±10%)
         if myForm.streak.contains("Won") {
-            let streakNum = Int(myForm.streak.filter { $0.isNumber }.joined()) ?? 0
+            let streakNum = Int(String(myForm.streak.filter { $0.isNumber })) ?? 0
             if streakNum >= 3 {
                 winProbability += 10
                 keyFactors.append("Hot streak (\(myForm.streak))")
@@ -614,7 +614,7 @@ extension InsightEngine {
             }
         }
         if opponentForm.streak.contains("Won") {
-            let streakNum = Int(opponentForm.streak.filter { $0.isNumber }.joined()) ?? 0
+            let streakNum = Int(String(opponentForm.streak.filter { $0.isNumber })) ?? 0
             if streakNum >= 3 {
                 winProbability -= 10
                 keyFactors.append("They're on a hot streak (\(opponentForm.streak))")
