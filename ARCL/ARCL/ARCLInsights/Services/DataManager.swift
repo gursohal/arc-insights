@@ -66,25 +66,36 @@ class DataManager: ObservableObject {
     }
     
     func getOpponentAnalysis(teamName: String) -> OpponentAnalysis {
-        let dangerousBatsmen = topBatsmen.filter { $0.team.localizedCaseInsensitiveContains(teamName) }.prefix(5)
-        let weakBatsmen = topBatsmen.filter { $0.team.localizedCaseInsensitiveContains(teamName) }.dropFirst(5).prefix(5)
-        let dangerousBowlers = topBowlers.filter { $0.team.localizedCaseInsensitiveContains(teamName) }.prefix(5)
+        // Get ALL batsmen from this team (not just top overall), then sort by their stats
+        let teamBatsmen = topBatsmen
+            .filter { $0.team.localizedCaseInsensitiveContains(teamName) && $0.battingStats != nil }
+            .sorted { ($0.battingStats?.runs ?? 0) > ($1.battingStats?.runs ?? 0) }
+        
+        let dangerousBatsmen = Array(teamBatsmen.prefix(5))
+        let weakBatsmen = Array(teamBatsmen.dropFirst(5).prefix(5))
+        
+        // Get ALL bowlers from this team, sorted by wickets
+        let teamBowlers = topBowlers
+            .filter { $0.team.localizedCaseInsensitiveContains(teamName) && $0.bowlingStats != nil }
+            .sorted { ($0.bowlingStats?.wickets ?? 0) > ($1.bowlingStats?.wickets ?? 0) }
+        
+        let dangerousBowlers = Array(teamBowlers.prefix(5))
         
         // Get team data for strategy generation
         let team = teams.first { $0.name.localizedCaseInsensitiveContains(teamName) }
         
         // Generate rule-based match strategy using InsightEngine
         let recommendations = InsightEngine.shared.generateMatchStrategy(
-            dangerousBatsmen: Array(dangerousBatsmen),
-            dangerousBowlers: Array(dangerousBowlers),
+            dangerousBatsmen: dangerousBatsmen,
+            dangerousBowlers: dangerousBowlers,
             team: team
         )
         
         return OpponentAnalysis(
             team: teamName,
-            dangerousBatsmen: Array(dangerousBatsmen),
-            weakBatsmen: Array(weakBatsmen),
-            dangerousBowlers: Array(dangerousBowlers),
+            dangerousBatsmen: dangerousBatsmen,
+            weakBatsmen: weakBatsmen,
+            dangerousBowlers: dangerousBowlers,
             recommendations: recommendations
         )
     }
@@ -129,7 +140,11 @@ class DataManager: ObservableObject {
         let urlString = "\(baseURL)/div_\(selectedDivisionID)_season_\(selectedSeasonID).json"
         guard let url = URL(string: urlString) else { return [] }
         
-        let (data, _) = try await URLSession.shared.data(from: url)
+        // Force fresh data, ignore cache
+        var request = URLRequest(url: url)
+        request.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
+        
+        let (data, _) = try await URLSession.shared.data(for: request)
         let jsonResponse = try JSONDecoder().decode(ARCLDataResponse.self, from: data)
         
         // Create a dictionary from standings for quick lookup
@@ -167,7 +182,11 @@ class DataManager: ObservableObject {
         let urlString = "\(baseURL)/div_\(selectedDivisionID)_season_\(selectedSeasonID).json"
         guard let url = URL(string: urlString) else { return [] }
         
-        let (data, _) = try await URLSession.shared.data(from: url)
+        // Force fresh data, ignore cache
+        var request = URLRequest(url: url)
+        request.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
+        
+        let (data, _) = try await URLSession.shared.data(for: request)
         let response = try JSONDecoder().decode(ARCLDataResponse.self, from: data)
         
         return response.batsmen.map { batsman in
@@ -192,7 +211,11 @@ class DataManager: ObservableObject {
         let urlString = "\(baseURL)/div_\(selectedDivisionID)_season_\(selectedSeasonID).json"
         guard let url = URL(string: urlString) else { return [] }
         
-        let (data, _) = try await URLSession.shared.data(from: url)
+        // Force fresh data, ignore cache
+        var request = URLRequest(url: url)
+        request.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
+        
+        let (data, _) = try await URLSession.shared.data(for: request)
         let response = try JSONDecoder().decode(ARCLDataResponse.self, from: data)
         
         return response.bowlers.map { bowler in
@@ -215,7 +238,11 @@ class DataManager: ObservableObject {
         let urlString = "\(baseURL)/div_\(selectedDivisionID)_season_\(selectedSeasonID).json"
         guard let url = URL(string: urlString) else { return [] }
         
-        let (data, _) = try await URLSession.shared.data(from: url)
+        // Force fresh data, ignore cache
+        var request = URLRequest(url: url)
+        request.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
+        
+        let (data, _) = try await URLSession.shared.data(for: request)
         let response = try JSONDecoder().decode(ARCLDataResponse.self, from: data)
         
         return response.schedule ?? []
