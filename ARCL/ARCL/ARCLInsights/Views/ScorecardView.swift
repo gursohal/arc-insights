@@ -146,6 +146,15 @@ struct ScorecardView: View {
             }
         }
     }
+    
+    func formatDate(_ dateString: String) -> String {
+        // Input format: "7/19/2025 12:00:00 AM"
+        // Output format: "7/19/2025"
+        if let spaceIndex = dateString.firstIndex(of: " ") {
+            return String(dateString[..<spaceIndex])
+        }
+        return dateString
+    }
 }
 
 struct InningsSection: View {
