@@ -41,18 +41,15 @@ struct PlayerDetailView: View {
                             // Boundary Statistics
                             HStack(spacing: 16) {
                                 BoundaryStatCard(
-                                    icon: "🎯",
-                                    label: "Fours",
+                                    label: "4s",
                                     value: "\(battingStats.fours)"
                                 )
                                 BoundaryStatCard(
-                                    icon: "💥",
-                                    label: "Sixes",
+                                    label: "6s",
                                     value: "\(battingStats.sixes)"
                                 )
                                 BoundaryStatCard(
-                                    icon: "🏏",
-                                    label: "Boundaries",
+                                    label: "Total",
                                     value: "\(battingStats.totalBoundaries)"
                                 )
                             }
@@ -257,14 +254,11 @@ struct PlayerInsightCard: View {
 }
 
 struct BoundaryStatCard: View {
-    let icon: String
     let label: String
     let value: String
     
     var body: some View {
         VStack(spacing: 8) {
-            Text(icon)
-                .font(.title)
             Text(value)
                 .font(.title2)
                 .bold()

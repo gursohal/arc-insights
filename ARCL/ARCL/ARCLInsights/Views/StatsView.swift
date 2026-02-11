@@ -141,24 +141,27 @@ struct BoundaryStatsView: View {
                     HStack(spacing: 16) {
                         if let stats = player.battingStats {
                             VStack(spacing: 4) {
-                                Text("🎯")
-                                    .font(.title3)
+                                Text("4s")
+                                    .font(.caption)
+                                    .foregroundColor(.secondary)
                                 Text("\(stats.fours)")
                                     .font(.headline)
                                     .bold()
                             }
                             
                             VStack(spacing: 4) {
-                                Text("💥")
-                                    .font(.title3)
+                                Text("6s")
+                                    .font(.caption)
+                                    .foregroundColor(.secondary)
                                 Text("\(stats.sixes)")
                                     .font(.headline)
                                     .bold()
                             }
                             
                             VStack(spacing: 4) {
-                                Text("🏏")
-                                    .font(.title3)
+                                Text("Total")
+                                    .font(.caption)
+                                    .foregroundColor(.secondary)
                                 Text("\(stats.totalBoundaries)")
                                     .font(.headline)
                                     .bold()
