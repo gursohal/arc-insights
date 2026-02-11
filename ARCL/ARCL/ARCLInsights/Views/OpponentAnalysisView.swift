@@ -69,7 +69,10 @@ struct OpponentAnalysisView: View {
                     color: .orange
                 ) {
                     ForEach(analysis.dangerousBatsmen) { player in
-                        BatsmanCard(player: player, isDangerous: true)
+                        NavigationLink(destination: PlayerDetailView(player: player)) {
+                            BatsmanCard(player: player, isDangerous: true)
+                        }
+                        .buttonStyle(PlainButtonStyle())
                     }
                     
                     InsightCard(
@@ -86,7 +89,10 @@ struct OpponentAnalysisView: View {
                     color: .purple
                 ) {
                     ForEach(analysis.dangerousBowlers) { player in
-                        BowlerCard(player: player)
+                        NavigationLink(destination: PlayerDetailView(player: player)) {
+                            BowlerCard(player: player)
+                        }
+                        .buttonStyle(PlainButtonStyle())
                     }
                     
                     InsightCard(
