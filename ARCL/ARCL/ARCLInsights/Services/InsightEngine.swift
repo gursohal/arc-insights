@@ -692,21 +692,30 @@ extension InsightEngine {
         
         // Factor 4: Player Quality Comparison (±15%)
         if let myTeam = myTeam, let opponentTeam = opponentTeam, !players.isEmpty {
-            // Helper function to match team names more robustly
+            // Helper function to match team names more strictly
             func matchesTeam(_ playerTeam: String, _ teamName: String) -> Bool {
-                // Direct match
-                if playerTeam.localizedCaseInsensitiveContains(teamName) {
+                // Normalize both names
+                let normalizedPlayer = playerTeam.lowercased().trimmingCharacters(in: .whitespaces)
+                let normalizedTeam = teamName.lowercased().trimmingCharacters(in: .whitespaces)
+                
+                // Exact match
+                if normalizedPlayer == normalizedTeam {
                     return true
                 }
-                // Try matching with the first significant word (at least 4 characters)
-                let teamWords = teamName.split(separator: " ").filter { $0.count >= 4 }
-                for word in teamWords {
-                    if playerTeam.localizedCaseInsensitiveContains(String(word)) {
-                        return true
-                    }
-                }
-                return false
+                
+                // Check if player team contains at least 2 significant words (5+ chars) from team name
+                let playerWords = Set(normalizedPlayer.split(separator: " ").filter { $0.count >= 5 }.map { String($0) })
+                let teamWords = Set(normalizedTeam.split(separator: " ").filter { $0.count >= 5 }.map { String($0) })
+                
+                let matches = playerWords.intersection(teamWords)
+                // Require at least 2 matching significant words OR exact substring match
+                return matches.count >= 2 || normalizedPlayer.contains(normalizedTeam) || normalizedTeam.contains(normalizedPlayer)
             }
+            
+            // Debug: Print all unique team names in player data
+            let allTeamNames = Set(players.compactMap { $0.battingStats != nil ? $0.team : nil })
+            print("🔍 Debug: All team names in batting data: \(Array(allTeamNames).sorted())")
+            print("🔍 Debug: Looking for opponent team: '\(opponentTeam.name)'")
             
             // Get top 3 batsmen from each team
             let myBatsmen = players
@@ -719,8 +728,15 @@ extension InsightEngine {
                 .sorted { ($0.battingStats?.average ?? 0) > ($1.battingStats?.average ?? 0) }
                 .prefix(3)
             
-            print("🔍 Debug: My team '\(myTeam.name)' - Found \(myBatsmen.count) batsmen")
-            print("🔍 Debug: Opponent '\(opponentTeam.name)' - Found \(theirBatsmen.count) batsmen")
+            print("🔍 Debug: My team '\(myTeam.name)' - Found \(myBatsmen.count) batsmen: \(myBatsmen.map { $0.name })")
+            print("🔍 Debug: Opponent '\(opponentTeam.name)' - Found \(theirBatsmen.count) batsmen: \(theirBatsmen.map { $0.name })")
+            
+            // If we can't find opponent batsmen, try to find similar team names
+            if theirBatsmen.count == 0 {
+                print("⚠️ Debug: No batsmen found for '\(opponentTeam.name)'. Checking for similar names...")
+                let similarNames = allTeamNames.filter { $0.localizedCaseInsensitiveContains("Rafta") || "Rafta".localizedCaseInsensitiveContains($0) }
+                print("⚠️ Debug: Similar team names: \(Array(similarNames))")
+            }
             
             let myBattingAvg = myBatsmen.count > 0 ?
                 myBatsmen.map { $0.battingStats?.average ?? 0 }.reduce(0, +) / Double(myBatsmen.count) : 0
@@ -747,27 +763,36 @@ extension InsightEngine {
                 theirBowlers.map { $0.bowlingStats?.economy ?? 0 }.reduce(0, +) / Double(theirBowlers.count) : 0
             
             // Compare batting quality (avg difference > 5 = significant)
+            // Only compare if both teams have batting data
             let battingDiff = myBattingAvg - theirBattingAvg
-            if battingDiff >= 5 {
-                let boost = min(Int(battingDiff), 8)
-                winProbability += boost
-                keyFactors.append("Superior batting (Top 3 avg: \(String(format: "%.1f", myBattingAvg)) vs \(String(format: "%.1f", theirBattingAvg)))")
-            } else if battingDiff <= -5 {
-                let penalty = min(Int(abs(battingDiff)), 8)
-                winProbability -= penalty
-                keyFactors.append("Weaker batting (Top 3 avg: \(String(format: "%.1f", myBattingAvg)) vs \(String(format: "%.1f", theirBattingAvg)))")
+            if myBatsmen.count > 0 && theirBatsmen.count > 0 {
+                if battingDiff >= 5 {
+                    let boost = min(Int(battingDiff), 8)
+                    winProbability += boost
+                    keyFactors.append("Superior batting (Top 3 avg: \(String(format: "%.1f", myBattingAvg)) vs \(String(format: "%.1f", theirBattingAvg)))")
+                } else if battingDiff <= -5 {
+                    let penalty = min(Int(abs(battingDiff)), 8)
+                    winProbability -= penalty
+                    keyFactors.append("Weaker batting (Top 3 avg: \(String(format: "%.1f", myBattingAvg)) vs \(String(format: "%.1f", theirBattingAvg)))")
+                }
+            } else if theirBatsmen.count == 0 && myBatsmen.count > 0 {
+                // Opponent has no data - neutral message
+                keyFactors.append("Limited opponent data available")
             }
             
             // Compare bowling quality (economy diff > 0.5 = significant)
+            // Only compare if both teams have bowling data (at least 2 bowlers each)
             let bowlingDiff = theirBowlingEcon - myBowlingEcon
-            if bowlingDiff >= 0.5 {
-                let boost = min(Int(bowlingDiff * 2), 7)
-                winProbability += boost
-                keyFactors.append("Tighter bowling (Top 3 econ: \(String(format: "%.2f", myBowlingEcon)) vs \(String(format: "%.2f", theirBowlingEcon)))")
-            } else if bowlingDiff <= -0.5 {
-                let penalty = min(Int(abs(bowlingDiff) * 2), 7)
-                winProbability -= penalty
-                keyFactors.append("Looser bowling (Top 3 econ: \(String(format: "%.2f", myBowlingEcon)) vs \(String(format: "%.2f", theirBowlingEcon)))")
+            if myBowlers.count >= 2 && theirBowlers.count >= 2 && myBowlingEcon > 0 && theirBowlingEcon > 0 {
+                if bowlingDiff >= 0.5 {
+                    let boost = min(Int(bowlingDiff * 2), 7)
+                    winProbability += boost
+                    keyFactors.append("Tighter bowling (Top 3 econ: \(String(format: "%.2f", myBowlingEcon)) vs \(String(format: "%.2f", theirBowlingEcon)))")
+                } else if bowlingDiff <= -0.5 {
+                    let penalty = min(Int(abs(bowlingDiff) * 2), 7)
+                    winProbability -= penalty
+                    keyFactors.append("Looser bowling (Top 3 econ: \(String(format: "%.2f", myBowlingEcon)) vs \(String(format: "%.2f", theirBowlingEcon)))")
+                }
             }
             
             // Factor 5: Team Depth Analysis (±10%)
