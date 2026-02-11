@@ -822,21 +822,21 @@ extension InsightEngine {
             let bottomTeams = allTeams.filter { $0.rank >= allTeams.count - 3 }
             
             // My performance vs top/bottom teams
-            let myVsTop = matches.filter {
-                $0.status == .completed &&
-                $0.involves(teamName: myTeam.name) &&
+            let myVsTop = matches.filter { match in
+                match.status == .completed &&
+                match.involves(teamName: myTeam.name) &&
                 topTeams.contains { top in
-                    $0.involves(teamName: top.name) && top.name != myTeam.name
+                    match.involves(teamName: top.name) && top.name != myTeam.name
                 }
             }
             let myWinsVsTop = myVsTop.filter { $0.isWinner(teamName: myTeam.name) }.count
             
             // Their performance vs top/bottom teams
-            let theirVsTop = matches.filter {
-                $0.status == .completed &&
-                $0.involves(teamName: opponentTeam.name) &&
+            let theirVsTop = matches.filter { match in
+                match.status == .completed &&
+                match.involves(teamName: opponentTeam.name) &&
                 topTeams.contains { top in
-                    $0.involves(teamName: top.name) && top.name != opponentTeam.name
+                    match.involves(teamName: top.name) && top.name != opponentTeam.name
                 }
             }
             let theirWinsVsTop = theirVsTop.filter { $0.isWinner(teamName: opponentTeam.name) }.count
