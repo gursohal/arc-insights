@@ -2,7 +2,7 @@
   "division_id": 8,
   "season_id": 66,
   "division_name": "Div F - Summer 2025",
-  "last_updated": "2026-02-11T11:50:25.921971",
+  "last_updated": "2026-02-11T14:05:25.893307",
   "teams": [
     "C-Hawks",
     "Red Warriors",
@@ -32,270 +32,6 @@
   "batsmen": [
     {
       "rank": "1",
-      "name": "Overs",
-      "team": "Spartan Boys",
-      "innings": "10",
-      "runs": "789",
-      "strike_rate": "0",
-      "fours": "0",
-      "sixes": "0",
-      "average": "78.9"
-    },
-    {
-      "rank": "2",
-      "name": "Overs",
-      "team": "Kirkland Knights",
-      "innings": "10",
-      "runs": "778",
-      "strike_rate": "0",
-      "fours": "0",
-      "sixes": "0",
-      "average": "77.8"
-    },
-    {
-      "rank": "3",
-      "name": "Overs",
-      "team": "Pulikkoottam - Royals",
-      "innings": "8",
-      "runs": "751",
-      "strike_rate": "0",
-      "fours": "0",
-      "sixes": "0",
-      "average": "93.88"
-    },
-    {
-      "rank": "4",
-      "name": "Overs",
-      "team": "BRCL Greens",
-      "innings": "9",
-      "runs": "707",
-      "strike_rate": "0",
-      "fours": "0",
-      "sixes": "0",
-      "average": "78.56"
-    },
-    {
-      "rank": "5",
-      "name": "Overs",
-      "team": "Machani Strikers",
-      "innings": "8",
-      "runs": "676",
-      "strike_rate": "0",
-      "fours": "0",
-      "sixes": "0",
-      "average": "84.5"
-    },
-    {
-      "rank": "6",
-      "name": "Overs",
-      "team": "Snoqualmie Wolves Timber",
-      "innings": "9",
-      "runs": "672",
-      "strike_rate": "0",
-      "fours": "0",
-      "sixes": "0",
-      "average": "74.67"
-    },
-    {
-      "rank": "7",
-      "name": "Overs",
-      "team": "ATB Chargers",
-      "innings": "7",
-      "runs": "666",
-      "strike_rate": "0",
-      "fours": "0",
-      "sixes": "0",
-      "average": "95.14"
-    },
-    {
-      "rank": "8",
-      "name": "Overs",
-      "team": "ICCS Angry Bulls",
-      "innings": "7",
-      "runs": "658",
-      "strike_rate": "0",
-      "fours": "0",
-      "sixes": "0",
-      "average": "94.0"
-    },
-    {
-      "rank": "9",
-      "name": "Overs",
-      "team": "Everest Warriors",
-      "innings": "7",
-      "runs": "652",
-      "strike_rate": "0",
-      "fours": "0",
-      "sixes": "0",
-      "average": "93.14"
-    },
-    {
-      "rank": "10",
-      "name": "Overs",
-      "team": "Knightriders",
-      "innings": "8",
-      "runs": "623",
-      "strike_rate": "0",
-      "fours": "0",
-      "sixes": "0",
-      "average": "77.88"
-    },
-    {
-      "rank": "11",
-      "name": "Overs",
-      "team": "C-Hawks",
-      "innings": "7",
-      "runs": "604",
-      "strike_rate": "0",
-      "fours": "0",
-      "sixes": "0",
-      "average": "86.29"
-    },
-    {
-      "rank": "12",
-      "name": "Overs",
-      "team": "Snoqualmie Wolves Arctic",
-      "innings": "7",
-      "runs": "603",
-      "strike_rate": "0",
-      "fours": "0",
-      "sixes": "0",
-      "average": "86.14"
-    },
-    {
-      "rank": "13",
-      "name": "Overs",
-      "team": "Gilly",
-      "innings": "7",
-      "runs": "596",
-      "strike_rate": "0",
-      "fours": "0",
-      "sixes": "0",
-      "average": "85.14"
-    },
-    {
-      "rank": "14",
-      "name": "Overs",
-      "team": "Cricket Fanatics",
-      "innings": "8",
-      "runs": "581",
-      "strike_rate": "0",
-      "fours": "0",
-      "sixes": "0",
-      "average": "72.62"
-    },
-    {
-      "rank": "15",
-      "name": "Overs",
-      "team": "The Avengers",
-      "innings": "7",
-      "runs": "569",
-      "strike_rate": "0",
-      "fours": "0",
-      "sixes": "0",
-      "average": "81.29"
-    },
-    {
-      "rank": "16",
-      "name": "Overs",
-      "team": "ICCS White Wolves",
-      "innings": "7",
-      "runs": "561",
-      "strike_rate": "0",
-      "fours": "0",
-      "sixes": "0",
-      "average": "80.14"
-    },
-    {
-      "rank": "17",
-      "name": "Overs",
-      "team": "SuperKings",
-      "innings": "7",
-      "runs": "550",
-      "strike_rate": "0",
-      "fours": "0",
-      "sixes": "0",
-      "average": "78.57"
-    },
-    {
-      "rank": "18",
-      "name": "Overs",
-      "team": "ICCS Royal Warriors",
-      "innings": "7",
-      "runs": "550",
-      "strike_rate": "0",
-      "fours": "0",
-      "sixes": "0",
-      "average": "78.57"
-    },
-    {
-      "rank": "19",
-      "name": "Overs",
-      "team": "SUY Northern Yorkas",
-      "innings": "7",
-      "runs": "504",
-      "strike_rate": "0",
-      "fours": "0",
-      "sixes": "0",
-      "average": "72.0"
-    },
-    {
-      "rank": "20",
-      "name": "Overs",
-      "team": "Red Warriors",
-      "innings": "7",
-      "runs": "502",
-      "strike_rate": "0",
-      "fours": "0",
-      "sixes": "0",
-      "average": "71.71"
-    },
-    {
-      "rank": "21",
-      "name": "Overs",
-      "team": "Raftaar",
-      "innings": "7",
-      "runs": "490",
-      "strike_rate": "0",
-      "fours": "0",
-      "sixes": "0",
-      "average": "70.0"
-    },
-    {
-      "rank": "22",
-      "name": "Overs",
-      "team": "ERC Blizzard",
-      "innings": "7",
-      "runs": "484",
-      "strike_rate": "0",
-      "fours": "0",
-      "sixes": "0",
-      "average": "69.14"
-    },
-    {
-      "rank": "23",
-      "name": "Overs",
-      "team": "ATB Seattle Shockers",
-      "innings": "7",
-      "runs": "464",
-      "strike_rate": "0",
-      "fours": "0",
-      "sixes": "0",
-      "average": "66.29"
-    },
-    {
-      "rank": "24",
-      "name": "Overs",
-      "team": "Kachra Boyz - OG",
-      "innings": "7",
-      "runs": "402",
-      "strike_rate": "0",
-      "fours": "0",
-      "sixes": "0",
-      "average": "57.43"
-    },
-    {
-      "rank": "25",
       "name": "Anuj Nadig",
       "team": "BRCL Greens",
       "innings": "9",
@@ -306,7 +42,7 @@
       "average": "33.29"
     },
     {
-      "rank": "26",
+      "rank": "2",
       "name": "Pavan Shetty",
       "team": "Snoqualmie Wolves Arctic",
       "innings": "7",
@@ -317,7 +53,7 @@
       "average": "42.0"
     },
     {
-      "rank": "27",
+      "rank": "3",
       "name": "Prudhvi Reddy",
       "team": "Spartan Boys",
       "innings": "10",
@@ -328,7 +64,7 @@
       "average": "20.89"
     },
     {
-      "rank": "28",
+      "rank": "4",
       "name": "Pranu Johri",
       "team": "Snoqualmie Wolves Timber",
       "innings": "9",
@@ -339,7 +75,7 @@
       "average": "36.4"
     },
     {
-      "rank": "29",
+      "rank": "5",
       "name": "Arun Chandra",
       "team": "Kirkland Knights",
       "innings": "10",
@@ -350,7 +86,7 @@
       "average": "19.11"
     },
     {
-      "rank": "30",
+      "rank": "6",
       "name": "Anand Harshan",
       "team": "Pulikkoottam - Royals",
       "innings": "8",
@@ -361,7 +97,7 @@
       "average": "23.43"
     },
     {
-      "rank": "31",
+      "rank": "7",
       "name": "Jomi Mathew",
       "team": "Pulikkoottam - Royals",
       "innings": "8",
@@ -372,7 +108,7 @@
       "average": "23.29"
     },
     {
-      "rank": "32",
+      "rank": "8",
       "name": "Manish S Nair",
       "team": "Machani Strikers",
       "innings": "6",
@@ -383,7 +119,7 @@
       "average": "30.8"
     },
     {
-      "rank": "33",
+      "rank": "9",
       "name": "Deepanshu Gupta",
       "team": "Kirkland Knights",
       "innings": "6",
@@ -394,7 +130,7 @@
       "average": "30.6"
     },
     {
-      "rank": "34",
+      "rank": "10",
       "name": "Deva Nandhagopal",
       "team": "C-Hawks",
       "innings": "7",
@@ -405,7 +141,7 @@
       "average": "24.5"
     },
     {
-      "rank": "35",
+      "rank": "11",
       "name": "Sreekar Reddy Sykam",
       "team": "Knightriders",
       "innings": "8",
@@ -416,7 +152,7 @@
       "average": "24.33"
     },
     {
-      "rank": "36",
+      "rank": "12",
       "name": "Sudhakar G",
       "team": "Everest Warriors",
       "innings": "7",
@@ -427,7 +163,7 @@
       "average": "22.83"
     },
     {
-      "rank": "37",
+      "rank": "13",
       "name": "Kapil Sharma",
       "team": "Knightriders",
       "innings": "6",
@@ -438,7 +174,7 @@
       "average": "45.33"
     },
     {
-      "rank": "38",
+      "rank": "14",
       "name": "Shubh Johri",
       "team": "Snoqualmie Wolves Timber",
       "innings": "9",
@@ -449,7 +185,7 @@
       "average": "22.67"
     },
     {
-      "rank": "39",
+      "rank": "15",
       "name": "Ajay Kakarala",
       "team": "ICCS Angry Bulls",
       "innings": "6",
@@ -460,7 +196,7 @@
       "average": "22.0"
     },
     {
-      "rank": "40",
+      "rank": "16",
       "name": "AkashAnjanappa A",
       "team": "Cricket Fanatics",
       "innings": "7",
@@ -471,7 +207,7 @@
       "average": "20.67"
     },
     {
-      "rank": "41",
+      "rank": "17",
       "name": "Gowri Shankar",
       "team": "Gilly",
       "innings": "7",
@@ -482,7 +218,7 @@
       "average": "17.14"
     },
     {
-      "rank": "42",
+      "rank": "18",
       "name": "Praveen Malla",
       "team": "Knightriders",
       "innings": "8",
@@ -493,7 +229,7 @@
       "average": "17.14"
     },
     {
-      "rank": "43",
+      "rank": "19",
       "name": "Ajit Maurya",
       "team": "Spartan Boys",
       "innings": "9",
@@ -504,7 +240,7 @@
       "average": "15.0"
     },
     {
-      "rank": "44",
+      "rank": "20",
       "name": "Dileep Singh",
       "team": "The Avengers",
       "innings": "6",
@@ -515,7 +251,7 @@
       "average": "23.6"
     },
     {
-      "rank": "45",
+      "rank": "21",
       "name": "Manu Mani",
       "team": "Machani Strikers",
       "innings": "8",
@@ -526,7 +262,7 @@
       "average": "19.5"
     },
     {
-      "rank": "46",
+      "rank": "22",
       "name": "Kalim Azam",
       "team": "ICCS Royal Warriors",
       "innings": "7",
@@ -537,7 +273,7 @@
       "average": "16.57"
     },
     {
-      "rank": "47",
+      "rank": "23",
       "name": "Rahul Mitra",
       "team": "ICCS Angry Bulls",
       "innings": "7",
@@ -548,7 +284,7 @@
       "average": "16.57"
     },
     {
-      "rank": "48",
+      "rank": "24",
       "name": "Manoj Bisht",
       "team": "Red Warriors",
       "innings": "6",
@@ -559,7 +295,7 @@
       "average": "19.0"
     },
     {
-      "rank": "49",
+      "rank": "25",
       "name": "Ayush Chaturvedi",
       "team": "Snoqualmie Wolves Timber",
       "innings": "8",
@@ -570,7 +306,7 @@
       "average": "16.0"
     },
     {
-      "rank": "50",
+      "rank": "26",
       "name": "praveen D",
       "team": "Cricket Fanatics",
       "innings": "7",
@@ -581,7 +317,7 @@
       "average": "18.5"
     },
     {
-      "rank": "51",
+      "rank": "27",
       "name": "Apoorv Agrawal",
       "team": "ATB Seattle Shockers",
       "innings": "7",
@@ -592,7 +328,7 @@
       "average": "18.33"
     },
     {
-      "rank": "52",
+      "rank": "28",
       "name": "Praveen Yaadav",
       "team": "ICCS Royal Warriors",
       "innings": "7",
@@ -603,7 +339,7 @@
       "average": "15.71"
     },
     {
-      "rank": "53",
+      "rank": "29",
       "name": "AtulyaA Ravishankar",
       "team": "C-Hawks",
       "innings": "6",
@@ -614,7 +350,7 @@
       "average": "18.0"
     },
     {
-      "rank": "54",
+      "rank": "30",
       "name": "Phurtemba Sherpa",
       "team": "Everest Warriors",
       "innings": "4",
@@ -625,7 +361,7 @@
       "average": "106.0"
     },
     {
-      "rank": "55",
+      "rank": "31",
       "name": "Sagar Ghabade",
       "team": "Raftaar",
       "innings": "6",
@@ -636,7 +372,7 @@
       "average": "20.6"
     },
     {
-      "rank": "56",
+      "rank": "32",
       "name": "Ravi .",
       "team": "Cricket Fanatics",
       "innings": "6",
@@ -647,7 +383,7 @@
       "average": "25.5"
     },
     {
-      "rank": "57",
+      "rank": "33",
       "name": "Srinivas Kotla",
       "team": "ATB Chargers",
       "innings": "5",
@@ -658,7 +394,7 @@
       "average": "20.4"
     },
     {
-      "rank": "58",
+      "rank": "34",
       "name": "Sujith Viswanathan",
       "team": "Machani Strikers",
       "innings": "4",
@@ -669,7 +405,7 @@
       "average": "33.67"
     },
     {
-      "rank": "59",
+      "rank": "35",
       "name": "Sudeep Aryal",
       "team": "Everest Warriors",
       "innings": "7",
@@ -680,7 +416,7 @@
       "average": "16.83"
     },
     {
-      "rank": "60",
+      "rank": "36",
       "name": "Kishore Rajendran",
       "team": "ATB Seattle Shockers",
       "innings": "7",
@@ -691,7 +427,7 @@
       "average": "19.8"
     },
     {
-      "rank": "61",
+      "rank": "37",
       "name": "Sai Krishna Uppala",
       "team": "ATB Chargers",
       "innings": "6",
@@ -702,7 +438,7 @@
       "average": "19.6"
     },
     {
-      "rank": "62",
+      "rank": "38",
       "name": "Sajunath Nair",
       "team": "Pulikkoottam - Royals",
       "innings": "6",
@@ -713,7 +449,7 @@
       "average": "24.0"
     },
     {
-      "rank": "63",
+      "rank": "39",
       "name": "Karrthik T",
       "team": "ICCS White Wolves",
       "innings": "7",
@@ -724,7 +460,7 @@
       "average": "15.83"
     },
     {
-      "rank": "64",
+      "rank": "40",
       "name": "Praba Venkatesan",
       "team": "Gilly",
       "innings": "7",
@@ -735,7 +471,7 @@
       "average": "15.67"
     },
     {
-      "rank": "65",
+      "rank": "41",
       "name": "Raja Ellitam",
       "team": "SuperKings",
       "innings": "4",
@@ -746,7 +482,7 @@
       "average": "31.33"
     },
     {
-      "rank": "66",
+      "rank": "42",
       "name": "Rammanoj Keerti",
       "team": "Cricket Fanatics",
       "innings": "8",
@@ -757,7 +493,7 @@
       "average": "15.67"
     },
     {
-      "rank": "67",
+      "rank": "43",
       "name": "Rijil Koyyodan",
       "team": "Pulikkoottam - Royals",
       "innings": "6",
@@ -768,7 +504,7 @@
       "average": "18.6"
     },
     {
-      "rank": "68",
+      "rank": "44",
       "name": "Mohsin Khan",
       "team": "ERC Blizzard",
       "innings": "7",
@@ -779,7 +515,7 @@
       "average": "15.17"
     },
     {
-      "rank": "69",
+      "rank": "45",
       "name": "Jithu John",
       "team": "Pulikkoottam - Royals",
       "innings": "6",
@@ -790,7 +526,7 @@
       "average": "22.75"
     },
     {
-      "rank": "70",
+      "rank": "46",
       "name": "Kiran Redhawks",
       "team": "Spartan Boys",
       "innings": "9",
@@ -801,7 +537,7 @@
       "average": "12.71"
     },
     {
-      "rank": "71",
+      "rank": "47",
       "name": "Siddharth Patankar",
       "team": "Kirkland Knights",
       "innings": "9",
@@ -812,7 +548,7 @@
       "average": "12.57"
     },
     {
-      "rank": "72",
+      "rank": "48",
       "name": "Gowtham Reddy",
       "team": "ATB Chargers",
       "innings": "5",
@@ -823,7 +559,7 @@
       "average": "17.6"
     },
     {
-      "rank": "73",
+      "rank": "49",
       "name": "Abhinav Garg SUY",
       "team": "SUY Northern Yorkas",
       "innings": "2",
@@ -834,7 +570,7 @@
       "average": "87"
     },
     {
-      "rank": "74",
+      "rank": "50",
       "name": "Harshit Mehta",
       "team": "Spartan Boys",
       "innings": "8",
@@ -845,7 +581,7 @@
       "average": "10.62"
     },
     {
-      "rank": "75",
+      "rank": "51",
       "name": "Sagar Hotchandani avengers",
       "team": "The Avengers",
       "innings": "7",
@@ -856,7 +592,7 @@
       "average": "13.83"
     },
     {
-      "rank": "76",
+      "rank": "52",
       "name": "Vikrant Sathyakumar",
       "team": "Snoqualmie Wolves Arctic",
       "innings": "5",
@@ -867,7 +603,7 @@
       "average": "16.0"
     },
     {
-      "rank": "77",
+      "rank": "53",
       "name": "Basheer Mohammed",
       "team": "ERC Blizzard",
       "innings": "5",
@@ -878,7 +614,7 @@
       "average": "16.0"
     },
     {
-      "rank": "78",
+      "rank": "54",
       "name": "Chaithanya Cherakupally",
       "team": "ATB Chargers",
       "innings": "5",
@@ -889,7 +625,7 @@
       "average": "19.75"
     },
     {
-      "rank": "79",
+      "rank": "55",
       "name": "Sree Harsha Rekhana",
       "team": "Kachra Boyz - OG",
       "innings": "6",
@@ -900,7 +636,7 @@
       "average": "15.6"
     },
     {
-      "rank": "80",
+      "rank": "56",
       "name": "Sanat Kulkarni",
       "team": "Raftaar",
       "innings": "6",
@@ -911,7 +647,7 @@
       "average": "19.5"
     },
     {
-      "rank": "81",
+      "rank": "57",
       "name": "Phani Madala",
       "team": "SuperKings",
       "innings": "6",
@@ -922,7 +658,7 @@
       "average": "19.25"
     },
     {
-      "rank": "82",
+      "rank": "58",
       "name": "Sachin Saki",
       "team": "The Avengers",
       "innings": "5",
@@ -933,7 +669,7 @@
       "average": "15.4"
     },
     {
-      "rank": "83",
+      "rank": "59",
       "name": "Rahul Manghwani",
       "team": "BRCL Greens",
       "innings": "7",
@@ -944,7 +680,7 @@
       "average": "12.83"
     },
     {
-      "rank": "84",
+      "rank": "60",
       "name": "Ravi Kandimalla",
       "team": "SuperKings",
       "innings": "7",
@@ -955,7 +691,7 @@
       "average": "10.86"
     },
     {
-      "rank": "85",
+      "rank": "61",
       "name": "Nirav Patel",
       "team": "Kirkland Knights",
       "innings": "7",
@@ -966,7 +702,7 @@
       "average": "14.8"
     },
     {
-      "rank": "86",
+      "rank": "62",
       "name": "Anuroop Tulasi",
       "team": "BRCL Greens",
       "innings": "7",
@@ -977,7 +713,7 @@
       "average": "14.8"
     },
     {
-      "rank": "87",
+      "rank": "63",
       "name": "Manu Jeewani",
       "team": "ICCS Royal Warriors",
       "innings": "6",
@@ -988,7 +724,7 @@
       "average": "24.33"
     },
     {
-      "rank": "88",
+      "rank": "64",
       "name": "Samuthrakumar Venugopalan",
       "team": "C-Hawks",
       "innings": "6",
@@ -999,7 +735,7 @@
       "average": "12.17"
     },
     {
-      "rank": "89",
+      "rank": "65",
       "name": "Gill Redhawks",
       "team": "Spartan Boys",
       "innings": "10",
@@ -1010,7 +746,7 @@
       "average": "10.29"
     },
     {
-      "rank": "90",
+      "rank": "66",
       "name": "Amrendra Shrivastava",
       "team": "ICCS Royal Warriors",
       "innings": "4",
@@ -1021,7 +757,7 @@
       "average": "36.0"
     },
     {
-      "rank": "91",
+      "rank": "67",
       "name": "Dhawal Atrey",
       "team": "ICCS Angry Bulls",
       "innings": "6",
@@ -1032,7 +768,7 @@
       "average": "11.67"
     },
     {
-      "rank": "92",
+      "rank": "68",
       "name": "Kali Charan",
       "team": "BRCL Greens",
       "innings": "6",
@@ -1043,7 +779,7 @@
       "average": "11.67"
     },
     {
-      "rank": "93",
+      "rank": "69",
       "name": "Santosh Kota Redhawks",
       "team": "Spartan Boys",
       "innings": "6",
@@ -1054,7 +790,7 @@
       "average": "11.33"
     },
     {
-      "rank": "94",
+      "rank": "70",
       "name": "Sunny Advani",
       "team": "ICCS Angry Bulls",
       "innings": "3",
@@ -1065,7 +801,7 @@
       "average": "68.0"
     },
     {
-      "rank": "95",
+      "rank": "71",
       "name": "Krishna Reddy Peesari",
       "team": "SuperKings",
       "innings": "7",
@@ -1076,7 +812,7 @@
       "average": "9.43"
     },
     {
-      "rank": "96",
+      "rank": "72",
       "name": "Venkataramani Narayanan",
       "team": "C-Hawks",
       "innings": "5",
@@ -1087,7 +823,7 @@
       "average": "16.5"
     },
     {
-      "rank": "97",
+      "rank": "73",
       "name": "Rohin P",
       "team": "ICCS White Wolves",
       "innings": "4",
@@ -1098,7 +834,7 @@
       "average": "22.0"
     },
     {
-      "rank": "98",
+      "rank": "74",
       "name": "Nisheedh Raveendran",
       "team": "Machani Strikers",
       "innings": "5",
@@ -1109,7 +845,7 @@
       "average": "16.5"
     },
     {
-      "rank": "99",
+      "rank": "75",
       "name": "Jagdish Singh SUY",
       "team": "SUY Northern Yorkas",
       "innings": "3",
@@ -1120,7 +856,7 @@
       "average": "21.33"
     },
     {
-      "rank": "100",
+      "rank": "76",
       "name": "Hemant Tikyani",
       "team": "Raftaar",
       "innings": "7",
@@ -1131,7 +867,7 @@
       "average": "8.86"
     },
     {
-      "rank": "101",
+      "rank": "77",
       "name": "Casey W",
       "team": "ICCS Angry Bulls",
       "innings": "5",
@@ -1142,7 +878,7 @@
       "average": "15.25"
     },
     {
-      "rank": "102",
+      "rank": "78",
       "name": "Shoeb Mohammed Syed",
       "team": "ERC Blizzard",
       "innings": "4",
@@ -1153,7 +889,7 @@
       "average": "20.33"
     },
     {
-      "rank": "103",
+      "rank": "79",
       "name": "Abhinay Maddi",
       "team": "ATB Chargers",
       "innings": "6",
@@ -1164,7 +900,7 @@
       "average": "20.0"
     },
     {
-      "rank": "104",
+      "rank": "80",
       "name": "Prince g",
       "team": "The Avengers",
       "innings": "6",
@@ -1175,7 +911,7 @@
       "average": "15.0"
     },
     {
-      "rank": "105",
+      "rank": "81",
       "name": "Rate",
       "team": "Spartan Boys",
       "innings": "10",
@@ -1186,7 +922,7 @@
       "average": "5.7"
     },
     {
-      "rank": "106",
+      "rank": "82",
       "name": "Prasanjeet Jena",
       "team": "Raftaar",
       "innings": "6",
@@ -1197,7 +933,7 @@
       "average": "11.4"
     },
     {
-      "rank": "107",
+      "rank": "83",
       "name": "Aakash Pillai",
       "team": "Kirkland Knights",
       "innings": "8",
@@ -1208,7 +944,7 @@
       "average": "11.2"
     },
     {
-      "rank": "108",
+      "rank": "84",
       "name": "Thiyagu Subramaniam",
       "team": "Gilly",
       "innings": "6",
@@ -1219,7 +955,7 @@
       "average": "9.0"
     },
     {
-      "rank": "109",
+      "rank": "85",
       "name": "sagar patil",
       "team": "Red Warriors",
       "innings": "5",
@@ -1230,7 +966,7 @@
       "average": "13.5"
     },
     {
-      "rank": "110",
+      "rank": "86",
       "name": "Hari Molabanti",
       "team": "Kirkland Knights",
       "innings": "6",
@@ -1241,7 +977,7 @@
       "average": "13.5"
     },
     {
-      "rank": "111",
+      "rank": "87",
       "name": "Shantha Thimmanna",
       "team": "BRCL Greens",
       "innings": "6",
@@ -1252,7 +988,7 @@
       "average": "9.0"
     },
     {
-      "rank": "112",
+      "rank": "88",
       "name": "Tarun Ravva",
       "team": "BRCL Greens",
       "innings": "7",
@@ -1263,7 +999,7 @@
       "average": "10.8"
     },
     {
-      "rank": "113",
+      "rank": "89",
       "name": "Arun Sharma SUY",
       "team": "SUY Northern Yorkas",
       "innings": "4",
@@ -1274,7 +1010,7 @@
       "average": "13.25"
     },
     {
-      "rank": "114",
+      "rank": "90",
       "name": "Satheesh Subbarayan",
       "team": "Gilly",
       "innings": "7",
@@ -1285,7 +1021,7 @@
       "average": "13.0"
     },
     {
-      "rank": "115",
+      "rank": "91",
       "name": "Aakash Mandhar",
       "team": "Snoqualmie Wolves Arctic",
       "innings": "5",
@@ -1296,7 +1032,7 @@
       "average": "26.0"
     },
     {
-      "rank": "116",
+      "rank": "92",
       "name": "Kanish Manuja",
       "team": "Gilly",
       "innings": "6",
@@ -1307,7 +1043,7 @@
       "average": "17.33"
     },
     {
-      "rank": "117",
+      "rank": "93",
       "name": "Rahul Potghan",
       "team": "Snoqualmie Wolves Timber",
       "innings": "8",
@@ -1318,7 +1054,7 @@
       "average": "7.43"
     },
     {
-      "rank": "118",
+      "rank": "94",
       "name": "Aniket Sawant",
       "team": "Red Warriors",
       "innings": "7",
@@ -1329,7 +1065,7 @@
       "average": "7.14"
     },
     {
-      "rank": "119",
+      "rank": "95",
       "name": "Srinivasan Turuvekere",
       "team": "Gilly",
       "innings": "6",
@@ -1340,7 +1076,7 @@
       "average": "9.8"
     },
     {
-      "rank": "120",
+      "rank": "96",
       "name": "Sanjay Mori",
       "team": "Red Warriors",
       "innings": "5",
@@ -1351,7 +1087,7 @@
       "average": "12.0"
     },
     {
-      "rank": "121",
+      "rank": "97",
       "name": "Satish Battina",
       "team": "Kachra Boyz - OG",
       "innings": "6",
@@ -1362,7 +1098,7 @@
       "average": "8.0"
     },
     {
-      "rank": "122",
+      "rank": "98",
       "name": "Ritik Bhardwaj",
       "team": "Everest Warriors",
       "innings": "3",
@@ -1373,7 +1109,7 @@
       "average": "16.0"
     },
     {
-      "rank": "123",
+      "rank": "99",
       "name": "Zuber Khan",
       "team": "BRCL Greens",
       "innings": "5",
@@ -1384,7 +1120,7 @@
       "average": "24.0"
     },
     {
-      "rank": "124",
+      "rank": "100",
       "name": "Deep Gill",
       "team": "Snoqualmie Wolves Arctic",
       "innings": "2",
@@ -1395,7 +1131,7 @@
       "average": "48.0"
     },
     {
-      "rank": "125",
+      "rank": "101",
       "name": "Swapnil Ranjit",
       "team": "Everest Warriors",
       "innings": "2",
@@ -1406,7 +1142,7 @@
       "average": "24.0"
     },
     {
-      "rank": "126",
+      "rank": "102",
       "name": "Srikanth Gujjula",
       "team": "ATB Chargers",
       "innings": "6",
@@ -1417,7 +1153,7 @@
       "average": "11.75"
     },
     {
-      "rank": "127",
+      "rank": "103",
       "name": "Tarak Movva",
       "team": "ICCS White Wolves",
       "innings": "5",
@@ -1428,7 +1164,7 @@
       "average": "11.75"
     },
     {
-      "rank": "128",
+      "rank": "104",
       "name": "Nikhil Kumar Bhavanam",
       "team": "ICCS White Wolves",
       "innings": "3",
@@ -1439,7 +1175,7 @@
       "average": "15.33"
     },
     {
-      "rank": "129",
+      "rank": "105",
       "name": "Rate",
       "team": "Kachra Boyz - OG",
       "innings": "7",
@@ -1450,7 +1186,7 @@
       "average": "6.57"
     },
     {
-      "rank": "130",
+      "rank": "106",
       "name": "Pradeep Sachin",
       "team": "ICCS Angry Bulls",
       "innings": "4",
@@ -1461,7 +1197,7 @@
       "average": "11.5"
     },
     {
-      "rank": "131",
+      "rank": "107",
       "name": "Shiv RoyalW",
       "team": "ICCS Royal Warriors",
       "innings": "5",
@@ -1472,7 +1208,7 @@
       "average": "9.0"
     },
     {
-      "rank": "132",
+      "rank": "108",
       "name": "Rate",
       "team": "Red Warriors",
       "innings": "7",
@@ -1483,7 +1219,7 @@
       "average": "6.29"
     },
     {
-      "rank": "133",
+      "rank": "109",
       "name": "Mayank Chawla SUY",
       "team": "SUY Northern Yorkas",
       "innings": "4",
@@ -1494,7 +1230,7 @@
       "average": "11.0"
     },
     {
-      "rank": "134",
+      "rank": "110",
       "name": "Rate",
       "team": "The Avengers",
       "innings": "7",
@@ -1505,7 +1241,7 @@
       "average": "6.14"
     },
     {
-      "rank": "135",
+      "rank": "111",
       "name": "Sahil Sehgal",
       "team": "Red Warriors",
       "innings": "5",
@@ -1516,7 +1252,7 @@
       "average": "10.75"
     },
     {
-      "rank": "136",
+      "rank": "112",
       "name": "Rate",
       "team": "Machani Strikers",
       "innings": "8",
@@ -1527,7 +1263,7 @@
       "average": "5.38"
     },
     {
-      "rank": "137",
+      "rank": "113",
       "name": "Rate",
       "team": "Snoqualmie Wolves Timber",
       "innings": "9",
@@ -1538,7 +1274,7 @@
       "average": "4.78"
     },
     {
-      "rank": "138",
+      "rank": "114",
       "name": "Vineeth Chinthirla",
       "team": "ICCS White Wolves",
       "innings": "4",
@@ -1549,7 +1285,7 @@
       "average": "42.0"
     },
     {
-      "rank": "139",
+      "rank": "115",
       "name": "Rate",
       "team": "ICCS White Wolves",
       "innings": "7",
@@ -1560,7 +1296,7 @@
       "average": "6.0"
     },
     {
-      "rank": "140",
+      "rank": "116",
       "name": "Rate",
       "team": "Kirkland Knights",
       "innings": "10",
@@ -1571,7 +1307,7 @@
       "average": "4.2"
     },
     {
-      "rank": "141",
+      "rank": "117",
       "name": "Sai Sri Harsha Kanamanapalli",
       "team": "Kirkland Knights",
       "innings": "7",
@@ -1582,7 +1318,7 @@
       "average": "8.4"
     },
     {
-      "rank": "142",
+      "rank": "118",
       "name": "Rate",
       "team": "BRCL Greens",
       "innings": "9",
@@ -1593,7 +1329,7 @@
       "average": "4.67"
     },
     {
-      "rank": "143",
+      "rank": "119",
       "name": "Ravi Mandal",
       "team": "Everest Warriors",
       "innings": "5",
@@ -1604,7 +1340,7 @@
       "average": "8.4"
     },
     {
-      "rank": "144",
+      "rank": "120",
       "name": "Rate",
       "team": "SuperKings",
       "innings": "7",
@@ -1615,7 +1351,7 @@
       "average": "5.86"
     },
     {
-      "rank": "145",
+      "rank": "121",
       "name": "Rate",
       "team": "ATB Seattle Shockers",
       "innings": "7",
@@ -1626,7 +1362,7 @@
       "average": "5.86"
     },
     {
-      "rank": "146",
+      "rank": "122",
       "name": "Raghav Kartheek Bodapati",
       "team": "ATB Chargers",
       "innings": "6",
@@ -1637,7 +1373,7 @@
       "average": "8.2"
     },
     {
-      "rank": "147",
+      "rank": "123",
       "name": "Rate",
       "team": "SUY Northern Yorkas",
       "innings": "7",
@@ -1648,7 +1384,7 @@
       "average": "5.86"
     },
     {
-      "rank": "148",
+      "rank": "124",
       "name": "Rate",
       "team": "ICCS Angry Bulls",
       "innings": "7",
@@ -1659,7 +1395,7 @@
       "average": "5.86"
     },
     {
-      "rank": "149",
+      "rank": "125",
       "name": "Shanmukh Muddana",
       "team": "SuperKings",
       "innings": "6",
@@ -1670,7 +1406,7 @@
       "average": "10.0"
     },
     {
-      "rank": "150",
+      "rank": "126",
       "name": "Onkar Jadha",
       "team": "Gilly",
       "innings": "2",
@@ -1681,7 +1417,7 @@
       "average": "20.0"
     },
     {
-      "rank": "151",
+      "rank": "127",
       "name": "Rate",
       "team": "ICCS Royal Warriors",
       "innings": "7",
@@ -1692,7 +1428,7 @@
       "average": "5.57"
     },
     {
-      "rank": "152",
+      "rank": "128",
       "name": "Ashish Virani",
       "team": "Kirkland Knights",
       "innings": "6",
@@ -1703,7 +1439,7 @@
       "average": "7.6"
     },
     {
-      "rank": "153",
+      "rank": "129",
       "name": "Senthil Redhawks",
       "team": "Spartan Boys",
       "innings": "4",
@@ -1714,7 +1450,7 @@
       "average": "12.67"
     },
     {
-      "rank": "154",
+      "rank": "130",
       "name": "Rate",
       "team": "Raftaar",
       "innings": "7",
@@ -1725,7 +1461,7 @@
       "average": "5.43"
     },
     {
-      "rank": "155",
+      "rank": "131",
       "name": "Rate",
       "team": "Gilly",
       "innings": "7",
@@ -1736,7 +1472,7 @@
       "average": "5.29"
     },
     {
-      "rank": "156",
+      "rank": "132",
       "name": "Rate",
       "team": "Knightriders",
       "innings": "8",
@@ -1747,7 +1483,7 @@
       "average": "4.62"
     },
     {
-      "rank": "157",
+      "rank": "133",
       "name": "Rate",
       "team": "ATB Chargers",
       "innings": "7",
@@ -1758,7 +1494,7 @@
       "average": "5.29"
     },
     {
-      "rank": "158",
+      "rank": "134",
       "name": "Imtiyaz Ur Rahman",
       "team": "ERC Blizzard",
       "innings": "2",
@@ -1769,7 +1505,7 @@
       "average": "18.5"
     },
     {
-      "rank": "159",
+      "rank": "135",
       "name": "Raghavendra Reddy",
       "team": "SuperKings",
       "innings": "5",
@@ -1780,7 +1516,7 @@
       "average": "9.0"
     },
     {
-      "rank": "160",
+      "rank": "136",
       "name": "Deepak K",
       "team": "ICCS White Wolves",
       "innings": "4",
@@ -1791,7 +1527,7 @@
       "average": "9.0"
     },
     {
-      "rank": "161",
+      "rank": "137",
       "name": "Don Peter",
       "team": "Pulikkoottam - Royals",
       "innings": "6",
@@ -1802,7 +1538,7 @@
       "average": "18.0"
     },
     {
-      "rank": "162",
+      "rank": "138",
       "name": "Arshpreet Singh",
       "team": "Snoqualmie Wolves Arctic",
       "innings": "5",
@@ -1813,7 +1549,7 @@
       "average": "9.0"
     },
     {
-      "rank": "163",
+      "rank": "139",
       "name": "Rate",
       "team": "C-Hawks",
       "innings": "7",
@@ -1824,7 +1560,7 @@
       "average": "5.14"
     },
     {
-      "rank": "164",
+      "rank": "140",
       "name": "Rate",
       "team": "ERC Blizzard",
       "innings": "7",
@@ -1835,7 +1571,7 @@
       "average": "5.14"
     },
     {
-      "rank": "165",
+      "rank": "141",
       "name": "Ravi Karnan RW",
       "team": "ICCS Royal Warriors",
       "innings": "5",
@@ -1846,7 +1582,7 @@
       "average": "9.0"
     },
     {
-      "rank": "166",
+      "rank": "142",
       "name": "Raj Kumar R",
       "team": "Knightriders",
       "innings": "6",
@@ -1857,7 +1593,7 @@
       "average": "7.2"
     },
     {
-      "rank": "167",
+      "rank": "143",
       "name": "Prathap Muniraju",
       "team": "Kachra Boyz - OG",
       "innings": "3",
@@ -1868,7 +1604,7 @@
       "average": "12.0"
     },
     {
-      "rank": "168",
+      "rank": "144",
       "name": "Varun Gattu",
       "team": "ATB Chargers",
       "innings": "2",
@@ -1879,7 +1615,7 @@
       "average": "18.0"
     },
     {
-      "rank": "169",
+      "rank": "145",
       "name": "Ritvik Manepalli",
       "team": "ATB Seattle Shockers",
       "innings": "5",
@@ -1890,7 +1626,7 @@
       "average": "8.75"
     },
     {
-      "rank": "170",
+      "rank": "146",
       "name": "Dewashish Chandramauli",
       "team": "Kachra Boyz - OG",
       "innings": "7",
@@ -1901,7 +1637,7 @@
       "average": "5.83"
     },
     {
-      "rank": "171",
+      "rank": "147",
       "name": "Rate",
       "team": "Cricket Fanatics",
       "innings": "8",
@@ -1912,7 +1648,7 @@
       "average": "4.38"
     },
     {
-      "rank": "172",
+      "rank": "148",
       "name": "Amit Agarwal",
       "team": "Raftaar",
       "innings": "4",
@@ -1923,7 +1659,7 @@
       "average": "8.75"
     },
     {
-      "rank": "173",
+      "rank": "149",
       "name": "Rate",
       "team": "Snoqualmie Wolves Arctic",
       "innings": "7",
@@ -1934,7 +1670,7 @@
       "average": "4.86"
     },
     {
-      "rank": "174",
+      "rank": "150",
       "name": "Rate",
       "team": "Everest Warriors",
       "innings": "7",
@@ -1945,7 +1681,7 @@
       "average": "4.86"
     },
     {
-      "rank": "175",
+      "rank": "151",
       "name": "Gurpreet Sohal",
       "team": "Snoqualmie Wolves Timber",
       "innings": "7",
@@ -1956,7 +1692,7 @@
       "average": "6.8"
     },
     {
-      "rank": "176",
+      "rank": "152",
       "name": "Akash Macha",
       "team": "ATB Seattle Shockers",
       "innings": "6",
@@ -1967,7 +1703,7 @@
       "average": "5.5"
     },
     {
-      "rank": "177",
+      "rank": "153",
       "name": "Arun Venkataraman",
       "team": "Machani Strikers",
       "innings": "5",
@@ -1978,7 +1714,7 @@
       "average": "6.6"
     },
     {
-      "rank": "178",
+      "rank": "154",
       "name": "Gagan Jagadeesha",
       "team": "Knightriders",
       "innings": "6",
@@ -1989,7 +1725,7 @@
       "average": "8.0"
     },
     {
-      "rank": "179",
+      "rank": "155",
       "name": "Harvinder SH Sharma",
       "team": "Snoqualmie Wolves Timber",
       "innings": "2",
@@ -2000,7 +1736,7 @@
       "average": "16.0"
     },
     {
-      "rank": "180",
+      "rank": "156",
       "name": "Rate",
       "team": "Pulikkoottam - Royals",
       "innings": "8",
@@ -2011,7 +1747,7 @@
       "average": "3.88"
     },
     {
-      "rank": "181",
+      "rank": "157",
       "name": "Manikantan Ravi",
       "team": "Machani Strikers",
       "innings": "7",
@@ -2022,7 +1758,7 @@
       "average": "4.43"
     },
     {
-      "rank": "182",
+      "rank": "158",
       "name": "Zafaruddin Mohammed",
       "team": "ERC Blizzard",
       "innings": "7",
@@ -2033,7 +1769,7 @@
       "average": "5.17"
     },
     {
-      "rank": "183",
+      "rank": "159",
       "name": "k v prasad",
       "team": "The Avengers",
       "innings": "4",
@@ -2044,7 +1780,7 @@
       "average": "7.75"
     },
     {
-      "rank": "184",
+      "rank": "160",
       "name": "Ayog Malla",
       "team": "Everest Warriors",
       "innings": "3",
@@ -2055,7 +1791,7 @@
       "average": "15.0"
     },
     {
-      "rank": "185",
+      "rank": "161",
       "name": "Praveen N",
       "team": "Cricket Fanatics",
       "innings": "6",
@@ -2066,7 +1802,7 @@
       "average": "10.0"
     },
     {
-      "rank": "186",
+      "rank": "162",
       "name": "Sunil Datla",
       "team": "Kachra Boyz - OG",
       "innings": "4",
@@ -2077,7 +1813,7 @@
       "average": "7.25"
     },
     {
-      "rank": "187",
+      "rank": "163",
       "name": "Prem Kumar Srinivasan",
       "team": "SUY Northern Yorkas",
       "innings": "3",
@@ -2088,7 +1824,7 @@
       "average": "9.67"
     },
     {
-      "rank": "188",
+      "rank": "164",
       "name": "Pavan Varma W",
       "team": "ICCS White Wolves",
       "innings": "2",
@@ -2099,7 +1835,7 @@
       "average": "14.0"
     },
     {
-      "rank": "189",
+      "rank": "165",
       "name": "Sivakumar Ganesan",
       "team": "C-Hawks",
       "innings": "5",
@@ -2110,7 +1846,7 @@
       "average": "27.0"
     },
     {
-      "rank": "190",
+      "rank": "166",
       "name": "Arwin Subramaniam",
       "team": "Machani Strikers",
       "innings": "4",
@@ -2121,7 +1857,7 @@
       "average": "6.75"
     },
     {
-      "rank": "191",
+      "rank": "167",
       "name": "Shashwat Singh SUY",
       "team": "SUY Northern Yorkas",
       "innings": "2",
@@ -2132,7 +1868,7 @@
       "average": "13.5"
     },
     {
-      "rank": "192",
+      "rank": "168",
       "name": "Prashanth Kadam",
       "team": "Kachra Boyz - OG",
       "innings": "4",
@@ -2143,7 +1879,7 @@
       "average": "6.5"
     },
     {
-      "rank": "193",
+      "rank": "169",
       "name": "Awaiz Mohammed",
       "team": "ERC Blizzard",
       "innings": "5",
@@ -2154,7 +1890,7 @@
       "average": "8.67"
     },
     {
-      "rank": "194",
+      "rank": "170",
       "name": "Amol Raftaar",
       "team": "Raftaar",
       "innings": "4",
@@ -2165,7 +1901,7 @@
       "average": "6.5"
     },
     {
-      "rank": "195",
+      "rank": "171",
       "name": "Basil Farook",
       "team": "Machani Strikers",
       "innings": "2",
@@ -2176,7 +1912,7 @@
       "average": "12.5"
     },
     {
-      "rank": "196",
+      "rank": "172",
       "name": "Varun Eda Naarayana",
       "team": "ICCS Angry Bulls",
       "innings": "3",
@@ -2187,7 +1923,7 @@
       "average": "12.5"
     },
     {
-      "rank": "197",
+      "rank": "173",
       "name": "Sekhar Mullapudi",
       "team": "Kachra Boyz - OG",
       "innings": "2",
@@ -2198,7 +1934,7 @@
       "average": "25"
     },
     {
-      "rank": "198",
+      "rank": "174",
       "name": "Vibhav SWCC",
       "team": "Snoqualmie Wolves Timber",
       "innings": "6",
@@ -2209,7 +1945,7 @@
       "average": "6.0"
     },
     {
-      "rank": "199",
+      "rank": "175",
       "name": "Vinay G",
       "team": "Cricket Fanatics",
       "innings": "4",
@@ -2220,7 +1956,7 @@
       "average": "8.0"
     },
     {
-      "rank": "200",
+      "rank": "176",
       "name": "Sriram Reddy",
       "team": "ATB Seattle Shockers",
       "innings": "5",
@@ -2231,7 +1967,7 @@
       "average": "7.67"
     },
     {
-      "rank": "201",
+      "rank": "177",
       "name": "Harsh H",
       "team": "ICCS White Wolves",
       "innings": "4",
@@ -2242,7 +1978,7 @@
       "average": "5.75"
     },
     {
-      "rank": "202",
+      "rank": "178",
       "name": "Rohit Singh",
       "team": "SUY Northern Yorkas",
       "innings": "6",
@@ -2253,7 +1989,7 @@
       "average": "4.6"
     },
     {
-      "rank": "203",
+      "rank": "179",
       "name": "Mithun Suresh Kumar",
       "team": "Machani Strikers",
       "innings": "5",
@@ -2264,7 +2000,7 @@
       "average": "7.67"
     },
     {
-      "rank": "204",
+      "rank": "180",
       "name": "sushil kumar",
       "team": "The Avengers",
       "innings": "5",
@@ -2275,7 +2011,7 @@
       "average": "5.75"
     },
     {
-      "rank": "205",
+      "rank": "181",
       "name": "Preet Singh The Avengers",
       "team": "The Avengers",
       "innings": "1",
@@ -2286,7 +2022,7 @@
       "average": "23.0"
     },
     {
-      "rank": "206",
+      "rank": "182",
       "name": "Jimi Shah",
       "team": "Snoqualmie Wolves Arctic",
       "innings": "6",
@@ -2297,7 +2033,7 @@
       "average": "3.67"
     },
     {
-      "rank": "207",
+      "rank": "183",
       "name": "Anshul Sachan",
       "team": "Kachra Boyz - OG",
       "innings": "3",
@@ -2308,7 +2044,7 @@
       "average": "11.0"
     },
     {
-      "rank": "208",
+      "rank": "184",
       "name": "Saurav Kumar SUY",
       "team": "SUY Northern Yorkas",
       "innings": "3",
@@ -2319,7 +2055,7 @@
       "average": "11.0"
     },
     {
-      "rank": "209",
+      "rank": "185",
       "name": "Venkatarami Reddy Ailuri",
       "team": "SuperKings",
       "innings": "5",
@@ -2330,7 +2066,7 @@
       "average": "5.25"
     },
     {
-      "rank": "210",
+      "rank": "186",
       "name": "Jeet M",
       "team": "The Avengers",
       "innings": "5",
@@ -2341,7 +2077,7 @@
       "average": "10.5"
     },
     {
-      "rank": "211",
+      "rank": "187",
       "name": "Pawan Acharya",
       "team": "Everest Warriors",
       "innings": "3",
@@ -2352,7 +2088,7 @@
       "average": "7.0"
     },
     {
-      "rank": "212",
+      "rank": "188",
       "name": "Apparao Bokka",
       "team": "BRCL Greens",
       "innings": "4",
@@ -2363,7 +2099,7 @@
       "average": "10.5"
     },
     {
-      "rank": "213",
+      "rank": "189",
       "name": "Aftab Alam",
       "team": "Raftaar",
       "innings": "4",
@@ -2374,7 +2110,7 @@
       "average": "5.25"
     },
     {
-      "rank": "214",
+      "rank": "190",
       "name": "Sriharsha Gudi",
       "team": "ICCS White Wolves",
       "innings": "4",
@@ -2385,7 +2121,7 @@
       "average": "7.0"
     },
     {
-      "rank": "215",
+      "rank": "191",
       "name": "Vignesh Kappagantula",
       "team": "ATB Seattle Shockers",
       "innings": "3",
@@ -2396,7 +2132,7 @@
       "average": "6.67"
     },
     {
-      "rank": "216",
+      "rank": "192",
       "name": "Samrat B",
       "team": "ICCS Royal Warriors",
       "innings": "3",
@@ -2407,7 +2143,7 @@
       "average": "6.67"
     },
     {
-      "rank": "217",
+      "rank": "193",
       "name": "Vishal A",
       "team": "Kachra Boyz - OG",
       "innings": "5",
@@ -2418,7 +2154,7 @@
       "average": "10.0"
     },
     {
-      "rank": "218",
+      "rank": "194",
       "name": "Sai Santosh P",
       "team": "Knightriders",
       "innings": "4",
@@ -2429,7 +2165,7 @@
       "average": "10.0"
     },
     {
-      "rank": "219",
+      "rank": "195",
       "name": "Mannan Khan blizzard",
       "team": "ERC Blizzard",
       "innings": "2",
@@ -2440,7 +2176,7 @@
       "average": "10.0"
     },
     {
-      "rank": "220",
+      "rank": "196",
       "name": "Anto Frederic",
       "team": "Red Warriors",
       "innings": "3",
@@ -2451,7 +2187,7 @@
       "average": "6.33"
     },
     {
-      "rank": "221",
+      "rank": "197",
       "name": "Saba Anandan",
       "team": "C-Hawks",
       "innings": "2",
@@ -2462,7 +2198,7 @@
       "average": "19.0"
     },
     {
-      "rank": "222",
+      "rank": "198",
       "name": "Bucchi Reddy",
       "team": "The Avengers",
       "innings": "5",
@@ -2473,7 +2209,7 @@
       "average": "4.75"
     },
     {
-      "rank": "223",
+      "rank": "199",
       "name": "Ranga Renegades",
       "team": "Red Warriors",
       "innings": "3",
@@ -2484,7 +2220,7 @@
       "average": "9.5"
     },
     {
-      "rank": "224",
+      "rank": "200",
       "name": "Nitin Saxena Raftaar",
       "team": "Raftaar",
       "innings": "1",
@@ -2495,7 +2231,7 @@
       "average": "19"
     },
     {
-      "rank": "225",
+      "rank": "201",
       "name": "Sai Manudeep Gadde",
       "team": "Snoqualmie Wolves Timber",
       "innings": "4",
@@ -2506,7 +2242,7 @@
       "average": "6.33"
     },
     {
-      "rank": "226",
+      "rank": "202",
       "name": "Jai Ram",
       "team": "ICCS White Wolves",
       "innings": "2",
@@ -2517,7 +2253,7 @@
       "average": "18.0"
     },
     {
-      "rank": "227",
+      "rank": "203",
       "name": "Vijay Putta",
       "team": "ICCS White Wolves",
       "innings": "4",
@@ -2528,7 +2264,7 @@
       "average": "6.0"
     },
     {
-      "rank": "228",
+      "rank": "204",
       "name": "Bhagwan Dev Chaudhary",
       "team": "Everest Warriors",
       "innings": "5",
@@ -2539,7 +2275,7 @@
       "average": "6.0"
     },
     {
-      "rank": "229",
+      "rank": "205",
       "name": "Dharmendra Adsule",
       "team": "Red Warriors",
       "innings": "3",
@@ -2550,7 +2286,7 @@
       "average": "9.0"
     },
     {
-      "rank": "230",
+      "rank": "206",
       "name": "Sujeeth Darpally",
       "team": "ICCS White Wolves",
       "innings": "4",
@@ -2561,7 +2297,7 @@
       "average": "4.5"
     },
     {
-      "rank": "231",
+      "rank": "207",
       "name": "Shashank Shekhar Sharma",
       "team": "ATB Seattle Shockers",
       "innings": "3",
@@ -2572,7 +2308,7 @@
       "average": "6.0"
     },
     {
-      "rank": "232",
+      "rank": "208",
       "name": "Ragav Venkatesan",
       "team": "C-Hawks",
       "innings": "5",
@@ -2583,7 +2319,7 @@
       "average": "3.4"
     },
     {
-      "rank": "233",
+      "rank": "209",
       "name": "Srini Red Warriors",
       "team": "Red Warriors",
       "innings": "5",
@@ -2594,7 +2330,7 @@
       "average": "4.25"
     },
     {
-      "rank": "234",
+      "rank": "210",
       "name": "Arijit Madison",
       "team": "Raftaar",
       "innings": "3",
@@ -2605,7 +2341,7 @@
       "average": "8.5"
     },
     {
-      "rank": "235",
+      "rank": "211",
       "name": "Aravinthan Yogalingam",
       "team": "Spartan Boys",
       "innings": "2",
@@ -2616,7 +2352,7 @@
       "average": "17.0"
     },
     {
-      "rank": "236",
+      "rank": "212",
       "name": "Parasurama Eswarappa",
       "team": "SuperKings",
       "innings": "2",
@@ -2627,7 +2363,7 @@
       "average": "8.5"
     },
     {
-      "rank": "237",
+      "rank": "213",
       "name": "Nadeem khan Blizzard",
       "team": "ERC Blizzard",
       "innings": "2",
@@ -2638,7 +2374,7 @@
       "average": "17.0"
     },
     {
-      "rank": "238",
+      "rank": "214",
       "name": "Ravi Prakash",
       "team": "ATB Seattle Shockers",
       "innings": "1",
@@ -2649,7 +2385,7 @@
       "average": "17"
     },
     {
-      "rank": "239",
+      "rank": "215",
       "name": "Bala Kannan",
       "team": "Gilly",
       "innings": "4",
@@ -2660,7 +2396,7 @@
       "average": "5.33"
     },
     {
-      "rank": "240",
+      "rank": "216",
       "name": "Leo Joy",
       "team": "Snoqualmie Wolves Arctic",
       "innings": "3",
@@ -2671,7 +2407,7 @@
       "average": "5.33"
     },
     {
-      "rank": "241",
+      "rank": "217",
       "name": "Mohit Garg SUY",
       "team": "SUY Northern Yorkas",
       "innings": "3",
@@ -2682,7 +2418,7 @@
       "average": "8.0"
     },
     {
-      "rank": "242",
+      "rank": "218",
       "name": "Diwas Baral EWCC",
       "team": "Everest Warriors",
       "innings": "1",
@@ -2693,7 +2429,7 @@
       "average": "16.0"
     },
     {
-      "rank": "243",
+      "rank": "219",
       "name": "Sai Theja Prasad",
       "team": "ICCS White Wolves",
       "innings": "4",
@@ -2704,7 +2440,7 @@
       "average": "5.33"
     },
     {
-      "rank": "244",
+      "rank": "220",
       "name": "Avinash Pillai",
       "team": "SUY Northern Yorkas",
       "innings": "1",
@@ -2715,7 +2451,7 @@
       "average": "16.0"
     },
     {
-      "rank": "245",
+      "rank": "221",
       "name": "MADHU VARMA",
       "team": "Snoqualmie Wolves Timber",
       "innings": "2",
@@ -2726,7 +2462,7 @@
       "average": "16.0"
     },
     {
-      "rank": "246",
+      "rank": "222",
       "name": "Vamsidhar Reddy SuperKings",
       "team": "SuperKings",
       "innings": "1",
@@ -2737,7 +2473,7 @@
       "average": "16"
     },
     {
-      "rank": "247",
+      "rank": "223",
       "name": "akash Sharma",
       "team": "Spartan Boys",
       "innings": "6",
@@ -2748,7 +2484,7 @@
       "average": "7.5"
     },
     {
-      "rank": "248",
+      "rank": "224",
       "name": "Sai Kiran SuperKings",
       "team": "SuperKings",
       "innings": "2",
@@ -2759,7 +2495,7 @@
       "average": "7.5"
     },
     {
-      "rank": "249",
+      "rank": "225",
       "name": "Rajesh Selvamani",
       "team": "Gilly",
       "innings": "1",
@@ -2770,7 +2506,7 @@
       "average": "15.0"
     },
     {
-      "rank": "250",
+      "rank": "226",
       "name": "Naveen Ane",
       "team": "ATB Chargers",
       "innings": "2",
@@ -2781,7 +2517,7 @@
       "average": "7.5"
     },
     {
-      "rank": "251",
+      "rank": "227",
       "name": "Ankit Prasad",
       "team": "Red Warriors",
       "innings": "2",
@@ -2792,7 +2528,7 @@
       "average": "14.0"
     },
     {
-      "rank": "252",
+      "rank": "228",
       "name": "Swaraj Guduru",
       "team": "C-Hawks",
       "innings": "3",
@@ -2803,7 +2539,7 @@
       "average": "7.0"
     },
     {
-      "rank": "253",
+      "rank": "229",
       "name": "Yogesh G",
       "team": "The Avengers",
       "innings": "2",
@@ -2814,7 +2550,7 @@
       "average": "7.0"
     },
     {
-      "rank": "254",
+      "rank": "230",
       "name": "Chandrashekhar Chaudhari",
       "team": "C-Hawks",
       "innings": "2",
@@ -2825,7 +2561,7 @@
       "average": "7.0"
     },
     {
-      "rank": "255",
+      "rank": "231",
       "name": "Laxman Pandramish",
       "team": "ICCS Angry Bulls",
       "innings": "5",
@@ -2836,7 +2572,7 @@
       "average": "3.5"
     },
     {
-      "rank": "256",
+      "rank": "232",
       "name": "Vijay Padwan",
       "team": "ICCS Angry Bulls",
       "innings": "3",
@@ -2847,7 +2583,7 @@
       "average": "14.0"
     },
     {
-      "rank": "257",
+      "rank": "233",
       "name": "Nishanth Krishnappa",
       "team": "SUY Northern Yorkas",
       "innings": "3",
@@ -2858,7 +2594,7 @@
       "average": "4.67"
     },
     {
-      "rank": "258",
+      "rank": "234",
       "name": "Rahul Lala",
       "team": "Snoqualmie Wolves Arctic",
       "innings": "1",
@@ -2869,7 +2605,7 @@
       "average": "14.0"
     },
     {
-      "rank": "259",
+      "rank": "235",
       "name": "Chirag M",
       "team": "ICCS Angry Bulls",
       "innings": "1",
@@ -2880,7 +2616,7 @@
       "average": "14.0"
     },
     {
-      "rank": "260",
+      "rank": "236",
       "name": "Deepak Chawks",
       "team": "C-Hawks",
       "innings": "3",
@@ -2891,7 +2627,7 @@
       "average": "6.5"
     },
     {
-      "rank": "261",
+      "rank": "237",
       "name": "Kishore Putcha",
       "team": "ATB Seattle Shockers",
       "innings": "6",
@@ -2902,7 +2638,7 @@
       "average": "2.17"
     },
     {
-      "rank": "262",
+      "rank": "238",
       "name": "Rajesh RavulaKB",
       "team": "Kachra Boyz - OG",
       "innings": "5",
@@ -2913,7 +2649,7 @@
       "average": "3.25"
     },
     {
-      "rank": "263",
+      "rank": "239",
       "name": "Akul Singh SUY",
       "team": "SUY Northern Yorkas",
       "innings": "2",
@@ -2924,7 +2660,7 @@
       "average": "13"
     },
     {
-      "rank": "264",
+      "rank": "240",
       "name": "Anand Hingway",
       "team": "Knightriders",
       "innings": "3",
@@ -2935,7 +2671,7 @@
       "average": "4.33"
     },
     {
-      "rank": "265",
+      "rank": "241",
       "name": "Lokesh Nallagorla",
       "team": "Knightriders",
       "innings": "3",
@@ -2946,7 +2682,7 @@
       "average": "6.5"
     },
     {
-      "rank": "266",
+      "rank": "242",
       "name": "Sandhip Govindaraj",
       "team": "Snoqualmie Wolves Arctic",
       "innings": "4",
@@ -2957,7 +2693,7 @@
       "average": "6.5"
     },
     {
-      "rank": "267",
+      "rank": "243",
       "name": "Harshad Shirwadkar",
       "team": "Kirkland Knights",
       "innings": "1",
@@ -2968,7 +2704,7 @@
       "average": "13.0"
     },
     {
-      "rank": "268",
+      "rank": "244",
       "name": "Ajay Devuji",
       "team": "SUY Northern Yorkas",
       "innings": "1",
@@ -2979,7 +2715,7 @@
       "average": "13.0"
     },
     {
-      "rank": "269",
+      "rank": "245",
       "name": "Murugesh Panchali",
       "team": "Gilly",
       "innings": "2",
@@ -2990,7 +2726,7 @@
       "average": "12.0"
     },
     {
-      "rank": "270",
+      "rank": "246",
       "name": "Harry Dhami SWCC",
       "team": "Snoqualmie Wolves Arctic",
       "innings": "3",
@@ -3001,7 +2737,7 @@
       "average": "4.0"
     },
     {
-      "rank": "271",
+      "rank": "247",
       "name": "Surinder Pal",
       "team": "Snoqualmie Wolves Arctic",
       "innings": "2",
@@ -3012,7 +2748,7 @@
       "average": "12.0"
     },
     {
-      "rank": "272",
+      "rank": "248",
       "name": "Manoj Kumar Madala",
       "team": "ATB Seattle Shockers",
       "innings": "3",
@@ -3023,7 +2759,7 @@
       "average": "6.0"
     },
     {
-      "rank": "273",
+      "rank": "249",
       "name": "Abhishek S Sangam",
       "team": "ATB Chargers",
       "innings": "2",
@@ -3034,7 +2770,7 @@
       "average": "6.0"
     },
     {
-      "rank": "274",
+      "rank": "250",
       "name": "Pranav Redhawks",
       "team": "Spartan Boys",
       "innings": "4",
@@ -3045,7 +2781,7 @@
       "average": "2.75"
     },
     {
-      "rank": "275",
+      "rank": "251",
       "name": "Azharullah Meer",
       "team": "ERC Blizzard",
       "innings": "1",
@@ -3056,7 +2792,7 @@
       "average": "11.0"
     },
     {
-      "rank": "276",
+      "rank": "252",
       "name": "Mahesh Dacha",
       "team": "Knightriders",
       "innings": "2",
@@ -3067,7 +2803,7 @@
       "average": "5.5"
     },
     {
-      "rank": "277",
+      "rank": "253",
       "name": "Anand K Raman",
       "team": "Pulikkoottam - Royals",
       "innings": "4",
@@ -3078,7 +2814,7 @@
       "average": "2.5"
     },
     {
-      "rank": "278",
+      "rank": "254",
       "name": "Adityaa Lodha",
       "team": "ATB Seattle Shockers",
       "innings": "5",
@@ -3089,7 +2825,7 @@
       "average": "3.33"
     },
     {
-      "rank": "279",
+      "rank": "255",
       "name": "Ashwin Giridharan",
       "team": "ICCS Royal Warriors",
       "innings": "4",
@@ -3100,7 +2836,7 @@
       "average": "3.33"
     },
     {
-      "rank": "280",
+      "rank": "256",
       "name": "Gagan Ahuja Avengers",
       "team": "The Avengers",
       "innings": "3",
@@ -3111,7 +2847,7 @@
       "average": "5.0"
     },
     {
-      "rank": "281",
+      "rank": "257",
       "name": "Kashyap Uppulurii",
       "team": "SUY Northern Yorkas",
       "innings": "3",
@@ -3122,7 +2858,7 @@
       "average": "5.0"
     },
     {
-      "rank": "282",
+      "rank": "258",
       "name": "Vikrant Bhende",
       "team": "Red Warriors",
       "innings": "1",
@@ -3133,7 +2869,7 @@
       "average": "10"
     },
     {
-      "rank": "283",
+      "rank": "259",
       "name": "Ravi Samatham",
       "team": "Kachra Boyz - OG",
       "innings": "2",
@@ -3144,7 +2880,7 @@
       "average": "5.0"
     },
     {
-      "rank": "284",
+      "rank": "260",
       "name": "Rakesh Shocker",
       "team": "ATB Seattle Shockers",
       "innings": "1",
@@ -3155,7 +2891,7 @@
       "average": "10.0"
     },
     {
-      "rank": "285",
+      "rank": "261",
       "name": "Akshay Uttamani",
       "team": "The Avengers",
       "innings": "1",
@@ -3166,7 +2902,7 @@
       "average": "9.0"
     },
     {
-      "rank": "286",
+      "rank": "262",
       "name": "Muhammad Waris",
       "team": "Everest Warriors",
       "innings": "2",
@@ -3177,7 +2913,7 @@
       "average": "9.0"
     },
     {
-      "rank": "287",
+      "rank": "263",
       "name": "Saurabh Gangwal",
       "team": "SUY Northern Yorkas",
       "innings": "2",
@@ -3188,7 +2924,7 @@
       "average": "4.5"
     },
     {
-      "rank": "288",
+      "rank": "264",
       "name": "Uday Unni",
       "team": "Gilly",
       "innings": "7",
@@ -3199,7 +2935,7 @@
       "average": "1.14"
     },
     {
-      "rank": "289",
+      "rank": "265",
       "name": "Karthik SWCC",
       "team": "Snoqualmie Wolves Arctic",
       "innings": "1",
@@ -3210,7 +2946,7 @@
       "average": "8.0"
     },
     {
-      "rank": "290",
+      "rank": "266",
       "name": "Sai Vatsav",
       "team": "ATB Chargers",
       "innings": "1",
@@ -3221,7 +2957,7 @@
       "average": "8.0"
     },
     {
-      "rank": "291",
+      "rank": "267",
       "name": "Rahul Razdan",
       "team": "SUY Northern Yorkas",
       "innings": "3",
@@ -3232,7 +2968,7 @@
       "average": "4.0"
     },
     {
-      "rank": "292",
+      "rank": "268",
       "name": "Bishal Dhakal",
       "team": "Everest Warriors",
       "innings": "5",
@@ -3243,7 +2979,7 @@
       "average": "2.67"
     },
     {
-      "rank": "293",
+      "rank": "269",
       "name": "Pulkit Jain",
       "team": "SUY Northern Yorkas",
       "innings": "2",
@@ -3254,7 +2990,7 @@
       "average": "4.0"
     },
     {
-      "rank": "294",
+      "rank": "270",
       "name": "Vishnu M P",
       "team": "Machani Strikers",
       "innings": "2",
@@ -3265,7 +3001,7 @@
       "average": "8.0"
     },
     {
-      "rank": "295",
+      "rank": "271",
       "name": "Aashish Bhateja",
       "team": "Raftaar",
       "innings": "3",
@@ -3276,7 +3012,7 @@
       "average": "4.0"
     },
     {
-      "rank": "296",
+      "rank": "272",
       "name": "Inderji Sohal",
       "team": "ICCS Angry Bulls",
       "innings": "1",
@@ -3287,7 +3023,7 @@
       "average": "8"
     },
     {
-      "rank": "297",
+      "rank": "273",
       "name": "Sanjay Putti",
       "team": "SuperKings",
       "innings": "4",
@@ -3298,7 +3034,7 @@
       "average": "2.33"
     },
     {
-      "rank": "298",
+      "rank": "274",
       "name": "Uday Kumar Deb",
       "team": "C-Hawks",
       "innings": "2",
@@ -3309,7 +3045,7 @@
       "average": "7"
     },
     {
-      "rank": "299",
+      "rank": "275",
       "name": "Arun Das",
       "team": "Machani Strikers",
       "innings": "6",
@@ -3320,7 +3056,7 @@
       "average": "1.4"
     },
     {
-      "rank": "300",
+      "rank": "276",
       "name": "Nikhil N",
       "team": "Knightriders",
       "innings": "3",
@@ -3331,7 +3067,7 @@
       "average": "2.33"
     },
     {
-      "rank": "301",
+      "rank": "277",
       "name": "Aamer Mohammed",
       "team": "ERC Blizzard",
       "innings": "1",
@@ -3342,7 +3078,7 @@
       "average": "7.0"
     },
     {
-      "rank": "302",
+      "rank": "278",
       "name": "Omar Hafeez",
       "team": "Red Warriors",
       "innings": "1",
@@ -3353,7 +3089,7 @@
       "average": "6.0"
     },
     {
-      "rank": "303",
+      "rank": "279",
       "name": "Divakar Ravi",
       "team": "Cricket Fanatics",
       "innings": "5",
@@ -3364,7 +3100,7 @@
       "average": "2.0"
     },
     {
-      "rank": "304",
+      "rank": "280",
       "name": "Arun Kumar RW",
       "team": "ICCS Royal Warriors",
       "innings": "1",
@@ -3375,7 +3111,7 @@
       "average": "6.0"
     },
     {
-      "rank": "305",
+      "rank": "281",
       "name": "Rajendra K",
       "team": "Snoqualmie Wolves Timber",
       "innings": "7",
@@ -3386,7 +3122,7 @@
       "average": "1.0"
     },
     {
-      "rank": "306",
+      "rank": "282",
       "name": "Swapnil Sunny",
       "team": "Red Warriors",
       "innings": "1",
@@ -3397,7 +3133,7 @@
       "average": "6.0"
     },
     {
-      "rank": "307",
+      "rank": "283",
       "name": "Kartik Achar",
       "team": "Red Warriors",
       "innings": "1",
@@ -3408,7 +3144,7 @@
       "average": "6.0"
     },
     {
-      "rank": "308",
+      "rank": "284",
       "name": "Deepam Dubey",
       "team": "ICCS Angry Bulls",
       "innings": "4",
@@ -3419,7 +3155,7 @@
       "average": "1.5"
     },
     {
-      "rank": "309",
+      "rank": "285",
       "name": "Dinesh Routray",
       "team": "Red Warriors",
       "innings": "1",
@@ -3430,7 +3166,7 @@
       "average": "6.0"
     },
     {
-      "rank": "310",
+      "rank": "286",
       "name": "Sasank Reddy Mukku",
       "team": "ATB Chargers",
       "innings": "3",
@@ -3441,7 +3177,7 @@
       "average": "3.0"
     },
     {
-      "rank": "311",
+      "rank": "287",
       "name": "Abdullah Kasari",
       "team": "ERC Blizzard",
       "innings": "2",
@@ -3452,7 +3188,7 @@
       "average": "6.0"
     },
     {
-      "rank": "312",
+      "rank": "288",
       "name": "Sameer Patel",
       "team": "Red Warriors",
       "innings": "1",
@@ -3463,7 +3199,7 @@
       "average": "5.0"
     },
     {
-      "rank": "313",
+      "rank": "289",
       "name": "Yash Mehta RW",
       "team": "ICCS Royal Warriors",
       "innings": "4",
@@ -3474,7 +3210,7 @@
       "average": "2.5"
     },
     {
-      "rank": "314",
+      "rank": "290",
       "name": "Sai charan",
       "team": "Cricket Fanatics",
       "innings": "5",
@@ -3485,7 +3221,7 @@
       "average": "1.0"
     },
     {
-      "rank": "315",
+      "rank": "291",
       "name": "Akhil G",
       "team": "ATB Chargers",
       "innings": "3",
@@ -3496,7 +3232,7 @@
       "average": "5.0"
     },
     {
-      "rank": "316",
+      "rank": "292",
       "name": "Sherry Singh",
       "team": "Snoqualmie Wolves Arctic",
       "innings": "1",
@@ -3507,7 +3243,7 @@
       "average": "5.0"
     },
     {
-      "rank": "317",
+      "rank": "293",
       "name": "Nithish Kumar Vuppala",
       "team": "SUY Northern Yorkas",
       "innings": "2",
@@ -3518,7 +3254,7 @@
       "average": "2.5"
     },
     {
-      "rank": "318",
+      "rank": "294",
       "name": "Saravanan Muthusamy",
       "team": "Spartan Boys",
       "innings": "3",
@@ -3529,7 +3265,7 @@
       "average": "2.5"
     },
     {
-      "rank": "319",
+      "rank": "295",
       "name": "Arif Mandra",
       "team": "BRCL Greens",
       "innings": "3",
@@ -3540,7 +3276,7 @@
       "average": "5.0"
     },
     {
-      "rank": "320",
+      "rank": "296",
       "name": "Roop Sagar",
       "team": "Kachra Boyz - OG",
       "innings": "1",
@@ -3551,7 +3287,7 @@
       "average": "5.0"
     },
     {
-      "rank": "321",
+      "rank": "297",
       "name": "Gokul Kannan",
       "team": "Snoqualmie Wolves Arctic",
       "innings": "3",
@@ -3562,7 +3298,7 @@
       "average": "1.67"
     },
     {
-      "rank": "322",
+      "rank": "298",
       "name": "Balaji Kannan",
       "team": "Snoqualmie Wolves Arctic",
       "innings": "1",
@@ -3573,7 +3309,7 @@
       "average": "5"
     },
     {
-      "rank": "323",
+      "rank": "299",
       "name": "Mrityunjay Kumar",
       "team": "Raftaar",
       "innings": "2",
@@ -3584,7 +3320,7 @@
       "average": "5.0"
     },
     {
-      "rank": "324",
+      "rank": "300",
       "name": "Moyeed Blizzard",
       "team": "ERC Blizzard",
       "innings": "3",
@@ -3595,7 +3331,7 @@
       "average": "2.5"
     },
     {
-      "rank": "325",
+      "rank": "301",
       "name": "Shiv Singh SWCC",
       "team": "Snoqualmie Wolves Arctic",
       "innings": "1",
@@ -3606,7 +3342,7 @@
       "average": "5"
     },
     {
-      "rank": "326",
+      "rank": "302",
       "name": "Nitant Singh",
       "team": "The Avengers",
       "innings": "1",
@@ -3617,7 +3353,7 @@
       "average": "4.0"
     },
     {
-      "rank": "327",
+      "rank": "303",
       "name": "Hari Hara Kumar Rajanala",
       "team": "Kirkland Knights",
       "innings": "6",
@@ -3628,7 +3364,7 @@
       "average": "1.0"
     },
     {
-      "rank": "328",
+      "rank": "304",
       "name": "Adil M",
       "team": "ERC Blizzard",
       "innings": "1",
@@ -3639,7 +3375,7 @@
       "average": "4"
     },
     {
-      "rank": "329",
+      "rank": "305",
       "name": "Pradeep Reddy Maddasani",
       "team": "BRCL Greens",
       "innings": "3",
@@ -3650,7 +3386,7 @@
       "average": "2.0"
     },
     {
-      "rank": "330",
+      "rank": "306",
       "name": "Anant Sah",
       "team": "ICCS Royal Warriors",
       "innings": "1",
@@ -3661,7 +3397,7 @@
       "average": "4.0"
     },
     {
-      "rank": "331",
+      "rank": "307",
       "name": "Dileep Reddy Beeram",
       "team": "ICCS White Wolves",
       "innings": "1",
@@ -3672,7 +3408,7 @@
       "average": "4.0"
     },
     {
-      "rank": "332",
+      "rank": "308",
       "name": "Satya Sai Rajesh",
       "team": "ICCS Angry Bulls",
       "innings": "2",
@@ -3683,7 +3419,7 @@
       "average": "2.0"
     },
     {
-      "rank": "333",
+      "rank": "309",
       "name": "Himagiri Yathagiri",
       "team": "Red Warriors",
       "innings": "1",
@@ -3694,7 +3430,7 @@
       "average": "4.0"
     },
     {
-      "rank": "334",
+      "rank": "310",
       "name": "Praveen Malireddy",
       "team": "ATB Chargers",
       "innings": "1",
@@ -3705,7 +3441,7 @@
       "average": "4.0"
     },
     {
-      "rank": "335",
+      "rank": "311",
       "name": "Vivek Redhawks",
       "team": "Spartan Boys",
       "innings": "2",
@@ -3716,7 +3452,7 @@
       "average": "3.0"
     },
     {
-      "rank": "336",
+      "rank": "312",
       "name": "Ramesh Subramani",
       "team": "Gilly",
       "innings": "1",
@@ -3727,7 +3463,7 @@
       "average": "3"
     },
     {
-      "rank": "337",
+      "rank": "313",
       "name": "Punya Dhar",
       "team": "ICCS Angry Bulls",
       "innings": "4",
@@ -3738,7 +3474,7 @@
       "average": "1.0"
     },
     {
-      "rank": "338",
+      "rank": "314",
       "name": "Ram Prajapati",
       "team": "Everest Warriors",
       "innings": "3",
@@ -3749,7 +3485,7 @@
       "average": "1.0"
     },
     {
-      "rank": "339",
+      "rank": "315",
       "name": "Anoop Jose",
       "team": "Pulikkoottam - Royals",
       "innings": "5",
@@ -3760,7 +3496,7 @@
       "average": "0.6"
     },
     {
-      "rank": "340",
+      "rank": "316",
       "name": "Predeep R",
       "team": "ICCS Royal Warriors",
       "innings": "1",
@@ -3771,7 +3507,7 @@
       "average": "3"
     },
     {
-      "rank": "341",
+      "rank": "317",
       "name": "Srikanth Annadi",
       "team": "Red Warriors",
       "innings": "1",
@@ -3782,7 +3518,7 @@
       "average": "3.0"
     },
     {
-      "rank": "342",
+      "rank": "318",
       "name": "Muneeruddin Blizzard",
       "team": "ERC Blizzard",
       "innings": "1",
@@ -3793,7 +3529,7 @@
       "average": "3.0"
     },
     {
-      "rank": "343",
+      "rank": "319",
       "name": "Krish R",
       "team": "ICCS Royal Warriors",
       "innings": "1",
@@ -3804,7 +3540,7 @@
       "average": "3"
     },
     {
-      "rank": "344",
+      "rank": "320",
       "name": "Mounwik Mangamuri",
       "team": "Snoqualmie Wolves Arctic",
       "innings": "2",
@@ -3815,7 +3551,7 @@
       "average": "2.0"
     },
     {
-      "rank": "345",
+      "rank": "321",
       "name": "Hemanth Kumar",
       "team": "Kachra Boyz - OG",
       "innings": "1",
@@ -3826,7 +3562,7 @@
       "average": "2.0"
     },
     {
-      "rank": "346",
+      "rank": "322",
       "name": "Sathya Ganapathy",
       "team": "Kachra Boyz - OG",
       "innings": "1",
@@ -3837,7 +3573,7 @@
       "average": "2.0"
     },
     {
-      "rank": "347",
+      "rank": "323",
       "name": "Dileep Mishra avengers",
       "team": "The Avengers",
       "innings": "1",
@@ -3848,7 +3584,7 @@
       "average": "2.0"
     },
     {
-      "rank": "348",
+      "rank": "324",
       "name": "Ravindra Sengar",
       "team": "Kachra Boyz - OG",
       "innings": "1",
@@ -3859,7 +3595,7 @@
       "average": "2.0"
     },
     {
-      "rank": "349",
+      "rank": "325",
       "name": "Adhaar Gupta",
       "team": "Raftaar",
       "innings": "1",
@@ -3870,7 +3606,7 @@
       "average": "2"
     },
     {
-      "rank": "350",
+      "rank": "326",
       "name": "Nazeeruddin Blizzard",
       "team": "ERC Blizzard",
       "innings": "1",
@@ -3881,7 +3617,7 @@
       "average": "2.0"
     },
     {
-      "rank": "351",
+      "rank": "327",
       "name": "Paras Kumar Jain",
       "team": "Red Warriors",
       "innings": "1",
@@ -3892,7 +3628,7 @@
       "average": "2.0"
     },
     {
-      "rank": "352",
+      "rank": "328",
       "name": "Irfan Ahmed",
       "team": "ERC Blizzard",
       "innings": "1",
@@ -3903,7 +3639,7 @@
       "average": "2.0"
     },
     {
-      "rank": "353",
+      "rank": "329",
       "name": "Shalin Ved",
       "team": "Snoqualmie Wolves Timber",
       "innings": "2",
@@ -3914,7 +3650,7 @@
       "average": "1.0"
     },
     {
-      "rank": "354",
+      "rank": "330",
       "name": "Ajith A",
       "team": "SUY Northern Yorkas",
       "innings": "1",
@@ -3925,7 +3661,7 @@
       "average": "2"
     },
     {
-      "rank": "355",
+      "rank": "331",
       "name": "Santhosh V",
       "team": "Cricket Fanatics",
       "innings": "1",
@@ -3936,7 +3672,7 @@
       "average": "2.0"
     },
     {
-      "rank": "356",
+      "rank": "332",
       "name": "Rohith Pamulasai",
       "team": "Kirkland Knights",
       "innings": "3",
@@ -3947,7 +3683,7 @@
       "average": "1.0"
     },
     {
-      "rank": "357",
+      "rank": "333",
       "name": "Srihari Mahajanam",
       "team": "ICCS White Wolves",
       "innings": "1",
@@ -3958,7 +3694,7 @@
       "average": "1.0"
     },
     {
-      "rank": "358",
+      "rank": "334",
       "name": "Afsal NK Pulikkoottam",
       "team": "Pulikkoottam - Royals",
       "innings": "2",
@@ -3969,7 +3705,7 @@
       "average": "1.0"
     },
     {
-      "rank": "359",
+      "rank": "335",
       "name": "Bhargav Induri",
       "team": "Cricket Fanatics",
       "innings": "2",
@@ -3980,7 +3716,7 @@
       "average": "1.0"
     },
     {
-      "rank": "360",
+      "rank": "336",
       "name": "Tejav J",
       "team": "Cricket Fanatics",
       "innings": "1",
@@ -3991,7 +3727,7 @@
       "average": "1"
     },
     {
-      "rank": "361",
+      "rank": "337",
       "name": "Oscar Mowar",
       "team": "Red Warriors",
       "innings": "1",
@@ -4002,7 +3738,7 @@
       "average": "1"
     },
     {
-      "rank": "362",
+      "rank": "338",
       "name": "Syed Mohammed Shoeb",
       "team": "ERC Blizzard",
       "innings": "1",
@@ -4013,7 +3749,7 @@
       "average": "1.0"
     },
     {
-      "rank": "363",
+      "rank": "339",
       "name": "Prasanth Gopinath",
       "team": "Machani Strikers",
       "innings": "3",
@@ -4024,7 +3760,7 @@
       "average": "0.5"
     },
     {
-      "rank": "364",
+      "rank": "340",
       "name": "Nihal Bondugula",
       "team": "Snoqualmie Wolves Timber",
       "innings": "2",
@@ -4035,7 +3771,7 @@
       "average": "0.5"
     },
     {
-      "rank": "365",
+      "rank": "341",
       "name": "Asif Afzal",
       "team": "ERC Blizzard",
       "innings": "2",
@@ -4046,7 +3782,7 @@
       "average": "1"
     },
     {
-      "rank": "366",
+      "rank": "342",
       "name": "Sujith Thampi Strikers",
       "team": "Machani Strikers",
       "innings": "5",
@@ -4057,7 +3793,7 @@
       "average": "0.33"
     },
     {
-      "rank": "367",
+      "rank": "343",
       "name": "Jitesh Thomas",
       "team": "Machani Strikers",
       "innings": "1",
@@ -4068,7 +3804,7 @@
       "average": "1.0"
     },
     {
-      "rank": "368",
+      "rank": "344",
       "name": "Santosh Joshi",
       "team": "Red Warriors",
       "innings": "1",
@@ -4079,7 +3815,7 @@
       "average": "0.0"
     },
     {
-      "rank": "369",
+      "rank": "345",
       "name": "Swapnil Nair",
       "team": "Red Warriors",
       "innings": "1",
@@ -4090,7 +3826,7 @@
       "average": "0"
     },
     {
-      "rank": "370",
+      "rank": "346",
       "name": "Naveen Kumar Yenkuntam",
       "team": "SuperKings",
       "innings": "1",
@@ -4101,7 +3837,7 @@
       "average": "0.0"
     },
     {
-      "rank": "371",
+      "rank": "347",
       "name": "Hemant Bharadia",
       "team": "Snoqualmie Wolves Arctic",
       "innings": "1",
@@ -4112,7 +3848,7 @@
       "average": "0.0"
     },
     {
-      "rank": "372",
+      "rank": "348",
       "name": "Guru Prasad Gangiredla",
       "team": "Kachra Boyz - OG",
       "innings": "1",
@@ -4123,7 +3859,7 @@
       "average": "0.0"
     },
     {
-      "rank": "373",
+      "rank": "349",
       "name": "Laxman Mannam",
       "team": "The Avengers",
       "innings": "1",
@@ -4134,7 +3870,7 @@
       "average": "0.0"
     },
     {
-      "rank": "374",
+      "rank": "350",
       "name": "Manpreet Singh",
       "team": "C-Hawks",
       "innings": "1",
@@ -4145,7 +3881,7 @@
       "average": "0.0"
     },
     {
-      "rank": "375",
+      "rank": "351",
       "name": "Akshat Jain",
       "team": "Kirkland Knights",
       "innings": "1",
@@ -4156,7 +3892,7 @@
       "average": "0.0"
     },
     {
-      "rank": "376",
+      "rank": "352",
       "name": "Abdul Majid",
       "team": "ERC Blizzard",
       "innings": "1",
@@ -4167,7 +3903,7 @@
       "average": "0.0"
     },
     {
-      "rank": "377",
+      "rank": "353",
       "name": "Sandeep Limaye",
       "team": "Raftaar",
       "innings": "1",
@@ -4178,7 +3914,7 @@
       "average": "0.0"
     },
     {
-      "rank": "378",
+      "rank": "354",
       "name": "Rutvij Mehta",
       "team": "Snoqualmie Wolves Timber",
       "innings": "2",
@@ -4189,7 +3925,7 @@
       "average": "0.0"
     },
     {
-      "rank": "379",
+      "rank": "355",
       "name": "Prashanth Busi",
       "team": "BRCL Greens",
       "innings": "1",
@@ -4200,7 +3936,7 @@
       "average": "0.0"
     },
     {
-      "rank": "380",
+      "rank": "356",
       "name": "Hajaz Ayyubi",
       "team": "ERC Blizzard",
       "innings": "1",
@@ -4211,7 +3947,7 @@
       "average": "0.0"
     },
     {
-      "rank": "381",
+      "rank": "357",
       "name": "Sulaiman Azizi",
       "team": "ERC Blizzard",
       "innings": "1",
@@ -4222,7 +3958,7 @@
       "average": "0.0"
     },
     {
-      "rank": "382",
+      "rank": "358",
       "name": "Nitish Kumar",
       "team": "Kachra Boyz - OG",
       "innings": "2",
@@ -4233,7 +3969,7 @@
       "average": "0.0"
     },
     {
-      "rank": "383",
+      "rank": "359",
       "name": "Sebastian Pathrose",
       "team": "Pulikkoottam - Royals",
       "innings": "1",
@@ -4244,7 +3980,7 @@
       "average": "0"
     },
     {
-      "rank": "384",
+      "rank": "360",
       "name": "Shyam Mantrawadi",
       "team": "Snoqualmie Wolves Arctic",
       "innings": "1",
@@ -4255,7 +3991,7 @@
       "average": "0.0"
     },
     {
-      "rank": "385",
+      "rank": "361",
       "name": "Dinesh V U",
       "team": "SUY Northern Yorkas",
       "innings": "1",
@@ -4266,7 +4002,7 @@
       "average": "0.0"
     },
     {
-      "rank": "386",
+      "rank": "362",
       "name": "Anil Mathew Roy",
       "team": "Pulikkoottam - Royals",
       "innings": "1",
@@ -4277,7 +4013,7 @@
       "average": "0.0"
     },
     {
-      "rank": "387",
+      "rank": "363",
       "name": "Ramsundar M",
       "team": "Knightriders",
       "innings": "1",
@@ -4288,7 +4024,7 @@
       "average": "0.0"
     },
     {
-      "rank": "388",
+      "rank": "364",
       "name": "Venkat Avengers",
       "team": "The Avengers",
       "innings": "1",
@@ -4299,7 +4035,7 @@
       "average": "0.0"
     },
     {
-      "rank": "389",
+      "rank": "365",
       "name": "Jatin Dua SWCC",
       "team": "Snoqualmie Wolves Arctic",
       "innings": "1",
@@ -4310,7 +4046,7 @@
       "average": "0.0"
     },
     {
-      "rank": "390",
+      "rank": "366",
       "name": "Muhammad Fayaz SWCC",
       "team": "Snoqualmie Wolves Arctic",
       "innings": "1",
@@ -4321,7 +4057,7 @@
       "average": "0.0"
     },
     {
-      "rank": "391",
+      "rank": "367",
       "name": "Praveen Rao Nittoor",
       "team": "Kachra Boyz - OG",
       "innings": "1",
@@ -4332,7 +4068,7 @@
       "average": "0.0"
     },
     {
-      "rank": "392",
+      "rank": "368",
       "name": "Rajkumar Kuttappan",
       "team": "Machani Strikers",
       "innings": "1",
@@ -4343,7 +4079,7 @@
       "average": "0"
     },
     {
-      "rank": "393",
+      "rank": "369",
       "name": "Avinash Kollu",
       "team": "ATB Chargers",
       "innings": "1",
@@ -4354,7 +4090,7 @@
       "average": "0.0"
     },
     {
-      "rank": "394",
+      "rank": "370",
       "name": "Charan Kondapalli",
       "team": "ICCS Angry Bulls",
       "innings": "1",
@@ -4365,7 +4101,7 @@
       "average": "0.0"
     },
     {
-      "rank": "395",
+      "rank": "371",
       "name": "Manoj Subramaniam",
       "team": "Pulikkoottam - Royals",
       "innings": "1",
@@ -4376,7 +4112,7 @@
       "average": "0.0"
     },
     {
-      "rank": "396",
+      "rank": "372",
       "name": "Prashant Nittor",
       "team": "Kachra Boyz - OG",
       "innings": "1",
@@ -4387,7 +4123,7 @@
       "average": "0.0"
     },
     {
-      "rank": "397",
+      "rank": "373",
       "name": "AjayTeja Reddy Doma",
       "team": "ATB Chargers",
       "innings": "1",
@@ -4398,7 +4134,7 @@
       "average": "0.0"
     },
     {
-      "rank": "398",
+      "rank": "374",
       "name": "Niraj G RW",
       "team": "ICCS Royal Warriors",
       "innings": "1",
@@ -4409,7 +4145,7 @@
       "average": "0.0"
     },
     {
-      "rank": "399",
+      "rank": "375",
       "name": "Rajnikant Chaudhary",
       "team": "Everest Warriors",
       "innings": "1",
@@ -4420,7 +4156,7 @@
       "average": "0.0"
     },
     {
-      "rank": "400",
+      "rank": "376",
       "name": "Achyut Paudel",
       "team": "Everest Warriors",
       "innings": "1",
@@ -4431,7 +4167,7 @@
       "average": "0"
     },
     {
-      "rank": "401",
+      "rank": "377",
       "name": "Sasank C",
       "team": "ICCS Angry Bulls",
       "innings": "1",
@@ -6881,18 +6617,6 @@
     },
     {
       "rank": "204",
-      "name": "Total",
-      "team": "Gilly",
-      "innings": "7",
-      "overs": "0.0",
-      "maidens": "0",
-      "runs_given": "561",
-      "wickets": "0",
-      "average": "0",
-      "economy": "0"
-    },
-    {
-      "rank": "205",
       "name": "Byes",
       "team": "Red Warriors",
       "innings": "7",
@@ -6904,19 +6628,7 @@
       "economy": "0"
     },
     {
-      "rank": "206",
-      "name": "Total",
-      "team": "Red Warriors",
-      "innings": "7",
-      "overs": "0.0",
-      "maidens": "0",
-      "runs_given": "735",
-      "wickets": "0",
-      "average": "0",
-      "economy": "0"
-    },
-    {
-      "rank": "207",
+      "rank": "205",
       "name": "Byes",
       "team": "Knightriders",
       "innings": "8",
@@ -6928,19 +6640,7 @@
       "economy": "0"
     },
     {
-      "rank": "208",
-      "name": "Total",
-      "team": "Knightriders",
-      "innings": "8",
-      "overs": "0.0",
-      "maidens": "0",
-      "runs_given": "551",
-      "wickets": "0",
-      "average": "0",
-      "economy": "0"
-    },
-    {
-      "rank": "209",
+      "rank": "206",
       "name": "Ravi Kandimalla",
       "team": "SuperKings",
       "innings": "1",
@@ -6952,7 +6652,7 @@
       "economy": "13.0"
     },
     {
-      "rank": "210",
+      "rank": "207",
       "name": "Venkatarami Reddy Ailuri",
       "team": "SuperKings",
       "innings": "1",
@@ -6964,7 +6664,7 @@
       "economy": "8.0"
     },
     {
-      "rank": "211",
+      "rank": "208",
       "name": "Byes",
       "team": "SuperKings",
       "innings": "7",
@@ -6976,19 +6676,7 @@
       "economy": "0"
     },
     {
-      "rank": "212",
-      "name": "Total",
-      "team": "SuperKings",
-      "innings": "7",
-      "overs": "0.0",
-      "maidens": "0",
-      "runs_given": "575",
-      "wickets": "0",
-      "average": "0",
-      "economy": "0"
-    },
-    {
-      "rank": "213",
+      "rank": "209",
       "name": "Deepak K",
       "team": "ICCS White Wolves",
       "innings": "4",
@@ -7000,7 +6688,7 @@
       "economy": "8.11"
     },
     {
-      "rank": "214",
+      "rank": "210",
       "name": "Byes",
       "team": "ICCS White Wolves",
       "innings": "7",
@@ -7012,19 +6700,7 @@
       "economy": "0"
     },
     {
-      "rank": "215",
-      "name": "Total",
-      "team": "ICCS White Wolves",
-      "innings": "7",
-      "overs": "0.0",
-      "maidens": "0",
-      "runs_given": "590",
-      "wickets": "0",
-      "average": "0",
-      "economy": "0"
-    },
-    {
-      "rank": "216",
+      "rank": "211",
       "name": "Byes",
       "team": "Pulikkoottam - Royals",
       "innings": "8",
@@ -7036,19 +6712,7 @@
       "economy": "0"
     },
     {
-      "rank": "217",
-      "name": "Total",
-      "team": "Pulikkoottam - Royals",
-      "innings": "8",
-      "overs": "0.0",
-      "maidens": "0",
-      "runs_given": "695",
-      "wickets": "0",
-      "average": "0",
-      "economy": "0"
-    },
-    {
-      "rank": "218",
+      "rank": "212",
       "name": "Byes",
       "team": "Snoqualmie Wolves Arctic",
       "innings": "7",
@@ -7060,19 +6724,7 @@
       "economy": "0"
     },
     {
-      "rank": "219",
-      "name": "Total",
-      "team": "Snoqualmie Wolves Arctic",
-      "innings": "7",
-      "overs": "0.0",
-      "maidens": "0",
-      "runs_given": "529",
-      "wickets": "0",
-      "average": "0",
-      "economy": "0"
-    },
-    {
-      "rank": "220",
+      "rank": "213",
       "name": "Byes",
       "team": "C-Hawks",
       "innings": "7",
@@ -7084,19 +6736,7 @@
       "economy": "0"
     },
     {
-      "rank": "221",
-      "name": "Total",
-      "team": "C-Hawks",
-      "innings": "7",
-      "overs": "0.0",
-      "maidens": "0",
-      "runs_given": "558",
-      "wickets": "0",
-      "average": "0",
-      "economy": "0"
-    },
-    {
-      "rank": "222",
+      "rank": "214",
       "name": "Byes",
       "team": "Spartan Boys",
       "innings": "10",
@@ -7108,19 +6748,7 @@
       "economy": "0"
     },
     {
-      "rank": "223",
-      "name": "Total",
-      "team": "Spartan Boys",
-      "innings": "10",
-      "overs": "0.0",
-      "maidens": "0",
-      "runs_given": "600",
-      "wickets": "0",
-      "average": "0",
-      "economy": "0"
-    },
-    {
-      "rank": "224",
+      "rank": "215",
       "name": "Byes",
       "team": "ATB Seattle Shockers",
       "innings": "7",
@@ -7132,19 +6760,7 @@
       "economy": "0"
     },
     {
-      "rank": "225",
-      "name": "Total",
-      "team": "ATB Seattle Shockers",
-      "innings": "7",
-      "overs": "0.0",
-      "maidens": "0",
-      "runs_given": "501",
-      "wickets": "0",
-      "average": "0",
-      "economy": "0"
-    },
-    {
-      "rank": "226",
+      "rank": "216",
       "name": "Byes",
       "team": "Kirkland Knights",
       "innings": "10",
@@ -7156,19 +6772,7 @@
       "economy": "0"
     },
     {
-      "rank": "227",
-      "name": "Total",
-      "team": "Kirkland Knights",
-      "innings": "10",
-      "overs": "0.0",
-      "maidens": "0",
-      "runs_given": "617",
-      "wickets": "0",
-      "average": "0",
-      "economy": "0"
-    },
-    {
-      "rank": "228",
+      "rank": "217",
       "name": "Sunil Datla",
       "team": "Kachra Boyz - OG",
       "innings": "4",
@@ -7180,7 +6784,7 @@
       "economy": "9.9"
     },
     {
-      "rank": "229",
+      "rank": "218",
       "name": "Sathya Ganapathy",
       "team": "Kachra Boyz - OG",
       "innings": "1",
@@ -7192,7 +6796,7 @@
       "economy": "5.0"
     },
     {
-      "rank": "230",
+      "rank": "219",
       "name": "Byes",
       "team": "Kachra Boyz - OG",
       "innings": "7",
@@ -7204,19 +6808,7 @@
       "economy": "0"
     },
     {
-      "rank": "231",
-      "name": "Total",
-      "team": "Kachra Boyz - OG",
-      "innings": "7",
-      "overs": "0.0",
-      "maidens": "0",
-      "runs_given": "628",
-      "wickets": "0",
-      "average": "0",
-      "economy": "0"
-    },
-    {
-      "rank": "232",
+      "rank": "220",
       "name": "Byes",
       "team": "ICCS Royal Warriors",
       "innings": "7",
@@ -7228,19 +6820,7 @@
       "economy": "0"
     },
     {
-      "rank": "233",
-      "name": "Total",
-      "team": "ICCS Royal Warriors",
-      "innings": "7",
-      "overs": "0.0",
-      "maidens": "0",
-      "runs_given": "532",
-      "wickets": "0",
-      "average": "0",
-      "economy": "0"
-    },
-    {
-      "rank": "234",
+      "rank": "221",
       "name": "Tejav J",
       "team": "Cricket Fanatics",
       "innings": "1",
@@ -7252,7 +6832,7 @@
       "economy": "9.0"
     },
     {
-      "rank": "235",
+      "rank": "222",
       "name": "Rammanoj Keerti",
       "team": "Cricket Fanatics",
       "innings": "1",
@@ -7264,7 +6844,7 @@
       "economy": "3.5"
     },
     {
-      "rank": "236",
+      "rank": "223",
       "name": "Byes",
       "team": "Cricket Fanatics",
       "innings": "8",
@@ -7276,19 +6856,7 @@
       "economy": "0"
     },
     {
-      "rank": "237",
-      "name": "Total",
-      "team": "Cricket Fanatics",
-      "innings": "8",
-      "overs": "0.0",
-      "maidens": "0",
-      "runs_given": "588",
-      "wickets": "0",
-      "average": "0",
-      "economy": "0"
-    },
-    {
-      "rank": "238",
+      "rank": "224",
       "name": "Byes",
       "team": "ATB Chargers",
       "innings": "7",
@@ -7300,19 +6868,7 @@
       "economy": "0"
     },
     {
-      "rank": "239",
-      "name": "Total",
-      "team": "ATB Chargers",
-      "innings": "7",
-      "overs": "0.0",
-      "maidens": "0",
-      "runs_given": "702",
-      "wickets": "0",
-      "average": "0",
-      "economy": "0"
-    },
-    {
-      "rank": "240",
+      "rank": "225",
       "name": "Byes",
       "team": "The Avengers",
       "innings": "7",
@@ -7324,19 +6880,7 @@
       "economy": "0"
     },
     {
-      "rank": "241",
-      "name": "Total",
-      "team": "The Avengers",
-      "innings": "7",
-      "overs": "0.0",
-      "maidens": "0",
-      "runs_given": "496",
-      "wickets": "0",
-      "average": "0",
-      "economy": "0"
-    },
-    {
-      "rank": "242",
+      "rank": "226",
       "name": "Anto Frederic",
       "team": "Red Warriors",
       "innings": "2",
@@ -7348,7 +6892,7 @@
       "economy": "8.33"
     },
     {
-      "rank": "243",
+      "rank": "227",
       "name": "Manpreet Singh",
       "team": "C-Hawks",
       "innings": "1",
@@ -7360,7 +6904,7 @@
       "economy": "12.0"
     },
     {
-      "rank": "244",
+      "rank": "228",
       "name": "Samuthrakumar Venugopalan",
       "team": "C-Hawks",
       "innings": "1",
@@ -7372,7 +6916,7 @@
       "economy": "15.38"
     },
     {
-      "rank": "245",
+      "rank": "229",
       "name": "Byes",
       "team": "SUY Northern Yorkas",
       "innings": "7",
@@ -7384,19 +6928,7 @@
       "economy": "0"
     },
     {
-      "rank": "246",
-      "name": "Total",
-      "team": "SUY Northern Yorkas",
-      "innings": "7",
-      "overs": "0.0",
-      "maidens": "0",
-      "runs_given": "588",
-      "wickets": "0",
-      "average": "0",
-      "economy": "0"
-    },
-    {
-      "rank": "247",
+      "rank": "230",
       "name": "Byes",
       "team": "Machani Strikers",
       "innings": "8",
@@ -7408,19 +6940,7 @@
       "economy": "0"
     },
     {
-      "rank": "248",
-      "name": "Total",
-      "team": "Machani Strikers",
-      "innings": "8",
-      "overs": "0.0",
-      "maidens": "0",
-      "runs_given": "631",
-      "wickets": "0",
-      "average": "0",
-      "economy": "0"
-    },
-    {
-      "rank": "249",
+      "rank": "231",
       "name": "Syed Mohammed Shoeb",
       "team": "ERC Blizzard",
       "innings": "1",
@@ -7432,7 +6952,7 @@
       "economy": "6.0"
     },
     {
-      "rank": "250",
+      "rank": "232",
       "name": "Adil M",
       "team": "ERC Blizzard",
       "innings": "1",
@@ -7444,7 +6964,7 @@
       "economy": "13.33"
     },
     {
-      "rank": "251",
+      "rank": "233",
       "name": "Byes",
       "team": "ERC Blizzard",
       "innings": "7",
@@ -7456,19 +6976,7 @@
       "economy": "0"
     },
     {
-      "rank": "252",
-      "name": "Total",
-      "team": "ERC Blizzard",
-      "innings": "7",
-      "overs": "0.0",
-      "maidens": "0",
-      "runs_given": "606",
-      "wickets": "0",
-      "average": "0",
-      "economy": "0"
-    },
-    {
-      "rank": "253",
+      "rank": "234",
       "name": "Byes",
       "team": "ICCS Angry Bulls",
       "innings": "7",
@@ -7480,19 +6988,7 @@
       "economy": "0"
     },
     {
-      "rank": "254",
-      "name": "Total",
-      "team": "ICCS Angry Bulls",
-      "innings": "7",
-      "overs": "0.0",
-      "maidens": "0",
-      "runs_given": "643",
-      "wickets": "0",
-      "average": "0",
-      "economy": "0"
-    },
-    {
-      "rank": "255",
+      "rank": "235",
       "name": "Muhammad Waris",
       "team": "Everest Warriors",
       "innings": "2",
@@ -7504,7 +7000,7 @@
       "economy": "7.0"
     },
     {
-      "rank": "256",
+      "rank": "236",
       "name": "Byes",
       "team": "Everest Warriors",
       "innings": "7",
@@ -7516,19 +7012,7 @@
       "economy": "0"
     },
     {
-      "rank": "257",
-      "name": "Total",
-      "team": "Everest Warriors",
-      "innings": "7",
-      "overs": "0.0",
-      "maidens": "0",
-      "runs_given": "696",
-      "wickets": "0",
-      "average": "0",
-      "economy": "0"
-    },
-    {
-      "rank": "258",
+      "rank": "237",
       "name": "Byes",
       "team": "Raftaar",
       "innings": "7",
@@ -7540,19 +7024,7 @@
       "economy": "0"
     },
     {
-      "rank": "259",
-      "name": "Total",
-      "team": "Raftaar",
-      "innings": "7",
-      "overs": "0.0",
-      "maidens": "0",
-      "runs_given": "540",
-      "wickets": "0",
-      "average": "0",
-      "economy": "0"
-    },
-    {
-      "rank": "260",
+      "rank": "238",
       "name": "Byes",
       "team": "Snoqualmie Wolves Timber",
       "innings": "9",
@@ -7564,19 +7036,7 @@
       "economy": "0"
     },
     {
-      "rank": "261",
-      "name": "Total",
-      "team": "Snoqualmie Wolves Timber",
-      "innings": "9",
-      "overs": "0.0",
-      "maidens": "0",
-      "runs_given": "663",
-      "wickets": "0",
-      "average": "0",
-      "economy": "0"
-    },
-    {
-      "rank": "262",
+      "rank": "239",
       "name": "Tarun Ravva",
       "team": "BRCL Greens",
       "innings": "2",
@@ -7588,7 +7048,7 @@
       "economy": "8.0"
     },
     {
-      "rank": "263",
+      "rank": "240",
       "name": "Byes",
       "team": "BRCL Greens",
       "innings": "9",
@@ -7600,19 +7060,7 @@
       "economy": "0"
     },
     {
-      "rank": "264",
-      "name": "Total",
-      "team": "BRCL Greens",
-      "innings": "9",
-      "overs": "0.0",
-      "maidens": "0",
-      "runs_given": "607",
-      "wickets": "0",
-      "average": "0",
-      "economy": "0"
-    },
-    {
-      "rank": "265",
+      "rank": "241",
       "name": "Vijay Padwan",
       "team": "ICCS Angry Bulls",
       "innings": "2",
@@ -7624,7 +7072,7 @@
       "economy": "8.0"
     },
     {
-      "rank": "266",
+      "rank": "242",
       "name": "Nazeeruddin Blizzard",
       "team": "ERC Blizzard",
       "innings": "1",
@@ -7636,7 +7084,7 @@
       "economy": "4.67"
     },
     {
-      "rank": "267",
+      "rank": "243",
       "name": "Azharullah Meer",
       "team": "ERC Blizzard",
       "innings": "1",
@@ -7648,7 +7096,7 @@
       "economy": "7.0"
     },
     {
-      "rank": "268",
+      "rank": "244",
       "name": "Muneeruddin Blizzard",
       "team": "ERC Blizzard",
       "innings": "2",
@@ -7660,7 +7108,7 @@
       "economy": "5.42"
     },
     {
-      "rank": "269",
+      "rank": "245",
       "name": "Diwas Baral EWCC",
       "team": "Everest Warriors",
       "innings": "1",
@@ -7672,7 +7120,7 @@
       "economy": "3.67"
     },
     {
-      "rank": "270",
+      "rank": "246",
       "name": "Ram Prajapati",
       "team": "Everest Warriors",
       "innings": "1",
@@ -7684,7 +7132,7 @@
       "economy": "7.0"
     },
     {
-      "rank": "271",
+      "rank": "247",
       "name": "Sebastian Pathrose",
       "team": "Pulikkoottam - Royals",
       "innings": "2",
@@ -7696,7 +7144,7 @@
       "economy": "6.75"
     },
     {
-      "rank": "272",
+      "rank": "248",
       "name": "Dharmendra Adsule",
       "team": "Red Warriors",
       "innings": "3",
@@ -7708,7 +7156,7 @@
       "economy": "6.06"
     },
     {
-      "rank": "273",
+      "rank": "249",
       "name": "Gokul Kannan",
       "team": "Snoqualmie Wolves Arctic",
       "innings": "2",
@@ -7720,7 +7168,7 @@
       "economy": "7.25"
     },
     {
-      "rank": "274",
+      "rank": "250",
       "name": "Pavan Shetty",
       "team": "Snoqualmie Wolves Arctic",
       "innings": "1",
@@ -7732,7 +7180,7 @@
       "economy": "5.5"
     },
     {
-      "rank": "275",
+      "rank": "251",
       "name": "Sriharsha Gudi",
       "team": "ICCS White Wolves",
       "innings": "3",
@@ -7744,7 +7192,7 @@
       "economy": "6.29"
     },
     {
-      "rank": "276",
+      "rank": "252",
       "name": "Paras Kumar Jain",
       "team": "Red Warriors",
       "innings": "1",
@@ -7756,7 +7204,7 @@
       "economy": "6.0"
     },
     {
-      "rank": "277",
+      "rank": "253",
       "name": "Swapnil Sunny",
       "team": "Red Warriors",
       "innings": "1",
@@ -7768,7 +7216,7 @@
       "economy": "7.0"
     },
     {
-      "rank": "278",
+      "rank": "254",
       "name": "Nihal Bondugula",
       "team": "Snoqualmie Wolves Timber",
       "innings": "1",
@@ -7780,7 +7228,7 @@
       "economy": "8.0"
     },
     {
-      "rank": "279",
+      "rank": "255",
       "name": "Kishore Rajendran",
       "team": "ATB Seattle Shockers",
       "innings": "1",
@@ -7792,7 +7240,7 @@
       "economy": "5.0"
     },
     {
-      "rank": "280",
+      "rank": "256",
       "name": "Venkat Avengers",
       "team": "The Avengers",
       "innings": "1",
@@ -7804,7 +7252,7 @@
       "economy": "8.0"
     },
     {
-      "rank": "281",
+      "rank": "257",
       "name": "Jatin Dua SWCC",
       "team": "Snoqualmie Wolves Arctic",
       "innings": "1",
@@ -7816,7 +7264,7 @@
       "economy": "15.0"
     },
     {
-      "rank": "282",
+      "rank": "258",
       "name": "Amit Agarwal",
       "team": "Raftaar",
       "innings": "2",
@@ -7828,7 +7276,7 @@
       "economy": "6.33"
     },
     {
-      "rank": "283",
+      "rank": "259",
       "name": "Ajay Devuji",
       "team": "SUY Northern Yorkas",
       "innings": "1",
@@ -7840,7 +7288,7 @@
       "economy": "7.5"
     },
     {
-      "rank": "284",
+      "rank": "260",
       "name": "Yogesh G",
       "team": "The Avengers",
       "innings": "1",
@@ -7852,7 +7300,7 @@
       "economy": "12.0"
     },
     {
-      "rank": "285",
+      "rank": "261",
       "name": "Mohsin Khan",
       "team": "ERC Blizzard",
       "innings": "3",
@@ -7864,7 +7312,7 @@
       "economy": "7.57"
     },
     {
-      "rank": "286",
+      "rank": "262",
       "name": "Nadeem khan Blizzard",
       "team": "ERC Blizzard",
       "innings": "2",
@@ -7876,7 +7324,7 @@
       "economy": "6.33"
     },
     {
-      "rank": "287",
+      "rank": "263",
       "name": "Vijay Putta",
       "team": "ICCS White Wolves",
       "innings": "1",
@@ -7888,7 +7336,7 @@
       "economy": "11.0"
     },
     {
-      "rank": "288",
+      "rank": "264",
       "name": "Rajkumar Kuttappan",
       "team": "Machani Strikers",
       "innings": "1",
@@ -7900,7 +7348,7 @@
       "economy": "4.67"
     },
     {
-      "rank": "289",
+      "rank": "265",
       "name": "Avinash Kollu",
       "team": "ATB Chargers",
       "innings": "1",
@@ -7912,7 +7360,7 @@
       "economy": "13.0"
     },
     {
-      "rank": "290",
+      "rank": "266",
       "name": "Charan Kondapalli",
       "team": "ICCS Angry Bulls",
       "innings": "1",
@@ -7924,7 +7372,7 @@
       "economy": "8.0"
     },
     {
-      "rank": "291",
+      "rank": "267",
       "name": "Manoj Subramaniam",
       "team": "Pulikkoottam - Royals",
       "innings": "1",
@@ -7936,7 +7384,7 @@
       "economy": "4.5"
     },
     {
-      "rank": "292",
+      "rank": "268",
       "name": "Aashish Bhateja",
       "team": "Raftaar",
       "innings": "2",
@@ -7948,7 +7396,7 @@
       "economy": "8.0"
     },
     {
-      "rank": "293",
+      "rank": "269",
       "name": "Prashant Nittor",
       "team": "Kachra Boyz - OG",
       "innings": "1",
@@ -7960,7 +7408,7 @@
       "economy": "10.0"
     },
     {
-      "rank": "294",
+      "rank": "270",
       "name": "Sourabh Nagpal",
       "team": "SUY Northern Yorkas",
       "innings": "1",
@@ -7972,7 +7420,7 @@
       "economy": "5.0"
     },
     {
-      "rank": "295",
+      "rank": "271",
       "name": "Hajaz Ayyubi",
       "team": "ERC Blizzard",
       "innings": "1",
@@ -7984,7 +7432,7 @@
       "economy": "3.5"
     },
     {
-      "rank": "296",
+      "rank": "272",
       "name": "Achyut Paudel",
       "team": "Everest Warriors",
       "innings": "1",
@@ -7996,7 +7444,7 @@
       "economy": "6.5"
     },
     {
-      "rank": "297",
+      "rank": "273",
       "name": "Vamsidhar Reddy SuperKings",
       "team": "SuperKings",
       "innings": "1",
@@ -8008,7 +7456,7 @@
       "economy": "13.0"
     },
     {
-      "rank": "298",
+      "rank": "274",
       "name": "Deepak Chawks",
       "team": "C-Hawks",
       "innings": "1",
@@ -8020,7 +7468,7 @@
       "economy": "5.0"
     },
     {
-      "rank": "299",
+      "rank": "275",
       "name": "Abhinav Garg SUY",
       "team": "SUY Northern Yorkas",
       "innings": "1",
@@ -8032,7 +7480,7 @@
       "economy": "6.0"
     },
     {
-      "rank": "300",
+      "rank": "276",
       "name": "Punya Dhar",
       "team": "ICCS Angry Bulls",
       "innings": "1",
@@ -8044,7 +7492,7 @@
       "economy": "3.0"
     },
     {
-      "rank": "301",
+      "rank": "277",
       "name": "Praveen Malireddy",
       "team": "ATB Chargers",
       "innings": "1",
@@ -8056,7 +7504,7 @@
       "economy": "11.33"
     },
     {
-      "rank": "302",
+      "rank": "278",
       "name": "k v prasad",
       "team": "The Avengers",
       "innings": "1",
@@ -8068,7 +7516,7 @@
       "economy": "5.0"
     },
     {
-      "rank": "303",
+      "rank": "279",
       "name": "Prudhvi Reddy",
       "team": "Spartan Boys",
       "innings": "1",

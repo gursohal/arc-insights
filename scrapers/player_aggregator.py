@@ -91,6 +91,12 @@ def _aggregate_batting(batsman, team, batting_stats):
     if not name:
         return
     
+    # Skip invalid/summary rows
+    name_lower = name.lower()
+    invalid_names = ['overs', 'extras', 'total', 'did not bat', 'yet to bat', 'fall of wicket', 'fow']
+    if any(invalid in name_lower for invalid in invalid_names):
+        return
+    
     key = (name, team)
     stats = batting_stats[key]
     
@@ -128,6 +134,12 @@ def _aggregate_bowling(bowler, team, bowling_stats):
     """Add bowling performance to aggregated stats"""
     name = bowler.get('name', '').strip()
     if not name:
+        return
+    
+    # Skip invalid/summary rows
+    name_lower = name.lower()
+    invalid_names = ['overs', 'extras', 'total', 'did not bat', 'yet to bat']
+    if any(invalid in name_lower for invalid in invalid_names):
         return
     
     key = (name, team)
