@@ -203,7 +203,7 @@ class DataManager: ObservableObject {
                 fours: Int(batsman.fours) ?? 0,
                 sixes: Int(batsman.sixes) ?? 0
             )
-            return Player(name: batsman.name, team: batsman.team, battingStats: stats, bowlingStats: nil, playerId: nil, teamId: nil)
+            return Player(name: batsman.name, team: batsman.team, battingStats: stats, bowlingStats: nil, playerId: nil, teamId: batsman.team_id)
         }
     }
     
@@ -230,7 +230,7 @@ class DataManager: ObservableObject {
                 economy: economy,
                 rank: Int(bowler.rank) ?? 0
             )
-            return Player(name: bowler.name, team: bowler.team, battingStats: nil, bowlingStats: stats, playerId: nil, teamId: nil)
+            return Player(name: bowler.name, team: bowler.team, battingStats: nil, bowlingStats: stats, playerId: nil, teamId: bowler.team_id)
         }
     }
     
@@ -422,6 +422,7 @@ struct ARCLDataResponse: Codable {
 
 struct StandingJSON: Codable {
     let team: String
+    let team_id: String
     let rank: String
     let matches: String
     let wins: String
@@ -433,6 +434,7 @@ struct BatsmanJSON: Codable {
     let rank: String
     let name: String
     let team: String
+    let team_id: String
     let innings: String
     let runs: String
     let strike_rate: String
@@ -444,6 +446,7 @@ struct BowlerJSON: Codable {
     let rank: String
     let name: String
     let team: String
+    let team_id: String
     let overs: String
     let wickets: String
     let economy: String

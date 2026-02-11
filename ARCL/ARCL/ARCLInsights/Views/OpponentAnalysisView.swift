@@ -135,18 +135,26 @@ struct OpponentAnalysisView: View {
                     subtitle: "Key Players",
                     color: .orange
                 ) {
-                    ForEach(analysis.dangerousBatsmen) { player in
-                        NavigationLink(destination: PlayerDetailView(player: player)) {
-                            BatsmanCard(player: player, isDangerous: true)
+                    if analysis.dangerousBatsmen.isEmpty {
+                        InsightCard(
+                            text: "No batting statistics available for this team yet. Check back after more matches are played.",
+                            icon: "info.circle.fill",
+                            color: .gray
+                        )
+                    } else {
+                        ForEach(analysis.dangerousBatsmen) { player in
+                            NavigationLink(destination: PlayerDetailView(player: player)) {
+                                BatsmanCard(player: player, isDangerous: true)
+                            }
+                            .buttonStyle(PlainButtonStyle())
                         }
-                        .buttonStyle(PlainButtonStyle())
+                        
+                        InsightCard(
+                            text: "These are their top scorers. Set attacking fields, use your best bowlers, and target them early.",
+                            icon: "lightbulb.fill",
+                            color: .orange
+                        )
                     }
-                    
-                    InsightCard(
-                        text: "These are their top scorers. Set attacking fields, use your best bowlers, and target them early.",
-                        icon: "lightbulb.fill",
-                        color: .orange
-                    )
                 }
                 
                 // Top Bowlers
@@ -155,18 +163,26 @@ struct OpponentAnalysisView: View {
                     subtitle: "Be Careful!",
                     color: .purple
                 ) {
-                    ForEach(analysis.dangerousBowlers) { player in
-                        NavigationLink(destination: PlayerDetailView(player: player)) {
-                            BowlerCard(player: player)
+                    if analysis.dangerousBowlers.isEmpty {
+                        InsightCard(
+                            text: "No bowling statistics available for this team yet. Check back after more matches are played.",
+                            icon: "info.circle.fill",
+                            color: .gray
+                        )
+                    } else {
+                        ForEach(analysis.dangerousBowlers) { player in
+                            NavigationLink(destination: PlayerDetailView(player: player)) {
+                                BowlerCard(player: player)
+                            }
+                            .buttonStyle(PlainButtonStyle())
                         }
-                        .buttonStyle(PlainButtonStyle())
+                        
+                        InsightCard(
+                            text: "These bowlers take wickets. Play defensively early, don't take unnecessary risks. Wait for loose balls.",
+                            icon: "lightbulb.fill",
+                            color: .purple
+                        )
                     }
-                    
-                    InsightCard(
-                        text: "These bowlers take wickets. Play defensively early, don't take unnecessary risks. Wait for loose balls.",
-                        icon: "lightbulb.fill",
-                        color: .purple
-                    )
                 }
                 
                 // Summary

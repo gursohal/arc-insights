@@ -107,7 +107,7 @@ class ARCLDataScraper:
         
         # Aggregate ALL player data from scorecards
         print(f"\n🎯 Aggregating ALL player statistics from scorecards...")
-        aggregated_batsmen, aggregated_bowlers = aggregate_players_from_scorecards(scorecards, teams_list)
+        aggregated_batsmen, aggregated_bowlers = aggregate_players_from_scorecards(scorecards, teams_list, division_id, season_id)
         
         # Also aggregate boundaries from scorecards
         print(f"\n🎯 Aggregating boundary statistics...")

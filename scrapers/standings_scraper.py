@@ -3,11 +3,21 @@
 Standings Scraper - Get league standings/rankings
 """
 
+import hashlib
 from .base_scraper import BaseScraper
 
 
 class StandingsScraper(BaseScraper):
     """Scraper for league standings"""
+    
+    @staticmethod
+    def generate_team_id(team_name, division_id, season_id):
+        """Generate deterministic team ID from team name + division + season"""
+        # Create unique string combining all identifiers
+        unique_str = f"{team_name.strip().lower()}_{division_id}_{season_id}"
+        # Generate short hash (first 8 characters of SHA256)
+        hash_obj = hashlib.sha256(unique_str.encode())
+        return hash_obj.hexdigest()[:8]
     
     def scrape(self, division_id, season_id):
         """Scrape league standings from DivHome page"""
@@ -25,8 +35,11 @@ class StandingsScraper(BaseScraper):
         for row in table_data:
             if len(row) >= 5:
                 try:
+                    team_name = row[0]
+                    team_id = self.generate_team_id(team_name, division_id, season_id)
                     standings.append({
-                        "team": row[0],
+                        "team": team_name,
+                        "team_id": team_id,
                         "rank": row[1],
                         "matches": row[2],
                         "wins": row[3],

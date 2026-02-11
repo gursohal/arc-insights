@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CryptoKit
 
 struct InsightRule {
     let metric: String
@@ -692,15 +693,32 @@ extension InsightEngine {
         
         // Factor 4: Player Quality Comparison (±15%)
         if let myTeam = myTeam, let opponentTeam = opponentTeam, !players.isEmpty {
-            // Helper function to match team names - EXACT MATCH ONLY
-            func matchesTeam(_ playerTeam: String, _ teamName: String) -> Bool {
-                // Normalize both names
-                let normalizedPlayer = playerTeam.lowercased().trimmingCharacters(in: .whitespaces)
-                let normalizedTeam = teamName.lowercased().trimmingCharacters(in: .whitespaces)
+            // Helper function to match by team_id (deterministic and precise)
+            func matchesTeam(_ player: Player, _ teamName: String) -> Bool {
+                // First try team_id matching (most reliable)
+                if let playerTeamId = player.teamId, !playerTeamId.isEmpty {
+                    // Generate team_id from team name for comparison
+                    let teamId = generateTeamId(teamName: teamName)
+                    if playerTeamId == teamId {
+                        return true
+                    }
+                }
                 
-                // ONLY exact match to avoid cross-contamination
-                // (e.g., "Wolves" matching multiple teams)
+                // Fallback to exact name match
+                let normalizedPlayer = player.team.lowercased().trimmingCharacters(in: .whitespaces)
+                let normalizedTeam = teamName.lowercased().trimmingCharacters(in: .whitespaces)
                 return normalizedPlayer == normalizedTeam
+            }
+            
+            // Generate team_id from team name (matches Python implementation)
+            func generateTeamId(teamName: String) -> String {
+                let divisionId = 8  // Current division
+                let seasonId = 66   // Current season
+                let uniqueStr = "\(teamName.lowercased().trimmingCharacters(in: .whitespaces))_\(divisionId)_\(seasonId)"
+                
+                guard let data = uniqueStr.data(using: .utf8) else { return "" }
+                let hash = SHA256.hash(data: data)
+                return hash.compactMap { String(format: "%02x", $0) }.joined().prefix(8).lowercased()
             }
             
             // Debug: Print all unique team names in player data
@@ -710,12 +728,12 @@ extension InsightEngine {
             
             // Get top 3 batsmen from each team
             let myBatsmen = players
-                .filter { matchesTeam($0.team, myTeam.name) && $0.battingStats != nil }
+                .filter { matchesTeam($0, myTeam.name) && $0.battingStats != nil }
                 .sorted { ($0.battingStats?.average ?? 0) > ($1.battingStats?.average ?? 0) }
                 .prefix(3)
             
             let theirBatsmen = players
-                .filter { matchesTeam($0.team, opponentTeam.name) && $0.battingStats != nil }
+                .filter { matchesTeam($0, opponentTeam.name) && $0.battingStats != nil }
                 .sorted { ($0.battingStats?.average ?? 0) > ($1.battingStats?.average ?? 0) }
                 .prefix(3)
             
@@ -736,12 +754,12 @@ extension InsightEngine {
             
             // Get top 3 bowlers from each team
             let myBowlers = players
-                .filter { matchesTeam($0.team, myTeam.name) && $0.bowlingStats != nil }
+                .filter { matchesTeam($0, myTeam.name) && $0.bowlingStats != nil }
                 .sorted { ($0.bowlingStats?.economy ?? 99) < ($1.bowlingStats?.economy ?? 99) }
                 .prefix(3)
             
             let theirBowlers = players
-                .filter { matchesTeam($0.team, opponentTeam.name) && $0.bowlingStats != nil }
+                .filter { matchesTeam($0, opponentTeam.name) && $0.bowlingStats != nil }
                 .sorted { ($0.bowlingStats?.economy ?? 99) < ($1.bowlingStats?.economy ?? 99) }
                 .prefix(3)
             
@@ -788,22 +806,22 @@ extension InsightEngine {
             
             // Factor 5: Team Depth Analysis (±10%)
             let myQualityBatsmen = players.filter {
-                matchesTeam($0.team, myTeam.name) &&
+                matchesTeam($0, myTeam.name) &&
                 ($0.battingStats?.average ?? 0) > 25
             }.count
             
             let theirQualityBatsmen = players.filter {
-                matchesTeam($0.team, opponentTeam.name) &&
+                matchesTeam($0, opponentTeam.name) &&
                 ($0.battingStats?.average ?? 0) > 25
             }.count
             
             let myQualityBowlers = players.filter {
-                matchesTeam($0.team, myTeam.name) &&
+                matchesTeam($0, myTeam.name) &&
                 ($0.bowlingStats?.economy ?? 99) < 5.0
             }.count
             
             let theirQualityBowlers = players.filter {
-                matchesTeam($0.team, opponentTeam.name) &&
+                matchesTeam($0, opponentTeam.name) &&
                 ($0.bowlingStats?.economy ?? 99) < 5.0
             }.count
             

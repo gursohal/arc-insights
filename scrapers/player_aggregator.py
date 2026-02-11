@@ -3,16 +3,26 @@ Player Aggregator - Compile team rosters from match scorecards
 This extracts ALL players who participated in matches, not just top 25
 """
 
+import hashlib
 from collections import defaultdict
 
 
-def aggregate_players_from_scorecards(scorecards, teams_list):
+def generate_team_id(team_name, division_id, season_id):
+    """Generate deterministic team ID from team name + division + season"""
+    unique_str = f"{team_name.strip().lower()}_{division_id}_{season_id}"
+    hash_obj = hashlib.sha256(unique_str.encode())
+    return hash_obj.hexdigest()[:8]
+
+
+def aggregate_players_from_scorecards(scorecards, teams_list, division_id, season_id):
     """
     Aggregate all player statistics from scorecards
     
     Args:
         scorecards: List of scorecard dictionaries
         teams_list: List of team names to match players to teams
+        division_id: Division ID for team ID generation
+        season_id: Season ID for team ID generation
         
     Returns:
         tuple: (batsmen_list, bowlers_list) with aggregated stats
@@ -51,19 +61,19 @@ def aggregate_players_from_scorecards(scorecards, teams_list):
         
         # Process team 1 batting
         for batsman in scorecard.get('team1_innings', {}).get('batting', []):
-            _aggregate_batting(batsman, team1, batting_stats)
+            _aggregate_batting(batsman, team1, batting_stats, division_id, season_id)
         
         # Process team 2 batting
         for batsman in scorecard.get('team2_innings', {}).get('batting', []):
-            _aggregate_batting(batsman, team2, batting_stats)
+            _aggregate_batting(batsman, team2, batting_stats, division_id, season_id)
         
         # Process team 1 bowling (they bowled to team 2)
         for bowler in scorecard.get('team2_innings', {}).get('bowling', []):
-            _aggregate_bowling(bowler, team1, bowling_stats)
+            _aggregate_bowling(bowler, team1, bowling_stats, division_id, season_id)
         
         # Process team 2 bowling (they bowled to team 1)
         for bowler in scorecard.get('team1_innings', {}).get('bowling', []):
-            _aggregate_bowling(bowler, team2, bowling_stats)
+            _aggregate_bowling(bowler, team2, bowling_stats, division_id, season_id)
     
     # Convert to lists and calculate averages
     batsmen_list = _finalize_batting_stats(batting_stats)
@@ -85,7 +95,7 @@ def aggregate_players_from_scorecards(scorecards, teams_list):
     return batsmen_list, bowlers_list
 
 
-def _aggregate_batting(batsman, team, batting_stats):
+def _aggregate_batting(batsman, team, batting_stats, division_id, season_id):
     """Add batting performance to aggregated stats"""
     name = batsman.get('name', '').strip()
     if not name:
@@ -102,11 +112,13 @@ def _aggregate_batting(batsman, team, batting_stats):
     if len(name) <= 2:
         return
     
+    team_id = generate_team_id(team, division_id, season_id)
     key = (name, team)
     stats = batting_stats[key]
     
     stats['name'] = name
     stats['team'] = team
+    stats['team_id'] = team_id
     stats['innings'] += 1
     
     try:
@@ -135,7 +147,7 @@ def _aggregate_batting(batsman, team, batting_stats):
         stats['not_outs'] += 1
 
 
-def _aggregate_bowling(bowler, team, bowling_stats):
+def _aggregate_bowling(bowler, team, bowling_stats, division_id, season_id):
     """Add bowling performance to aggregated stats"""
     name = bowler.get('name', '').strip()
     if not name:
@@ -152,11 +164,13 @@ def _aggregate_bowling(bowler, team, bowling_stats):
     if len(name) <= 2:
         return
     
+    team_id = generate_team_id(team, division_id, season_id)
     key = (name, team)
     stats = bowling_stats[key]
     
     stats['name'] = name
     stats['team'] = team
+    stats['team_id'] = team_id
     stats['innings'] += 1
     
     try:
@@ -211,6 +225,7 @@ def _finalize_batting_stats(batting_stats):
             'rank': '0',  # Will be set later
             'name': name,
             'team': team,
+            'team_id': stats['team_id'],
             'innings': str(innings),
             'runs': str(runs),
             'strike_rate': str(strike_rate),
@@ -241,6 +256,7 @@ def _finalize_bowling_stats(bowling_stats):
             'rank': '0',  # Will be set later
             'name': name,
             'team': team,
+            'team_id': stats['team_id'],
             'innings': str(stats['innings']),
             'overs': str(overs),
             'maidens': str(stats['maidens']),
