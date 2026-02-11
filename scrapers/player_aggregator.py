@@ -91,10 +91,15 @@ def _aggregate_batting(batsman, team, batting_stats):
     if not name:
         return
     
-    # Skip invalid/summary rows
+    # Skip invalid/summary rows and column headers
     name_lower = name.lower()
-    invalid_names = ['overs', 'extras', 'total', 'did not bat', 'yet to bat', 'fall of wicket', 'fow']
+    invalid_names = ['overs', 'extras', 'total', 'did not bat', 'yet to bat', 'fall of wicket', 'fow', 
+                     'rate', 'strike', 'average', 'balls', 'runs', 'wickets', 'economy', 'maiden']
     if any(invalid in name_lower for invalid in invalid_names):
+        return
+    
+    # Also skip if name is very short (likely a column header)
+    if len(name) <= 2:
         return
     
     key = (name, team)
@@ -136,10 +141,15 @@ def _aggregate_bowling(bowler, team, bowling_stats):
     if not name:
         return
     
-    # Skip invalid/summary rows
+    # Skip invalid/summary rows and column headers
     name_lower = name.lower()
-    invalid_names = ['overs', 'extras', 'total', 'did not bat', 'yet to bat']
+    invalid_names = ['overs', 'extras', 'total', 'did not bat', 'yet to bat',
+                     'rate', 'strike', 'average', 'balls', 'runs', 'wickets', 'economy', 'maiden']
     if any(invalid in name_lower for invalid in invalid_names):
+        return
+    
+    # Also skip if name is very short (likely a column header)
+    if len(name) <= 2:
         return
     
     key = (name, team)
