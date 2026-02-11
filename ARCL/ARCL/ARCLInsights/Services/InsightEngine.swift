@@ -1120,8 +1120,8 @@ extension InsightEngine {
                 $0.status == .upcoming && $0.involves(teamName: team.name)
             }.count
             
-            // Estimate: assume 10 total matches per season if we don't know
-            let totalExpected = 10
+            // ARCL has 7 league games per season
+            let totalExpected = 7
             remaining[team.name] = max(0, totalExpected - completed)
         }
         
@@ -1168,15 +1168,17 @@ extension InsightEngine {
     private func detectMustWin(myTeam: Team?, allTeams: [Team]) -> Bool {
         guard let myTeam = myTeam else { return false }
         
-        // Must-win if we're fighting for playoff spots (typically top 4)
-        let playoffCutoff = 4
-        let gamesRemaining = 2  // Estimate
+        // ARCL: Top 8 teams make playoffs (quarter-finals)
+        let playoffCutoff = 8
         
-        if myTeam.rank <= playoffCutoff + 2 && myTeam.rank > playoffCutoff {
-            // We're just outside playoffs
+        // Estimate remaining games (7 total league games)
+        let gamesRemaining = max(1, 7 - (myTeam.wins + myTeam.losses))
+        
+        if myTeam.rank <= playoffCutoff + 3 && myTeam.rank > playoffCutoff {
+            // We're just outside playoffs (ranks 9-11)
             let teamsAhead = allTeams.filter { $0.rank == playoffCutoff }
-            if let fourthPlace = teamsAhead.first {
-                let pointsGap = fourthPlace.points - myTeam.points
+            if let eighthPlace = teamsAhead.first {
+                let pointsGap = eighthPlace.points - myTeam.points
                 // Must win if gap is within reachable range
                 return pointsGap <= 30 * gamesRemaining && pointsGap > 0
             }
