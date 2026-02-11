@@ -62,6 +62,73 @@ struct OpponentAnalysisView: View {
                 
                 Divider()
                 
+                // Team Form & Momentum
+                let teamForm = InsightEngine.shared.analyzeTeamForm(
+                    teamName: teamName,
+                    matches: dataManager.matches
+                )
+                
+                VStack(alignment: .leading, spacing: 12) {
+                    HStack {
+                        Text("📊 RECENT FORM")
+                            .font(.headline)
+                        Spacer()
+                        HStack(spacing: 4) {
+                            Text(teamForm.formRating.icon)
+                            Text(teamForm.formRating.description)
+                                .font(.subheadline)
+                                .bold()
+                                .foregroundColor(teamForm.formRating.color)
+                        }
+                        .padding(.horizontal, 12)
+                        .padding(.vertical, 6)
+                        .background(teamForm.formRating.color.opacity(0.15))
+                        .cornerRadius(8)
+                    }
+                    
+                    HStack(spacing: 20) {
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text("Last 5 Games")
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                            Text(teamForm.recentRecord)
+                                .font(.headline)
+                                .bold()
+                        }
+                        
+                        Divider()
+                            .frame(height: 40)
+                        
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text("Current Streak")
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                            Text(teamForm.streak)
+                                .font(.headline)
+                                .bold()
+                        }
+                        
+                        Divider()
+                            .frame(height: 40)
+                        
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text("Points Gained")
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                            Text(teamForm.pointsMomentum)
+                                .font(.headline)
+                                .bold()
+                                .foregroundColor(.blue)
+                        }
+                    }
+                }
+                .padding()
+                .background(Color(.systemGray6))
+                .cornerRadius(12)
+                .padding(.horizontal)
+                
+                Divider()
+                
                 // Top Batsmen
                 SectionView(
                     title: "🏏 TOP BATSMEN",

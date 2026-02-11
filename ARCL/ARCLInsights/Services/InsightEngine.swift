@@ -425,4 +425,128 @@ extension InsightEngine {
         // Return top 6 most relevant strategies
         return Array(strategies.prefix(6))
     }
+    
+    // MARK: - Form & Momentum Analysis
+    
+    struct TeamForm {
+        let recentRecord: String // e.g., "W-W-L-W-L"
+        let recentWins: Int
+        let recentLosses: Int
+        let streak: String // e.g., "Won 3" or "Lost 2"
+        let formRating: FormRating
+        let pointsMomentum: String // e.g., "+90 pts in last 5"
+        
+        enum FormRating {
+            case hot      // 4-5 wins in last 5
+            case good     // 3 wins in last 5
+            case average  // 2 wins in last 5
+            case poor     // 0-1 wins in last 5
+            
+            var color: Color {
+                switch self {
+                case .hot: return .green
+                case .good: return .blue
+                case .average: return .orange
+                case .poor: return .red
+                }
+            }
+            
+            var icon: String {
+                switch self {
+                case .hot: return "🔥"
+                case .good: return "✅"
+                case .average: return "➖"
+                case .poor: return "❄️"
+                }
+            }
+            
+            var description: String {
+                switch self {
+                case .hot: return "Hot"
+                case .good: return "Good"
+                case .average: return "Average"
+                case .poor: return "Cold"
+                }
+            }
+        }
+    }
+    
+    func analyzeTeamForm(teamName: String, matches: [Match]) -> TeamForm {
+        // Filter matches for this team and get recent 5 completed
+        let teamMatches = matches
+            .filter { match in
+                (match.team1.localizedCaseInsensitiveContains(teamName) ||
+                 match.team2.localizedCaseInsensitiveContains(teamName)) &&
+                match.status == "completed"
+            }
+            .sorted { $0.date < $1.date } // Sort by date
+            .suffix(5) // Get last 5
+        
+        var recentResults: [String] = []
+        var wins = 0
+        var losses = 0
+        var totalPoints = 0
+        var currentStreak = 0
+        var streakType: String = ""
+        
+        for match in teamMatches {
+            let isTeam1 = match.team1.localizedCaseInsensitiveContains(teamName)
+            let won = isTeam1 ?
+                match.winner.localizedCaseInsensitiveContains(match.team1) :
+                match.winner.localizedCaseInsensitiveContains(match.team2)
+            
+            if won {
+                recentResults.append("W")
+                wins += 1
+                totalPoints += match.winnerPoints
+                
+                if streakType == "W" || streakType.isEmpty {
+                    currentStreak += 1
+                    streakType = "W"
+                } else {
+                    currentStreak = 1
+                    streakType = "W"
+                }
+            } else {
+                recentResults.append("L")
+                losses += 1
+                totalPoints += match.loserPoints
+                
+                if streakType == "L" || streakType.isEmpty {
+                    currentStreak += 1
+                    streakType = "L"
+                } else {
+                    currentStreak = 1
+                    streakType = "L"
+                }
+            }
+        }
+        
+        let record = recentResults.joined(separator: "-")
+        let streak = currentStreak > 0 ?
+            "\(streakType == "W" ? "Won" : "Lost") \(currentStreak)" :
+            "No streak"
+        
+        let formRating: TeamForm.FormRating
+        if wins >= 4 {
+            formRating = .hot
+        } else if wins == 3 {
+            formRating = .good
+        } else if wins == 2 {
+            formRating = .average
+        } else {
+            formRating = .poor
+        }
+        
+        let momentum = "+\(totalPoints) pts in last \(teamMatches.count)"
+        
+        return TeamForm(
+            recentRecord: record,
+            recentWins: wins,
+            recentLosses: losses,
+            streak: streak,
+            formRating: formRating,
+            pointsMomentum: momentum
+        )
+    }
 }
