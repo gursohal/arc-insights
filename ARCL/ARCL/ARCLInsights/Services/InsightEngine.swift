@@ -692,24 +692,15 @@ extension InsightEngine {
         
         // Factor 4: Player Quality Comparison (±15%)
         if let myTeam = myTeam, let opponentTeam = opponentTeam, !players.isEmpty {
-            // Helper function to match team names more strictly
+            // Helper function to match team names - EXACT MATCH ONLY
             func matchesTeam(_ playerTeam: String, _ teamName: String) -> Bool {
                 // Normalize both names
                 let normalizedPlayer = playerTeam.lowercased().trimmingCharacters(in: .whitespaces)
                 let normalizedTeam = teamName.lowercased().trimmingCharacters(in: .whitespaces)
                 
-                // Exact match
-                if normalizedPlayer == normalizedTeam {
-                    return true
-                }
-                
-                // Check if player team contains at least 2 significant words (5+ chars) from team name
-                let playerWords = Set(normalizedPlayer.split(separator: " ").filter { $0.count >= 5 }.map { String($0) })
-                let teamWords = Set(normalizedTeam.split(separator: " ").filter { $0.count >= 5 }.map { String($0) })
-                
-                let matches = playerWords.intersection(teamWords)
-                // Require at least 2 matching significant words OR exact substring match
-                return matches.count >= 2 || normalizedPlayer.contains(normalizedTeam) || normalizedTeam.contains(normalizedPlayer)
+                // ONLY exact match to avoid cross-contamination
+                // (e.g., "Wolves" matching multiple teams)
+                return normalizedPlayer == normalizedTeam
             }
             
             // Debug: Print all unique team names in player data
