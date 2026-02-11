@@ -9,6 +9,7 @@ import os
 from datetime import datetime
 from scrapers import TeamsScraper, BatsmenScraper, BowlersScraper, StandingsScraper, ScheduleScraper, ScorecardScraper
 from scrapers.boundary_aggregator import aggregate_boundaries, merge_boundaries_with_batsmen
+from scrapers.player_aggregator import aggregate_players_from_scorecards
 
 
 class ARCLDataScraper:
@@ -33,8 +34,8 @@ class ARCLDataScraper:
             "division_name": division_name,
             "last_updated": datetime.now().isoformat(),
             "teams": self.teams_scraper.scrape(division_id, season_id),
-            "batsmen": self.batsmen_scraper.scrape(division_id, season_id, limit=25),
-            "bowlers": self.bowlers_scraper.scrape(division_id, season_id, limit=25),
+            "batsmen": self.batsmen_scraper.scrape(division_id, season_id, limit=150),  # Increased to capture all teams
+            "bowlers": self.bowlers_scraper.scrape(division_id, season_id, limit=150),  # Increased to capture all teams
             "standings": self.standings_scraper.scrape(division_id, season_id),
             "schedule": self.schedule_scraper.scrape(division_id, season_id)
         }
@@ -57,12 +58,21 @@ class ARCLDataScraper:
         
         # Scrape scorecards if requested
         if include_scorecards:
-            self.scrape_scorecards(division_id, season_id, division_name, data['schedule'])
+            self.scrape_scorecards(division_id, season_id, division_name, data['schedule'], data['teams'])
+            
+            # Reload the data file to get updated player stats
+            if os.path.exists(filename):
+                with open(filename, 'r') as f:
+                    data = json.load(f)
+                
+                print(f"\n🔄 Reloaded data with scorecard-based player stats:")
+                print(f"   🏏 {len(data.get('batsmen', []))} batsmen")
+                print(f"   ⚡ {len(data.get('bowlers', []))} bowlers")
         
         return data
     
-    def scrape_scorecards(self, division_id, season_id, division_name, schedule):
-        """Scrape all scorecards for a division"""
+    def scrape_scorecards(self, division_id, season_id, division_name, schedule, teams_list):
+        """Scrape all scorecards for a division and aggregate player data"""
         print(f"\n🎯 Scraping scorecards for {division_name}...")
         
         # Extract match IDs from schedule - only completed matches
@@ -95,15 +105,23 @@ class ARCLDataScraper:
         
         print(f"✅ Saved {scorecard_filename} ({len(scorecards)} scorecards)")
         
-        # Aggregate boundaries from scorecards
+        # Aggregate ALL player data from scorecards
+        print(f"\n🎯 Aggregating ALL player statistics from scorecards...")
+        aggregated_batsmen, aggregated_bowlers = aggregate_players_from_scorecards(scorecards, teams_list)
+        
+        # Also aggregate boundaries from scorecards
         print(f"\n🎯 Aggregating boundary statistics...")
         boundary_data = aggregate_boundaries(scorecards)
         
-        # Merge with existing batsmen data
+        # Update main division data file with aggregated player data
         batsmen_filename = f"data/div_{division_id}_season_{season_id}.json"
         if os.path.exists(batsmen_filename):
             with open(batsmen_filename, 'r') as f:
                 division_data = json.load(f)
+            
+            # Replace with aggregated data from scorecards (includes ALL players)
+            division_data['batsmen'] = aggregated_batsmen
+            division_data['bowlers'] = aggregated_bowlers
             
             # Merge boundaries
             updated_batsmen = merge_boundaries_with_batsmen(
@@ -116,7 +134,9 @@ class ARCLDataScraper:
             with open(batsmen_filename, 'w') as f:
                 json.dump(division_data, f, indent=2)
             
-            print(f"✅ Updated batsmen data with boundary statistics")
+            print(f"✅ Replaced player data with scorecard aggregations")
+            print(f"   🏏 {len(aggregated_batsmen)} batsmen (from all teams)")
+            print(f"   ⚡ {len(aggregated_bowlers)} bowlers (from all teams)")
     
     def scrape_multiple_divisions(self, divisions, include_scorecards=False):
         """Scrape multiple divisions at once"""
