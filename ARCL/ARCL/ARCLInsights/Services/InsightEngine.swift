@@ -457,7 +457,7 @@ extension InsightEngine {
             .filter { match in
                 (match.team1.localizedCaseInsensitiveContains(teamName) ||
                  match.team2.localizedCaseInsensitiveContains(teamName)) &&
-                match.status == "completed"
+                match.status == .completed
             }
             .sorted { $0.date < $1.date } // Sort by date
             .suffix(5) // Get last 5
