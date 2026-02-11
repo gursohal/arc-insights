@@ -572,7 +572,8 @@ extension InsightEngine {
         myForm: TeamForm,
         opponentForm: TeamForm,
         allTeams: [Team],
-        matches: [Match] = []
+        matches: [Match] = [],
+        players: [Player] = []
     ) -> MatchPrediction {
         var winProbability = 50  // Start at 50-50
         var keyFactors: [String] = []
@@ -647,6 +648,61 @@ extension InsightEngine {
                 keyFactors.append("They're on a hot streak (\(opponentForm.streak))")
             } else if streakNum >= 2 {
                 winProbability -= 5
+            }
+        }
+        
+        // Factor 4: Player Quality Comparison (±15%)
+        if let myTeam = myTeam, let opponentTeam = opponentTeam, !players.isEmpty {
+            // Get top 3 batsmen from each team
+            let myBatsmen = players
+                .filter { $0.teamName.localizedCaseInsensitiveContains(myTeam.name) && $0.battingStats != nil }
+                .sorted { ($0.battingStats?.average ?? 0) > ($1.battingStats?.average ?? 0) }
+                .prefix(3)
+            
+            let theirBatsmen = players
+                .filter { $0.teamName.localizedCaseInsensitiveContains(opponentTeam.name) && $0.battingStats != nil }
+                .sorted { ($0.battingStats?.average ?? 0) > ($1.battingStats?.average ?? 0) }
+                .prefix(3)
+            
+            let myBattingAvg = myBatsmen.map { $0.battingStats?.average ?? 0 }.reduce(0, +) / Double(max(myBatsmen.count, 1))
+            let theirBattingAvg = theirBatsmen.map { $0.battingStats?.average ?? 0 }.reduce(0, +) / Double(max(theirBatsmen.count, 1))
+            
+            // Get top 3 bowlers from each team
+            let myBowlers = players
+                .filter { $0.teamName.localizedCaseInsensitiveContains(myTeam.name) && $0.bowlingStats != nil }
+                .sorted { ($0.bowlingStats?.economy ?? 99) < ($1.bowlingStats?.economy ?? 99) }
+                .prefix(3)
+            
+            let theirBowlers = players
+                .filter { $0.teamName.localizedCaseInsensitiveContains(opponentTeam.name) && $0.bowlingStats != nil }
+                .sorted { ($0.bowlingStats?.economy ?? 99) < ($1.bowlingStats?.economy ?? 99) }
+                .prefix(3)
+            
+            let myBowlingEcon = myBowlers.map { $0.bowlingStats?.economy ?? 0 }.reduce(0, +) / Double(max(myBowlers.count, 1))
+            let theirBowlingEcon = theirBowlers.map { $0.bowlingStats?.economy ?? 0 }.reduce(0, +) / Double(max(theirBowlers.count, 1))
+            
+            // Compare batting quality (avg difference > 5 = significant)
+            let battingDiff = myBattingAvg - theirBattingAvg
+            if battingDiff >= 5 {
+                let boost = min(Int(battingDiff), 8)
+                winProbability += boost
+                keyFactors.append("Superior batting (Top 3 avg: \(String(format: "%.1f", myBattingAvg)) vs \(String(format: "%.1f", theirBattingAvg)))")
+            } else if battingDiff <= -5 {
+                let penalty = min(Int(abs(battingDiff)), 8)
+                winProbability -= penalty
+                keyFactors.append("Weaker batting (Top 3 avg: \(String(format: "%.1f", myBattingAvg)) vs \(String(format: "%.1f", theirBattingAvg)))")
+            }
+            
+            // Compare bowling quality (economy diff > 0.5 = significant)
+            let bowlingDiff = theirBowlingEcon - myBowlingEcon
+            if bowlingDiff >= 0.5 {
+                let boost = min(Int(bowlingDiff * 2), 7)
+                winProbability += boost
+                keyFactors.append("Tighter bowling (Top 3 econ: \(String(format: "%.2f", myBowlingEcon)) vs \(String(format: "%.2f", theirBowlingEcon)))")
+            } else if bowlingDiff <= -0.5 {
+                let penalty = min(Int(abs(bowlingDiff) * 2), 7)
+                winProbability -= penalty
+                keyFactors.append("Looser bowling (Top 3 econ: \(String(format: "%.2f", myBowlingEcon)) vs \(String(format: "%.2f", theirBowlingEcon)))")
             }
         }
         
