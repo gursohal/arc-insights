@@ -529,4 +529,172 @@ extension InsightEngine {
             pointsMomentum: momentum
         )
     }
+    
+    // MARK: - Match Predictions
+    
+    struct MatchPrediction {
+        let winProbability: Int  // 0-100
+        let confidence: ConfidenceLevel
+        let keyFactors: [String]
+        let pointsScenario: PointsScenario
+        let mustWin: Bool
+        
+        enum ConfidenceLevel {
+            case high, medium, low
+            
+            var description: String {
+                switch self {
+                case .high: return "High Confidence"
+                case .medium: return "Medium Confidence"
+                case .low: return "Low Confidence"
+                }
+            }
+            
+            var color: Color {
+                switch self {
+                case .high: return .green
+                case .medium: return .orange
+                case .low: return .gray
+                }
+            }
+        }
+        
+        struct PointsScenario {
+            let ifWin: String
+            let ifLose: String
+            let rankImpact: String
+        }
+    }
+    
+    func predictMatch(
+        myTeam: Team?,
+        opponentTeam: Team?,
+        myForm: TeamForm,
+        opponentForm: TeamForm,
+        allTeams: [Team]
+    ) -> MatchPrediction {
+        var winProbability = 50  // Start at 50-50
+        var keyFactors: [String] = []
+        
+        // Factor 1: Rankings (±15%)
+        if let myTeam = myTeam, let opponentTeam = opponentTeam {
+            let rankDiff = opponentTeam.rank - myTeam.rank
+            if rankDiff > 0 {
+                // We're ranked higher
+                let boost = min(rankDiff * 3, 15)
+                winProbability += boost
+                keyFactors.append("Higher ranked (#\(myTeam.rank) vs #\(opponentTeam.rank))")
+            } else if rankDiff < 0 {
+                let penalty = min(abs(rankDiff) * 3, 15)
+                winProbability -= penalty
+                keyFactors.append("Lower ranked (#\(myTeam.rank) vs #\(opponentTeam.rank))")
+            }
+        }
+        
+        // Factor 2: Recent Form (±20%)
+        let formDiff = myForm.recentWins - opponentForm.recentWins
+        if formDiff > 0 {
+            let boost = min(formDiff * 5, 20)
+            winProbability += boost
+            keyFactors.append("Better form (\(myForm.recentWins)-\(myForm.recentLosses) vs \(opponentForm.recentWins)-\(opponentForm.recentLosses))")
+        } else if formDiff < 0 {
+            let penalty = min(abs(formDiff) * 5, 20)
+            winProbability -= penalty
+            keyFactors.append("Worse form (\(myForm.recentWins)-\(myForm.recentLosses) vs \(opponentForm.recentWins)-\(opponentForm.recentLosses))")
+        }
+        
+        // Factor 3: Current Streak (±10%)
+        if myForm.streak.contains("Won") {
+            let streakNum = Int(myForm.streak.filter { $0.isNumber }.joined()) ?? 0
+            if streakNum >= 3 {
+                winProbability += 10
+                keyFactors.append("Hot streak (\(myForm.streak))")
+            } else if streakNum >= 2 {
+                winProbability += 5
+            }
+        }
+        if opponentForm.streak.contains("Won") {
+            let streakNum = Int(opponentForm.streak.filter { $0.isNumber }.joined()) ?? 0
+            if streakNum >= 3 {
+                winProbability -= 10
+                keyFactors.append("They're on a hot streak (\(opponentForm.streak))")
+            } else if streakNum >= 2 {
+                winProbability -= 5
+            }
+        }
+        
+        // Cap at 85/15
+        winProbability = max(15, min(85, winProbability))
+        
+        // Determine confidence
+        let confidence: MatchPrediction.ConfidenceLevel
+        if abs(winProbability - 50) >= 25 {
+            confidence = .high
+        } else if abs(winProbability - 50) >= 15 {
+            confidence = .medium
+        } else {
+            confidence = .low
+        }
+        
+        // Points scenario
+        let currentPoints = myTeam?.points ?? 0
+        let pointsScenario = MatchPrediction.PointsScenario(
+            ifWin: "\(currentPoints + 30) pts (↑)",
+            ifLose: "\(currentPoints + 6) pts (↓)",
+            rankImpact: calculateRankImpact(myTeam: myTeam, allTeams: allTeams, win: winProbability > 50)
+        )
+        
+        // Must-win detection
+        let mustWin = detectMustWin(myTeam: myTeam, allTeams: allTeams)
+        if mustWin {
+            keyFactors.insert("⚠️ Must-win situation for playoff position", at: 0)
+        }
+        
+        return MatchPrediction(
+            winProbability: winProbability,
+            confidence: confidence,
+            keyFactors: keyFactors,
+            pointsScenario: pointsScenario,
+            mustWin: mustWin
+        )
+    }
+    
+    private func calculateRankImpact(myTeam: Team?, allTeams: [Team], win: Bool) -> String {
+        guard let myTeam = myTeam else { return "Impact unknown" }
+        
+        let currentRank = myTeam.rank
+        let simulatedPoints = myTeam.points + (win ? 30 : 6)
+        
+        // Count teams we could overtake or that could overtake us
+        let teamsAhead = allTeams.filter { $0.rank < currentRank && $0.points < simulatedPoints }
+        let teamsBehind = allTeams.filter { $0.rank > currentRank && $0.points > simulatedPoints }
+        
+        if win && teamsAhead.count > 0 {
+            return "Could move up to #\(currentRank - teamsAhead.count)"
+        } else if !win && teamsBehind.count > 0 {
+            return "Could drop to #\(currentRank + teamsBehind.count)"
+        } else {
+            return "Likely stay at #\(currentRank)"
+        }
+    }
+    
+    private func detectMustWin(myTeam: Team?, allTeams: [Team]) -> Bool {
+        guard let myTeam = myTeam else { return false }
+        
+        // Must-win if we're fighting for playoff spots (typically top 4)
+        let playoffCutoff = 4
+        let gamesRemaining = 2  // Estimate
+        
+        if myTeam.rank <= playoffCutoff + 2 && myTeam.rank > playoffCutoff {
+            // We're just outside playoffs
+            let teamsAhead = allTeams.filter { $0.rank == playoffCutoff }
+            if let fourthPlace = teamsAhead.first {
+                let pointsGap = fourthPlace.points - myTeam.points
+                // Must win if gap is within reachable range
+                return pointsGap <= 30 * gamesRemaining && pointsGap > 0
+            }
+        }
+        
+        return false
+    }
 }
