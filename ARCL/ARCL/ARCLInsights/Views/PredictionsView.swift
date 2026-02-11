@@ -7,7 +7,7 @@ import SwiftUI
 
 struct PredictionsView: View {
     @EnvironmentObject var dataManager: DataManager
-    @AppStorage("selectedTeam") private var selectedTeamName: String = ""
+    @AppStorage("myTeamName") private var selectedTeamName: String = ""
     @State private var selectedOpponent: String = ""
     
     var myTeam: Team? {

@@ -33,7 +33,7 @@ struct ContentView: View {
             PredictionsView()
                 .environmentObject(dataManager)
                 .tabItem {
-                    Label("Predictions", systemImage: "crystal.ball.fill")
+                    Label("Predictions", systemImage: "chart.line.uptrend.xyaxis")
                 }
                 .tag(3)
             
