@@ -655,31 +655,35 @@ extension InsightEngine {
         if let myTeam = myTeam, let opponentTeam = opponentTeam, !players.isEmpty {
             // Get top 3 batsmen from each team
             let myBatsmen = players
-                .filter { $0.teamName.localizedCaseInsensitiveContains(myTeam.name) && $0.battingStats != nil }
+                .filter { $0.team.localizedCaseInsensitiveContains(myTeam.name) && $0.battingStats != nil }
                 .sorted { ($0.battingStats?.average ?? 0) > ($1.battingStats?.average ?? 0) }
                 .prefix(3)
             
             let theirBatsmen = players
-                .filter { $0.teamName.localizedCaseInsensitiveContains(opponentTeam.name) && $0.battingStats != nil }
+                .filter { $0.team.localizedCaseInsensitiveContains(opponentTeam.name) && $0.battingStats != nil }
                 .sorted { ($0.battingStats?.average ?? 0) > ($1.battingStats?.average ?? 0) }
                 .prefix(3)
             
-            let myBattingAvg = myBatsmen.map { $0.battingStats?.average ?? 0 }.reduce(0, +) / Double(max(myBatsmen.count, 1))
-            let theirBattingAvg = theirBatsmen.map { $0.battingStats?.average ?? 0 }.reduce(0, +) / Double(max(theirBatsmen.count, 1))
+            let myBattingAvg = myBatsmen.count > 0 ?
+                myBatsmen.map { $0.battingStats?.average ?? 0 }.reduce(0, +) / Double(myBatsmen.count) : 0
+            let theirBattingAvg = theirBatsmen.count > 0 ?
+                theirBatsmen.map { $0.battingStats?.average ?? 0 }.reduce(0, +) / Double(theirBatsmen.count) : 0
             
             // Get top 3 bowlers from each team
             let myBowlers = players
-                .filter { $0.teamName.localizedCaseInsensitiveContains(myTeam.name) && $0.bowlingStats != nil }
+                .filter { $0.team.localizedCaseInsensitiveContains(myTeam.name) && $0.bowlingStats != nil }
                 .sorted { ($0.bowlingStats?.economy ?? 99) < ($1.bowlingStats?.economy ?? 99) }
                 .prefix(3)
             
             let theirBowlers = players
-                .filter { $0.teamName.localizedCaseInsensitiveContains(opponentTeam.name) && $0.bowlingStats != nil }
+                .filter { $0.team.localizedCaseInsensitiveContains(opponentTeam.name) && $0.bowlingStats != nil }
                 .sorted { ($0.bowlingStats?.economy ?? 99) < ($1.bowlingStats?.economy ?? 99) }
                 .prefix(3)
             
-            let myBowlingEcon = myBowlers.map { $0.bowlingStats?.economy ?? 0 }.reduce(0, +) / Double(max(myBowlers.count, 1))
-            let theirBowlingEcon = theirBowlers.map { $0.bowlingStats?.economy ?? 0 }.reduce(0, +) / Double(max(theirBowlers.count, 1))
+            let myBowlingEcon = myBowlers.count > 0 ?
+                myBowlers.map { $0.bowlingStats?.economy ?? 0 }.reduce(0, +) / Double(myBowlers.count) : 0
+            let theirBowlingEcon = theirBowlers.count > 0 ?
+                theirBowlers.map { $0.bowlingStats?.economy ?? 0 }.reduce(0, +) / Double(theirBowlers.count) : 0
             
             // Compare batting quality (avg difference > 5 = significant)
             let battingDiff = myBattingAvg - theirBattingAvg

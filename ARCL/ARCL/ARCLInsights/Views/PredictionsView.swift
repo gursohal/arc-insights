@@ -158,7 +158,7 @@ struct PredictionsView: View {
                             opponentForm: opponentForm,
                             allTeams: dataManager.teams,
                             matches: dataManager.matches,
-                            players: dataManager.batsmen + dataManager.bowlers
+                            players: dataManager.topBatsmen + dataManager.topBowlers
                         )
                         
                         PredictionCard(prediction: prediction, mustWin: prediction.mustWin)
