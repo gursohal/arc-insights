@@ -711,9 +711,10 @@ extension InsightEngine {
             }
             
             // Generate team_id from team name (matches Python implementation)
+            // Uses user's selected division/season from DataManager
             func generateTeamId(teamName: String) -> String {
-                let divisionId = 8  // Current division
-                let seasonId = 66   // Current season
+                let divisionId = UserDefaults.standard.integer(forKey: "selectedDivisionID")
+                let seasonId = UserDefaults.standard.integer(forKey: "selectedSeasonID")
                 let uniqueStr = "\(teamName.lowercased().trimmingCharacters(in: .whitespaces))_\(divisionId)_\(seasonId)"
                 
                 guard let data = uniqueStr.data(using: .utf8) else { return "" }
