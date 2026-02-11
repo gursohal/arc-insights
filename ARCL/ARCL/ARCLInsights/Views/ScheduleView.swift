@@ -162,10 +162,14 @@ struct ScheduleView: View {
                             
                             if showCompleted {
                                 ForEach(completedMatches) { match in
-                                    NavigationLink(destination: ScorecardView(matchId: String(match.id.uuidString))) {
+                                    if let matchId = match.matchId {
+                                        NavigationLink(destination: ScorecardView(matchId: matchId).environmentObject(dataManager)) {
+                                            CompletedMatchCard(match: match, teamName: myTeamName)
+                                        }
+                                        .buttonStyle(PlainButtonStyle())
+                                    } else {
                                         CompletedMatchCard(match: match, teamName: myTeamName)
                                     }
-                                    .buttonStyle(PlainButtonStyle())
                                 }
                             }
                         }
@@ -212,6 +216,17 @@ struct ScheduleView: View {
                             message: "No matches found for \(myTeamName)"
                         )
                     }
+                }
+            }
+        }
+        .onAppear {
+            // Pre-load all scorecards when schedule view appears
+            Task {
+                print("🔄 Pre-loading scorecards...")
+                // Just call once with any matchId - it will load all scorecards
+                if let firstMatch = completedMatches.first, let matchId = firstMatch.matchId {
+                    _ = await dataManager.fetchScorecard(matchId: matchId)
+                    print("✅ Scorecards loaded: \(dataManager.scorecards.count) in cache")
                 }
             }
         }
@@ -287,6 +302,8 @@ struct UpcomingMatchCard: View {
 struct CompletedMatchCard: View {
     let match: Match
     let teamName: String
+    @EnvironmentObject var dataManager: DataManager
+    @State private var scorecard: Scorecard?
     
     var isWin: Bool {
         match.isWinner(teamName: teamName)
@@ -319,52 +336,113 @@ struct CompletedMatchCard: View {
             Divider()
             
             // Teams with scores
-            HStack(spacing: 16) {
-                VStack(alignment: .leading, spacing: 2) {
-                    Text(match.team1)
-                        .font(.subheadline)
-                        .fontWeight(match.team1.localizedCaseInsensitiveContains(teamName) ? .bold : .regular)
-                    if match.winner.localizedCaseInsensitiveContains(match.team1) {
-                        HStack(spacing: 4) {
-                            Text("Winner")
-                                .font(.caption2)
-                                .foregroundColor(.green)
-                            Text("• \(match.winnerPoints) pts")
-                                .font(.caption2)
-                                .foregroundColor(.blue)
-                        }
-                    } else {
-                        Text("\(match.loserPoints) pts")
-                            .font(.caption2)
+            if let scorecard = scorecard, let team1Score = scorecard.getTeam1Score(), let team2Score = scorecard.getTeam2Score() {
+                HStack(spacing: 12) {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text(match.team1)
+                            .font(.caption)
                             .foregroundColor(.secondary)
-                    }
-                }
-                .frame(maxWidth: .infinity, alignment: .leading)
-                
-                Image(systemName: "arrow.left.arrow.right")
-                    .font(.caption)
-                    .foregroundColor(.secondary)
-                
-                VStack(alignment: .trailing, spacing: 2) {
-                    Text(match.team2)
-                        .font(.subheadline)
-                        .fontWeight(match.team2.localizedCaseInsensitiveContains(teamName) ? .bold : .regular)
-                    if match.winner.localizedCaseInsensitiveContains(match.team2) {
+                            .lineLimit(1)
+                        Text("\(team1Score.runs)/\(team1Score.wickets)")
+                            .font(.title3)
+                            .fontWeight(.bold)
+                            .foregroundColor(match.winner.localizedCaseInsensitiveContains(match.team1) ? .green : .primary)
                         HStack(spacing: 4) {
-                            Text("\(match.winnerPoints) pts •")
+                            Text("(\(team1Score.overs) ov)")
                                 .font(.caption2)
-                                .foregroundColor(.blue)
-                            Text("Winner")
-                                .font(.caption2)
-                                .foregroundColor(.green)
+                                .foregroundColor(.secondary)
+                            if match.winner.localizedCaseInsensitiveContains(match.team1) {
+                                Text("• \(30 - match.loserPoints) pts")
+                                    .font(.caption2)
+                                    .foregroundColor(.blue)
+                            } else {
+                                Text("• \(match.loserPoints) pts")
+                                    .font(.caption2)
+                                    .foregroundColor(.secondary)
+                            }
                         }
-                    } else {
-                        Text("\(match.loserPoints) pts")
-                            .font(.caption2)
-                            .foregroundColor(.secondary)
                     }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    
+                    Text("VS")
+                        .font(.caption2)
+                        .fontWeight(.bold)
+                        .foregroundColor(.secondary)
+                    
+                    VStack(alignment: .trailing, spacing: 2) {
+                        Text(match.team2)
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                            .lineLimit(1)
+                        Text("\(team2Score.runs)/\(team2Score.wickets)")
+                            .font(.title3)
+                            .fontWeight(.bold)
+                            .foregroundColor(match.winner.localizedCaseInsensitiveContains(match.team2) ? .green : .primary)
+                        HStack(spacing: 4) {
+                            if match.winner.localizedCaseInsensitiveContains(match.team2) {
+                                Text("\(30 - match.loserPoints) pts •")
+                                    .font(.caption2)
+                                    .foregroundColor(.blue)
+                            } else {
+                                Text("\(match.loserPoints) pts •")
+                                    .font(.caption2)
+                                    .foregroundColor(.secondary)
+                            }
+                            Text("(\(team2Score.overs) ov)")
+                                .font(.caption2)
+                                .foregroundColor(.secondary)
+                        }
+                    }
+                    .frame(maxWidth: .infinity, alignment: .trailing)
                 }
-                .frame(maxWidth: .infinity, alignment: .trailing)
+            } else {
+                HStack(spacing: 16) {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text(match.team1)
+                            .font(.subheadline)
+                            .fontWeight(match.team1.localizedCaseInsensitiveContains(teamName) ? .bold : .regular)
+                        if match.winner.localizedCaseInsensitiveContains(match.team1) {
+                            HStack(spacing: 4) {
+                                Text("Winner")
+                                    .font(.caption2)
+                                    .foregroundColor(.green)
+                                Text("• \(match.winnerPoints) pts")
+                                    .font(.caption2)
+                                    .foregroundColor(.blue)
+                            }
+                        } else {
+                            Text("\(match.loserPoints) pts")
+                                .font(.caption2)
+                                .foregroundColor(.secondary)
+                        }
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    
+                    Image(systemName: "arrow.left.arrow.right")
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                    
+                    VStack(alignment: .trailing, spacing: 2) {
+                        Text(match.team2)
+                            .font(.subheadline)
+                            .fontWeight(match.team2.localizedCaseInsensitiveContains(teamName) ? .bold : .regular)
+                        if match.winner.localizedCaseInsensitiveContains(match.team2) {
+                            HStack(spacing: 4) {
+                                Text("\(match.winnerPoints) pts •")
+                                    .font(.caption2)
+                                    .foregroundColor(.blue)
+                                Text("Winner")
+                                    .font(.caption2)
+                                    .foregroundColor(.green)
+                            }
+                        } else {
+                            Text("\(match.loserPoints) pts")
+                                .font(.caption2)
+                                .foregroundColor(.secondary)
+                        }
+                    }
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+                }
             }
             
             // Ground
@@ -381,6 +459,14 @@ struct CompletedMatchCard: View {
         .background(Color(.systemBackground))
         .cornerRadius(12)
         .shadow(color: Color.black.opacity(0.05), radius: 5, x: 0, y: 2)
+        .onAppear {
+            // Load scorecard data when card appears
+            if let matchId = match.matchId {
+                Task {
+                    self.scorecard = await dataManager.fetchScorecard(matchId: matchId)
+                }
+            }
+        }
     }
 }
 

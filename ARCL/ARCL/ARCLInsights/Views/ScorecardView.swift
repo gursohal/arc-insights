@@ -30,14 +30,80 @@ struct ScorecardView: View {
                 .padding()
             } else if let scorecard = scorecard {
                 VStack(alignment: .leading, spacing: 24) {
-                    // Match header
-                    VStack(alignment: .leading, spacing: 8) {
+                    // Match header with teams
+                    VStack(alignment: .leading, spacing: 12) {
                         Text("MATCH SCORECARD")
                             .font(.caption)
                             .foregroundColor(.secondary)
-                        Text("Match #\(scorecard.matchId)")
-                            .font(.title2)
-                            .bold()
+                        
+                        // Teams matchup
+                        if let team1 = scorecard.matchInfo.team1, let team2 = scorecard.matchInfo.team2,
+                           !team1.isEmpty, !team2.isEmpty {
+                            HStack(spacing: 8) {
+                                Text(team1)
+                                    .font(.title3)
+                                    .bold()
+                                Text("vs")
+                                    .font(.subheadline)
+                                    .foregroundColor(.secondary)
+                                Text(team2)
+                                    .font(.title3)
+                                    .bold()
+                            }
+                        } else {
+                            Text("Match #\(scorecard.matchId)")
+                                .font(.title2)
+                                .bold()
+                        }
+                        
+                        // Match details
+                        VStack(alignment: .leading, spacing: 4) {
+                            if !scorecard.matchInfo.date.isEmpty {
+                                HStack(spacing: 4) {
+                                    Image(systemName: "calendar")
+                                        .font(.caption)
+                                        .foregroundColor(.secondary)
+                                    Text(formatDate(scorecard.matchInfo.date))
+                                        .font(.subheadline)
+                                        .foregroundColor(.secondary)
+                                }
+                            }
+                            
+                            if !scorecard.matchInfo.ground.isEmpty {
+                                HStack(spacing: 4) {
+                                    Image(systemName: "mappin.circle")
+                                        .font(.caption)
+                                        .foregroundColor(.secondary)
+                                    Text(scorecard.matchInfo.ground)
+                                        .font(.subheadline)
+                                        .foregroundColor(.secondary)
+                                }
+                            }
+                            
+                            if !scorecard.matchInfo.result.isEmpty {
+                                HStack(spacing: 4) {
+                                    Image(systemName: "trophy.fill")
+                                        .font(.caption)
+                                        .foregroundColor(.green)
+                                    Text(scorecard.matchInfo.result)
+                                        .font(.subheadline)
+                                        .foregroundColor(.green)
+                                        .fontWeight(.medium)
+                                }
+                            }
+                            
+                            if let mom = scorecard.matchInfo.manOfMatch, !mom.isEmpty {
+                                HStack(spacing: 4) {
+                                    Image(systemName: "star.fill")
+                                        .font(.caption)
+                                        .foregroundColor(.orange)
+                                    Text("Man of the Match: \(mom)")
+                                        .font(.subheadline)
+                                        .foregroundColor(.orange)
+                                        .fontWeight(.medium)
+                                }
+                            }
+                        }
                     }
                     .padding()
                     
@@ -45,7 +111,7 @@ struct ScorecardView: View {
                     
                     // Team 1 Innings
                     InningsSection(
-                        title: "TEAM 1 BATTING",
+                        title: "\((scorecard.matchInfo.team1?.isEmpty == false) ? scorecard.matchInfo.team1! : "TEAM 1") BATTING",
                         innings: scorecard.team1Innings
                     )
                     
@@ -53,7 +119,7 @@ struct ScorecardView: View {
                     
                     // Team 2 Innings
                     InningsSection(
-                        title: "TEAM 2 BATTING",
+                        title: "\((scorecard.matchInfo.team2?.isEmpty == false) ? scorecard.matchInfo.team2! : "TEAM 2") BATTING",
                         innings: scorecard.team2Innings
                     )
                 }

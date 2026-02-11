@@ -77,20 +77,49 @@ class ScorecardScraper(BaseScraper):
     def _parse_match_info(self, soup):
         """Extract match information from page"""
         info = {
+            'team1': '',
+            'team2': '',
             'date': '',
             'ground': '',
-            'result': ''
+            'result': '',
+            'man_of_match': ''
         }
         
         try:
-            # Try to find match details in page
-            # This will need adjustment based on actual page structure
-            text = soup.get_text()
-            
-            # Look for common patterns
-            if 'won by' in text.lower():
-                result_start = text.lower().find('won by')
-                info['result'] = text[max(0, result_start - 50):result_start + 100].strip()
+            # Get the first table which contains match info
+            tables = soup.find_all('table')
+            if len(tables) > 0:
+                table_text = tables[0].get_text()
+                lines = [line.strip() for line in table_text.split('\n') if line.strip()]
+                
+                # Parse key-value pairs
+                i = 0
+                while i < len(lines):
+                    line = lines[i]
+                    
+                    if line.lower() == 'match:' and i + 1 < len(lines):
+                        # Next line has team names
+                        team_line = lines[i + 1]
+                        if ' vs ' in team_line:
+                            teams = team_line.split(' vs ')
+                            if len(teams) == 2:
+                                info['team1'] = teams[0].strip()
+                                info['team2'] = teams[1].strip()
+                        i += 2
+                    elif line.lower() == 'date:' and i + 1 < len(lines):
+                        info['date'] = lines[i + 1]
+                        i += 2
+                    elif line.lower() == 'ground:' and i + 1 < len(lines):
+                        info['ground'] = lines[i + 1]
+                        i += 2
+                    elif line.lower() == 'result:' and i + 1 < len(lines):
+                        info['result'] = lines[i + 1]
+                        i += 2
+                    elif line.lower() == 'man of the match:' and i + 1 < len(lines):
+                        info['man_of_match'] = lines[i + 1]
+                        i += 2
+                    else:
+                        i += 1
             
         except Exception as e:
             print(f"    Warning: Could not parse match info: {e}")

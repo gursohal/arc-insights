@@ -2,7 +2,7 @@
   "division_id": 4,
   "season_id": 66,
   "division_name": "Div B - Summer 2025",
-  "last_updated": "2026-02-09T19:53:39.995317",
+  "last_updated": "2026-02-09T20:41:13.538679",
   "teams": [
     "Titans",
     "Bouncers",
@@ -37,7 +37,9 @@
       "innings": "7",
       "runs": "194",
       "strike_rate": "127.63",
-      "average": "27.71"
+      "average": "27.71",
+      "fours": "4",
+      "sixes": "0"
     },
     {
       "rank": "2",
@@ -46,7 +48,9 @@
       "innings": "6",
       "runs": "183",
       "strike_rate": "107.65",
-      "average": "30.5"
+      "average": "30.5",
+      "fours": "7",
+      "sixes": "2"
     },
     {
       "rank": "3",
@@ -55,7 +59,9 @@
       "innings": "6",
       "runs": "164",
       "strike_rate": "121.48",
-      "average": "27.33"
+      "average": "27.33",
+      "fours": "12",
+      "sixes": "2"
     },
     {
       "rank": "4",
@@ -64,7 +70,9 @@
       "innings": "7",
       "runs": "163",
       "strike_rate": "86.7",
-      "average": "23.29"
+      "average": "23.29",
+      "fours": "12",
+      "sixes": "0"
     },
     {
       "rank": "5",
@@ -73,7 +81,9 @@
       "innings": "6",
       "runs": "162",
       "strike_rate": "105.88",
-      "average": "27.0"
+      "average": "27.0",
+      "fours": "8",
+      "sixes": "0"
     },
     {
       "rank": "6",
@@ -82,7 +92,9 @@
       "innings": "7",
       "runs": "161",
       "strike_rate": "106.62",
-      "average": "23.0"
+      "average": "23.0",
+      "fours": "10",
+      "sixes": "1"
     },
     {
       "rank": "7",
@@ -91,7 +103,9 @@
       "innings": "5",
       "runs": "158",
       "strike_rate": "99.37",
-      "average": "31.6"
+      "average": "31.6",
+      "fours": "10",
+      "sixes": "2"
     },
     {
       "rank": "8",
@@ -100,7 +114,9 @@
       "innings": "6",
       "runs": "155",
       "strike_rate": "129.17",
-      "average": "25.83"
+      "average": "25.83",
+      "fours": "9",
+      "sixes": "5"
     },
     {
       "rank": "9",
@@ -109,7 +125,9 @@
       "innings": "5",
       "runs": "152",
       "strike_rate": "116.03",
-      "average": "30.4"
+      "average": "30.4",
+      "fours": "11",
+      "sixes": "2"
     },
     {
       "rank": "10",
@@ -118,7 +136,9 @@
       "innings": "7",
       "runs": "148",
       "strike_rate": "106.47",
-      "average": "21.14"
+      "average": "21.14",
+      "fours": "7",
+      "sixes": "6"
     },
     {
       "rank": "11",
@@ -127,7 +147,9 @@
       "innings": "6",
       "runs": "137",
       "strike_rate": "101.48",
-      "average": "22.83"
+      "average": "22.83",
+      "fours": "8",
+      "sixes": "2"
     },
     {
       "rank": "12",
@@ -136,7 +158,9 @@
       "innings": "6",
       "runs": "136",
       "strike_rate": "92.52",
-      "average": "22.67"
+      "average": "22.67",
+      "fours": "6",
+      "sixes": "1"
     },
     {
       "rank": "13",
@@ -145,7 +169,9 @@
       "innings": "6",
       "runs": "136",
       "strike_rate": "102.26",
-      "average": "22.67"
+      "average": "22.67",
+      "fours": "1",
+      "sixes": "7"
     },
     {
       "rank": "14",
@@ -154,7 +180,9 @@
       "innings": "4",
       "runs": "119",
       "strike_rate": "119",
-      "average": "29.75"
+      "average": "29.75",
+      "fours": "5",
+      "sixes": "1"
     },
     {
       "rank": "15",
@@ -163,7 +191,9 @@
       "innings": "7",
       "runs": "114",
       "strike_rate": "91.2",
-      "average": "16.29"
+      "average": "16.29",
+      "fours": "4",
+      "sixes": "1"
     },
     {
       "rank": "16",
@@ -172,7 +202,9 @@
       "innings": "7",
       "runs": "112",
       "strike_rate": "124.44",
-      "average": "16.0"
+      "average": "16.0",
+      "fours": "7",
+      "sixes": "4"
     },
     {
       "rank": "17",
@@ -181,7 +213,9 @@
       "innings": "5",
       "runs": "111",
       "strike_rate": "102.78",
-      "average": "22.2"
+      "average": "22.2",
+      "fours": "8",
+      "sixes": "0"
     },
     {
       "rank": "18",
@@ -190,7 +224,9 @@
       "innings": "6",
       "runs": "109",
       "strike_rate": "83.21",
-      "average": "18.17"
+      "average": "18.17",
+      "fours": "6",
+      "sixes": "0"
     },
     {
       "rank": "19",
@@ -199,7 +235,9 @@
       "innings": "7",
       "runs": "107",
       "strike_rate": "91.45",
-      "average": "15.29"
+      "average": "15.29",
+      "fours": "2",
+      "sixes": "0"
     },
     {
       "rank": "20",
@@ -208,7 +246,9 @@
       "innings": "6",
       "runs": "107",
       "strike_rate": "82.31",
-      "average": "17.83"
+      "average": "17.83",
+      "fours": "7",
+      "sixes": "0"
     },
     {
       "rank": "21",
@@ -217,7 +257,9 @@
       "innings": "7",
       "runs": "105",
       "strike_rate": "100",
-      "average": "15.0"
+      "average": "15.0",
+      "fours": "7",
+      "sixes": "5"
     },
     {
       "rank": "22",
@@ -226,7 +268,9 @@
       "innings": "7",
       "runs": "103",
       "strike_rate": "114.44",
-      "average": "14.71"
+      "average": "14.71",
+      "fours": "4",
+      "sixes": "1"
     },
     {
       "rank": "23",
@@ -235,7 +279,9 @@
       "innings": "6",
       "runs": "102",
       "strike_rate": "82.93",
-      "average": "17.0"
+      "average": "17.0",
+      "fours": "5",
+      "sixes": "0"
     },
     {
       "rank": "24",
@@ -244,7 +290,9 @@
       "innings": "6",
       "runs": "101",
       "strike_rate": "80.16",
-      "average": "16.83"
+      "average": "16.83",
+      "fours": "0",
+      "sixes": "0"
     },
     {
       "rank": "25",
@@ -253,7 +301,9 @@
       "innings": "7",
       "runs": "100",
       "strike_rate": "90.91",
-      "average": "14.29"
+      "average": "14.29",
+      "fours": "5",
+      "sixes": "3"
     }
   ],
   "bowlers": [

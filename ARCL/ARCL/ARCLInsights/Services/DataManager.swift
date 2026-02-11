@@ -233,7 +233,11 @@ class DataManager: ObservableObject {
         }
         
         do {
-            let (data, _) = try await URLSession.shared.data(from: url)
+            // Force fresh data, ignore cache
+            var request = URLRequest(url: url)
+            request.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
+            
+            let (data, _) = try await URLSession.shared.data(for: request)
             let allScorecards = try JSONDecoder().decode([Scorecard].self, from: data)
             
             // Cache all scorecards in memory
