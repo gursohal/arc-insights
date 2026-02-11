@@ -180,7 +180,9 @@ class DataManager: ObservableObject {
                 average: average,
                 strikeRate: Double(batsman.strike_rate) ?? 0,
                 highestScore: batsman.runs,
-                rank: Int(batsman.rank) ?? 0
+                rank: Int(batsman.rank) ?? 0,
+                fours: Int(batsman.fours) ?? 0,
+                sixes: Int(batsman.sixes) ?? 0
             )
             return Player(name: batsman.name, team: batsman.team, battingStats: stats, bowlingStats: nil, playerId: nil, teamId: nil)
         }
@@ -407,6 +409,8 @@ struct BatsmanJSON: Codable {
     let innings: String
     let runs: String
     let strike_rate: String
+    let fours: String
+    let sixes: String
 }
 
 struct BowlerJSON: Codable {

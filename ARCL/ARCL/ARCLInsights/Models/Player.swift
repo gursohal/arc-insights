@@ -28,6 +28,8 @@ struct BattingStats: Codable {
     let strikeRate: Double
     let highestScore: String
     let rank: Int
+    let fours: Int
+    let sixes: Int
     
     var averageString: String {
         String(format: "%.1f", average)
@@ -35,6 +37,16 @@ struct BattingStats: Codable {
     
     var strikeRateString: String {
         String(format: "%.1f", strikeRate)
+    }
+    
+    var totalBoundaries: Int {
+        fours + sixes
+    }
+    
+    var boundaryPercentage: Double {
+        guard runs > 0 else { return 0 }
+        let boundaryRuns = (fours * 4) + (sixes * 6)
+        return (Double(boundaryRuns) / Double(runs)) * 100
     }
 }
 
