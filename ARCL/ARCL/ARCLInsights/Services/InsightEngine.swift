@@ -692,16 +692,35 @@ extension InsightEngine {
         
         // Factor 4: Player Quality Comparison (±15%)
         if let myTeam = myTeam, let opponentTeam = opponentTeam, !players.isEmpty {
+            // Helper function to match team names more robustly
+            func matchesTeam(_ playerTeam: String, _ teamName: String) -> Bool {
+                // Direct match
+                if playerTeam.localizedCaseInsensitiveContains(teamName) {
+                    return true
+                }
+                // Try matching with the first significant word (at least 4 characters)
+                let teamWords = teamName.split(separator: " ").filter { $0.count >= 4 }
+                for word in teamWords {
+                    if playerTeam.localizedCaseInsensitiveContains(String(word)) {
+                        return true
+                    }
+                }
+                return false
+            }
+            
             // Get top 3 batsmen from each team
             let myBatsmen = players
-                .filter { $0.team.localizedCaseInsensitiveContains(myTeam.name) && $0.battingStats != nil }
+                .filter { matchesTeam($0.team, myTeam.name) && $0.battingStats != nil }
                 .sorted { ($0.battingStats?.average ?? 0) > ($1.battingStats?.average ?? 0) }
                 .prefix(3)
             
             let theirBatsmen = players
-                .filter { $0.team.localizedCaseInsensitiveContains(opponentTeam.name) && $0.battingStats != nil }
+                .filter { matchesTeam($0.team, opponentTeam.name) && $0.battingStats != nil }
                 .sorted { ($0.battingStats?.average ?? 0) > ($1.battingStats?.average ?? 0) }
                 .prefix(3)
+            
+            print("🔍 Debug: My team '\(myTeam.name)' - Found \(myBatsmen.count) batsmen")
+            print("🔍 Debug: Opponent '\(opponentTeam.name)' - Found \(theirBatsmen.count) batsmen")
             
             let myBattingAvg = myBatsmen.count > 0 ?
                 myBatsmen.map { $0.battingStats?.average ?? 0 }.reduce(0, +) / Double(myBatsmen.count) : 0
@@ -710,14 +729,17 @@ extension InsightEngine {
             
             // Get top 3 bowlers from each team
             let myBowlers = players
-                .filter { $0.team.localizedCaseInsensitiveContains(myTeam.name) && $0.bowlingStats != nil }
+                .filter { matchesTeam($0.team, myTeam.name) && $0.bowlingStats != nil }
                 .sorted { ($0.bowlingStats?.economy ?? 99) < ($1.bowlingStats?.economy ?? 99) }
                 .prefix(3)
             
             let theirBowlers = players
-                .filter { $0.team.localizedCaseInsensitiveContains(opponentTeam.name) && $0.bowlingStats != nil }
+                .filter { matchesTeam($0.team, opponentTeam.name) && $0.bowlingStats != nil }
                 .sorted { ($0.bowlingStats?.economy ?? 99) < ($1.bowlingStats?.economy ?? 99) }
                 .prefix(3)
+            
+            print("🔍 Debug: My team '\(myTeam.name)' - Found \(myBowlers.count) bowlers")
+            print("🔍 Debug: Opponent '\(opponentTeam.name)' - Found \(theirBowlers.count) bowlers")
             
             let myBowlingEcon = myBowlers.count > 0 ?
                 myBowlers.map { $0.bowlingStats?.economy ?? 0 }.reduce(0, +) / Double(myBowlers.count) : 0
@@ -750,36 +772,44 @@ extension InsightEngine {
             
             // Factor 5: Team Depth Analysis (±10%)
             let myQualityBatsmen = players.filter {
-                $0.team.localizedCaseInsensitiveContains(myTeam.name) &&
+                matchesTeam($0.team, myTeam.name) &&
                 ($0.battingStats?.average ?? 0) > 25
             }.count
             
             let theirQualityBatsmen = players.filter {
-                $0.team.localizedCaseInsensitiveContains(opponentTeam.name) &&
+                matchesTeam($0.team, opponentTeam.name) &&
                 ($0.battingStats?.average ?? 0) > 25
             }.count
             
             let myQualityBowlers = players.filter {
-                $0.team.localizedCaseInsensitiveContains(myTeam.name) &&
+                matchesTeam($0.team, myTeam.name) &&
                 ($0.bowlingStats?.economy ?? 99) < 5.0
             }.count
             
             let theirQualityBowlers = players.filter {
-                $0.team.localizedCaseInsensitiveContains(opponentTeam.name) &&
+                matchesTeam($0.team, opponentTeam.name) &&
                 ($0.bowlingStats?.economy ?? 99) < 5.0
             }.count
             
+            print("🔍 Debug: Quality batsmen - My: \(myQualityBatsmen), Their: \(theirQualityBatsmen)")
+            print("🔍 Debug: Quality bowlers - My: \(myQualityBowlers), Their: \(theirQualityBowlers)")
+            
             let depthDiff = (myQualityBatsmen + myQualityBowlers) - (theirQualityBatsmen + theirQualityBowlers)
-            if depthDiff >= 3 {
+            let myTotal = myQualityBatsmen + myQualityBowlers
+            let theirTotal = theirQualityBatsmen + theirQualityBowlers
+            
+            if depthDiff >= 3 && theirTotal > 0 {
                 winProbability += 10
-                keyFactors.append("Superior depth (\(myQualityBatsmen+myQualityBowlers) quality players vs \(theirQualityBatsmen+theirQualityBowlers))")
-            } else if depthDiff <= -3 {
+                keyFactors.append("Superior depth (\(myTotal) quality players vs \(theirTotal))")
+            } else if depthDiff <= -3 && myTotal > 0 {
                 winProbability -= 10
-                keyFactors.append("Weaker depth (\(myQualityBatsmen+myQualityBowlers) quality players vs \(theirQualityBatsmen+theirQualityBowlers))")
-            } else if depthDiff >= 2 {
+                keyFactors.append("Weaker depth (\(myTotal) quality players vs \(theirTotal))")
+            } else if depthDiff >= 2 && theirTotal > 0 {
                 winProbability += 5
-            } else if depthDiff <= -2 {
+                keyFactors.append("Better depth (\(myTotal) vs \(theirTotal) quality players)")
+            } else if depthDiff <= -2 && myTotal > 0 {
                 winProbability -= 5
+                keyFactors.append("Less depth (\(myTotal) vs \(theirTotal) quality players)")
             }
         }
         

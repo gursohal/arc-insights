@@ -161,8 +161,12 @@ struct PredictionsView: View {
                             players: dataManager.topBatsmen + dataManager.topBowlers
                         )
                         
-                        PredictionCard(prediction: prediction, mustWin: prediction.mustWin)
-                            .padding(.horizontal)
+                        PredictionCard(
+                            prediction: prediction,
+                            mustWin: prediction.mustWin,
+                            myTeamName: myTeam.name
+                        )
+                        .padding(.horizontal)
                     }
                 }
                 .padding(.vertical)
@@ -209,6 +213,7 @@ struct TeamCard: View {
 struct PredictionCard: View {
     let prediction: InsightEngine.MatchPrediction
     let mustWin: Bool
+    let myTeamName: String
     
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
@@ -228,15 +233,19 @@ struct PredictionCard: View {
                 }
             }
             
-            // Win Probability
+            // Win Probability with Team Name
             VStack(alignment: .leading, spacing: 8) {
+                Text("Win Probability")
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+                
                 HStack {
-                    Text("Win Probability")
-                        .font(.subheadline)
-                        .foregroundColor(.secondary)
+                    Text(myTeamName)
+                        .font(.title3)
+                        .bold()
                     Spacer()
                     Text("\(prediction.winProbability)%")
-                        .font(.title2)
+                        .font(.title)
                         .bold()
                         .foregroundColor(prediction.winProbability >= 60 ? .green : (prediction.winProbability >= 40 ? .orange : .red))
                 }
