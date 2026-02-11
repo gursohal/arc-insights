@@ -30,11 +30,18 @@ struct ContentView: View {
                 }
                 .tag(2)
             
+            PredictionsView()
+                .environmentObject(dataManager)
+                .tabItem {
+                    Label("Predictions", systemImage: "crystal.ball.fill")
+                }
+                .tag(3)
+            
             SettingsView()
                 .tabItem {
                     Label("Settings", systemImage: "gearshape.fill")
                 }
-                .tag(3)
+                .tag(4)
         }
         .accentColor(.green)
     }
