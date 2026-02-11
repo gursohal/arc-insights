@@ -15,14 +15,17 @@ struct StatsView: View {
                 Picker("Category", selection: $selectedCategory) {
                     Text("Batting").tag(0)
                     Text("Bowling").tag(1)
+                    Text("Boundaries").tag(2)
                 }
                 .pickerStyle(.segmented)
                 .padding()
                 
                 if selectedCategory == 0 {
                     BattingStatsView(players: dataManager.topBatsmen)
-                } else {
+                } else if selectedCategory == 1 {
                     BowlingStatsView(players: dataManager.topBowlers)
+                } else {
+                    BoundaryStatsView(players: dataManager.topBatsmen)
                 }
             }
             .navigationTitle("Division Stats")
@@ -102,6 +105,65 @@ struct BowlingStatsView: View {
                             Text("wickets")
                                 .font(.caption)
                                 .foregroundColor(.secondary)
+                        }
+                    }
+                }
+                .padding(.vertical, 4)
+            }
+        }
+        .listStyle(.plain)
+    }
+}
+
+struct BoundaryStatsView: View {
+    let players: [Player]
+    
+    var boundaryLeaders: [Player] {
+        players
+            .filter { $0.battingStats != nil }
+            .sorted { ($0.battingStats?.totalBoundaries ?? 0) > ($1.battingStats?.totalBoundaries ?? 0) }
+    }
+    
+    var body: some View {
+        List(boundaryLeaders) { player in
+            NavigationLink(destination: PlayerDetailView(player: player)) {
+                HStack {
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text(player.name)
+                            .font(.headline)
+                        Text(player.team)
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                    }
+                    
+                    Spacer()
+                    
+                    HStack(spacing: 16) {
+                        if let stats = player.battingStats {
+                            VStack(spacing: 4) {
+                                Text("🎯")
+                                    .font(.title3)
+                                Text("\(stats.fours)")
+                                    .font(.headline)
+                                    .bold()
+                            }
+                            
+                            VStack(spacing: 4) {
+                                Text("💥")
+                                    .font(.title3)
+                                Text("\(stats.sixes)")
+                                    .font(.headline)
+                                    .bold()
+                            }
+                            
+                            VStack(spacing: 4) {
+                                Text("🏏")
+                                    .font(.title3)
+                                Text("\(stats.totalBoundaries)")
+                                    .font(.headline)
+                                    .bold()
+                                    .foregroundColor(.green)
+                            }
                         }
                     }
                 }

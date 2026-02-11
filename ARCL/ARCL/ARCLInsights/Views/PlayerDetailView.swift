@@ -38,6 +38,32 @@ struct PlayerDetailView: View {
                             StatRow(label: "Batting Average", value: battingStats.averageString)
                             StatRow(label: "Strike Rate", value: battingStats.strikeRateString)
                             
+                            // Boundary Statistics
+                            HStack(spacing: 16) {
+                                BoundaryStatCard(
+                                    icon: "🎯",
+                                    label: "Fours",
+                                    value: "\(battingStats.fours)"
+                                )
+                                BoundaryStatCard(
+                                    icon: "💥",
+                                    label: "Sixes",
+                                    value: "\(battingStats.sixes)"
+                                )
+                                BoundaryStatCard(
+                                    icon: "🏏",
+                                    label: "Boundaries",
+                                    value: "\(battingStats.totalBoundaries)"
+                                )
+                            }
+                            
+                            if battingStats.boundaryPercentage > 0 {
+                                StatRow(
+                                    label: "Boundary %",
+                                    value: String(format: "%.1f%%", battingStats.boundaryPercentage)
+                                )
+                            }
+                            
                             // Performance Indicator
                             PerformanceIndicator(
                                 title: "Performance Level",
@@ -226,6 +252,29 @@ struct PlayerInsightCard: View {
         }
         .padding()
         .background(color.opacity(0.1))
+        .cornerRadius(12)
+    }
+}
+
+struct BoundaryStatCard: View {
+    let icon: String
+    let label: String
+    let value: String
+    
+    var body: some View {
+        VStack(spacing: 8) {
+            Text(icon)
+                .font(.title)
+            Text(value)
+                .font(.title2)
+                .bold()
+            Text(label)
+                .font(.caption)
+                .foregroundColor(.secondary)
+        }
+        .frame(maxWidth: .infinity)
+        .padding()
+        .background(Color(.systemGray6))
         .cornerRadius(12)
     }
 }
