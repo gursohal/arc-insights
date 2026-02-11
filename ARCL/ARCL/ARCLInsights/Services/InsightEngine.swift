@@ -571,10 +571,37 @@ extension InsightEngine {
         opponentTeam: Team?,
         myForm: TeamForm,
         opponentForm: TeamForm,
-        allTeams: [Team]
+        allTeams: [Team],
+        matches: [Match] = []
     ) -> MatchPrediction {
         var winProbability = 50  // Start at 50-50
         var keyFactors: [String] = []
+        
+        // Factor 0: Head-to-Head History (±20%) - MOST IMPORTANT!
+        if let myTeam = myTeam, let opponentTeam = opponentTeam, !matches.isEmpty {
+            let h2hMatches = matches.filter { match in
+                match.status == .completed &&
+                match.involves(teamName: myTeam.name) &&
+                match.involves(teamName: opponentTeam.name)
+            }
+            
+            if !h2hMatches.isEmpty {
+                let myWins = h2hMatches.filter { $0.isWinner(teamName: myTeam.name) }.count
+                let theirWins = h2hMatches.count - myWins
+                
+                if myWins > theirWins {
+                    let boost = min((myWins - theirWins) * 10, 20)
+                    winProbability += boost
+                    keyFactors.append("H2H advantage (\(myWins)-\(theirWins) this season)")
+                } else if theirWins > myWins {
+                    let penalty = min((theirWins - myWins) * 10, 20)
+                    winProbability -= penalty
+                    keyFactors.append("H2H disadvantage (\(myWins)-\(theirWins) this season)")
+                } else {
+                    keyFactors.append("H2H even (\(myWins)-\(theirWins))")
+                }
+            }
+        }
         
         // Factor 1: Rankings (±15%)
         if let myTeam = myTeam, let opponentTeam = opponentTeam {
