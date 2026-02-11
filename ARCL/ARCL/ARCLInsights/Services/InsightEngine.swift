@@ -130,6 +130,35 @@ class InsightEngine {
             narrative: "Consistent contributor accumulating steadily",
             color: .blue,
             priority: 3
+        ),
+        
+        // Boundary Rules (4s and 6s)
+        InsightRule(
+            metric: "totalFours",
+            threshold: 25,
+            comparison: .greaterThanOrEqual,
+            icon: "🎯",
+            narrative: "Gap finder hitting boundaries regularly",
+            color: .green,
+            priority: 2
+        ),
+        InsightRule(
+            metric: "totalSixes",
+            threshold: 8,
+            comparison: .greaterThanOrEqual,
+            icon: "💥",
+            narrative: "Power hitter clearing ropes consistently",
+            color: .orange,
+            priority: 2
+        ),
+        InsightRule(
+            metric: "boundaryPercentage",
+            threshold: 50,
+            comparison: .greaterThanOrEqual,
+            icon: "⚡",
+            narrative: "Over half of runs from boundaries - aggressive approach",
+            color: .red,
+            priority: 3
         )
     ]
     
@@ -224,8 +253,12 @@ class InsightEngine {
     ]
     
     // MARK: - Generate Insights
-    func generateBattingInsights(runs: Int, average: Double, strikeRate: Double, innings: Int) -> [PlayerInsight] {
+    func generateBattingInsights(runs: Int, average: Double, strikeRate: Double, innings: Int, fours: Int = 0, sixes: Int = 0) -> [PlayerInsight] {
         var insights: [PlayerInsight] = []
+        
+        // Calculate boundary percentage
+        let boundaryRuns = (fours * 4) + (sixes * 6)
+        let boundaryPercentage = runs > 0 ? (Double(boundaryRuns) / Double(runs)) * 100 : 0
         
         // Check each rule
         for rule in battingRules {
@@ -237,6 +270,12 @@ class InsightEngine {
                 value = average
             case "totalRuns":
                 value = Double(runs)
+            case "totalFours":
+                value = Double(fours)
+            case "totalSixes":
+                value = Double(sixes)
+            case "boundaryPercentage":
+                value = boundaryPercentage
             default:
                 continue
             }
