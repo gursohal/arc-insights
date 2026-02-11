@@ -708,6 +708,151 @@ extension InsightEngine {
                 winProbability -= penalty
                 keyFactors.append("Looser bowling (Top 3 econ: \(String(format: "%.2f", myBowlingEcon)) vs \(String(format: "%.2f", theirBowlingEcon)))")
             }
+            
+            // Factor 5: Team Depth Analysis (±10%)
+            let myQualityBatsmen = players.filter {
+                $0.team.localizedCaseInsensitiveContains(myTeam.name) &&
+                ($0.battingStats?.average ?? 0) > 25
+            }.count
+            
+            let theirQualityBatsmen = players.filter {
+                $0.team.localizedCaseInsensitiveContains(opponentTeam.name) &&
+                ($0.battingStats?.average ?? 0) > 25
+            }.count
+            
+            let myQualityBowlers = players.filter {
+                $0.team.localizedCaseInsensitiveContains(myTeam.name) &&
+                ($0.bowlingStats?.economy ?? 99) < 5.0
+            }.count
+            
+            let theirQualityBowlers = players.filter {
+                $0.team.localizedCaseInsensitiveContains(opponentTeam.name) &&
+                ($0.bowlingStats?.economy ?? 99) < 5.0
+            }.count
+            
+            let depthDiff = (myQualityBatsmen + myQualityBowlers) - (theirQualityBatsmen + theirQualityBowlers)
+            if depthDiff >= 3 {
+                winProbability += 10
+                keyFactors.append("Superior depth (\(myQualityBatsmen+myQualityBowlers) quality players vs \(theirQualityBatsmen+theirQualityBowlers))")
+            } else if depthDiff <= -3 {
+                winProbability -= 10
+                keyFactors.append("Weaker depth (\(myQualityBatsmen+myQualityBowlers) quality players vs \(theirQualityBatsmen+theirQualityBowlers))")
+            } else if depthDiff >= 2 {
+                winProbability += 5
+            } else if depthDiff <= -2 {
+                winProbability -= 5
+            }
+        }
+        
+        // Factor 6: Ground Performance (±10%)
+        if let myTeam = myTeam, let opponentTeam = opponentTeam, !matches.isEmpty {
+            // Group matches by ground
+            let grounds = Set(matches.map { $0.ground })
+            
+            for ground in grounds {
+                let groundMatches = matches.filter { $0.ground == ground && $0.status == .completed }
+                
+                let myGroundMatches = groundMatches.filter {
+                    $0.involves(teamName: myTeam.name)
+                }
+                let myGroundWins = myGroundMatches.filter {
+                    $0.isWinner(teamName: myTeam.name)
+                }.count
+                
+                let theirGroundMatches = groundMatches.filter {
+                    $0.involves(teamName: opponentTeam.name)
+                }
+                let theirGroundWins = theirGroundMatches.filter {
+                    $0.isWinner(teamName: opponentTeam.name)
+                }.count
+                
+                // If either team has significant history at a ground
+                if myGroundMatches.count >= 2 || theirGroundMatches.count >= 2 {
+                    let myWinRate = myGroundMatches.count > 0 ?
+                        Double(myGroundWins) / Double(myGroundMatches.count) : 0
+                    let theirWinRate = theirGroundMatches.count > 0 ?
+                        Double(theirGroundWins) / Double(theirGroundMatches.count) : 0
+                    
+                    if myWinRate >= 0.75 && myGroundMatches.count >= 3 {
+                        winProbability += 10
+                        keyFactors.append("Strong ground record (\(myGroundWins)-\(myGroundMatches.count-myGroundWins) at \(ground))")
+                    } else if theirWinRate >= 0.75 && theirGroundMatches.count >= 3 {
+                        winProbability -= 10
+                        keyFactors.append("Their strong ground record (\(theirGroundWins)-\(theirGroundMatches.count-theirGroundWins) at \(ground))")
+                    } else if myWinRate - theirWinRate >= 0.4 {
+                        winProbability += 5
+                    } else if theirWinRate - myWinRate >= 0.4 {
+                        winProbability -= 5
+                    }
+                }
+            }
+        }
+        
+        // Factor 7: Win Dominance (±5%)
+        if let myTeam = myTeam, let opponentTeam = opponentTeam, !matches.isEmpty {
+            let myWins = matches.filter {
+                $0.status == .completed && $0.involves(teamName: myTeam.name) && $0.isWinner(teamName: myTeam.name)
+            }
+            let myDominantWins = myWins.filter { $0.winnerPoints >= 40 }.count
+            let myCloseWins = myWins.filter { $0.winnerPoints <= 30 }.count
+            
+            let theirWins = matches.filter {
+                $0.status == .completed && $0.involves(teamName: opponentTeam.name) && $0.isWinner(teamName: opponentTeam.name)
+            }
+            let theirDominantWins = theirWins.filter { $0.winnerPoints >= 40 }.count
+            let theirCloseWins = theirWins.filter { $0.winnerPoints <= 30 }.count
+            
+            if myWins.count > 0 && theirWins.count > 0 {
+                let myDominanceRate = Double(myDominantWins) / Double(myWins.count)
+                let theirDominanceRate = Double(theirDominantWins) / Double(theirWins.count)
+                
+                if myDominanceRate >= 0.6 && theirDominanceRate < 0.4 {
+                    winProbability += 5
+                    keyFactors.append("Dominant wins (\(myDominantWins)/\(myWins.count) big victories)")
+                } else if theirDominanceRate >= 0.6 && myDominanceRate < 0.4 {
+                    winProbability -= 5
+                    keyFactors.append("They win dominantly (\(theirDominantWins)/\(theirWins.count) big victories)")
+                }
+            }
+        }
+        
+        // Factor 8: Performance vs Rankings (±5%)
+        if let myTeam = myTeam, let opponentTeam = opponentTeam, !matches.isEmpty {
+            let topTeams = allTeams.filter { $0.rank <= 4 }
+            let bottomTeams = allTeams.filter { $0.rank >= allTeams.count - 3 }
+            
+            // My performance vs top/bottom teams
+            let myVsTop = matches.filter {
+                $0.status == .completed &&
+                $0.involves(teamName: myTeam.name) &&
+                topTeams.contains { top in
+                    $0.involves(teamName: top.name) && top.name != myTeam.name
+                }
+            }
+            let myWinsVsTop = myVsTop.filter { $0.isWinner(teamName: myTeam.name) }.count
+            
+            // Their performance vs top/bottom teams
+            let theirVsTop = matches.filter {
+                $0.status == .completed &&
+                $0.involves(teamName: opponentTeam.name) &&
+                topTeams.contains { top in
+                    $0.involves(teamName: top.name) && top.name != opponentTeam.name
+                }
+            }
+            let theirWinsVsTop = theirVsTop.filter { $0.isWinner(teamName: opponentTeam.name) }.count
+            
+            if myVsTop.count >= 2 && theirVsTop.count >= 2 {
+                let myTopWinRate = Double(myWinsVsTop) / Double(myVsTop.count)
+                let theirTopWinRate = Double(theirWinsVsTop) / Double(theirVsTop.count)
+                
+                if myTopWinRate >= 0.6 && theirTopWinRate < 0.4 {
+                    winProbability += 5
+                    keyFactors.append("Strong vs top teams (\(myWinsVsTop)-\(myVsTop.count-myWinsVsTop) record)")
+                } else if theirTopWinRate >= 0.6 && myTopWinRate < 0.4 {
+                    winProbability -= 5
+                    keyFactors.append("They beat top teams (\(theirWinsVsTop)-\(theirVsTop.count-theirWinsVsTop) record)")
+                }
+            }
         }
         
         // Cap at 85/15
