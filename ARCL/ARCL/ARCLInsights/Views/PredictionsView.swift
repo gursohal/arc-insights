@@ -9,6 +9,7 @@ struct PredictionsView: View {
     @EnvironmentObject var dataManager: DataManager
     @AppStorage("myTeamName") private var selectedTeamName: String = ""
     @State private var selectedOpponent: String = ""
+    @State private var selectedGround: String = ""
     
     var myTeam: Team? {
         dataManager.teams.first { $0.name == selectedTeamName }
@@ -32,6 +33,15 @@ struct PredictionsView: View {
             }
         
         return Array(Set(opponents)).sorted()
+    }
+    
+    // Get list of all grounds from matches
+    var availableGrounds: [String] {
+        let grounds = dataManager.matches
+            .map { $0.ground }
+            .filter { !$0.isEmpty }
+        
+        return Array(Set(grounds)).sorted()
     }
     
     var body: some View {
@@ -131,6 +141,69 @@ struct PredictionsView: View {
                                 }
                             }
                         }
+                        
+                        // Ground Selection (Optional)
+                        VStack(alignment: .leading, spacing: 8) {
+                            HStack {
+                                Text("Ground")
+                                    .font(.headline)
+                                Text("(Optional)")
+                                    .font(.caption)
+                                    .foregroundColor(.secondary)
+                            }
+                            
+                            if availableGrounds.isEmpty {
+                                HStack {
+                                    Image(systemName: "mappin.slash")
+                                        .foregroundColor(.gray)
+                                    Text("No ground data available")
+                                        .foregroundColor(.secondary)
+                                }
+                                .padding()
+                                .background(Color(.systemGray6))
+                                .cornerRadius(12)
+                            } else {
+                                Menu {
+                                    Button("No ground selected") {
+                                        selectedGround = ""
+                                    }
+                                    Divider()
+                                    ForEach(availableGrounds, id: \.self) { ground in
+                                        Button(ground) {
+                                            selectedGround = ground
+                                        }
+                                    }
+                                } label: {
+                                    HStack {
+                                        Image(systemName: "mappin.circle.fill")
+                                            .foregroundColor(selectedGround.isEmpty ? .secondary : .blue)
+                                        if selectedGround.isEmpty {
+                                            Text("Select ground (optional)...")
+                                                .foregroundColor(.secondary)
+                                        } else {
+                                            Text(selectedGround)
+                                                .foregroundColor(.primary)
+                                        }
+                                        Spacer()
+                                        Image(systemName: "chevron.down")
+                                            .foregroundColor(.secondary)
+                                    }
+                                    .padding()
+                                    .background(Color(.systemGray6))
+                                    .cornerRadius(12)
+                                }
+                                
+                                // Show ground stats if ground is selected
+                                if !selectedGround.isEmpty, let myTeam = myTeam, let opponentTeam = opponentTeam {
+                                    GroundStatsCard(
+                                        ground: selectedGround,
+                                        myTeam: myTeam,
+                                        opponentTeam: opponentTeam,
+                                        matches: dataManager.matches
+                                    )
+                                }
+                            }
+                        }
                     }
                     .padding(.horizontal)
                     
@@ -158,7 +231,8 @@ struct PredictionsView: View {
                             opponentForm: opponentForm,
                             allTeams: dataManager.teams,
                             matches: dataManager.matches,
-                            players: dataManager.topBatsmen + dataManager.topBowlers
+                            players: dataManager.topBatsmen + dataManager.topBowlers,
+                            selectedGround: selectedGround.isEmpty ? nil : selectedGround
                         )
                         
                         PredictionCard(
@@ -338,6 +412,107 @@ struct PredictionCard: View {
         }
         .padding()
         .background(Color(.systemGray6))
+        .cornerRadius(12)
+    }
+}
+
+struct GroundStatsCard: View {
+    let ground: String
+    let myTeam: Team
+    let opponentTeam: Team
+    let matches: [Match]
+    
+    var body: some View {
+        let groundMatches = matches.filter { $0.ground == ground && $0.status == .completed }
+        
+        let myMatches = groundMatches.filter { $0.involves(teamName: myTeam.name) }
+        let myWins = myMatches.filter { $0.isWinner(teamName: myTeam.name) }.count
+        let myWinRate = myMatches.count > 0 ? Double(myWins) / Double(myMatches.count) * 100 : 0
+        
+        let theirMatches = groundMatches.filter { $0.involves(teamName: opponentTeam.name) }
+        let theirWins = theirMatches.filter { $0.isWinner(teamName: opponentTeam.name) }.count
+        let theirWinRate = theirMatches.count > 0 ? Double(theirWins) / Double(theirMatches.count) * 100 : 0
+        
+        VStack(alignment: .leading, spacing: 12) {
+            HStack {
+                Image(systemName: "mappin.circle.fill")
+                    .foregroundColor(.blue)
+                Text("Ground Performance")
+                    .font(.subheadline)
+                    .bold()
+            }
+            
+            HStack(spacing: 20) {
+                // My Team
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(myTeam.name)
+                        .font(.caption)
+                        .bold()
+                    HStack(spacing: 4) {
+                        Text("\(myWins)-\(myMatches.count - myWins)")
+                            .font(.caption)
+                        if myMatches.count > 0 {
+                            Text("(\(Int(myWinRate))%)")
+                                .font(.caption2)
+                                .foregroundColor(.secondary)
+                        }
+                    }
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                
+                // Opponent
+                VStack(alignment: .trailing, spacing: 4) {
+                    Text(opponentTeam.name)
+                        .font(.caption)
+                        .bold()
+                    HStack(spacing: 4) {
+                        if theirMatches.count > 0 {
+                            Text("(\(Int(theirWinRate))%)")
+                                .font(.caption2)
+                                .foregroundColor(.secondary)
+                        }
+                        Text("\(theirWins)-\(theirMatches.count - theirWins)")
+                            .font(.caption)
+                    }
+                }
+                .frame(maxWidth: .infinity, alignment: .trailing)
+            }
+            
+            // Advantage indicator
+            if myMatches.count > 0 || theirMatches.count > 0 {
+                HStack {
+                    if myWinRate > theirWinRate + 20 {
+                        Image(systemName: "checkmark.circle.fill")
+                            .foregroundColor(.green)
+                        Text("Strong advantage at this ground")
+                            .font(.caption2)
+                            .foregroundColor(.green)
+                    } else if theirWinRate > myWinRate + 20 {
+                        Image(systemName: "exclamationmark.triangle.fill")
+                            .foregroundColor(.orange)
+                        Text("They have advantage at this ground")
+                            .font(.caption2)
+                            .foregroundColor(.orange)
+                    } else {
+                        Image(systemName: "equal.circle.fill")
+                            .foregroundColor(.blue)
+                        Text("Balanced ground record")
+                            .font(.caption2)
+                            .foregroundColor(.blue)
+                    }
+                }
+            } else {
+                HStack {
+                    Image(systemName: "info.circle")
+                        .foregroundColor(.gray)
+                    Text("No historical data for this ground")
+                        .font(.caption2)
+                        .foregroundColor(.secondary)
+                }
+            }
+        }
+        .padding()
+        .background(Color.blue.opacity(0.1))
         .cornerRadius(12)
     }
 }

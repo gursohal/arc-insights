@@ -622,7 +622,8 @@ extension InsightEngine {
         opponentForm: TeamForm,
         allTeams: [Team],
         matches: [Match] = [],
-        players: [Player] = []
+        players: [Player] = [],
+        selectedGround: String? = nil
     ) -> MatchPrediction {
         var winProbability = 50  // Start at 50-50
         var keyFactors: [String] = []
@@ -857,12 +858,14 @@ extension InsightEngine {
             }
         }
         
-        // Factor 6: Ground Performance (±10%)
+        // Factor 6: Ground Performance (±15% if ground selected, ±10% otherwise)
         if let myTeam = myTeam, let opponentTeam = opponentTeam, !matches.isEmpty {
-            // Group matches by ground
-            let grounds = Set(matches.map { $0.ground })
+            // If specific ground is selected, only analyze that ground
+            let groundsToAnalyze = selectedGround != nil ? [selectedGround!] : Set(matches.map { $0.ground })
+            let maxBoost = selectedGround != nil ? 15 : 10  // Higher weight when user specifies ground
+            let maxPenalty = selectedGround != nil ? 15 : 10
             
-            for ground in grounds {
+            for ground in groundsToAnalyze {
                 let groundMatches = matches.filter { $0.ground == ground && $0.status == .completed }
                 
                 let myGroundMatches = groundMatches.filter {
@@ -879,23 +882,30 @@ extension InsightEngine {
                     $0.isWinner(teamName: opponentTeam.name)
                 }.count
                 
-                // If either team has significant history at a ground
-                if myGroundMatches.count >= 2 || theirGroundMatches.count >= 2 {
+                // If either team has significant history at this ground
+                if myGroundMatches.count >= 1 || theirGroundMatches.count >= 1 {
                     let myWinRate = myGroundMatches.count > 0 ?
                         Double(myGroundWins) / Double(myGroundMatches.count) : 0
                     let theirWinRate = theirGroundMatches.count > 0 ?
                         Double(theirGroundWins) / Double(theirGroundMatches.count) : 0
                     
-                    if myWinRate >= 0.75 && myGroundMatches.count >= 3 {
-                        winProbability += 10
+                    // Stronger ground record threshold if ground is user-selected
+                    if myWinRate >= 0.75 && myGroundMatches.count >= 2 {
+                        winProbability += maxBoost
                         keyFactors.append("Strong ground record (\(myGroundWins)-\(myGroundMatches.count-myGroundWins) at \(ground))")
-                    } else if theirWinRate >= 0.75 && theirGroundMatches.count >= 3 {
-                        winProbability -= 10
+                    } else if theirWinRate >= 0.75 && theirGroundMatches.count >= 2 {
+                        winProbability -= maxPenalty
                         keyFactors.append("Their strong ground record (\(theirGroundWins)-\(theirGroundMatches.count-theirGroundWins) at \(ground))")
                     } else if myWinRate - theirWinRate >= 0.4 {
-                        winProbability += 5
+                        winProbability += max(5, maxBoost - 5)
+                        if selectedGround != nil {
+                            keyFactors.append("Better record at selected ground (\(myGroundWins)-\(myGroundMatches.count-myGroundWins) vs \(theirGroundWins)-\(theirGroundMatches.count-theirGroundWins))")
+                        }
                     } else if theirWinRate - myWinRate >= 0.4 {
-                        winProbability -= 5
+                        winProbability -= max(5, maxPenalty - 5)
+                        if selectedGround != nil {
+                            keyFactors.append("They perform better at this ground (\(theirGroundWins)-\(theirGroundMatches.count-theirGroundWins) vs \(myGroundWins)-\(myGroundMatches.count-myGroundWins))")
+                        }
                     }
                 }
             }
