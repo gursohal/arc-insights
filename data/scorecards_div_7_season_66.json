@@ -4,9 +4,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Raging Bulls OG",
+      "team2": "Turf Titans",
+      "date": "7/13/2025 12:00:00 AM",
+      "ground": "Central Park Field #1",
+      "result": "Turf Titans Won",
+      "man_of_match": "Veni R"
     },
     "team1_innings": {
       "batting": [
@@ -326,9 +329,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "UnExceptional",
+      "team2": "Fiery Devils",
+      "date": "7/13/2025 12:00:00 AM",
+      "ground": "Central Park Field #1",
+      "result": "Fiery Devils Won",
+      "man_of_match": "Naresh Paruchuri"
     },
     "team1_innings": {
       "batting": [
@@ -584,9 +590,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Pulikkoottam - Tuskers",
+      "team2": "Sheirokom Team",
+      "date": "7/13/2025 12:00:00 AM",
+      "ground": "Central Park Field #2",
+      "result": "Pulikkoottam - Tuskers Won",
+      "man_of_match": "Ananthu Prasannan"
     },
     "team1_innings": {
       "batting": [
@@ -936,9 +945,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Seattle United",
+      "team2": "Destroyers",
+      "date": "7/13/2025 12:00:00 AM",
+      "ground": "Central Park Field #2",
+      "result": "Seattle United Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -1278,9 +1290,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Power Play",
+      "team2": "Super Kings Returns",
+      "date": "7/19/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #1",
+      "result": "Super Kings Returns Won",
+      "man_of_match": "Dipak and SaiTeja"
     },
     "team1_innings": {
       "batting": [
@@ -1620,9 +1635,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Northwest Orcas",
+      "team2": "FatehCC-Army",
+      "date": "7/19/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #1",
+      "result": "FatehCC-Army Won",
+      "man_of_match": "Ankur"
     },
     "team1_innings": {
       "batting": [
@@ -1915,9 +1933,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "SUY Southern Yorkas",
+      "team2": "RAGING TIGERS",
+      "date": "7/19/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #1",
+      "result": "SUY Southern Yorkas Won",
+      "man_of_match": "Dinesh Batra"
     },
     "team1_innings": {
       "batting": [
@@ -2247,9 +2268,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Seattle Sunrisers",
+      "team2": "Super 8",
+      "date": "7/19/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #1",
+      "result": "Super 8 Won",
+      "man_of_match": "Muni, Vardhan"
     },
     "team1_innings": {
       "batting": [
@@ -2589,9 +2613,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Destroyers",
+      "team2": "Fiery Devils",
+      "date": "7/20/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #2",
+      "result": "Fiery Devils Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -2846,9 +2873,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Turf Titans",
+      "team2": "Sheirokom Team",
+      "date": "7/20/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Turf Titans Won",
+      "man_of_match": "Ravish Sharma"
     },
     "team1_innings": {
       "batting": [
@@ -3178,9 +3208,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Power Play",
+      "team2": "Blue Caps",
+      "date": "7/26/2025 12:00:00 AM",
+      "ground": "Redmond Ridge Park -- Soccer Field",
+      "result": "Blue Caps Won",
+      "man_of_match": "Akash & Gaurav"
     },
     "team1_innings": {
       "batting": [
@@ -3501,9 +3534,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Big Shots",
+      "team2": "FatehCC-Army",
+      "date": "7/26/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "FatehCC-Army Won",
+      "man_of_match": "Saurabh, shohit"
     },
     "team1_innings": {
       "batting": [
@@ -3823,9 +3859,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Super Kings Returns",
+      "team2": "Northwest Orcas",
+      "date": "7/26/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Super Kings Returns Won",
+      "man_of_match": "Thiru and Mani"
     },
     "team1_innings": {
       "batting": [
@@ -4145,9 +4184,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Washington Warriors",
+      "team2": "Hunters",
+      "date": "7/26/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "washington warriors Won",
+      "man_of_match": "Sanjeev Jain"
     },
     "team1_innings": {
       "batting": [
@@ -4489,9 +4531,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Seattle Regulars",
+      "team2": "SUY Southern Yorkas",
+      "date": "7/26/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "SUY Southern Yorkas Won",
+      "man_of_match": "Ravi kalal"
     },
     "team1_innings": {
       "batting": [
@@ -4786,9 +4831,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Weekend Warriors",
+      "team2": "Seattle Sunrisers",
+      "date": "7/27/2025 12:00:00 AM",
+      "ground": "Big Finn Hill Park",
+      "result": "Seattle Sunrisers Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -5082,9 +5130,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "RAGING TIGERS",
+      "team2": "Super 8",
+      "date": "7/27/2025 12:00:00 AM",
+      "ground": "Big Finn Hill Park",
+      "result": "Super 8 Won",
+      "man_of_match": "Kalyan"
     },
     "team1_innings": {
       "batting": [
@@ -5388,9 +5439,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "The Royals",
+      "team2": "Epothum Varutha Padatha Valibar Sangam",
+      "date": "7/27/2025 12:00:00 AM",
+      "ground": "Central Park Field #1",
+      "result": "The Royals Won",
+      "man_of_match": "Navdeep Lehal"
     },
     "team1_innings": {
       "batting": [
@@ -5684,9 +5738,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Pulikkoottam - Tuskers",
+      "team2": "Seattle United",
+      "date": "8/2/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Pulikkoottam - Tuskers Won",
+      "man_of_match": "Belbin Sathiyadhas"
     },
     "team1_innings": {
       "batting": [
@@ -5962,9 +6019,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "UnExceptional",
+      "team2": "Raging Bulls OG",
+      "date": "8/2/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Unexceptional Won",
+      "man_of_match": "Virat and Sabari"
     },
     "team1_innings": {
       "batting": [
@@ -6304,9 +6364,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Blue Caps",
+      "team2": "Hunters",
+      "date": "8/3/2025 12:00:00 AM",
+      "ground": "Big Finn Hill Park",
+      "result": "Hunters Won",
+      "man_of_match": "Sapan Saxena"
     },
     "team1_innings": {
       "batting": [
@@ -6636,9 +6699,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Big Shots",
+      "team2": "Washington Warriors",
+      "date": "8/3/2025 12:00:00 AM",
+      "ground": "Big Finn Hill Park",
+      "result": "Washington Warriors Won",
+      "man_of_match": "Karthik R"
     },
     "team1_innings": {
       "batting": [
@@ -6988,9 +7054,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Epothum Varutha Padatha Valibar Sangam",
+      "team2": "Seattle Regulars",
+      "date": "8/3/2025 12:00:00 AM",
+      "ground": "Big Finn Hill Park",
+      "result": "Epothum Varutha Padatha Valibar Sangam Won",
+      "man_of_match": "Yokesh, Ram , Sriram, Praveen"
     },
     "team1_innings": {
       "batting": [
@@ -7330,9 +7399,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "The Royals",
+      "team2": "Weekend Warriors",
+      "date": "8/3/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "The Royals Won",
+      "man_of_match": "Love Singh Sandhu"
     },
     "team1_innings": {
       "batting": [
@@ -7646,9 +7718,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Super Kings Returns",
+      "team2": "Big Shots",
+      "date": "8/9/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Super Kings Returns Won",
+      "man_of_match": "Gopi and SaiTeja"
     },
     "team1_innings": {
       "batting": [
@@ -7988,9 +8063,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "UnExceptional",
+      "team2": "Destroyers",
+      "date": "8/9/2025 12:00:00 AM",
+      "ground": "Perigo Park-Softball Field 1",
+      "result": "Unexceptional Won",
+      "man_of_match": "Diggi, Virat and Mrinal"
     },
     "team1_innings": {
       "batting": [
@@ -8320,9 +8398,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Raging Bulls OG",
+      "team2": "Sheirokom Team",
+      "date": "8/9/2025 12:00:00 AM",
+      "ground": "Perigo Park-Softball Field 1",
+      "result": "Raging Bulls OG Won",
+      "man_of_match": "Ashwin Srinivasan"
     },
     "team1_innings": {
       "batting": [
@@ -8662,9 +8743,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Turf Titans",
+      "team2": "Seattle United",
+      "date": "8/9/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Turf Titans Won",
+      "man_of_match": "Anubhav Sharma"
     },
     "team1_innings": {
       "batting": [
@@ -8984,9 +9068,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Fiery Devils",
+      "team2": "Pulikkoottam - Tuskers",
+      "date": "8/9/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Fiery Devils Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -9326,9 +9413,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "FatehCC-Army",
+      "team2": "Washington Warriors",
+      "date": "8/9/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Washington Warriors Won",
+      "man_of_match": "Karthik R"
     },
     "team1_innings": {
       "batting": [
@@ -9668,9 +9758,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Power Play",
+      "team2": "Hunters",
+      "date": "8/9/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Power Play Won",
+      "man_of_match": "Ilaiyaraja Rajamohan"
     },
     "team1_innings": {
       "batting": [
@@ -10020,9 +10113,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Blue Caps",
+      "team2": "Northwest Orcas",
+      "date": "8/10/2025 12:00:00 AM",
+      "ground": "Big Finn Hill Park",
+      "result": "Northwest Orcas Won",
+      "man_of_match": "karan & keval"
     },
     "team1_innings": {
       "batting": [
@@ -10325,9 +10421,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "The Royals",
+      "team2": "Seattle Sunrisers",
+      "date": "8/10/2025 12:00:00 AM",
+      "ground": "Central Park Field #1",
+      "result": "The Royals Won",
+      "man_of_match": "Navdeep Lehal"
     },
     "team1_innings": {
       "batting": [
@@ -10660,9 +10759,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "SUY Southern Yorkas",
+      "team2": "Epothum Varutha Padatha Valibar Sangam",
+      "date": "8/10/2025 12:00:00 AM",
+      "ground": "Central Park Field #1",
+      "result": "Epothum Varutha Padatha Valibar Sangam Won",
+      "man_of_match": "Praveen, Yokesh, Kannan"
     },
     "team1_innings": {
       "batting": [
@@ -11002,9 +11104,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Seattle Regulars",
+      "team2": "Super 8",
+      "date": "8/10/2025 12:00:00 AM",
+      "ground": "Central Park Field #1",
+      "result": "Seattle Regulars Won",
+      "man_of_match": "Pranav Patel"
     },
     "team1_innings": {
       "batting": [
@@ -11344,9 +11449,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "RAGING TIGERS",
+      "team2": "Weekend Warriors",
+      "date": "8/10/2025 12:00:00 AM",
+      "ground": "Central Park Field #1",
+      "result": "RAGING TIGERS Won",
+      "man_of_match": "Aditya"
     },
     "team1_innings": {
       "batting": [
@@ -11660,9 +11768,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Raging Bulls OG",
+      "team2": "Destroyers",
+      "date": "8/16/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Destroyers Won",
+      "man_of_match": "Nilabh Singh"
     },
     "team1_innings": {
       "batting": [
@@ -11948,9 +12059,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "UnExceptional",
+      "team2": "Pulikkoottam - Tuskers",
+      "date": "8/16/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Pulikkoottam - Tuskers Won",
+      "man_of_match": "John Jose"
     },
     "team1_innings": {
       "batting": [
@@ -12208,9 +12322,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Turf Titans",
+      "team2": "Fiery Devils",
+      "date": "8/16/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Fiery Devils Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -12512,9 +12629,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Power Play",
+      "team2": "Northwest Orcas",
+      "date": "8/16/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Power Play Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -12854,9 +12974,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Seattle United",
+      "team2": "Sheirokom Team",
+      "date": "8/17/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "Sheirokom Team Won",
+      "man_of_match": "Bulbul Sharif"
     },
     "team1_innings": {
       "batting": [
@@ -13186,9 +13309,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Hunters",
+      "team2": "FatehCC-Army",
+      "date": "8/23/2025 12:00:00 AM",
+      "ground": "Big Finn Hill Park",
+      "result": "FatehCC-Army Won",
+      "man_of_match": "Ankur"
     },
     "team1_innings": {
       "batting": [
@@ -13472,9 +13598,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Super Kings Returns",
+      "team2": "Washington Warriors",
+      "date": "8/23/2025 12:00:00 AM",
+      "ground": "Big Finn Hill Park",
+      "result": "Washington Warriors Won",
+      "man_of_match": "Madhur Nagaraj"
     },
     "team1_innings": {
       "batting": [
@@ -13814,9 +13943,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Big Shots",
+      "team2": "Blue Caps",
+      "date": "8/23/2025 12:00:00 AM",
+      "ground": "Big Finn Hill Park",
+      "result": "Blue Caps Won",
+      "man_of_match": "Rahul & Rajesh"
     },
     "team1_innings": {
       "batting": [
@@ -14109,9 +14241,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Super 8",
+      "team2": "SUY Southern Yorkas",
+      "date": "8/23/2025 12:00:00 AM",
+      "ground": "Big Finn Hill Park",
+      "result": "Super 8 Won",
+      "man_of_match": "Kalyan, Vardhan"
     },
     "team1_innings": {
       "batting": [
@@ -14441,9 +14576,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Seattle Sunrisers",
+      "team2": "Epothum Varutha Padatha Valibar Sangam",
+      "date": "8/23/2025 12:00:00 AM",
+      "ground": "GrassLawn Park-Softball Field 2",
+      "result": "Seattle Sunrisers Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -14783,9 +14921,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "The Royals",
+      "team2": "RAGING TIGERS",
+      "date": "8/23/2025 12:00:00 AM",
+      "ground": "GrassLawn Park-Softball Field 2",
+      "result": "The Royals Won",
+      "man_of_match": "Gurpreet"
     },
     "team1_innings": {
       "batting": [
@@ -15106,9 +15247,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Seattle Regulars",
+      "team2": "Weekend Warriors",
+      "date": "8/23/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Seattle Regulars Won",
+      "man_of_match": "Avi"
     },
     "team1_innings": {
       "batting": [
@@ -15428,9 +15572,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Destroyers",
+      "team2": "Pulikkoottam - Tuskers",
+      "date": "9/6/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Pulikkoottam - Tuskers Won",
+      "man_of_match": "Vishnu Radhakrishnan"
     },
     "team1_innings": {
       "batting": [
@@ -15713,9 +15860,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Raging Bulls OG",
+      "team2": "Seattle United",
+      "date": "9/6/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Seattle United Won",
+      "man_of_match": "Anand"
     },
     "team1_innings": {
       "batting": [
@@ -16055,9 +16205,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Sheirokom Team",
+      "team2": "Fiery Devils",
+      "date": "9/6/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Fiery Devils Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -16343,9 +16496,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Turf Titans",
+      "team2": "UnExceptional",
+      "date": "9/7/2025 12:00:00 AM",
+      "ground": "GrassLawn Park-Softball Field 2",
+      "result": "Turf Titans Won",
+      "man_of_match": "Vishnu Theja Reddy"
     },
     "team1_innings": {
       "batting": [
@@ -16695,9 +16851,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Super Kings Returns",
+      "team2": "FatehCC-Army",
+      "date": "9/7/2025 12:00:00 AM",
+      "ground": "GrassLawn Park-Softball Field 2",
+      "result": "FatehCC-Army Won",
+      "man_of_match": "Sumit chawla"
     },
     "team1_innings": {
       "batting": [
@@ -17037,9 +17196,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Hunters",
+      "team2": "Northwest Orcas",
+      "date": "9/7/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Northwest Orcas Won",
+      "man_of_match": "Parva"
     },
     "team1_innings": {
       "batting": [
@@ -17334,9 +17496,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Big Shots",
+      "team2": "Power Play",
+      "date": "9/7/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Power Play Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -17611,9 +17776,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Washington Warriors",
+      "team2": "Blue Caps",
+      "date": "9/7/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Blue Caps Won",
+      "man_of_match": "Pushkaraj"
     },
     "team1_innings": {
       "batting": [
@@ -17916,9 +18084,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "RAGING TIGERS",
+      "team2": "Seattle Sunrisers",
+      "date": "9/7/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Seattle Sunrisers Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -18212,9 +18383,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Epothum Varutha Padatha Valibar Sangam",
+      "team2": "Super 8",
+      "date": "9/7/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Epothum Varutha Padatha Valibar Sangam Won",
+      "man_of_match": "Prateek, Sriram"
     },
     "team1_innings": {
       "batting": [
@@ -18536,9 +18710,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Weekend Warriors",
+      "team2": "SUY Southern Yorkas",
+      "date": "9/7/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "SUY Southern Yorkas Won",
+      "man_of_match": "Rajat M"
     },
     "team1_innings": {
       "batting": [
@@ -18814,9 +18991,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "The Royals",
+      "team2": "Seattle Regulars",
+      "date": "9/7/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "The Royals Won",
+      "man_of_match": "Navdeep Lehal"
     },
     "team1_innings": {
       "batting": [
@@ -19156,9 +19336,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Epothum Varutha Padatha Valibar Sangam",
+      "team2": "Weekend Warriors",
+      "date": "9/14/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Epothum Varutha Padatha Valibar Sangam Won",
+      "man_of_match": "Sri Ram , Avanth"
     },
     "team1_innings": {
       "batting": [
@@ -19480,9 +19663,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Fiery Devils",
+      "team2": "Seattle United",
+      "date": "9/28/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Fiery Devils Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -19812,9 +19998,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Raging Bulls OG",
+      "team2": "Pulikkoottam - Tuskers",
+      "date": "9/28/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Pulikkoottam - Tuskers Won",
+      "man_of_match": "Vishnu Radhakrishnan"
     },
     "team1_innings": {
       "batting": [
@@ -20099,9 +20288,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Destroyers",
+      "team2": "Turf Titans",
+      "date": "9/28/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Turf Titans Won",
+      "man_of_match": "Anubhav Sharma"
     },
     "team1_innings": {
       "batting": [
@@ -20424,9 +20616,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Sheirokom Team",
+      "team2": "UnExceptional",
+      "date": "10/4/2025 12:00:00 AM",
+      "ground": "Big Finn Hill Park",
+      "result": "Sheirokom Team Won",
+      "man_of_match": "Aashik Azim"
     },
     "team1_innings": {
       "batting": [
@@ -20748,9 +20943,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Northwest Orcas",
+      "team2": "Big Shots",
+      "date": "10/4/2025 12:00:00 AM",
+      "ground": "Big Finn Hill Park",
+      "result": "Northwest Orcas Won",
+      "man_of_match": "Krupal Patel"
     },
     "team1_innings": {
       "batting": [
@@ -21081,9 +21279,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Hunters",
+      "team2": "Super Kings Returns",
+      "date": "10/4/2025 12:00:00 AM",
+      "ground": "Evergreen Playfields 1",
+      "result": "Hunters Won",
+      "man_of_match": "Devendra Chauhan"
     },
     "team1_innings": {
       "batting": [
@@ -21433,9 +21634,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Blue Caps",
+      "team2": "FatehCC-Army",
+      "date": "10/4/2025 12:00:00 AM",
+      "ground": "Evergreen Playfields 1",
+      "result": "Blue Caps Won",
+      "man_of_match": "Akash"
     },
     "team1_innings": {
       "batting": [
@@ -21756,9 +21960,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Power Play",
+      "team2": "Washington Warriors",
+      "date": "10/4/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "Washington Warriors Won",
+      "man_of_match": "Kaustubh"
     },
     "team1_innings": {
       "batting": [
@@ -22088,9 +22295,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Weekend Warriors",
+      "team2": "Super 8",
+      "date": "10/4/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "Super 8 Won",
+      "man_of_match": "Vardhan"
     },
     "team1_innings": {
       "batting": [
@@ -22440,9 +22650,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Epothum Varutha Padatha Valibar Sangam",
+      "team2": "RAGING TIGERS",
+      "date": "10/4/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "Epothum Varutha Padatha Valibar Sangam Won",
+      "man_of_match": "Avant , Sri Ram"
     },
     "team1_innings": {
       "batting": [
@@ -22783,9 +22996,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Seattle Regulars",
+      "team2": "Seattle Sunrisers",
+      "date": "10/4/2025 12:00:00 AM",
+      "ground": "Perigo Park-Softball Field 1",
+      "result": "Seattle Regulars Won",
+      "man_of_match": "Smit shah"
     },
     "team1_innings": {
       "batting": [
@@ -23115,9 +23331,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "The Royals",
+      "team2": "SUY Southern Yorkas",
+      "date": "10/4/2025 12:00:00 AM",
+      "ground": "Perigo Park-Softball Field 1",
+      "result": "SUY Southern Yorkas Won",
+      "man_of_match": "Ravi Kalal"
     },
     "team1_innings": {
       "batting": [
@@ -23447,9 +23666,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Fiery Devils",
+      "team2": "Raging Bulls OG",
+      "date": "10/19/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #1",
+      "result": "Fiery Devils Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -23790,9 +24012,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Pulikkoottam - Tuskers",
+      "team2": "Turf Titans",
+      "date": "10/19/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #1",
+      "result": "Pulikkoottam - Tuskers Won",
+      "man_of_match": "Anith Babu, John Jose, Anubhav Sharma"
     },
     "team1_innings": {
       "batting": [
@@ -24122,9 +24347,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "UnExceptional",
+      "team2": "Seattle United",
+      "date": "10/19/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #2",
+      "result": "UnExceptional Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -24464,9 +24692,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Sheirokom Team",
+      "team2": "Destroyers",
+      "date": "10/19/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #2",
+      "result": "Sheirokom Team Won",
+      "man_of_match": "Siam Abdullah"
     },
     "team1_innings": {
       "batting": [
@@ -24796,9 +25027,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Big Shots",
+      "team2": "Hunters",
+      "date": "10/19/2025 12:00:00 AM",
+      "ground": "Redmond Ridge Park -- Soccer Field",
+      "result": "Big Shots Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -25138,9 +25372,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Super Kings Returns",
+      "team2": "Blue Caps",
+      "date": "10/19/2025 12:00:00 AM",
+      "ground": "Redmond Ridge Park -- Soccer Field",
+      "result": "Blue Caps Won",
+      "man_of_match": "Gaurav"
     },
     "team1_innings": {
       "batting": [
@@ -25426,9 +25663,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Washington Warriors",
+      "team2": "Northwest Orcas",
+      "date": "10/19/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Washington Warriors Won",
+      "man_of_match": "Sai Krishnan"
     },
     "team1_innings": {
       "batting": [
@@ -25788,9 +26028,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Power Play",
+      "team2": "FatehCC-Army",
+      "date": "10/19/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "FatehCC-Army Won",
+      "man_of_match": "Saurabh"
     },
     "team1_innings": {
       "batting": [
@@ -26130,9 +26373,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "RAGING TIGERS",
+      "team2": "Seattle Regulars",
+      "date": "10/25/2025 12:00:00 AM",
+      "ground": "Big Finn Hill Park",
+      "result": "Seattle Regulars Won",
+      "man_of_match": "Meet"
     },
     "team1_innings": {
       "batting": [
@@ -26444,9 +26690,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Seattle Sunrisers",
+      "team2": "SUY Southern Yorkas",
+      "date": "10/25/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Seattle Sunrisers Won",
+      "man_of_match": "Sridhar"
     },
     "team1_innings": {
       "batting": [
@@ -26757,9 +27006,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Fiery Devils",
+      "team2": "Super 8",
+      "date": "11/1/2025 12:00:00 AM",
+      "ground": "GrassLawn Park-Softball Field 1",
+      "result": "Fiery Devils Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -27089,9 +27341,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Pulikkoottam - Tuskers",
+      "team2": "FatehCC-Army",
+      "date": "11/1/2025 12:00:00 AM",
+      "ground": "GrassLawn Park-Softball Field 1",
+      "result": "Pulikkoottam - Tuskers Won",
+      "man_of_match": "Vishnu Radhakrishnan"
     },
     "team1_innings": {
       "batting": [
@@ -27415,9 +27670,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Washington Warriors",
+      "team2": "Blue Caps",
+      "date": "11/2/2025 12:00:00 AM",
+      "ground": "GrassLawn Park-Softball Field 1",
+      "result": "washington warriors Won",
+      "man_of_match": "Sanjeev Jain"
     },
     "team1_innings": {
       "batting": [
@@ -27747,9 +28005,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "The Royals",
+      "team2": "Turf Titans",
+      "date": "11/2/2025 12:00:00 AM",
+      "ground": "GrassLawn Park-Softball Field 1",
+      "result": "Turf Titans Won",
+      "man_of_match": "Gaurav Dutta"
     },
     "team1_innings": {
       "batting": [
@@ -28089,9 +28350,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Turf Titans",
+      "team2": "Fiery Devils",
+      "date": "11/8/2025 12:00:00 AM",
+      "ground": "Redmond Ridge Park -- Soccer Field",
+      "result": "Fiery Devils Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -28431,9 +28695,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Pulikkoottam - Tuskers",
+      "team2": "Washington Warriors",
+      "date": "11/8/2025 12:00:00 AM",
+      "ground": "Redmond Ridge Park -- Soccer Field",
+      "result": "Pulikkoottam - Tuskers Won",
+      "man_of_match": "Visnu"
     },
     "team1_innings": {
       "batting": [
@@ -28773,9 +29040,12 @@
     "league_id": 7,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Pulikkoottam - Tuskers",
+      "team2": "Fiery Devils",
+      "date": "11/15/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Fiery Devils Won",
+      "man_of_match": "Vamsi Krishna Chintapalli"
     },
     "team1_innings": {
       "batting": [

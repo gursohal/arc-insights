@@ -4,9 +4,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "LWCC",
+      "team2": "FatehCC-Legends",
+      "date": "7/12/2025 12:00:00 AM",
+      "ground": "Central Park Field #1",
+      "result": "FatehCC-Legends Won",
+      "man_of_match": "Rahul"
     },
     "team1_innings": {
       "batting": [
@@ -336,9 +339,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Super Fit Challengers",
+      "team2": "Lagaan",
+      "date": "7/19/2025 12:00:00 AM",
+      "ground": "Central Park Field #1",
+      "result": "Lagaan Won",
+      "man_of_match": "Vayu"
     },
     "team1_innings": {
       "batting": [
@@ -660,9 +666,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Lastsamurais",
+      "team2": "BATMEN RISES",
+      "date": "7/19/2025 12:00:00 AM",
+      "ground": "Central Park Field #1",
+      "result": "Lastsamurais Won",
+      "man_of_match": "Santosh Bhatt"
     },
     "team1_innings": {
       "batting": [
@@ -1012,9 +1021,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Titans",
+      "team2": "Nanbaeenda",
+      "date": "7/19/2025 12:00:00 AM",
+      "ground": "Central Park Field #1",
+      "result": "Titans Won",
+      "man_of_match": "Jatin"
     },
     "team1_innings": {
       "batting": [
@@ -1354,9 +1366,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "The Dons",
+      "team2": "Indian Hawks",
+      "date": "7/19/2025 12:00:00 AM",
+      "ground": "Central Park Field #2",
+      "result": "Indian Hawks Won",
+      "man_of_match": "Prashanth Reddy"
     },
     "team1_innings": {
       "batting": [
@@ -1656,9 +1671,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Washington Cricketers",
+      "team2": "Bouncers",
+      "date": "7/20/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Washington Cricketers Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -1988,9 +2006,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Lake Stevens Cricket Club - LSCC",
+      "team2": "Thunder",
+      "date": "7/20/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "lake stevens cricket club - lscc Won",
+      "man_of_match": "Ramesh Sakanadagi"
     },
     "team1_innings": {
       "batting": [
@@ -2330,9 +2351,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Master Blasters",
+      "team2": "DabangDashers",
+      "date": "7/20/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Master Blasters Won",
+      "man_of_match": "Mickey, Bhakar and Ani"
     },
     "team1_innings": {
       "batting": [
@@ -2645,9 +2669,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "CrickChamps",
+      "team2": "India Rebels",
+      "date": "7/26/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "India Rebels Won",
+      "man_of_match": "Jai Sidhu"
     },
     "team1_innings": {
       "batting": [
@@ -3007,9 +3034,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "LWCC",
+      "team2": "Joot",
+      "date": "7/26/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "LWCC Won",
+      "man_of_match": "Ankit"
     },
     "team1_innings": {
       "batting": [
@@ -3379,9 +3409,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Avengers",
+      "team2": "Indian Hawks",
+      "date": "7/26/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Indian Hawks Won",
+      "man_of_match": "LingaRaju Gangigowda"
     },
     "team1_innings": {
       "batting": [
@@ -3721,9 +3754,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "The Dons",
+      "team2": "FatehCC-Legends",
+      "date": "7/26/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "The Dons Won",
+      "man_of_match": "Navdeep Singh Somal"
     },
     "team1_innings": {
       "batting": [
@@ -4073,9 +4109,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Master Minds",
+      "team2": "Turbos",
+      "date": "7/26/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "Master Minds Won",
+      "man_of_match": "Nikhil Mengani"
     },
     "team1_innings": {
       "batting": [
@@ -4415,9 +4454,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Thunder",
+      "team2": "Nanbaeenda",
+      "date": "7/27/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #2",
+      "result": "Nanbaeenda Won",
+      "man_of_match": "Samrat"
     },
     "team1_innings": {
       "batting": [
@@ -4704,9 +4746,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Peaky Blinders",
+      "team2": "Lagaan",
+      "date": "7/27/2025 12:00:00 AM",
+      "ground": "Redmond Ridge Park -- Soccer Field",
+      "result": "Peaky Blinders Won",
+      "man_of_match": "Vivek Yadav"
     },
     "team1_innings": {
       "batting": [
@@ -5017,9 +5062,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Bouncers",
+      "team2": "Lake Stevens Cricket Club - LSCC",
+      "date": "7/27/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Bouncers Won",
+      "man_of_match": "Aryyan"
     },
     "team1_innings": {
       "batting": [
@@ -5340,9 +5388,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Lastsamurais",
+      "team2": "BellevueBoyz",
+      "date": "7/27/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "BellevueBoyz Won",
+      "man_of_match": "Dhiraj Sharma"
     },
     "team1_innings": {
       "batting": [
@@ -5664,9 +5715,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Super Fit Challengers",
+      "team2": "BATMEN RISES",
+      "date": "7/27/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Super Fit Challengers Won",
+      "man_of_match": "Pulkit"
     },
     "team1_innings": {
       "batting": [
@@ -5961,9 +6015,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Washington Cricketers",
+      "team2": "DabangDashers",
+      "date": "8/3/2025 12:00:00 AM",
+      "ground": "Marymoor Park Soccer #05",
+      "result": "DabangDashers Won",
+      "man_of_match": "Ravindra, Ram"
     },
     "team1_innings": {
       "batting": [
@@ -6303,9 +6360,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Thunder",
+      "team2": "Titans",
+      "date": "8/3/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #1",
+      "result": "Titans Won",
+      "man_of_match": "Balvinder Sindhar"
     },
     "team1_innings": {
       "batting": [
@@ -6645,9 +6705,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Master Blasters",
+      "team2": "Nanbaeenda",
+      "date": "8/3/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #1",
+      "result": "Master Blasters Won",
+      "man_of_match": "Akshaya Arora"
     },
     "team1_innings": {
       "batting": [
@@ -6977,9 +7040,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Lastsamurais",
+      "team2": "CrickChamps",
+      "date": "8/3/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #1",
+      "result": "Lastsamurais Won",
+      "man_of_match": "Sridhar & Karthik Sivapunniyam"
     },
     "team1_innings": {
       "batting": [
@@ -7319,9 +7385,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "India Rebels",
+      "team2": "Lagaan",
+      "date": "8/3/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #1",
+      "result": "Lagaan Won",
+      "man_of_match": "Vayu"
     },
     "team1_innings": {
       "batting": [
@@ -7624,9 +7693,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "BATMEN RISES",
+      "team2": "Peaky Blinders",
+      "date": "8/3/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #2",
+      "result": "Peaky Blinders Won",
+      "man_of_match": "Prayas Dixit"
     },
     "team1_innings": {
       "batting": [
@@ -7957,9 +8029,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "BellevueBoyz",
+      "team2": "Super Fit Challengers",
+      "date": "8/3/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #2",
+      "result": "BellevueBoyz Won",
+      "man_of_match": "Shrikant Desai"
     },
     "team1_innings": {
       "batting": [
@@ -8281,9 +8356,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Turbos",
+      "team2": "Indian Hawks",
+      "date": "8/3/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #2",
+      "result": "Indian Hawks Won",
+      "man_of_match": "Prashanth Reddy R"
     },
     "team1_innings": {
       "batting": [
@@ -8623,9 +8701,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Master Minds",
+      "team2": "LWCC",
+      "date": "8/3/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #2",
+      "result": "LWCC Won",
+      "man_of_match": "Vijay"
     },
     "team1_innings": {
       "batting": [
@@ -8955,9 +9036,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "The Dons",
+      "team2": "Joot",
+      "date": "8/3/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #2",
+      "result": "Joot Won",
+      "man_of_match": "Vignesh"
     },
     "team1_innings": {
       "batting": [
@@ -9225,9 +9309,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "FatehCC-Legends",
+      "team2": "Avengers",
+      "date": "8/9/2025 12:00:00 AM",
+      "ground": "Big Finn Hill Park",
+      "result": "FatehCC-Legends Won",
+      "man_of_match": "Raghav and Hrishi"
     },
     "team1_innings": {
       "batting": [
@@ -9567,9 +9654,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Master Blasters",
+      "team2": "Thunder",
+      "date": "8/16/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Master Blasters Won",
+      "man_of_match": "Swapnil V"
     },
     "team1_innings": {
       "batting": [
@@ -9919,9 +10009,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "DabangDashers",
+      "team2": "Titans",
+      "date": "8/16/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "DabangDashers Won",
+      "man_of_match": "Siva"
     },
     "team1_innings": {
       "batting": [
@@ -10251,9 +10344,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Lake Stevens Cricket Club - LSCC",
+      "team2": "Washington Cricketers",
+      "date": "8/16/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "lake stevens cricket club - lscc Won",
+      "man_of_match": "Ramesh Sakanadagi"
     },
     "team1_innings": {
       "batting": [
@@ -10603,9 +10699,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Nanbaeenda",
+      "team2": "Bouncers",
+      "date": "8/16/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "Nanbaeenda Won",
+      "man_of_match": "Samrat"
     },
     "team1_innings": {
       "batting": [
@@ -10935,9 +11034,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "BATMEN RISES",
+      "team2": "Lagaan",
+      "date": "8/16/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "Lagaan Won",
+      "man_of_match": "MVN Chaitanya Uppalapati"
     },
     "team1_innings": {
       "batting": [
@@ -11251,9 +11353,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "India Rebels",
+      "team2": "Lastsamurais",
+      "date": "8/16/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "India Rebels Won",
+      "man_of_match": "Anurag Datta and Vibhor Kaushik"
     },
     "team1_innings": {
       "batting": [
@@ -11583,9 +11688,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "CrickChamps",
+      "team2": "Super Fit Challengers",
+      "date": "8/16/2025 12:00:00 AM",
+      "ground": "Perigo Park-Softball Field 1",
+      "result": "Super Fit Challengers Won",
+      "man_of_match": "Prateek Gaur"
     },
     "team1_innings": {
       "batting": [
@@ -11915,9 +12023,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "BellevueBoyz",
+      "team2": "Peaky Blinders",
+      "date": "8/16/2025 12:00:00 AM",
+      "ground": "Perigo Park-Softball Field 1",
+      "result": "Peaky Blinders Won",
+      "man_of_match": "Vivek Yadav"
     },
     "team1_innings": {
       "batting": [
@@ -12193,9 +12304,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Master Minds",
+      "team2": "Indian Hawks",
+      "date": "8/17/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #1",
+      "result": "Master Minds Won",
+      "man_of_match": "Gudapati Avinash"
     },
     "team1_innings": {
       "batting": [
@@ -12545,9 +12659,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "LWCC",
+      "team2": "The Dons",
+      "date": "8/17/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "The Dons Won",
+      "man_of_match": "Charan CH"
     },
     "team1_innings": {
       "batting": [
@@ -12877,9 +12994,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Turbos",
+      "team2": "FatehCC-Legends",
+      "date": "8/17/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Turbos Won",
+      "man_of_match": "Nikhil Mengani"
     },
     "team1_innings": {
       "batting": [
@@ -13156,9 +13276,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Avengers",
+      "team2": "Joot",
+      "date": "8/17/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "joot Won",
+      "man_of_match": "Sanjeev"
     },
     "team1_innings": {
       "batting": [
@@ -13423,9 +13546,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "DabangDashers",
+      "team2": "Lake Stevens Cricket Club - LSCC",
+      "date": "8/21/2025 12:00:00 AM",
+      "ground": "Canyon Park Middle School Stadium",
+      "result": "dabangdashers Won",
+      "man_of_match": "Santosh and Shyam"
     },
     "team1_innings": {
       "batting": [
@@ -13775,9 +13901,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Master Blasters",
+      "team2": "Titans",
+      "date": "8/24/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #1",
+      "result": "Titans Won",
+      "man_of_match": "Amit"
     },
     "team1_innings": {
       "batting": [
@@ -14107,9 +14236,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Thunder",
+      "team2": "Bouncers",
+      "date": "8/24/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #2",
+      "result": "thunder Won",
+      "man_of_match": "Murali, Naren, Sree"
     },
     "team1_innings": {
       "batting": [
@@ -14449,9 +14581,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Nanbaeenda",
+      "team2": "Washington Cricketers",
+      "date": "8/24/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #2",
+      "result": "Nanbaeenda Won",
+      "man_of_match": "Samrat & Vikrant"
     },
     "team1_innings": {
       "batting": [
@@ -14792,9 +14927,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Super Fit Challengers",
+      "team2": "Lastsamurais",
+      "date": "8/24/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #2",
+      "result": "Super Fit Challengers Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -15124,9 +15262,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "BATMEN RISES",
+      "team2": "India Rebels",
+      "date": "8/24/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #2",
+      "result": "India Rebels Won",
+      "man_of_match": "Jai Singh Sidhu"
     },
     "team1_innings": {
       "batting": [
@@ -15412,9 +15553,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "BellevueBoyz",
+      "team2": "Lagaan",
+      "date": "8/24/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #2",
+      "result": "Lagaan Won",
+      "man_of_match": "Jathin"
     },
     "team1_innings": {
       "batting": [
@@ -15707,9 +15851,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "CrickChamps",
+      "team2": "Peaky Blinders",
+      "date": "8/24/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "crickchamps Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -16049,9 +16196,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Indian Hawks",
+      "team2": "FatehCC-Legends",
+      "date": "8/24/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "FatehCC-Legends Won",
+      "man_of_match": "Hrishi and Raghav"
     },
     "team1_innings": {
       "batting": [
@@ -16375,9 +16525,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "The Dons",
+      "team2": "Master Minds",
+      "date": "8/24/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "The Dons Won",
+      "man_of_match": "Navdeep Singh Somal"
     },
     "team1_innings": {
       "batting": [
@@ -16737,9 +16890,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "LWCC",
+      "team2": "Avengers",
+      "date": "8/24/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Avengers Won",
+      "man_of_match": "Mahesh"
     },
     "team1_innings": {
       "batting": [
@@ -17060,9 +17216,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Master Blasters",
+      "team2": "Bouncers",
+      "date": "9/20/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Bouncers Won",
+      "man_of_match": "Dhruv"
     },
     "team1_innings": {
       "batting": [
@@ -17356,9 +17515,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Lake Stevens Cricket Club - LSCC",
+      "team2": "Titans",
+      "date": "9/20/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "lake stevens cricket club - lscc Won",
+      "man_of_match": "Ramesh Sakanadagi"
     },
     "team1_innings": {
       "batting": [
@@ -17708,9 +17870,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "DabangDashers",
+      "team2": "Nanbaeenda",
+      "date": "9/21/2025 12:00:00 AM",
+      "ground": "GrassLawn Park-Softball Field 2",
+      "result": "Nanbaeenda Won",
+      "man_of_match": "Gnanavel & Sriram Ramakrishnan"
     },
     "team1_innings": {
       "batting": [
@@ -18042,9 +18207,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Washington Cricketers",
+      "team2": "Thunder",
+      "date": "9/21/2025 12:00:00 AM",
+      "ground": "GrassLawn Park-Softball Field 2",
+      "result": "thunder Won",
+      "man_of_match": "Uday, Maddy, Naren"
     },
     "team1_innings": {
       "batting": [
@@ -18321,9 +18489,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "BATMEN RISES",
+      "team2": "BellevueBoyz",
+      "date": "9/21/2025 12:00:00 AM",
+      "ground": "GrassLawn Park-Softball Field 2",
+      "result": "BellevueBoyz Won",
+      "man_of_match": "Sushant"
     },
     "team1_innings": {
       "batting": [
@@ -18608,9 +18779,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Super Fit Challengers",
+      "team2": "India Rebels",
+      "date": "9/21/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "Super Fit Challengers Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -18904,9 +19078,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Lastsamurais",
+      "team2": "Peaky Blinders",
+      "date": "9/21/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "Peaky Blinders Won",
+      "man_of_match": "Nikhil"
     },
     "team1_innings": {
       "batting": [
@@ -19193,9 +19370,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "CrickChamps",
+      "team2": "Lagaan",
+      "date": "9/21/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "CrickChamps Won",
+      "man_of_match": "Kowshik Goud Erukala"
     },
     "team1_innings": {
       "batting": [
@@ -19535,9 +19715,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "The Dons",
+      "team2": "Avengers",
+      "date": "9/21/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "Avengers Won",
+      "man_of_match": "Suresh"
     },
     "team1_innings": {
       "batting": [
@@ -19867,9 +20050,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "FatehCC-Legends",
+      "team2": "Master Minds",
+      "date": "9/21/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Master Minds Won",
+      "man_of_match": "Abhi Vyas"
     },
     "team1_innings": {
       "batting": [
@@ -20172,9 +20358,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Joot",
+      "team2": "Indian Hawks",
+      "date": "9/21/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Joot Won",
+      "man_of_match": "Sushant"
     },
     "team1_innings": {
       "batting": [
@@ -20504,9 +20693,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "LWCC",
+      "team2": "Turbos",
+      "date": "9/21/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "LWCC Won",
+      "man_of_match": "Anand"
     },
     "team1_innings": {
       "batting": [
@@ -20836,9 +21028,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Turbos",
+      "team2": "Joot",
+      "date": "9/27/2025 12:00:00 AM",
+      "ground": "Big Finn Hill Park",
+      "result": "Joot Won",
+      "man_of_match": "kishan"
     },
     "team1_innings": {
       "batting": [
@@ -21132,9 +21327,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Bouncers",
+      "team2": "Titans",
+      "date": "10/12/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Bouncers Won",
+      "man_of_match": "Sankeerth"
     },
     "team1_innings": {
       "batting": [
@@ -21465,9 +21663,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Nanbaeenda",
+      "team2": "Lake Stevens Cricket Club - LSCC",
+      "date": "10/18/2025 12:00:00 AM",
+      "ground": "Big Finn Hill Park",
+      "result": "Lake Stevens Cricket Club - LSCC Won",
+      "man_of_match": "Ramesh Sakanadagi"
     },
     "team1_innings": {
       "batting": [
@@ -21787,9 +21988,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Master Blasters",
+      "team2": "Washington Cricketers",
+      "date": "10/18/2025 12:00:00 AM",
+      "ground": "Big Finn Hill Park",
+      "result": "Master Blasters Won",
+      "man_of_match": "Abhimanyu Bhaker"
     },
     "team1_innings": {
       "batting": [
@@ -22091,9 +22295,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Thunder",
+      "team2": "DabangDashers",
+      "date": "10/18/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "DabangDashers Won",
+      "man_of_match": "Aditya"
     },
     "team1_innings": {
       "batting": [
@@ -22433,9 +22640,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "India Rebels",
+      "team2": "BellevueBoyz",
+      "date": "10/18/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "BellevueBoyz Won",
+      "man_of_match": "Nilesh Rane"
     },
     "team1_innings": {
       "batting": [
@@ -22739,9 +22949,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Peaky Blinders",
+      "team2": "Super Fit Challengers",
+      "date": "10/18/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Peaky Blinders Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -23055,9 +23268,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "BATMEN RISES",
+      "team2": "CrickChamps",
+      "date": "10/18/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "CrickChamps Won",
+      "man_of_match": "Deepak Kumar Bala"
     },
     "team1_innings": {
       "batting": [
@@ -23353,9 +23569,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Lagaan",
+      "team2": "Lastsamurais",
+      "date": "10/18/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Lastsamurais Won",
+      "man_of_match": "Jeyabalaji & Santosh"
     },
     "team1_innings": {
       "batting": [
@@ -23695,9 +23914,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Master Minds",
+      "team2": "Avengers",
+      "date": "10/18/2025 12:00:00 AM",
+      "ground": "North Robinswood Park",
+      "result": "Master Minds Won",
+      "man_of_match": "Avinash Gudapati"
     },
     "team1_innings": {
       "batting": [
@@ -24018,9 +24240,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Joot",
+      "team2": "FatehCC-Legends",
+      "date": "10/18/2025 12:00:00 AM",
+      "ground": "North Robinswood Park",
+      "result": "Joot Won",
+      "man_of_match": "hem"
     },
     "team1_innings": {
       "batting": [
@@ -24351,9 +24576,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Turbos",
+      "team2": "The Dons",
+      "date": "10/18/2025 12:00:00 AM",
+      "ground": "North Robinswood Park",
+      "result": "The Dons Won",
+      "man_of_match": "Navdeep Singh Somal"
     },
     "team1_innings": {
       "batting": [
@@ -24703,9 +24931,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "LWCC",
+      "team2": "Indian Hawks",
+      "date": "10/18/2025 12:00:00 AM",
+      "ground": "North Robinswood Park",
+      "result": "Indian Hawks Won",
+      "man_of_match": "Prashanth Reddy Ramidi"
     },
     "team1_innings": {
       "batting": [
@@ -25035,9 +25266,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Bouncers",
+      "team2": "DabangDashers",
+      "date": "10/25/2025 12:00:00 AM",
+      "ground": "Perigo Park-Softball Field 1",
+      "result": "Bouncers Won",
+      "man_of_match": "Dhruv"
     },
     "team1_innings": {
       "batting": [
@@ -25350,9 +25584,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Master Blasters",
+      "team2": "Lake Stevens Cricket Club - LSCC",
+      "date": "10/25/2025 12:00:00 AM",
+      "ground": "Perigo Park-Softball Field 1",
+      "result": "lake stevens cricket club - lscc Won",
+      "man_of_match": "Chandra R"
     },
     "team1_innings": {
       "batting": [
@@ -25692,9 +25929,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Washington Cricketers",
+      "team2": "Titans",
+      "date": "10/25/2025 12:00:00 AM",
+      "ground": "Perigo Park-Softball Field 1",
+      "result": "Titans Won",
+      "man_of_match": "Jatin"
     },
     "team1_innings": {
       "batting": [
@@ -26024,9 +26264,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Peaky Blinders",
+      "team2": "India Rebels",
+      "date": "10/25/2025 12:00:00 AM",
+      "ground": "Redmond Ridge Park -- Soccer Field",
+      "result": "Peaky Blinders Won",
+      "man_of_match": "Shantanu"
     },
     "team1_innings": {
       "batting": [
@@ -26376,9 +26619,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Joot",
+      "team2": "Master Minds",
+      "date": "10/26/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Match Abandon",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -26474,9 +26720,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Peaky Blinders",
+      "team2": "Master Minds",
+      "date": "11/1/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "Peaky Blinders Won",
+      "man_of_match": "Avinash G"
     },
     "team1_innings": {
       "batting": [
@@ -26761,9 +27010,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Joot",
+      "team2": "DabangDashers",
+      "date": "11/1/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "Joot Won",
+      "man_of_match": "Hem"
     },
     "team1_innings": {
       "batting": [
@@ -27095,9 +27347,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Indian Hawks",
+      "team2": "BellevueBoyz",
+      "date": "11/2/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "BellevueBoyz Won",
+      "man_of_match": "Avdesh Rai"
     },
     "team1_innings": {
       "batting": [
@@ -27391,9 +27646,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Lake Stevens Cricket Club - LSCC",
+      "team2": "Super Fit Challengers",
+      "date": "11/2/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "Super Fit Challengers Won",
+      "man_of_match": "Rajat"
     },
     "team1_innings": {
       "batting": [
@@ -27743,9 +28001,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Joot",
+      "team2": "BellevueBoyz",
+      "date": "11/8/2025 12:00:00 AM",
+      "ground": "GrassLawn Park-Softball Field 1",
+      "result": "joot Won",
+      "man_of_match": "Balaji"
     },
     "team1_innings": {
       "batting": [
@@ -28066,9 +28327,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Super Fit Challengers",
+      "team2": "Peaky Blinders",
+      "date": "11/8/2025 12:00:00 AM",
+      "ground": "GrassLawn Park-Softball Field 1",
+      "result": "Super Fit Challengers Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -28408,9 +28672,12 @@
     "league_id": 4,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Super Fit Challengers",
+      "team2": "Joot",
+      "date": "11/15/2025 12:00:00 AM",
+      "ground": "GrassLawn Park-Softball Field 1",
+      "result": "Super Fit Challengers Won",
+      "man_of_match": "Venus Patel"
     },
     "team1_innings": {
       "batting": [

@@ -4,9 +4,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "PSCC Elites",
+      "team2": "Kachra Boyz",
+      "date": "7/19/2025 12:00:00 AM",
+      "ground": "Big Finn Hill Park",
+      "result": "PSCC Elites Won",
+      "man_of_match": "Ashraf/Nisar"
     },
     "team1_innings": {
       "batting": [
@@ -317,9 +320,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "WILLOW WIELDERS",
+      "team2": "The Opposition",
+      "date": "7/19/2025 12:00:00 AM",
+      "ground": "Big Finn Hill Park",
+      "result": "WILLOW WIELDERS Won",
+      "man_of_match": "Vivek Venkatramani"
     },
     "team1_innings": {
       "batting": [
@@ -650,9 +656,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Ruthless Strikers",
+      "team2": "Sidewinders",
+      "date": "7/19/2025 12:00:00 AM",
+      "ground": "Big Finn Hill Park",
+      "result": "Ruthless Strikers Won",
+      "man_of_match": "Tarun and Ronak"
     },
     "team1_innings": {
       "batting": [
@@ -983,9 +992,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Swing n Drive",
+      "team2": "Cross Street Hooligans",
+      "date": "7/19/2025 12:00:00 AM",
+      "ground": "Big Finn Hill Park",
+      "result": "Cross Street Hooligans Won",
+      "man_of_match": "Vysakh Nachiketus"
     },
     "team1_innings": {
       "batting": [
@@ -1270,9 +1282,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "We8",
+      "team2": "Seattle Blues",
+      "date": "7/20/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #2",
+      "result": "We8 Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -1612,9 +1627,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "BATMEN",
+      "team2": "PitchHikers",
+      "date": "7/20/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #2",
+      "result": "PitchHikers Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -1954,9 +1972,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "WILLOW WIELDERS",
+      "team2": "Northern Thunder",
+      "date": "7/26/2025 12:00:00 AM",
+      "ground": "Big Finn Hill Park",
+      "result": "WILLOW WIELDERS Won",
+      "man_of_match": "Vivek Venkatramani"
     },
     "team1_innings": {
       "batting": [
@@ -2260,9 +2281,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Sidewinders",
+      "team2": "PSCC Elites",
+      "date": "7/26/2025 12:00:00 AM",
+      "ground": "Big Finn Hill Park",
+      "result": "PSCC Elites Won",
+      "man_of_match": "Ashraf"
     },
     "team1_innings": {
       "batting": [
@@ -2545,9 +2569,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Ruthless Strikers",
+      "team2": "The Opposition",
+      "date": "7/26/2025 12:00:00 AM",
+      "ground": "Big Finn Hill Park",
+      "result": "Ruthless Strikers Won",
+      "man_of_match": "Tarun/Suvir"
     },
     "team1_innings": {
       "batting": [
@@ -2870,9 +2897,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Kachra Boyz",
+      "team2": "Hyderabad Blues",
+      "date": "7/26/2025 12:00:00 AM",
+      "ground": "Big Finn Hill Park",
+      "result": "Kachra Boyz Won",
+      "man_of_match": "Koshal Sharma"
     },
     "team1_innings": {
       "batting": [
@@ -3192,9 +3222,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Cross Street Hooligans",
+      "team2": "ICCS CerealKillers",
+      "date": "7/26/2025 12:00:00 AM",
+      "ground": "Central Park Field #1",
+      "result": "Cross Street Hooligans Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -3524,9 +3557,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "ATB Icons",
+      "team2": "PSCC Sarfarosh",
+      "date": "7/26/2025 12:00:00 AM",
+      "ground": "Central Park Field #1",
+      "result": "ATB Icons Won",
+      "man_of_match": "Prasanna Kokku"
     },
     "team1_innings": {
       "batting": [
@@ -3866,9 +3902,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Swing n Drive",
+      "team2": "FatehCC-Wizards",
+      "date": "7/26/2025 12:00:00 AM",
+      "ground": "Central Park Field #1",
+      "result": "FatehCC-Wizards Won",
+      "man_of_match": "Sunny Mistry"
     },
     "team1_innings": {
       "batting": [
@@ -4124,9 +4163,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Fatehcc-Mavericks",
+      "team2": "FatehCC-Patriots",
+      "date": "7/26/2025 12:00:00 AM",
+      "ground": "Central Park Field #1",
+      "result": "FatehCC-Patriots Won",
+      "man_of_match": "Sai and Ranjith"
     },
     "team1_innings": {
       "batting": [
@@ -4448,9 +4490,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Pirates of Seattle",
+      "team2": "Seattle Blues",
+      "date": "7/26/2025 12:00:00 AM",
+      "ground": "Central Park Field #2",
+      "result": "Seattle Blues Won",
+      "man_of_match": "Raghav Sandhu"
     },
     "team1_innings": {
       "batting": [
@@ -4790,9 +4835,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "PitchHikers",
+      "team2": "DREAM VISION WARRIORS",
+      "date": "7/26/2025 12:00:00 AM",
+      "ground": "Central Park Field #2",
+      "result": "PitchHikers Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -5152,9 +5200,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "We8",
+      "team2": "BATMEN",
+      "date": "7/26/2025 12:00:00 AM",
+      "ground": "Central Park Field #2",
+      "result": "BATMEN Won",
+      "man_of_match": "Ankit"
     },
     "team1_innings": {
       "batting": [
@@ -5504,9 +5555,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Pulikkoottam - Blasterz",
+      "team2": "Pulikkoottam - Titans",
+      "date": "7/26/2025 12:00:00 AM",
+      "ground": "Central Park Field #2",
+      "result": "Pulikkoottam - Titans Won",
+      "man_of_match": "Shankar"
     },
     "team1_innings": {
       "batting": [
@@ -5775,9 +5829,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Kachra Boyz",
+      "team2": "Sidewinders",
+      "date": "8/2/2025 12:00:00 AM",
+      "ground": "Marymoor Park Soccer #06",
+      "result": "Sidewinders Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -6107,9 +6164,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Seattle Blues",
+      "team2": "Pulikkoottam - Titans",
+      "date": "8/3/2025 12:00:00 AM",
+      "ground": "Marymoor Park Soccer #05",
+      "result": "Seattle Blues Won",
+      "man_of_match": "Sai Kypa"
     },
     "team1_innings": {
       "batting": [
@@ -6439,9 +6499,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "BATMEN",
+      "team2": "Pirates of Seattle",
+      "date": "8/3/2025 12:00:00 AM",
+      "ground": "Marymoor Park Soccer #05",
+      "result": "BATMEN Won",
+      "man_of_match": "Ankit"
     },
     "team1_innings": {
       "batting": [
@@ -6771,9 +6834,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "DREAM VISION WARRIORS",
+      "team2": "We8",
+      "date": "8/3/2025 12:00:00 AM",
+      "ground": "Marymoor Park Soccer #05",
+      "result": "We8 Won",
+      "man_of_match": "Gopi and Prakhyath"
     },
     "team1_innings": {
       "batting": [
@@ -7113,9 +7179,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "WILLOW WIELDERS",
+      "team2": "Hyderabad Blues",
+      "date": "8/3/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "Hyderabad Blues Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -7438,9 +7507,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Northern Thunder",
+      "team2": "Ruthless Strikers",
+      "date": "8/3/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "Ruthless Strikers Won",
+      "man_of_match": "Tarun"
     },
     "team1_innings": {
       "batting": [
@@ -7727,9 +7799,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "The Opposition",
+      "team2": "PSCC Elites",
+      "date": "8/3/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "PSCC Elites Won",
+      "man_of_match": "Abbas/Tameem/Arif"
     },
     "team1_innings": {
       "batting": [
@@ -8033,9 +8108,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "PSCC Sarfarosh",
+      "team2": "FatehCC-Patriots",
+      "date": "8/3/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "FatehCC-Patriots Won",
+      "man_of_match": "Abhishek and Jeet"
     },
     "team1_innings": {
       "batting": [
@@ -8339,9 +8417,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Fatehcc-Mavericks",
+      "team2": "Cross Street Hooligans",
+      "date": "8/3/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "FatehCC-Mavericks Won",
+      "man_of_match": "Sippa Gill"
     },
     "team1_innings": {
       "batting": [
@@ -8655,9 +8736,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "FatehCC-Wizards",
+      "team2": "ICCS CerealKillers",
+      "date": "8/3/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "FatehCC-Wizards Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -8997,9 +9081,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Swing n Drive",
+      "team2": "ATB Icons",
+      "date": "8/3/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "ATB Icons Won",
+      "man_of_match": "Viraj & Kavi"
     },
     "team1_innings": {
       "batting": [
@@ -9339,9 +9426,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "PitchHikers",
+      "team2": "Pulikkoottam - Blasterz",
+      "date": "8/3/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Pulikkoottam - Blasterz Won",
+      "man_of_match": "Arun Mohan"
     },
     "team1_innings": {
       "batting": [
@@ -9645,9 +9735,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "WILLOW WIELDERS",
+      "team2": "Ruthless Strikers",
+      "date": "8/16/2025 12:00:00 AM",
+      "ground": "Central Park Field #4",
+      "result": "Ruthless Strikers Won",
+      "man_of_match": "Rachit and Akki"
     },
     "team1_innings": {
       "batting": [
@@ -9941,9 +10034,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Hyderabad Blues",
+      "team2": "Sidewinders",
+      "date": "8/16/2025 12:00:00 AM",
+      "ground": "Central Park Field #4",
+      "result": "Hyderabad Blues Won",
+      "man_of_match": "Hyd Blues Team"
     },
     "team1_innings": {
       "batting": [
@@ -10283,9 +10379,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "The Opposition",
+      "team2": "Kachra Boyz",
+      "date": "8/16/2025 12:00:00 AM",
+      "ground": "GrassLawn Park-Softball Field 1",
+      "result": "The Opposition Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -10625,9 +10724,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "PSCC Elites",
+      "team2": "Northern Thunder",
+      "date": "8/16/2025 12:00:00 AM",
+      "ground": "GrassLawn Park-Softball Field 1",
+      "result": "PSCC Elites Won",
+      "man_of_match": "Abbas"
     },
     "team1_innings": {
       "batting": [
@@ -10950,9 +11052,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Cross Street Hooligans",
+      "team2": "FatehCC-Wizards",
+      "date": "8/16/2025 12:00:00 AM",
+      "ground": "GrassLawn Park-Softball Field 1",
+      "result": "FatehCC-Wizards Won",
+      "man_of_match": "Sai"
     },
     "team1_innings": {
       "batting": [
@@ -11284,9 +11389,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "PSCC Sarfarosh",
+      "team2": "Fatehcc-Mavericks",
+      "date": "8/16/2025 12:00:00 AM",
+      "ground": "GrassLawn Park-Softball Field 2",
+      "result": "Fatehcc-Mavericks Won",
+      "man_of_match": "Ayush"
     },
     "team1_innings": {
       "batting": [
@@ -11598,9 +11706,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Swing n Drive",
+      "team2": "FatehCC-Patriots",
+      "date": "8/16/2025 12:00:00 AM",
+      "ground": "GrassLawn Park-Softball Field 2",
+      "result": "FatehCC-Patriots Won",
+      "man_of_match": "Abhishek and Abhilash"
     },
     "team1_innings": {
       "batting": [
@@ -11885,9 +11996,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "ATB Icons",
+      "team2": "ICCS CerealKillers",
+      "date": "8/16/2025 12:00:00 AM",
+      "ground": "Hartman Park-Soccer Field",
+      "result": "iccs CerealKillers Won",
+      "man_of_match": "Naim"
     },
     "team1_innings": {
       "batting": [
@@ -12200,9 +12314,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "BATMEN",
+      "team2": "Seattle Blues",
+      "date": "8/16/2025 12:00:00 AM",
+      "ground": "Hartman Park-Soccer Field",
+      "result": "BATMEN Won",
+      "man_of_match": "Krishna"
     },
     "team1_innings": {
       "batting": [
@@ -12562,9 +12679,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "PitchHikers",
+      "team2": "Pulikkoottam - Titans",
+      "date": "8/16/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Pulikkoottam - Titans Won",
+      "man_of_match": "Shankar"
     },
     "team1_innings": {
       "batting": [
@@ -12894,9 +13014,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Pulikkoottam - Blasterz",
+      "team2": "We8",
+      "date": "8/16/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Pulikkoottam - Blasterz Won",
+      "man_of_match": "Arun Mohan"
     },
     "team1_innings": {
       "batting": [
@@ -13227,9 +13350,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "DREAM VISION WARRIORS",
+      "team2": "Pirates of Seattle",
+      "date": "8/16/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Pirates of Seattle Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -13559,9 +13685,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Sidewinders",
+      "team2": "The Opposition",
+      "date": "8/24/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Sidewinders Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -13891,9 +14020,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Hyderabad Blues",
+      "team2": "Ruthless Strikers",
+      "date": "8/24/2025 12:00:00 AM",
+      "ground": "Marymoor Park Soccer #05",
+      "result": "Ruthless Strikers Won",
+      "man_of_match": "Yash Rolyan"
     },
     "team1_innings": {
       "batting": [
@@ -14223,9 +14355,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "PSCC Elites",
+      "team2": "WILLOW WIELDERS",
+      "date": "8/24/2025 12:00:00 AM",
+      "ground": "Marymoor Park Soccer #05",
+      "result": "PSCC Elites Won",
+      "man_of_match": "Abbas/Tameem/Adnan"
     },
     "team1_innings": {
       "batting": [
@@ -14567,9 +14702,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Northern Thunder",
+      "team2": "Kachra Boyz",
+      "date": "8/24/2025 12:00:00 AM",
+      "ground": "Marymoor Park Soccer #06",
+      "result": "Northern Thunder Won",
+      "man_of_match": "Vineet Kumar"
     },
     "team1_innings": {
       "batting": [
@@ -14856,9 +14994,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "PSCC Sarfarosh",
+      "team2": "Swing n Drive",
+      "date": "8/24/2025 12:00:00 AM",
+      "ground": "Marymoor Park Soccer #06",
+      "result": "PSCC Sarfarosh Won",
+      "man_of_match": "Falah and Hemil"
     },
     "team1_innings": {
       "batting": [
@@ -15171,9 +15312,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "FatehCC-Wizards",
+      "team2": "Fatehcc-Mavericks",
+      "date": "8/24/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "FatehCC-Mavericks Won",
+      "man_of_match": "Ayush"
     },
     "team1_innings": {
       "batting": [
@@ -15523,9 +15667,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Cross Street Hooligans",
+      "team2": "ATB Icons",
+      "date": "8/24/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "ATB Icons Won",
+      "man_of_match": "Prasanna Kokku"
     },
     "team1_innings": {
       "batting": [
@@ -15855,9 +16002,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "FatehCC-Patriots",
+      "team2": "ICCS CerealKillers",
+      "date": "8/24/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "ICCS CerealKillers Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -16180,9 +16330,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "We8",
+      "team2": "PitchHikers",
+      "date": "8/24/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "We8 Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -16512,9 +16665,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Pulikkoottam - Titans",
+      "team2": "BATMEN",
+      "date": "8/24/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #1",
+      "result": "Pulikkoottam - Titans Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -16855,9 +17011,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Seattle Blues",
+      "team2": "DREAM VISION WARRIORS",
+      "date": "8/24/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #1",
+      "result": "Seattle Blues Won",
+      "man_of_match": "Navneet Nimish"
     },
     "team1_innings": {
       "batting": [
@@ -17177,9 +17336,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Pulikkoottam - Blasterz",
+      "team2": "Pirates of Seattle",
+      "date": "8/24/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #1",
+      "result": "Pirates of Seattle Won",
+      "man_of_match": "Karthik"
     },
     "team1_innings": {
       "batting": [
@@ -17492,9 +17654,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Northern Thunder",
+      "team2": "Hyderabad Blues",
+      "date": "9/14/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "Hyderabad Blues Won",
+      "man_of_match": "Hyd Blues Team"
     },
     "team1_innings": {
       "batting": [
@@ -17824,9 +17989,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Fatehcc-Mavericks",
+      "team2": "ICCS CerealKillers",
+      "date": "9/14/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "FatehCC-Mavericks Won",
+      "man_of_match": "Parag"
     },
     "team1_innings": {
       "batting": [
@@ -18166,9 +18334,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "FatehCC-Patriots",
+      "team2": "ATB Icons",
+      "date": "9/14/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "ATB ICONS Won",
+      "man_of_match": "Rajath MR"
     },
     "team1_innings": {
       "batting": [
@@ -18508,9 +18679,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "PSCC Sarfarosh",
+      "team2": "FatehCC-Wizards",
+      "date": "9/14/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Pscc sarfarosh Won",
+      "man_of_match": "Abdul Waheed"
     },
     "team1_innings": {
       "batting": [
@@ -18830,9 +19004,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Pulikkoottam - Titans",
+      "team2": "Pirates of Seattle",
+      "date": "9/14/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Pulikkoottam - Titans Won",
+      "man_of_match": "Shankar , Jimmy & Akhil"
     },
     "team1_innings": {
       "batting": [
@@ -19117,9 +19294,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "DREAM VISION WARRIORS",
+      "team2": "Pulikkoottam - Blasterz",
+      "date": "9/14/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Pulikkoottam - Blasterz Won",
+      "man_of_match": "Arun Mohan"
     },
     "team1_innings": {
       "batting": [
@@ -19414,9 +19594,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "PSCC Elites",
+      "team2": "Ruthless Strikers",
+      "date": "9/20/2025 12:00:00 AM",
+      "ground": "Big Finn Hill Park",
+      "result": "PSCC Elites Won",
+      "man_of_match": "Arif Mohammed"
     },
     "team1_innings": {
       "batting": [
@@ -19729,9 +19912,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "The Opposition",
+      "team2": "Hyderabad Blues",
+      "date": "9/20/2025 12:00:00 AM",
+      "ground": "Big Finn Hill Park",
+      "result": "The Opposition Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -20061,9 +20247,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Sidewinders",
+      "team2": "Northern Thunder",
+      "date": "9/20/2025 12:00:00 AM",
+      "ground": "Evergreen Playfields 1",
+      "result": "Sidewinders Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -20403,9 +20592,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "WILLOW WIELDERS",
+      "team2": "Kachra Boyz",
+      "date": "9/20/2025 12:00:00 AM",
+      "ground": "Evergreen Playfields 1",
+      "result": "Willow Wielders Won",
+      "man_of_match": "Vivek, Anmol and Seshu"
     },
     "team1_innings": {
       "batting": [
@@ -20755,9 +20947,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "ATB Icons",
+      "team2": "FatehCC-Wizards",
+      "date": "9/20/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "fatehcc-wizards Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -21069,9 +21264,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Swing n Drive",
+      "team2": "Fatehcc-Mavericks",
+      "date": "9/20/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "Fatehcc-Mavericks Won",
+      "man_of_match": "Ashishpal Singh"
     },
     "team1_innings": {
       "batting": [
@@ -21411,9 +21609,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "PSCC Sarfarosh",
+      "team2": "ICCS CerealKillers",
+      "date": "9/20/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "PSCC Sarfarosh Won",
+      "man_of_match": "Abdul Waheed"
     },
     "team1_innings": {
       "batting": [
@@ -21735,9 +21936,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Cross Street Hooligans",
+      "team2": "FatehCC-Patriots",
+      "date": "9/20/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "FatehCC-Patriots Won",
+      "man_of_match": "Ranga and Shiva Teja Yadav K"
     },
     "team1_innings": {
       "batting": [
@@ -22077,9 +22281,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "BATMEN",
+      "team2": "DREAM VISION WARRIORS",
+      "date": "9/20/2025 12:00:00 AM",
+      "ground": "Perigo Park-Softball Field 1",
+      "result": "BATMEN Won",
+      "man_of_match": "Dhruv & Sushant"
     },
     "team1_innings": {
       "batting": [
@@ -22429,9 +22636,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Pulikkoottam - Titans",
+      "team2": "We8",
+      "date": "9/20/2025 12:00:00 AM",
+      "ground": "Perigo Park-Softball Field 1",
+      "result": "Pulikkoottam - Titans Won",
+      "man_of_match": "Shankar"
     },
     "team1_innings": {
       "batting": [
@@ -22753,9 +22963,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "PitchHikers",
+      "team2": "Pirates of Seattle",
+      "date": "9/20/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Pirates of Seattle Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -23058,9 +23271,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Seattle Blues",
+      "team2": "Pulikkoottam - Blasterz",
+      "date": "9/20/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Seattle Blues Won",
+      "man_of_match": "Vikas Panchal"
     },
     "team1_innings": {
       "batting": [
@@ -23402,9 +23618,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "DREAM VISION WARRIORS",
+      "team2": "Pulikkoottam - Titans",
+      "date": "10/11/2025 12:00:00 AM",
+      "ground": "Redmond Ridge Park -- Soccer Field",
+      "result": "Pulikkoottam - Titans Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -23719,9 +23938,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "PSCC Elites",
+      "team2": "Hyderabad Blues",
+      "date": "10/11/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "PSCC Elites Won",
+      "man_of_match": "Abbas/Arif"
     },
     "team1_innings": {
       "batting": [
@@ -24052,9 +24274,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Northern Thunder",
+      "team2": "The Opposition",
+      "date": "10/12/2025 12:00:00 AM",
+      "ground": "North Robinswood Park",
+      "result": "The Opposition Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -24348,9 +24573,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Kachra Boyz",
+      "team2": "Ruthless Strikers",
+      "date": "10/12/2025 12:00:00 AM",
+      "ground": "North Robinswood Park",
+      "result": "Kachra Boyz Won",
+      "man_of_match": "Narendra Gyanchandani"
     },
     "team1_innings": {
       "batting": [
@@ -24680,9 +24908,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "WILLOW WIELDERS",
+      "team2": "Sidewinders",
+      "date": "10/12/2025 12:00:00 AM",
+      "ground": "North Robinswood Park",
+      "result": "Sidewinders Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -25002,9 +25233,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Fatehcc-Mavericks",
+      "team2": "ATB Icons",
+      "date": "10/12/2025 12:00:00 AM",
+      "ground": "North Robinswood Park",
+      "result": "ATB Icons Won",
+      "man_of_match": "Manish & Aditya"
     },
     "team1_innings": {
       "batting": [
@@ -25318,9 +25552,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "FatehCC-Patriots",
+      "team2": "FatehCC-Wizards",
+      "date": "10/12/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "FatehCC-Patriots Won",
+      "man_of_match": "Koti & Sai & Abhishek"
     },
     "team1_innings": {
       "batting": [
@@ -25632,9 +25869,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "We8",
+      "team2": "Pirates of Seattle",
+      "date": "10/12/2025 12:00:00 AM",
+      "ground": "Redmond Ridge Park -- Soccer Field",
+      "result": "We8 Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -25984,9 +26224,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Pulikkoottam - Blasterz",
+      "team2": "BATMEN",
+      "date": "10/12/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "BATMEN Won",
+      "man_of_match": "Ashish"
     },
     "team1_innings": {
       "batting": [
@@ -26336,9 +26579,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Seattle Blues",
+      "team2": "PitchHikers",
+      "date": "10/12/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "PitchHikers Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -26668,9 +26914,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Swing n Drive",
+      "team2": "ICCS CerealKillers",
+      "date": "10/17/2025 12:00:00 AM",
+      "ground": "Canyon Park Middle School Stadium",
+      "result": "ICCS CerealKillers Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -26964,9 +27213,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Cross Street Hooligans",
+      "team2": "PSCC Sarfarosh",
+      "date": "10/19/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "Cross Street Hooligans Won",
+      "man_of_match": "Vysakh Nachiketus"
     },
     "team1_innings": {
       "batting": [
@@ -27306,9 +27558,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "PSCC Elites",
+      "team2": "Sidewinders",
+      "date": "11/2/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "PSCC Elites Won",
+      "man_of_match": "Tameem/Abbas"
     },
     "team1_innings": {
       "batting": [
@@ -27621,9 +27876,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Pulikkoottam - Titans",
+      "team2": "FatehCC-Patriots",
+      "date": "11/2/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Pulikkoottam - Titans Won",
+      "man_of_match": "Ashish & Sabarish"
     },
     "team1_innings": {
       "batting": [
@@ -27963,9 +28221,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "BATMEN",
+      "team2": "Fatehcc-Mavericks",
+      "date": "11/2/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "FatehCC-Mavericks Won",
+      "man_of_match": "Sippa and Sid"
     },
     "team1_innings": {
       "batting": [
@@ -28280,9 +28541,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "ATB Icons",
+      "team2": "Ruthless Strikers",
+      "date": "11/2/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "ATB ICONS Won",
+      "man_of_match": "Manish & Prasanna"
     },
     "team1_innings": {
       "batting": [
@@ -28622,9 +28886,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "PSCC Elites",
+      "team2": "ATB Icons",
+      "date": "11/8/2025 12:00:00 AM",
+      "ground": "GrassLawn Park-Softball Field 1",
+      "result": "ATB Icons Won",
+      "man_of_match": "Rajath"
     },
     "team1_innings": {
       "batting": [
@@ -28954,9 +29221,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Pulikkoottam - Titans",
+      "team2": "Fatehcc-Mavericks",
+      "date": "11/8/2025 12:00:00 AM",
+      "ground": "GrassLawn Park-Softball Field 1",
+      "result": "Pulikkoottam - Titans Won",
+      "man_of_match": "Shankar & Ashish"
     },
     "team1_innings": {
       "batting": [
@@ -29286,9 +29556,12 @@
     "league_id": 3,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Pulikkoottam - Titans",
+      "team2": "ATB Icons",
+      "date": "11/15/2025 12:00:00 AM",
+      "ground": "GrassLawn Park-Softball Field 1",
+      "result": "Pulikkoottam - TItans Won",
+      "man_of_match": "Jimmy & Akhil"
     },
     "team1_innings": {
       "batting": [

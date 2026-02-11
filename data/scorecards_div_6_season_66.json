@@ -4,9 +4,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Sharabi Cricketers",
+      "team2": "Invincible Vikings",
+      "date": "7/13/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "Sharabi Cricketers Won",
+      "man_of_match": "Roshan & Shivam"
     },
     "team1_innings": {
       "batting": [
@@ -336,9 +339,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Bat Boys",
+      "team2": "Eight Musketers",
+      "date": "7/13/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "Bat Boys Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -671,9 +677,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Unicorns",
+      "team2": "Torpedoes",
+      "date": "7/13/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "Unicorns Won",
+      "man_of_match": "Rahul Kumar"
     },
     "team1_innings": {
       "batting": [
@@ -995,9 +1004,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Rising Fenix",
+      "team2": "Takbeer",
+      "date": "7/13/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "rising fenix Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -1327,9 +1339,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Bellevue Indians",
+      "team2": "Hitmen",
+      "date": "7/19/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #1",
+      "result": "Hitmen Won",
+      "man_of_match": "Abhijeet Hatekar"
     },
     "team1_innings": {
       "batting": [
@@ -1649,9 +1664,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "SwingKings",
+      "team2": "Team Sharks",
+      "date": "7/20/2025 12:00:00 AM",
+      "ground": "Central Park Field #2",
+      "result": "SwingKings Won",
+      "man_of_match": "Prasad"
     },
     "team1_innings": {
       "batting": [
@@ -2012,9 +2030,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Pulikkoottam - Raptors",
+      "team2": "Slammers",
+      "date": "7/20/2025 12:00:00 AM",
+      "ground": "Central Park Field #2",
+      "result": "Pulikkoottam - Raptors Won",
+      "man_of_match": "Ramakrishnan CP"
     },
     "team1_innings": {
       "batting": [
@@ -2354,9 +2375,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Invincible Vikings",
+      "team2": "Torpedoes",
+      "date": "7/20/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #2",
+      "result": "Invincible Vikings Won",
+      "man_of_match": "Sujith Sk"
     },
     "team1_innings": {
       "batting": [
@@ -2696,9 +2720,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Bat Boys",
+      "team2": "Seattle Gems",
+      "date": "7/20/2025 12:00:00 AM",
+      "ground": "Redmond Ridge Park -- Soccer Field",
+      "result": "Bat Boys Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -3049,9 +3076,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Scrambled Legs",
+      "team2": "Unicorns",
+      "date": "7/20/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Unicorns Won",
+      "man_of_match": "Saurabh Sharma"
     },
     "team1_innings": {
       "batting": [
@@ -3391,9 +3421,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Rising Fenix",
+      "team2": "Sidewinders Exploded",
+      "date": "7/26/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #2",
+      "result": "Sidewinders Exploded Won",
+      "man_of_match": "Saai Sanjay Swaminathan"
     },
     "team1_innings": {
       "batting": [
@@ -3723,9 +3756,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "SwingKings",
+      "team2": "Red Hawks Challengers",
+      "date": "7/26/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #2",
+      "result": "Red Hawks Challengers Won",
+      "man_of_match": "Sumit Redhawks"
     },
     "team1_innings": {
       "batting": [
@@ -4065,9 +4101,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Team Sharks",
+      "team2": "Takbeer",
+      "date": "7/26/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #2",
+      "result": "Team Sharks Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -4399,9 +4438,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Redmond Titans",
+      "team2": "Indiawaale",
+      "date": "7/26/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #2",
+      "result": "Redmond Titans Won",
+      "man_of_match": "Shiyam Kumar"
     },
     "team1_innings": {
       "batting": [
@@ -4733,9 +4775,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Pulikkoottam - Raptors",
+      "team2": "Seattle Gladiators",
+      "date": "7/26/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #2",
+      "result": "Seattle Gladiators Won",
+      "man_of_match": "Aditya"
     },
     "team1_innings": {
       "batting": [
@@ -5048,9 +5093,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Hitmen",
+      "team2": "Downtown Rowdies",
+      "date": "7/26/2025 12:00:00 AM",
+      "ground": "Redmond Ridge Park -- Soccer Field",
+      "result": "Hitmen Won",
+      "man_of_match": "Ashwin M"
     },
     "team1_innings": {
       "batting": [
@@ -5380,9 +5428,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Bellevue Indians",
+      "team2": "Slammers",
+      "date": "7/26/2025 12:00:00 AM",
+      "ground": "Redmond Ridge Park -- Soccer Field",
+      "result": "Bellevue Indians Won",
+      "man_of_match": "Ayush Gupta"
     },
     "team1_innings": {
       "batting": [
@@ -5722,9 +5773,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Pulikkoottam - Kings",
+      "team2": "Seattle Shoorveers",
+      "date": "7/26/2025 12:00:00 AM",
+      "ground": "Redmond Ridge Park -- Soccer Field",
+      "result": "Seattle Shoorveers Won",
+      "man_of_match": "Parth Dagli"
     },
     "team1_innings": {
       "batting": [
@@ -6029,9 +6083,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Sharabi Cricketers",
+      "team2": "Eight Musketers",
+      "date": "8/2/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Sharabi Cricketers Won",
+      "man_of_match": "Shivam and Daksh"
     },
     "team1_innings": {
       "batting": [
@@ -6352,9 +6409,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Seattle Gems",
+      "team2": "Scrambled Legs",
+      "date": "8/2/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Scrambled Legs Won",
+      "man_of_match": "Rahul Muthoo"
     },
     "team1_innings": {
       "batting": [
@@ -6684,9 +6744,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Sidewinders Exploded",
+      "team2": "Indiawaale",
+      "date": "8/2/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Sidewinders Exploded Won",
+      "man_of_match": "Saai Sanjay Swaminathan"
     },
     "team1_innings": {
       "batting": [
@@ -7016,9 +7079,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Red Hawks Challengers",
+      "team2": "Redmond Titans",
+      "date": "8/2/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Redmond Titans Won",
+      "man_of_match": "Mahendra Reddy"
     },
     "team1_innings": {
       "batting": [
@@ -7312,9 +7378,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Pulikkoottam - Kings",
+      "team2": "Seattle Gladiators",
+      "date": "8/2/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Seattle Gladiators Won",
+      "man_of_match": "Jay"
     },
     "team1_innings": {
       "batting": [
@@ -7629,9 +7698,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Downtown Rowdies",
+      "team2": "Seattle Shoorveers",
+      "date": "8/3/2025 12:00:00 AM",
+      "ground": "Big Finn Hill Park",
+      "result": "Downtown Rowdies Won",
+      "man_of_match": "Vikrant Bhende"
     },
     "team1_innings": {
       "batting": [
@@ -7981,9 +8053,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Eight Musketers",
+      "team2": "Seattle Gems",
+      "date": "8/9/2025 12:00:00 AM",
+      "ground": "GrassLawn Park-Softball Field 2",
+      "result": "Seattle Gems Won",
+      "man_of_match": "Chintu"
     },
     "team1_innings": {
       "batting": [
@@ -8305,9 +8380,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Sharabi Cricketers",
+      "team2": "Torpedoes",
+      "date": "8/9/2025 12:00:00 AM",
+      "ground": "GrassLawn Park-Softball Field 2",
+      "result": "Sharabi Cricketers Won",
+      "man_of_match": "Saikrishna Badrinarayanan"
     },
     "team1_innings": {
       "batting": [
@@ -8637,9 +8715,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Invincible Vikings",
+      "team2": "Scrambled Legs",
+      "date": "8/9/2025 12:00:00 AM",
+      "ground": "Hartman Park-Soccer Field",
+      "result": "Invincible Vikings Won",
+      "man_of_match": "Vamsi"
     },
     "team1_innings": {
       "batting": [
@@ -8951,9 +9032,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Bat Boys",
+      "team2": "Unicorns",
+      "date": "8/9/2025 12:00:00 AM",
+      "ground": "Hartman Park-Soccer Field",
+      "result": "Unicorns Won",
+      "man_of_match": "Saurabh, Rahul & Vijay"
     },
     "team1_innings": {
       "batting": [
@@ -9303,9 +9387,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "SwingKings",
+      "team2": "Redmond Titans",
+      "date": "8/9/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Redmond Titans Won",
+      "man_of_match": "Mahendra Reddy"
     },
     "team1_innings": {
       "batting": [
@@ -9590,9 +9677,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Rising Fenix",
+      "team2": "Indiawaale",
+      "date": "8/9/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Indiawaale Won",
+      "man_of_match": "Jay Desai"
     },
     "team1_innings": {
       "batting": [
@@ -9932,9 +10022,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Team Sharks",
+      "team2": "Sidewinders Exploded",
+      "date": "8/9/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "sidewinders exploded Won",
+      "man_of_match": "Saai Sanjay Swaminathan"
     },
     "team1_innings": {
       "batting": [
@@ -10274,9 +10367,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Hitmen",
+      "team2": "Seattle Shoorveers",
+      "date": "8/9/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Hitmen Won",
+      "man_of_match": "Rahul, Anuj"
     },
     "team1_innings": {
       "batting": [
@@ -10616,9 +10712,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Pulikkoottam - Raptors",
+      "team2": "Pulikkoottam - Kings",
+      "date": "8/9/2025 12:00:00 AM",
+      "ground": "Marymoor Park Soccer #05",
+      "result": "Pulikkoottam - Kings Won",
+      "man_of_match": "Sarat Mohan"
     },
     "team1_innings": {
       "batting": [
@@ -10921,9 +11020,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Bellevue Indians",
+      "team2": "Seattle Gladiators",
+      "date": "8/9/2025 12:00:00 AM",
+      "ground": "Marymoor Park Soccer #05",
+      "result": "Seattle Gladiators Won",
+      "man_of_match": "Vicky"
     },
     "team1_innings": {
       "batting": [
@@ -11180,9 +11282,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Slammers",
+      "team2": "Downtown Rowdies",
+      "date": "8/9/2025 12:00:00 AM",
+      "ground": "Marymoor Park Soccer #05",
+      "result": "Downtown Rowdies Won",
+      "man_of_match": "Anvay"
     },
     "team1_innings": {
       "batting": [
@@ -11512,9 +11617,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Red Hawks Challengers",
+      "team2": "Takbeer",
+      "date": "8/10/2025 12:00:00 AM",
+      "ground": "Big Finn Hill Park",
+      "result": "Takbeer Won",
+      "man_of_match": "Amir Shafique"
     },
     "team1_innings": {
       "batting": [
@@ -11807,9 +11915,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Scrambled Legs",
+      "team2": "Torpedoes",
+      "date": "8/17/2025 12:00:00 AM",
+      "ground": "Hartman Park-Soccer Field",
+      "result": "Scrambled Legs Won",
+      "man_of_match": "Rahul Muthoo"
     },
     "team1_innings": {
       "batting": [
@@ -12121,9 +12232,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Sharabi Cricketers",
+      "team2": "Seattle Gems",
+      "date": "8/17/2025 12:00:00 AM",
+      "ground": "Hartman Park-Soccer Field",
+      "result": "Seattle Gems Won",
+      "man_of_match": "Shiby Chacko"
     },
     "team1_innings": {
       "batting": [
@@ -12408,9 +12522,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Eight Musketers",
+      "team2": "Unicorns",
+      "date": "8/17/2025 12:00:00 AM",
+      "ground": "Hartman Park-Soccer Field",
+      "result": "Unicorns Won",
+      "man_of_match": "Rahul Kumar & Neeraj Kumar"
     },
     "team1_innings": {
       "batting": [
@@ -12714,9 +12831,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Bat Boys",
+      "team2": "Invincible Vikings",
+      "date": "8/17/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Invincible Vikings Won",
+      "man_of_match": "Mayank Tripathi"
     },
     "team1_innings": {
       "batting": [
@@ -12971,9 +13091,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Team Sharks",
+      "team2": "Rising Fenix",
+      "date": "8/17/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Team Sharks Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -13313,9 +13436,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "SwingKings",
+      "team2": "Indiawaale",
+      "date": "8/17/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Indiawaale Won",
+      "man_of_match": "Venkat Pramod Dandibhotla & Ankur Brahmb"
     },
     "team1_innings": {
       "batting": [
@@ -13610,9 +13736,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Redmond Titans",
+      "team2": "Takbeer",
+      "date": "8/17/2025 12:00:00 AM",
+      "ground": "Marymoor Park Soccer #05",
+      "result": "Redmond Titans Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -13924,9 +14053,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Red Hawks Challengers",
+      "team2": "Sidewinders Exploded",
+      "date": "8/17/2025 12:00:00 AM",
+      "ground": "Marymoor Park Soccer #05",
+      "result": "Sidewinders Exploded Won",
+      "man_of_match": "Rishi Nandhan"
     },
     "team1_innings": {
       "batting": [
@@ -14256,9 +14388,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Bellevue Indians",
+      "team2": "Pulikkoottam - Raptors",
+      "date": "8/17/2025 12:00:00 AM",
+      "ground": "Marymoor Park Soccer #05",
+      "result": "Pulikkoottam - Raptors Won",
+      "man_of_match": "Anoop Nair"
     },
     "team1_innings": {
       "batting": [
@@ -14588,9 +14723,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Hitmen",
+      "team2": "Pulikkoottam - Kings",
+      "date": "8/17/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "Hitmen Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -14930,9 +15068,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Slammers",
+      "team2": "Seattle Shoorveers",
+      "date": "8/17/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "Seattle Shoorveers Won",
+      "man_of_match": "Parth Dagli, Raghav Dogra, Kaiz Merchant"
     },
     "team1_innings": {
       "batting": [
@@ -15252,9 +15393,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Seattle Gladiators",
+      "team2": "Downtown Rowdies",
+      "date": "8/17/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "Seattle Gladiators Won",
+      "man_of_match": "Jay"
     },
     "team1_innings": {
       "batting": [
@@ -15576,9 +15720,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Unicorns",
+      "team2": "Seattle Gems",
+      "date": "9/6/2025 12:00:00 AM",
+      "ground": "Hartman Park-Soccer Field",
+      "result": "Unicorns Won",
+      "man_of_match": "Rahul Kumar & Vijay Kumar"
     },
     "team1_innings": {
       "batting": [
@@ -15928,9 +16075,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Takbeer",
+      "team2": "SwingKings",
+      "date": "9/6/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "SwingKings Won",
+      "man_of_match": "Vamsi Damisetty"
     },
     "team1_innings": {
       "batting": [
@@ -16243,9 +16393,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Bat Boys",
+      "team2": "Torpedoes",
+      "date": "9/6/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Bat Boys Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -16568,9 +16721,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Eight Musketers",
+      "team2": "Invincible Vikings",
+      "date": "9/6/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Eight Musketers Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -16900,9 +17056,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Scrambled Legs",
+      "team2": "Sharabi Cricketers",
+      "date": "9/6/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Scrambled Legs Won",
+      "man_of_match": "Abdul SL"
     },
     "team1_innings": {
       "batting": [
@@ -17242,9 +17401,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Team Sharks",
+      "team2": "Indiawaale",
+      "date": "9/6/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "Team Sharks Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -17556,9 +17718,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Red Hawks Challengers",
+      "team2": "Rising Fenix",
+      "date": "9/6/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "rising fenix Won",
+      "man_of_match": "hitesh"
     },
     "team1_innings": {
       "batting": [
@@ -17898,9 +18063,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Sidewinders Exploded",
+      "team2": "Redmond Titans",
+      "date": "9/6/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "Redmond Titans Won",
+      "man_of_match": "Siddu"
     },
     "team1_innings": {
       "batting": [
@@ -18204,9 +18372,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Slammers",
+      "team2": "Hitmen",
+      "date": "9/6/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "hitmen Won",
+      "man_of_match": "Abhijeet"
     },
     "team1_innings": {
       "batting": [
@@ -18510,9 +18681,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Bellevue Indians",
+      "team2": "Pulikkoottam - Kings",
+      "date": "9/6/2025 12:00:00 AM",
+      "ground": "Perigo Park-Softball Field 1",
+      "result": "Pulikkoottam - Kings Won",
+      "man_of_match": "Sarat Mohan"
     },
     "team1_innings": {
       "batting": [
@@ -18842,9 +19016,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Downtown Rowdies",
+      "team2": "Pulikkoottam - Raptors",
+      "date": "9/6/2025 12:00:00 AM",
+      "ground": "Perigo Park-Softball Field 1",
+      "result": "Pulikkoottam - Raptors Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -19148,9 +19325,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Seattle Shoorveers",
+      "team2": "Seattle Gladiators",
+      "date": "9/6/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Seattle Gladiators Won",
+      "man_of_match": "Kanishk"
     },
     "team1_innings": {
       "batting": [
@@ -19471,9 +19651,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Bat Boys",
+      "team2": "Scrambled Legs",
+      "date": "9/27/2025 12:00:00 AM",
+      "ground": "Perigo Park-Softball Field 1",
+      "result": "Scrambled Legs Won",
+      "man_of_match": "Tarun Khanna"
     },
     "team1_innings": {
       "batting": [
@@ -19793,9 +19976,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Unicorns",
+      "team2": "Sharabi Cricketers",
+      "date": "9/27/2025 12:00:00 AM",
+      "ground": "Perigo Park-Softball Field 1",
+      "result": "Sharabi Cricketers Won",
+      "man_of_match": "Anirban"
     },
     "team1_innings": {
       "batting": [
@@ -20109,9 +20295,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Invincible Vikings",
+      "team2": "Seattle Gems",
+      "date": "9/27/2025 12:00:00 AM",
+      "ground": "Perigo Park-Softball Field 1",
+      "result": "Invincible Vikings Won",
+      "man_of_match": "Keshav A"
     },
     "team1_innings": {
       "batting": [
@@ -20415,9 +20604,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Takbeer",
+      "team2": "Indiawaale",
+      "date": "9/27/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Indiawaale Won",
+      "man_of_match": "Ankur Brahmbhatt"
     },
     "team1_innings": {
       "batting": [
@@ -20757,9 +20949,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Team Sharks",
+      "team2": "Red Hawks Challengers",
+      "date": "9/27/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Red Hawks Challengers Won",
+      "man_of_match": "Tanay Baldua"
     },
     "team1_innings": {
       "batting": [
@@ -21109,9 +21304,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Eight Musketers",
+      "team2": "Torpedoes",
+      "date": "9/27/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Eight Musketers Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -21441,9 +21639,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Sidewinders Exploded",
+      "team2": "SwingKings",
+      "date": "9/28/2025 12:00:00 AM",
+      "ground": "GrassLawn Park-Softball Field 2",
+      "result": "Sidewinders Exploded Won",
+      "man_of_match": "Saai Sanjay Swaminathan"
     },
     "team1_innings": {
       "batting": [
@@ -21783,9 +21984,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Redmond Titans",
+      "team2": "Rising Fenix",
+      "date": "9/28/2025 12:00:00 AM",
+      "ground": "GrassLawn Park-Softball Field 2",
+      "result": "Redmond Titans Won",
+      "man_of_match": "Mahendra Reddy"
     },
     "team1_innings": {
       "batting": [
@@ -22107,9 +22311,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Downtown Rowdies",
+      "team2": "Bellevue Indians",
+      "date": "9/28/2025 12:00:00 AM",
+      "ground": "GrassLawn Park-Softball Field 2",
+      "result": "Bellevue Indians Won",
+      "man_of_match": "Ashwin Joshi"
     },
     "team1_innings": {
       "batting": [
@@ -22449,9 +22656,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Slammers",
+      "team2": "Pulikkoottam - Kings",
+      "date": "9/28/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "Slammers Won",
+      "man_of_match": "Ankit Arora"
     },
     "team1_innings": {
       "batting": [
@@ -22755,9 +22965,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Hitmen",
+      "team2": "Seattle Gladiators",
+      "date": "9/28/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "Seattle Gladiators Won",
+      "man_of_match": "Nakul/Vicky"
     },
     "team1_innings": {
       "batting": [
@@ -23060,9 +23273,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Pulikkoottam - Raptors",
+      "team2": "Seattle Shoorveers",
+      "date": "9/28/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "Pulikkoottam - Raptors Won",
+      "man_of_match": "Anoop"
     },
     "team1_innings": {
       "batting": [
@@ -23375,9 +23591,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Sharabi Cricketers",
+      "team2": "Bat Boys",
+      "date": "10/19/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Bat Boys Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -23652,9 +23871,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Unicorns",
+      "team2": "Invincible Vikings",
+      "date": "10/19/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Invincible Vikings Won",
+      "man_of_match": "Keshav"
     },
     "team1_innings": {
       "batting": [
@@ -23966,9 +24188,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Scrambled Legs",
+      "team2": "Eight Musketers",
+      "date": "10/19/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Scrambled Legs Won",
+      "man_of_match": "Murali Kurapati"
     },
     "team1_innings": {
       "batting": [
@@ -24298,9 +24523,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Torpedoes",
+      "team2": "Seattle Gems",
+      "date": "10/19/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "seattle gems Won",
+      "man_of_match": "Brijesh"
     },
     "team1_innings": {
       "batting": [
@@ -24584,9 +24812,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Redmond Titans",
+      "team2": "Team Sharks",
+      "date": "10/19/2025 12:00:00 AM",
+      "ground": "North Robinswood Park",
+      "result": "Redmond Titans Won",
+      "man_of_match": "Mahendra Reddy"
     },
     "team1_innings": {
       "batting": [
@@ -24906,9 +25137,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Sidewinders Exploded",
+      "team2": "Takbeer",
+      "date": "10/19/2025 12:00:00 AM",
+      "ground": "North Robinswood Park",
+      "result": "Takbeer Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -25201,9 +25435,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "SwingKings",
+      "team2": "Rising Fenix",
+      "date": "10/19/2025 12:00:00 AM",
+      "ground": "North Robinswood Park",
+      "result": "Rising Fenix Won",
+      "man_of_match": "Ganesh Narayanan"
     },
     "team1_innings": {
       "batting": [
@@ -25533,9 +25770,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Downtown Rowdies",
+      "team2": "Pulikkoottam - Kings",
+      "date": "10/19/2025 12:00:00 AM",
+      "ground": "North Robinswood Park",
+      "result": "Downtown Rowdies Won",
+      "man_of_match": "Rahul"
     },
     "team1_innings": {
       "batting": [
@@ -25865,9 +26105,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Slammers",
+      "team2": "Seattle Gladiators",
+      "date": "10/19/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "slammers Won",
+      "man_of_match": "Rushab Nikhil Doshi"
     },
     "team1_innings": {
       "batting": [
@@ -26198,9 +26441,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Bellevue Indians",
+      "team2": "Seattle Shoorveers",
+      "date": "10/19/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "Bellevue Indians Won",
+      "man_of_match": "Prathmesh Deshmukh"
     },
     "team1_innings": {
       "batting": [
@@ -26530,9 +26776,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Pulikkoottam - Raptors",
+      "team2": "Hitmen",
+      "date": "10/19/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "Pulikkoottam - Raptors Won",
+      "man_of_match": "Girish Nair, Roshan, Abhijeet"
     },
     "team1_innings": {
       "batting": [
@@ -26846,9 +27095,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Redmond Titans",
+      "team2": "Scrambled Legs",
+      "date": "11/2/2025 12:00:00 AM",
+      "ground": "Central Park Field #1",
+      "result": "Redmond Titans Won",
+      "man_of_match": "Mahendra Reddy"
     },
     "team1_innings": {
       "batting": [
@@ -27169,9 +27421,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Hitmen",
+      "team2": "Seattle Gladiators",
+      "date": "11/2/2025 12:00:00 AM",
+      "ground": "Central Park Field #1",
+      "result": "Tie",
+      "man_of_match": "Saurabh Malhotra"
     },
     "team1_innings": {
       "batting": [
@@ -27501,9 +27756,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Invincible Vikings",
+      "team2": "Sidewinders Exploded",
+      "date": "11/2/2025 12:00:00 AM",
+      "ground": "Central Park Field #2",
+      "result": "Sidewinders Exploded Won",
+      "man_of_match": "Deepan Divakaran"
     },
     "team1_innings": {
       "batting": [
@@ -27833,9 +28091,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Pulikkoottam - Raptors",
+      "team2": "Unicorns",
+      "date": "11/2/2025 12:00:00 AM",
+      "ground": "Central Park Field #2",
+      "result": "Pulikkoottam - Raptors Won",
+      "man_of_match": "Roshan, Mathew"
     },
     "team1_innings": {
       "batting": [
@@ -28175,9 +28436,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Redmond Titans",
+      "team2": "Pulikkoottam - Raptors",
+      "date": "11/8/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Redmond Titans Won",
+      "man_of_match": "Mahendra Reddy"
     },
     "team1_innings": {
       "batting": [
@@ -28499,9 +28763,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Seattle Gladiators",
+      "team2": "Sidewinders Exploded",
+      "date": "11/8/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Seattle Gladiators Won",
+      "man_of_match": "Aditya"
     },
     "team1_innings": {
       "batting": [
@@ -28831,9 +29098,12 @@
     "league_id": 6,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Seattle Gladiators",
+      "team2": "Redmond Titans",
+      "date": "11/23/2025 12:00:00 AM",
+      "ground": "GrassLawn Park-Softball Field 1",
+      "result": "Redmond Titans Won",
+      "man_of_match": "Mahendra Reddy"
     },
     "team1_innings": {
       "batting": [

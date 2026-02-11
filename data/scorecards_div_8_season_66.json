@@ -4,9 +4,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Gilly",
+      "team2": "Red Warriors",
+      "date": "7/12/2025 12:00:00 AM",
+      "ground": "Central Park Field #1",
+      "result": "Gilly Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -336,9 +339,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Knightriders",
+      "team2": "SuperKings",
+      "date": "7/12/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "KnightRiders Won",
+      "man_of_match": "Sreekar"
     },
     "team1_innings": {
       "batting": [
@@ -643,9 +649,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "ICCS White Wolves",
+      "team2": "Pulikkoottam - Royals",
+      "date": "7/12/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Pulikkoottam - Royals Won",
+      "man_of_match": "Anand Harshan"
     },
     "team1_innings": {
       "batting": [
@@ -968,9 +977,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Snoqualmie Wolves Arctic",
+      "team2": "C-Hawks",
+      "date": "7/13/2025 12:00:00 AM",
+      "ground": "Redmond Ridge Park -- Soccer Field",
+      "result": "Snoqualmie Wolves Arctic Won",
+      "man_of_match": "Pavan Shetty"
     },
     "team1_innings": {
       "batting": [
@@ -1310,9 +1322,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Spartan Boys",
+      "team2": "ATB Seattle Shockers",
+      "date": "7/19/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #2",
+      "result": "Spartan Boys Won",
+      "man_of_match": "Gill"
     },
     "team1_innings": {
       "batting": [
@@ -1633,9 +1648,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Kirkland Knights",
+      "team2": "Kachra Boyz - OG",
+      "date": "7/19/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #2",
+      "result": "Kirkland Knights Won",
+      "man_of_match": "Hari Hara Kumar Rajanala"
     },
     "team1_innings": {
       "batting": [
@@ -1947,9 +1965,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "ICCS Royal Warriors",
+      "team2": "Cricket Fanatics",
+      "date": "7/19/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #2",
+      "result": "ICCS Royal Warriors Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -2289,9 +2310,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "ATB Chargers",
+      "team2": "The Avengers",
+      "date": "7/19/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #2",
+      "result": "ATB Chargers Won",
+      "man_of_match": "Chaitu"
     },
     "team1_innings": {
       "batting": [
@@ -2631,9 +2655,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "ICCS White Wolves",
+      "team2": "Red Warriors",
+      "date": "7/20/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #1",
+      "result": "ICCS White Wolves Won",
+      "man_of_match": "Karthik T"
     },
     "team1_innings": {
       "batting": [
@@ -2964,9 +2991,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Snoqualmie Wolves Arctic",
+      "team2": "SuperKings",
+      "date": "7/20/2025 12:00:00 AM",
+      "ground": "Redmond Ridge Park -- Soccer Field",
+      "result": "SuperKings Won",
+      "man_of_match": "Nagesh Putti"
     },
     "team1_innings": {
       "batting": [
@@ -3278,9 +3308,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "C-Hawks",
+      "team2": "Gilly",
+      "date": "7/20/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Gilly Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -3610,9 +3643,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "SUY Northern Yorkas",
+      "team2": "ATB Seattle Shockers",
+      "date": "7/27/2025 12:00:00 AM",
+      "ground": "Central Park Field #1",
+      "result": "ATB Seattle Shockers Won",
+      "man_of_match": "Kishore Putcha"
     },
     "team1_innings": {
       "batting": [
@@ -3906,9 +3942,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Machani Strikers",
+      "team2": "Kachra Boyz - OG",
+      "date": "7/27/2025 12:00:00 AM",
+      "ground": "Central Park Field #2",
+      "result": "Machani Strikers Won",
+      "man_of_match": "Manish S Nair"
     },
     "team1_innings": {
       "batting": [
@@ -4258,9 +4297,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Spartan Boys",
+      "team2": "Kirkland Knights",
+      "date": "7/27/2025 12:00:00 AM",
+      "ground": "Central Park Field #2",
+      "result": "Spartan Boys Won",
+      "man_of_match": "Senthil"
     },
     "team1_innings": {
       "batting": [
@@ -4600,9 +4642,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "The Avengers",
+      "team2": "ERC Blizzard",
+      "date": "7/27/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "The Avengers Won",
+      "man_of_match": "Sagar"
     },
     "team1_innings": {
       "batting": [
@@ -4943,9 +4988,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "ATB Chargers",
+      "team2": "ICCS Royal Warriors",
+      "date": "7/27/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "ICCS Royal Warriors Won",
+      "man_of_match": "Ravi Karnam"
     },
     "team1_innings": {
       "batting": [
@@ -5266,9 +5314,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "ICCS Angry Bulls",
+      "team2": "Everest Warriors",
+      "date": "7/27/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "ICCS Angry Bulls Won",
+      "man_of_match": "Ajay Kakarala"
     },
     "team1_innings": {
       "batting": [
@@ -5608,9 +5659,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Raftaar",
+      "team2": "Snoqualmie Wolves Timber",
+      "date": "7/27/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #2",
+      "result": "Snoqualmie Wolves Timber Won",
+      "man_of_match": "Rajendra Kammakoti"
     },
     "team1_innings": {
       "batting": [
@@ -5940,9 +5994,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Cricket Fanatics",
+      "team2": "BRCL Greens",
+      "date": "7/27/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #2",
+      "result": "Cricket Fanatics Won",
+      "man_of_match": "Vinay Goel"
     },
     "team1_innings": {
       "batting": [
@@ -6272,9 +6329,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "BRCL Greens",
+      "team2": "ICCS Angry Bulls",
+      "date": "8/2/2025 12:00:00 AM",
+      "ground": "Big Finn Hill Park",
+      "result": "BRCL Greens Won",
+      "man_of_match": "Pradeep Reddy"
     },
     "team1_innings": {
       "batting": [
@@ -6604,9 +6664,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "ERC Blizzard",
+      "team2": "Everest Warriors",
+      "date": "8/2/2025 12:00:00 AM",
+      "ground": "Big Finn Hill Park",
+      "result": "Everest Warriors Won",
+      "man_of_match": "Sudhakar Ghaley"
     },
     "team1_innings": {
       "batting": [
@@ -6976,9 +7039,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Spartan Boys",
+      "team2": "Kachra Boyz - OG",
+      "date": "8/2/2025 12:00:00 AM",
+      "ground": "GrassLawn Park-Softball Field 2",
+      "result": "Spartan Boys Won",
+      "man_of_match": "Ajit"
     },
     "team1_innings": {
       "batting": [
@@ -7328,9 +7394,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "The Avengers",
+      "team2": "ICCS Royal Warriors",
+      "date": "8/2/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "The Avengers Won",
+      "man_of_match": "Sachin saki"
     },
     "team1_innings": {
       "batting": [
@@ -7650,9 +7719,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Pulikkoottam - Royals",
+      "team2": "Knightriders",
+      "date": "8/2/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Pulikkoottam - Royals Won",
+      "man_of_match": "Anand Harshan"
     },
     "team1_innings": {
       "batting": [
@@ -7975,9 +8047,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "SuperKings",
+      "team2": "Red Warriors",
+      "date": "8/2/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #1",
+      "result": "SuperKings Won",
+      "man_of_match": "Raghavendra Reddy"
     },
     "team1_innings": {
       "batting": [
@@ -8298,9 +8373,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Gilly",
+      "team2": "Snoqualmie Wolves Arctic",
+      "date": "8/2/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #2",
+      "result": "Tie",
+      "man_of_match": "Srinivasan"
     },
     "team1_innings": {
       "batting": [
@@ -8630,9 +8708,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Raftaar",
+      "team2": "SUY Northern Yorkas",
+      "date": "8/3/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Raftaar Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -8962,9 +9043,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Snoqualmie Wolves Timber",
+      "team2": "Machani Strikers",
+      "date": "8/3/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Machani Strikers Won",
+      "man_of_match": "Manish S Nair"
     },
     "team1_innings": {
       "batting": [
@@ -9304,9 +9388,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Gilly",
+      "team2": "ICCS White Wolves",
+      "date": "8/10/2025 12:00:00 AM",
+      "ground": "Central Park Field #2",
+      "result": "gilly Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -9646,9 +9733,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "C-Hawks",
+      "team2": "SuperKings",
+      "date": "8/10/2025 12:00:00 AM",
+      "ground": "Central Park Field #2",
+      "result": "Tie",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -9969,9 +10059,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Pulikkoottam - Royals",
+      "team2": "Snoqualmie Wolves Arctic",
+      "date": "8/10/2025 12:00:00 AM",
+      "ground": "Central Park Field #2",
+      "result": "Snoqualmie Wolves Arctic Won",
+      "man_of_match": "Surinder Pal"
     },
     "team1_innings": {
       "batting": [
@@ -10331,9 +10424,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Knightriders",
+      "team2": "Red Warriors",
+      "date": "8/10/2025 12:00:00 AM",
+      "ground": "Central Park Field #2",
+      "result": "Knightriders Won",
+      "man_of_match": "Praveen Malla"
     },
     "team1_innings": {
       "batting": [
@@ -10684,9 +10780,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Kachra Boyz - OG",
+      "team2": "Snoqualmie Wolves Timber",
+      "date": "8/10/2025 12:00:00 AM",
+      "ground": "Hartman Park-Soccer Field",
+      "result": "Snoqualmie Wolves Timber Won",
+      "man_of_match": "Vibhav"
     },
     "team1_innings": {
       "batting": [
@@ -11026,9 +11125,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "ATB Seattle Shockers",
+      "team2": "Raftaar",
+      "date": "8/10/2025 12:00:00 AM",
+      "ground": "Hartman Park-Soccer Field",
+      "result": "Raftaar Won",
+      "man_of_match": "Sagar Ghabade"
     },
     "team1_innings": {
       "batting": [
@@ -11333,9 +11435,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Kirkland Knights",
+      "team2": "SUY Northern Yorkas",
+      "date": "8/10/2025 12:00:00 AM",
+      "ground": "Hartman Park-Soccer Field",
+      "result": "Kirkland Knights Won",
+      "man_of_match": "Deepanshu Gupta"
     },
     "team1_innings": {
       "batting": [
@@ -11685,9 +11790,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Spartan Boys",
+      "team2": "Machani Strikers",
+      "date": "8/10/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Spartan Boys Won",
+      "man_of_match": "Gill"
     },
     "team1_innings": {
       "batting": [
@@ -12027,9 +12135,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "The Avengers",
+      "team2": "Everest Warriors",
+      "date": "8/10/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Tie",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -12370,9 +12481,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "ICCS Angry Bulls",
+      "team2": "Cricket Fanatics",
+      "date": "8/10/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Cricket Fanatics Won",
+      "man_of_match": "Praveen"
     },
     "team1_innings": {
       "batting": [
@@ -12666,9 +12780,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "BRCL Greens",
+      "team2": "ATB Chargers",
+      "date": "8/10/2025 12:00:00 AM",
+      "ground": "Marymoor Park Soccer #05",
+      "result": "BRCL Greens Won",
+      "man_of_match": "Anuj Nadig"
     },
     "team1_innings": {
       "batting": [
@@ -12971,9 +13088,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "ICCS Royal Warriors",
+      "team2": "ERC Blizzard",
+      "date": "8/10/2025 12:00:00 AM",
+      "ground": "Marymoor Park Soccer #05",
+      "result": "ICCS Royal Warriors Won",
+      "man_of_match": "Kalim Azam"
     },
     "team1_innings": {
       "batting": [
@@ -13303,9 +13423,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "SuperKings",
+      "team2": "Pulikkoottam - Royals",
+      "date": "8/23/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Pulikkoottam - Royals Won",
+      "man_of_match": "Rijil"
     },
     "team1_innings": {
       "batting": [
@@ -13636,9 +13759,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "C-Hawks",
+      "team2": "ICCS White Wolves",
+      "date": "8/23/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "c-hawks Won",
+      "man_of_match": "Raga"
     },
     "team1_innings": {
       "batting": [
@@ -13932,9 +14058,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Gilly",
+      "team2": "Knightriders",
+      "date": "8/23/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Knightriders Won",
+      "man_of_match": "Raj Kumar & Kapil Sharma"
     },
     "team1_innings": {
       "batting": [
@@ -14255,9 +14384,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Snoqualmie Wolves Arctic",
+      "team2": "Red Warriors",
+      "date": "8/23/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Snoqualmie Wolves Arctic Won",
+      "man_of_match": "Pavan Shetty"
     },
     "team1_innings": {
       "batting": [
@@ -14597,9 +14729,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Kirkland Knights",
+      "team2": "ATB Seattle Shockers",
+      "date": "8/23/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "Kirkland Knights Won",
+      "man_of_match": "Arun Chandra Gantasala"
     },
     "team1_innings": {
       "batting": [
@@ -14949,9 +15084,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Kachra Boyz - OG",
+      "team2": "Raftaar",
+      "date": "8/23/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "Raftaar Won",
+      "man_of_match": "Sagar Ghabade"
     },
     "team1_innings": {
       "batting": [
@@ -15244,9 +15382,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Spartan Boys",
+      "team2": "Snoqualmie Wolves Timber",
+      "date": "8/23/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "SNOQUALMIE WOLVES TIMBER Won",
+      "man_of_match": "Pranu Johri"
     },
     "team1_innings": {
       "batting": [
@@ -15576,9 +15717,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Machani Strikers",
+      "team2": "SUY Northern Yorkas",
+      "date": "8/23/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "Machani Strikers Won",
+      "man_of_match": "Manu Mani"
     },
     "team1_innings": {
       "batting": [
@@ -15918,9 +16062,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Cricket Fanatics",
+      "team2": "ATB Chargers",
+      "date": "8/23/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #1",
+      "result": "Cricket Fanatics Won",
+      "man_of_match": "Akash A"
     },
     "team1_innings": {
       "batting": [
@@ -16214,9 +16361,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "ICCS Angry Bulls",
+      "team2": "The Avengers",
+      "date": "8/23/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #1",
+      "result": "ICCS Angry Bulls Won",
+      "man_of_match": "Ajay Kakarala"
     },
     "team1_innings": {
       "batting": [
@@ -16547,9 +16697,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Everest Warriors",
+      "team2": "ICCS Royal Warriors",
+      "date": "8/23/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #1",
+      "result": "Everest warriors Won",
+      "man_of_match": "Ritik Kumar"
     },
     "team1_innings": {
       "batting": [
@@ -16852,9 +17005,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "ERC Blizzard",
+      "team2": "BRCL Greens",
+      "date": "8/23/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #1",
+      "result": "BRCL Greens Won",
+      "man_of_match": "Anuj Nadig"
     },
     "team1_innings": {
       "batting": [
@@ -17140,9 +17296,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "ICCS White Wolves",
+      "team2": "Knightriders",
+      "date": "9/7/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "Knightriders Won",
+      "man_of_match": "Praveen Malla"
     },
     "team1_innings": {
       "batting": [
@@ -17417,9 +17576,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "C-Hawks",
+      "team2": "Pulikkoottam - Royals",
+      "date": "9/7/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "Pulikkoottam - Royals Won",
+      "man_of_match": "Jomi Mathew"
     },
     "team1_innings": {
       "batting": [
@@ -17724,9 +17886,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Kirkland Knights",
+      "team2": "Raftaar",
+      "date": "9/7/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Kirkland Knights Won",
+      "man_of_match": "Deepanshu Gupta"
     },
     "team1_innings": {
       "batting": [
@@ -18056,9 +18221,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Machani Strikers",
+      "team2": "ATB Seattle Shockers",
+      "date": "9/7/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Machani Strikers Won",
+      "man_of_match": "Manish Nair"
     },
     "team1_innings": {
       "batting": [
@@ -18388,9 +18556,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Snoqualmie Wolves Timber",
+      "team2": "SUY Northern Yorkas",
+      "date": "9/7/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "SUY Northern Yorkas Won",
+      "man_of_match": "Rahul Razdan"
     },
     "team1_innings": {
       "batting": [
@@ -18721,9 +18892,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "ATB Chargers",
+      "team2": "ICCS Angry Bulls",
+      "date": "9/7/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "ICCS Angry Bulls Won",
+      "man_of_match": "Rahul Mitra"
     },
     "team1_innings": {
       "batting": [
@@ -19073,9 +19247,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "ERC Blizzard",
+      "team2": "Cricket Fanatics",
+      "date": "9/13/2025 12:00:00 AM",
+      "ground": "Big Finn Hill Park",
+      "result": "Cricket Fanatics Won",
+      "man_of_match": "Akash A"
     },
     "team1_innings": {
       "batting": [
@@ -19389,9 +19566,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "BRCL Greens",
+      "team2": "Everest Warriors",
+      "date": "9/13/2025 12:00:00 AM",
+      "ground": "Big Finn Hill Park",
+      "result": "BRCL Greens Won",
+      "man_of_match": "Anuj Nadig"
     },
     "team1_innings": {
       "batting": [
@@ -19705,9 +19885,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Pulikkoottam - Royals",
+      "team2": "Red Warriors",
+      "date": "10/4/2025 12:00:00 AM",
+      "ground": "Perigo Park-Softball Field 1",
+      "result": "Pulikkoottam - Royals Won",
+      "man_of_match": "Rijil"
     },
     "team1_innings": {
       "batting": [
@@ -20067,9 +20250,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "C-Hawks",
+      "team2": "Knightriders",
+      "date": "10/4/2025 12:00:00 AM",
+      "ground": "Perigo Park-Softball Field 1",
+      "result": "C-Hawks Won",
+      "man_of_match": "Swaraj, Deva"
     },
     "team1_innings": {
       "batting": [
@@ -20409,9 +20595,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "ICCS White Wolves",
+      "team2": "Snoqualmie Wolves Arctic",
+      "date": "10/4/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Snoqualmie Wolves Arctic Won",
+      "man_of_match": "Ashpreet Singh"
     },
     "team1_innings": {
       "batting": [
@@ -20741,9 +20930,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "SuperKings",
+      "team2": "Gilly",
+      "date": "10/4/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Gilly Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -21063,9 +21255,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Machani Strikers",
+      "team2": "Kirkland Knights",
+      "date": "10/4/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Kirkland Knights Won",
+      "man_of_match": "Ashish Virani"
     },
     "team1_innings": {
       "batting": [
@@ -21369,9 +21564,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Spartan Boys",
+      "team2": "Raftaar",
+      "date": "10/5/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "spartan boys Won",
+      "man_of_match": "Harshit Mehta"
     },
     "team1_innings": {
       "batting": [
@@ -21692,9 +21890,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Kachra Boyz - OG",
+      "team2": "SUY Northern Yorkas",
+      "date": "10/5/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "SUY Northern Yorkas Won",
+      "man_of_match": "Shashwat"
     },
     "team1_innings": {
       "batting": [
@@ -22036,9 +22237,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "ATB Seattle Shockers",
+      "team2": "Snoqualmie Wolves Timber",
+      "date": "10/5/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "Snoqualmie Wolves Timber Won",
+      "man_of_match": "Pranu Johri"
     },
     "team1_innings": {
       "batting": [
@@ -22378,9 +22582,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "ATB Chargers",
+      "team2": "ERC Blizzard",
+      "date": "10/5/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #1",
+      "result": "ATB Chargers Won",
+      "man_of_match": "Raghav Karteek"
     },
     "team1_innings": {
       "batting": [
@@ -22673,9 +22880,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "ICCS Royal Warriors",
+      "team2": "ICCS Angry Bulls",
+      "date": "10/5/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #1",
+      "result": "ICCS Royal Warriors Won",
+      "man_of_match": "Umpire:"
     },
     "team1_innings": {
       "batting": [
@@ -22996,9 +23206,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "The Avengers",
+      "team2": "BRCL Greens",
+      "date": "10/5/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #2",
+      "result": "BRCL Greens Won",
+      "man_of_match": "Anuj Nadig"
     },
     "team1_innings": {
       "batting": [
@@ -23310,9 +23523,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Everest Warriors",
+      "team2": "Cricket Fanatics",
+      "date": "10/5/2025 12:00:00 AM",
+      "ground": "Petrovitsky Park Field #2",
+      "result": "Everest Warriors Won",
+      "man_of_match": "Phurtemba Sherpa"
     },
     "team1_innings": {
       "batting": [
@@ -23652,9 +23868,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Pulikkoottam - Royals",
+      "team2": "Gilly",
+      "date": "10/18/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "Pulikkoottam - Royals Won",
+      "man_of_match": "Sajunath Nair"
     },
     "team1_innings": {
       "batting": [
@@ -23994,9 +24213,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "ICCS White Wolves",
+      "team2": "SuperKings",
+      "date": "10/18/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "SuperKings Won",
+      "man_of_match": "Raja Ellitam"
     },
     "team1_innings": {
       "batting": [
@@ -24309,9 +24531,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "C-Hawks",
+      "team2": "Red Warriors",
+      "date": "10/25/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "c-hawks Won",
+      "man_of_match": "Atulya, Raghav"
     },
     "team1_innings": {
       "batting": [
@@ -24615,9 +24840,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Knightriders",
+      "team2": "Snoqualmie Wolves Arctic",
+      "date": "10/25/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "KnightRiders Won",
+      "man_of_match": "Kapil & Sreekar"
     },
     "team1_innings": {
       "batting": [
@@ -24938,9 +25166,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Raftaar",
+      "team2": "Machani Strikers",
+      "date": "10/25/2025 12:00:00 AM",
+      "ground": "North Robinswood Park",
+      "result": "Machani Strikers Won",
+      "man_of_match": "Arun Das"
     },
     "team1_innings": {
       "batting": [
@@ -25310,9 +25541,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Spartan Boys",
+      "team2": "SUY Northern Yorkas",
+      "date": "10/25/2025 12:00:00 AM",
+      "ground": "North Robinswood Park",
+      "result": "SUY Northern Yorkas Won",
+      "man_of_match": "Arun Sharma"
     },
     "team1_innings": {
       "batting": [
@@ -25634,9 +25868,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Kirkland Knights",
+      "team2": "Snoqualmie Wolves Timber",
+      "date": "10/25/2025 12:00:00 AM",
+      "ground": "North Robinswood Park",
+      "result": "Snoqualmie Wolves Timber Won",
+      "man_of_match": "Gurpreet & Shubh"
     },
     "team1_innings": {
       "batting": [
@@ -25976,9 +26213,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "ATB Seattle Shockers",
+      "team2": "Kachra Boyz - OG",
+      "date": "10/25/2025 12:00:00 AM",
+      "ground": "North Robinswood Park",
+      "result": "ATB Seattle Shockers Won",
+      "man_of_match": "Apoorv Agarwal"
     },
     "team1_innings": {
       "batting": [
@@ -26308,9 +26548,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "ICCS Angry Bulls",
+      "team2": "ERC Blizzard",
+      "date": "10/25/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "ICCS Angry Bulls Won",
+      "man_of_match": "Rahul Mitra"
     },
     "team1_innings": {
       "batting": [
@@ -26640,9 +26883,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "BRCL Greens",
+      "team2": "ICCS Royal Warriors",
+      "date": "10/25/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "BRCL Greens Won",
+      "man_of_match": "Zuber Khan"
     },
     "team1_innings": {
       "batting": [
@@ -26928,9 +27174,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Everest Warriors",
+      "team2": "ATB Chargers",
+      "date": "10/25/2025 12:00:00 AM",
+      "ground": "North SeaTac Park",
+      "result": "Everest Warriors Won",
+      "man_of_match": "Phurtemba Sherpa"
     },
     "team1_innings": {
       "batting": [
@@ -27290,9 +27539,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Cricket Fanatics",
+      "team2": "The Avengers",
+      "date": "10/25/2025 12:00:00 AM",
+      "ground": "Perigo Park-Softball Field 1",
+      "result": "Cricket Fanatics Won",
+      "man_of_match": "Akash A"
     },
     "team1_innings": {
       "batting": [
@@ -27632,9 +27884,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Pulikkoottam - Royals",
+      "team2": "Snoqualmie Wolves Timber",
+      "date": "11/1/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Snoqualmie Wolves Timber Won",
+      "man_of_match": "Ayush Chaturvedi"
     },
     "team1_innings": {
       "batting": [
@@ -27948,9 +28203,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Machani Strikers",
+      "team2": "BRCL Greens",
+      "date": "11/1/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Tie",
+      "man_of_match": "Apparao Bokka"
     },
     "team1_innings": {
       "batting": [
@@ -28290,9 +28548,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Knightriders",
+      "team2": "Spartan Boys",
+      "date": "11/2/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Spartan Boys Won",
+      "man_of_match": "Prudhvi"
     },
     "team1_innings": {
       "batting": [
@@ -28577,9 +28838,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Cricket Fanatics",
+      "team2": "Kirkland Knights",
+      "date": "11/2/2025 12:00:00 AM",
+      "ground": "Ron Regis",
+      "result": "Kirkland Knights Won",
+      "man_of_match": "Aakash Pillai"
     },
     "team1_innings": {
       "batting": [
@@ -28909,9 +29173,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "BRCL Greens",
+      "team2": "Spartan Boys",
+      "date": "11/9/2025 12:00:00 AM",
+      "ground": "Hartman Park-Soccer Field",
+      "result": "Spartan Boys Won",
+      "man_of_match": "Akash"
     },
     "team1_innings": {
       "batting": [
@@ -29242,9 +29509,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Snoqualmie Wolves Timber",
+      "team2": "Kirkland Knights",
+      "date": "11/9/2025 12:00:00 AM",
+      "ground": "Hartman Park-Soccer Field",
+      "result": "Tie",
+      "man_of_match": "Shubh Johri"
     },
     "team1_innings": {
       "batting": [
@@ -29584,9 +29854,12 @@
     "league_id": 8,
     "season_id": 66,
     "match_info": {
-      "date": "",
-      "ground": "",
-      "result": ""
+      "team1": "Spartan Boys",
+      "team2": "Kirkland Knights",
+      "date": "11/15/2025 12:00:00 AM",
+      "ground": "Hidden Valley Park Field 1",
+      "result": "Kirkland Knights Won",
+      "man_of_match": "Ashish Virani"
     },
     "team1_innings": {
       "batting": [
