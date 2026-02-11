@@ -287,43 +287,52 @@ struct PredictionCard: View {
                 }
             }
             
-            // Points Scenario
+            // Rank Scenarios
             VStack(alignment: .leading, spacing: 12) {
-                Text("Points Impact")
-                    .font(.subheadline)
-                    .bold()
-                
-                HStack(spacing: 12) {
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text("If Win")
-                            .font(.caption)
-                            .foregroundColor(.secondary)
-                        Text(prediction.pointsScenario.ifWin)
-                            .font(.subheadline)
-                            .bold()
-                            .foregroundColor(.green)
-                    }
-                    
-                    Divider()
-                        .frame(height: 40)
-                    
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text("If Lose")
-                            .font(.caption)
-                            .foregroundColor(.secondary)
-                        Text(prediction.pointsScenario.ifLose)
-                            .font(.subheadline)
-                            .bold()
-                            .foregroundColor(.orange)
-                    }
+                HStack {
+                    Text("Rank Impact Scenarios")
+                        .font(.subheadline)
+                        .bold()
+                    Spacer()
+                    Text("Current: #\(prediction.pointsScenario.currentRank) (\(prediction.pointsScenario.currentPoints) pts)")
+                        .font(.caption)
+                        .foregroundColor(.secondary)
                 }
                 
-                HStack {
-                    Image(systemName: "arrow.up.arrow.down.circle.fill")
-                        .foregroundColor(.blue)
-                    Text(prediction.pointsScenario.rankImpact)
-                        .font(.subheadline)
-                        .foregroundColor(.secondary)
+                ForEach(prediction.pointsScenario.scenarios, id: \.description) { scenario in
+                    HStack(spacing: 12) {
+                        // Scenario type
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text(scenario.description)
+                                .font(.caption)
+                                .bold()
+                            Text(scenario.pointsRange)
+                                .font(.caption2)
+                                .foregroundColor(.secondary)
+                        }
+                        .frame(width: 100, alignment: .leading)
+                        
+                        Spacer()
+                        
+                        // Rank change
+                        HStack(spacing: 6) {
+                            Text(scenario.rankChange)
+                                .font(.caption)
+                                .bold()
+                                .foregroundColor(scenario.color)
+                            
+                            Text("•")
+                                .foregroundColor(.secondary)
+                            
+                            Text(scenario.likelihood)
+                                .font(.caption2)
+                                .foregroundColor(.secondary)
+                        }
+                    }
+                    .padding(.vertical, 6)
+                    .padding(.horizontal, 12)
+                    .background(scenario.color.opacity(0.1))
+                    .cornerRadius(8)
                 }
             }
         }

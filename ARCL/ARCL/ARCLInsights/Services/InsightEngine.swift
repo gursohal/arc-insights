@@ -600,9 +600,18 @@ extension InsightEngine {
         }
         
         struct PointsScenario {
-            let ifWin: String
-            let ifLose: String
-            let rankImpact: String
+            let scenarios: [RankScenario]
+            let currentRank: Int
+            let currentPoints: Int
+            
+            struct RankScenario {
+                let description: String  // e.g., "Big win (28-30 pts)"
+                let pointsRange: String  // e.g., "28-30 pts"
+                let newRank: Int
+                let rankChange: String   // e.g., "↑ to #2"
+                let likelihood: String   // "High", "Medium", "Low"
+                let color: Color
+            }
         }
     }
     
@@ -972,12 +981,12 @@ extension InsightEngine {
             confidence = .low
         }
         
-        // Points scenario
-        let currentPoints = myTeam?.points ?? 0
-        let pointsScenario = MatchPrediction.PointsScenario(
-            ifWin: "\(currentPoints + 30) pts (↑)",
-            ifLose: "\(currentPoints + 6) pts (↓)",
-            rankImpact: calculateRankImpact(myTeam: myTeam, allTeams: allTeams, win: winProbability > 50)
+        // Calculate intelligent rank scenarios
+        let pointsScenario = calculateRankScenarios(
+            myTeam: myTeam,
+            allTeams: allTeams,
+            matches: matches,
+            winProbability: winProbability
         )
         
         // Must-win detection
@@ -1012,6 +1021,148 @@ extension InsightEngine {
         } else {
             return "Likely stay at #\(currentRank)"
         }
+    }
+    
+    // MARK: - Intelligent Rank Scenario Calculator
+    
+    private func calculateRankScenarios(
+        myTeam: Team?,
+        allTeams: [Team],
+        matches: [Match],
+        winProbability: Int
+    ) -> MatchPrediction.PointsScenario {
+        
+        guard let myTeam = myTeam else {
+            return MatchPrediction.PointsScenario(
+                scenarios: [],
+                currentRank: 0,
+                currentPoints: 0
+            )
+        }
+        
+        var scenarios: [MatchPrediction.PointsScenario.RankScenario] = []
+        
+        // Define possible outcomes with point ranges
+        let outcomes: [(desc: String, minPts: Int, maxPts: Int, likelihood: String)] = [
+            ("Dominant win", 28, 30, winProbability >= 60 ? "High" : "Medium"),
+            ("Solid win", 22, 27, winProbability >= 40 ? "High" : "Medium"),
+            ("Close win", 16, 21, winProbability >= 50 ? "Medium" : "Low"),
+            ("Close loss", 6, 15, winProbability <= 40 ? "Medium" : "Low"),
+            ("Heavy loss", 0, 5, winProbability <= 20 ? "High" : "Low")
+        ]
+        
+        // Count remaining matches for all teams (estimate)
+        let remainingMatchesMap = estimateRemainingMatches(allTeams: allTeams, matches: matches)
+        
+        // For each outcome, calculate projected rank
+        for outcome in outcomes {
+            let avgPoints = (outcome.minPts + outcome.maxPts) / 2
+            let projectedPoints = myTeam.points + avgPoints
+            
+            // Calculate what rank we'd be at with these points
+            // Account for other teams' potential points from remaining matches
+            let projectedRank = calculateProjectedRank(
+                myPoints: projectedPoints,
+                currentRank: myTeam.rank,
+                allTeams: allTeams,
+                remainingMatches: remainingMatchesMap
+            )
+            
+            let rankChange: String
+            if projectedRank < myTeam.rank {
+                rankChange = "↑ to #\(projectedRank)"
+            } else if projectedRank > myTeam.rank {
+                rankChange = "↓ to #\(projectedRank)"
+            } else {
+                rankChange = "Stay #\(myTeam.rank)"
+            }
+            
+            let color: Color
+            if projectedRank < myTeam.rank {
+                color = .green
+            } else if projectedRank > myTeam.rank {
+                color = .red
+            } else {
+                color = .orange
+            }
+            
+            scenarios.append(MatchPrediction.PointsScenario.RankScenario(
+                description: outcome.desc,
+                pointsRange: "\(outcome.minPts)-\(outcome.maxPts) pts",
+                newRank: projectedRank,
+                rankChange: rankChange,
+                likelihood: outcome.likelihood,
+                color: color
+            ))
+        }
+        
+        // Filter to most relevant scenarios (skip very unlikely ones)
+        let relevantScenarios = scenarios.filter { scenario in
+            scenario.likelihood != "Low" || abs(scenario.newRank - myTeam.rank) > 0
+        }
+        
+        return MatchPrediction.PointsScenario(
+            scenarios: Array(relevantScenarios.prefix(4)),  // Top 4 scenarios
+            currentRank: myTeam.rank,
+            currentPoints: myTeam.points
+        )
+    }
+    
+    private func estimateRemainingMatches(allTeams: [Team], matches: [Match]) -> [String: Int] {
+        var remaining: [String: Int] = [:]
+        
+        for team in allTeams {
+            let completed = matches.filter {
+                $0.status == .completed && $0.involves(teamName: team.name)
+            }.count
+            
+            let scheduled = matches.filter {
+                $0.status == .upcoming && $0.involves(teamName: team.name)
+            }.count
+            
+            // Estimate: assume 10 total matches per season if we don't know
+            let totalExpected = 10
+            remaining[team.name] = max(0, totalExpected - completed)
+        }
+        
+        return remaining
+    }
+    
+    private func calculateProjectedRank(
+        myPoints: Int,
+        currentRank: Int,
+        allTeams: [Team],
+        remainingMatches: [String: Int]
+    ) -> Int {
+        // Simulate final standings accounting for remaining matches
+        var projectedStandings: [(team: String, maxPoints: Int, minPoints: Int)] = []
+        
+        for team in allTeams {
+            let remaining = remainingMatches[team.name] ?? 0
+            
+            // Conservative estimate: assume teams win ~50% of remaining matches
+            // Max points: win all remaining (30 pts each)
+            // Min points: lose all remaining (0 pts each)
+            // Expected: win half (15 pts per match average)
+            let maxPossible = team.points + (remaining * 30)
+            let expectedPoints = team.points + (remaining * 15)  // Conservative middle ground
+            
+            projectedStandings.append((
+                team: team.name,
+                maxPoints: maxPossible,
+                minPoints: expectedPoints  // Use expected, not minimum
+            ))
+        }
+        
+        // Count how many teams could potentially have more points than us
+        let teamsAhead = projectedStandings.filter { standing in
+            // Use conservative estimate: if their MIN projected points > my points, they're definitely ahead
+            // If their MAX projected points < my points, I'm definitely ahead
+            // Otherwise, it's uncertain - use expected points
+            standing.minPoints > myPoints
+        }.count
+        
+        return teamsAhead + 1  // +1 because rank starts at 1
     }
     
     private func detectMustWin(myTeam: Team?, allTeams: [Team]) -> Bool {
