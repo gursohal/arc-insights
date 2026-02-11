@@ -578,6 +578,7 @@ extension InsightEngine {
         let keyFactors: [String]
         let pointsScenario: PointsScenario
         let mustWin: Bool
+        let isPlayoff: Bool
         
         enum ConfidenceLevel {
             case high, medium, low
@@ -991,13 +992,18 @@ extension InsightEngine {
             confidence = .low
         }
         
-        // Calculate intelligent rank scenarios
-        let pointsScenario = calculateRankScenarios(
-            myTeam: myTeam,
-            allTeams: allTeams,
-            matches: matches,
-            winProbability: winProbability
-        )
+        // Check if this is a playoff match (all 7 league games completed)
+        let isPlayoffMatch = (myTeam?.wins ?? 0) + (myTeam?.losses ?? 0) >= 7
+        
+        // Calculate intelligent rank scenarios (only for league matches)
+        let pointsScenario = isPlayoffMatch ? 
+            MatchPrediction.PointsScenario(scenarios: [], currentRank: myTeam?.rank ?? 0, currentPoints: myTeam?.points ?? 0) :
+            calculateRankScenarios(
+                myTeam: myTeam,
+                allTeams: allTeams,
+                matches: matches,
+                winProbability: winProbability
+            )
         
         // Must-win detection
         let mustWin = detectMustWin(myTeam: myTeam, allTeams: allTeams)
@@ -1010,7 +1016,8 @@ extension InsightEngine {
             confidence: confidence,
             keyFactors: keyFactors,
             pointsScenario: pointsScenario,
-            mustWin: mustWin
+            mustWin: mustWin,
+            isPlayoff: isPlayoffMatch
         )
     }
     

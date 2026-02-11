@@ -361,52 +361,77 @@ struct PredictionCard: View {
                 }
             }
             
-            // Rank Scenarios
-            VStack(alignment: .leading, spacing: 12) {
-                HStack {
-                    Text("Rank Impact Scenarios")
-                        .font(.subheadline)
-                        .bold()
-                    Spacer()
-                    Text("Current: #\(prediction.pointsScenario.currentRank) (\(prediction.pointsScenario.currentPoints) pts)")
-                        .font(.caption)
-                        .foregroundColor(.secondary)
-                }
-                
-                ForEach(prediction.pointsScenario.scenarios, id: \.description) { scenario in
-                    HStack(spacing: 12) {
-                        // Scenario type
-                        VStack(alignment: .leading, spacing: 2) {
-                            Text(scenario.description)
-                                .font(.caption)
-                                .bold()
-                            Text(scenario.pointsRange)
-                                .font(.caption2)
-                                .foregroundColor(.secondary)
-                        }
-                        .frame(width: 100, alignment: .leading)
-                        
-                        Spacer()
-                        
-                        // Rank change
-                        HStack(spacing: 6) {
-                            Text(scenario.rankChange)
-                                .font(.caption)
-                                .bold()
-                                .foregroundColor(scenario.color)
-                            
-                            Text("•")
-                                .foregroundColor(.secondary)
-                            
-                            Text(scenario.likelihood)
-                                .font(.caption2)
-                                .foregroundColor(.secondary)
-                        }
+            // Rank Scenarios (only for league matches) OR Playoff Indicator
+            if prediction.isPlayoff {
+                // Playoff Match Indicator
+                VStack(alignment: .leading, spacing: 8) {
+                    HStack {
+                        Image(systemName: "trophy.fill")
+                            .foregroundColor(.orange)
+                        Text("Playoff Match")
+                            .font(.subheadline)
+                            .bold()
                     }
-                    .padding(.vertical, 6)
-                    .padding(.horizontal, 12)
-                    .background(scenario.color.opacity(0.1))
-                    .cornerRadius(8)
+                    
+                    HStack {
+                        Image(systemName: "info.circle")
+                            .foregroundColor(.blue)
+                        Text("This is a knockout match. No points or rank changes.")
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                    }
+                }
+                .padding()
+                .background(Color.orange.opacity(0.1))
+                .cornerRadius(8)
+            } else {
+                // Rank Scenarios (for league matches)
+                VStack(alignment: .leading, spacing: 12) {
+                    HStack {
+                        Text("Rank Impact Scenarios")
+                            .font(.subheadline)
+                            .bold()
+                        Spacer()
+                        Text("Current: #\(prediction.pointsScenario.currentRank) (\(prediction.pointsScenario.currentPoints) pts)")
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                    }
+                    
+                    ForEach(prediction.pointsScenario.scenarios, id: \.description) { scenario in
+                        HStack(spacing: 12) {
+                            // Scenario type
+                            VStack(alignment: .leading, spacing: 2) {
+                                Text(scenario.description)
+                                    .font(.caption)
+                                    .bold()
+                                Text(scenario.pointsRange)
+                                    .font(.caption2)
+                                    .foregroundColor(.secondary)
+                            }
+                            .frame(width: 100, alignment: .leading)
+                            
+                            Spacer()
+                            
+                            // Rank change
+                            HStack(spacing: 6) {
+                                Text(scenario.rankChange)
+                                    .font(.caption)
+                                    .bold()
+                                    .foregroundColor(scenario.color)
+                                
+                                Text("•")
+                                    .foregroundColor(.secondary)
+                                
+                                Text(scenario.likelihood)
+                                    .font(.caption2)
+                                    .foregroundColor(.secondary)
+                            }
+                        }
+                        .padding(.vertical, 6)
+                        .padding(.horizontal, 12)
+                        .background(scenario.color.opacity(0.1))
+                        .cornerRadius(8)
+                    }
                 }
             }
         }
