@@ -235,7 +235,7 @@ struct PlayerInsightCard: View {
         PlayerDetailView(player: Player(
             name: "Pavan Shetty",
             team: "Snoqualmie Wolves Arctic",
-            battingStats: BattingStats(runs: 210, innings: 7, average: 30.0, strikeRate: 112.3, highestScore: "45*", rank: 1),
+            battingStats: BattingStats(runs: 210, innings: 7, average: 30.0, strikeRate: 112.3, highestScore: "45*", rank: 1, fours: 20, sixes: 5),
             bowlingStats: nil,
             playerId: nil,
             teamId: nil
