@@ -37,9 +37,20 @@ struct BattingStatsView: View {
     let players: [Player]
     @EnvironmentObject var dataManager: DataManager
     @State private var showRefreshAlert = false
+    @State private var searchText = ""
+    
+    var filteredPlayers: [Player] {
+        if searchText.isEmpty {
+            return players
+        }
+        return players.filter { player in
+            player.name.localizedCaseInsensitiveContains(searchText) ||
+            player.team.localizedCaseInsensitiveContains(searchText)
+        }
+    }
     
     var body: some View {
-        List(players) { player in
+        List(filteredPlayers) { player in
             NavigationLink(destination: PlayerDetailView(player: player)) {
                 HStack {
                     Text("#\(player.battingStats?.rank ?? 0)")
@@ -72,14 +83,26 @@ struct BattingStatsView: View {
             }
         }
         .listStyle(.plain)
+        .searchable(text: $searchText, prompt: "Search batsmen...")
     }
 }
 
 struct BowlingStatsView: View {
     let players: [Player]
+    @State private var searchText = ""
+    
+    var filteredPlayers: [Player] {
+        if searchText.isEmpty {
+            return players
+        }
+        return players.filter { player in
+            player.name.localizedCaseInsensitiveContains(searchText) ||
+            player.team.localizedCaseInsensitiveContains(searchText)
+        }
+    }
     
     var body: some View {
-        List(players) { player in
+        List(filteredPlayers) { player in
             NavigationLink(destination: PlayerDetailView(player: player)) {
                 HStack {
                     Text("#\(player.bowlingStats?.rank ?? 0)")
@@ -112,16 +135,26 @@ struct BowlingStatsView: View {
             }
         }
         .listStyle(.plain)
+        .searchable(text: $searchText, prompt: "Search bowlers...")
     }
 }
 
 struct BoundaryStatsView: View {
     let players: [Player]
+    @State private var searchText = ""
     
     var boundaryLeaders: [Player] {
-        players
+        let sorted = players
             .filter { $0.battingStats != nil }
             .sorted { ($0.battingStats?.totalBoundaries ?? 0) > ($1.battingStats?.totalBoundaries ?? 0) }
+        
+        if searchText.isEmpty {
+            return sorted
+        }
+        return sorted.filter { player in
+            player.name.localizedCaseInsensitiveContains(searchText) ||
+            player.team.localizedCaseInsensitiveContains(searchText)
+        }
     }
     
     var body: some View {
@@ -174,6 +207,7 @@ struct BoundaryStatsView: View {
             }
         }
         .listStyle(.plain)
+        .searchable(text: $searchText, prompt: "Search players...")
     }
 }
 
