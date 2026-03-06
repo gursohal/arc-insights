@@ -50,6 +50,16 @@ struct ContentView: View {
 struct HomeView: View {
     @EnvironmentObject var dataManager: DataManager
     @AppStorage("myTeamName") private var myTeamName = "Snoqualmie Wolves"
+    @AppStorage("selectedDivisionID") private var selectedDivisionID: Int = 8
+    @AppStorage("selectedSeasonID") private var selectedSeasonID: Int = 69
+    
+    var selectedDivisionName: String {
+        dataManager.availableDivisions.first(where: { $0.id == selectedDivisionID })?.name ?? "Div F"
+    }
+    
+    var selectedSeasonName: String {
+        dataManager.availableSeasons.first(where: { $0.id == selectedSeasonID })?.name ?? "Spring 2026"
+    }
     
     var body: some View {
         NavigationView {
@@ -65,7 +75,7 @@ struct HomeView: View {
                                 .font(.largeTitle)
                                 .bold()
                         }
-                        Text("Summer 2025 • Div F")
+                        Text("\(selectedSeasonName) • \(selectedDivisionName)")
                             .font(.subheadline)
                             .foregroundColor(.secondary)
                     }
