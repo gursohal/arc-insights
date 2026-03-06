@@ -14,11 +14,11 @@ struct SettingsView: View {
     @State private var isRefreshing = false
     
     var selectedDivision: Division {
-        Division.all.first(where: { $0.id == selectedDivisionID }) ?? Division.all[6]
+        dataManager.availableDivisions.first(where: { $0.id == selectedDivisionID }) ?? Division.fallbackList[6]
     }
     
     var selectedSeason: Season {
-        Season.all.first(where: { $0.id == selectedSeasonID }) ?? Season.all[2]
+        dataManager.availableSeasons.first(where: { $0.id == selectedSeasonID }) ?? Season.fallbackList[0]
     }
     
     var body: some View {
@@ -33,7 +33,7 @@ struct SettingsView: View {
                 
                 Section(header: Text("Division & Season")) {
                     Picker("Division", selection: $selectedDivisionID) {
-                        ForEach(Division.all) { division in
+                        ForEach(dataManager.availableDivisions) { division in
                             Text(division.name).tag(division.id)
                         }
                     }
@@ -42,7 +42,7 @@ struct SettingsView: View {
                     }
                     
                     Picker("Season", selection: $selectedSeasonID) {
-                        ForEach(Season.all) { season in
+                        ForEach(dataManager.availableSeasons) { season in
                             Text(season.name).tag(season.id)
                         }
                     }

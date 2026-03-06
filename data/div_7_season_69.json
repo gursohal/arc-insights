@@ -1,0 +1,305 @@
+{
+  "division_id": 7,
+  "season_id": 69,
+  "division_name": "Div E - Spring 2026",
+  "last_updated": "2026-03-05T18:09:33.896787",
+  "teams": [
+    "SwingKings",
+    "FatehCC-Army",
+    "Super 8",
+    "Power Play",
+    "Super Kings Returns",
+    "Big Shots",
+    "Raging Bulls OG",
+    "Pulikkoottam - Royals",
+    "Blue Caps",
+    "Seattle Sunrisers",
+    "Hunters",
+    "BRCL Greens",
+    "Kirkland Knights",
+    "Northwest Orcas",
+    "Epothum Varutha Padatha Valibar Sangam",
+    "Pulikkoottam - Kings",
+    "Eight Musketers",
+    "Torpedoes",
+    "Seattle Regulars",
+    "SUY Southern Yorkas",
+    "Sheirokom Team",
+    "Seattle United",
+    "Spartan Boys",
+    "Snoqualmie Wolves Timber"
+  ],
+  "batsmen": [],
+  "bowlers": [],
+  "standings": [
+    {
+      "team": "SwingKings",
+      "team_id": "ed9f2921",
+      "rank": "",
+      "matches": "0",
+      "wins": "0",
+      "losses": "0",
+      "points": "0"
+    },
+    {
+      "team": "Pulikkoottam - Kings",
+      "team_id": "bc585bef",
+      "rank": "",
+      "matches": "0",
+      "wins": "0",
+      "losses": "0",
+      "points": "0"
+    },
+    {
+      "team": "Eight Musketers",
+      "team_id": "55c854f2",
+      "rank": "",
+      "matches": "0",
+      "wins": "0",
+      "losses": "0",
+      "points": "0"
+    },
+    {
+      "team": "Torpedoes",
+      "team_id": "ab3ff4bb",
+      "rank": "",
+      "matches": "0",
+      "wins": "0",
+      "losses": "0",
+      "points": "0"
+    },
+    {
+      "team": "Blue Caps",
+      "team_id": "4b41d03a",
+      "rank": "",
+      "matches": "0",
+      "wins": "0",
+      "losses": "0",
+      "points": "0"
+    },
+    {
+      "team": "FatehCC-Army",
+      "team_id": "7803cde7",
+      "rank": "",
+      "matches": "0",
+      "wins": "0",
+      "losses": "0",
+      "points": "0"
+    },
+    {
+      "team": "Super 8",
+      "team_id": "caac4e70",
+      "rank": "",
+      "matches": "0",
+      "wins": "0",
+      "losses": "0",
+      "points": "0"
+    },
+    {
+      "team": "Epothum Varutha Padatha Valibar Sangam",
+      "team_id": "e0c92ede",
+      "rank": "",
+      "matches": "0",
+      "wins": "0",
+      "losses": "0",
+      "points": "0"
+    },
+    {
+      "team": "Seattle Regulars",
+      "team_id": "0eaa8f6f",
+      "rank": "",
+      "matches": "0",
+      "wins": "0",
+      "losses": "0",
+      "points": "0"
+    },
+    {
+      "team": "SUY Southern Yorkas",
+      "team_id": "95e2faac",
+      "rank": "",
+      "matches": "0",
+      "wins": "0",
+      "losses": "0",
+      "points": "0"
+    },
+    {
+      "team": "Seattle Sunrisers",
+      "team_id": "01d7e011",
+      "rank": "",
+      "matches": "0",
+      "wins": "0",
+      "losses": "0",
+      "points": "0"
+    },
+    {
+      "team": "Power Play",
+      "team_id": "7745a65c",
+      "rank": "",
+      "matches": "0",
+      "wins": "0",
+      "losses": "0",
+      "points": "0"
+    },
+    {
+      "team": "Super Kings Returns",
+      "team_id": "37e84e39",
+      "rank": "",
+      "matches": "0",
+      "wins": "0",
+      "losses": "0",
+      "points": "0"
+    },
+    {
+      "team": "Northwest Orcas",
+      "team_id": "d4e4028b",
+      "rank": "",
+      "matches": "0",
+      "wins": "0",
+      "losses": "0",
+      "points": "0"
+    },
+    {
+      "team": "Sheirokom Team",
+      "team_id": "b5ba6dcd",
+      "rank": "",
+      "matches": "0",
+      "wins": "0",
+      "losses": "0",
+      "points": "0"
+    },
+    {
+      "team": "Seattle United",
+      "team_id": "b9de619d",
+      "rank": "",
+      "matches": "0",
+      "wins": "0",
+      "losses": "0",
+      "points": "0"
+    },
+    {
+      "team": "Hunters",
+      "team_id": "fea41cf7",
+      "rank": "",
+      "matches": "0",
+      "wins": "0",
+      "losses": "0",
+      "points": "0"
+    },
+    {
+      "team": "Big Shots",
+      "team_id": "1a41cdfe",
+      "rank": "",
+      "matches": "0",
+      "wins": "0",
+      "losses": "0",
+      "points": "0"
+    },
+    {
+      "team": "Raging Bulls OG",
+      "team_id": "fc502209",
+      "rank": "",
+      "matches": "0",
+      "wins": "0",
+      "losses": "0",
+      "points": "0"
+    },
+    {
+      "team": "Kirkland Knights",
+      "team_id": "2a7bc6d6",
+      "rank": "",
+      "matches": "0",
+      "wins": "0",
+      "losses": "0",
+      "points": "0"
+    },
+    {
+      "team": "Spartan Boys",
+      "team_id": "a2ec835e",
+      "rank": "",
+      "matches": "0",
+      "wins": "0",
+      "losses": "0",
+      "points": "0"
+    },
+    {
+      "team": "Snoqualmie Wolves Timber",
+      "team_id": "87d1228b",
+      "rank": "",
+      "matches": "0",
+      "wins": "0",
+      "losses": "0",
+      "points": "0"
+    },
+    {
+      "team": "BRCL Greens",
+      "team_id": "97cf7c23",
+      "rank": "",
+      "matches": "0",
+      "wins": "0",
+      "losses": "0",
+      "points": "0"
+    },
+    {
+      "team": "Pulikkoottam - Royals",
+      "team_id": "748bdeec",
+      "rank": "",
+      "matches": "0",
+      "wins": "0",
+      "losses": "0",
+      "points": "0"
+    }
+  ],
+  "schedule": [
+    {
+      "match_id": null,
+      "date": "Saturday 03/21/2026",
+      "time": "8:00 AM",
+      "ground": "10:20 AM",
+      "team1": "Hidden Valley Park Field 1",
+      "team2": "Pulikkoottam - Royals",
+      "umpire1": "",
+      "umpire2": "Sharabi Cricketers",
+      "match_type": "Rising Fenix",
+      "winner": "League",
+      "runner_up": "Div D",
+      "loser_points": 0,
+      "winner_points": 30,
+      "status": "completed",
+      "date_parsed": "2026-03-21T00:00:00"
+    },
+    {
+      "match_id": null,
+      "date": "Saturday 03/21/2026",
+      "time": "1:00 PM",
+      "ground": "03:20 PM",
+      "team1": "Hidden Valley Park Field 1",
+      "team2": "SwingKings",
+      "umpire1": "",
+      "umpire2": "FatehCC-Army",
+      "match_type": "Raging Bulls OG",
+      "winner": "League",
+      "runner_up": "Div E",
+      "loser_points": 0,
+      "winner_points": 30,
+      "status": "completed",
+      "date_parsed": "2026-03-21T00:00:00"
+    },
+    {
+      "match_id": null,
+      "date": "Saturday 03/21/2026",
+      "time": "3:30 PM",
+      "ground": "05:50 PM",
+      "team1": "Hidden Valley Park Field 1",
+      "team2": "Raging Bulls OG",
+      "umpire1": "",
+      "umpire2": "Super 8",
+      "match_type": "Big Shots",
+      "winner": "League",
+      "runner_up": "Div E",
+      "loser_points": 0,
+      "winner_points": 30,
+      "status": "completed",
+      "date_parsed": "2026-03-21T00:00:00"
+    }
+  ]
+}

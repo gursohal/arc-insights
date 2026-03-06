@@ -9,8 +9,8 @@ import SwiftUI
 
 struct OnboardingView: View {
     @StateObject private var dataManager = DataManager.shared
-    @State private var selectedDivision: Division = Division.all.first(where: { $0.id == 8 })!
-    @State private var selectedSeason: Season = Season.all.first(where: { $0.id == 66 })!
+    @State private var selectedDivision: Division = Division.fallbackList.first(where: { $0.id == 8 })!
+    @State private var selectedSeason: Season = Season.fallbackList.first(where: { $0.id == 69 })!
     @State private var availableTeams: [String] = []
     @State private var selectedTeam = ""
     @State private var isLoadingTeams = false
@@ -43,7 +43,7 @@ struct OnboardingView: View {
                     
                     Section(header: Text("Select Your Division")) {
                         Picker("Division", selection: $selectedDivision) {
-                            ForEach(Division.all) { division in
+                            ForEach(dataManager.availableDivisions) { division in
                                 Text(division.name).tag(division)
                             }
                         }
@@ -57,7 +57,7 @@ struct OnboardingView: View {
                     
                     Section(header: Text("Select Season")) {
                         Picker("Season", selection: $selectedSeason) {
-                            ForEach(Season.all) { season in
+                            ForEach(dataManager.availableSeasons) { season in
                                 Text(season.name).tag(season)
                             }
                         }
@@ -140,6 +140,19 @@ struct OnboardingView: View {
                 }
                 .navigationTitle("Setup")
                 .navigationBarTitleDisplayMode(.inline)
+                .onAppear {
+                    Task {
+                        // Fetch latest divisions and seasons from ARCL website
+                        await dataManager.fetchAvailableOptions()
+                        
+                        // Update selected season to the first one if current selection is not valid
+                        if !dataManager.availableSeasons.contains(where: { $0.id == selectedSeason.id }) {
+                            if let latestSeason = dataManager.availableSeasons.first {
+                                selectedSeason = latestSeason
+                            }
+                        }
+                    }
+                }
             }
         }
     }

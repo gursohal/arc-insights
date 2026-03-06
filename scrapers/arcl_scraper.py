@@ -157,6 +157,7 @@ def main():
     
     # Define all seasons and divisions
     seasons = [
+        (69, "Spring 2026"),
         (68, "Winter 2025"),
         (67, "Fall 2025"),
         (66, "Summer 2025"),
@@ -186,10 +187,10 @@ def main():
         
         scraper.scrape_multiple_divisions(all_combinations, include_scorecards)
     else:
-        # Default: Just scrape current season (Summer 2025)
+        # Default: Just scrape current season (Spring 2026)
         divisions = []
         for div_id, div_name in zip(division_ids, division_names):
-            divisions.append((div_id, 66, f"Div {div_name} - Summer 2025"))
+            divisions.append((div_id, 69, f"Div {div_name} - Spring 2026"))
         
         scraper.scrape_multiple_divisions(divisions, include_scorecards)
     

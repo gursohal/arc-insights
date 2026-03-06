@@ -20,10 +20,12 @@ class DataManager: ObservableObject {
     @Published var topBowlers: [Player] = []
     @Published var matches: [Match] = []
     @Published var scorecards: [String: Scorecard] = [:] // matchId -> Scorecard
+    @Published var availableDivisions: [Division] = Division.fallbackList
+    @Published var availableSeasons: [Season] = Season.fallbackList
     
     // User preferences
     @AppStorage("selectedDivisionID") private var selectedDivisionID: Int = 8 // Default Div F
-    @AppStorage("selectedSeasonID") private var selectedSeasonID: Int = 66 // Default Summer 2025
+    @AppStorage("selectedSeasonID") private var selectedSeasonID: Int = 69 // Default Spring 2026
     @AppStorage("myTeamName") private var myTeamName: String = "Snoqualmie Wolves Timber"
     @AppStorage("lastDataRefresh") private var lastDataRefreshTimestamp: Double = 0
     @AppStorage("lastManualRefresh") private var lastManualRefreshTimestamp: Double = 0
@@ -98,6 +100,96 @@ class DataManager: ObservableObject {
             dangerousBowlers: dangerousBowlers,
             recommendations: recommendations
         )
+    }
+    
+    // MARK: - Fetch Available Divisions & Seasons
+    
+    func fetchAvailableOptions() async {
+        print("🔍 Fetching available divisions and seasons from ARCL website...")
+        
+        guard let url = URL(string: "https://www.arcl.org/Pages/UI/DivHome.aspx?league_id=8") else {
+            print("❌ Invalid URL")
+            return
+        }
+        
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            guard let html = String(data: data, encoding: .utf8) else {
+                print("❌ Unable to decode HTML")
+                return
+            }
+            
+            // Parse divisions from links like: /Pages/UI/DivHome.aspx?league_id=8&season_id=69
+            var parsedDivisions: [Division] = []
+            var parsedSeasons: [Season] = []
+            
+            // Extract season IDs and names from option elements
+            let seasonPattern = #"<option[^>]*value="(\d+)"[^>]*>(.*?)</option>"#
+            if let seasonRegex = try? NSRegularExpression(pattern: seasonPattern, options: []) {
+                let matches = seasonRegex.matches(in: html, range: NSRange(html.startIndex..., in: html))
+                for match in matches {
+                    if let idRange = Range(match.range(at: 1), in: html),
+                       let nameRange = Range(match.range(at: 2), in: html) {
+                        let id = String(html[idRange])
+                        let name = String(html[nameRange]).trimmingCharacters(in: .whitespacesAndNewlines)
+                        if let seasonId = Int(id), !name.isEmpty {
+                            parsedSeasons.append(Season(id: seasonId, name: name))
+                        }
+                    }
+                }
+            }
+            
+            // Extract division IDs from links
+            let divPattern = #"league_id=(\d+)&season_id=\d+"#
+            if let divRegex = try? NSRegularExpression(pattern: divPattern, options: []) {
+                let matches = divRegex.matches(in: html, range: NSRange(html.startIndex..., in: html))
+                var uniqueDivIds = Set<Int>()
+                for match in matches {
+                    if let idRange = Range(match.range(at: 1), in: html) {
+                        let id = String(html[idRange])
+                        if let divId = Int(id) {
+                            uniqueDivIds.insert(divId)
+                        }
+                    }
+                }
+                
+                // Map IDs to division names
+                let divNames: [Int: String] = [
+                    2: "Womens", 3: "Div A", 4: "Div B", 5: "Div C", 6: "Div D",
+                    7: "Div E", 8: "Div F", 9: "Div G", 10: "Div H", 11: "Div I",
+                    12: "Div J", 13: "Div K", 14: "Div L", 15: "Div M", 16: "Div N",
+                    31: "Kids A", 32: "Kids B", 33: "Kids C", 34: "Kids D"
+                ]
+                
+                parsedDivisions = uniqueDivIds.sorted().compactMap { id in
+                    guard let name = divNames[id] else { return nil }
+                    return Division(id: id, name: name)
+                }
+            }
+            
+            // Remove duplicates and sort
+            parsedSeasons = Array(Set(parsedSeasons)).sorted { $0.id > $1.id }
+            
+            // Update published properties
+            if !parsedDivisions.isEmpty {
+                availableDivisions = parsedDivisions
+                print("✅ Found \(parsedDivisions.count) divisions")
+            }
+            
+            if !parsedSeasons.isEmpty {
+                availableSeasons = parsedSeasons
+                print("✅ Found \(parsedSeasons.count) seasons: \(parsedSeasons.map { $0.name }.joined(separator: ", "))")
+                
+                // Cache to UserDefaults
+                if let encoded = try? JSONEncoder().encode(parsedSeasons) {
+                    UserDefaults.standard.set(encoded, forKey: "cachedSeasons")
+                }
+            }
+            
+        } catch {
+            print("❌ Error fetching divisions/seasons: \(error)")
+            // Use fallback lists (already set as default)
+        }
     }
     
     // MARK: - Data Fetching from GitHub
@@ -454,18 +546,19 @@ struct BowlerJSON: Codable {
 
 // MARK: - Division & Season Models
 
-struct Division: Identifiable, Hashable {
+struct Division: Identifiable, Hashable, Codable {
     let id: Int
     let name: String
 }
 
-struct Season: Identifiable, Hashable {
+struct Season: Identifiable, Hashable, Codable {
     let id: Int
     let name: String
 }
 
 extension Division {
-    static let all = [
+    // Fallback list if fetch fails
+    static let fallbackList = [
         Division(id: 2, name: "Womens"),
         Division(id: 3, name: "Div A"),
         Division(id: 4, name: "Div B"),
@@ -485,7 +578,9 @@ extension Division {
 }
 
 extension Season {
-    static let all = [
+    // Fallback list if fetch fails
+    static let fallbackList = [
+        Season(id: 69, name: "Spring 2026"),
         Season(id: 68, name: "Winter 2025"),
         Season(id: 67, name: "Fall 2025"),
         Season(id: 66, name: "Summer 2025"),
