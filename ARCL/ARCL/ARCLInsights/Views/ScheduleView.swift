@@ -13,7 +13,13 @@ struct ScheduleView: View {
     @State private var showUmpiring = true
     
     var teamMatches: [Match] {
-        dataManager.matches.filter { $0.involves(teamName: myTeamName) }
+        // More flexible team name matching - handles variants like "Snoqualmie Wolves Timber" vs "Snoqualmie Wolves Arctic"
+        let baseTeamName = myTeamName.components(separatedBy: " ").prefix(2).joined(separator: " ")
+        return dataManager.matches.filter { match in
+            match.team1.localizedCaseInsensitiveContains(baseTeamName) ||
+            match.team2.localizedCaseInsensitiveContains(baseTeamName) ||
+            match.involves(teamName: myTeamName)
+        }
     }
     
     var upcomingMatches: [Match] {
