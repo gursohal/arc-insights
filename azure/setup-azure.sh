@@ -34,13 +34,14 @@ echo -e "${NC}"
 
 # Change these values as needed
 RESOURCE_GROUP="arcl-insights-rg"
-LOCATION="westus2"  # Or your preferred region
+LOCATION="westus"  # West US - confirmed available in Portal
 DB_SERVER_NAME="arcl-db-$(date +%s)"  # Unique name with timestamp
 DB_NAME="arcl_insights"
 ADMIN_USER="arcladmin"
 ADMIN_PASSWORD=""  # Will be generated or prompted
 
 # Database configuration
+DB_TIER="Burstable"
 DB_SKU="Standard_B1ms"  # Burstable tier (~$15-20/month)
 DB_STORAGE_SIZE=32  # GB
 DB_VERSION="14"
@@ -113,6 +114,7 @@ az postgres flexible-server create \
     --location $LOCATION \
     --admin-user $ADMIN_USER \
     --admin-password "$ADMIN_PASSWORD" \
+    --tier $DB_TIER \
     --sku-name $DB_SKU \
     --storage-size $DB_STORAGE_SIZE \
     --version $DB_VERSION \
