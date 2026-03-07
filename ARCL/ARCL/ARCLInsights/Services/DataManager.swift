@@ -526,7 +526,7 @@ struct BatsmanJSON: Codable {
     let rank: String
     let name: String
     let team: String
-    let team_id: String
+    let team_id: String?  // Optional - not all data sources have this
     let innings: String
     let runs: String
     let strike_rate: String
@@ -538,7 +538,7 @@ struct BowlerJSON: Codable {
     let rank: String
     let name: String
     let team: String
-    let team_id: String
+    let team_id: String?  // Optional - not all data sources have this
     let overs: String
     let wickets: String
     let economy: String
