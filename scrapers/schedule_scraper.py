@@ -10,10 +10,138 @@ from datetime import datetime
 class ScheduleScraper(BaseScraper):
     """Scraper for match schedule information"""
     
-    def scrape(self, division_id, season_id):
-        """Scrape match schedule for a division"""
+    def scrape(self, division_id, season_id, standings_data=None):
+        """Scrape match schedule for a division by aggregating team schedules"""
+        print(f"  📅 Scraping schedule from team pages...")
+        
+        # If we don't have standings data, fall back to league schedule
+        if not standings_data:
+            print(f"     ⚠️  No standings data provided, falling back to league schedule")
+            return self._scrape_league_schedule(division_id, season_id)
+        
+        # Collect all matches from team-specific pages using numeric team IDs
+        all_matches = {}  # Use dict with match_id as key to avoid duplicates
+        teams_processed = 0
+        
+        for standing in standings_data:
+            team_id = standing.get('team_id')
+            team_name = standing.get('team')
+            
+            if not team_id:
+                continue
+                
+            team_matches = self._scrape_team_schedule(team_id, division_id, season_id, team_name)
+            
+            # Add matches to our collection (using match_id to avoid duplicates)
+            for match in team_matches:
+                match_id = match.get('match_id')
+                if match_id and match_id not in all_matches:
+                    all_matches[match_id] = match
+            
+            teams_processed += 1
+        
+        matches = list(all_matches.values())
+        
+        print(f"     ✓ Found {len(matches)} unique matches from {teams_processed} teams")
+        
+        # Separate upcoming and completed matches
+        completed = [m for m in matches if m["status"] == "completed"]
+        upcoming = [m for m in matches if m["status"] == "upcoming"]
+        
+        print(f"       • {len(completed)} completed, {len(upcoming)} upcoming")
+        
+        return matches
+    
+    def _scrape_team_schedule(self, team_id, division_id, season_id, team_name):
+        """Scrape schedule for a specific team"""
+        url = f"{self.base_url}/Pages/UI/TeamStats.aspx?team_id={team_id}&league_id={division_id}&season_id={season_id}"
+        
+        soup = self.fetch_page(url)
+        if not soup:
+            return []
+        
+        # Get the schedule table (GridView1 - not GridView4 which is summary)
+        table = soup.find('table', {'id': lambda x: x and 'GridView1' in x})
+        if not table:
+            return []
+        
+        rows = table.find_all('tr')[1:]  # Skip header
+        matches = []
+        
+        for row in rows:
+            cols = row.find_all(['td', 'th'])
+            if not cols or len(cols) < 5:
+                continue
+            
+            # Extract text data
+            row_data = [col.get_text(strip=True) for col in cols]
+            
+            # Extract match_id from link (usually in Result column - index 8)
+            match_id = None
+            if len(cols) > 8:
+                result_col = cols[8]
+                link = result_col.find('a')
+                if link and 'href' in link.attrs:
+                    href = link['href']
+                    # Extract match_id from href
+                    if 'match_id=' in href:
+                        try:
+                            match_id = href.split('match_id=')[1].split('&')[0]
+                        except:
+                            pass
+            
+            # Team schedule columns: Team, Opposition, Match Type, Match Date, Match Time, Umpire1, Umpire2, Ground, Result, Points
+            if len(row_data) >= 6:
+                try:
+                    match = {
+                        "match_id": match_id,
+                        "date": row_data[3] if len(row_data) > 3 else "",  # Match Date
+                        "time": row_data[4] if len(row_data) > 4 else "",  # Match Time
+                        "ground": row_data[7] if len(row_data) > 7 else "",
+                        "team1": row_data[0] if len(row_data) > 0 else "",  # Team
+                        "team2": row_data[1] if len(row_data) > 1 else "",  # Opposition
+                        "umpire1": row_data[5] if len(row_data) > 5 else "",
+                        "umpire2": row_data[6] if len(row_data) > 6 else "",
+                        "match_type": row_data[2] if len(row_data) > 2 else "",
+                        "winner": "",
+                        "runner_up": "",
+                        "loser_points": 0,
+                        "winner_points": 30
+                    }
+                    
+                    # Parse result if available
+                    result_text = row_data[8] if len(row_data) > 8 else ""
+                    if result_text and result_text not in ['', ' ', '&nbsp;']:
+                        match["status"] = "completed"
+                        # Result could be "Won" or "Lost" - determine winner
+                        if "Won" in result_text or "won" in result_text:
+                            match["winner"] = match["team1"]
+                            match["runner_up"] = match["team2"]
+                        elif "Lost" in result_text or "lost" in result_text:
+                            match["winner"] = match["team2"]
+                            match["runner_up"] = match["team1"]
+                    else:
+                        match["status"] = "upcoming"
+                    
+                    # Try to parse the date for sorting
+                    try:
+                        # Date format: "Sunday 03/22/2026"
+                        date_str = match["date"].split()[-1]  # Get the date part
+                        match["date_parsed"] = datetime.strptime(date_str, "%m/%d/%Y").isoformat()
+                    except:
+                        match["date_parsed"] = ""
+                    
+                    # Only add matches that have a valid match_id to avoid duplicates
+                    if match_id:
+                        matches.append(match)
+                except Exception as e:
+                    continue
+        
+        return matches
+    
+    def _scrape_league_schedule(self, division_id, season_id):
+        """Fallback: Scrape league-wide schedule (may be incomplete)"""
         url = f"{self.base_url}/Pages/UI/LeagueSchedule.aspx?league_id={division_id}&season_id={season_id}"
-        print(f"  📅 Scraping schedule...")
         
         soup = self.fetch_page(url)
         if not soup:

@@ -1,75 +1,73 @@
 #!/usr/bin/env python3
 """
 ARCL Data Scraper - Main Orchestrator
-Modular architecture with separate scrapers for each data type
+Scrapes ARCL.org and writes directly to Azure PostgreSQL database.
+No JSON files - data flows: ARCL.org → Scraper → PostgreSQL → API → iOS
 """
 
-import json
 import os
+import sys
 from datetime import datetime
 from scrapers import TeamsScraper, BatsmenScraper, BowlersScraper, StandingsScraper, ScheduleScraper, ScorecardScraper
-from scrapers.boundary_aggregator import aggregate_boundaries, merge_boundaries_with_batsmen
-from scrapers.player_aggregator import aggregate_players_from_scorecards
+from scrapers.db_writer import DBWriter
 
 
 class ARCLDataScraper:
     """Main orchestrator for all ARCL data scraping"""
     
-    def __init__(self):
+    def __init__(self, use_db: bool = True):
         self.teams_scraper = TeamsScraper()
         self.batsmen_scraper = BatsmenScraper()
         self.bowlers_scraper = BowlersScraper()
         self.standings_scraper = StandingsScraper()
         self.schedule_scraper = ScheduleScraper()
         self.scorecard_scraper = ScorecardScraper()
+        self.use_db = use_db
+        self.db = DBWriter() if use_db else None
     
     def scrape_division(self, division_id, season_id, division_name, include_scorecards=False):
-        """Scrape all data for a division"""
+        """Scrape all data for a division and write to PostgreSQL"""
         print(f"\n📊 Scraping {division_name} (Div ID: {division_id}, Season: {season_id})")
         print("=" * 60)
         
-        data = {
+        # Scrape standings first (provides numeric team IDs for schedule)
+        standings_data = self.standings_scraper.scrape(division_id, season_id)
+        teams_data = self.teams_scraper.scrape(division_id, season_id)
+        batsmen_data = self.batsmen_scraper.scrape(division_id, season_id, limit=150)
+        bowlers_data = self.bowlers_scraper.scrape(division_id, season_id, limit=150)
+        schedule_data = self.schedule_scraper.scrape(division_id, season_id, standings_data=standings_data)
+
+        print("\n" + "=" * 60)
+        print(f"   📋 {len(teams_data)} teams")
+        print(f"   🏏 {len(batsmen_data)} batsmen")
+        print(f"   ⚡ {len(bowlers_data)} bowlers")
+        print(f"   🏆 {len(standings_data)} standings entries")
+        print(f"   📅 {len(schedule_data)} matches in schedule")
+
+        # Write to database
+        if self.db:
+            print(f"\n💾 Writing to database...")
+            self.db.upsert_division(division_id, season_id, division_name)
+            self.db.upsert_teams(division_id, season_id, standings_data)
+            self.db.upsert_matches(division_id, season_id, schedule_data)
+            if batsmen_data:
+                self.db.upsert_batsmen(division_id, season_id, batsmen_data)
+            if bowlers_data:
+                self.db.upsert_bowlers(division_id, season_id, bowlers_data)
+            print(f"✅ Written to DB: {division_name}")
+        
+        print("=" * 60)
+
+        return {
             "division_id": division_id,
             "season_id": season_id,
             "division_name": division_name,
-            "last_updated": datetime.now().isoformat(),
-            "teams": self.teams_scraper.scrape(division_id, season_id),
-            "batsmen": self.batsmen_scraper.scrape(division_id, season_id, limit=150),  # Increased to capture all teams
-            "bowlers": self.bowlers_scraper.scrape(division_id, season_id, limit=150),  # Increased to capture all teams
-            "standings": self.standings_scraper.scrape(division_id, season_id),
-            "schedule": self.schedule_scraper.scrape(division_id, season_id)
+            "teams": teams_data,
+            "standings": standings_data,
+            "schedule": schedule_data,
+            "batsmen": batsmen_data,
+            "bowlers": bowlers_data,
         }
-        
-        # Save to JSON
-        os.makedirs('data', exist_ok=True)
-        filename = f"data/div_{division_id}_season_{season_id}.json"
-        
-        with open(filename, 'w') as f:
-            json.dump(data, f, indent=2)
-        
-        print("\n" + "=" * 60)
-        print(f"✅ Saved {filename}")
-        print(f"   📋 {len(data['teams'])} teams")
-        print(f"   🏏 {len(data['batsmen'])} batsmen")
-        print(f"   ⚡ {len(data['bowlers'])} bowlers")
-        print(f"   🏆 {len(data['standings'])} standings entries")
-        print(f"   📅 {len(data['schedule'])} matches in schedule")
-        print("=" * 60)
-        
-        # Scrape scorecards if requested
-        if include_scorecards:
-            self.scrape_scorecards(division_id, season_id, division_name, data['schedule'], data['teams'])
-            
-            # Reload the data file to get updated player stats
-            if os.path.exists(filename):
-                with open(filename, 'r') as f:
-                    data = json.load(f)
-                
-                print(f"\n🔄 Reloaded data with scorecard-based player stats:")
-                print(f"   🏏 {len(data.get('batsmen', []))} batsmen")
-                print(f"   ⚡ {len(data.get('bowlers', []))} bowlers")
-        
-        return data
     
     def scrape_scorecards(self, division_id, season_id, division_name, schedule, teams_list):
         """Scrape all scorecards for a division and aggregate player data"""
@@ -152,48 +150,51 @@ class ARCLDataScraper:
 
 
 def main():
-    import sys
-    scraper = ARCLDataScraper()
-    
-    # Define all seasons and divisions
-    seasons = [
-        (69, "Spring 2026"),
-        (68, "Winter 2025"),
-        (67, "Fall 2025"),
-        (66, "Summer 2025"),
-        (65, "Spring 2025"),
-        (64, "Fall 2024"),
-        (63, "Summer 2024"),
+    # All seasons - add new seasons here as they are created
+    SEASONS = [
+        (69, "Spring 2026", True),   # Current season
+        (68, "Winter 2025", False),
+        (67, "Fall 2025", False),
+        (66, "Summer 2025", False),
+        (65, "Spring 2025", False),
+        (64, "Fall 2024", False),
+        (63, "Summer 2024", False),
     ]
-    
-    division_ids = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
-    division_names = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N"]
-    
-    # Check for flags
-    include_scorecards = "--scorecards" in sys.argv
-    
-    if include_scorecards:
-        print("\n🎯 Scorecard scraping ENABLED")
-        print("   This will scrape detailed match scorecards and boundary data")
-        print("   Estimated time: ~24 minutes for all divisions\n")
-    
-    # Check if --all-seasons flag is provided
+    CURRENT_SEASON_ID = 69
+
+    DIVISION_IDS   = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+    DIVISION_NAMES = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N"]
+
+    use_db = "--no-db" not in sys.argv
+    scraper = ARCLDataScraper(use_db=use_db)
+
+    # Seed all seasons into DB
+    if use_db:
+        print("🌱 Seeding seasons into database...")
+        for season_id, season_name, is_current in SEASONS:
+            scraper.db.upsert_season(season_id, season_name, is_current)
+        print("✅ Seasons seeded")
+
     if "--all-seasons" in sys.argv:
         print("\n🌍 Scraping ALL seasons and divisions...")
-        all_combinations = []
-        for season_id, season_name in seasons:
-            for div_id, div_name in zip(division_ids, division_names):
-                all_combinations.append((div_id, season_id, f"Div {div_name} - {season_name}"))
-        
-        scraper.scrape_multiple_divisions(all_combinations, include_scorecards)
+        for season_id, season_name, _ in SEASONS:
+            for div_id, div_name in zip(DIVISION_IDS, DIVISION_NAMES):
+                try:
+                    scraper.scrape_division(div_id, season_id, f"Div {div_name} - {season_name}")
+                except Exception as e:
+                    print(f"❌ Error: Div {div_name} Season {season_id}: {e}")
     else:
-        # Default: Just scrape current season (Spring 2026)
-        divisions = []
-        for div_id, div_name in zip(division_ids, division_names):
-            divisions.append((div_id, 69, f"Div {div_name} - Spring 2026"))
-        
-        scraper.scrape_multiple_divisions(divisions, include_scorecards)
-    
+        # Default: scrape current season only
+        print(f"\n🏏 Scraping current season: {SEASONS[0][1]} (season_id={CURRENT_SEASON_ID})")
+        for div_id, div_name in zip(DIVISION_IDS, DIVISION_NAMES):
+            try:
+                scraper.scrape_division(div_id, CURRENT_SEASON_ID, f"Div {div_name} - {SEASONS[0][1]}")
+            except Exception as e:
+                print(f"❌ Error: Div {div_name}: {e}")
+
+    if use_db and scraper.db:
+        scraper.db.close()
+
     print("\n🎉 All scraping complete!")
 
 

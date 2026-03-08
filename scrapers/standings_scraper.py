@@ -20,7 +20,7 @@ class StandingsScraper(BaseScraper):
         return hash_obj.hexdigest()[:8]
     
     def scrape(self, division_id, season_id):
-        """Scrape league standings from DivHome page"""
+        """Scrape league standings from DivHome page with numeric team IDs"""
         url = f"{self.base_url}/Pages/UI/DivHome.aspx?teams_stats_type_id=1&season_id={season_id}&league_id={division_id}"
         print(f"  🏆 Scraping standings...")
         
@@ -29,22 +29,51 @@ class StandingsScraper(BaseScraper):
             return []
         
         # Find the Overall Standings table
-        table_data = self.extract_table_data(soup, 'GridViewOverall')
-        standings = []
+        table = soup.find('table', {'id': lambda x: x and 'GridViewOverall' in x})
+        if not table:
+            return []
         
-        for row in table_data:
-            if len(row) >= 5:
+        standings = []
+        rows = table.find_all('tr')[1:]  # Skip header
+        
+        for row in rows:
+            cols = row.find_all(['td', 'th'])
+            if not cols or len(cols) < 5:
+                continue
+            
+            # Extract team name and numeric team_id from link
+            team_col = cols[0]
+            link = team_col.find('a')
+            
+            team_name = team_col.get_text(strip=True)
+            team_id = None
+            
+            # Extract numeric team_id from href like "TeamStats.aspx?team_id=7688&league_id=..."
+            if link and 'href' in link.attrs:
+                href = link['href']
+                if 'team_id=' in href:
+                    try:
+                        team_id = href.split('team_id=')[1].split('&')[0]
+                    except:
+                        pass
+            
+            # Fall back to hash ID if numeric ID not found
+            if not team_id:
+                team_id = self.generate_team_id(team_name, division_id, season_id)
+            
+            # Extract other data
+            row_data = [col.get_text(strip=True) for col in cols]
+            
+            if len(row_data) >= 5:
                 try:
-                    team_name = row[0]
-                    team_id = self.generate_team_id(team_name, division_id, season_id)
                     standings.append({
                         "team": team_name,
-                        "team_id": team_id,
-                        "rank": row[1],
-                        "matches": row[2],
-                        "wins": row[3],
-                        "losses": row[4],
-                        "points": row[8] if len(row) > 8 else "0"
+                        "team_id": team_id,  # Now a numeric ID
+                        "rank": row_data[1],
+                        "matches": row_data[2],
+                        "wins": row_data[3],
+                        "losses": row_data[4],
+                        "points": row_data[8] if len(row_data) > 8 else "0"
                     })
                 except Exception as e:
                     continue
