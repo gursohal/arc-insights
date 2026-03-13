@@ -164,9 +164,11 @@ class DataManager: ObservableObject {
         do {
             let seasonsResp = try await api.fetchSeasons()
             if !seasonsResp.isEmpty {
-                availableSeasons = seasonsResp.map { Season(id: $0.seasonId, name: $0.name) }
+                let allSeasons = seasonsResp.map { Season(id: $0.seasonId, name: $0.name) }
                     .sorted { $0.id > $1.id }
-                print("✅ Found \(availableSeasons.count) seasons from API")
+                // Only show Spring/Summer — ARCL doesn't play Fall/Winter
+                availableSeasons = Season.filterActive(allSeasons)
+                print("✅ Found \(availableSeasons.count) active seasons from API")
             }
 
             // Use current season to get divisions
@@ -388,13 +390,18 @@ extension Division {
 }
 
 extension Season {
+    /// Only Spring and Summer seasons — ARCL doesn't play in Fall/Winter
     static let fallbackList = [
         Season(id: 69, name: "Spring 2026"),
-        Season(id: 68, name: "Winter 2025"),
-        Season(id: 67, name: "Fall 2025"),
         Season(id: 66, name: "Summer 2025"),
         Season(id: 65, name: "Spring 2025"),
-        Season(id: 64, name: "Fall 2024"),
         Season(id: 63, name: "Summer 2024"),
     ]
+
+    /// Filter to only Spring/Summer seasons (ARCL active seasons)
+    static func filterActive(_ seasons: [Season]) -> [Season] {
+        seasons.filter { s in
+            s.name.lowercased().contains("spring") || s.name.lowercased().contains("summer")
+        }
+    }
 }
