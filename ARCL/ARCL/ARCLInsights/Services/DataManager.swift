@@ -303,6 +303,18 @@ class DataManager: ObservableObject {
     func updateMyTeam(_ teamName: String) {
         myTeamName = teamName
     }
+
+    // MARK: - Fetch team names for a given division/season (used by onboarding)
+
+    func fetchTeamNames(divisionID: Int, seasonID: Int) async -> [String] {
+        do {
+            let standings = try await api.fetchStandings(divisionId: divisionID, seasonId: seasonID)
+            return standings.map { $0.name }.sorted()
+        } catch {
+            print("⚠️ Could not fetch team names: \(error.localizedDescription)")
+            return []
+        }
+    }
 }
 
 // MARK: - Division & Season Models
