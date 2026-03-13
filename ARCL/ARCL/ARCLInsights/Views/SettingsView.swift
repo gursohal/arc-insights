@@ -9,15 +9,10 @@ struct SettingsView: View {
     @EnvironmentObject var dataManager: DataManager
     @ObservedObject var storeManager = StoreManager.shared
     @AppStorage("selectedDivisionID") private var selectedDivisionID = 8
-    @AppStorage("selectedSeasonID") private var selectedSeasonID = 66
+    @AppStorage("selectedSeasonID") private var selectedSeasonID = 69
     @AppStorage("myTeamName") private var myTeamName = "Snoqualmie Wolves"
-    @AppStorage("autoRefresh") private var autoRefresh = true
     @State private var isRefreshing = false
     @State private var isRestoringPurchases = false
-    
-    var selectedDivision: Division {
-        dataManager.availableDivisions.first(where: { $0.id == selectedDivisionID }) ?? Division.fallbackList[6]
-    }
     
     var selectedSeason: Season {
         dataManager.availableSeasons.first(where: { $0.id == selectedSeasonID }) ?? Season.fallbackList[0]
@@ -26,13 +21,23 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             Form {
+                // MARK: - My Team
                 Section(header: Text("My Team")) {
-                    TextField("Team Name", text: $myTeamName)
-                        .onChange(of: myTeamName) {
-                            dataManager.updateMyTeam(myTeamName)
+                    Picker("Team", selection: $myTeamName) {
+                        if dataManager.teams.isEmpty {
+                            Text(myTeamName).tag(myTeamName)
+                        } else {
+                            ForEach(dataManager.teams.map(\.name).sorted(), id: \.self) { name in
+                                Text(name).tag(name)
+                            }
                         }
+                    }
+                    .onChange(of: myTeamName) {
+                        dataManager.updateMyTeam(myTeamName)
+                    }
                 }
                 
+                // MARK: - Division & Season
                 Section(header: Text("Division & Season")) {
                     Picker("Division", selection: $selectedDivisionID) {
                         ForEach(dataManager.availableDivisions) { division in
@@ -53,25 +58,8 @@ struct SettingsView: View {
                     }
                 }
                 
-                Section(header: Text("Data Refresh")) {
-                    if let lastUpdate = dataManager.lastUpdate {
-                        HStack {
-                            Text("Last Updated")
-                            Spacer()
-                            Text(lastUpdate, style: .relative)
-                                .foregroundColor(.secondary)
-                        }
-                    }
-                    
-                    // Refresh cooldown status
-                    HStack {
-                        Text("Manual Refresh Cooldown")
-                        Spacer()
-                        Text(dataManager.timeUntilNextManualRefresh())
-                            .foregroundColor(dataManager.canManualRefreshNow() ? .green : .orange)
-                            .font(.caption)
-                    }
-                    
+                // MARK: - Data
+                Section {
                     Button(action: {
                         Task {
                             isRefreshing = true
@@ -80,37 +68,25 @@ struct SettingsView: View {
                         }
                     }) {
                         HStack {
+                            Label("Refresh Data", systemImage: "arrow.clockwise")
+                            Spacer()
                             if isRefreshing {
                                 ProgressView()
                                     .progressViewStyle(.circular)
+                            } else if let lastUpdate = dataManager.lastUpdate {
+                                Text(lastUpdate, style: .relative)
+                                    .font(.caption)
+                                    .foregroundColor(.secondary)
                             }
-                            Text(dataManager.canManualRefreshNow() ? "Refresh Now" : "Cooldown Active")
-                            Spacer()
-                            Image(systemName: "arrow.clockwise")
                         }
                     }
                     .disabled(isRefreshing || !dataManager.canManualRefreshNow())
-                    
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text("• Automatic refresh: Weekly when app opens")
-                        Text("• Manual refresh: Limited to once every 6 hours")
-                    }
-                    .font(.caption)
-                    .foregroundColor(.secondary)
                 }
                 
                 // MARK: - Season Pass
                 Section(header: Text("Season Pass")) {
-                    // Current status
                     HStack {
-                        Text("Current Season")
-                        Spacer()
                         Text(selectedSeason.name)
-                            .foregroundColor(.secondary)
-                    }
-
-                    HStack {
-                        Text("Status")
                         Spacer()
                         if storeManager.isSeasonUnlocked(selectedSeasonID) {
                             Label("Unlocked", systemImage: "checkmark.seal.fill")
@@ -122,19 +98,7 @@ struct SettingsView: View {
                                 .font(.caption)
                         }
                     }
-
-                    // Purchased seasons list
-                    if !storeManager.purchasedSeasons.isEmpty {
-                        HStack {
-                            Text("Purchased Seasons")
-                            Spacer()
-                            Text(storeManager.purchasedSeasons.sorted().map { "S\($0)" }.joined(separator: ", "))
-                                .font(.caption)
-                                .foregroundColor(.secondary)
-                        }
-                    }
-
-                    // Restore purchases
+                    
                     Button(action: {
                         Task {
                             isRestoringPurchases = true
@@ -143,70 +107,49 @@ struct SettingsView: View {
                         }
                     }) {
                         HStack {
-                            if isRestoringPurchases {
-                                ProgressView()
-                                    .progressViewStyle(.circular)
-                            }
                             Text("Restore Purchases")
                             Spacer()
-                            Image(systemName: "arrow.clockwise.circle")
+                            if isRestoringPurchases {
+                                ProgressView().progressViewStyle(.circular)
+                            }
                         }
                     }
                     .disabled(isRestoringPurchases)
-
-                    if let error = storeManager.purchaseError {
-                        Text(error)
-                            .font(.caption)
-                            .foregroundColor(.red)
-                    }
-
+                    
                     #if DEBUG
-                    // Debug buttons for testing
-                    Button("🔓 Debug: Unlock Current Season") {
+                    Button("🔓 Debug: Unlock Season") {
                         storeManager.debugUnlockSeason(selectedSeasonID)
                     }
-                    Button("🔒 Debug: Reset All Purchases") {
+                    Button("🔒 Debug: Reset Purchases") {
                         storeManager.debugResetPurchases()
                     }
                     .foregroundColor(.red)
                     #endif
                 }
-
-                Section(header: Text("About")) {
-                    HStack {
-                        Text("Version")
-                        Spacer()
-                        Text("1.0.0")
-                            .foregroundColor(.secondary)
-                    }
-                    
+                
+                // MARK: - About
+                Section {
                     Link(destination: URL(string: "https://arcl.org")!) {
                         HStack {
                             Text("ARCL Website")
                             Spacer()
                             Image(systemName: "arrow.up.right")
                                 .font(.caption)
+                                .foregroundColor(.secondary)
                         }
                     }
-                }
-                
-                Section {
-                    Button(role: .destructive, action: {
-                        // Clear all data and reset
-                        UserDefaults.standard.set(false, forKey: "onboardingComplete")
-                        UserDefaults.standard.removeObject(forKey: "cachedTeams")
-                        UserDefaults.standard.removeObject(forKey: "cachedBatsmen")
-                        UserDefaults.standard.removeObject(forKey: "cachedBowlers")
-                        UserDefaults.standard.set(0, forKey: "lastDataRefresh")
-                    }) {
-                        Text("Reset App")
+                    
+                    HStack {
+                        Text("Version")
+                        Spacer()
+                        Text("1.0.0")
+                            .foregroundColor(.secondary)
                     }
                 }
             }
             .navigationTitle("Settings")
         }
     }
-    
 }
 
 #Preview {
