@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Combine
 import StoreKit
 
 @MainActor
@@ -140,7 +141,7 @@ class StoreManager: ObservableObject {
 
     // MARK: - Verification
 
-    private func checkVerified<T>(_ result: VerificationResult<T>) throws -> T {
+    nonisolated private func checkVerified<T>(_ result: VerificationResult<T>) throws -> T {
         switch result {
         case .unverified(_, let error):
             throw error
