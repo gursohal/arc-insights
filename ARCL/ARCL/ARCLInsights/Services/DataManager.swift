@@ -133,9 +133,11 @@ class DataManager: ObservableObject {
                     umpire1: m.umpire1 ?? "",
                     umpire2: m.umpire2 ?? "",
                     matchType: m.matchType,
-                    status: m.status,
                     winner: m.winner ?? "",
-                    runnerUp: m.runnerUp ?? ""
+                    runnerUp: m.runnerUp ?? "",
+                    status: MatchStatus(rawValue: m.status) ?? .upcoming,
+                    winnerPoints: m.winnerPoints,
+                    loserPoints: m.loserPoints
                 )
             }
 
