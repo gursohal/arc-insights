@@ -175,7 +175,7 @@ class DataManager: ObservableObject {
             let currentSeasonId = availableSeasons.first?.id ?? selectedSeasonID
             let divisionsResp = try await api.fetchDivisions(seasonId: currentSeasonId)
             if !divisionsResp.isEmpty {
-                availableDivisions = divisionsResp.map { Division(id: $0.divisionId, name: $0.name) }
+                availableDivisions = divisionsResp.map { Division(id: $0.divisionId, name: Division.cleanName($0.name)) }
                     .sorted { $0.id < $1.id }
                 print("✅ Found \(availableDivisions.count) divisions from API")
             }
@@ -331,7 +331,7 @@ class DataManager: ObservableObject {
         do {
             let divisionsResp = try await api.fetchDivisions(seasonId: seasonId)
             if !divisionsResp.isEmpty {
-                availableDivisions = divisionsResp.map { Division(id: $0.divisionId, name: $0.name) }
+                availableDivisions = divisionsResp.map { Division(id: $0.divisionId, name: Division.cleanName($0.name)) }
                     .sorted { $0.id < $1.id }
                 print("✅ Loaded \(availableDivisions.count) divisions for season \(seasonId)")
             }
@@ -370,6 +370,18 @@ struct Season: Identifiable, Hashable, Codable {
 }
 
 extension Division {
+    /// Strip season suffix from API names like "Div E – Spring 2026" → "Div E"
+    static func cleanName(_ rawName: String) -> String {
+        // Split on " – " (em dash) or " - " (regular dash)
+        if let range = rawName.range(of: " – ") {
+            return String(rawName[rawName.startIndex..<range.lowerBound]).trimmingCharacters(in: .whitespaces)
+        }
+        if let range = rawName.range(of: " - ") {
+            return String(rawName[rawName.startIndex..<range.lowerBound]).trimmingCharacters(in: .whitespaces)
+        }
+        return rawName
+    }
+
     static let fallbackList = [
         Division(id: 2,  name: "Womens"),
         Division(id: 3,  name: "Div A"),
