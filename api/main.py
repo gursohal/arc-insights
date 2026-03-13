@@ -154,7 +154,7 @@ def get_batsmen(
                bs.fours, bs.sixes, bs.fifties, bs.hundreds, bs.highest_score
         FROM batting_stats bs
         JOIN players p ON bs.player_id = p.player_id
-        LEFT JOIN teams t ON p.team_id = t.team_id AND t.season_id = bs.season_id
+        LEFT JOIN teams t ON p.team_id = t.team_id
         WHERE bs.division_id = %s AND bs.season_id = %s
         ORDER BY bs.runs DESC, bs.average DESC NULLS LAST
         LIMIT %s
@@ -177,7 +177,7 @@ def get_bowlers(
                bw.four_wickets, bw.five_wickets
         FROM bowling_stats bw
         JOIN players p ON bw.player_id = p.player_id
-        LEFT JOIN teams t ON p.team_id = t.team_id AND t.season_id = bw.season_id
+        LEFT JOIN teams t ON p.team_id = t.team_id
         WHERE bw.division_id = %s AND bw.season_id = %s
         ORDER BY bw.wickets DESC, bw.economy ASC NULLS LAST
         LIMIT %s
