@@ -35,6 +35,9 @@ struct TeamsListView: View {
             }
             .navigationTitle("\(divisionName) Teams")
             .searchable(text: $searchText, prompt: "Search teams")
+            .refreshable {
+                await dataManager.refreshData()
+            }
         }
     }
 }

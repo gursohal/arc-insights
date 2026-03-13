@@ -70,6 +70,9 @@ struct PredictionsView: View {
             }
             .navigationTitle("Predictions")
             .navigationBarTitleDisplayMode(.inline)
+            .refreshable {
+                await dataManager.refreshData()
+            }
         }
     }
 

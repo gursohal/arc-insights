@@ -248,6 +248,9 @@ struct OpponentAnalysisView: View {
         }
         .navigationTitle("Analysis")
         .navigationBarTitleDisplayMode(.inline)
+        .refreshable {
+            await dataManager.refreshData()
+        }
     }
 }
 

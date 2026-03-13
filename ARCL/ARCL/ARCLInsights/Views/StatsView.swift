@@ -29,6 +29,9 @@ struct StatsView: View {
                 }
             }
             .navigationTitle("Division Stats")
+            .refreshable {
+                await dataManager.refreshData()
+            }
         }
     }
 }

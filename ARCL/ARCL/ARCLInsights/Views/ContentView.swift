@@ -120,6 +120,9 @@ struct HomeView: View {
                     Spacer()
                 }
             }
+            .refreshable {
+                await dataManager.refreshData()
+            }
             .navigationBarHidden(true)
         }
     }
