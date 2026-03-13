@@ -214,33 +214,62 @@ struct PredictionsView: View {
                         Divider()
                             .padding(.vertical, 8)
                         
-                        let myForm = InsightEngine.shared.analyzeTeamForm(
-                            teamName: myTeam.name,
-                            matches: dataManager.matches
-                        )
+                        // Check if any matches have been completed this season
+                        let completedMatches = dataManager.matches.filter { $0.status == .completed }
                         
-                        let opponentForm = InsightEngine.shared.analyzeTeamForm(
-                            teamName: opponentTeam.name,
-                            matches: dataManager.matches
-                        )
-                        
-                        let prediction = InsightEngine.shared.predictMatch(
-                            myTeam: myTeam,
-                            opponentTeam: opponentTeam,
-                            myForm: myForm,
-                            opponentForm: opponentForm,
-                            allTeams: dataManager.teams,
-                            matches: dataManager.matches,
-                            players: dataManager.topBatsmen + dataManager.topBowlers,
-                            selectedGround: selectedGround.isEmpty ? nil : selectedGround
-                        )
-                        
-                        PredictionCard(
-                            prediction: prediction,
-                            mustWin: prediction.mustWin,
-                            myTeamName: myTeam.name
-                        )
-                        .padding(.horizontal)
+                        if completedMatches.isEmpty {
+                            // No data yet — season hasn't started
+                            VStack(alignment: .leading, spacing: 12) {
+                                HStack {
+                                    Text("🔮 MATCH PREDICTION")
+                                        .font(.headline)
+                                    Spacer()
+                                }
+                                
+                                HStack(alignment: .top, spacing: 12) {
+                                    Image(systemName: "info.circle.fill")
+                                        .foregroundColor(.gray)
+                                    Text("No match data available yet. Predictions will be available once the season begins and matches are completed.")
+                                        .font(.subheadline)
+                                        .foregroundColor(.secondary)
+                                }
+                                .padding()
+                                .background(Color.gray.opacity(0.1))
+                                .cornerRadius(8)
+                            }
+                            .padding()
+                            .background(Color(.systemGray6))
+                            .cornerRadius(12)
+                            .padding(.horizontal)
+                        } else {
+                            let myForm = InsightEngine.shared.analyzeTeamForm(
+                                teamName: myTeam.name,
+                                matches: dataManager.matches
+                            )
+                            
+                            let opponentForm = InsightEngine.shared.analyzeTeamForm(
+                                teamName: opponentTeam.name,
+                                matches: dataManager.matches
+                            )
+                            
+                            let prediction = InsightEngine.shared.predictMatch(
+                                myTeam: myTeam,
+                                opponentTeam: opponentTeam,
+                                myForm: myForm,
+                                opponentForm: opponentForm,
+                                allTeams: dataManager.teams,
+                                matches: dataManager.matches,
+                                players: dataManager.topBatsmen + dataManager.topBowlers,
+                                selectedGround: selectedGround.isEmpty ? nil : selectedGround
+                            )
+                            
+                            PredictionCard(
+                                prediction: prediction,
+                                mustWin: prediction.mustWin,
+                                myTeamName: myTeam.name
+                            )
+                            .padding(.horizontal)
+                        }
                     }
                 }
                 .padding(.vertical)
