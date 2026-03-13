@@ -317,7 +317,25 @@ class DataManager: ObservableObject {
 
     func updateSeason(_ seasonID: Int) {
         selectedSeasonID = seasonID
-        Task { await refreshData() }
+        Task {
+            // Reload divisions for the new season, then refresh data
+            await fetchDivisionsForSeason(seasonID)
+            await refreshData()
+        }
+    }
+
+    /// Fetch divisions for a specific season (called when season changes)
+    func fetchDivisionsForSeason(_ seasonId: Int) async {
+        do {
+            let divisionsResp = try await api.fetchDivisions(seasonId: seasonId)
+            if !divisionsResp.isEmpty {
+                availableDivisions = divisionsResp.map { Division(id: $0.divisionId, name: $0.name) }
+                    .sorted { $0.id < $1.id }
+                print("✅ Loaded \(availableDivisions.count) divisions for season \(seasonId)")
+            }
+        } catch {
+            print("⚠️ Could not fetch divisions for season \(seasonId): \(error.localizedDescription)")
+        }
     }
 
     func updateMyTeam(_ teamName: String) {

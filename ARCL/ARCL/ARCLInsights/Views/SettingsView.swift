@@ -8,8 +8,8 @@ import SwiftUI
 struct SettingsView: View {
     @EnvironmentObject var dataManager: DataManager
     @ObservedObject var storeManager = StoreManager.shared
-    @AppStorage("selectedDivisionID") private var selectedDivisionID = 8
     @AppStorage("selectedSeasonID") private var selectedSeasonID = 69
+    @AppStorage("selectedDivisionID") private var selectedDivisionID = 8
     @AppStorage("myTeamName") private var myTeamName = "Snoqualmie Wolves"
     @State private var isRestoringPurchases = false
     
@@ -20,7 +20,33 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             Form {
-                // MARK: - My Team
+                // MARK: - Season first (drives everything else)
+                Section(header: Text("Season")) {
+                    Picker("Season", selection: $selectedSeasonID) {
+                        ForEach(dataManager.availableSeasons) { season in
+                            Text(season.name).tag(season.id)
+                        }
+                    }
+                    .onChange(of: selectedSeasonID) {
+                        // Season changed → reload divisions for this season, then data
+                        dataManager.updateSeason(selectedSeasonID)
+                    }
+                }
+                
+                // MARK: - Division (loaded based on season)
+                Section(header: Text("Division")) {
+                    Picker("Division", selection: $selectedDivisionID) {
+                        ForEach(dataManager.availableDivisions) { division in
+                            Text(division.name).tag(division.id)
+                        }
+                    }
+                    .onChange(of: selectedDivisionID) {
+                        // Division changed → reload teams/data
+                        dataManager.updateDivision(selectedDivisionID)
+                    }
+                }
+                
+                // MARK: - My Team (loaded based on division + season)
                 Section(header: Text("My Team")) {
                     Picker("Team", selection: $myTeamName) {
                         if dataManager.teams.isEmpty {
@@ -33,27 +59,6 @@ struct SettingsView: View {
                     }
                     .onChange(of: myTeamName) {
                         dataManager.updateMyTeam(myTeamName)
-                    }
-                }
-                
-                // MARK: - Division & Season
-                Section(header: Text("Division & Season")) {
-                    Picker("Division", selection: $selectedDivisionID) {
-                        ForEach(dataManager.availableDivisions) { division in
-                            Text(division.name).tag(division.id)
-                        }
-                    }
-                    .onChange(of: selectedDivisionID) {
-                        dataManager.updateDivision(selectedDivisionID)
-                    }
-                    
-                    Picker("Season", selection: $selectedSeasonID) {
-                        ForEach(dataManager.availableSeasons) { season in
-                            Text(season.name).tag(season.id)
-                        }
-                    }
-                    .onChange(of: selectedSeasonID) {
-                        dataManager.updateSeason(selectedSeasonID)
                     }
                 }
                 
