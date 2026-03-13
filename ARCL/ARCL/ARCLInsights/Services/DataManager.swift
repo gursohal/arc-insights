@@ -41,6 +41,7 @@ class DataManager: ObservableObject {
     @AppStorage("lastManualRefresh")  private var lastManualRefreshTimestamp: Double = 0
 
     private let api = ARCLAPIService.shared
+    private var isRefreshing = false
 
     var lastDataRefresh: Date? {
         guard lastDataRefreshTimestamp > 0 else { return nil }
@@ -50,9 +51,18 @@ class DataManager: ObservableObject {
     // MARK: - Refresh: all data for the selected division + season
 
     func refreshData() async {
+        // Skip if a refresh is already in progress (avoids "cancelled" URLSession errors)
+        guard !isRefreshing else {
+            print("⏳ Refresh already in progress, skipping duplicate call")
+            return
+        }
+        isRefreshing = true
         isLoading = true
         errorMessage = nil
-        defer { isLoading = false }
+        defer {
+            isLoading = false
+            isRefreshing = false
+        }
 
         do {
             // Fetch teams / standings
