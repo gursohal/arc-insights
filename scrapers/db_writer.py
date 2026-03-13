@@ -148,6 +148,18 @@ class DBWriter:
     # ────────────────────────────────────────────
     # PLAYER STATS
     # ────────────────────────────────────────────
+    def _resolve_team_id(self, cur, team_name: str, division_id: int, season_id: int):
+        """Look up team_id from teams table by name + division + season"""
+        if not team_name:
+            return None
+        cur.execute("""
+            SELECT team_id FROM teams
+            WHERE LOWER(name) = LOWER(%s) AND division_id = %s AND season_id = %s
+            LIMIT 1
+        """, (team_name.strip(), division_id, season_id))
+        row = cur.fetchone()
+        return row["team_id"] if row else None
+
     def upsert_batsmen(self, division_id: int, season_id: int, batsmen: list):
         """Write batting stats"""
         with self._cursor() as cur:
@@ -157,7 +169,10 @@ class DBWriter:
                     continue
                 # Use name+team+season as player_id if no explicit one
                 player_id = b.get("player_id") or f"{name.lower().replace(' ', '_')}_{season_id}"
-                team_id = b.get("team_id") or None
+                # Resolve team_id from team name if not provided
+                team_id = b.get("team_id") or self._resolve_team_id(
+                    cur, b.get("team", ""), division_id, season_id
+                )
 
                 # Upsert player record
                 cur.execute("""
@@ -211,7 +226,10 @@ class DBWriter:
                 if not name:
                     continue
                 player_id = b.get("player_id") or f"{name.lower().replace(' ', '_')}_{season_id}"
-                team_id = b.get("team_id") or None
+                # Resolve team_id from team name if not provided
+                team_id = b.get("team_id") or self._resolve_team_id(
+                    cur, b.get("team", ""), division_id, season_id
+                )
 
                 cur.execute("""
                     INSERT INTO players (player_id, name, team_id)
