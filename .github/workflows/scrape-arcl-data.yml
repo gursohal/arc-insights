@@ -2,10 +2,8 @@ name: Scrape ARCL Data → Azure PostgreSQL
 
 on:
   schedule:
-    # Every Sunday at 11 PM PST (7 AM UTC Monday)
-    - cron: '0 7 * * 1'
-    # Also Wednesday at 11 PM PST for mid-week updates
-    - cron: '0 7 * * 4'
+    # Every Monday at 6 AM PT (1 PM UTC) — after weekend matches are complete
+    - cron: '0 13 * * 1'
   workflow_dispatch:
     inputs:
       all_seasons:

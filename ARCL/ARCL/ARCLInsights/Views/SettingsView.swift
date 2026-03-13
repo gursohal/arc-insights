@@ -102,7 +102,7 @@ struct SettingsView: View {
                 }
                 
                 // MARK: - About
-                Section {
+                Section(footer: Text("Stats update every Monday morning after weekend matches are complete.")) {
                     Link(destination: URL(string: "https://arcl.org")!) {
                         HStack {
                             Text("ARCL Website")

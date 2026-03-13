@@ -254,10 +254,30 @@ class DataManager: ObservableObject {
     // MARK: - Refresh policy
 
     func shouldRefreshData() -> Bool {
-        if teams.isEmpty || topBatsmen.isEmpty || topBowlers.isEmpty { return true }
+        if teams.isEmpty { return true }
         guard let lastRefresh = lastDataRefresh else { return true }
-        let sevenDaysAgo = Calendar.current.date(byAdding: .day, value: -7, to: Date())!
-        return lastRefresh < sevenDaysAgo
+        // Refresh if data is from before the most recent Monday 6 AM PT
+        // (scraper runs every Monday at 6 AM PT after weekend matches)
+        let lastMonday = Self.lastMondayMorning()
+        return lastRefresh < lastMonday
+    }
+
+    /// Returns the most recent Monday at 6 AM PT
+    static func lastMondayMorning() -> Date {
+        let cal = Calendar.current
+        let now = Date()
+        let weekday = cal.component(.weekday, from: now) // 1=Sun, 2=Mon, ...
+        let hour = cal.component(.hour, from: now)
+
+        // Days since last Monday
+        var daysSinceMonday = (weekday + 5) % 7 // Mon=0, Tue=1, ..., Sun=6
+        // If it's Monday but before 6 AM, use previous Monday
+        if daysSinceMonday == 0 && hour < 6 {
+            daysSinceMonday = 7
+        }
+
+        let lastMon = cal.date(byAdding: .day, value: -daysSinceMonday, to: cal.startOfDay(for: now))!
+        return cal.date(bySettingHour: 6, minute: 0, second: 0, of: lastMon)!
     }
 
     func canManualRefreshNow() -> Bool {
