@@ -257,6 +257,112 @@ class DBWriter:
         self.conn.commit()
 
     # ────────────────────────────────────────────
+    # SCORECARDS
+    # ────────────────────────────────────────────
+    def upsert_scorecard(self, division_id: int, season_id: int, scorecard: dict):
+        """Write a full scorecard (match innings + batting/bowling details) to DB."""
+        match_id = str(scorecard.get("match_id", ""))
+        if not match_id:
+            return
+
+        info = scorecard.get("match_info", {})
+
+        with self._cursor() as cur:
+            # Innings 1
+            team1_innings = scorecard.get("team1_innings", {})
+            if team1_innings.get("batting"):
+                sc1_id = self._upsert_innings(
+                    cur, match_id, division_id, season_id, 1,
+                    info.get("team1", ""), team1_innings
+                )
+                if sc1_id:
+                    self._upsert_innings_details(cur, sc1_id, team1_innings)
+
+            # Innings 2
+            team2_innings = scorecard.get("team2_innings", {})
+            if team2_innings.get("batting"):
+                sc2_id = self._upsert_innings(
+                    cur, match_id, division_id, season_id, 2,
+                    info.get("team2", ""), team2_innings
+                )
+                if sc2_id:
+                    self._upsert_innings_details(cur, sc2_id, team2_innings)
+
+        self.conn.commit()
+
+    def _upsert_innings(self, cur, match_id, division_id, season_id,
+                        innings_num, team_name, innings_data):
+        """Insert or update a scorecards row; return its id."""
+        batting = innings_data.get("batting", [])
+        bowling = innings_data.get("bowling", [])
+
+        total_runs = sum(self._int(b.get("runs")) or 0 for b in batting)
+        total_wickets = sum(
+            1 for b in batting
+            if b.get("how_out", "").lower() not in ("", "not out", "dnb")
+        )
+        total_overs = max(
+            (self._float(bw.get("overs")) or 0 for bw in bowling), default=0
+        )
+
+        cur.execute("""
+            INSERT INTO scorecards (match_id, innings, team_id,
+                                    total_runs, total_wickets, overs, extras)
+            VALUES (%s, %s, NULL, %s, %s, %s, 0)
+            ON CONFLICT (match_id, innings) DO UPDATE
+            SET total_runs = EXCLUDED.total_runs,
+                total_wickets = EXCLUDED.total_wickets,
+                overs = EXCLUDED.overs
+            RETURNING id
+        """, (match_id, innings_num, total_runs, total_wickets, total_overs))
+        row = cur.fetchone()
+        return row["id"] if row else None
+
+    def _upsert_innings_details(self, cur, scorecard_id, innings_data):
+        """Write batting + bowling detail rows for one innings."""
+        # Clear old details
+        cur.execute("DELETE FROM innings_details WHERE scorecard_id = %s", (scorecard_id,))
+        cur.execute("DELETE FROM bowling_details WHERE scorecard_id = %s", (scorecard_id,))
+
+        # Batting
+        for pos, b in enumerate(innings_data.get("batting", []), start=1):
+            runs = self._int(b.get("runs")) or 0
+            balls = self._int(b.get("balls")) or 0
+            sr = round(runs / balls * 100, 2) if balls > 0 else None
+            cur.execute("""
+                INSERT INTO innings_details
+                    (scorecard_id, player_name, runs, balls, fours, sixes,
+                     strike_rate, dismissal, batting_position)
+                VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)
+            """, (
+                scorecard_id,
+                b.get("name", ""),
+                runs,
+                balls,
+                self._int(b.get("fours")) or 0,
+                self._int(b.get("sixes")) or 0,
+                sr,
+                b.get("how_out", ""),
+                pos,
+            ))
+
+        # Bowling
+        for bw in innings_data.get("bowling", []):
+            cur.execute("""
+                INSERT INTO bowling_details
+                    (scorecard_id, player_name, overs, maidens, runs, wickets, economy)
+                VALUES (%s,%s,%s,%s,%s,%s,%s)
+            """, (
+                scorecard_id,
+                bw.get("name", ""),
+                self._float(bw.get("overs")),
+                self._int(bw.get("maidens")) or 0,
+                self._int(bw.get("runs")) or 0,
+                self._int(bw.get("wickets")) or 0,
+                self._float(bw.get("economy")),
+            ))
+
+    # ────────────────────────────────────────────
     # HELPERS
     # ────────────────────────────────────────────
     @staticmethod

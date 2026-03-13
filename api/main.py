@@ -1,26 +1,47 @@
 """
 ARCL Insights API - FastAPI Application
-Deploy to Azure App Service or Azure Container Apps
+Deploy to Azure App Service or Azure Container Apps.
+
+Endpoints:
+  GET  /api/seasons
+  GET  /api/divisions?season_id=
+  GET  /api/standings?division_id=&season_id=
+  GET  /api/schedule?division_id=&season_id=
+  GET  /api/batsmen?division_id=&season_id=
+  GET  /api/bowlers?division_id=&season_id=
+  GET  /api/scorecard/{match_id}
+  POST /api/scrape/trigger          ← kick off a scrape run from Azure
+  GET  /health
 """
 
-from fastapi import FastAPI, HTTPException, Query
+import os
+import threading
+from fastapi import FastAPI, HTTPException, Query, Header
 from fastapi.middleware.cors import CORSMiddleware
 from typing import List, Optional
+
 from .database import execute_query, execute_one
-from .models import Season, Division, Team, Match, BattingStats, BowlingStats, Scorecard
+from .models import (
+    Season, Division, Team, Match,
+    BattingStats, BowlingStats, Scorecard,
+)
 
 app = FastAPI(
     title="ARCL Insights API",
     description="Cricket league data API for ARCL Insights iOS app",
-    version="1.0.0"
+    version="2.0.0",
 )
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
-    allow_methods=["GET"],
+    allow_methods=["GET", "POST"],
     allow_headers=["*"],
 )
+
+# Secret token that protects the /scrape/trigger endpoint.
+# Set SCRAPE_API_KEY in Azure App Service → Configuration → Application settings.
+SCRAPE_API_KEY = os.getenv("SCRAPE_API_KEY", "")
 
 
 # ============================================
@@ -35,7 +56,10 @@ def get_seasons():
         FROM seasons
         ORDER BY season_id DESC
     """)
-    return [Season(season_id=r["season_id"], name=r["season_name"], is_current=r["is_current"]) for r in rows]
+    return [
+        Season(season_id=r["season_id"], name=r["season_name"], is_current=r["is_current"])
+        for r in rows
+    ]
 
 
 # ============================================
@@ -62,7 +86,7 @@ def get_divisions(season_id: int = Query(..., description="Season ID e.g. 69")):
 @app.get("/api/standings", response_model=List[Team])
 def get_standings(
     division_id: int = Query(...),
-    season_id: int = Query(...)
+    season_id: int = Query(...),
 ):
     """Get team standings for a division"""
     rows = execute_query("""
@@ -85,7 +109,7 @@ def get_schedule(
     division_id: int = Query(...),
     season_id: int = Query(...),
     status: Optional[str] = Query(None, description="Filter: upcoming | completed"),
-    team: Optional[str] = Query(None, description="Filter by team name (partial match)")
+    team: Optional[str] = Query(None, description="Filter by team name (partial match)"),
 ):
     """Get match schedule for a division"""
     query = """
@@ -96,7 +120,7 @@ def get_schedule(
         FROM matches
         WHERE division_id = %s AND season_id = %s
     """
-    params = [division_id, season_id]
+    params: list = [division_id, season_id]
 
     if status:
         query += " AND status = %s"
@@ -120,7 +144,7 @@ def get_schedule(
 def get_batsmen(
     division_id: int = Query(...),
     season_id: int = Query(...),
-    limit: int = Query(50, le=200)
+    limit: int = Query(50, le=200),
 ):
     """Get top batsmen for a division"""
     rows = execute_query("""
@@ -142,7 +166,7 @@ def get_batsmen(
 def get_bowlers(
     division_id: int = Query(...),
     season_id: int = Query(...),
-    limit: int = Query(50, le=200)
+    limit: int = Query(50, le=200),
 ):
     """Get top bowlers for a division"""
     rows = execute_query("""
@@ -168,7 +192,6 @@ def get_bowlers(
 @app.get("/api/scorecard/{match_id}", response_model=Scorecard)
 def get_scorecard(match_id: str):
     """Get detailed scorecard for a match"""
-    # Get match details
     match = execute_one("""
         SELECT match_id, division_id, season_id, team1, team2,
                date, ground, winner
@@ -178,7 +201,6 @@ def get_scorecard(match_id: str):
     if not match:
         raise HTTPException(status_code=404, detail=f"Match {match_id} not found")
 
-    # Get innings
     innings_rows = execute_query("""
         SELECT sc.id as scorecard_id, sc.innings, t.name as team_name,
                sc.total_runs, sc.total_wickets, sc.overs, sc.extras
@@ -232,9 +254,82 @@ def get_scorecard(match_id: str):
 
 
 # ============================================
+# SCRAPE TRIGGER  (called by Azure Timer / manual)
+# ============================================
+
+def _run_scraper(all_seasons: bool = False, include_scorecards: bool = False):
+    """Run the scraper in a background thread so we don't block the API."""
+    try:
+        from scrapers.arcl_scraper import ARCLDataScraper, SEASONS, CURRENT_SEASON_ID
+        from scrapers.arcl_scraper import DIVISION_IDS, DIVISION_NAMES
+
+        scraper = ARCLDataScraper(use_db=True)
+
+        # Seed seasons
+        for sid, sname, is_cur in SEASONS:
+            scraper.db.upsert_season(sid, sname, is_cur)
+
+        if all_seasons:
+            for sid, sname, _ in SEASONS:
+                for did, dname in zip(DIVISION_IDS, DIVISION_NAMES):
+                    try:
+                        scraper.scrape_division(
+                            did, sid, f"{dname} – {sname}", include_scorecards
+                        )
+                    except Exception as exc:
+                        print(f"❌ {dname} season {sid}: {exc}")
+        else:
+            current = SEASONS[0]
+            for did, dname in zip(DIVISION_IDS, DIVISION_NAMES):
+                try:
+                    scraper.scrape_division(
+                        did, CURRENT_SEASON_ID,
+                        f"{dname} – {current[1]}", include_scorecards
+                    )
+                except Exception as exc:
+                    print(f"❌ {dname}: {exc}")
+
+        scraper.close()
+        print("🎉 Background scrape complete!")
+    except Exception as exc:
+        print(f"❌ Background scrape failed: {exc}")
+
+
+@app.post("/api/scrape/trigger")
+def trigger_scrape(
+    all_seasons: bool = False,
+    include_scorecards: bool = False,
+    x_api_key: Optional[str] = Header(None),
+):
+    """
+    Kick off a full scrape of ARCL.org → PostgreSQL.
+    Protected by SCRAPE_API_KEY header.
+    """
+    if not SCRAPE_API_KEY:
+        raise HTTPException(status_code=503, detail="Scrape trigger not configured (SCRAPE_API_KEY missing)")
+    if x_api_key != SCRAPE_API_KEY:
+        raise HTTPException(status_code=403, detail="Invalid API key")
+
+    # Run in background so the HTTP request returns immediately
+    thread = threading.Thread(
+        target=_run_scraper,
+        kwargs={"all_seasons": all_seasons, "include_scorecards": include_scorecards},
+        daemon=True,
+    )
+    thread.start()
+
+    return {
+        "status": "started",
+        "message": "Scrape job started in background. All 14 divisions will be scraped.",
+        "all_seasons": all_seasons,
+        "include_scorecards": include_scorecards,
+    }
+
+
+# ============================================
 # HEALTH CHECK
 # ============================================
 
 @app.get("/health")
 def health():
-    return {"status": "ok", "service": "ARCL Insights API"}
+    return {"status": "ok", "service": "ARCL Insights API", "version": "2.0.0"}

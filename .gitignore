@@ -1,2 +1,3 @@
 .env.azure
 azure/.env.azure
+.env

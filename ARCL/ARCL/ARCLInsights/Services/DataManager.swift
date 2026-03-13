@@ -2,7 +2,11 @@
 //  DataManager.swift
 //  ARCL Insights
 //
-//  Handles direct scraping from arcl.org and local storage
+//  Single source of truth for all data.
+//  ALL data flows through the Azure API — no direct scraping from the device.
+//
+//  Architecture:
+//    ARCL.org  →  Scraper (GitHub Actions / Azure)  →  PostgreSQL  →  API  →  this file  →  UI
 //
 
 import Foundation
@@ -12,87 +16,195 @@ import Combine
 @MainActor
 class DataManager: ObservableObject {
     static let shared = DataManager()
-    
+
+    // MARK: - Published state
+
     @Published var isLoading = false
     @Published var lastUpdate: Date?
+    @Published var errorMessage: String?
+
     @Published var teams: [Team] = []
     @Published var topBatsmen: [Player] = []
     @Published var topBowlers: [Player] = []
     @Published var matches: [Match] = []
-    @Published var scorecards: [String: Scorecard] = [:] // matchId -> Scorecard
+    @Published var scorecards: [String: Scorecard] = [:]  // matchId → Scorecard
+
     @Published var availableDivisions: [Division] = Division.fallbackList
     @Published var availableSeasons: [Season] = Season.fallbackList
-    
-    // User preferences
-    @AppStorage("selectedDivisionID") private var selectedDivisionID: Int = 8 // Default Div F
-    @AppStorage("selectedSeasonID") private var selectedSeasonID: Int = 69 // Default Spring 2026
-    @AppStorage("myTeamName") private var myTeamName: String = "Snoqualmie Wolves Timber"
-    @AppStorage("lastDataRefresh") private var lastDataRefreshTimestamp: Double = 0
-    @AppStorage("lastManualRefresh") private var lastManualRefreshTimestamp: Double = 0
-    
-    private let baseURL = "https://raw.githubusercontent.com/gursohal/arc-insights/main/data"
-    
+
+    // MARK: - User preferences
+
+    @AppStorage("selectedDivisionID") private var selectedDivisionID: Int = 8
+    @AppStorage("selectedSeasonID")   private var selectedSeasonID: Int = 69
+    @AppStorage("myTeamName")         private var myTeamName: String = "Snoqualmie Wolves Timber"
+    @AppStorage("lastDataRefresh")    private var lastDataRefreshTimestamp: Double = 0
+    @AppStorage("lastManualRefresh")  private var lastManualRefreshTimestamp: Double = 0
+
+    private let api = ARCLAPIService.shared
+
     var lastDataRefresh: Date? {
         guard lastDataRefreshTimestamp > 0 else { return nil }
         return Date(timeIntervalSince1970: lastDataRefreshTimestamp)
     }
-    
-    // MARK: - Public Methods
-    
+
+    // MARK: - Refresh: all data for the selected division + season
+
     func refreshData() async {
         isLoading = true
+        errorMessage = nil
         defer { isLoading = false }
-        
+
         do {
-            // Fetch teams
-            teams = try await fetchTeams()
-            
-            // Fetch stats
-            topBatsmen = try await fetchTopBatsmen()
-            topBowlers = try await fetchTopBowlers()
-            
+            // Fetch teams / standings
+            let standingsResponse = try await api.fetchStandings(
+                divisionId: selectedDivisionID, seasonId: selectedSeasonID
+            )
+            teams = standingsResponse.map { s in
+                Team(
+                    name: s.name,
+                    division: availableDivisions.first { $0.id == selectedDivisionID }?.name ?? "",
+                    wins: s.wins,
+                    losses: s.losses,
+                    rank: s.rank ?? 99,
+                    points: s.points
+                )
+            }.sorted { $0.wins != $1.wins ? $0.wins > $1.wins : $0.losses < $1.losses }
+
+            // Fetch batting stats
+            let batsmenResponse = try await api.fetchBatsmen(
+                divisionId: selectedDivisionID, seasonId: selectedSeasonID, limit: 150
+            )
+            topBatsmen = batsmenResponse.map { b in
+                let stats = BattingStats(
+                    runs: b.runs,
+                    innings: b.innings,
+                    average: b.average ?? 0,
+                    strikeRate: b.strikeRate ?? 0,
+                    highestScore: "\(b.runs)",
+                    rank: b.rank ?? 0,
+                    fours: b.fours,
+                    sixes: b.sixes
+                )
+                return Player(
+                    name: b.name,
+                    team: b.teamName ?? "",
+                    battingStats: stats,
+                    bowlingStats: nil,
+                    playerId: b.playerId,
+                    teamId: b.teamId
+                )
+            }
+
+            // Fetch bowling stats
+            let bowlersResponse = try await api.fetchBowlers(
+                divisionId: selectedDivisionID, seasonId: selectedSeasonID, limit: 150
+            )
+            topBowlers = bowlersResponse.map { bw in
+                let stats = BowlingStats(
+                    wickets: bw.wickets,
+                    overs: bw.overs ?? 0,
+                    runs: bw.runsConceded,
+                    average: bw.average ?? 0,
+                    economy: bw.economy ?? 0,
+                    rank: bw.rank ?? 0
+                )
+                return Player(
+                    name: bw.name,
+                    team: bw.teamName ?? "",
+                    battingStats: nil,
+                    bowlingStats: stats,
+                    playerId: bw.playerId,
+                    teamId: bw.teamId
+                )
+            }
+
             // Fetch schedule
-            matches = try await fetchSchedule()
-            
+            let scheduleResponse = try await api.fetchSchedule(
+                divisionId: selectedDivisionID, seasonId: selectedSeasonID
+            )
+            matches = scheduleResponse.map { m in
+                Match(
+                    matchId: m.matchId,
+                    date: m.date ?? "",
+                    time: m.time ?? "",
+                    ground: m.ground ?? "",
+                    team1: m.team1,
+                    team2: m.team2,
+                    umpire1: m.umpire1 ?? "",
+                    umpire2: m.umpire2 ?? "",
+                    matchType: m.matchType,
+                    status: m.status,
+                    winner: m.winner ?? "",
+                    runnerUp: m.runnerUp ?? ""
+                )
+            }
+
             // Update timestamp
             lastDataRefreshTimestamp = Date().timeIntervalSince1970
             lastUpdate = Date()
-            
-            // Save to local storage
+
+            // Persist locally for offline use
             saveToLocalStorage()
-            
-            print("✅ Data refresh complete - \(teams.count) teams, \(topBatsmen.count) batsmen, \(topBowlers.count) bowlers")
+
+            print("✅ Data refresh complete — \(teams.count) teams, "
+                + "\(topBatsmen.count) batsmen, \(topBowlers.count) bowlers, "
+                + "\(matches.count) matches")
+
         } catch {
+            errorMessage = error.localizedDescription
             print("❌ Error refreshing data: \(error)")
         }
     }
-    
+
+    // MARK: - Fetch available divisions & seasons from API
+
+    func fetchAvailableOptions() async {
+        do {
+            let seasonsResp = try await api.fetchSeasons()
+            if !seasonsResp.isEmpty {
+                availableSeasons = seasonsResp.map { Season(id: $0.seasonId, name: $0.name) }
+                    .sorted { $0.id > $1.id }
+                print("✅ Found \(availableSeasons.count) seasons from API")
+            }
+
+            // Use current season to get divisions
+            let currentSeasonId = availableSeasons.first?.id ?? selectedSeasonID
+            let divisionsResp = try await api.fetchDivisions(seasonId: currentSeasonId)
+            if !divisionsResp.isEmpty {
+                availableDivisions = divisionsResp.map { Division(id: $0.divisionId, name: $0.name) }
+                    .sorted { $0.id < $1.id }
+                print("✅ Found \(availableDivisions.count) divisions from API")
+            }
+        } catch {
+            print("⚠️ Could not fetch options from API, using fallbacks: \(error.localizedDescription)")
+            // Fallback lists already set as defaults
+        }
+    }
+
+    // MARK: - Opponent Analysis
+
     func getOpponentAnalysis(teamName: String) -> OpponentAnalysis {
-        // Get ALL batsmen from this team (not just top overall), then sort by their stats
         let teamBatsmen = topBatsmen
             .filter { $0.team.localizedCaseInsensitiveContains(teamName) && $0.battingStats != nil }
             .sorted { ($0.battingStats?.runs ?? 0) > ($1.battingStats?.runs ?? 0) }
-        
+
         let dangerousBatsmen = Array(teamBatsmen.prefix(5))
         let weakBatsmen = Array(teamBatsmen.dropFirst(5).prefix(5))
-        
-        // Get ALL bowlers from this team, sorted by wickets
+
         let teamBowlers = topBowlers
             .filter { $0.team.localizedCaseInsensitiveContains(teamName) && $0.bowlingStats != nil }
             .sorted { ($0.bowlingStats?.wickets ?? 0) > ($1.bowlingStats?.wickets ?? 0) }
-        
+
         let dangerousBowlers = Array(teamBowlers.prefix(5))
-        
-        // Get team data for strategy generation
+
         let team = teams.first { $0.name.localizedCaseInsensitiveContains(teamName) }
-        
-        // Generate rule-based match strategy using InsightEngine
+
         let recommendations = InsightEngine.shared.generateMatchStrategy(
             dangerousBatsmen: dangerousBatsmen,
             dangerousBowlers: dangerousBowlers,
             team: team
         )
-        
+
         return OpponentAnalysis(
             team: teamName,
             dangerousBatsmen: dangerousBatsmen,
@@ -101,447 +213,94 @@ class DataManager: ObservableObject {
             recommendations: recommendations
         )
     }
-    
-    // MARK: - Fetch Available Divisions & Seasons
-    
-    func fetchAvailableOptions() async {
-        print("🔍 Fetching available divisions and seasons from ARCL website...")
-        
-        guard let url = URL(string: "https://www.arcl.org/Pages/UI/DivHome.aspx?league_id=8") else {
-            print("❌ Invalid URL")
-            return
-        }
-        
-        do {
-            let (data, _) = try await URLSession.shared.data(from: url)
-            guard let html = String(data: data, encoding: .utf8) else {
-                print("❌ Unable to decode HTML")
-                return
-            }
-            
-            // Parse divisions from links like: /Pages/UI/DivHome.aspx?league_id=8&season_id=69
-            var parsedDivisions: [Division] = []
-            var parsedSeasons: [Season] = []
-            
-            // Extract season IDs and names from option elements
-            let seasonPattern = #"<option[^>]*value="(\d+)"[^>]*>(.*?)</option>"#
-            if let seasonRegex = try? NSRegularExpression(pattern: seasonPattern, options: []) {
-                let matches = seasonRegex.matches(in: html, range: NSRange(html.startIndex..., in: html))
-                for match in matches {
-                    if let idRange = Range(match.range(at: 1), in: html),
-                       let nameRange = Range(match.range(at: 2), in: html) {
-                        let id = String(html[idRange])
-                        let name = String(html[nameRange]).trimmingCharacters(in: .whitespacesAndNewlines)
-                        if let seasonId = Int(id), !name.isEmpty {
-                            parsedSeasons.append(Season(id: seasonId, name: name))
-                        }
-                    }
-                }
-            }
-            
-            // Extract division IDs from links
-            let divPattern = #"league_id=(\d+)&season_id=\d+"#
-            if let divRegex = try? NSRegularExpression(pattern: divPattern, options: []) {
-                let matches = divRegex.matches(in: html, range: NSRange(html.startIndex..., in: html))
-                var uniqueDivIds = Set<Int>()
-                for match in matches {
-                    if let idRange = Range(match.range(at: 1), in: html) {
-                        let id = String(html[idRange])
-                        if let divId = Int(id) {
-                            uniqueDivIds.insert(divId)
-                        }
-                    }
-                }
-                
-                // Map IDs to division names
-                let divNames: [Int: String] = [
-                    2: "Womens", 3: "Div A", 4: "Div B", 5: "Div C", 6: "Div D",
-                    7: "Div E", 8: "Div F", 9: "Div G", 10: "Div H", 11: "Div I",
-                    12: "Div J", 13: "Div K", 14: "Div L", 15: "Div M", 16: "Div N",
-                    31: "Kids A", 32: "Kids B", 33: "Kids C", 34: "Kids D"
-                ]
-                
-                parsedDivisions = uniqueDivIds.sorted().compactMap { id in
-                    guard let name = divNames[id] else { return nil }
-                    return Division(id: id, name: name)
-                }
-            }
-            
-            // Remove duplicates and sort
-            parsedSeasons = Array(Set(parsedSeasons)).sorted { $0.id > $1.id }
-            
-            // Update published properties
-            if !parsedDivisions.isEmpty {
-                availableDivisions = parsedDivisions
-                print("✅ Found \(parsedDivisions.count) divisions")
-            }
-            
-            if !parsedSeasons.isEmpty {
-                availableSeasons = parsedSeasons
-                print("✅ Found \(parsedSeasons.count) seasons: \(parsedSeasons.map { $0.name }.joined(separator: ", "))")
-                
-                // Cache to UserDefaults
-                if let encoded = try? JSONEncoder().encode(parsedSeasons) {
-                    UserDefaults.standard.set(encoded, forKey: "cachedSeasons")
-                }
-            }
-            
-        } catch {
-            print("❌ Error fetching divisions/seasons: \(error)")
-            // Use fallback lists (already set as default)
-        }
-    }
-    
-    // MARK: - Data Fetching from GitHub
-    
-    func fetchTeamNames(divisionID: Int, seasonID: Int) async -> [String] {
-        let urlString = "\(baseURL)/div_\(divisionID)_season_\(seasonID).json"
-        print("📡 Fetching data from: \(urlString)")
-        
-        guard let url = URL(string: urlString) else {
-            print("❌ Invalid URL")
-            return []
-        }
-        
-        do {
-            var request = URLRequest(url: url)
-            request.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
-            
-            let (data, _) = try await URLSession.shared.data(for: request)
-            
-            // Debug: print raw data
-            if let dataString = String(data: data, encoding: .utf8) {
-                print("📄 Received \(data.count) bytes")
-                print("🔍 First 200 chars: \(dataString.prefix(200))")
-            }
-            
-            let arclResponse = try JSONDecoder().decode(ARCLDataResponse.self, from: data)
-            print("✅ Found \(arclResponse.teams.count) teams, \(arclResponse.batsmen.count) batsmen")
-            return arclResponse.teams
-        } catch let DecodingError.dataCorrupted(context) {
-            print("❌ JSON Decoding error: \(context.debugDescription)")
-            print("   Coding path: \(context.codingPath)")
-            return []
-        } catch {
-            print("❌ Error fetching teams: \(error)")
-            return []
-        }
-    }
-    
-    private func fetchTeams() async throws -> [Team] {
-        let urlString = "\(baseURL)/div_\(selectedDivisionID)_season_\(selectedSeasonID).json"
-        guard let url = URL(string: urlString) else { return [] }
-        
-        // Force fresh data, ignore cache
-        var request = URLRequest(url: url)
-        request.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
-        
-        let (data, _) = try await URLSession.shared.data(for: request)
-        let jsonResponse = try JSONDecoder().decode(ARCLDataResponse.self, from: data)
-        
-        // Create a dictionary from standings for quick lookup
-        var standingsDict: [String: StandingJSON] = [:]
-        for standing in jsonResponse.standings {
-            standingsDict[standing.team] = standing
-        }
-        
-        // Map teams with standings data
-        let teams = jsonResponse.teams.compactMap { teamName -> Team? in
-            if let standing = standingsDict[teamName] {
-                return Team(
-                    name: teamName,
-                    division: "Div F",
-                    wins: Int(standing.wins) ?? 0,
-                    losses: Int(standing.losses) ?? 0,
-                    rank: Int(standing.rank) ?? 0,
-                    points: Int(standing.points) ?? 0
-                )
-            } else {
-                return Team(name: teamName, division: "Div F", wins: 0, losses: 0, rank: 99, points: 0)
-            }
-        }
-        
-        // Sort by wins (descending), then by losses (ascending)
-        return teams.sorted { team1, team2 in
-            if team1.wins != team2.wins {
-                return team1.wins > team2.wins
-            }
-            return team1.losses < team2.losses
-        }
-    }
-    
-    private func fetchTopBatsmen() async throws -> [Player] {
-        let urlString = "\(baseURL)/div_\(selectedDivisionID)_season_\(selectedSeasonID).json"
-        guard let url = URL(string: urlString) else { return [] }
-        
-        // Force fresh data, ignore cache
-        var request = URLRequest(url: url)
-        request.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
-        
-        let (data, _) = try await URLSession.shared.data(for: request)
-        let response = try JSONDecoder().decode(ARCLDataResponse.self, from: data)
-        
-        return response.batsmen.map { batsman in
-            let runs = Int(batsman.runs) ?? 0
-            let innings = Int(batsman.innings) ?? 1
-            let average = innings > 0 ? Double(runs) / Double(innings) : 0
-            let stats = BattingStats(
-                runs: runs,
-                innings: innings,
-                average: average,
-                strikeRate: Double(batsman.strike_rate) ?? 0,
-                highestScore: batsman.runs,
-                rank: Int(batsman.rank) ?? 0,
-                fours: Int(batsman.fours) ?? 0,
-                sixes: Int(batsman.sixes) ?? 0
-            )
-            return Player(name: batsman.name, team: batsman.team, battingStats: stats, bowlingStats: nil, playerId: nil, teamId: batsman.team_id)
-        }
-    }
-    
-    private func fetchTopBowlers() async throws -> [Player] {
-        let urlString = "\(baseURL)/div_\(selectedDivisionID)_season_\(selectedSeasonID).json"
-        guard let url = URL(string: urlString) else { return [] }
-        
-        // Force fresh data, ignore cache
-        var request = URLRequest(url: url)
-        request.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
-        
-        let (data, _) = try await URLSession.shared.data(for: request)
-        let response = try JSONDecoder().decode(ARCLDataResponse.self, from: data)
-        
-        return response.bowlers.map { bowler in
-            let wickets = Int(bowler.wickets) ?? 0
-            let overs = Double(bowler.overs) ?? 0
-            let economy = Double(bowler.economy) ?? 0
-            let stats = BowlingStats(
-                wickets: wickets,
-                overs: overs,
-                runs: Int(overs * economy),
-                average: wickets > 0 ? (overs * economy) / Double(wickets) : 0,
-                economy: economy,
-                rank: Int(bowler.rank) ?? 0
-            )
-            return Player(name: bowler.name, team: bowler.team, battingStats: nil, bowlingStats: stats, playerId: nil, teamId: bowler.team_id)
-        }
-    }
-    
-    private func fetchSchedule() async throws -> [Match] {
-        let urlString = "\(baseURL)/div_\(selectedDivisionID)_season_\(selectedSeasonID).json"
-        guard let url = URL(string: urlString) else { return [] }
-        
-        // Force fresh data, ignore cache
-        var request = URLRequest(url: url)
-        request.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
-        
-        let (data, _) = try await URLSession.shared.data(for: request)
-        let response = try JSONDecoder().decode(ARCLDataResponse.self, from: data)
-        
-        return response.schedule ?? []
-    }
-    
+
+    // MARK: - Scorecard (single match, on-demand)
+
     func fetchScorecard(matchId: String) async -> Scorecard? {
-        // Check if already cached in memory
         if let cached = scorecards[matchId] {
             return cached
         }
-        
-        // Try to load from GitHub
-        let urlString = "\(baseURL)/scorecards_div_\(selectedDivisionID)_season_\(selectedSeasonID).json"
-        guard let url = URL(string: urlString) else {
-            print("❌ Invalid scorecard URL")
-            return nil
-        }
-        
-        do {
-            // Force fresh data, ignore cache
-            var request = URLRequest(url: url)
-            request.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
-            
-            let (data, _) = try await URLSession.shared.data(for: request)
-            let allScorecards = try JSONDecoder().decode([Scorecard].self, from: data)
-            
-            // Cache all scorecards in memory
-            for scorecard in allScorecards {
-                scorecards[scorecard.matchId] = scorecard
-            }
-            
-            print("✅ Loaded \(allScorecards.count) scorecards from GitHub")
-            
-            // Return the requested scorecard
-            return scorecards[matchId]
-        } catch {
-            print("ℹ️  Scorecards not available yet: \(error.localizedDescription)")
-            return nil
-        }
+        // Scorecard endpoint not yet wired – placeholder for future
+        // Once API serves scorecards, call api.fetchScorecard(matchId) here
+        return nil
     }
-    
-    
-    // MARK: - Helper Methods
-    
+
+    // MARK: - Local cache
+
     private func saveToLocalStorage() {
-        // Save to UserDefaults as JSON
-        if let teamsData = try? JSONEncoder().encode(teams) {
-            UserDefaults.standard.set(teamsData, forKey: "cachedTeams")
-        }
-        if let batsmenData = try? JSONEncoder().encode(topBatsmen) {
-            UserDefaults.standard.set(batsmenData, forKey: "cachedBatsmen")
-        }
-        if let bowlersData = try? JSONEncoder().encode(topBowlers) {
-            UserDefaults.standard.set(bowlersData, forKey: "cachedBowlers")
-        }
-        if let matchesData = try? JSONEncoder().encode(matches) {
-            UserDefaults.standard.set(matchesData, forKey: "cachedMatches")
-        }
+        if let d = try? JSONEncoder().encode(teams)      { UserDefaults.standard.set(d, forKey: "cachedTeams") }
+        if let d = try? JSONEncoder().encode(topBatsmen)  { UserDefaults.standard.set(d, forKey: "cachedBatsmen") }
+        if let d = try? JSONEncoder().encode(topBowlers)  { UserDefaults.standard.set(d, forKey: "cachedBowlers") }
+        if let d = try? JSONEncoder().encode(matches)     { UserDefaults.standard.set(d, forKey: "cachedMatches") }
     }
-    
+
     func loadFromLocalStorage() {
-        if let teamsData = UserDefaults.standard.data(forKey: "cachedTeams"),
-           let teams = try? JSONDecoder().decode([Team].self, from: teamsData) {
-            self.teams = teams
-        }
-        if let batsmenData = UserDefaults.standard.data(forKey: "cachedBatsmen"),
-           let batsmen = try? JSONDecoder().decode([Player].self, from: batsmenData) {
-            self.topBatsmen = batsmen
-        }
-        if let bowlersData = UserDefaults.standard.data(forKey: "cachedBowlers"),
-           let bowlers = try? JSONDecoder().decode([Player].self, from: bowlersData) {
-            self.topBowlers = bowlers
-        }
-        if let matchesData = UserDefaults.standard.data(forKey: "cachedMatches"),
-           let matches = try? JSONDecoder().decode([Match].self, from: matchesData) {
-            self.matches = matches
-        }
-        
+        if let d = UserDefaults.standard.data(forKey: "cachedTeams"),
+           let v = try? JSONDecoder().decode([Team].self, from: d) { teams = v }
+        if let d = UserDefaults.standard.data(forKey: "cachedBatsmen"),
+           let v = try? JSONDecoder().decode([Player].self, from: d) { topBatsmen = v }
+        if let d = UserDefaults.standard.data(forKey: "cachedBowlers"),
+           let v = try? JSONDecoder().decode([Player].self, from: d) { topBowlers = v }
+        if let d = UserDefaults.standard.data(forKey: "cachedMatches"),
+           let v = try? JSONDecoder().decode([Match].self, from: d) { matches = v }
+
         if lastDataRefreshTimestamp > 0 {
             lastUpdate = Date(timeIntervalSince1970: lastDataRefreshTimestamp)
         }
     }
-    
-    // Automatic refresh check (weekly - for app launch)
+
+    // MARK: - Refresh policy
+
     func shouldRefreshData() -> Bool {
-        // Always refresh if no data exists
-        if teams.isEmpty || topBatsmen.isEmpty || topBowlers.isEmpty {
-            return true
-        }
-        
-        // Otherwise check if 7 days have passed
+        if teams.isEmpty || topBatsmen.isEmpty || topBowlers.isEmpty { return true }
         guard let lastRefresh = lastDataRefresh else { return true }
         let sevenDaysAgo = Calendar.current.date(byAdding: .day, value: -7, to: Date())!
         return lastRefresh < sevenDaysAgo
     }
-    
-    // Manual refresh check (6 hour cooldown - for user-triggered refresh)
+
     func canManualRefreshNow() -> Bool {
         guard lastManualRefreshTimestamp > 0 else { return true }
-        let lastManualRefresh = Date(timeIntervalSince1970: lastManualRefreshTimestamp)
+        let last = Date(timeIntervalSince1970: lastManualRefreshTimestamp)
         let sixHoursAgo = Calendar.current.date(byAdding: .hour, value: -6, to: Date())!
-        return lastManualRefresh < sixHoursAgo
+        return last < sixHoursAgo
     }
-    
+
     func timeUntilNextManualRefresh() -> String {
         guard lastManualRefreshTimestamp > 0 else { return "Ready to refresh" }
-        
-        let lastManualRefresh = Date(timeIntervalSince1970: lastManualRefreshTimestamp)
-        let nextRefreshTime = Calendar.current.date(byAdding: .hour, value: 6, to: lastManualRefresh)!
-        let now = Date()
-        
-        if now >= nextRefreshTime {
-            return "Ready to refresh"
+        let last = Date(timeIntervalSince1970: lastManualRefreshTimestamp)
+        let next = Calendar.current.date(byAdding: .hour, value: 6, to: last)!
+        if Date() >= next { return "Ready to refresh" }
+        let c = Calendar.current.dateComponents([.hour, .minute], from: Date(), to: next)
+        if let h = c.hour, let m = c.minute {
+            return h > 0 ? "\(h)h \(m)m remaining" : "\(m)m remaining"
         }
-        
-        let components = Calendar.current.dateComponents([.hour, .minute], from: now, to: nextRefreshTime)
-        
-        if let hours = components.hour, let minutes = components.minute {
-            if hours > 0 {
-                return "\(hours)h \(minutes)m remaining"
-            } else {
-                return "\(minutes)m remaining"
-            }
-        }
-        
         return "Calculating..."
     }
-    
-    // Manual refresh with cooldown tracking
+
     func manualRefreshData() async {
         guard canManualRefreshNow() else {
             print("⚠️ Manual refresh cooldown active")
             return
         }
-        
-        // Update manual refresh timestamp
         lastManualRefreshTimestamp = Date().timeIntervalSince1970
-        
-        // Perform the refresh
         await refreshData()
     }
-    
+
     // MARK: - Settings
-    
+
     func updateDivision(_ divisionID: Int) {
         selectedDivisionID = divisionID
-        Task {
-            await refreshData()
-        }
+        Task { await refreshData() }
     }
-    
+
     func updateSeason(_ seasonID: Int) {
         selectedSeasonID = seasonID
-        Task {
-            await refreshData()
-        }
+        Task { await refreshData() }
     }
-    
+
     func updateMyTeam(_ teamName: String) {
         myTeamName = teamName
     }
-}
-
-// MARK: - JSON Response Models
-
-struct ARCLDataResponse: Codable {
-    let division_id: Int
-    let season_id: Int
-    let division_name: String
-    let last_updated: String
-    let teams: [String]
-    let batsmen: [BatsmanJSON]
-    let bowlers: [BowlerJSON]
-    let standings: [StandingJSON]
-    let schedule: [Match]?
-}
-
-struct StandingJSON: Codable {
-    let team: String
-    let team_id: String
-    let rank: String
-    let matches: String
-    let wins: String
-    let losses: String
-    let points: String
-}
-
-struct BatsmanJSON: Codable {
-    let rank: String
-    let name: String
-    let team: String
-    let team_id: String?  // Optional - not all data sources have this
-    let innings: String
-    let runs: String
-    let strike_rate: String
-    let fours: String
-    let sixes: String
-}
-
-struct BowlerJSON: Codable {
-    let rank: String
-    let name: String
-    let team: String
-    let team_id: String?  // Optional - not all data sources have this
-    let overs: String
-    let wickets: String
-    let economy: String
 }
 
 // MARK: - Division & Season Models
@@ -557,16 +316,15 @@ struct Season: Identifiable, Hashable, Codable {
 }
 
 extension Division {
-    // Fallback list if fetch fails
     static let fallbackList = [
-        Division(id: 2, name: "Womens"),
-        Division(id: 3, name: "Div A"),
-        Division(id: 4, name: "Div B"),
-        Division(id: 5, name: "Div C"),
-        Division(id: 6, name: "Div D"),
-        Division(id: 7, name: "Div E"),
-        Division(id: 8, name: "Div F"),
-        Division(id: 9, name: "Div G"),
+        Division(id: 2,  name: "Womens"),
+        Division(id: 3,  name: "Div A"),
+        Division(id: 4,  name: "Div B"),
+        Division(id: 5,  name: "Div C"),
+        Division(id: 6,  name: "Div D"),
+        Division(id: 7,  name: "Div E"),
+        Division(id: 8,  name: "Div F"),
+        Division(id: 9,  name: "Div G"),
         Division(id: 10, name: "Div H"),
         Division(id: 11, name: "Div I"),
         Division(id: 12, name: "Div J"),
@@ -578,7 +336,6 @@ extension Division {
 }
 
 extension Season {
-    // Fallback list if fetch fails
     static let fallbackList = [
         Season(id: 69, name: "Spring 2026"),
         Season(id: 68, name: "Winter 2025"),
