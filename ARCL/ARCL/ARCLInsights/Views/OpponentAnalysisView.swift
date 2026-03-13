@@ -190,11 +190,19 @@ struct OpponentAnalysisView: View {
                     Text("📊 MATCH STRATEGY")
                         .font(.headline)
                     
-                    ForEach(analysis.recommendations, id: \.self) { rec in
-                        HStack(alignment: .top, spacing: 8) {
-                            Text("•")
-                            Text(rec)
-                                .font(.subheadline)
+                    if analysis.dangerousBatsmen.isEmpty && analysis.dangerousBowlers.isEmpty {
+                        InsightCard(
+                            text: "No match data available yet. Strategies will appear once the season begins and matches are played.",
+                            icon: "info.circle.fill",
+                            color: .gray
+                        )
+                    } else {
+                        ForEach(analysis.recommendations, id: \.self) { rec in
+                            HStack(alignment: .top, spacing: 8) {
+                                Text("•")
+                                Text(rec)
+                                    .font(.subheadline)
+                            }
                         }
                     }
                 }

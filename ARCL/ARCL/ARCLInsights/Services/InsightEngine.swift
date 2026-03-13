@@ -345,6 +345,11 @@ extension InsightEngine {
         dangerousBowlers: [Player],
         team: Team? = nil
     ) -> [String] {
+        // If no player data at all, season hasn't started — don't generate misleading advice
+        if dangerousBatsmen.isEmpty && dangerousBowlers.isEmpty {
+            return ["No match data available yet. Strategies will appear once the season begins and matches are played."]
+        }
+        
         var strategies: [String] = []
         
         // BATTING STRATEGY - Against their bowlers
