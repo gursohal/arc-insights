@@ -50,40 +50,44 @@ struct BattingStatsView: View {
     }
     
     var body: some View {
-        List(filteredPlayers) { player in
-            NavigationLink(destination: PlayerDetailView(player: player)) {
-                HStack {
-                    Text("#\(player.battingStats?.rank ?? 0)")
-                        .font(.caption)
-                        .foregroundColor(.secondary)
-                        .frame(width: 30)
-                    
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text(player.name)
-                            .font(.headline)
-                        Text(player.team)
+        if players.isEmpty {
+            EmptyStatsView(statType: "batting")
+        } else {
+            List(filteredPlayers) { player in
+                NavigationLink(destination: PlayerDetailView(player: player)) {
+                    HStack {
+                        Text("#\(player.battingStats?.rank ?? 0)")
                             .font(.caption)
                             .foregroundColor(.secondary)
-                    }
-                    
-                    Spacer()
-                    
-                    VStack(alignment: .trailing, spacing: 4) {
-                        if let stats = player.battingStats {
-                            Text("\(stats.runs)")
+                            .frame(width: 30)
+                        
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text(player.name)
                                 .font(.headline)
-                                .bold()
-                            Text("runs")
+                            Text(player.team)
                                 .font(.caption)
                                 .foregroundColor(.secondary)
                         }
+                        
+                        Spacer()
+                        
+                        VStack(alignment: .trailing, spacing: 4) {
+                            if let stats = player.battingStats {
+                                Text("\(stats.runs)")
+                                    .font(.headline)
+                                    .bold()
+                                Text("runs")
+                                    .font(.caption)
+                                    .foregroundColor(.secondary)
+                            }
+                        }
                     }
+                    .padding(.vertical, 4)
                 }
-                .padding(.vertical, 4)
             }
+            .listStyle(.plain)
+            .searchable(text: $searchText, prompt: "Search batsmen...")
         }
-        .listStyle(.plain)
-        .searchable(text: $searchText, prompt: "Search batsmen...")
     }
 }
 
@@ -102,6 +106,9 @@ struct BowlingStatsView: View {
     }
     
     var body: some View {
+        if players.isEmpty {
+            EmptyStatsView(statType: "bowling")
+        } else {
         List(filteredPlayers) { player in
             NavigationLink(destination: PlayerDetailView(player: player)) {
                 HStack {
@@ -136,6 +143,7 @@ struct BowlingStatsView: View {
         }
         .listStyle(.plain)
         .searchable(text: $searchText, prompt: "Search bowlers...")
+        }
     }
 }
 
@@ -158,6 +166,9 @@ struct BoundaryStatsView: View {
     }
     
     var body: some View {
+        if players.isEmpty {
+            EmptyStatsView(statType: "boundary")
+        } else {
         List(boundaryLeaders) { player in
             NavigationLink(destination: PlayerDetailView(player: player)) {
                 HStack {
@@ -208,6 +219,54 @@ struct BoundaryStatsView: View {
         }
         .listStyle(.plain)
         .searchable(text: $searchText, prompt: "Search players...")
+        }
+    }
+}
+
+// MARK: - Empty State View
+
+struct EmptyStatsView: View {
+    let statType: String
+    
+    var icon: String {
+        switch statType {
+        case "batting": return "cricket.ball"
+        case "bowling": return "figure.cricket"
+        case "boundary": return "sportscourt"
+        default: return "chart.bar"
+        }
+    }
+    
+    var title: String {
+        switch statType {
+        case "batting": return "No Batting Stats Yet"
+        case "bowling": return "No Bowling Stats Yet"
+        case "boundary": return "No Boundary Stats Yet"
+        default: return "No Stats Yet"
+        }
+    }
+    
+    var body: some View {
+        VStack(spacing: 16) {
+            Spacer()
+            
+            Image(systemName: "chart.bar.doc.horizontal")
+                .font(.system(size: 48))
+                .foregroundColor(.secondary.opacity(0.5))
+            
+            Text(title)
+                .font(.title3)
+                .bold()
+            
+            Text("As matches are played, player statistics will show up here. Check back once the season gets underway! 🏏")
+                .font(.subheadline)
+                .foregroundColor(.secondary)
+                .multilineTextAlignment(.center)
+                .padding(.horizontal, 40)
+            
+            Spacer()
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 
