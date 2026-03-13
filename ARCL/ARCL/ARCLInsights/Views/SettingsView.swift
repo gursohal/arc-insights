@@ -11,7 +11,6 @@ struct SettingsView: View {
     @AppStorage("selectedDivisionID") private var selectedDivisionID = 8
     @AppStorage("selectedSeasonID") private var selectedSeasonID = 69
     @AppStorage("myTeamName") private var myTeamName = "Snoqualmie Wolves"
-    @State private var isRefreshing = false
     @State private var isRestoringPurchases = false
     
     var selectedSeason: Season {
@@ -56,31 +55,6 @@ struct SettingsView: View {
                     .onChange(of: selectedSeasonID) {
                         dataManager.updateSeason(selectedSeasonID)
                     }
-                }
-                
-                // MARK: - Data
-                Section {
-                    Button(action: {
-                        Task {
-                            isRefreshing = true
-                            await dataManager.manualRefreshData()
-                            isRefreshing = false
-                        }
-                    }) {
-                        HStack {
-                            Label("Refresh Data", systemImage: "arrow.clockwise")
-                            Spacer()
-                            if isRefreshing {
-                                ProgressView()
-                                    .progressViewStyle(.circular)
-                            } else if let lastUpdate = dataManager.lastUpdate {
-                                Text(lastUpdate, style: .relative)
-                                    .font(.caption)
-                                    .foregroundColor(.secondary)
-                            }
-                        }
-                    }
-                    .disabled(isRefreshing || !dataManager.canManualRefreshNow())
                 }
                 
                 // MARK: - Season Pass
