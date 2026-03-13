@@ -75,11 +75,18 @@ struct SettingsView: View {
                     HStack {
                         Text(selectedSeason.name)
                         Spacer()
-                        if storeManager.isSeasonUnlocked(selectedSeasonID) {
+                        if selectedSeasonID < storeManager.currentPaidSeasonID {
+                            // Past season — always free
+                            Label("Free", systemImage: "checkmark.seal.fill")
+                                .foregroundColor(.green)
+                                .font(.caption)
+                        } else if storeManager.purchasedSeasons.contains(selectedSeasonID) {
+                            // Purchased
                             Label("Unlocked", systemImage: "checkmark.seal.fill")
                                 .foregroundColor(.green)
                                 .font(.caption)
                         } else {
+                            // Current season — needs purchase
                             Label("Locked", systemImage: "lock.fill")
                                 .foregroundColor(.orange)
                                 .font(.caption)

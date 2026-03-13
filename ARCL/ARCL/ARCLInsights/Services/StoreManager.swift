@@ -40,9 +40,22 @@ class StoreManager: ObservableObject {
         transactionListener?.cancel()
     }
 
-    // MARK: - Check if current season is unlocked
+    // MARK: - Check if season is unlocked
+    // Past seasons are always free. Only the current (latest) season requires payment.
+
+    /// The current season that requires payment — highest season ID available
+    var currentPaidSeasonID: Int {
+        // Use the latest available season from DataManager, or fall back to hardcoded
+        let latestFromFallback = Season.fallbackList.map(\.id).max() ?? 69
+        return latestFromFallback
+    }
 
     func isSeasonUnlocked(_ seasonId: Int) -> Bool {
+        // Past seasons are always free
+        if seasonId < currentPaidSeasonID {
+            return true
+        }
+        // Current/upcoming season requires purchase
         return purchasedSeasons.contains(seasonId)
     }
 
