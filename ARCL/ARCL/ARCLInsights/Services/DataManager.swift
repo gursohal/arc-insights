@@ -273,7 +273,7 @@ class DataManager: ObservableObject {
     // MARK: - Refresh policy
 
     func shouldRefreshData() -> Bool {
-        if teams.isEmpty { return true }
+        if teams.isEmpty || topBatsmen.isEmpty { return true }
         guard let lastRefresh = lastDataRefresh else { return true }
         // Refresh if data is from before the most recent Monday 6 AM PT
         // (scraper runs every Monday at 6 AM PT after weekend matches)
