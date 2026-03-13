@@ -64,9 +64,9 @@ struct SettingsView: View {
                                 Text(name).tag(name)
                             }
                         }
-                    }
-                    .onChange(of: myTeamName) {
-                        dataManager.updateMyTeam(myTeamName)
+                        .onChange(of: myTeamName) {
+                            dataManager.updateMyTeam(myTeamName)
+                        }
                     }
                 }
                 
