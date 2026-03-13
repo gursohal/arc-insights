@@ -40,32 +40,27 @@ struct OpponentAnalysisView: View {
                         .bold()
                     
                     if let team = team {
-                        HStack(spacing: 16) {
-                            Text("Div F")
+                        HStack(spacing: 8) {
+                            Text(team.division)
                                 .font(.subheadline)
                                 .foregroundColor(.secondary)
-                            Text("•")
-                                .foregroundColor(.secondary)
-                            Text("Rank #\(team.rank)")
-                                .font(.subheadline)
-                                .bold()
-                                .foregroundColor(.green)
-                            Text("•")
-                                .foregroundColor(.secondary)
+                            if team.rank > 0 && team.rank < 99 {
+                                Text("•").foregroundColor(.secondary)
+                                Text("#\(team.rank)")
+                                    .font(.subheadline)
+                                    .bold()
+                                    .foregroundColor(.green)
+                            }
+                            Text("•").foregroundColor(.secondary)
                             Text("\(team.wins)W-\(team.losses)L")
                                 .font(.subheadline)
                                 .foregroundColor(.secondary)
-                            Text("•")
-                                .foregroundColor(.secondary)
+                            Text("•").foregroundColor(.secondary)
                             Text("\(team.points) pts")
                                 .font(.subheadline)
                                 .bold()
                                 .foregroundColor(.blue)
                         }
-                    } else {
-                        Text("Div F • Summer 2025")
-                            .font(.subheadline)
-                            .foregroundColor(.secondary)
                     }
                 }
                 .padding()
