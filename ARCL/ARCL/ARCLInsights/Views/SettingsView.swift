@@ -7,11 +7,13 @@ import SwiftUI
 
 struct SettingsView: View {
     @EnvironmentObject var dataManager: DataManager
+    @ObservedObject var storeManager = StoreManager.shared
     @AppStorage("selectedDivisionID") private var selectedDivisionID = 8
     @AppStorage("selectedSeasonID") private var selectedSeasonID = 66
     @AppStorage("myTeamName") private var myTeamName = "Snoqualmie Wolves"
     @AppStorage("autoRefresh") private var autoRefresh = true
     @State private var isRefreshing = false
+    @State private var isRestoringPurchases = false
     
     var selectedDivision: Division {
         dataManager.availableDivisions.first(where: { $0.id == selectedDivisionID }) ?? Division.fallbackList[6]
@@ -97,6 +99,79 @@ struct SettingsView: View {
                     .foregroundColor(.secondary)
                 }
                 
+                // MARK: - Season Pass
+                Section(header: Text("Season Pass")) {
+                    // Current status
+                    HStack {
+                        Text("Current Season")
+                        Spacer()
+                        Text(selectedSeason.name)
+                            .foregroundColor(.secondary)
+                    }
+
+                    HStack {
+                        Text("Status")
+                        Spacer()
+                        if storeManager.isSeasonUnlocked(selectedSeasonID) {
+                            Label("Unlocked", systemImage: "checkmark.seal.fill")
+                                .foregroundColor(.green)
+                                .font(.caption)
+                        } else {
+                            Label("Locked", systemImage: "lock.fill")
+                                .foregroundColor(.orange)
+                                .font(.caption)
+                        }
+                    }
+
+                    // Purchased seasons list
+                    if !storeManager.purchasedSeasons.isEmpty {
+                        HStack {
+                            Text("Purchased Seasons")
+                            Spacer()
+                            Text(storeManager.purchasedSeasons.sorted().map { "S\($0)" }.joined(separator: ", "))
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                        }
+                    }
+
+                    // Restore purchases
+                    Button(action: {
+                        Task {
+                            isRestoringPurchases = true
+                            await storeManager.restorePurchases()
+                            isRestoringPurchases = false
+                        }
+                    }) {
+                        HStack {
+                            if isRestoringPurchases {
+                                ProgressView()
+                                    .progressViewStyle(.circular)
+                            }
+                            Text("Restore Purchases")
+                            Spacer()
+                            Image(systemName: "arrow.clockwise.circle")
+                        }
+                    }
+                    .disabled(isRestoringPurchases)
+
+                    if let error = storeManager.purchaseError {
+                        Text(error)
+                            .font(.caption)
+                            .foregroundColor(.red)
+                    }
+
+                    #if DEBUG
+                    // Debug buttons for testing
+                    Button("🔓 Debug: Unlock Current Season") {
+                        storeManager.debugUnlockSeason(selectedSeasonID)
+                    }
+                    Button("🔒 Debug: Reset All Purchases") {
+                        storeManager.debugResetPurchases()
+                    }
+                    .foregroundColor(.red)
+                    #endif
+                }
+
                 Section(header: Text("About")) {
                     HStack {
                         Text("Version")

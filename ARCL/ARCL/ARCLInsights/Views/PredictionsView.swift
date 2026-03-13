@@ -7,7 +7,9 @@ import SwiftUI
 
 struct PredictionsView: View {
     @EnvironmentObject var dataManager: DataManager
+    @ObservedObject var storeManager = StoreManager.shared
     @AppStorage("myTeamName") private var selectedTeamName: String = ""
+    @AppStorage("selectedSeasonID") private var selectedSeasonID: Int = 69
     @State private var selectedOpponent: String = ""
     @State private var selectedGround: String = ""
     
@@ -44,22 +46,42 @@ struct PredictionsView: View {
         return Array(Set(grounds)).sorted()
     }
     
+    var currentSeasonName: String {
+        dataManager.availableSeasons.first(where: { $0.id == selectedSeasonID })?.name ?? "Season \(selectedSeasonID)"
+    }
+
     var body: some View {
         NavigationView {
-            ScrollView {
-                VStack(alignment: .leading, spacing: 24) {
-                    // Header
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text("MATCH PREDICTOR")
-                            .font(.caption)
-                            .foregroundColor(.secondary)
-                        Text("Predict Match Outcomes")
-                            .font(.largeTitle)
-                            .bold()
-                    }
-                    .padding()
-                    
-                    // Team Selection
+            Group {
+                if !storeManager.isSeasonUnlocked(selectedSeasonID) {
+                    // PAYWALL — season not purchased
+                    PaywallView(seasonName: currentSeasonName, featureName: "Match Predictions")
+                } else {
+                    predictionsContent
+                }
+            }
+            .navigationTitle("Predictions")
+            .navigationBarTitleDisplayMode(.inline)
+        }
+    }
+
+    // MARK: - Unlocked Content
+
+    var predictionsContent: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 24) {
+                // Header
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("MATCH PREDICTOR")
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                    Text("Predict Match Outcomes")
+                        .font(.largeTitle)
+                        .bold()
+                }
+                .padding()
+
+                // Team Selection
                     VStack(alignment: .leading, spacing: 16) {
                         // My Team
                         VStack(alignment: .leading, spacing: 8) {
@@ -274,9 +296,6 @@ struct PredictionsView: View {
                 }
                 .padding(.vertical)
             }
-            .navigationTitle("Predictions")
-            .navigationBarTitleDisplayMode(.inline)
-        }
     }
 }
 

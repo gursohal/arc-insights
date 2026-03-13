@@ -7,6 +7,8 @@ import SwiftUI
 
 struct OpponentAnalysisView: View {
     @EnvironmentObject var dataManager: DataManager
+    @ObservedObject var storeManager = StoreManager.shared
+    @AppStorage("selectedSeasonID") private var selectedSeasonID: Int = 69
     let teamName: String
     
     var analysis: OpponentAnalysis {
@@ -17,7 +19,23 @@ struct OpponentAnalysisView: View {
         dataManager.teams.first { $0.name.localizedCaseInsensitiveContains(teamName) }
     }
     
+    var currentSeasonName: String {
+        dataManager.availableSeasons.first(where: { $0.id == selectedSeasonID })?.name ?? "Season \(selectedSeasonID)"
+    }
+    
     var body: some View {
+        Group {
+            if !storeManager.isSeasonUnlocked(selectedSeasonID) {
+                PaywallView(seasonName: currentSeasonName, featureName: "Opponent Analysis")
+            } else {
+                analysisContent
+            }
+        }
+        .navigationTitle("Analysis")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+    
+    var analysisContent: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 24) {
                 // Header
@@ -213,8 +231,6 @@ struct OpponentAnalysisView: View {
             }
             .padding(.vertical)
         }
-        .navigationTitle("Analysis")
-        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
@@ -256,7 +272,6 @@ struct BatsmanCard: View {
     
     var body: some View {
         HStack {
-            // Player Info
             VStack(alignment: .leading, spacing: 4) {
                 Text(player.name)
                     .font(.headline)
@@ -269,7 +284,6 @@ struct BatsmanCard: View {
             
             Spacer()
             
-            // Stats
             if let stats = player.battingStats {
                 VStack(alignment: .trailing, spacing: 4) {
                     Text("Rank #\(stats.rank)")
