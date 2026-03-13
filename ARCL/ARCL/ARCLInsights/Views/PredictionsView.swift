@@ -50,25 +50,13 @@ struct PredictionsView: View {
         dataManager.availableSeasons.first(where: { $0.id == selectedSeasonID })?.name ?? "Season \(selectedSeasonID)"
     }
 
-    var body: some View {
-        NavigationView {
-            Group {
-                if !storeManager.isSeasonUnlocked(selectedSeasonID) {
-                    // PAYWALL — season not purchased
-                    PaywallView(seasonName: currentSeasonName, featureName: "Match Predictions")
-                } else {
-                    predictionsContent
-                }
-            }
-            .navigationTitle("Predictions")
-            .navigationBarTitleDisplayMode(.inline)
-        }
+    var isUnlocked: Bool {
+        storeManager.isSeasonUnlocked(selectedSeasonID)
     }
 
-    // MARK: - Unlocked Content
-
-    var predictionsContent: some View {
-        ScrollView {
+    var body: some View {
+        NavigationView {
+            ScrollView {
             VStack(alignment: .leading, spacing: 24) {
                 // Header
                 VStack(alignment: .leading, spacing: 8) {
@@ -285,17 +273,82 @@ struct PredictionsView: View {
                                 selectedGround: selectedGround.isEmpty ? nil : selectedGround
                             )
                             
-                            PredictionCard(
-                                prediction: prediction,
-                                mustWin: prediction.mustWin,
-                                myTeamName: myTeam.name
-                            )
+                            // MARK: - PREMIUM: Prediction card (blurred if locked)
+                            ZStack {
+                                PredictionCard(
+                                    prediction: prediction,
+                                    mustWin: prediction.mustWin,
+                                    myTeamName: myTeam.name
+                                )
+                                .padding(.horizontal)
+                                .blur(radius: isUnlocked ? 0 : 6)
+                                .allowsHitTesting(isUnlocked)
+                                
+                                if !isUnlocked {
+                                    InlinePaywallBanner(seasonName: currentSeasonName)
+                                }
+                            }
+                        }
+                    }
+                    
+                    // Show paywall teaser if no opponent selected yet and not unlocked
+                    if !isUnlocked && opponentTeam == nil {
+                        VStack(spacing: 16) {
+                            // Fake blurred prediction card teaser
+                            VStack(alignment: .leading, spacing: 16) {
+                                HStack {
+                                    Text("🔮 MATCH PREDICTION")
+                                        .font(.headline)
+                                    Spacer()
+                                }
+                                VStack(alignment: .leading, spacing: 8) {
+                                    Text("Win Probability")
+                                        .font(.subheadline)
+                                        .foregroundColor(.secondary)
+                                    HStack {
+                                        Text("Your Team")
+                                            .font(.title3)
+                                            .bold()
+                                        Spacer()
+                                        Text("67%")
+                                            .font(.title)
+                                            .bold()
+                                            .foregroundColor(.green)
+                                    }
+                                    RoundedRectangle(cornerRadius: 4)
+                                        .fill(Color.green)
+                                        .frame(height: 8)
+                                        .frame(maxWidth: .infinity)
+                                }
+                                VStack(alignment: .leading, spacing: 8) {
+                                    Text("Key Factors")
+                                        .font(.subheadline)
+                                        .bold()
+                                    Text("• Higher ranked team with better form")
+                                        .font(.caption)
+                                        .foregroundColor(.secondary)
+                                    Text("• Strong batting lineup advantage")
+                                        .font(.caption)
+                                        .foregroundColor(.secondary)
+                                }
+                            }
+                            .padding()
+                            .background(Color(.systemGray6))
+                            .cornerRadius(12)
                             .padding(.horizontal)
+                            .blur(radius: 6)
+                            .allowsHitTesting(false)
+                            
+                            InlinePaywallBanner(seasonName: currentSeasonName)
+                                .offset(y: -40)
                         }
                     }
                 }
                 .padding(.vertical)
             }
+            .navigationTitle("Predictions")
+            .navigationBarTitleDisplayMode(.inline)
+        }
     }
 }
 

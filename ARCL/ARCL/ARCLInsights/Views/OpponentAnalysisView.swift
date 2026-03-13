@@ -23,22 +23,14 @@ struct OpponentAnalysisView: View {
         dataManager.availableSeasons.first(where: { $0.id == selectedSeasonID })?.name ?? "Season \(selectedSeasonID)"
     }
     
-    var body: some View {
-        Group {
-            if !storeManager.isSeasonUnlocked(selectedSeasonID) {
-                PaywallView(seasonName: currentSeasonName, featureName: "Opponent Analysis")
-            } else {
-                analysisContent
-            }
-        }
-        .navigationTitle("Analysis")
-        .navigationBarTitleDisplayMode(.inline)
+    var isUnlocked: Bool {
+        storeManager.isSeasonUnlocked(selectedSeasonID)
     }
     
-    var analysisContent: some View {
+    var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 24) {
-                // Header
+                // MARK: - FREE: Header (always visible)
                 VStack(alignment: .leading, spacing: 8) {
                     Text("OPPONENT ANALYSIS")
                         .font(.caption)
@@ -80,7 +72,7 @@ struct OpponentAnalysisView: View {
                 
                 Divider()
                 
-                // Team Form & Momentum
+                // MARK: - FREE: Recent Form (always visible — teaser)
                 let teamForm = InsightEngine.shared.analyzeTeamForm(
                     teamName: teamName,
                     matches: dataManager.matches
@@ -147,90 +139,120 @@ struct OpponentAnalysisView: View {
                 
                 Divider()
                 
-                // Top Batsmen
-                SectionView(
-                    title: "🏏 TOP BATSMEN",
-                    subtitle: "Key Players",
-                    color: .orange
-                ) {
-                    if analysis.dangerousBatsmen.isEmpty {
-                        InsightCard(
-                            text: "No batting statistics available for this team yet. Check back after more matches are played.",
-                            icon: "info.circle.fill",
-                            color: .gray
-                        )
-                    } else {
-                        ForEach(analysis.dangerousBatsmen) { player in
-                            NavigationLink(destination: PlayerDetailView(player: player)) {
-                                BatsmanCard(player: player, isDangerous: true)
-                            }
-                            .buttonStyle(PlainButtonStyle())
-                        }
-                        
-                        InsightCard(
-                            text: "These are their top scorers. Set attacking fields, use your best bowlers, and target them early.",
-                            icon: "lightbulb.fill",
+                // MARK: - PREMIUM: Batsmen, Bowlers, Strategy (blurred if locked)
+                ZStack {
+                    // Real content (blurred when locked)
+                    VStack(alignment: .leading, spacing: 24) {
+                        // Top Batsmen
+                        SectionView(
+                            title: "🏏 TOP BATSMEN",
+                            subtitle: "Key Players",
                             color: .orange
-                        )
-                    }
-                }
-                
-                // Top Bowlers
-                SectionView(
-                    title: "⚡ TOP BOWLERS",
-                    subtitle: "Be Careful!",
-                    color: .purple
-                ) {
-                    if analysis.dangerousBowlers.isEmpty {
-                        InsightCard(
-                            text: "No bowling statistics available for this team yet. Check back after more matches are played.",
-                            icon: "info.circle.fill",
-                            color: .gray
-                        )
-                    } else {
-                        ForEach(analysis.dangerousBowlers) { player in
-                            NavigationLink(destination: PlayerDetailView(player: player)) {
-                                BowlerCard(player: player)
+                        ) {
+                            if analysis.dangerousBatsmen.isEmpty {
+                                InsightCard(
+                                    text: "No batting statistics available for this team yet. Check back after more matches are played.",
+                                    icon: "info.circle.fill",
+                                    color: .gray
+                                )
+                            } else {
+                                ForEach(analysis.dangerousBatsmen) { player in
+                                    if isUnlocked {
+                                        NavigationLink(destination: PlayerDetailView(player: player)) {
+                                            BatsmanCard(player: player, isDangerous: true)
+                                        }
+                                        .buttonStyle(PlainButtonStyle())
+                                    } else {
+                                        BatsmanCard(player: player, isDangerous: true)
+                                    }
+                                }
+                                
+                                InsightCard(
+                                    text: "These are their top scorers. Set attacking fields, use your best bowlers, and target them early.",
+                                    icon: "lightbulb.fill",
+                                    color: .orange
+                                )
                             }
-                            .buttonStyle(PlainButtonStyle())
                         }
                         
-                        InsightCard(
-                            text: "These bowlers take wickets. Play defensively early, don't take unnecessary risks. Wait for loose balls.",
-                            icon: "lightbulb.fill",
+                        // Top Bowlers
+                        SectionView(
+                            title: "⚡ TOP BOWLERS",
+                            subtitle: "Be Careful!",
                             color: .purple
-                        )
-                    }
-                }
-                
-                // Summary
-                VStack(alignment: .leading, spacing: 12) {
-                    Text("📊 MATCH STRATEGY")
-                        .font(.headline)
-                    
-                    if analysis.dangerousBatsmen.isEmpty && analysis.dangerousBowlers.isEmpty {
-                        InsightCard(
-                            text: "No match data available yet. Strategies will appear once the season begins and matches are played.",
-                            icon: "info.circle.fill",
-                            color: .gray
-                        )
-                    } else {
-                        ForEach(analysis.recommendations, id: \.self) { rec in
-                            HStack(alignment: .top, spacing: 8) {
-                                Text("•")
-                                Text(rec)
-                                    .font(.subheadline)
+                        ) {
+                            if analysis.dangerousBowlers.isEmpty {
+                                InsightCard(
+                                    text: "No bowling statistics available for this team yet. Check back after more matches are played.",
+                                    icon: "info.circle.fill",
+                                    color: .gray
+                                )
+                            } else {
+                                ForEach(analysis.dangerousBowlers) { player in
+                                    if isUnlocked {
+                                        NavigationLink(destination: PlayerDetailView(player: player)) {
+                                            BowlerCard(player: player)
+                                        }
+                                        .buttonStyle(PlainButtonStyle())
+                                    } else {
+                                        BowlerCard(player: player)
+                                    }
+                                }
+                                
+                                InsightCard(
+                                    text: "These bowlers take wickets. Play defensively early, don't take unnecessary risks. Wait for loose balls.",
+                                    icon: "lightbulb.fill",
+                                    color: .purple
+                                )
                             }
+                        }
+                        
+                        // Match Strategy
+                        VStack(alignment: .leading, spacing: 12) {
+                            Text("📊 MATCH STRATEGY")
+                                .font(.headline)
+                            
+                            if analysis.dangerousBatsmen.isEmpty && analysis.dangerousBowlers.isEmpty {
+                                InsightCard(
+                                    text: "No match data available yet. Strategies will appear once the season begins and matches are played.",
+                                    icon: "info.circle.fill",
+                                    color: .gray
+                                )
+                            } else {
+                                ForEach(analysis.recommendations, id: \.self) { rec in
+                                    HStack(alignment: .top, spacing: 8) {
+                                        Text("•")
+                                        Text(rec)
+                                            .font(.subheadline)
+                                    }
+                                }
+                            }
+                        }
+                        .padding()
+                        .background(Color(.systemGray6))
+                        .cornerRadius(12)
+                        .padding(.horizontal)
+                    }
+                    .blur(radius: isUnlocked ? 0 : 6)
+                    .allowsHitTesting(isUnlocked)
+                    
+                    // Paywall overlay (only when locked)
+                    if !isUnlocked {
+                        VStack(spacing: 16) {
+                            Spacer()
+                                .frame(height: 60)
+                            
+                            InlinePaywallBanner(seasonName: currentSeasonName)
+                            
+                            Spacer()
                         }
                     }
                 }
-                .padding()
-                .background(Color(.systemGray6))
-                .cornerRadius(12)
-                .padding(.horizontal)
             }
             .padding(.vertical)
         }
+        .navigationTitle("Analysis")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
