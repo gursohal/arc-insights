@@ -41,7 +41,7 @@ class DataManager: ObservableObject {
     @AppStorage("lastManualRefresh")  private var lastManualRefreshTimestamp: Double = 0
 
     private let api = ARCLAPIService.shared
-    private var isRefreshing = false
+    private var currentRefreshTask: Task<Void, Never>?
 
     var lastDataRefresh: Date? {
         guard lastDataRefreshTimestamp > 0 else { return nil }
@@ -51,28 +51,35 @@ class DataManager: ObservableObject {
     // MARK: - Refresh: all data for the selected division + season
 
     func refreshData() async {
-        // Skip if a refresh is already in progress (avoids "cancelled" URLSession errors)
-        guard !isRefreshing else {
-            print("⏳ Refresh already in progress, skipping duplicate call")
-            return
+        // If a refresh is already running, cancel it and start fresh
+        // (e.g., user changed season/division mid-refresh)
+        currentRefreshTask?.cancel()
+        
+        let divId = selectedDivisionID
+        let seaId = selectedSeasonID
+        
+        let task = Task { @MainActor [weak self] in
+            guard let self = self else { return }
+            await self._doRefresh(divisionId: divId, seasonId: seaId)
         }
-        isRefreshing = true
+        currentRefreshTask = task
+        await task.value
+    }
+    
+    private func _doRefresh(divisionId: Int, seasonId: Int) async {
         isLoading = true
         errorMessage = nil
-        defer {
-            isLoading = false
-            isRefreshing = false
-        }
+        defer { isLoading = false }
 
         do {
             // Fetch teams / standings
             let standingsResponse = try await api.fetchStandings(
-                divisionId: selectedDivisionID, seasonId: selectedSeasonID
+                divisionId: divisionId, seasonId: seasonId
             )
             teams = standingsResponse.map { s in
                 Team(
                     name: s.name,
-                    division: availableDivisions.first { $0.id == selectedDivisionID }?.name ?? "",
+                    division: availableDivisions.first { $0.id == divisionId }?.name ?? "",
                     wins: s.wins,
                     losses: s.losses,
                     rank: s.rank ?? 99,
@@ -82,7 +89,7 @@ class DataManager: ObservableObject {
 
             // Fetch batting stats
             let batsmenResponse = try await api.fetchBatsmen(
-                divisionId: selectedDivisionID, seasonId: selectedSeasonID, limit: 150
+                divisionId: divisionId, seasonId: seasonId, limit: 150
             )
             topBatsmen = batsmenResponse.map { b in
                 let stats = BattingStats(
@@ -107,7 +114,7 @@ class DataManager: ObservableObject {
 
             // Fetch bowling stats
             let bowlersResponse = try await api.fetchBowlers(
-                divisionId: selectedDivisionID, seasonId: selectedSeasonID, limit: 150
+                divisionId: divisionId, seasonId: seasonId, limit: 150
             )
             topBowlers = bowlersResponse.map { bw in
                 let stats = BowlingStats(
@@ -130,7 +137,7 @@ class DataManager: ObservableObject {
 
             // Fetch schedule
             let scheduleResponse = try await api.fetchSchedule(
-                divisionId: selectedDivisionID, seasonId: selectedSeasonID
+                divisionId: divisionId, seasonId: seasonId
             )
             matches = scheduleResponse.map { m in
                 Match(
