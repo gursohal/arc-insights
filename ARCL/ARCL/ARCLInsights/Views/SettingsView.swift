@@ -28,7 +28,8 @@ struct SettingsView: View {
                         }
                     }
                     .onChange(of: selectedSeasonID) {
-                        // Season changed → reload divisions for this season, then data
+                        // Season changed → clear team, reload divisions + data
+                        myTeamName = ""
                         dataManager.updateSeason(selectedSeasonID)
                     }
                 }
@@ -41,17 +42,24 @@ struct SettingsView: View {
                         }
                     }
                     .onChange(of: selectedDivisionID) {
-                        // Division changed → reload teams/data
+                        // Division changed → clear team, reload teams/data
+                        myTeamName = ""
                         dataManager.updateDivision(selectedDivisionID)
                     }
                 }
                 
                 // MARK: - My Team (loaded based on division + season)
                 Section(header: Text("My Team")) {
-                    Picker("Team", selection: $myTeamName) {
-                        if dataManager.teams.isEmpty {
-                            Text(myTeamName).tag(myTeamName)
-                        } else {
+                    if dataManager.isLoading {
+                        HStack {
+                            Text("Loading teams...")
+                                .foregroundColor(.secondary)
+                            Spacer()
+                            ProgressView().progressViewStyle(.circular)
+                        }
+                    } else {
+                        Picker("Team", selection: $myTeamName) {
+                            Text("Select a team...").tag("")
                             ForEach(dataManager.teams.map(\.name).sorted(), id: \.self) { name in
                                 Text(name).tag(name)
                             }
