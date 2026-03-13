@@ -258,11 +258,12 @@ struct UpcomingMatchCard: View {
             
             Divider()
             
-            // Teams
+            // Teams — opponent is bold, your team is subtle
             HStack(spacing: 16) {
                 Text(match.team1)
-                    .font(.headline)
-                    .foregroundColor(match.team1.localizedCaseInsensitiveContains(teamName) ? .primary : .secondary)
+                    .font(match.team1.localizedCaseInsensitiveContains(teamName) ? .subheadline : .headline)
+                    .fontWeight(match.team1.localizedCaseInsensitiveContains(teamName) ? .regular : .bold)
+                    .foregroundColor(match.team1.localizedCaseInsensitiveContains(teamName) ? .secondary : .primary)
                     .frame(maxWidth: .infinity, alignment: .leading)
                 
                 Text("VS")
@@ -271,8 +272,9 @@ struct UpcomingMatchCard: View {
                     .foregroundColor(.green)
                 
                 Text(match.team2)
-                    .font(.headline)
-                    .foregroundColor(match.team2.localizedCaseInsensitiveContains(teamName) ? .primary : .secondary)
+                    .font(match.team2.localizedCaseInsensitiveContains(teamName) ? .subheadline : .headline)
+                    .fontWeight(match.team2.localizedCaseInsensitiveContains(teamName) ? .regular : .bold)
+                    .foregroundColor(match.team2.localizedCaseInsensitiveContains(teamName) ? .secondary : .primary)
                     .frame(maxWidth: .infinity, alignment: .trailing)
             }
             
