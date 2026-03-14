@@ -17,10 +17,11 @@ def aggregate_boundaries(scorecards):
     player_boundaries = {}
     
     for scorecard in scorecards:
-        # Process both innings
-        for innings in [scorecard['team1_innings'], scorecard['team2_innings']]:
-            for batsman in innings['batting']:
-                name = batsman['name']
+        # Process both innings — use .get() for safety
+        for innings_key in ('team1_innings', 'team2_innings'):
+            innings = scorecard.get(innings_key, {})
+            for batsman in innings.get('batting', []):
+                name = batsman.get('name', '')
                 
                 # Skip if no name
                 if not name:
@@ -28,12 +29,12 @@ def aggregate_boundaries(scorecards):
                 
                 # Parse boundaries (handle empty strings)
                 try:
-                    fours = int(batsman['fours']) if batsman['fours'] else 0
+                    fours = int(batsman.get('fours', 0) or 0)
                 except (ValueError, TypeError):
                     fours = 0
                 
                 try:
-                    sixes = int(batsman['sixes']) if batsman['sixes'] else 0
+                    sixes = int(batsman.get('sixes', 0) or 0)
                 except (ValueError, TypeError):
                     sixes = 0
                 

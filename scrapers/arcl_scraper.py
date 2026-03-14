@@ -9,7 +9,7 @@ import os
 import sys
 from datetime import datetime
 from scrapers import (
-    TeamsScraper, BatsmenScraper, BowlersScraper,
+    BatsmenScraper, BowlersScraper,
     StandingsScraper, ScheduleScraper, ScorecardScraper,
 )
 from scrapers.db_writer import DBWriter
@@ -20,7 +20,6 @@ class ARCLDataScraper:
     """Main orchestrator for all ARCL data scraping"""
 
     def __init__(self, use_db: bool = True):
-        self.teams_scraper = TeamsScraper()
         self.batsmen_scraper = BatsmenScraper()
         self.bowlers_scraper = BowlersScraper()
         self.standings_scraper = StandingsScraper()
@@ -42,8 +41,7 @@ class ARCLDataScraper:
         # 1. Standings (also gives us numeric team_ids for schedule)
         standings_data = self.standings_scraper.scrape(division_id, season_id)
 
-        # 2. Team list, batting, bowling
-        teams_data   = self.teams_scraper.scrape(division_id, season_id)
+        # 2. Batting and bowling leaderboards
         batsmen_data = self.batsmen_scraper.scrape(division_id, season_id, limit=150)
         bowlers_data = self.bowlers_scraper.scrape(division_id, season_id, limit=150)
 
@@ -52,8 +50,7 @@ class ARCLDataScraper:
             division_id, season_id, standings_data=standings_data
         )
 
-        print(f"\n   📋 {len(teams_data)} teams")
-        print(f"   🏏 {len(batsmen_data)} batsmen")
+        print(f"\n   🏏 {len(batsmen_data)} batsmen")
         print(f"   ⚡ {len(bowlers_data)} bowlers")
         print(f"   🏆 {len(standings_data)} standings entries")
         print(f"   📅 {len(schedule_data)} matches")
@@ -65,9 +62,13 @@ class ARCLDataScraper:
             self.db.upsert_teams(division_id, season_id, standings_data)
             self.db.upsert_matches(division_id, season_id, schedule_data)
             if batsmen_data:
-                self.db.upsert_batsmen(division_id, season_id, batsmen_data)
+                self.db.upsert_batsmen(
+                    division_id, season_id, batsmen_data, source="leaderboard"
+                )
             if bowlers_data:
-                self.db.upsert_bowlers(division_id, season_id, bowlers_data)
+                self.db.upsert_bowlers(
+                    division_id, season_id, bowlers_data, source="leaderboard"
+                )
             print(f"   ✅ DB write complete: {division_name}")
 
         # 5. Scorecards (optional – expensive)
@@ -81,7 +82,6 @@ class ARCLDataScraper:
             "division_id": division_id,
             "season_id": season_id,
             "division_name": division_name,
-            "teams": teams_data,
             "standings": standings_data,
             "schedule": schedule_data,
             "batsmen": batsmen_data,
@@ -149,11 +149,15 @@ class ARCLDataScraper:
                     p.pop("team_id", None)
 
                 if agg_batsmen:
-                    self.db.upsert_batsmen(division_id, season_id, agg_batsmen)
+                    self.db.upsert_batsmen(
+                        division_id, season_id, agg_batsmen, source="scorecard"
+                    )
                     print(f"   ✅ Aggregated {len(agg_batsmen)} batsmen from scorecards")
 
                 if agg_bowlers:
-                    self.db.upsert_bowlers(division_id, season_id, agg_bowlers)
+                    self.db.upsert_bowlers(
+                        division_id, season_id, agg_bowlers, source="scorecard"
+                    )
                     print(f"   ✅ Aggregated {len(agg_bowlers)} bowlers from scorecards")
 
             except Exception as exc:

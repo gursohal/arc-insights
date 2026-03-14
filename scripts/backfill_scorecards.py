@@ -29,8 +29,11 @@ def get_missing_matches(conn, season_id):
 
 def backfill_season(season_id):
     """Backfill all missing scorecards for a season."""
-    db_url = os.environ.get('DATABASE_URL', 
-        'postgresql://arcladmin:Bcwz1sTPRG9iwT6hTyUxHNgWL@arcl-db-1770866957.postgres.database.azure.com:5432/arcl_insights?sslmode=require')
+    db_url = os.environ.get('DATABASE_URL')
+    if not db_url:
+        print("❌ DATABASE_URL environment variable is not set.")
+        print("   Set it in .env or export it before running this script.")
+        sys.exit(1)
     
     conn = psycopg2.connect(db_url)
     missing = get_missing_matches(conn, season_id)

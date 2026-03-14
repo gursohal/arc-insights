@@ -25,6 +25,19 @@ class BowlersScraper(BaseScraper):
             # Columns: Rank, Name, Team, Innings, Overs, Maidens, Runs Given, Wickets, Average
             if len(row) >= 9:
                 try:
+                    # Calculate economy using cricket-aware overs math
+                    try:
+                        overs_raw = float(row[4])
+                        runs_given = float(row[6])
+                        whole = int(overs_raw)
+                        partial = round((overs_raw - whole) * 10)
+                        if partial > 5:
+                            partial = 5
+                        total_balls = whole * 6 + partial
+                        economy = str(round(runs_given / (total_balls / 6), 2)) if total_balls > 0 else "0"
+                    except (ValueError, TypeError, ZeroDivisionError):
+                        economy = "0"
+
                     bowlers.append({
                         "rank": row[0],
                         "name": row[1],
@@ -35,8 +48,7 @@ class BowlersScraper(BaseScraper):
                         "runs_given": row[6],
                         "wickets": row[7],
                         "average": row[8],
-                        # Calculate economy rate
-                        "economy": str(round(float(row[6]) / float(row[4]), 2)) if float(row[4]) > 0 else "0"
+                        "economy": economy
                     })
                 except Exception as e:
                     continue

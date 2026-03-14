@@ -212,7 +212,7 @@ class ScheduleScraper(BaseScraper):
                 continue
             
             # Extract text data
-            row_data = [col.get_text(strip=True) for col in cols]
+            cols_text = [col.get_text(strip=True) for col in cols]
             
             # Extract match_id from link (usually in Winner column - index 9)
             match_id = None
@@ -228,12 +228,11 @@ class ScheduleScraper(BaseScraper):
                         except:
                             pass
             
-            row = row_data  # Replace row with extracted data for compatibility
             # Columns: Date, Start Time, End Time, Ground, Team1, Team2, Umpire, Umpire2, Match Type, Winner, Runner, Comment
-            if len(row) >= 6:
+            if len(cols_text) >= 6:
                 try:
                     # Parse the match data
-                    runner_up_text = row[10] if len(row) > 10 else ""
+                    runner_up_text = cols_text[10] if len(cols_text) > 10 else ""
                     
                     # Extract loser team name and points from "TeamName(points)" format
                     loser_team = runner_up_text
@@ -248,15 +247,15 @@ class ScheduleScraper(BaseScraper):
                     
                     match = {
                         "match_id": match_id,
-                        "date": row[0] if len(row) > 0 else "",
-                        "time": row[1] if len(row) > 1 else "",  # Start time
-                        "ground": row[3] if len(row) > 3 else "",  # Skip End Time at index 2
-                        "team1": row[4] if len(row) > 4 else "",
-                        "team2": row[5] if len(row) > 5 else "",
-                        "umpire1": row[6] if len(row) > 6 else "",
-                        "umpire2": row[7] if len(row) > 7 else "",
-                        "match_type": row[8] if len(row) > 8 else "",
-                        "winner": row[9] if len(row) > 9 else "",
+                        "date": cols_text[0] if len(cols_text) > 0 else "",
+                        "time": cols_text[1] if len(cols_text) > 1 else "",  # Start time
+                        "ground": cols_text[3] if len(cols_text) > 3 else "",  # Skip End Time at index 2
+                        "team1": cols_text[4] if len(cols_text) > 4 else "",
+                        "team2": cols_text[5] if len(cols_text) > 5 else "",
+                        "umpire1": cols_text[6] if len(cols_text) > 6 else "",
+                        "umpire2": cols_text[7] if len(cols_text) > 7 else "",
+                        "match_type": cols_text[8] if len(cols_text) > 8 else "",
+                        "winner": cols_text[9] if len(cols_text) > 9 else "",
                         "runner_up": loser_team,
                         "loser_points": loser_points,
                         "winner_points": 30  # Standard win points, will be calculated more accurately later

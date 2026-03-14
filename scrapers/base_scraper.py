@@ -20,7 +20,7 @@ class BaseScraper(ABC):
         })
     
     def fetch_page(self, url, retries=3):
-        """Fetch a page with retry logic"""
+        """Fetch a page with exponential backoff retry logic"""
         for attempt in range(retries):
             try:
                 response = self.session.get(url, timeout=10)
@@ -30,7 +30,8 @@ class BaseScraper(ABC):
                 if attempt == retries - 1:
                     print(f"❌ Failed to fetch {url}: {e}")
                     return None
-                time.sleep(1)
+                wait = 2 ** attempt  # Exponential backoff: 1s, 2s, 4s …
+                time.sleep(wait)
         return None
     
     def extract_table_data(self, soup, table_id_pattern=None):

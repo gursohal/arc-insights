@@ -9,6 +9,10 @@ from .base_scraper import BaseScraper
 class DivisionsSeasonsScraper(BaseScraper):
     """Scraper for available divisions and seasons"""
     
+    def scrape(self, division_id=None, season_id=None):
+        """Required by BaseScraper ABC — delegates to scrape_available_options."""
+        return self.scrape_available_options()
+    
     def scrape_available_options(self):
         """Scrape all available divisions and seasons from homepage"""
         url = f"{self.base_url}/Pages/UI/DivHome.aspx"

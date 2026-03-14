@@ -10,8 +10,9 @@ import time
 class ScorecardScraper(BaseScraper):
     """Scrapes individual match scorecards"""
     
-    def scrape(self):
-        """Required by BaseScraper - not used for scorecards"""
+    def scrape(self, division_id=None, season_id=None):
+        """Required by BaseScraper - not used directly for scorecards.
+        Use scrape_scorecard() or scrape_division_scorecards() instead."""
         pass
     
     def scrape_scorecard(self, match_id, league_id, season_id):
@@ -234,15 +235,21 @@ class ScorecardScraper(BaseScraper):
                         'no_balls': cells[col_indices.get('no_balls', 3)].get_text(strip=True) if 'no_balls' in col_indices else '0'
                     }
                     
-                    # Calculate economy if we have overs and runs
+                    # Calculate economy using cricket-aware overs math
+                    # 4.3 overs = 4 overs + 3 balls = 27 balls
                     try:
-                        overs = float(bowler['overs'])
+                        overs_raw = float(bowler['overs'])
                         runs = int(bowler['runs'])
-                        if overs > 0:
-                            bowler['economy'] = f"{runs / overs:.2f}"
+                        whole = int(overs_raw)
+                        partial = round((overs_raw - whole) * 10)
+                        if partial > 5:
+                            partial = 5
+                        total_balls = whole * 6 + partial
+                        if total_balls > 0:
+                            bowler['economy'] = f"{runs / (total_balls / 6):.2f}"
                         else:
                             bowler['economy'] = "0.00"
-                    except:
+                    except (ValueError, TypeError, ZeroDivisionError):
                         bowler['economy'] = "0.00"
                     
                     if bowler['name']:

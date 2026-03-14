@@ -14,6 +14,31 @@ def generate_team_id(team_name, division_id, season_id):
     return hash_obj.hexdigest()[:8]
 
 
+# ────────────────────────────────────────────
+# Cricket overs helpers
+# ────────────────────────────────────────────
+def _overs_to_balls(overs_val):
+    """Convert cricket overs notation (e.g. 4.3 = 4 overs 3 balls) to total balls."""
+    try:
+        overs_f = float(overs_val)
+    except (TypeError, ValueError):
+        return 0
+    whole = int(overs_f)
+    partial = round((overs_f - whole) * 10)
+    if partial > 5:
+        partial = 5
+    return whole * 6 + partial
+
+
+def _balls_to_overs(balls):
+    """Convert total balls back to cricket overs notation."""
+    if balls <= 0:
+        return 0.0
+    complete = balls // 6
+    remaining = balls % 6
+    return complete + remaining / 10
+
+
 def aggregate_players_from_scorecards(scorecards, teams_list, division_id, season_id):
     """
     Aggregate all player statistics from scorecards
@@ -45,7 +70,7 @@ def aggregate_players_from_scorecards(scorecards, teams_list, division_id, seaso
         'name': '',
         'team': '',
         'innings': 0,
-        'overs': 0.0,
+        'total_balls': 0,   # Store as balls for correct cricket math
         'maidens': 0,
         'runs': 0,
         'wickets': 0,
@@ -173,10 +198,8 @@ def _aggregate_bowling(bowler, team, bowling_stats, division_id, season_id):
     stats['team_id'] = team_id
     stats['innings'] += 1
     
-    try:
-        stats['overs'] += float(bowler.get('overs', 0))
-    except:
-        pass
+    # Convert overs to balls for correct cricket addition
+    stats['total_balls'] += _overs_to_balls(bowler.get('overs', 0))
     
     try:
         stats['maidens'] += int(bowler.get('maidens', 0))
@@ -242,15 +265,22 @@ def _finalize_bowling_stats(bowling_stats):
     bowlers = []
     
     for (name, team), stats in bowling_stats.items():
-        overs = stats['overs']
+        total_balls = stats['total_balls']
         runs = stats['runs']
         wickets = stats['wickets']
         
-        # Calculate average
+        # Convert balls back to cricket overs notation for display
+        overs = _balls_to_overs(total_balls)
+        
+        # Calculate average (runs per wicket)
         average = round(runs / wickets, 2) if wickets > 0 else 0
         
-        # Calculate economy
-        economy = round(runs / overs, 2) if overs > 0 else 0
+        # Calculate economy (runs per over) using actual balls
+        # Economy = runs / (total_balls / 6)
+        economy = round(runs / (total_balls / 6), 2) if total_balls > 0 else 0
+        
+        # Calculate bowling strike rate (balls per wicket)
+        strike_rate = round(total_balls / wickets, 2) if wickets > 0 else 0
         
         bowlers.append({
             'rank': '0',  # Will be set later
@@ -263,7 +293,8 @@ def _finalize_bowling_stats(bowling_stats):
             'runs_given': str(runs),
             'wickets': str(wickets),
             'average': str(average),
-            'economy': str(economy)
+            'economy': str(economy),
+            'strike_rate': str(strike_rate)
         })
     
     return bowlers

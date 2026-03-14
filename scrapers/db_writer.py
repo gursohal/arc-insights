@@ -13,15 +13,54 @@ load_dotenv()
 DATABASE_URL = os.getenv("DATABASE_URL")
 
 
+# ────────────────────────────────────────────
+# Cricket overs helpers
+# ────────────────────────────────────────────
+def overs_to_balls(overs_val):
+    """Convert cricket overs notation (e.g. 4.3 = 4 overs 3 balls) to total balls."""
+    try:
+        overs_f = float(overs_val)
+    except (TypeError, ValueError):
+        return 0
+    whole = int(overs_f)
+    partial = round((overs_f - whole) * 10)
+    # Guard against bad data like 4.7 (max 5 balls in partial)
+    if partial > 5:
+        partial = 5
+    return whole * 6 + partial
+
+
+def balls_to_overs(balls):
+    """Convert total balls back to cricket overs notation (e.g. 27 balls = 4.3)."""
+    if balls <= 0:
+        return 0.0
+    complete = balls // 6
+    remaining = balls % 6
+    return complete + remaining / 10
+
+
 class DBWriter:
     def __init__(self):
+        if not DATABASE_URL:
+            raise ValueError(
+                "DATABASE_URL environment variable is not set. "
+                "Set it in .env or export it before running the scraper."
+            )
         self.conn = psycopg2.connect(DATABASE_URL)
         self.conn.autocommit = False
 
     def close(self):
-        self.conn.close()
+        if self.conn and not self.conn.closed:
+            self.conn.close()
+
+    def _ensure_connected(self):
+        """Reconnect if the connection has been dropped."""
+        if self.conn.closed:
+            self.conn = psycopg2.connect(DATABASE_URL)
+            self.conn.autocommit = False
 
     def _cursor(self):
+        self._ensure_connected()
         return self.conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
 
     # ────────────────────────────────────────────
@@ -160,15 +199,29 @@ class DBWriter:
         row = cur.fetchone()
         return row["team_id"] if row else None
 
-    def upsert_batsmen(self, division_id: int, season_id: int, batsmen: list):
-        """Write batting stats"""
+    @staticmethod
+    def _make_player_id(name: str, division_id: int, season_id: int) -> str:
+        """Generate a deterministic player_id that includes division to avoid collisions."""
+        return f"{name.lower().replace(' ', '_')}_{division_id}_{season_id}"
+
+    def upsert_batsmen(self, division_id: int, season_id: int, batsmen: list,
+                       source: str = "leaderboard"):
+        """Write batting stats.
+
+        Args:
+            source: "leaderboard" or "scorecard" — controls merge behaviour.
+                    When source="leaderboard", fours/sixes are NOT overwritten
+                    if they are 0 (leaderboard doesn't have them).
+        """
         with self._cursor() as cur:
             for b in batsmen:
                 name = b.get("name") or b.get("player", "")
                 if not name:
                     continue
-                # Use name+team+season as player_id if no explicit one
-                player_id = b.get("player_id") or f"{name.lower().replace(' ', '_')}_{season_id}"
+                # Use name+division+season as player_id if no explicit one
+                player_id = b.get("player_id") or self._make_player_id(
+                    name, division_id, season_id
+                )
                 # Resolve team_id from team name if not provided
                 team_id = b.get("team_id") or self._resolve_team_id(
                     cur, b.get("team", ""), division_id, season_id
@@ -184,8 +237,19 @@ class DBWriter:
                         last_updated = NOW()
                 """, (player_id, name, team_id))
 
-                # Upsert batting stats
-                cur.execute("""
+                fours = self._int(b.get("fours", 0))
+                sixes = self._int(b.get("sixes", 0))
+
+                # Leaderboard data doesn't have fours/sixes — use GREATEST
+                # to avoid zeroing out scorecard-aggregated values.
+                if source == "leaderboard":
+                    fours_expr = "GREATEST(COALESCE(batting_stats.fours, 0), COALESCE(EXCLUDED.fours, 0))"
+                    sixes_expr = "GREATEST(COALESCE(batting_stats.sixes, 0), COALESCE(EXCLUDED.sixes, 0))"
+                else:
+                    fours_expr = "EXCLUDED.fours"
+                    sixes_expr = "EXCLUDED.sixes"
+
+                cur.execute(f"""
                     INSERT INTO batting_stats (
                         player_id, division_id, season_id, rank,
                         innings, runs, average, strike_rate,
@@ -199,8 +263,8 @@ class DBWriter:
                         runs = EXCLUDED.runs,
                         average = EXCLUDED.average,
                         strike_rate = EXCLUDED.strike_rate,
-                        fours = EXCLUDED.fours,
-                        sixes = EXCLUDED.sixes,
+                        fours = {fours_expr},
+                        sixes = {sixes_expr},
                         fifties = EXCLUDED.fifties,
                         hundreds = EXCLUDED.hundreds,
                         last_updated = NOW()
@@ -211,21 +275,24 @@ class DBWriter:
                     self._int(b.get("runs", 0)),
                     self._float(b.get("average")),
                     self._float(b.get("strike_rate")),
-                    self._int(b.get("fours", 0)),
-                    self._int(b.get("sixes", 0)),
+                    fours,
+                    sixes,
                     self._int(b.get("fifties", 0)),
                     self._int(b.get("hundreds", 0)),
                 ))
         self.conn.commit()
 
-    def upsert_bowlers(self, division_id: int, season_id: int, bowlers: list):
-        """Write bowling stats"""
+    def upsert_bowlers(self, division_id: int, season_id: int, bowlers: list,
+                       source: str = "leaderboard"):
+        """Write bowling stats."""
         with self._cursor() as cur:
             for b in bowlers:
                 name = b.get("name") or b.get("player", "")
                 if not name:
                     continue
-                player_id = b.get("player_id") or f"{name.lower().replace(' ', '_')}_{season_id}"
+                player_id = b.get("player_id") or self._make_player_id(
+                    name, division_id, season_id
+                )
                 # Resolve team_id from team name if not provided
                 team_id = b.get("team_id") or self._resolve_team_id(
                     cur, b.get("team", ""), division_id, season_id
@@ -319,9 +386,10 @@ class DBWriter:
             1 for b in batting
             if b.get("how_out", "").lower() not in ("", "not out", "dnb")
         )
-        total_overs = max(
-            (self._float(bw.get("overs")) or 0 for bw in bowling), default=0
-        )
+        # FIX Bug 2: Use sum() instead of max() for total overs
+        # FIX Bug 3: Use cricket-aware overs addition
+        total_balls = sum(overs_to_balls(bw.get("overs", 0)) for bw in bowling)
+        total_overs = balls_to_overs(total_balls)
 
         cur.execute("""
             INSERT INTO scorecards (match_id, innings, team_id,
