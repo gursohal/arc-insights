@@ -142,7 +142,7 @@ struct ScorecardView: View {
             if let fetchedScorecard = fetchedScorecard {
                 scorecard = fetchedScorecard
             } else {
-                errorMessage = "Scorecard data will be available after running the scraper with --scorecards flag"
+                errorMessage = "Scorecard not available for this match. Detailed scorecards are added weekly as matches are played."
             }
         }
     }
