@@ -114,7 +114,8 @@ def get_schedule(
     """Get match schedule for a division"""
     query = """
         SELECT match_id, division_id, season_id, date, time,
-               ground, team1, team2, umpire1, umpire2,
+               ground, team1, team2, team1_id, team2_id,
+               umpire1, umpire2,
                match_type, status, winner, runner_up,
                winner_points, loser_points
         FROM matches
@@ -257,8 +258,9 @@ def get_scorecard(match_id: str):
 # SCRAPE TRIGGER  (called by Azure Timer / manual)
 # ============================================
 
-def _run_scraper(all_seasons: bool = False, include_scorecards: bool = False):
-    """Run the scraper in a background thread so we don't block the API."""
+def _run_scraper(all_seasons: bool = False, include_scorecards: bool = True):
+    """Run the scraper in a background thread so we don't block the API.
+    Scorecards + player aggregation enabled by default for full data coverage."""
     try:
         from scrapers.arcl_scraper import ARCLDataScraper, SEASONS, CURRENT_SEASON_ID
         from scrapers.arcl_scraper import DIVISION_IDS, DIVISION_NAMES

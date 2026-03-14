@@ -54,6 +54,8 @@ class Match(BaseModel):
     ground: Optional[str] = None
     team1: str
     team2: str
+    team1_id: Optional[str] = None
+    team2_id: Optional[str] = None
     umpire1: Optional[str] = None
     umpire2: Optional[str] = None
     match_type: str = "League"
