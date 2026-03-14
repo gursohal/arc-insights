@@ -241,12 +241,23 @@ class DataManager: ObservableObject {
     // MARK: - Scorecard (single match, on-demand)
 
     func fetchScorecard(matchId: String) async -> Scorecard? {
+        // Return cached version if available
         if let cached = scorecards[matchId] {
             return cached
         }
-        // Scorecard endpoint not yet wired – placeholder for future
-        // Once API serves scorecards, call api.fetchScorecard(matchId) here
-        return nil
+
+        do {
+            let sc = try await api.fetchScorecard(matchId: matchId)
+            scorecards[matchId] = sc
+            return sc
+        } catch APIError.notFound {
+            // No scorecard available yet — not an error
+            print("ℹ️ No scorecard for match \(matchId)")
+            return nil
+        } catch {
+            print("⚠️ Failed to fetch scorecard \(matchId): \(error.localizedDescription)")
+            return nil
+        }
     }
 
     // MARK: - Local cache

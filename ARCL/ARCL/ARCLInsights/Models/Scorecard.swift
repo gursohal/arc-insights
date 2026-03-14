@@ -62,8 +62,34 @@ struct MatchInfo: Codable {
 }
 
 struct InningsData: Codable {
+    let teamName: String?
+    let totalRuns: Int?
+    let totalWickets: Int?
+    let overs: String?
+    let extras: Int?
     let batting: [BatsmanPerformance]
     let bowling: [BowlerPerformance]
+    
+    enum CodingKeys: String, CodingKey {
+        case teamName = "team_name"
+        case totalRuns = "total_runs"
+        case totalWickets = "total_wickets"
+        case overs, extras
+        case batting, bowling
+    }
+    
+    init(teamName: String? = nil,
+         totalRuns: Int? = nil, totalWickets: Int? = nil,
+         overs: String? = nil, extras: Int? = nil,
+         batting: [BatsmanPerformance], bowling: [BowlerPerformance]) {
+        self.teamName = teamName
+        self.totalRuns = totalRuns
+        self.totalWickets = totalWickets
+        self.overs = overs
+        self.extras = extras
+        self.batting = batting
+        self.bowling = bowling
+    }
     
     func getTotalScore() -> (runs: Int, wickets: Int, overs: String)? {
         // Find the row with total runs (has "Overs" in name field and "Total" in bowler field)

@@ -190,9 +190,17 @@ def get_bowlers(
 # SCORECARD
 # ============================================
 
-@app.get("/api/scorecard/{match_id}", response_model=Scorecard)
+@app.get("/api/scorecard/{match_id}")
 def get_scorecard(match_id: str):
-    """Get detailed scorecard for a match"""
+    """Get detailed scorecard for a match.
+
+    Returns JSON shaped to match the iOS Scorecard model:
+      match_id, league_id, season_id,
+      match_info: {team1, team2, date, ground, result, man_of_match},
+      team1_innings: {batting: [...], bowling: [...]},
+      team2_innings: {batting: [...], bowling: [...]}
+    All batting/bowling values are strings for easy display in SwiftUI.
+    """
     match = execute_one("""
         SELECT match_id, division_id, season_id, team1, team2,
                date, ground, winner
@@ -202,56 +210,112 @@ def get_scorecard(match_id: str):
     if not match:
         raise HTTPException(status_code=404, detail=f"Match {match_id} not found")
 
+    # Build match_info the way the iOS model expects
+    match_info = {
+        "team1": match["team1"] or "",
+        "team2": match["team2"] or "",
+        "date": match["date"] or "",
+        "ground": match["ground"] or "",
+        "result": match["winner"] or "",
+        "man_of_match": "",  # Not stored at match level
+    }
+
     innings_rows = execute_query("""
-        SELECT sc.id as scorecard_id, sc.innings, t.name as team_name,
-               sc.total_runs, sc.total_wickets, sc.overs, sc.extras
+        SELECT sc.id as scorecard_id, sc.innings,
+               sc.total_runs, sc.total_wickets, sc.overs, sc.extras,
+               t.name as team_name
         FROM scorecards sc
         LEFT JOIN teams t ON sc.team_id = t.team_id
         WHERE sc.match_id = %s
         ORDER BY sc.innings
     """, (match_id,))
 
-    innings_data = {}
-    for inning in innings_rows:
-        sc_id = inning["scorecard_id"]
-
-        batting = execute_query("""
+    def _build_innings(sc_row):
+        """Build innings dict matching the iOS InningsData model."""
+        sc_id = sc_row["scorecard_id"]
+        bat_rows = execute_query("""
             SELECT player_name, runs, balls, fours, sixes,
-                   strike_rate, dismissal, batting_position
+                   dismissal, batting_position
             FROM innings_details
             WHERE scorecard_id = %s
             ORDER BY batting_position NULLS LAST
         """, (sc_id,))
 
-        bowling = execute_query("""
+        bowl_rows = execute_query("""
             SELECT player_name, overs, maidens, runs, wickets, economy
             FROM bowling_details
             WHERE scorecard_id = %s
             ORDER BY wickets DESC, economy ASC NULLS LAST
         """, (sc_id,))
 
-        innings_data[inning["innings"]] = {
-            "team_name": inning["team_name"] or "",
-            "total_runs": inning["total_runs"],
-            "total_wickets": inning["total_wickets"],
-            "overs": inning["overs"],
-            "extras": inning["extras"],
-            "batting": [dict(b) for b in batting],
-            "bowling": [dict(b) for b in bowling],
+        # iOS BatsmanPerformance expects string values and fields:
+        # name, runs, balls, fours, sixes, how_out, bowler
+        batting = []
+        for b in bat_rows:
+            batting.append({
+                "name": b["player_name"] or "",
+                "runs": str(b["runs"] or 0),
+                "balls": str(b["balls"] or 0),
+                "fours": str(b["fours"] or 0),
+                "sixes": str(b["sixes"] or 0),
+                "how_out": b["dismissal"] or "",
+                "bowler": "",  # Not stored per-row in DB
+            })
+
+        # iOS BowlerPerformance expects string values and fields:
+        # name, overs, maidens, runs, wickets, economy, wides, no_balls
+        bowling = []
+        for bw in bowl_rows:
+            bowling.append({
+                "name": bw["player_name"] or "",
+                "overs": str(bw["overs"] or 0),
+                "maidens": str(bw["maidens"] or 0),
+                "runs": str(bw["runs"] or 0),
+                "wickets": str(bw["wickets"] or 0),
+                "economy": str(round(bw["economy"], 2) if bw["economy"] else 0),
+                "wides": "0",
+                "no_balls": "0",
+            })
+
+        return {
+            "team_name": sc_row["team_name"] or "",
+            "total_runs": sc_row["total_runs"] or 0,
+            "total_wickets": sc_row["total_wickets"] or 0,
+            "overs": str(sc_row["overs"] or 0),
+            "extras": sc_row["extras"] or 0,
+            "batting": batting,
+            "bowling": bowling,
         }
 
-    return Scorecard(
-        match_id=match["match_id"],
-        division_id=match["division_id"],
-        season_id=match["season_id"],
-        team1=match["team1"],
-        team2=match["team2"],
-        date=match["date"],
-        ground=match["ground"],
-        winner=match["winner"],
-        innings1=innings_data.get(1),
-        innings2=innings_data.get(2),
-    )
+    # Map innings number → built innings
+    empty_innings = {"team_name": "", "total_runs": 0, "total_wickets": 0,
+                     "overs": "0", "extras": 0, "batting": [], "bowling": []}
+    team1_innings = dict(empty_innings)
+    team2_innings = dict(empty_innings)
+
+    for inning in innings_rows:
+        built = _build_innings(inning)
+        if inning["innings"] == 1:
+            team1_innings = built
+        elif inning["innings"] == 2:
+            team2_innings = built
+
+    # If no innings rows exist at all, return 404 so the iOS app shows
+    # "Scorecard not available" instead of an empty scorecard.
+    if not innings_rows:
+        raise HTTPException(
+            status_code=404,
+            detail=f"Scorecard not yet available for match {match_id}",
+        )
+
+    return {
+        "match_id": match["match_id"],
+        "league_id": match["division_id"],   # iOS model uses league_id
+        "season_id": match["season_id"],
+        "match_info": match_info,
+        "team1_innings": team1_innings,
+        "team2_innings": team2_innings,
+    }
 
 
 # ============================================

@@ -206,6 +206,27 @@ class ARCLAPIService {
         do {
             let decoder = JSONDecoder()
             return try decoder.decode(T.self, from: data)
+        } catch let decodingError as DecodingError {
+            // Print detailed decoding error for debugging
+            switch decodingError {
+            case .keyNotFound(let key, let context):
+                print("🔑 Missing key '\(key.stringValue)' — \(context.debugDescription)")
+                print("   codingPath: \(context.codingPath.map(\.stringValue))")
+            case .typeMismatch(let type, let context):
+                print("🔀 Type mismatch for \(type) — \(context.debugDescription)")
+                print("   codingPath: \(context.codingPath.map(\.stringValue))")
+            case .valueNotFound(let type, let context):
+                print("❌ Value not found for \(type) — \(context.debugDescription)")
+            case .dataCorrupted(let context):
+                print("💥 Data corrupted — \(context.debugDescription)")
+            @unknown default:
+                print("❓ Unknown decoding error: \(decodingError)")
+            }
+            // Also print raw response for debugging
+            if let raw = String(data: data, encoding: .utf8) {
+                print("📄 Raw response (first 500 chars): \(String(raw.prefix(500)))")
+            }
+            throw APIError.decodingError(decodingError)
         } catch {
             throw APIError.decodingError(error)
         }
@@ -258,5 +279,132 @@ class ARCLAPIService {
             URLQueryItem(name: "season_id", value: "\(seasonId)"),
             URLQueryItem(name: "limit", value: "\(limit)")
         ])
+    }
+
+    // MARK: - Scorecard
+    /// Fetches a scorecard and handles both old API format (division_id, innings1/innings2)
+    /// and new API format (league_id, team1_innings/team2_innings).
+    func fetchScorecard(matchId: String) async throws -> Scorecard {
+        let path = "/api/scorecard/\(matchId)"
+        guard let url = URL(string: "\(APIConfig.baseURL)\(path)") else {
+            throw APIError.invalidURL
+        }
+
+        let (data, response) = try await session.data(from: url)
+
+        if let http = response as? HTTPURLResponse {
+            if http.statusCode == 404 { throw APIError.notFound }
+            if http.statusCode >= 400 { throw APIError.serverError(http.statusCode) }
+        }
+
+        // Try decoding the new format first (league_id, match_info, team1_innings)
+        let decoder = JSONDecoder()
+        if let scorecard = try? decoder.decode(Scorecard.self, from: data) {
+            return scorecard
+        }
+
+        // Fallback: transform the old API format into a Scorecard
+        guard let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any] else {
+            throw APIError.decodingError(
+                NSError(domain: "ARCLAPIService", code: 0,
+                        userInfo: [NSLocalizedDescriptionKey: "Could not parse scorecard JSON"])
+            )
+        }
+
+        // Old format has: division_id, team1, team2, date, ground, winner, innings1, innings2
+        let mid = json["match_id"] as? String ?? matchId
+        let lid = json["league_id"] as? Int ?? json["division_id"] as? Int ?? 0
+        let sid = json["season_id"] as? Int ?? 0
+
+        // Build match_info from flat fields
+        let matchInfo = MatchInfo(
+            team1: json["team1"] as? String,
+            team2: json["team2"] as? String,
+            date: json["date"] as? String ?? "",
+            ground: json["ground"] as? String ?? "",
+            result: json["winner"] as? String ?? "",
+            manOfMatch: nil
+        )
+
+        // Parse innings from either new (team1_innings) or old (innings1) key
+        let inn1Raw = json["team1_innings"] as? [String: Any] ?? json["innings1"] as? [String: Any]
+        let inn2Raw = json["team2_innings"] as? [String: Any] ?? json["innings2"] as? [String: Any]
+
+        let team1Innings = Self.parseInningsData(inn1Raw)
+        let team2Innings = Self.parseInningsData(inn2Raw)
+
+        return Scorecard(
+            matchId: mid, leagueId: lid, seasonId: sid,
+            matchInfo: matchInfo,
+            team1Innings: team1Innings,
+            team2Innings: team2Innings
+        )
+    }
+
+    /// Parse an innings dict (handles both string and numeric values from old/new API)
+    private static func parseInningsData(_ raw: [String: Any]?) -> InningsData {
+        guard let raw = raw else {
+            return InningsData(batting: [], bowling: [])
+        }
+
+        // Extract team name if available (old API format includes team_name per innings)
+        let teamName = raw["team_name"] as? String
+
+        var batsmen: [BatsmanPerformance] = []
+        let summaryNames: Set<String> = ["overs", "rate", "extras", "total", "run rate", ""]
+        if let batArr = raw["batting"] as? [[String: Any]] {
+            for b in batArr {
+                // Skip summary rows
+                let name = (b["name"] as? String ?? b["player_name"] as? String ?? "").lowercased()
+                if summaryNames.contains(name) || name.contains("extra") { continue }
+
+                batsmen.append(BatsmanPerformance(
+                    name: b["name"] as? String ?? b["player_name"] as? String ?? "",
+                    runs: Self.asString(b["runs"]),
+                    balls: Self.asString(b["balls"]),
+                    fours: Self.asString(b["fours"]),
+                    sixes: Self.asString(b["sixes"]),
+                    howOut: b["how_out"] as? String ?? b["dismissal"] as? String ?? "",
+                    bowler: b["bowler"] as? String ?? ""
+                ))
+            }
+        }
+
+        var bowlers: [BowlerPerformance] = []
+        if let bowlArr = raw["bowling"] as? [[String: Any]] {
+            for bw in bowlArr {
+                bowlers.append(BowlerPerformance(
+                    name: bw["name"] as? String ?? bw["player_name"] as? String ?? "",
+                    overs: Self.asString(bw["overs"]),
+                    maidens: Self.asString(bw["maidens"] ?? "0"),
+                    runs: Self.asString(bw["runs"]),
+                    wickets: Self.asString(bw["wickets"]),
+                    economy: Self.asString(bw["economy"]),
+                    wides: Self.asString(bw["wides"] ?? "0"),
+                    noBalls: Self.asString(bw["no_balls"] ?? "0")
+                ))
+            }
+        }
+
+        // Extract summary fields if present (new API format)
+        let totalRuns = raw["total_runs"] as? Int
+        let totalWickets = raw["total_wickets"] as? Int
+        let oversVal = raw["overs"] as? String ?? (raw["overs"] as? Int).map { "\($0)" }
+        let extras = raw["extras"] as? Int
+
+        return InningsData(teamName: teamName,
+                           totalRuns: totalRuns, totalWickets: totalWickets,
+                           overs: oversVal, extras: extras,
+                           batting: batsmen, bowling: bowlers)
+    }
+
+    /// Convert any JSON value (String, Int, Double, nil) to a display String
+    private static func asString(_ value: Any?) -> String {
+        switch value {
+        case let s as String: return s
+        case let i as Int: return "\(i)"
+        case let d as Double: return d.truncatingRemainder(dividingBy: 1) == 0 ? "\(Int(d))" : "\(d)"
+        default: return "0"
+        }
     }
 }

@@ -174,9 +174,10 @@ class ScorecardScraper(BaseScraper):
                         'bowler': cells[col_indices.get('bowler', 3)].get_text(strip=True) if 'bowler' in col_indices else ''
                     }
                     
-                    # Skip if name is empty or is a total/extras row
+                    # Skip if name is empty or is a summary row
                     name_lower = batsman['name'].lower()
-                    if batsman['name'] and 'extra' not in name_lower and 'total' not in name_lower:
+                    skip_names = ('', 'overs', 'rate', 'extras', 'total', 'run rate')
+                    if batsman['name'] and name_lower not in skip_names and 'extra' not in name_lower:
                         batsmen.append(batsman)
                         
                 except Exception as e:

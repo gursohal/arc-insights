@@ -381,26 +381,34 @@ class DBWriter:
         batting = innings_data.get("batting", [])
         bowling = innings_data.get("bowling", [])
 
-        total_runs = sum(self._int(b.get("runs")) or 0 for b in batting)
+        # Filter out summary rows (Overs, Rate, Extras, Total)
+        real_batsmen = [
+            b for b in batting
+            if b.get("name", "").lower() not in ("overs", "rate", "extras", "total", "")
+        ]
+
+        total_runs = sum(self._int(b.get("runs")) or 0 for b in real_batsmen)
         total_wickets = sum(
-            1 for b in batting
-            if b.get("how_out", "").lower() not in ("", "not out", "dnb")
+            1 for b in real_batsmen
+            if b.get("how_out", "").lower() not in ("", "not out", "dnb", "did not bat")
         )
-        # FIX Bug 2: Use sum() instead of max() for total overs
-        # FIX Bug 3: Use cricket-aware overs addition
         total_balls = sum(overs_to_balls(bw.get("overs", 0)) for bw in bowling)
         total_overs = balls_to_overs(total_balls)
+
+        # Resolve team_id from team name so the API can label innings correctly
+        team_id = self._resolve_team_id(cur, team_name, division_id, season_id)
 
         cur.execute("""
             INSERT INTO scorecards (match_id, innings, team_id,
                                     total_runs, total_wickets, overs, extras)
-            VALUES (%s, %s, NULL, %s, %s, %s, 0)
+            VALUES (%s, %s, %s, %s, %s, %s, 0)
             ON CONFLICT (match_id, innings) DO UPDATE
-            SET total_runs = EXCLUDED.total_runs,
+            SET team_id = COALESCE(EXCLUDED.team_id, scorecards.team_id),
+                total_runs = EXCLUDED.total_runs,
                 total_wickets = EXCLUDED.total_wickets,
                 overs = EXCLUDED.overs
             RETURNING id
-        """, (match_id, innings_num, total_runs, total_wickets, total_overs))
+        """, (match_id, innings_num, team_id, total_runs, total_wickets, total_overs))
         row = cur.fetchone()
         return row["id"] if row else None
 
@@ -410,8 +418,14 @@ class DBWriter:
         cur.execute("DELETE FROM innings_details WHERE scorecard_id = %s", (scorecard_id,))
         cur.execute("DELETE FROM bowling_details WHERE scorecard_id = %s", (scorecard_id,))
 
-        # Batting
-        for pos, b in enumerate(innings_data.get("batting", []), start=1):
+        # Batting — skip summary rows (Overs, Rate, Extras, Total)
+        SUMMARY_NAMES = {"overs", "rate", "extras", "total", "run rate", ""}
+        pos = 0
+        for b in innings_data.get("batting", []):
+            name = b.get("name", "")
+            if name.lower() in SUMMARY_NAMES or "extra" in name.lower():
+                continue
+            pos += 1
             runs = self._int(b.get("runs")) or 0
             balls = self._int(b.get("balls")) or 0
             sr = round(runs / balls * 100, 2) if balls > 0 else None
