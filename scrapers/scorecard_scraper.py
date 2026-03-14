@@ -253,7 +253,11 @@ class ScorecardScraper(BaseScraper):
                     except (ValueError, TypeError, ZeroDivisionError):
                         bowler['economy'] = "0.00"
                     
-                    if bowler['name']:
+                    # Skip summary rows
+                    name_lower = bowler['name'].lower().strip()
+                    skip_names = ('', 'byes', 'total', 'extras', 'leg byes',
+                                  'wides', 'no balls', 'penalty', 'wide', 'no ball')
+                    if bowler['name'] and name_lower not in skip_names:
                         bowlers.append(bowler)
                         
                 except Exception as e:

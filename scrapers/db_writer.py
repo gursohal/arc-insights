@@ -145,15 +145,24 @@ class DBWriter:
                     except Exception:
                         pass
 
+                # Resolve team name → numeric team_id
+                team1_id = self._resolve_team_id(
+                    cur, m.get("team1", ""), division_id, season_id
+                )
+                team2_id = self._resolve_team_id(
+                    cur, m.get("team2", ""), division_id, season_id
+                )
+
                 cur.execute("""
                     INSERT INTO matches (
                         match_id, division_id, season_id,
                         date, time, date_parsed, ground,
-                        team1, team2, umpire1, umpire2,
+                        team1, team2, team1_id, team2_id,
+                        umpire1, umpire2,
                         match_type, status, winner, runner_up,
                         winner_points, loser_points
                     )
-                    VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)
+                    VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)
                     ON CONFLICT (match_id) DO UPDATE
                     SET date = EXCLUDED.date,
                         time = EXCLUDED.time,
@@ -161,6 +170,8 @@ class DBWriter:
                         ground = EXCLUDED.ground,
                         team1 = EXCLUDED.team1,
                         team2 = EXCLUDED.team2,
+                        team1_id = COALESCE(EXCLUDED.team1_id, matches.team1_id),
+                        team2_id = COALESCE(EXCLUDED.team2_id, matches.team2_id),
                         umpire1 = EXCLUDED.umpire1,
                         umpire2 = EXCLUDED.umpire2,
                         match_type = EXCLUDED.match_type,
@@ -174,6 +185,7 @@ class DBWriter:
                     str(match_id), division_id, season_id,
                     m.get("date"), m.get("time"), date_parsed,
                     m.get("ground"), m.get("team1", ""), m.get("team2", ""),
+                    team1_id, team2_id,
                     m.get("umpire1"), m.get("umpire2"),
                     m.get("match_type", "League"),
                     m.get("status", "upcoming"),
@@ -377,23 +389,79 @@ class DBWriter:
 
     def _upsert_innings(self, cur, match_id, division_id, season_id,
                         innings_num, team_name, innings_data):
-        """Insert or update a scorecards row; return its id."""
+        """Insert or update a scorecards row; return its id.
+        
+        Extracts correct totals from summary rows first, then falls back
+        to computing from individual player data.
+        """
         batting = innings_data.get("batting", [])
         bowling = innings_data.get("bowling", [])
 
-        # Filter out summary rows (Overs, Rate, Extras, Total)
+        # ── Try to extract totals from summary rows first ──
+        # "Overs" batting row: name="Overs", runs=<total_runs>, how_out=<overs>
+        # "Rate" batting row: name="Rate", runs=<wickets>
+        # "Total" bowling row: name="Total", runs=<total_runs>
+        # "Byes" bowling row: name="Byes", runs=<byes>
+        summary_total = None
+        summary_overs = None
+        summary_wickets = None
+        summary_extras = 0
+
+        for b in batting:
+            bname = b.get("name", "").strip().lower()
+            if bname == "overs":
+                summary_total = self._int(b.get("runs"))
+                overs_val = b.get("how_out", "0")
+                try:
+                    summary_overs = float(overs_val)
+                except (ValueError, TypeError):
+                    pass
+            elif bname == "rate":
+                summary_wickets = self._int(b.get("runs"))
+
+        for bw in bowling:
+            bwname = bw.get("name", "").strip().lower()
+            if bwname == "byes":
+                summary_extras += self._int(bw.get("runs")) or 0
+            elif bwname == "extras":
+                summary_extras += self._int(bw.get("runs")) or 0
+
+        # ── Fallback: compute from individual player data ──
         real_batsmen = [
             b for b in batting
-            if b.get("name", "").lower() not in ("overs", "rate", "extras", "total", "")
+            if b.get("name", "").strip().lower() not in
+               ("overs", "rate", "extras", "total", "")
         ]
 
-        total_runs = sum(self._int(b.get("runs")) or 0 for b in real_batsmen)
-        total_wickets = sum(
-            1 for b in real_batsmen
-            if b.get("how_out", "").lower() not in ("", "not out", "dnb", "did not bat")
-        )
-        total_balls = sum(overs_to_balls(bw.get("overs", 0)) for bw in bowling)
-        total_overs = balls_to_overs(total_balls)
+        if summary_total is not None:
+            total_runs = summary_total
+        else:
+            total_runs = sum(self._int(b.get("runs")) or 0 for b in real_batsmen)
+
+        if summary_wickets is not None:
+            total_wickets = summary_wickets
+        else:
+            total_wickets = sum(
+                1 for b in real_batsmen
+                if b.get("how_out", "").lower() not in
+                   ("", "not out", "dnb", "did not bat")
+            )
+
+        # Filter bowling summary rows before computing overs
+        real_bowlers = [
+            bw for bw in bowling
+            if bw.get("name", "").strip().lower() not in
+               ("byes", "total", "extras", "leg byes", "wides",
+                "no balls", "penalty", "")
+        ]
+
+        if summary_overs is not None:
+            total_overs = summary_overs
+        else:
+            total_balls = sum(
+                overs_to_balls(bw.get("overs", 0)) for bw in real_bowlers
+            )
+            total_overs = balls_to_overs(total_balls)
 
         # Resolve team_id from team name so the API can label innings correctly
         team_id = self._resolve_team_id(cur, team_name, division_id, season_id)
@@ -446,15 +514,20 @@ class DBWriter:
                 pos,
             ))
 
-        # Bowling
+        # Bowling — skip summary rows (Byes, Total, Extras, etc.)
+        BOWL_SUMMARY = {"byes", "total", "extras", "leg byes", "wides",
+                        "no balls", "penalty", "wide", "no ball", ""}
         for bw in innings_data.get("bowling", []):
+            bw_name = bw.get("name", "").strip()
+            if bw_name.lower() in BOWL_SUMMARY:
+                continue
             cur.execute("""
                 INSERT INTO bowling_details
                     (scorecard_id, player_name, overs, maidens, runs, wickets, economy)
                 VALUES (%s,%s,%s,%s,%s,%s,%s)
             """, (
                 scorecard_id,
-                bw.get("name", ""),
+                bw_name,
                 self._float(bw.get("overs")),
                 self._int(bw.get("maidens")) or 0,
                 self._int(bw.get("runs")) or 0,

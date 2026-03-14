@@ -181,7 +181,8 @@ def _aggregate_bowling(bowler, team, bowling_stats, division_id, season_id):
     # Skip invalid/summary rows and column headers
     name_lower = name.lower()
     invalid_names = ['overs', 'extras', 'total', 'did not bat', 'yet to bat',
-                     'rate', 'strike', 'average', 'balls', 'runs', 'wickets', 'economy', 'maiden']
+                     'rate', 'strike', 'average', 'balls', 'runs', 'wickets', 'economy', 'maiden',
+                     'byes', 'leg byes', 'wides', 'no balls', 'penalty', 'wide', 'no ball']
     if any(invalid in name_lower for invalid in invalid_names):
         return
     

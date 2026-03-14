@@ -35,7 +35,10 @@ class BatsmenScraper(BaseScraper):
                         "innings": row[3],
                         "runs": row[4],
                         "strike_rate": row[5],
-                        # Calculate average
+                        # NOTE: True average = runs / dismissals, but the leaderboard
+                        # page doesn't provide not-outs. Using runs/innings as an
+                        # approximation. The scorecard-based aggregator (player_aggregator.py)
+                        # computes the correct average from individual innings data.
                         "average": str(round(runs / innings, 2)) if innings > 0 else "0"
                     })
                 except Exception as e:
