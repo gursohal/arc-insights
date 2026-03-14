@@ -230,8 +230,17 @@ def get_scorecard(match_id: str):
         ORDER BY sc.innings
     """, (match_id,))
 
+    # Summary row names to filter out (case-insensitive)
+    _BAT_SUMMARY = {"overs", "rate", "extras", "total", "run rate", "strike rate",
+                     "did not bat", "yet to bat", "fall of wicket", "fow", ""}
+    _BOWL_SUMMARY = {"byes", "total", "extras", "leg byes", "wides", "no balls",
+                      "penalty", "wide", "no ball", "lb", "nb", "wd", "b", ""}
+
     def _build_innings(sc_row):
-        """Build innings dict matching the iOS InningsData model."""
+        """Build innings dict matching the iOS InningsData model.
+        
+        Extracts correct totals from summary rows, then filters them out.
+        """
         sc_id = sc_row["scorecard_id"]
         bat_rows = execute_query("""
             SELECT player_name, runs, balls, fours, sixes,
@@ -245,29 +254,92 @@ def get_scorecard(match_id: str):
             SELECT player_name, overs, maidens, runs, wickets, economy
             FROM bowling_details
             WHERE scorecard_id = %s
-            ORDER BY wickets DESC, economy ASC NULLS LAST
+            ORDER BY id ASC
         """, (sc_id,))
 
-        # iOS BatsmanPerformance expects string values and fields:
-        # name, runs, balls, fours, sixes, how_out, bowler
+        # ── Extract correct totals from summary rows ──
+        # The "Overs" row: player_name="Overs", runs=<total_runs>, dismissal=<overs>
+        # The "Rate" row: player_name="Rate", runs=<wickets>, dismissal=<run_rate>
+        # The "Total" bowling row: player_name="Total", runs=<total_runs>
+        # The "Byes" bowling row: player_name="Byes", runs=<byes>
+        correct_total = None
+        correct_overs = None
+        correct_wickets = None
+        correct_extras = 0
+
+        for b in bat_rows:
+            pname = (b["player_name"] or "").strip().lower()
+            if pname == "overs":
+                try:
+                    correct_total = int(b["runs"] or 0)
+                except (ValueError, TypeError):
+                    pass
+                correct_overs = str(b["dismissal"] or "0")
+            elif pname == "rate":
+                try:
+                    correct_wickets = int(b["runs"] or 0)
+                except (ValueError, TypeError):
+                    pass
+            elif pname == "extras" or pname == "":
+                # Some scorecards have extras as a batting row
+                try:
+                    correct_extras += int(b["runs"] or 0)
+                except (ValueError, TypeError):
+                    pass
+
+        # Also check bowling "Byes" for extras
+        for bw in bowl_rows:
+            pname = (bw["player_name"] or "").strip().lower()
+            if pname == "byes":
+                try:
+                    correct_extras += int(bw["runs"] or 0)
+                except (ValueError, TypeError):
+                    pass
+
+        # If we didn't find totals from summary rows, fallback to DB values
+        if correct_total is None:
+            correct_total = sc_row["total_runs"] or 0
+        if correct_overs is None:
+            correct_overs = str(sc_row["overs"] or 0)
+        if correct_wickets is None:
+            correct_wickets = sc_row["total_wickets"] or 0
+
+        # ── Filter batting: real players only ──
         batting = []
         for b in bat_rows:
+            pname = (b["player_name"] or "").strip()
+            if pname.lower() in _BAT_SUMMARY:
+                continue
+            if len(pname) <= 2:
+                continue
             batting.append({
-                "name": b["player_name"] or "",
+                "name": pname,
                 "runs": str(b["runs"] or 0),
                 "balls": str(b["balls"] or 0),
                 "fours": str(b["fours"] or 0),
                 "sixes": str(b["sixes"] or 0),
                 "how_out": b["dismissal"] or "",
-                "bowler": "",  # Not stored per-row in DB
+                "bowler": "",
             })
 
-        # iOS BowlerPerformance expects string values and fields:
-        # name, overs, maidens, runs, wickets, economy, wides, no_balls
+        # ── Filter bowling: real bowlers only (before "Total" row) ──
         bowling = []
+        hit_total = False
         for bw in bowl_rows:
+            pname = (bw["player_name"] or "").strip()
+            if pname.lower() == "total":
+                hit_total = True
+                continue
+            if pname.lower() in _BOWL_SUMMARY:
+                continue
+            if len(pname) <= 2:
+                continue
+            # Skip bowlers that appear AFTER the Total row
+            # (these are misplaced summary artifacts)
+            if hit_total:
+                continue
             bowling.append({
-                "name": bw["player_name"] or "",
+                "name": pname,
                 "overs": str(bw["overs"] or 0),
                 "maidens": str(bw["maidens"] or 0),
                 "runs": str(bw["runs"] or 0),
@@ -277,12 +349,15 @@ def get_scorecard(match_id: str):
                 "no_balls": "0",
             })
 
+        # Re-sort bowling by wickets desc, economy asc
+        bowling.sort(key=lambda x: (-int(x["wickets"]), float(x["economy"] or 0)))
+
         return {
             "team_name": sc_row["team_name"] or "",
-            "total_runs": sc_row["total_runs"] or 0,
-            "total_wickets": sc_row["total_wickets"] or 0,
-            "overs": str(sc_row["overs"] or 0),
-            "extras": sc_row["extras"] or 0,
+            "total_runs": correct_total,
+            "total_wickets": correct_wickets,
+            "overs": correct_overs,
+            "extras": correct_extras or (sc_row["extras"] or 0),
             "batting": batting,
             "bowling": bowling,
         }
@@ -307,6 +382,62 @@ def get_scorecard(match_id: str):
             status_code=404,
             detail=f"Scorecard not yet available for match {match_id}",
         )
+
+    # ── Determine which team batted in each innings ──
+    # Cross-reference: bowlers in innings 1 should be batsmen in innings 2
+    # (they're the same team — they bowled first and batted second)
+    m_team1 = match["team1"] or ""
+    m_team2 = match["team2"] or ""
+
+    if team1_innings["batting"] and team2_innings["batting"]:
+        inn1_bowler_names = {b["name"].lower() for b in team1_innings["bowling"]}
+        inn2_batsmen_names = {b["name"].lower() for b in team2_innings["batting"]}
+        inn2_bowler_names = {b["name"].lower() for b in team2_innings["bowling"]}
+        inn1_batsmen_names = {b["name"].lower() for b in team1_innings["batting"]}
+
+        # If innings 1 bowlers overlap with innings 2 batsmen,
+        # those players are team X (they bowled in inn1, batted in inn2).
+        # The OTHER team batted in innings 1.
+        overlap_bowl1_bat2 = len(inn1_bowler_names & inn2_batsmen_names)
+        overlap_bowl2_bat1 = len(inn2_bowler_names & inn1_batsmen_names)
+
+        if overlap_bowl1_bat2 >= 2 or overlap_bowl2_bat1 >= 2:
+            # innings 1 bowlers = innings 2 batsmen = one team
+            # innings 1 batsmen = innings 2 bowlers = the other team
+            # Now figure out which is team1 vs team2 from the match record.
+            # Check if any inn2 bowler name contains part of team1 or team2 name
+            # (e.g., "Amol Raftaar" contains "Raftaar")
+            inn1_bat_team = None
+            for name_lower in inn2_bowler_names:
+                if m_team1.lower() in name_lower or any(
+                    part in name_lower for part in m_team1.lower().split() if len(part) > 3
+                ):
+                    inn1_bat_team = m_team1
+                    break
+                if m_team2.lower() in name_lower or any(
+                    part in name_lower for part in m_team2.lower().split() if len(part) > 3
+                ):
+                    inn1_bat_team = m_team2
+                    break
+
+            # If name matching didn't work, try the other direction:
+            # inn1 bowlers = inn2 batting team
+            if not inn1_bat_team:
+                for name_lower in inn1_bowler_names:
+                    if any(part in name_lower for part in m_team1.lower().split() if len(part) > 3):
+                        # inn1 bowlers are team1 → inn1 batting is team2
+                        inn1_bat_team = m_team2
+                        break
+                    if any(part in name_lower for part in m_team2.lower().split() if len(part) > 3):
+                        inn1_bat_team = m_team1
+                        break
+
+            if inn1_bat_team:
+                inn2_bat_team = m_team2 if inn1_bat_team == m_team1 else m_team1
+                if not team1_innings.get("team_name"):
+                    team1_innings["team_name"] = inn1_bat_team
+                if not team2_innings.get("team_name"):
+                    team2_innings["team_name"] = inn2_bat_team
 
     return {
         "match_id": match["match_id"],
