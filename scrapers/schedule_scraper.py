@@ -33,10 +33,20 @@ class ScheduleScraper(BaseScraper):
             team_matches = self._scrape_team_schedule(team_id, division_id, season_id, team_name)
             
             # Add matches to our collection (using match_id to avoid duplicates)
+            # When we see a match from the second team's perspective, merge points
             for match in team_matches:
                 match_id = match.get('match_id')
-                if match_id and match_id not in all_matches:
+                if not match_id:
+                    continue
+                if match_id not in all_matches:
                     all_matches[match_id] = match
+                else:
+                    # Merge points from the other team's perspective
+                    existing = all_matches[match_id]
+                    if match.get('winner_points') and not existing.get('winner_points'):
+                        existing['winner_points'] = match['winner_points']
+                    if match.get('loser_points') and not existing.get('loser_points'):
+                        existing['loser_points'] = match['loser_points']
             
             teams_processed += 1
         
@@ -93,6 +103,14 @@ class ScheduleScraper(BaseScraper):
             # Team schedule columns: Team, Opposition, Match Type, Match Date, Match Time, Umpire1, Umpire2, Ground, Result, Points
             if len(row_data) >= 6:
                 try:
+                    # Parse points from the Points column (index 9)
+                    team_points = 0
+                    if len(row_data) > 9 and row_data[9].strip():
+                        try:
+                            team_points = int(row_data[9].strip())
+                        except ValueError:
+                            team_points = 0
+                    
                     match = {
                         "match_id": match_id,
                         "date": row_data[3] if len(row_data) > 3 else "",  # Match Date
@@ -106,20 +124,53 @@ class ScheduleScraper(BaseScraper):
                         "winner": "",
                         "runner_up": "",
                         "loser_points": 0,
-                        "winner_points": 30
+                        "winner_points": 0
                     }
                     
                     # Parse result if available
                     result_text = row_data[8] if len(row_data) > 8 else ""
                     if result_text and result_text not in ['', ' ', '&nbsp;']:
                         match["status"] = "completed"
-                        # Result could be "Won" or "Lost" - determine winner
-                        if "Won" in result_text or "won" in result_text:
-                            match["winner"] = match["team1"]
-                            match["runner_up"] = match["team2"]
-                        elif "Lost" in result_text or "lost" in result_text:
-                            match["winner"] = match["team2"]
-                            match["runner_up"] = match["team1"]
+                        result_lower = result_text.lower().strip()
+                        viewing_team = match["team1"]
+                        opposition = match["team2"]
+                        
+                        if result_lower == "tie" or "tie" in result_lower:
+                            # Tie: both teams get equal points, no winner
+                            match["winner"] = "Tie"
+                            match["runner_up"] = ""
+                            match["winner_points"] = team_points
+                            match["loser_points"] = team_points
+                        elif "won" in result_lower:
+                            # Check if the viewing team won or the opposition won
+                            if viewing_team.lower() in result_lower:
+                                match["winner"] = viewing_team
+                                match["runner_up"] = opposition
+                                match["winner_points"] = team_points
+                            elif opposition.lower() in result_lower:
+                                match["winner"] = opposition
+                                match["runner_up"] = viewing_team
+                                match["loser_points"] = team_points
+                            else:
+                                # Generic "Won" - assume viewing team won
+                                match["winner"] = viewing_team
+                                match["runner_up"] = opposition
+                                match["winner_points"] = team_points
+                        elif "lost" in result_lower:
+                            match["winner"] = opposition
+                            match["runner_up"] = viewing_team
+                            match["loser_points"] = team_points
+                        elif "forfeit" in result_lower or "no result" in result_lower:
+                            # Forfeit or no result
+                            match["winner"] = ""
+                            match["runner_up"] = ""
+                            match["winner_points"] = team_points
+                            match["loser_points"] = 0
+                        else:
+                            # Unknown result text - still completed, assign points to viewing team
+                            match["winner"] = ""
+                            match["runner_up"] = ""
+                            match["winner_points"] = team_points
                     else:
                         match["status"] = "upcoming"
                     

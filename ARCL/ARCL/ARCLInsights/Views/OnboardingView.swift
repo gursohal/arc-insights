@@ -11,8 +11,9 @@ struct OnboardingView: View {
     @StateObject private var dataManager = DataManager.shared
     @State private var selectedDivision: Division = Division.fallbackList.first(where: { $0.id == 8 })!
     @State private var selectedSeason: Season = Season.fallbackList.first(where: { $0.id == 69 })!
-    @State private var availableTeams: [String] = []
+    @State private var availableTeams: [(name: String, teamId: String)] = []
     @State private var selectedTeam = ""
+    @State private var selectedTeamId = ""
     @State private var isLoadingTeams = false
     @State private var isLoading = false
     @State private var showingMain = false
@@ -85,11 +86,15 @@ struct OnboardingView: View {
                         } else {
                             Picker("Select Your Team", selection: $selectedTeam) {
                                 Text("Select a team...").tag("")
-                                ForEach(availableTeams, id: \.self) { team in
-                                    Text(team).tag(team)
+                                ForEach(availableTeams, id: \.teamId) { team in
+                                    Text(team.name).tag(team.name)
                                 }
                             }
                             .pickerStyle(.menu)
+                            .onChange(of: selectedTeam) {
+                                // Resolve team_id from name
+                                selectedTeamId = availableTeams.first(where: { $0.name == selectedTeam })?.teamId ?? ""
+                            }
                         }
                     }
                     
@@ -161,24 +166,25 @@ struct OnboardingView: View {
         isLoadingTeams = true
         defer { isLoadingTeams = false }
         
-        // Fetch teams for selected division/season
-        availableTeams = await dataManager.fetchTeamNames(
+        // Fetch teams with IDs for selected division/season
+        availableTeams = await dataManager.fetchTeamsWithIds(
             divisionID: selectedDivision.id,
             seasonID: selectedSeason.id
         )
         
         // Reset selection
         selectedTeam = ""
+        selectedTeamId = ""
     }
     
     private func setupAndLoad() async {
         isLoading = true
         defer { isLoading = false }
         
-        // Save selections
+        // Save selections (with team_id for reliable matching)
         dataManager.updateDivision(selectedDivision.id)
         dataManager.updateSeason(selectedSeason.id)
-        dataManager.updateMyTeam(selectedTeam)
+        dataManager.updateMyTeam(selectedTeam, teamId: selectedTeamId)
         
         // Load all division data
         await dataManager.refreshData()

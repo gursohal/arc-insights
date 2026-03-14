@@ -37,6 +37,7 @@ class DataManager: ObservableObject {
     @AppStorage("selectedDivisionID") private var selectedDivisionID: Int = 8
     @AppStorage("selectedSeasonID")   private var selectedSeasonID: Int = 69
     @AppStorage("myTeamName")         private var myTeamName: String = "Snoqualmie Wolves Timber"
+    @AppStorage("myTeamId")           private var myTeamId: String = ""
     @AppStorage("lastDataRefresh")    private var lastDataRefreshTimestamp: Double = 0
     @AppStorage("lastManualRefresh")  private var lastManualRefreshTimestamp: Double = 0
 
@@ -147,6 +148,8 @@ class DataManager: ObservableObject {
                     ground: m.ground ?? "",
                     team1: m.team1,
                     team2: m.team2,
+                    team1Id: m.team1Id,
+                    team2Id: m.team2Id,
                     umpire1: m.umpire1 ?? "",
                     umpire2: m.umpire2 ?? "",
                     matchType: m.matchType,
@@ -357,9 +360,13 @@ class DataManager: ObservableObject {
         }
     }
 
-    func updateMyTeam(_ teamName: String) {
+    func updateMyTeam(_ teamName: String, teamId: String = "") {
         myTeamName = teamName
+        myTeamId = teamId
     }
+    
+    /// The stored team_id for the user's selected team
+    var selectedTeamId: String { myTeamId }
 
     // MARK: - Fetch team names for a given division/season (used by onboarding)
 
@@ -369,6 +376,17 @@ class DataManager: ObservableObject {
             return standings.map { $0.name }.sorted()
         } catch {
             print("⚠️ Could not fetch team names: \(error.localizedDescription)")
+            return []
+        }
+    }
+    
+    /// Fetch teams with IDs for a given division/season
+    func fetchTeamsWithIds(divisionID: Int, seasonID: Int) async -> [(name: String, teamId: String)] {
+        do {
+            let standings = try await api.fetchStandings(divisionId: divisionID, seasonId: seasonID)
+            return standings.map { (name: $0.name, teamId: $0.teamId) }.sorted { $0.name < $1.name }
+        } catch {
+            print("⚠️ Could not fetch teams: \(error.localizedDescription)")
             return []
         }
     }

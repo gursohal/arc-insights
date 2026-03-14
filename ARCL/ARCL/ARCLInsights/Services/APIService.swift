@@ -62,7 +62,9 @@ struct MatchResponse: Codable {
     let time: String?
     let ground: String?
     let team1: String
+    let team1Id: String?
     let team2: String
+    let team2Id: String?
     let umpire1: String?
     let umpire2: String?
     let matchType: String
@@ -77,7 +79,10 @@ struct MatchResponse: Codable {
         case divisionId = "division_id"
         case seasonId = "season_id"
         case date, time, ground
-        case team1, team2
+        case team1
+        case team1Id = "team1_id"
+        case team2
+        case team2Id = "team2_id"
         case umpire1, umpire2
         case matchType = "match_type"
         case status, winner

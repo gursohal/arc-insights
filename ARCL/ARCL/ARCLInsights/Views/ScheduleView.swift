@@ -13,11 +13,15 @@ struct ScheduleView: View {
     @State private var showUmpiring = true
     
     var teamMatches: [Match] {
-        // More flexible team name matching - handles variants like "Snoqualmie Wolves Timber" vs "Snoqualmie Wolves Arctic"
-        let baseTeamName = myTeamName.components(separatedBy: " ").prefix(2).joined(separator: " ")
+        // Prefer team_id matching (deterministic, no string ambiguity)
+        // Falls back to exact team name matching if team_id not available
+        let teamId = dataManager.selectedTeamId
+        if !teamId.isEmpty {
+            return dataManager.matches.filter { match in
+                match.involves(teamId: teamId)
+            }
+        }
         return dataManager.matches.filter { match in
-            match.team1.localizedCaseInsensitiveContains(baseTeamName) ||
-            match.team2.localizedCaseInsensitiveContains(baseTeamName) ||
             match.involves(teamName: myTeamName)
         }
     }
@@ -38,15 +42,16 @@ struct ScheduleView: View {
         }
     }
     
-    var teamRecord: (wins: Int, losses: Int, points: Int) {
+    var teamRecord: (wins: Int, losses: Int, ties: Int, points: Int) {
         let wins = completedMatches.filter { $0.isWinner(teamName: myTeamName) }.count
-        let losses = completedMatches.filter { !$0.isWinner(teamName: myTeamName) && !$0.winner.isEmpty }.count
+        let ties = completedMatches.filter { $0.isTie }.count
+        let losses = completedMatches.filter { !$0.isWinner(teamName: myTeamName) && !$0.isTie && !$0.winner.isEmpty }.count
         
         // Get total points from standings data (accurate from arcl.org)
         let myTeam = dataManager.teams.first { $0.name.localizedCaseInsensitiveContains(myTeamName) }
         let totalPoints = myTeam?.points ?? 0
         
-        return (wins, losses, totalPoints)
+        return (wins, losses, ties, totalPoints)
     }
     
     var body: some View {
@@ -317,6 +322,16 @@ struct CompletedMatchCard: View {
         match.isWinner(teamName: teamName)
     }
     
+    var resultLabel: (text: String, icon: String, color: Color) {
+        if match.isTie {
+            return ("TIE", "equal.circle.fill", .orange)
+        } else if isWin {
+            return ("WIN", "checkmark.circle.fill", .green)
+        } else {
+            return ("LOSS", "xmark.circle.fill", .red)
+        }
+    }
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             // Date header with result
@@ -328,16 +343,16 @@ struct CompletedMatchCard: View {
                 
                 // Result
                 HStack(spacing: 4) {
-                    Image(systemName: isWin ? "checkmark.circle.fill" : "xmark.circle.fill")
-                        .foregroundColor(isWin ? .green : .red)
-                    Text(isWin ? "WIN" : "LOSS")
+                    Image(systemName: resultLabel.icon)
+                        .foregroundColor(resultLabel.color)
+                    Text(resultLabel.text)
                         .font(.caption)
                         .fontWeight(.bold)
-                        .foregroundColor(isWin ? .green : .red)
+                        .foregroundColor(resultLabel.color)
                 }
                 .padding(.horizontal, 8)
                 .padding(.vertical, 4)
-                .background((isWin ? Color.green : Color.red).opacity(0.1))
+                .background(resultLabel.color.opacity(0.1))
                 .cornerRadius(6)
             }
             
@@ -354,13 +369,17 @@ struct CompletedMatchCard: View {
                         Text("\(team1Score.runs)/\(team1Score.wickets)")
                             .font(.title3)
                             .fontWeight(.bold)
-                            .foregroundColor(match.winner.localizedCaseInsensitiveContains(match.team1) ? .green : .primary)
+                            .foregroundColor(match.isTie ? .orange : (match.winner.localizedCaseInsensitiveContains(match.team1) ? .green : .primary))
                         HStack(spacing: 4) {
                             Text("(\(team1Score.overs) ov)")
                                 .font(.caption2)
                                 .foregroundColor(.secondary)
-                            if match.winner.localizedCaseInsensitiveContains(match.team1) {
-                                Text("• \(30 - match.loserPoints) pts")
+                            if match.isTie {
+                                Text("• \(match.winnerPoints) pts")
+                                    .font(.caption2)
+                                    .foregroundColor(.orange)
+                            } else if match.winner.localizedCaseInsensitiveContains(match.team1) {
+                                Text("• \(match.winnerPoints) pts")
                                     .font(.caption2)
                                     .foregroundColor(.blue)
                             } else {
@@ -385,10 +404,14 @@ struct CompletedMatchCard: View {
                         Text("\(team2Score.runs)/\(team2Score.wickets)")
                             .font(.title3)
                             .fontWeight(.bold)
-                            .foregroundColor(match.winner.localizedCaseInsensitiveContains(match.team2) ? .green : .primary)
+                            .foregroundColor(match.isTie ? .orange : (match.winner.localizedCaseInsensitiveContains(match.team2) ? .green : .primary))
                         HStack(spacing: 4) {
-                            if match.winner.localizedCaseInsensitiveContains(match.team2) {
-                                Text("\(30 - match.loserPoints) pts •")
+                            if match.isTie {
+                                Text("\(match.loserPoints) pts •")
+                                    .font(.caption2)
+                                    .foregroundColor(.orange)
+                            } else if match.winner.localizedCaseInsensitiveContains(match.team2) {
+                                Text("\(match.winnerPoints) pts •")
                                     .font(.caption2)
                                     .foregroundColor(.blue)
                             } else {
@@ -409,7 +432,11 @@ struct CompletedMatchCard: View {
                         Text(match.team1)
                             .font(.subheadline)
                             .fontWeight(match.team1.localizedCaseInsensitiveContains(teamName) ? .bold : .regular)
-                        if match.winner.localizedCaseInsensitiveContains(match.team1) {
+                        if match.isTie {
+                            Text("\(match.winnerPoints) pts")
+                                .font(.caption2)
+                                .foregroundColor(.orange)
+                        } else if match.winner.localizedCaseInsensitiveContains(match.team1) {
                             HStack(spacing: 4) {
                                 Text("Winner")
                                     .font(.caption2)
@@ -434,7 +461,11 @@ struct CompletedMatchCard: View {
                         Text(match.team2)
                             .font(.subheadline)
                             .fontWeight(match.team2.localizedCaseInsensitiveContains(teamName) ? .bold : .regular)
-                        if match.winner.localizedCaseInsensitiveContains(match.team2) {
+                        if match.isTie {
+                            Text("\(match.loserPoints) pts")
+                                .font(.caption2)
+                                .foregroundColor(.orange)
+                        } else if match.winner.localizedCaseInsensitiveContains(match.team2) {
                             HStack(spacing: 4) {
                                 Text("\(match.winnerPoints) pts •")
                                     .font(.caption2)

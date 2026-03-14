@@ -11,8 +11,8 @@ on:
         required: false
         default: false
         type: boolean
-      include_scorecards:
-        description: 'Also scrape scorecards (slow)'
+      no_scorecards:
+        description: 'Skip scorecards (faster, but only gets top-25 leaderboard data)'
         required: false
         default: false
         type: boolean
@@ -43,7 +43,7 @@ jobs:
           if [ "${{ github.event.inputs.all_seasons }}" = "true" ]; then
             ARGS="$ARGS --all-seasons"
           fi
-          if [ "${{ github.event.inputs.include_scorecards }}" = "true" ]; then
-            ARGS="$ARGS --scorecards"
+          if [ "${{ github.event.inputs.no_scorecards }}" = "true" ]; then
+            ARGS="$ARGS --no-scorecards"
           fi
           python -m scrapers.arcl_scraper $ARGS

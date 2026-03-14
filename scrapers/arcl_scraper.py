@@ -13,6 +13,7 @@ from scrapers import (
     StandingsScraper, ScheduleScraper, ScorecardScraper,
 )
 from scrapers.db_writer import DBWriter
+from scrapers.player_aggregator import aggregate_players_from_scorecards
 
 
 class ARCLDataScraper:
@@ -32,7 +33,7 @@ class ARCLDataScraper:
     # Core: scrape one division
     # ────────────────────────────────────────────
     def scrape_division(self, division_id, season_id, division_name,
-                        include_scorecards=False):
+                        include_scorecards=True):
         """Scrape all data for a single division and write to PostgreSQL."""
         print(f"\n📊 Scraping {division_name} "
               f"(div={division_id}, season={season_id})")
@@ -92,7 +93,8 @@ class ARCLDataScraper:
     # ────────────────────────────────────────────
     def _scrape_and_store_scorecards(self, division_id, season_id,
                                      division_name, schedule):
-        """Scrape scorecards for completed matches and write to DB."""
+        """Scrape scorecards for completed matches, store them,
+        and aggregate per-team player stats from the scorecard data."""
         print(f"\n🎯 Scraping scorecards for {division_name} …")
 
         match_ids = [
@@ -114,12 +116,48 @@ class ARCLDataScraper:
             return
 
         if self.db:
+            # 1. Store raw scorecard data (innings details)
             for sc in scorecards:
                 try:
                     self.db.upsert_scorecard(division_id, season_id, sc)
                 except Exception as exc:
                     print(f"   ⚠️  Could not write scorecard {sc.get('match_id')}: {exc}")
             print(f"   ✅ Wrote {len(scorecards)} scorecards to DB")
+
+            # 2. Aggregate per-team player stats from all scorecards
+            #    This gives EVERY player batting/bowling data (not just top 25)
+            try:
+                teams_list = list(set(
+                    t for sc in scorecards
+                    for t in [
+                        sc.get("match_info", {}).get("team1", ""),
+                        sc.get("match_info", {}).get("team2", ""),
+                    ]
+                    if t
+                ))
+
+                agg_batsmen, agg_bowlers = aggregate_players_from_scorecards(
+                    scorecards, teams_list, division_id, season_id
+                )
+
+                # Strip hash-based team_id from aggregator output so
+                # db_writer resolves the correct numeric team_id via
+                # team name lookup in the teams table.
+                for p in agg_batsmen:
+                    p.pop("team_id", None)
+                for p in agg_bowlers:
+                    p.pop("team_id", None)
+
+                if agg_batsmen:
+                    self.db.upsert_batsmen(division_id, season_id, agg_batsmen)
+                    print(f"   ✅ Aggregated {len(agg_batsmen)} batsmen from scorecards")
+
+                if agg_bowlers:
+                    self.db.upsert_bowlers(division_id, season_id, agg_bowlers)
+                    print(f"   ✅ Aggregated {len(agg_bowlers)} bowlers from scorecards")
+
+            except Exception as exc:
+                print(f"   ⚠️  Player aggregation failed: {exc}")
 
     # ────────────────────────────────────────────
     # Batch: scrape multiple divisions
@@ -166,7 +204,9 @@ DIVISION_NAMES = [
 
 def main():
     use_db = "--no-db" not in sys.argv
-    include_scorecards = "--scorecards" in sys.argv
+    # Scorecards + player aggregation enabled by default.
+    # Use --no-scorecards to skip (faster but only gets top-25 leaderboard data).
+    include_scorecards = "--no-scorecards" not in sys.argv
 
     scraper = ARCLDataScraper(use_db=use_db)
 

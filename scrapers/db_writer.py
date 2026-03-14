@@ -265,7 +265,7 @@ class DBWriter:
                     self._int(b.get("rank")),
                     self._float(b.get("overs")),
                     self._int(b.get("wickets", 0)),
-                    self._int(b.get("runs", b.get("runs_conceded", 0))),
+                    self._int(b.get("runs_given", b.get("runs", b.get("runs_conceded", 0)))),
                     self._float(b.get("economy")),
                     self._float(b.get("average")),
                     self._float(b.get("strike_rate")),

@@ -13,6 +13,8 @@ struct Match: Codable, Identifiable {
     let ground: String
     let team1: String
     let team2: String
+    let team1Id: String?
+    let team2Id: String?
     let umpire1: String
     let umpire2: String
     let matchType: String
@@ -26,6 +28,8 @@ struct Match: Codable, Identifiable {
     enum CodingKeys: String, CodingKey {
         case matchId = "match_id"
         case date, time, ground, team1, team2
+        case team1Id = "team1_id"
+        case team2Id = "team2_id"
         case umpire1, umpire2
         case matchType = "match_type"
         case winner
@@ -45,6 +49,8 @@ struct Match: Codable, Identifiable {
         self.ground = try container.decode(String.self, forKey: .ground)
         self.team1 = try container.decode(String.self, forKey: .team1)
         self.team2 = try container.decode(String.self, forKey: .team2)
+        self.team1Id = try container.decodeIfPresent(String.self, forKey: .team1Id)
+        self.team2Id = try container.decodeIfPresent(String.self, forKey: .team2Id)
         self.umpire1 = try container.decode(String.self, forKey: .umpire1)
         self.umpire2 = try container.decode(String.self, forKey: .umpire2)
         self.matchType = try container.decode(String.self, forKey: .matchType)
@@ -57,7 +63,7 @@ struct Match: Codable, Identifiable {
         self.loserPoints = try container.decodeIfPresent(Int.self, forKey: .loserPoints) ?? 0
     }
     
-    init(id: UUID = UUID(), matchId: String? = nil, date: String, time: String, ground: String, team1: String, team2: String, umpire1: String, umpire2: String, matchType: String, winner: String, runnerUp: String, status: MatchStatus, dateParsed: String? = nil, winnerPoints: Int = 30, loserPoints: Int = 0) {
+    init(id: UUID = UUID(), matchId: String? = nil, date: String, time: String, ground: String, team1: String, team2: String, team1Id: String? = nil, team2Id: String? = nil, umpire1: String, umpire2: String, matchType: String, winner: String, runnerUp: String, status: MatchStatus, dateParsed: String? = nil, winnerPoints: Int = 30, loserPoints: Int = 0) {
         self.id = id
         self.matchId = matchId
         self.date = date
@@ -65,6 +71,8 @@ struct Match: Codable, Identifiable {
         self.ground = ground
         self.team1 = team1
         self.team2 = team2
+        self.team1Id = team1Id
+        self.team2Id = team2Id
         self.umpire1 = umpire1
         self.umpire2 = umpire2
         self.matchType = matchType
@@ -96,13 +104,23 @@ struct Match: Codable, Identifiable {
         return team2
     }
     
+    var isTie: Bool {
+        return winner.lowercased() == "tie"
+    }
+    
     func isWinner(teamName: String) -> Bool {
+        if isTie { return false }
         return winner.localizedCaseInsensitiveContains(teamName)
     }
     
     func involves(teamName: String) -> Bool {
         return team1.localizedCaseInsensitiveContains(teamName) ||
                team2.localizedCaseInsensitiveContains(teamName)
+    }
+    
+    /// Match by team_id (most reliable - no string ambiguity)
+    func involves(teamId: String) -> Bool {
+        return team1Id == teamId || team2Id == teamId
     }
     
     var formattedDate: String {
