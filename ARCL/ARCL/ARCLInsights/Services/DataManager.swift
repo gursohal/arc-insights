@@ -43,6 +43,8 @@ class DataManager: ObservableObject {
 
     private let api = ARCLAPIService.shared
     private var currentRefreshTask: Task<Void, Never>?
+    private var currentRefreshDivId: Int = 0
+    private var currentRefreshSeaId: Int = 0
 
     var lastDataRefresh: Date? {
         guard lastDataRefreshTimestamp > 0 else { return nil }
@@ -52,12 +54,20 @@ class DataManager: ObservableObject {
     // MARK: - Refresh: all data for the selected division + season
 
     func refreshData() async {
-        // If a refresh is already running, cancel it and start fresh
-        // (e.g., user changed season/division mid-refresh)
-        currentRefreshTask?.cancel()
-        
         let divId = selectedDivisionID
         let seaId = selectedSeasonID
+        
+        // If a refresh is already running for the SAME params, just wait for it
+        if let existing = currentRefreshTask, !existing.isCancelled,
+           currentRefreshDivId == divId, currentRefreshSeaId == seaId {
+            await existing.value
+            return
+        }
+        
+        // Different params or no task running — cancel old and start fresh
+        currentRefreshTask?.cancel()
+        currentRefreshDivId = divId
+        currentRefreshSeaId = seaId
         
         let task = Task { @MainActor [weak self] in
             guard let self = self else { return }
@@ -172,6 +182,12 @@ class DataManager: ObservableObject {
                 + "\(topBatsmen.count) batsmen, \(topBowlers.count) bowlers, "
                 + "\(matches.count) matches")
 
+        } catch is CancellationError {
+            // Task was cancelled because user changed division/season — not a real error
+            print("ℹ️ Refresh cancelled (superseded by new request)")
+        } catch let error as URLError where error.code == .cancelled {
+            // URLSession request cancelled — same reason
+            print("ℹ️ Refresh cancelled (superseded by new request)")
         } catch {
             errorMessage = error.localizedDescription
             print("❌ Error refreshing data: \(error)")
